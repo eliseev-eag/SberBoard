@@ -1,15 +1,17 @@
 package ru.sb.sboard.data.adapters;
 
-import ru.sb.sboard.data.properties.PropertyExtractor;
-import ru.sb.sboard.data.properties.PropertyExtractorFactory;
+import lombok.extern.slf4j.Slf4j;
 import ru.sb.sboard.data.DataFetcher;
 import ru.sb.sboard.data.FetchConfig;
+import ru.sb.sboard.data.properties.PropertyExtractor;
+import ru.sb.sboard.data.properties.PropertyExtractorFactory;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+@Slf4j
 public abstract class BaseDataFetcher implements DataFetcher {
     private final PropertyExtractorFactory propertyExtractorFactory;
 
@@ -33,12 +35,17 @@ public abstract class BaseDataFetcher implements DataFetcher {
     }
 
     private Stream<Map<String, Object>> extractData(Map<String, PropertyExtractor> propertyExtractors, Object dataItem) {
-        return Stream.of(propertyExtractors.entrySet()
+        Map<String, Object> extractedProps = new HashMap<>(propertyExtractors.size());
+
+        propertyExtractors.entrySet()
                 .stream()
-                .collect(Collectors.toMap(
-                        Map.Entry::getKey,
-                        entry -> entry.getValue().extractProperty(dataItem)
-                )));
+                // Map#merge workaround for null values
+                .forEachOrdered(entry -> extractedProps.put(
+                        entry.getKey(), entry
+                                .getValue().extractProperty(dataItem)
+                ));
+
+        return Stream.of(extractedProps);
     }
 
     protected abstract Stream<?> streamData(Map<String, String> fetchConfiguration);

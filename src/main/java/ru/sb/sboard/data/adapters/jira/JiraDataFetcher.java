@@ -1,6 +1,5 @@
 package ru.sb.sboard.data.adapters.jira;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -11,8 +10,6 @@ import ru.sb.sboard.data.adapters.BaseDataFetcher;
 import ru.sb.sboard.data.properties.PropertyExtractorFactory;
 import ru.sb.sboard.data.properties.maps.MapPropertyExtractor;
 
-import java.io.IOException;
-import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -76,16 +73,11 @@ public class JiraDataFetcher extends BaseDataFetcher {
 
     @Override
     protected Stream<?> streamData(Map<String, String> fetchConfiguration) {
-        final String token = tokenProvider.get();
-        System.out.println("Session: " + token);
-
         final ResponseEntity<HashMap> jqlResult = restOperations.exchange(
                 jqlUrl(),
                 HttpMethod.GET,
                 new HttpEntity<>(
-                        new HttpHeaders() {{
-                            put("cookie", singletonList("JSESSIONID=" + token));
-                        }}
+                        formHeaders()
                 ),
                 new ParameterizedTypeReference<HashMap>() {
                 },
@@ -94,14 +86,19 @@ public class JiraDataFetcher extends BaseDataFetcher {
                 }}
         );
 
-        final StringWriter sw = new StringWriter();
-        try {
-            new ObjectMapper().writer().writeValue(sw, jqlResult.getBody());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println(sw.toString());
-
         return ((List) jqlResult.getBody().get("issues")).stream();
+    }
+
+    private HttpHeaders formHeaders() {
+        if (tokenProvider == null) {
+            return new HttpHeaders();
+        }
+
+        String token = tokenProvider.get();
+        System.out.println("Session: " + token);
+
+        return new HttpHeaders() {{
+            put("cookie", singletonList("JSESSIONID=" + token));
+        }};
     }
 }
