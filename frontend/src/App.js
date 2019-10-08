@@ -1,12 +1,22 @@
 import React from 'react';
-import { AppBar, Toolbar, IconButton, Fab, Button, makeStyles } from '@material-ui/core';
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Fab,
+  Button,
+  Container,
+  Grid,
+  Paper,
+  Typography,
+  makeStyles,
+} from '@material-ui/core';
 import { Add, Menu } from '@material-ui/icons';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 0,
-    flexShrink: 0,
-    width: '100vw',
+    display: 'flex',
+    flexDirection: 'column',
     height: '100vh',
   },
   fab: {
@@ -22,6 +32,20 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     flexGrow: 1,
+  },
+  content: {
+    flexGrow: 1,
+    overflow: 'auto',
+  },
+  container: {
+    paddingTop: theme.spacing(4),
+    paddingBottom: theme.spacing(4),
+  },
+  paper: {
+    padding: theme.spacing(2),
+    display: 'flex',
+    overflow: 'auto',
+    flexDirection: 'column',
   },
 }));
 
@@ -42,6 +66,24 @@ const App = () => {
       <Fab color="primary" aria-label="add" className={classes.fab}>
         <Add />
       </Fab>
+      <main className={classes.content}>
+        <Container maxWidth="lg" className={classes.container}>
+          <Grid container spacing={3}>
+            {Array(10)
+              .fill(0)
+              .map((_, index) => (
+                <Grid item xs={12} key={index}>
+                  <Paper className={classes.paper}>
+                    <Typography color="primary" gutterBottom>
+                      Header
+                    </Typography>
+                    <div>Здесь мог быть ваш контент</div>
+                  </Paper>
+                </Grid>
+              ))}
+          </Grid>
+        </Container>
+      </main>
     </div>
   );
 };
