@@ -26,6 +26,13 @@ ext {
     set('springBootAdminVersion', "2.1.5")
 }
 
+processResources {
+    from ('frontend/build/') {
+        into 'public'
+    }
+    dependsOn(':frontend:assemble')
+}
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-cache'
