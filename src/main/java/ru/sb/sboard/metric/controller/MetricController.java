@@ -1,27 +1,32 @@
-package ru.sb.sboard.controller;
+package ru.sb.sboard.metric.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import ru.sb.sboard.data.DataFetcher;
 import ru.sb.sboard.data.FetchConfig;
+import ru.sb.sboard.metric.enums.Metric;
+import ru.sb.sboard.metric.service.MetricService;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+@RestController
 @RequestMapping("/metrics")
-@Controller
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class MetricController {
-    @Autowired
-    private DataFetcher jiraDataFetcher;
 
-    @Autowired
-    private DataFetcher bitBucketDataFetcher;
+    private final MetricService metricService;
+    private final DataFetcher jiraDataFetcher;
+    private final DataFetcher bitBucketDataFetcher;
 
-    @GetMapping("jira")
+    @GetMapping("/{metric}")
+    public Object getMetric(@PathVariable Metric metric) {
+        return metricService.getMetricValue(metric);
+    }
+
+    @GetMapping("/jira")
     @ResponseBody
     public Object jqlData(String jql) {
         return jiraDataFetcher
