@@ -5,66 +5,38 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.client.RestOperations;
+import org.springframework.web.client.RestTemplate;
 import ru.sb.sboard.data.adapters.BaseDataFetcher;
 import ru.sb.sboard.data.properties.PropertyExtractorFactory;
-import ru.sb.sboard.data.properties.maps.MapPropertyExtractor;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.function.Supplier;
 import java.util.stream.Stream;
 
-import static java.util.Collections.singletonList;
-
 public class JiraDataFetcher extends BaseDataFetcher {
-    private final String jiraUrl;
-    private final RestOperations restOperations;
-    private final Supplier<String> tokenProvider;
+    private final String url;
+    private final RestTemplate restOperations;
 
-    public JiraDataFetcher(String jiraUrl,
-                           RestOperations restOperations,
-                           Supplier<String> tokenProvider,
+    public JiraDataFetcher(String url,
+                           RestTemplate restOperations,
                            PropertyExtractorFactory propertyExtractorFactory) {
         super(propertyExtractorFactory);
-        this.jiraUrl = jiraUrl;
+        this.url = url;
         this.restOperations = restOperations;
-        this.tokenProvider = tokenProvider;
     }
 
-    public JiraDataFetcher(String jiraUrl,
-                           RestOperations restOperations,
-                           PropertyExtractorFactory propertyExtractorFactory) {
-        this(jiraUrl,
-                restOperations,
-                () -> {
-                    final ResponseEntity<HashMap> loginResponse = restOperations
-                            .postForEntity(
-                                    authUrl(jiraUrl) + "/session",
-                                    new HashMap<String, String>() {{
-                                        put("username", System.getProperty("jira.user"));
-                                        put("password", System.getProperty("jira.password"));
-                                    }},
-                                    HashMap.class
-                            );
-
-                    return MapPropertyExtractor.get(String.class, loginResponse.getBody(), "session", "value");
-                },
-                propertyExtractorFactory
-        );
-    }
 
     private static String authUrl(String jiraUrl) {
         return jiraUrl + "/rest/auth/latest";
     }
 
     private String apiUrl() {
-        return jiraUrl + "/rest/api/latest";
+        return url + "/rest/api/latest";
     }
 
     private String authUrl() {
-        return authUrl(jiraUrl);
+        return authUrl(url);
     }
 
     private String jqlUrl() {
@@ -76,9 +48,7 @@ public class JiraDataFetcher extends BaseDataFetcher {
         final ResponseEntity<HashMap> jqlResult = restOperations.exchange(
                 jqlUrl(),
                 HttpMethod.GET,
-                new HttpEntity<>(
-                        formHeaders()
-                ),
+                new HttpEntity<>(new HttpHeaders()),
                 new ParameterizedTypeReference<HashMap>() {
                 },
                 new HashMap<String, String>() {{
@@ -87,18 +57,5 @@ public class JiraDataFetcher extends BaseDataFetcher {
         );
 
         return ((List) jqlResult.getBody().get("issues")).stream();
-    }
-
-    private HttpHeaders formHeaders() {
-        if (tokenProvider == null) {
-            return new HttpHeaders();
-        }
-
-        String token = tokenProvider.get();
-        System.out.println("Session: " + token);
-
-        return new HttpHeaders() {{
-            put("cookie", singletonList("JSESSIONID=" + token));
-        }};
     }
 }
