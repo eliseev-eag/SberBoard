@@ -2,7 +2,7 @@ package ru.sb.sboard.gqm.domain;
 
 import lombok.Getter;
 import lombok.Setter;
-import ru.sb.sboard._common.domain.AbstractIdentity;
+import ru.sb.sboard.common.domain.AbstractIdentity;
 import ru.sb.sboard.tag.domain.Tag;
 import ru.sb.sboard.gqm.enums.GoalPurpose;
 

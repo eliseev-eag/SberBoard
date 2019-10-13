@@ -1,4 +1,4 @@
-package ru.sb.sboard._common.domain;
+package ru.sb.sboard.common.domain;
 
 import lombok.Getter;
 import org.hibernate.annotations.GenericGenerator;
