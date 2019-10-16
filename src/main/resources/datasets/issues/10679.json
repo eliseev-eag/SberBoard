@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10679",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10679/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10679/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10679/events",
+  "html_url": "https://github.com/facebook/react/pull/10679",
+  "id": 257084713,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQwNjExMjQx",
+  "number": 10679,
+  "title": "ReactNativeBridgeEventPlugin supports lazily-registered event types",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2017-09-12T15:23:40Z",
+  "updated_at": "2017-09-16T07:06:21Z",
+  "closed_at": "2017-09-14T21:55:33Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10679",
+    "html_url": "https://github.com/facebook/react/pull/10679",
+    "diff_url": "https://github.com/facebook/react/pull/10679.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10679.patch"
+  },
+  "body": "Previously, React Native loaded event type info from `UIManager` during initialization to configure the event plugin. This communication with `UIManager` caused Prepack deopts and was removed with #10567 in favor of hard-coded event types.\r\n\r\nUnfortunately this change had the unexpected result of blocking custom (3rd party) view managers from defining their own event types. After some consideration, I believe the best path forward is to lazily read event types for each view manager. (This approach unlocks the ability to lazily initialize view managers on the native side as well.)\r\n\r\nThis PR deletes the hard-coded event list (formerly `ReactNativeEventTypes`) and adds a new method ,`processEventTypes`, to `ReactNativeBridgeEventPlugin` (to be called by `requireNativeComponent` each time a new view manager is initialized). I've also updated event-related tests to roughly mimic what happens in the native context.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9866",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9866/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9866/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9866/events",
+  "html_url": "https://github.com/facebook/react/issues/9866",
+  "id": 233967763,
+  "node_id": "MDU6SXNzdWUyMzM5Njc3NjM=",
+  "number": 9866,
+  "title": "Add More Cases to Server Rendering Fixture",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710332294,
+      "node_id": "MDU6TGFiZWw3MTAzMzIyOTQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Server%20Rendering",
+      "name": "Component: Server Rendering",
+      "color": "d4c5f9",
+      "default": false
+    },
+    {
+      "id": 588833528,
+      "node_id": "MDU6TGFiZWw1ODg4MzM1Mjg=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Difficulty:%20medium",
+      "name": "Difficulty: medium",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 28,
+  "created_at": "2017-06-06T17:31:30Z",
+  "updated_at": "2019-05-15T17:04:34Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "body": "Server rendering has a lot of quirks that are easy to break. We have a fixture set up for it in [/fixtures/ssr](https://github.com/facebook/react/tree/master/fixtures/ssr).\r\n\r\nThis could be expanded to have more stuff in it. A few things we should have in the fixture and test for:\r\n\r\n- `<input />`, `<select />`, `<option />` and `<textarea />` controlled and uncontrolled. All types of inputs, including dates, numbers etc.\r\n- Where children is a single string/number, children array with multiple string/numbers, children with interleaved nodes and string/numbers.\r\n- Event handlers on hydrated nodes that does something useful when clicked. Reused event handlers on multiple different nodes etc.\r\n- onLoad event handlers.\r\n- Special properties that don't map directly to attribute names like `className`.\r\n- `<div hidden>...</div>` subtrees. (Subtrees with the \"hidden\" attribute set on it. Tests deprioritization.)\r\n\r\nWe probably need some on-screen options to turn on/off these things in the test suite to test under these conditions:\r\n\r\n- Server and Client differences. Turn on a flag that makes the server and client differ in minor ways.\r\n- Async hydration. Use Fiber's async features to hydrate the tree.\r\n- Defer hydration for some time. This is useful to test slow loading conditions where the user may have changed state of form controls before hydration. When combined with async, it can make the async rendering artificially slow. It should reveal issues such as a patching or event handlers being attached too early (before commit phase).\r\n\r\nIt's ok to start small. You don't have to do it all at once.",
+  "closed_by": null
+}

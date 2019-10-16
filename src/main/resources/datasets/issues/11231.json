@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11231",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11231/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11231/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11231/events",
+  "html_url": "https://github.com/facebook/react/issues/11231",
+  "id": 265669301,
+  "node_id": "MDU6SXNzdWUyNjU2NjkzMDE=",
+  "number": 11231,
+  "title": "keyup event not fired on Firefox for Android",
+  "user": {
+    "login": "nicofrand",
+    "id": 3419050,
+    "node_id": "MDQ6VXNlcjM0MTkwNTA=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/3419050?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nicofrand",
+    "html_url": "https://github.com/nicofrand",
+    "followers_url": "https://api.github.com/users/nicofrand/followers",
+    "following_url": "https://api.github.com/users/nicofrand/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nicofrand/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nicofrand/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nicofrand/subscriptions",
+    "organizations_url": "https://api.github.com/users/nicofrand/orgs",
+    "repos_url": "https://api.github.com/users/nicofrand/repos",
+    "events_url": "https://api.github.com/users/nicofrand/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nicofrand/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-10-16T07:21:36Z",
+  "updated_at": "2017-10-31T08:15:28Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\nA bug.\r\n\r\n**What is the current behavior?**\r\n\r\nThe keyup event is not fired. When using vanilla JS, there is no issue (https://codepen.io/anon/pen/LzggQW).\r\n\r\n**STR:**\r\n\r\n1. On an Android smartphone, ensure both autocompletion and autocorrect are enabled\r\n0. Open https://codepen.io/anon/pen/xXyaLe in Firefox for Android (it works on desktop and with Chrome for Android)\r\n0. Type any letter in the input field\r\n\r\n**What is the expected behavior?**\r\n\r\nFor each alphanumeric char typed an alert should be displayed.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\n* Version used : React 15.6.1\r\n* Browser : Firefox for Android (56+)\r\n* Did this work in previous versions of React : I don't know\r\n",
+  "closed_by": null
+}

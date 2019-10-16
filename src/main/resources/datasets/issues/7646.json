@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7646",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7646/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7646/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7646/events",
+  "html_url": "https://github.com/facebook/react/pull/7646",
+  "id": 174851035,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODM4NjY4OTk=",
+  "number": 7646,
+  "title": "Remove describe from tests",
+  "user": {
+    "login": "vjeux",
+    "id": 197597,
+    "node_id": "MDQ6VXNlcjE5NzU5Nw==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/197597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/vjeux",
+    "html_url": "https://github.com/vjeux",
+    "followers_url": "https://api.github.com/users/vjeux/followers",
+    "following_url": "https://api.github.com/users/vjeux/following{/other_user}",
+    "gists_url": "https://api.github.com/users/vjeux/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/vjeux/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/vjeux/subscriptions",
+    "organizations_url": "https://api.github.com/users/vjeux/orgs",
+    "repos_url": "https://api.github.com/users/vjeux/repos",
+    "events_url": "https://api.github.com/users/vjeux/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/vjeux/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-09-02T21:27:56Z",
+  "updated_at": "2016-09-02T21:53:17Z",
+  "closed_at": "2016-09-02T21:53:17Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7646",
+    "html_url": "https://github.com/facebook/react/pull/7646",
+    "diff_url": "https://github.com/facebook/react/pull/7646.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7646.patch"
+  },
+  "body": "Most of our test files only have one describe block with the name being the name of the file. This isn't useful and is only noise in the test files. It turns out that jest doesn't require it and removed it from the tutorials\n\nI ran the following codemod https://github.com/cpojer/js-codemod/pull/54\n\n``` js\nfind `find . -name __tests__` | grep -v '__tests__$' | xargs ../js-codemod/node_modules/.bin/jscodeshift -t ../js-codemod/transforms/jest-remove-describe.js\n```\n\nAnd had to manually one two file where backtick were not properly re-printed by recast.\n",
+  "closed_by": {
+    "login": "vjeux",
+    "id": 197597,
+    "node_id": "MDQ6VXNlcjE5NzU5Nw==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/197597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/vjeux",
+    "html_url": "https://github.com/vjeux",
+    "followers_url": "https://api.github.com/users/vjeux/followers",
+    "following_url": "https://api.github.com/users/vjeux/following{/other_user}",
+    "gists_url": "https://api.github.com/users/vjeux/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/vjeux/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/vjeux/subscriptions",
+    "organizations_url": "https://api.github.com/users/vjeux/orgs",
+    "repos_url": "https://api.github.com/users/vjeux/repos",
+    "events_url": "https://api.github.com/users/vjeux/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/vjeux/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

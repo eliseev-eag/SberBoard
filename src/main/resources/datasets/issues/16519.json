@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16519",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16519/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16519/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16519/events",
+  "html_url": "https://github.com/facebook/react/issues/16519",
+  "id": 483164854,
+  "node_id": "MDU6SXNzdWU0ODMxNjQ4NTQ=",
+  "number": 16519,
+  "title": "hook component can not been clicked in react-dev-tool if you want it works well.",
+  "user": {
+    "login": "fantasticsoul",
+    "id": 7334950,
+    "node_id": "MDQ6VXNlcjczMzQ5NTA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/7334950?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/fantasticsoul",
+    "html_url": "https://github.com/fantasticsoul",
+    "followers_url": "https://api.github.com/users/fantasticsoul/followers",
+    "following_url": "https://api.github.com/users/fantasticsoul/following{/other_user}",
+    "gists_url": "https://api.github.com/users/fantasticsoul/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/fantasticsoul/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/fantasticsoul/subscriptions",
+    "organizations_url": "https://api.github.com/users/fantasticsoul/orgs",
+    "repos_url": "https://api.github.com/users/fantasticsoul/repos",
+    "events_url": "https://api.github.com/users/fantasticsoul/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/fantasticsoul/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 40929155,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1NQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Question",
+      "name": "Type: Question",
+      "color": "cc317c",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2019-08-21T02:20:13Z",
+  "updated_at": "2019-10-03T18:06:17Z",
+  "closed_at": "2019-10-03T18:05:40Z",
+  "author_association": "NONE",
+  "body": "### issue type\r\nbug\r\n\r\n### issue description\r\nlook at the code blow (it is very very very simple).\r\n```jsx\r\nimport React, { useState } from 'react';\r\n\r\nexport default function DemoCounter() {\r\n  const [fnWrapper] = useState('fn');\r\n  const [count, setCount] = useState(0);\r\n  fnWrapper.__proto__.setCount = s => {\r\n    setCount(s);\r\n  }\r\n\r\n // assign fnWrapper.__proto__.setCount to callSetCount\r\n  const callSetCount = fnWrapper.__proto__.setCount;\r\n\r\n  return (\r\n    <div style={{ border: '1px solid blue', margin: '8px' }}>\r\n      count: {count}\r\n      {/* this does not work if I open react-dev-tool and click the dom node */}\r\n      <input value={count} onChange={e => fnWrapper.__proto__.setCount(e.currentTarget.value)} />\r\n\r\n       {/* this always works not matter I open react-dev-tool and click the dom node or not */}\r\n      <input value={count} onChange={e => callSetCount(e.currentTarget.value)} />\r\n    </div>\r\n  );\r\n}\r\n\r\n```\r\n### why callSetCount always works but `fnWrapper.__proto__.setCount` not if and only if after I open the react-dev-tool and click the dom node ~~~~(>_<)~~~~，\r\n\r\n### please tell me the truth.\r\n",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

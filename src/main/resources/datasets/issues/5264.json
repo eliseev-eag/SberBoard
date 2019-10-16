@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5264",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5264/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5264/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5264/events",
+  "html_url": "https://github.com/facebook/react/pull/5264",
+  "id": 113122801,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDg2NDQzMzQ=",
+  "number": 5264,
+  "title": "Perf actual React components",
+  "user": {
+    "login": "gfogle",
+    "id": 7015773,
+    "node_id": "MDQ6VXNlcjcwMTU3NzM=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/7015773?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gfogle",
+    "html_url": "https://github.com/gfogle",
+    "followers_url": "https://api.github.com/users/gfogle/followers",
+    "following_url": "https://api.github.com/users/gfogle/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gfogle/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gfogle/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gfogle/subscriptions",
+    "organizations_url": "https://api.github.com/users/gfogle/orgs",
+    "repos_url": "https://api.github.com/users/gfogle/repos",
+    "events_url": "https://api.github.com/users/gfogle/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gfogle/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2015-10-24T00:41:01Z",
+  "updated_at": "2016-02-27T04:08:13Z",
+  "closed_at": "2016-02-27T04:08:13Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5264",
+    "html_url": "https://github.com/facebook/react/pull/5264",
+    "diff_url": "https://github.com/facebook/react/pull/5264.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5264.patch"
+  },
+  "body": "Working through #5254 \n\nI'm hijacking the lifecycle methods of the react components and then enabling DefaultPerf to measure them and print high-level statistics on the measures.\n\nI started at a basic implementation. Would like to submit subsequent PRs with more advanced functionality such as tracking # of times returned true vs false for shouldComponentUpdate, etc.\n",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

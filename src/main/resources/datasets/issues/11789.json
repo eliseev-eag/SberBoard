@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11789",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11789/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11789/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11789/events",
+  "html_url": "https://github.com/facebook/react/issues/11789",
+  "id": 279955176,
+  "node_id": "MDU6SXNzdWUyNzk5NTUxNzY=",
+  "number": 11789,
+  "title": "hydrating a component with `dangerouslySetInnerHTML` and `toString` causes a warning, and the component to not render",
+  "user": {
+    "login": "magicmark",
+    "id": 1590756,
+    "node_id": "MDQ6VXNlcjE1OTA3NTY=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1590756?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/magicmark",
+    "html_url": "https://github.com/magicmark",
+    "followers_url": "https://api.github.com/users/magicmark/followers",
+    "following_url": "https://api.github.com/users/magicmark/following{/other_user}",
+    "gists_url": "https://api.github.com/users/magicmark/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/magicmark/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/magicmark/subscriptions",
+    "organizations_url": "https://api.github.com/users/magicmark/orgs",
+    "repos_url": "https://api.github.com/users/magicmark/repos",
+    "events_url": "https://api.github.com/users/magicmark/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/magicmark/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710332294,
+      "node_id": "MDU6TGFiZWw3MTAzMzIyOTQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Server%20Rendering",
+      "name": "Component: Server Rendering",
+      "color": "d4c5f9",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2017-12-07T00:21:56Z",
+  "updated_at": "2018-08-09T17:05:06Z",
+  "closed_at": "2018-08-09T17:05:06Z",
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\nbug\r\n\r\n**What is the current behavior?**\r\n\r\nWhen hydrating a pre-rendered component that uses `dangerouslySetInnerHTML`, + an object with a `toString` method, we get a warning such as:\r\n\r\n```\r\nWarning: Did not expect server HTML to contain the text node \"Bonjour\" in <p>.\r\n```\r\n\r\nThe component will also appear blank.\r\n\r\nThis is noteworthy since:\r\n- The markup returned by `render` appears to be correct, meaning:\r\n  - The markup that an SSR server returns is correct\r\n  - The markup that appears on page if we just use `render` on the client, without SSR is correct\r\n- It's only if we do both, that we get errors.\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem via https://jsfiddle.net or similar (template for React 16: https://jsfiddle.net/Luktwrdm/, template for React 15: https://jsfiddle.net/hmbg7e9w/).**\r\n\r\nhttps://codesandbox.io/s/vqkq34o965\r\n\r\n(Code, for posterity:)\r\n```js\r\nimport React from \"react\";\r\nimport { hydrate } from \"react-dom\";\r\n\r\nconst HelloObj = {\r\n  toString: () => \"Bonjour\"\r\n};\r\n\r\nconst MyComponent = () => (\r\n  <p\r\n    dangerouslySetInnerHTML={{\r\n      __html: HelloObj\r\n    }}\r\n  />\r\n);\r\n\r\nhydrate(<MyComponent />, document.getElementById(\"app\"));\r\n```\r\n\r\n**What is the expected behavior?**\r\n\r\nThe component is not blank, and no error is outputted in the console\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\n- react/react-dom 16.2.0\r\n  - This worked < 16 (confirmed working in 15.6.1, if we use the `render` method)\r\n- Chrome Version 62.0.3202.94\r\n- OS X 10.12.6",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

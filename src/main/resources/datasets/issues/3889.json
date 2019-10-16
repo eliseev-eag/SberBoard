@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3889",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3889/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3889/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3889/events",
+  "html_url": "https://github.com/facebook/react/pull/3889",
+  "id": 77045202,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzU1NzE0NDc=",
+  "number": 3889,
+  "title": "change wording in 'Working with the Browser'",
+  "user": {
+    "login": "garethnic",
+    "id": 1523598,
+    "node_id": "MDQ6VXNlcjE1MjM1OTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1523598?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/garethnic",
+    "html_url": "https://github.com/garethnic",
+    "followers_url": "https://api.github.com/users/garethnic/followers",
+    "following_url": "https://api.github.com/users/garethnic/following{/other_user}",
+    "gists_url": "https://api.github.com/users/garethnic/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/garethnic/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/garethnic/subscriptions",
+    "organizations_url": "https://api.github.com/users/garethnic/orgs",
+    "repos_url": "https://api.github.com/users/garethnic/repos",
+    "events_url": "https://api.github.com/users/garethnic/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/garethnic/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2015-05-16T13:56:55Z",
+  "updated_at": "2015-05-21T18:50:44Z",
+  "closed_at": "2015-05-16T18:09:49Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3889",
+    "html_url": "https://github.com/facebook/react/pull/3889",
+    "diff_url": "https://github.com/facebook/react/pull/3889.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3889.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

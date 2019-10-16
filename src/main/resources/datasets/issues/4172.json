@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4172",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4172/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4172/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4172/events",
+  "html_url": "https://github.com/facebook/react/pull/4172",
+  "id": 89403723,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzgwNTU3MTU=",
+  "number": 4172,
+  "title": "Freeze ReactElement.props in dev mode",
+  "user": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2015-06-18T21:34:50Z",
+  "updated_at": "2015-06-19T21:13:17Z",
+  "closed_at": "2015-06-19T21:13:17Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4172",
+    "html_url": "https://github.com/facebook/react/pull/4172",
+    "diff_url": "https://github.com/facebook/react/pull/4172.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4172.patch"
+  },
+  "body": "Freeze ReactElement.props in dev mode.\n\nThis diff removes the dev warning and freezes the props in dev.  This means there is a minor divergence in runtime behavior of dev/prod, and breaks devtools (new devtools on the way), but we knew/acknowledged those points.  As per @sebmarkbage, we are ok with these facts and still want to freeze.\n\nDetails: One might wonder why we freeze some things in the unit tests.  This is because phantomjs has a quark where it treats frozen objects as different from non-frozen.  Jest and Chrome don't care if things are frozen, but travis uses phantomjs, so, yeah.\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

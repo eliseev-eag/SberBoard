@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12542",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12542/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12542/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12542/events",
+  "html_url": "https://github.com/facebook/react/pull/12542",
+  "id": 311337922,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTc5NDcyMDM1",
+  "number": 12542,
+  "title": "Adds a test case for SSR reconnection",
+  "user": {
+    "login": "EnoahNetzach",
+    "id": 663755,
+    "node_id": "MDQ6VXNlcjY2Mzc1NQ==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/663755?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/EnoahNetzach",
+    "html_url": "https://github.com/EnoahNetzach",
+    "followers_url": "https://api.github.com/users/EnoahNetzach/followers",
+    "following_url": "https://api.github.com/users/EnoahNetzach/following{/other_user}",
+    "gists_url": "https://api.github.com/users/EnoahNetzach/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/EnoahNetzach/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/EnoahNetzach/subscriptions",
+    "organizations_url": "https://api.github.com/users/EnoahNetzach/orgs",
+    "repos_url": "https://api.github.com/users/EnoahNetzach/repos",
+    "events_url": "https://api.github.com/users/EnoahNetzach/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/EnoahNetzach/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-04-04T18:18:27Z",
+  "updated_at": "2019-04-25T09:20:41Z",
+  "closed_at": "2019-04-25T09:20:30Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12542",
+    "html_url": "https://github.com/facebook/react/pull/12542",
+    "diff_url": "https://github.com/facebook/react/pull/12542.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12542.patch"
+  },
+  "body": "This PR adds a test case for the issue https://github.com/facebook/react/issues/12536.",
+  "closed_by": {
+    "login": "cpojer",
+    "id": 13352,
+    "node_id": "MDQ6VXNlcjEzMzUy",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/13352?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/cpojer",
+    "html_url": "https://github.com/cpojer",
+    "followers_url": "https://api.github.com/users/cpojer/followers",
+    "following_url": "https://api.github.com/users/cpojer/following{/other_user}",
+    "gists_url": "https://api.github.com/users/cpojer/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/cpojer/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/cpojer/subscriptions",
+    "organizations_url": "https://api.github.com/users/cpojer/orgs",
+    "repos_url": "https://api.github.com/users/cpojer/repos",
+    "events_url": "https://api.github.com/users/cpojer/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/cpojer/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3912",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3912/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3912/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3912/events",
+  "html_url": "https://github.com/facebook/react/pull/3912",
+  "id": 78544768,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzU4MzY2MDE=",
+  "number": 3912,
+  "title": "Add shallow context pass test",
+  "user": {
+    "login": "lasekio",
+    "id": 8137000,
+    "node_id": "MDQ6VXNlcjgxMzcwMDA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/8137000?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lasekio",
+    "html_url": "https://github.com/lasekio",
+    "followers_url": "https://api.github.com/users/lasekio/followers",
+    "following_url": "https://api.github.com/users/lasekio/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lasekio/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lasekio/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lasekio/subscriptions",
+    "organizations_url": "https://api.github.com/users/lasekio/orgs",
+    "repos_url": "https://api.github.com/users/lasekio/repos",
+    "events_url": "https://api.github.com/users/lasekio/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lasekio/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2015-05-20T14:20:41Z",
+  "updated_at": "2015-05-20T22:11:36Z",
+  "closed_at": "2015-05-20T22:11:31Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3912",
+    "html_url": "https://github.com/facebook/react/pull/3912",
+    "diff_url": "https://github.com/facebook/react/pull/3912.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3912.patch"
+  },
+  "body": "Add simple test to check, that context from shallow render function is passing to component.\n#3721\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

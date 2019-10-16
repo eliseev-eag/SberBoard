@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12658",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12658/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12658/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12658/events",
+  "html_url": "https://github.com/facebook/react/pull/12658",
+  "id": 316116143,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTgyOTUyMTA4",
+  "number": 12658,
+  "title": "Validate props on context providers",
+  "user": {
+    "login": "nicolevy",
+    "id": 24465189,
+    "node_id": "MDQ6VXNlcjI0NDY1MTg5",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/24465189?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nicolevy",
+    "html_url": "https://github.com/nicolevy",
+    "followers_url": "https://api.github.com/users/nicolevy/followers",
+    "following_url": "https://api.github.com/users/nicolevy/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nicolevy/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nicolevy/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nicolevy/subscriptions",
+    "organizations_url": "https://api.github.com/users/nicolevy/orgs",
+    "repos_url": "https://api.github.com/users/nicolevy/repos",
+    "events_url": "https://api.github.com/users/nicolevy/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nicolevy/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2018-04-20T03:36:28Z",
+  "updated_at": "2018-04-22T12:39:39Z",
+  "closed_at": "2018-04-22T12:39:39Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12658",
+    "html_url": "https://github.com/facebook/react/pull/12658",
+    "diff_url": "https://github.com/facebook/react/pull/12658.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12658.patch"
+  },
+  "body": "## Description\r\n\r\nProp types aren’t being checked on context providers, resulting in no dev warning in situations like the following:\r\n\r\n![38910612-fe7cc032-427e-11e8-92dd-568849ccb4b3](https://user-images.githubusercontent.com/24465189/39029352-50e50694-4429-11e8-9fdb-181a5ce71f70.png)\r\n\r\nReferences issue: #12636 \r\n\r\n## Changes\r\n\r\n- [x] Added `checkPropTypes` call to `updateContextProvider`\r\n- [x] Added a test to make sure prop types are being checked on providers\r\n\r\n## Notes\r\n\r\nI only added one test as I thought multiple tests with different propType specification would just be testing the underlying prop-types library instead of react. If this needs to be moved or I’ve missed something let me know! 😄 ",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

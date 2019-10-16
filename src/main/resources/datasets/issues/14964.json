@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14964",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14964/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14964/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14964/events",
+  "html_url": "https://github.com/facebook/react/pull/14964",
+  "id": 414905857,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjU2NTExMjU2",
+  "number": 14964,
+  "title": "Add new mock build of Scheduler with flush, yield API",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-02-27T01:49:41Z",
+  "updated_at": "2019-02-27T15:48:00Z",
+  "closed_at": "2019-02-27T04:51:18Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14964",
+    "html_url": "https://github.com/facebook/react/pull/14964",
+    "diff_url": "https://github.com/facebook/react/pull/14964.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14964.patch"
+  },
+  "body": "Test environments need a way to take control of the Scheduler queue and incrementally flush work. Our current tests accomplish this either using dynamic injection, or by using Jest's fake timers feature. Both of these options are fragile and rely too much on implementation details.\r\n\r\nIn this new approach, we have a separate build of Scheduler that is specifically designed for test environments. We mock the default implementation like we would any other module; in our case, via Jest. This special build has methods like `flushAll` and `yieldValue` that control when work is flushed. These methods are based on equivalent methods we've been using to write incremental React tests. Eventually we may want to migrate the React tests to interact with the mock Scheduler directly, instead of going through the host config like we currently do.\r\n\r\nFor now, I'm using our custom static injection infrastructure to create the two builds of Scheduler — a default build for DOM (which falls back to a naive timer based implementation), and the new mock build. I did it this way because it allows me to share most of the implementation, which isn't specific to a host environment — e.g. everything related to the priority queue. It may be better to duplicate the shared code instead, especially considering that future environments (like React Native) may have entirely forked implementations. I'd prefer to wait until the implementation stabilizes before worrying about that, but I'm open to changing this now if we decide it's important enough.",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

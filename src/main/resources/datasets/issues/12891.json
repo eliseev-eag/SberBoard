@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12891",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12891/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12891/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12891/events",
+  "html_url": "https://github.com/facebook/react/pull/12891",
+  "id": 325818075,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTkwMDYxODYz",
+  "number": 12891,
+  "title": "Record \"actual\" times for all Fibers within a Profiler tree",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2018-05-23T18:13:17Z",
+  "updated_at": "2018-05-25T21:38:00Z",
+  "closed_at": "2018-05-25T21:37:51Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12891",
+    "html_url": "https://github.com/facebook/react/pull/12891",
+    "diff_url": "https://github.com/facebook/react/pull/12891.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12891.patch"
+  },
+  "body": "Move \"actual\" time tracking attributes onto the `Fiber` object and track for every `Fiber` within a `Profiler` tree. This change is being made so that DevTools has the ability to display timing info for all components in an application (or a subtree) simply by flipping the root `Fiber` and its alternate to `ProfileMode`.\r\n\r\nThis change should have no impact on the production bundle since the newly added fields are stripped out if `enableProfilerTimer` is disabled. It should have minimal impact on the dev and [production profiling](https://github.com/facebook/react/pull/12886) bundles since measurements are only recorded if `ProfileMode` is active.\r\n\r\n### Checklist\r\n- [x] All existing unit tests pass.\r\n- [x] Bundle size isn't impacted for non-profiling builds. (See below.)\r\n- [x] Reset \"actual\" time durations for all Fibers after commit- even ones that didn't update due to bailouts. (Otherwise their durations will accumulate for the next eventual re-render.)\r\n- [x] Don't reset durations before DevTools commit hook is called. (Otherwise DevTools will be unable to read these values for profiling mode.)\r\n\r\n### Bundle sizes\r\nBuilt after rebasing on master:\r\n![screen shot 2018-05-25 at 9 52 24 am](https://user-images.githubusercontent.com/29597/40556403-5e31b330-6001-11e8-8e56-663d84187475.png)",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

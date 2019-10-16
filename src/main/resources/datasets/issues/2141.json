@@ -1,0 +1,97 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2141",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2141/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2141/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2141/events",
+  "html_url": "https://github.com/facebook/react/pull/2141",
+  "id": 41934167,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjA3NDIwMzc=",
+  "number": 2141,
+  "title": "[idea] Automatically detect property/attribute for HTMLDOMPropertyConfig",
+  "user": {
+    "login": "syranide",
+    "id": 1714255,
+    "node_id": "MDQ6VXNlcjE3MTQyNTU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1714255?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/syranide",
+    "html_url": "https://github.com/syranide",
+    "followers_url": "https://api.github.com/users/syranide/followers",
+    "following_url": "https://api.github.com/users/syranide/following{/other_user}",
+    "gists_url": "https://api.github.com/users/syranide/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/syranide/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/syranide/subscriptions",
+    "organizations_url": "https://api.github.com/users/syranide/orgs",
+    "repos_url": "https://api.github.com/users/syranide/repos",
+    "events_url": "https://api.github.com/users/syranide/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/syranide/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 332720629,
+      "node_id": "MDU6TGFiZWwzMzI3MjA2Mjk=",
+      "url": "https://api.github.com/repos/facebook/react/labels/HTML",
+      "name": "HTML",
+      "color": "f7c6c7",
+      "default": false
+    },
+    {
+      "id": 347968397,
+      "node_id": "MDU6TGFiZWwzNDc5NjgzOTc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Unsolved",
+      "name": "Resolution: Unsolved",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2014-09-04T13:11:09Z",
+  "updated_at": "2016-03-26T18:53:04Z",
+  "closed_at": "2016-03-26T18:53:04Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/2141",
+    "html_url": "https://github.com/facebook/react/pull/2141",
+    "diff_url": "https://github.com/facebook/react/pull/2141.diff",
+    "patch_url": "https://github.com/facebook/react/pull/2141.patch"
+  },
+  "body": "Proper implementation of #1512\n\nIt does not get rid of `MUST_USE_PROPERTY` (see #2140, #2202) and `MUST_USE_ATTRIBUTE` because I'm not 100% sure if we might want to use it or not, but I assume there's no need for it.\n\nI also removed a test that I'm not sure what to do about. It relied on really hacky behavior and I don't really see a simple way of keeping it alive (not really familiar with testing), but please shout if you think otherwise.\n\nThis is beneficial for a lot of reasons, one being that we ensure DOM attributes always reflect the intended value. `MUST_USE_PROPERTY` was previously used for some attributes not supported by all browsers/elements, which when updated would just add a custom property to the node object rather than the intended attribute.\n\nHalf-related: #1848 and #1657\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

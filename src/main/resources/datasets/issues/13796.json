@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13796",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13796/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13796/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13796/events",
+  "html_url": "https://github.com/facebook/react/issues/13796",
+  "id": 368331135,
+  "node_id": "MDU6SXNzdWUzNjgzMzExMzU=",
+  "number": 13796,
+  "title": "batch.commit() doesn't empty existing container",
+  "user": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-10-09T18:07:22Z",
+  "updated_at": "2018-11-01T19:26:49Z",
+  "closed_at": null,
+  "author_association": "COLLABORATOR",
+  "body": "If you have\r\n\r\n```\r\n<div id=\"main\">hello</div>\r\n```\r\n\r\nthen run\r\n\r\n```\r\nconst root = ReactDOM.unstable_createRoot($('main'));\r\nconst batch = root.createBatch();\r\nbatch.render('goodbye');\r\nawait batch;\r\nbatch.commit();\r\n```\r\n\r\nthen the div should contain \"goodbye\" but instead contains \"hellogoodbye\". Looks like we are forgetting to empty the container.\r\n\r\nSame issue exists with `unstable_createRoot(...).render(...)`.",
+  "closed_by": null
+}

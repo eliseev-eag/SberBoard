@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16072",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16072/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16072/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16072/events",
+  "html_url": "https://github.com/facebook/react/pull/16072",
+  "id": 464818457,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjk1MDE1NDg3",
+  "number": 16072,
+  "title": "fix a puzzle variable name. rootSibling => rootChild.",
+  "user": {
+    "login": "gxvv",
+    "id": 8492441,
+    "node_id": "MDQ6VXNlcjg0OTI0NDE=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/8492441?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gxvv",
+    "html_url": "https://github.com/gxvv",
+    "followers_url": "https://api.github.com/users/gxvv/followers",
+    "following_url": "https://api.github.com/users/gxvv/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gxvv/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gxvv/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gxvv/subscriptions",
+    "organizations_url": "https://api.github.com/users/gxvv/orgs",
+    "repos_url": "https://api.github.com/users/gxvv/repos",
+    "events_url": "https://api.github.com/users/gxvv/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gxvv/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-07-06T05:04:04Z",
+  "updated_at": "2019-07-09T15:11:38Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16072",
+    "html_url": "https://github.com/facebook/react/pull/16072",
+    "diff_url": "https://github.com/facebook/react/pull/16072.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16072.patch"
+  },
+  "body": "The origin variable is temporary for storing `container.lastChild`. So **Child** is more accurate than **Sibling**.",
+  "closed_by": null
+}

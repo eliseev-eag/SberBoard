@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11803",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11803/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11803/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11803/events",
+  "html_url": "https://github.com/facebook/react/pull/11803",
+  "id": 280309573,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTU3MTIzNzQ5",
+  "number": 11803,
+  "title": "(WIP) Use only public API for getNodeForCharacterOffset test",
+  "user": {
+    "login": "accordeiro",
+    "id": 1952585,
+    "node_id": "MDQ6VXNlcjE5NTI1ODU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1952585?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/accordeiro",
+    "html_url": "https://github.com/accordeiro",
+    "followers_url": "https://api.github.com/users/accordeiro/followers",
+    "following_url": "https://api.github.com/users/accordeiro/following{/other_user}",
+    "gists_url": "https://api.github.com/users/accordeiro/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/accordeiro/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/accordeiro/subscriptions",
+    "organizations_url": "https://api.github.com/users/accordeiro/orgs",
+    "repos_url": "https://api.github.com/users/accordeiro/repos",
+    "events_url": "https://api.github.com/users/accordeiro/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/accordeiro/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2017-12-07T22:58:34Z",
+  "updated_at": "2018-08-20T09:43:49Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11803",
+    "html_url": "https://github.com/facebook/react/pull/11803",
+    "diff_url": "https://github.com/facebook/react/pull/11803.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11803.patch"
+  },
+  "body": "This PR refers to #11299 - Express more tests via public API.\r\n\r\nI’m trying to find a good approach for testing the `getNodeForCharacterOffset()` using only public API.\r\n\r\nI’ve already mapped the call sequence from the public API to this function:\r\n\r\n---\r\n- `getNodeForCharacterOffset() @ getNodeForCharacterOffset.js`\r\n- `setOffsets() @ ReactDOMSelection.js`\r\n-  `setSelection() @ ReactInputSelection.js`\r\n-  `restoreSelection() @ ReactInputSelection.js`\r\n\r\n*Explicitly in this if clause (From ReactInputSelection.js):*\r\n```JavaScript\r\nif (curFocusedElem !== priorFocusedElem && isInDocument(priorFocusedElem)) {\r\n  if (hasSelectionCapabilities(priorFocusedElem)) {\r\n    setSelection(priorFocusedElem, priorSelectionRange);\r\n\t}\r\n  ...\r\n}\r\n```\r\n\r\n- `DOMRenderer.resetAfterCommit() @ ReactDOM.js`\r\n---\r\nThe tests I’ve written so far manage to reach `setSelection() @ ReactInputSelection.js` , but there’s still an if clause in `setSelection()` before we actually get to `getNodeForCharacterOffset()`, which is:\r\n\r\n```JavaScript\r\n  if ('selectionStart' in input) {\r\n    input.selectionStart = start;\r\n    input.selectionEnd = Math.min(end, input.value.length);\r\n  } else {\r\n    ReactDOMSelection.setOffsets(input, offsets);\r\n  }\r\n```\r\n\r\nI’m now testing how we could cause the code to trigger the else clause – any insights on how I can achieve this?\r\n\r\nThanks!",
+  "closed_by": null
+}

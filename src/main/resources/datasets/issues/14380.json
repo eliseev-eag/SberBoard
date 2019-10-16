@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14380",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14380/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14380/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14380/events",
+  "html_url": "https://github.com/facebook/react/issues/14380",
+  "id": 386706996,
+  "node_id": "MDU6SXNzdWUzODY3MDY5OTY=",
+  "number": 14380,
+  "title": "Old references retained by memoizedProps in fiber",
+  "user": {
+    "login": "emilschutte",
+    "id": 649549,
+    "node_id": "MDQ6VXNlcjY0OTU0OQ==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/649549?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/emilschutte",
+    "html_url": "https://github.com/emilschutte",
+    "followers_url": "https://api.github.com/users/emilschutte/followers",
+    "following_url": "https://api.github.com/users/emilschutte/following{/other_user}",
+    "gists_url": "https://api.github.com/users/emilschutte/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/emilschutte/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/emilschutte/subscriptions",
+    "organizations_url": "https://api.github.com/users/emilschutte/orgs",
+    "repos_url": "https://api.github.com/users/emilschutte/repos",
+    "events_url": "https://api.github.com/users/emilschutte/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/emilschutte/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2018-12-03T08:27:12Z",
+  "updated_at": "2019-08-09T04:25:14Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\nBug (or misunderstanding on my part)\r\n\r\n**What is the current behavior?**\r\n\r\nFibers seem to retain stale references to old data via `memoizedProps` / `memoizedState`\r\n\r\n**Demo:**\r\n\r\nhttps://jsfiddle.net/0tfq4p5r/\r\n\r\nThis demo just puts some big strings in the state (and into the props of a child component).  If you click the button it will replace the array of strings with an empty array.  At this point if you inspect the memory usage you will see that both `memoizedState` and `memoizedProps` are still holding references to the original array of strings and that memory can't be collected.\r\n\r\n**What is the expected behavior?**\r\n\r\nI was expecting no references to the old data to be retained, so that the memory could be reclaimed immediately.\r\n\r\nI ran into this when testing an app with a large dataset that is near my browser's heap limit.  If I want to replace that with a different, equally large dataset, and I attempt to make the first large dataset GC-able by removing it from my Redux store before putting the second dataset in the store, I wind up with the old dataset still resident in memory due to being retained by `memoizedProps` of a fiber.\r\n\r\nI noticed this PR that sounds possibly related:\r\n\r\nhttps://github.com/facebook/react/pull/14276\r\n\r\nand tested against current master ([f1bf281](https://github.com/facebook/react/commit/f1bf281605444b342f4c37718092accbe3f98702)) but still had the issue with `memoizedProps`.\r\n\r\nRight now I'm working around this by clearing the props twice consecutively before loading the new data.  Is that the intended solution for this situation?\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nmacOS High Sierra 10.13.6 (17G65)\r\nChrome Version 70.0.3538.110 (Official Build) (64-bit)\r\nReact 16.6.3\r\nDon't know about previous versions of React.",
+  "closed_by": null
+}

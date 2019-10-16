@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6240",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6240/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6240/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6240/events",
+  "html_url": "https://github.com/facebook/react/pull/6240",
+  "id": 139956959,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjI0MjQ5NDY=",
+  "number": 6240,
+  "title": "import 'React' -> 'react' in ReactCSSTranstiionGroup.js",
+  "user": {
+    "login": "eccentric-j",
+    "id": 590297,
+    "node_id": "MDQ6VXNlcjU5MDI5Nw==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/590297?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/eccentric-j",
+    "html_url": "https://github.com/eccentric-j",
+    "followers_url": "https://api.github.com/users/eccentric-j/followers",
+    "following_url": "https://api.github.com/users/eccentric-j/following{/other_user}",
+    "gists_url": "https://api.github.com/users/eccentric-j/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/eccentric-j/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/eccentric-j/subscriptions",
+    "organizations_url": "https://api.github.com/users/eccentric-j/orgs",
+    "repos_url": "https://api.github.com/users/eccentric-j/repos",
+    "events_url": "https://api.github.com/users/eccentric-j/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/eccentric-j/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2016-03-10T17:22:18Z",
+  "updated_at": "2016-03-10T19:30:45Z",
+  "closed_at": "2016-03-10T18:38:08Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6240",
+    "html_url": "https://github.com/facebook/react/pull/6240",
+    "diff_url": "https://github.com/facebook/react/pull/6240.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6240.patch"
+  },
+  "body": "In most examples and user source I've read it's commonly seen to import the package name as such we commonly see `import React from 'react';` or 'require('react')`. However, because of this minor detail bundling tools like Browserify may interpret`React`differently from`react`and thus options to exclude`react` from builds fail and the source gets bundled anyway which causes the following error: \n\n```\nInvariant Violation: addComponentAsRefTo(...): Only a ReactOwner can have refs. You might be adding a ref to a component that was not created inside a component's `render` method, or you have multiple copies of React loaded.\n```\n\nSo this minor change will fix that issue.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

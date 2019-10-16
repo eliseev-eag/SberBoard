@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11808",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11808/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11808/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11808/events",
+  "html_url": "https://github.com/facebook/react/issues/11808",
+  "id": 280399975,
+  "node_id": "MDU6SXNzdWUyODAzOTk5NzU=",
+  "number": 11808,
+  "title": "react-test-renderer does not include `key` on fragments",
+  "user": {
+    "login": "SimenB",
+    "id": 1404810,
+    "node_id": "MDQ6VXNlcjE0MDQ4MTA=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1404810?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/SimenB",
+    "html_url": "https://github.com/SimenB",
+    "followers_url": "https://api.github.com/users/SimenB/followers",
+    "following_url": "https://api.github.com/users/SimenB/following{/other_user}",
+    "gists_url": "https://api.github.com/users/SimenB/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/SimenB/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/SimenB/subscriptions",
+    "organizations_url": "https://api.github.com/users/SimenB/orgs",
+    "repos_url": "https://api.github.com/users/SimenB/repos",
+    "events_url": "https://api.github.com/users/SimenB/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/SimenB/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710400704,
+      "node_id": "MDU6TGFiZWw3MTA0MDA3MDQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Test%20Renderer",
+      "name": "Component: Test Renderer",
+      "color": "006b75",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2017-12-08T07:36:53Z",
+  "updated_at": "2018-01-02T16:02:23Z",
+  "closed_at": "2018-01-02T16:02:23Z",
+  "author_association": "CONTRIBUTOR",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\nBug\r\n\r\n**What is the current behavior?**\r\nFrom the docs (https://reactjs.org/docs/fragments.html#keyed-fragments):\r\n```jsx\r\nfunction Glossary(props) {\r\n  return (\r\n    <dl>\r\n      {props.items.map(item => (\r\n        // Without the `key`, React will fire a key warning\r\n        <React.Fragment key={item.id}>\r\n          <dt>{item.term}</dt>\r\n          <dd>{item.description}</dd>\r\n        </React.Fragment>\r\n      ))}\r\n    </dl>\r\n  );\r\n}\r\n```\r\n\r\nIf I do this:\r\n```jsx\r\nrenderer\r\n  .create(\r\n    <Glossary\r\n      items={[{ id: 'id', term: 'term', description: 'description' }]}\r\n    />\r\n  )\r\n  .toJSON();\r\n```\r\n\r\nThe result is:\r\n```json\r\n{\r\n  \"type\": \"dl\",\r\n  \"props\": {},\r\n  \"children\": [\r\n    { \"type\": \"dt\", \"props\": {}, \"children\": [\"term\"] },\r\n    { \"type\": \"dd\", \"props\": {}, \"children\": [\"description\"] }\r\n  ]\r\n}\r\n```\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem via https://jsfiddle.net or similar (template for React 16: https://jsfiddle.net/Luktwrdm/, template for React 15: https://jsfiddle.net/hmbg7e9w/).**\r\nSee above\r\n\r\n**What is the expected behavior?**\r\nThat, somehow, the `key` is not lost. I'm not sure where it would make sense, but it should be in there somewhere.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n16.2.0",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

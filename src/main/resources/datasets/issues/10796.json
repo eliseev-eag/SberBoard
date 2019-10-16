@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10796",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10796/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10796/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10796/events",
+  "html_url": "https://github.com/facebook/react/pull/10796",
+  "id": 260048076,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQyNzM0OTM4",
+  "number": 10796,
+  "title": "Remove Stack (part 2, safe: dead branches in tests)",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-09-24T00:35:39Z",
+  "updated_at": "2017-09-27T16:14:31Z",
+  "closed_at": "2017-09-27T16:14:28Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10796",
+    "html_url": "https://github.com/facebook/react/pull/10796",
+    "diff_url": "https://github.com/facebook/react/pull/10796.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10796.patch"
+  },
+  "body": "Builds on #10794.\r\nNew commit is dde565f.\r\n\r\nBest diff view is without the whitespace: https://github.com/facebook/react/pull/10796/commits/dde565f?w=1\r\n\r\nThis removes all `useFiber` checks in the tests, assuming `true`. Technically there are no more references to `ReactDOMFeatureFlags.useFiber`, but I didn’t delete it just to make sure the build is 100% the same for extra safety.\r\n\r\nThis is safe to merge because it only touches the tests.\r\nI verified the build folder content is identical to master (just like #10794).\r\n\r\n```\r\n\tmodified:   src/isomorphic/children/__tests__/ReactChildren-test.js\r\n\tmodified:   src/isomorphic/classic/element/__tests__/ReactElement-test.js\r\n\tmodified:   src/renderers/__tests__/EventPluginHub-test.js\r\n\tmodified:   src/renderers/__tests__/ReactComponent-test.js\r\n\tmodified:   src/renderers/__tests__/ReactComponentTreeHook-test.js\r\n\tmodified:   src/renderers/__tests__/ReactCompositeComponent-test.js\r\n\tmodified:   src/renderers/__tests__/ReactCompositeComponentState-test.js\r\n\tmodified:   src/renderers/__tests__/ReactEmptyComponent-test.js\r\n\tmodified:   src/renderers/__tests__/ReactErrorBoundaries-test.js\r\n\tmodified:   src/renderers/__tests__/ReactHostOperationHistoryHook-test.js\r\n\tmodified:   src/renderers/__tests__/ReactMultiChild-test.js\r\n\tmodified:   src/renderers/__tests__/ReactMultiChildText-test.js\r\n\tmodified:   src/renderers/__tests__/ReactPerf-test.js\r\n\tmodified:   src/renderers/__tests__/ReactStatelessComponent-test.js\r\n\tmodified:   src/renderers/__tests__/ReactUpdates-test.js\r\n\tmodified:   src/renderers/__tests__/multiple-copies-of-react-test.js\r\n\tmodified:   src/renderers/__tests__/refs-test.js\r\n\tmodified:   src/renderers/dom/__tests__/ReactDOMProduction-test.js\r\n\tmodified:   src/renderers/dom/fiber/__tests__/ReactDOMFiber-test.js\r\n\tmodified:   src/renderers/dom/fiber/__tests__/ReactDOMFiberAsync-test.js\r\n\tmodified:   src/renderers/dom/shared/__tests__/ReactDOMComponent-test.js\r\n\tmodified:   src/renderers/dom/shared/__tests__/ReactDOMComponentTree-test.js\r\n\tmodified:   src/renderers/dom/shared/__tests__/ReactDOMServerIntegration-test.js\r\n\tmodified:   src/renderers/dom/shared/__tests__/ReactDOMTextComponent-test.js\r\n\tmodified:   src/renderers/dom/shared/__tests__/ReactMount-test.js\r\n\tmodified:   src/renderers/dom/shared/__tests__/ReactRenderDocument-test.js\r\n\tmodified:   src/renderers/dom/shared/__tests__/ReactServerRendering-test.js\r\n\tmodified:   src/renderers/dom/shared/__tests__/ReactServerRenderingBrowser-test.js\r\n\tmodified:   src/renderers/dom/shared/__tests__/renderSubtreeIntoContainer-test.js\r\n\tmodified:   src/renderers/dom/shared/wrappers/__tests__/ReactDOMInput-test.js\r\n\tmodified:   src/renderers/dom/shared/wrappers/__tests__/ReactDOMOption-test.js\r\n\tmodified:   src/renderers/dom/test/__tests__/ReactTestUtils-test.js\r\n\tmodified:   src/renderers/shared/__tests__/ReactDOMFrameScheduling-test.js\r\n```\r\n\r\nThe next step is in https://github.com/facebook/react/pull/10797.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

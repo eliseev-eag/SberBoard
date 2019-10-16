@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/17006",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/17006/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/17006/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/17006/events",
+  "html_url": "https://github.com/facebook/react/pull/17006",
+  "id": 502208456,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzI0MzM0NzIy",
+  "number": 17006,
+  "title": "[EnterLeaveEventPlugin] Fix bug when dealing with unhandled DOM nodes",
+  "user": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-10-03T17:51:54Z",
+  "updated_at": "2019-10-03T21:35:13Z",
+  "closed_at": "2019-10-03T21:35:10Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/17006",
+    "html_url": "https://github.com/facebook/react/pull/17006",
+    "diff_url": "https://github.com/facebook/react/pull/17006.diff",
+    "patch_url": "https://github.com/facebook/react/pull/17006.patch"
+  },
+  "body": "This PR is a follow up to https://github.com/facebook/react/pull/16928, where that PR fixed one class of bug, but also introduced another issue whilst doing so.\r\n\r\nThis PR introduces an alternative fix that avoids the issue introduced in that PR. Notably, when a DOM node has not been handled by React (it hasn't got an internal handle to a fiber), then the target fiber ends up not matching 1:1, meaning the logic in https://github.com/facebook/react/pull/16928 is not quite accurate as `nativeEventTarget !== fromNode` is a valid code path. This PR fixes it by tracking the `nativeEvent` between calls to this EnterLeaveEventPlugin – to ensure we don't duplicate enter events for the same native event object.\r\n\r\nI've added a test case and validated it fixes the issue internally too.",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

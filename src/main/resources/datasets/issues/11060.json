@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11060",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11060/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11060/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11060/events",
+  "html_url": "https://github.com/facebook/react/issues/11060",
+  "id": 262346831,
+  "node_id": "MDU6SXNzdWUyNjIzNDY4MzE=",
+  "number": 11060,
+  "title": "Relationship between render()/updateContainer() and requestAnimationFrame()?",
+  "user": {
+    "login": "dakom",
+    "id": 6406986,
+    "node_id": "MDQ6VXNlcjY0MDY5ODY=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/6406986?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dakom",
+    "html_url": "https://github.com/dakom",
+    "followers_url": "https://api.github.com/users/dakom/followers",
+    "following_url": "https://api.github.com/users/dakom/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dakom/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dakom/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dakom/subscriptions",
+    "organizations_url": "https://api.github.com/users/dakom/orgs",
+    "repos_url": "https://api.github.com/users/dakom/repos",
+    "events_url": "https://api.github.com/users/dakom/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dakom/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 739761016,
+      "node_id": "MDU6TGFiZWw3Mzk3NjEwMTY=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Reconciler",
+      "name": "Component: Reconciler",
+      "color": "f9a798",
+      "default": false
+    },
+    {
+      "id": 40929155,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1NQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Question",
+      "name": "Type: Question",
+      "color": "cc317c",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-10-03T08:38:49Z",
+  "updated_at": "2017-11-03T15:44:07Z",
+  "closed_at": "2017-11-03T15:44:06Z",
+  "author_association": "NONE",
+  "body": "This is highly related to https://github.com/facebook/react/issues/10950\r\n\r\nWhen I call ReactDOM.render() - or more accurately updateContainer() from within a renderer, it seems the `callback` param is called somewhere in between \"updating\" and \"rendered\"\r\n\r\nSpecifically, if the callback is itself is a call to `updateContainer()`, e.g. a recursive approach, I get an error of:\r\n\r\n> flushSync was called from inside a lifecycle method. It cannot be called when React is already rendering.`\r\n\r\n_tangential note - this happens even if `updateContainer()` was triggered elsewhere like `deferredUpdates()` - `flushSync()` may be a bit misleading_\r\n\r\nCan someone please explain this a little more- what does the order look like between updateContainer() and the callback?\r\n\r\nMy use case is as described in the other issue, but for the sake of clarity, I'd like to \r\n\r\n1. Call the top-level render() when the components have all finished rendering\r\n2. Rely on React's requestAnimationFrame timing rather than inject another one for triggering prop changes\r\n3. Do all this without making the root node manage it via setState() + componentDidUpdate()\r\n\r\nReal-world scenario is using React to drive animation via a custom renderer\r\n\r\nThanks!",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

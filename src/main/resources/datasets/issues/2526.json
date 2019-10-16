@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2526",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2526/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2526/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2526/events",
+  "html_url": "https://github.com/facebook/react/pull/2526",
+  "id": 48849493,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjQ0NzYxMzI=",
+  "number": 2526,
+  "title": "Adds support for headers html attribute ",
+  "user": {
+    "login": "ChrisBland",
+    "id": 1359721,
+    "node_id": "MDQ6VXNlcjEzNTk3MjE=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1359721?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ChrisBland",
+    "html_url": "https://github.com/ChrisBland",
+    "followers_url": "https://api.github.com/users/ChrisBland/followers",
+    "following_url": "https://api.github.com/users/ChrisBland/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ChrisBland/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ChrisBland/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ChrisBland/subscriptions",
+    "organizations_url": "https://api.github.com/users/ChrisBland/orgs",
+    "repos_url": "https://api.github.com/users/ChrisBland/repos",
+    "events_url": "https://api.github.com/users/ChrisBland/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ChrisBland/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2014-11-14T22:44:07Z",
+  "updated_at": "2014-11-26T19:23:22Z",
+  "closed_at": "2014-11-26T19:23:17Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/2526",
+    "html_url": "https://github.com/facebook/react/pull/2526",
+    "diff_url": "https://github.com/facebook/react/pull/2526.diff",
+    "patch_url": "https://github.com/facebook/react/pull/2526.patch"
+  },
+  "body": "Currently 'headers' is not a supported HTML attribute for React. For any table that has multiple column headers, screen readers are not able to process the headers without the 'headers' attribute.\n\nThis technique is used when data cells are associated with more than one row and/or one column header. This allows screen readers to speak the headers associated with each data cell when the relationships are too complex to be identified using the th element alone or the th element with the scope attribute. Using this technique also makes these complex relationships perceivable when the presentation format changes.\n\nhttp://www.w3.org/TR/WCAG20-TECHS/H43.html\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

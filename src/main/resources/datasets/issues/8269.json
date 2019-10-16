@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8269",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8269/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8269/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8269/events",
+  "html_url": "https://github.com/facebook/react/pull/8269",
+  "id": 188773586,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTMzNDE3MjA=",
+  "number": 8269,
+  "title": "Make the Shallow Rendering example clearer",
+  "user": {
+    "login": "MicheleBertoli",
+    "id": 1308971,
+    "node_id": "MDQ6VXNlcjEzMDg5NzE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1308971?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/MicheleBertoli",
+    "html_url": "https://github.com/MicheleBertoli",
+    "followers_url": "https://api.github.com/users/MicheleBertoli/followers",
+    "following_url": "https://api.github.com/users/MicheleBertoli/following{/other_user}",
+    "gists_url": "https://api.github.com/users/MicheleBertoli/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/MicheleBertoli/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/MicheleBertoli/subscriptions",
+    "organizations_url": "https://api.github.com/users/MicheleBertoli/orgs",
+    "repos_url": "https://api.github.com/users/MicheleBertoli/repos",
+    "events_url": "https://api.github.com/users/MicheleBertoli/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/MicheleBertoli/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-11-11T14:39:14Z",
+  "updated_at": "2016-11-16T15:22:43Z",
+  "closed_at": "2016-11-11T15:34:11Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8269",
+    "html_url": "https://github.com/facebook/react/pull/8269",
+    "diff_url": "https://github.com/facebook/react/pull/8269.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8269.patch"
+  },
+  "body": "I was reading through the documentation, and I found that the `render` call on the `renderer` was missing.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

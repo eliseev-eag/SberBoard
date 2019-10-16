@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13237",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13237/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13237/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13237/events",
+  "html_url": "https://github.com/facebook/react/pull/13237",
+  "id": 342526170,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjAyNDA3MDIy",
+  "number": 13237,
+  "title": "Fix unwinding starting with a wrong Fiber on error in the complete phase",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-07-18T23:28:18Z",
+  "updated_at": "2018-07-19T01:16:11Z",
+  "closed_at": "2018-07-19T01:16:10Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13237",
+    "html_url": "https://github.com/facebook/react/pull/13237",
+    "diff_url": "https://github.com/facebook/react/pull/13237.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13237.patch"
+  },
+  "body": "Adds two regression tests (one for profiler stack and one for context stack). Also fixes the bug.\r\n\r\nThe bug was caused by a structure like this:\r\n\r\n```\r\n    </Provider>\r\n  </div>\r\n</errorInCompletePhase>\r\n```\r\n\r\nWe forgot to update `nextUnitOfWork` (see the fix in the last commit). So it was still pointing at `Provider` when `errorInCompletePhase` threw. Normally we would update it right after so it wouldn't be noticeable, but in case of exception its value at the moment of throwing matters.\r\n\r\nAs a result, we would try to unwind from `Provider` (rather than from `errorInCompletePhase`), and thus pop the `Provider` twice. It has already been popped at the beginning of the complete phase.\r\n\r\nThis was easy to miss because a throwing complete phase is uncommon. But it can happen in host configs (e.g. RN nesting or DOM invalid style invariants).\r\n\r\nI verified this fixes the original internal issue too.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

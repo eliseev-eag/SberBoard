@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15184",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15184/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15184/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15184/events",
+  "html_url": "https://github.com/facebook/react/pull/15184",
+  "id": 423937822,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjYzNDAxMjc1",
+  "number": 15184,
+  "title": "[ESLint] Warn about setState directly in dep-less useEffect",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-03-21T20:55:47Z",
+  "updated_at": "2019-03-22T13:41:14Z",
+  "closed_at": "2019-03-22T13:41:11Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15184",
+    "html_url": "https://github.com/facebook/react/pull/15184",
+    "diff_url": "https://github.com/facebook/react/pull/15184.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15184.patch"
+  },
+  "body": "This warns about the common mistake of using setState directly in an effect without a dependency list — which too easily leads to loops. This is the only case where I propose that we'd warn for dep-less useEffect. It looks like this:\r\n\r\n![Screen Recording 2019-03-21 at 08 53 PM](https://user-images.githubusercontent.com/810438/54784344-8aeb1180-4c1b-11e9-8fac-ed2024a1f712.gif)\r\n\r\nIt won't warn you about `setState` nested in another function (it'll assume you know what you're doing). Only top level ones right in the effect.\r\n\r\nIt doesn't check for early returns. I considered this but then thought the pattern is still too fragile. With autofix it's not too annoying anyway.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

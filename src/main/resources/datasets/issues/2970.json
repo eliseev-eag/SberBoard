@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2970",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2970/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2970/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2970/events",
+  "html_url": "https://github.com/facebook/react/issues/2970",
+  "id": 55736050,
+  "node_id": "MDU6SXNzdWU1NTczNjA1MA==",
+  "number": 2970,
+  "title": "dangerouslySetInnerHTML doesn't update replaced state properly",
+  "user": {
+    "login": "ghost",
+    "id": 10137,
+    "node_id": "MDQ6VXNlcjEwMTM3",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/10137?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ghost",
+    "html_url": "https://github.com/ghost",
+    "followers_url": "https://api.github.com/users/ghost/followers",
+    "following_url": "https://api.github.com/users/ghost/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ghost/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ghost/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ghost/subscriptions",
+    "organizations_url": "https://api.github.com/users/ghost/orgs",
+    "repos_url": "https://api.github.com/users/ghost/repos",
+    "events_url": "https://api.github.com/users/ghost/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ghost/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2015-01-28T10:03:47Z",
+  "updated_at": "2015-01-29T06:14:43Z",
+  "closed_at": "2015-01-28T14:48:20Z",
+  "author_association": "NONE",
+  "body": "This _might be_ a bug on `dangerouslySetInnerHTML`.\n\nThe scenario is the following:\n1. The `message` state contains a default value\n2. Typing on the `<textarea>` _should_ overwrite the default value\n\nIt works as expected when not using `dangerouslySetInnerHTML`, but when `dangerouslySetInnerHTML` is used, yes, it still works, but rather than replacing the state, it concatenates the default value with the values of `<textarea>`\n\nHere's the problematic example: http://jsfiddle.net/kb3gN/9185\n",
+  "closed_by": null
+}

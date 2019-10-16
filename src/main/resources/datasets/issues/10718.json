@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10718",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10718/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10718/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10718/events",
+  "html_url": "https://github.com/facebook/react/pull/10718",
+  "id": 258079993,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQxMzM5NjIw",
+  "number": 10718,
+  "title": "Move ref callback implementation outside JSX",
+  "user": {
+    "login": "cjongseok",
+    "id": 15207721,
+    "node_id": "MDQ6VXNlcjE1MjA3NzIx",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/15207721?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/cjongseok",
+    "html_url": "https://github.com/cjongseok",
+    "followers_url": "https://api.github.com/users/cjongseok/followers",
+    "following_url": "https://api.github.com/users/cjongseok/following{/other_user}",
+    "gists_url": "https://api.github.com/users/cjongseok/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/cjongseok/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/cjongseok/subscriptions",
+    "organizations_url": "https://api.github.com/users/cjongseok/orgs",
+    "repos_url": "https://api.github.com/users/cjongseok/repos",
+    "events_url": "https://api.github.com/users/cjongseok/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/cjongseok/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2017-09-15T15:31:42Z",
+  "updated_at": "2018-01-05T16:19:21Z",
+  "closed_at": "2018-01-05T16:19:21Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10718",
+    "html_url": "https://github.com/facebook/react/pull/10718",
+    "diff_url": "https://github.com/facebook/react/pull/10718.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10718.patch"
+  },
+  "body": "In the first code snippet, this document says the preferred way of _ref_ callback is an inline function. Although the document comments side-effect by the inline callback is negligible at _Caveats_ section, at least it should not encourage users to make inline callbacks. So I turned all the inline _ref_ callbacks in the document into bound methods on the class. I believe this change makes document's stance regarding callback more consistent. (_Handling Events_ guide also discourages callbacks as inline functions)",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

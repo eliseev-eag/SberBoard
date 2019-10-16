@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7983",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7983/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7983/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7983/events",
+  "html_url": "https://github.com/facebook/react/pull/7983",
+  "id": 183172310,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODk0NzExNTE=",
+  "number": 7983,
+  "title": "[New Docs] \"DOM Elements\" reference and cleanup",
+  "user": {
+    "login": "lacker",
+    "id": 106475,
+    "node_id": "MDQ6VXNlcjEwNjQ3NQ==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/106475?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lacker",
+    "html_url": "https://github.com/lacker",
+    "followers_url": "https://api.github.com/users/lacker/followers",
+    "following_url": "https://api.github.com/users/lacker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lacker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lacker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lacker/subscriptions",
+    "organizations_url": "https://api.github.com/users/lacker/orgs",
+    "repos_url": "https://api.github.com/users/lacker/repos",
+    "events_url": "https://api.github.com/users/lacker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lacker/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2016-10-14T23:36:51Z",
+  "updated_at": "2016-10-18T23:21:19Z",
+  "closed_at": "2016-10-18T23:21:19Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7983",
+    "html_url": "https://github.com/facebook/react/pull/7983",
+    "diff_url": "https://github.com/facebook/react/pull/7983.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7983.patch"
+  },
+  "body": "This creates one \"DOM Elements\" reference doc whose goal is to explain all the little DOM tweaks that React makes. This doc replaces a few different previous reference docs, and also a number of tips.\n\nI also removed all the tips and reference docs that are now superceded. All the tips are dealt with now, and except for the error decoder, all the old docs have some PR out that replaces them.\n",
+  "closed_by": {
+    "login": "lacker",
+    "id": 106475,
+    "node_id": "MDQ6VXNlcjEwNjQ3NQ==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/106475?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lacker",
+    "html_url": "https://github.com/lacker",
+    "followers_url": "https://api.github.com/users/lacker/followers",
+    "following_url": "https://api.github.com/users/lacker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lacker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lacker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lacker/subscriptions",
+    "organizations_url": "https://api.github.com/users/lacker/orgs",
+    "repos_url": "https://api.github.com/users/lacker/repos",
+    "events_url": "https://api.github.com/users/lacker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lacker/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

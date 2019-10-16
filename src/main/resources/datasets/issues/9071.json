@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9071",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9071/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9071/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9071/events",
+  "html_url": "https://github.com/facebook/react/pull/9071",
+  "id": 210546981,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTA4MTU5MDk1",
+  "number": 9071,
+  "title": "[Fiber] Performance measurements",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2017-02-27T17:09:20Z",
+  "updated_at": "2017-03-08T18:28:54Z",
+  "closed_at": "2017-03-08T18:28:54Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9071",
+    "html_url": "https://github.com/facebook/react/pull/9071",
+    "diff_url": "https://github.com/facebook/react/pull/9071.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9071.patch"
+  },
+  "body": "Reconciliation phase:\r\n\r\n<img width=\"536\" alt=\"screen shot 2017-03-08 at 3 10 52 am\" src=\"https://cloud.githubusercontent.com/assets/810438/23688588/6f36e206-03ad-11e7-9b4f-bbb4b4183e09.png\">\r\n\r\nCommit phase:\r\n\r\n<img width=\"757\" alt=\"screen shot 2017-03-08 at 3 11 42 am\" src=\"https://cloud.githubusercontent.com/assets/810438/23688518/fc03b052-03ac-11e7-8cff-177eef4943ee.png\">\r\n\r\n\r\nShould work with all Fiber features, including error boundaries and incremental deferred work.\r\n\r\nDeferred work example:\r\n\r\n<img width=\"635\" alt=\"screen shot 2017-03-08 at 3 13 15 am\" src=\"https://cloud.githubusercontent.com/assets/810438/23688545/32dc38e2-03ad-11e7-930a-589ac319c51a.png\">\r\n\r\n\r\n- [x] Basic implementation\r\n- [x] Don't display bailed fibers\r\n- [x] Show deferred work sensibly\r\n- [x] Include lifecycles\r\n- [x] Naming and style\r\n- [x] Always clear marks and measures\r\n- [x] Replace stack with a field\r\n- [x] Fix Flow\r\n- [x] Gate by DEV\r\n- [x] Host effects\r\n- [x] Track cascading updates\r\n- [x] Check the overhead and decide whether to always emit measurements or not\r\n  - [x] I tried my best\r\n  - [x] Gonna test it soon\r\n- [x] Verify in different browsers\r\n- [x] Write tests maybe? Or at least shim it in tests?\r\n- [x] Verify edge cases work:\r\n  - [x] Nested subtrees\r\n  - [x] Error boundaries\r\n  - [x] Uncaught errors\r\n- [x] What else?",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

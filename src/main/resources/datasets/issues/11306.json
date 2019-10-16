@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11306",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11306/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11306/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11306/events",
+  "html_url": "https://github.com/facebook/react/issues/11306",
+  "id": 267311280,
+  "node_id": "MDU6SXNzdWUyNjczMTEyODA=",
+  "number": 11306,
+  "title": "Add `code` property to `SyntheticKeyboardEvent`",
+  "user": {
+    "login": "jacobcarpenter",
+    "id": 194333,
+    "node_id": "MDQ6VXNlcjE5NDMzMw==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/194333?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jacobcarpenter",
+    "html_url": "https://github.com/jacobcarpenter",
+    "followers_url": "https://api.github.com/users/jacobcarpenter/followers",
+    "following_url": "https://api.github.com/users/jacobcarpenter/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jacobcarpenter/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jacobcarpenter/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jacobcarpenter/subscriptions",
+    "organizations_url": "https://api.github.com/users/jacobcarpenter/orgs",
+    "repos_url": "https://api.github.com/users/jacobcarpenter/repos",
+    "events_url": "https://api.github.com/users/jacobcarpenter/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jacobcarpenter/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2017-10-20T21:34:42Z",
+  "updated_at": "2018-08-16T09:57:25Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\nImprovement\r\n\r\n**What is the current behavior?**\r\n\r\n[`SyntheticKeyboardEvent`](https://github.com/facebook/react/blob/e779c39dfeb41ae8f6611dc4f9830d1b1ac64f9b/packages/react-dom/src/events/SyntheticKeyboardEvent.js) does not currently support the `code` property.\r\n\r\n`code` ([MDN](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code)) is nice to have when you want to write key-specific handling—rather than input-specific (dependent on layout and modifier keys) handling.\r\n\r\n**What is the expected behavior?**\r\n\r\n`SyntheticKeyboardEvent` already exposes a `keyCode` property. It should have a `code` property as well.\r\n\r\nCurrently, if you want to use the `keyboardEvent`'s  `code`, you must access it through `SyntheticKeyboardEvent`'s `nativeEvent`.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nAffects React 16 and earlier (I assume).\r\n",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15801",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15801/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15801/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15801/events",
+  "html_url": "https://github.com/facebook/react/pull/15801",
+  "id": 451171355,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjg0MzI4NTM3",
+  "number": 15801,
+  "title": "[Fresh] Support classes by force-remounting them on edit",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2019-06-02T09:20:46Z",
+  "updated_at": "2019-06-06T15:20:42Z",
+  "closed_at": "2019-06-05T23:13:43Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15801",
+    "html_url": "https://github.com/facebook/react/pull/15801",
+    "diff_url": "https://github.com/facebook/react/pull/15801.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15801.patch"
+  },
+  "body": "The first commit adds support for classes.\r\n\r\nWe don't need state preservation for classes. But we do need the opposite. When you edit a class, we want to remount its instances (and reset their state).\r\n\r\nRemounting seems like it should already work. Because the type changes, and React is doing its thing. However, there is a case where that's not enough. If I edit `Button.js` that happens to be a class, other modules won't \"see\" the new export unless the update \"propagates upwards\". So if `Modal.js` imports it, we'd have to re-execute `Modal.js` too. But that might also be a class. So we lose the locality of the edit — and in some cases it's even unsafe to re-execute arbitrary code above. (E.g. that breaks React Native once you get too close to top-level modules.) Inline requires or ES live imports sort of solve that, but not in all cases. Such as a cached element in state that already has a specific type. \r\n\r\nTo solve that, we can stop update propagation at modules where all exports look like React components. (Functions or classes.) In case of classes, we want to remount all instances — and mount new versions. This should happen even for stale `<OldButton />` references in the tree. That's why I added the resolving mechanism to classes too. However, they would never attempt to preserve state.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

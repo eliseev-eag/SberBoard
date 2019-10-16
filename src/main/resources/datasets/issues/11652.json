@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11652",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11652/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11652/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11652/events",
+  "html_url": "https://github.com/facebook/react/pull/11652",
+  "id": 276694747,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTU0NjA0OTAz",
+  "number": 11652,
+  "title": "Add component stack to invariant",
+  "user": {
+    "login": "Ethan-Arrowood",
+    "id": 16144158,
+    "node_id": "MDQ6VXNlcjE2MTQ0MTU4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/16144158?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Ethan-Arrowood",
+    "html_url": "https://github.com/Ethan-Arrowood",
+    "followers_url": "https://api.github.com/users/Ethan-Arrowood/followers",
+    "following_url": "https://api.github.com/users/Ethan-Arrowood/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Ethan-Arrowood/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Ethan-Arrowood/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Ethan-Arrowood/subscriptions",
+    "organizations_url": "https://api.github.com/users/Ethan-Arrowood/orgs",
+    "repos_url": "https://api.github.com/users/Ethan-Arrowood/repos",
+    "events_url": "https://api.github.com/users/Ethan-Arrowood/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Ethan-Arrowood/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 26,
+  "created_at": "2017-11-24T20:28:34Z",
+  "updated_at": "2019-01-11T23:40:35Z",
+  "closed_at": "2019-01-11T23:40:35Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11652",
+    "html_url": "https://github.com/facebook/react/pull/11652",
+    "diff_url": "https://github.com/facebook/react/pull/11652.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11652.patch"
+  },
+  "body": "Ref: #11619\r\n\r\nInitial PR shows changes in [ReactFiber.js](https://github.com/facebook/react/blob/master/packages/react-reconciler/src/ReactFiber.js). Notice I needed to update some unit tests to expect the component stacks. Currently I had to hard-code the component stack into the expected response. **Is there a way to implement this using globs or some other method?** If anyone ever makes other changes to these test files those hard-coded lines will break. ",
+  "closed_by": {
+    "login": "Ethan-Arrowood",
+    "id": 16144158,
+    "node_id": "MDQ6VXNlcjE2MTQ0MTU4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/16144158?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Ethan-Arrowood",
+    "html_url": "https://github.com/Ethan-Arrowood",
+    "followers_url": "https://api.github.com/users/Ethan-Arrowood/followers",
+    "following_url": "https://api.github.com/users/Ethan-Arrowood/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Ethan-Arrowood/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Ethan-Arrowood/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Ethan-Arrowood/subscriptions",
+    "organizations_url": "https://api.github.com/users/Ethan-Arrowood/orgs",
+    "repos_url": "https://api.github.com/users/Ethan-Arrowood/repos",
+    "events_url": "https://api.github.com/users/Ethan-Arrowood/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Ethan-Arrowood/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

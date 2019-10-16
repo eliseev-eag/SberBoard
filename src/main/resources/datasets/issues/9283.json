@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9283",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9283/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9283/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9283/events",
+  "html_url": "https://github.com/facebook/react/pull/9283",
+  "id": 218042952,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTEzMzE5NjY1",
+  "number": 9283,
+  "title": "Remove captured scroll feature check",
+  "user": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-03-29T23:54:20Z",
+  "updated_at": "2017-03-30T10:02:28Z",
+  "closed_at": "2017-03-30T10:01:30Z",
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9283",
+    "html_url": "https://github.com/facebook/react/pull/9283",
+    "diff_url": "https://github.com/facebook/react/pull/9283.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9283.patch"
+  },
+  "body": "IE8 was the only browser that did not support captured scroll. We no\r\nlonger have that constraint.\r\n\r\n### Testing Methodology\r\n\r\nI extracted the feature check from React into a CodePen:\r\nhttp://codepen.io/nhunzaker/pen/KWrmwz\r\n\r\nFrom there, I ran the \"debug\" view in every single browser via BrowserStack.\r\n\r\n\r\n### Results\r\n\r\nYES\r\n----\r\nIE9\r\nFF 3\r\nChrome 15\r\nOpera 10.6\r\nYandex 14.12\r\nSafari 4 - Windows\r\nSafari 4 - Mac\r\nWindows Phone 8.1\r\niOS 4.3.2\r\nAndroid 4\r\n\r\nNO\r\n-----\r\nIE8",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

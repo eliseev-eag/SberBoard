@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11136",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11136/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11136/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11136/events",
+  "html_url": "https://github.com/facebook/react/issues/11136",
+  "id": 263464273,
+  "node_id": "MDU6SXNzdWUyNjM0NjQyNzM=",
+  "number": 11136,
+  "title": "Infinite Loop when maximum update depth exceeds",
+  "user": {
+    "login": "anushreesubramani",
+    "id": 3088823,
+    "node_id": "MDQ6VXNlcjMwODg4MjM=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/3088823?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/anushreesubramani",
+    "html_url": "https://github.com/anushreesubramani",
+    "followers_url": "https://api.github.com/users/anushreesubramani/followers",
+    "following_url": "https://api.github.com/users/anushreesubramani/following{/other_user}",
+    "gists_url": "https://api.github.com/users/anushreesubramani/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/anushreesubramani/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/anushreesubramani/subscriptions",
+    "organizations_url": "https://api.github.com/users/anushreesubramani/orgs",
+    "repos_url": "https://api.github.com/users/anushreesubramani/repos",
+    "events_url": "https://api.github.com/users/anushreesubramani/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/anushreesubramani/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 139653724,
+      "node_id": "MDU6TGFiZWwxMzk2NTM3MjQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Core%20Utilities",
+      "name": "Component: Core Utilities",
+      "color": "c5def5",
+      "default": false
+    },
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 13,
+  "created_at": "2017-10-06T14:25:00Z",
+  "updated_at": "2018-11-05T19:33:29Z",
+  "closed_at": "2017-11-03T15:24:36Z",
+  "author_association": "CONTRIBUTOR",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nBug\r\n**What is the current behavior?**\r\nI wrote this component to recreate the warnings from #11081 and to fix it:\r\n\r\n```javascript\r\nclass App extends Component {\r\n  constructor() {\r\n    super();\r\n    this.state = {\r\n      value: null,\r\n    };\r\n  }\r\n\r\n  render() {\r\n    this.setState({\r\n      value: 'test',\r\n    });\r\n\r\n    return <div />;\r\n  }\r\n}\r\n```\r\n\r\nAnd in the process found that this error came up:\r\n> 'Uncaught Error: Maximum update depth exceeded. This can happen when a component repeatedly \r\n>    calls setState inside componentWillUpdate or componentDidUpdate. React limits the number of \r\n>    nested updates to prevent infinite loops.'\r\n\r\nBut the execution did not stop. It was going in an infinite loop and printing 2 variants of the same error one after another. \r\n\r\nScreenshot for your reference:\r\n![react-bug](https://user-images.githubusercontent.com/3088823/31262899-08e875b6-aa7c-11e7-9b82-15f254948a4f.jpg)\r\n\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem via https://jsfiddle.net or similar (template for React 16: https://jsfiddle.net/Luktwrdm/, template for React 15: https://jsfiddle.net/hmbg7e9w/).**\r\nSnippet given above\r\n\r\n**What is the expected behavior?**\r\nThere shouldn't be an infinite loop. The execution should stop after printing the error.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nReact 16, Chrome 59, Ubuntu. I tested it in older versions of react and this problem is not present there.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

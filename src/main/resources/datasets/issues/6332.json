@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6332",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6332/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6332/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6332/events",
+  "html_url": "https://github.com/facebook/react/pull/6332",
+  "id": 143336807,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjQwODUzNzI=",
+  "number": 6332,
+  "title": "add beginner friendly resource for learning how to PR",
+  "user": {
+    "login": "kentcdodds",
+    "id": 1500684,
+    "node_id": "MDQ6VXNlcjE1MDA2ODQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1500684?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/kentcdodds",
+    "html_url": "https://github.com/kentcdodds",
+    "followers_url": "https://api.github.com/users/kentcdodds/followers",
+    "following_url": "https://api.github.com/users/kentcdodds/following{/other_user}",
+    "gists_url": "https://api.github.com/users/kentcdodds/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/kentcdodds/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/kentcdodds/subscriptions",
+    "organizations_url": "https://api.github.com/users/kentcdodds/orgs",
+    "repos_url": "https://api.github.com/users/kentcdodds/repos",
+    "events_url": "https://api.github.com/users/kentcdodds/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/kentcdodds/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2016-03-24T19:22:34Z",
+  "updated_at": "2016-06-28T21:43:26Z",
+  "closed_at": "2016-03-24T23:07:02Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6332",
+    "html_url": "https://github.com/facebook/react/pull/6332",
+    "diff_url": "https://github.com/facebook/react/pull/6332.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6332.patch"
+  },
+  "body": "Thought about adding this when @gaearon [tweeted this](https://twitter.com/dan_abramov/status/713079614944518144). I definitely think that adding this will make contributing more approachable for beginners.\n\nAlso considered adding this to the `README.md`\n\n```\n[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)\n```\n\n[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)\n\nand I'd be happy to do that if there's interest.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

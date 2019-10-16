@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14630",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14630/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14630/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14630/events",
+  "html_url": "https://github.com/facebook/react/issues/14630",
+  "id": 400770259,
+  "node_id": "MDU6SXNzdWU0MDA3NzAyNTk=",
+  "number": 14630,
+  "title": "componentDidMount inside a class causing a memory leak",
+  "user": {
+    "login": "dorianrod",
+    "id": 33071955,
+    "node_id": "MDQ6VXNlcjMzMDcxOTU1",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/33071955?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dorianrod",
+    "html_url": "https://github.com/dorianrod",
+    "followers_url": "https://api.github.com/users/dorianrod/followers",
+    "following_url": "https://api.github.com/users/dorianrod/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dorianrod/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dorianrod/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dorianrod/subscriptions",
+    "organizations_url": "https://api.github.com/users/dorianrod/orgs",
+    "repos_url": "https://api.github.com/users/dorianrod/repos",
+    "events_url": "https://api.github.com/users/dorianrod/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dorianrod/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 40929155,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1NQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Question",
+      "name": "Type: Question",
+      "color": "cc317c",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-01-18T15:23:59Z",
+  "updated_at": "2019-06-12T15:14:32Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "Hi,\r\n\r\nI have a very weird memory leak that seems to be related to componentDidMount declaration. Memory is not freed after unmounting component.\r\n\r\n### Used code\r\nVersion: react 16.7\r\nMode: developper or production (same behaviour)\r\n\r\n\r\n\r\nHere is the code I use to hide or display a list of items  \r\n```\r\nclass Item extends React.Component {\r\n     componentDidMount() {\r\n\r\n    }\r\n      render() {\r\n            return <div>test item</div>;\r\n      }\r\n}\r\n\r\nclass Items extends React.Component {\r\n      constructor(props) {\r\n            super(props);\r\n            this.state =  {};\r\n      }\r\n\r\n      renderList() {\r\n            let items = [];\r\n            for(var i = 0; i < 4000; i++) {\r\n                  items.push( <Item key={i} />);\r\n            };\r\n\r\n            return items;\r\n      }\r\n\r\n      onDisplay = ()=>{\r\n            this.setState({display: true});\r\n      }\r\n      onHide = ()=>{\r\n            this.setState({display: false});\r\n      }\r\n\r\n      render() {      \r\n            return <div>\r\n                  <div key=\"display\" onClick={this.onDisplay}>Display</div>\r\n                  <div key=\"hide\" onClick={this.onHide}>Hide</div>\r\n                  {this.state.display ? this.renderList() : null}\r\n            </div>\r\n      }\r\n}\r\nReactDOM.render(<Items />, document.getElementById(\"app\"));\r\n```\r\n\r\n### Steps to reproduce\r\n\r\nCASE 1\r\nUse google chrome and display the performance monitor to study JS Heap size and Dom Nodes.\r\n1) Click on display => the list of 4000 items is displayed\r\n2) Click on \"hide\" => the list is unmounted\r\nWhen you look at performance monitor, you can see that around 8000 nodes are still in memory (and JS Heap is higher than before mounting components as well).\r\nIf you redo 1) and 2) multiple times, you will see nodes going to 16000 then going back to 8000, ... etc.\r\n\r\nThus, memory is freed after the first unmount operation, but the first one is not. The weird thing is that if you do 1), 2), 2), 2), then it is freed.\r\n\r\nCASE 2\r\nUse the same code but remove the \"componentDidMount\" function in the class.\r\nDo 1) and 2), then after few secondes memory is freed automatically (nodes and js heap)  => expected behaviour\r\n\r\n### Behaviour expected\r\n\r\nI was expected that the memory would be freed after unmounting a component, like in the 2nd case. That's a real issue when you mount.unmount big list multiple times, then js heap is going very high.\r\n\r\n\r\n",
+  "closed_by": null
+}

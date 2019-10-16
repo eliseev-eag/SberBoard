@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15181",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15181/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15181/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15181/events",
+  "html_url": "https://github.com/facebook/react/pull/15181",
+  "id": 423852907,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjYzMzMzNDQ4",
+  "number": 15181,
+  "title": "Upgrade rollup from 0.5.2 to 1.7.0",
+  "user": {
+    "login": "bjacobel",
+    "id": 407639,
+    "node_id": "MDQ6VXNlcjQwNzYzOQ==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/407639?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bjacobel",
+    "html_url": "https://github.com/bjacobel",
+    "followers_url": "https://api.github.com/users/bjacobel/followers",
+    "following_url": "https://api.github.com/users/bjacobel/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bjacobel/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bjacobel/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bjacobel/subscriptions",
+    "organizations_url": "https://api.github.com/users/bjacobel/orgs",
+    "repos_url": "https://api.github.com/users/bjacobel/repos",
+    "events_url": "https://api.github.com/users/bjacobel/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bjacobel/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-03-21T17:26:51Z",
+  "updated_at": "2019-03-25T13:38:31Z",
+  "closed_at": "2019-03-25T13:38:31Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15181",
+    "html_url": "https://github.com/facebook/react/pull/15181",
+    "diff_url": "https://github.com/facebook/react/pull/15181.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15181.patch"
+  },
+  "body": "After coming across https://github.com/facebook/react/issues/14635, I thought I would follow @gaearon's suggestion there to submit a pull request to upgrade Rollup to v1.x. \r\n\r\nThere are a few breaking changes in this upgrade path, as described in [Rollup's changelog.](https://github.com/rollup/rollup/blob/master/CHANGELOG.md). I've included them below, but I don't have a lot of context for what any of them mean.\r\n\r\n<details>\r\n\r\n\r\n- Revert class id preservation from #2025 (#2048)\r\n- Refactor missing export plugin hook (#1987)\r\n- Deprecate the legacy option and thus IE8 support (#2141)\r\noptimizeChunks is renamed to experimentalOptimizeChunks to reflect this feature is not production-ready yet (#2575)\r\n- Several (mostly deprecated) options have been removed or renamed (#2293, #2409):\r\n    ```\r\n    banner -> output.banner\r\n    dest -> output.file\r\n    entry -> input\r\n    experimentalCodeSplitting -> now always active\r\n    experimentalDynamicImport -> now always active\r\n    experimentalPreserveModules -> preserveModules\r\n    exports -> output.exports\r\n    extend -> output.extend\r\n    footer -> output.footer\r\n    format -> output.format\r\n    freeze -> output.freeze\r\n    globals -> output.globals\r\n    indent -> output.indent\r\n    interop -> output.interop\r\n    intro -> output.intro\r\n    load -> use plugin API\r\n    moduleName -> output.name\r\n    name -> output.name\r\n    noConflict -> output.noConflict\r\n    output.moduleId -> output.amd.id\r\n    outro -> output.outro\r\n    paths -> output.paths\r\n    preferConst -> output.preferConst\r\n    pureExternalModules -> treeshake.pureExternalModules\r\n    resolveExternal -> use plugin API\r\n    resolveId -> use plugin API\r\n    sourcemap -> output.sourcemap\r\n    sourceMap -> output.sourcemap\r\n    sourceMapFile -> output.sourcemapFile\r\n    strict -> output.strict\r\n    targets -> use output as an array\r\n    transform -> use plugin API\r\n    useStrict -> output.strict\r\n    ```\r\n- In general, output options can no longer be used as input options (#2409)\r\nbundle.generate and bundle.write now return a new format (#2293)\r\nSeveral plugin hooks have become deprecated and will display warnings when used (#2409):\r\n    ```\r\n    transformBundle\r\n    transformChunk\r\n    ongenerate\r\n    onwrite\r\n    ```\r\n- Plugin transform dependencies are deprecated in favour of using the this.addWatchFile plugin context function (#2409)\r\n- Accessing this.watcher in plugin hooks is deprecated in favour of the watchChange plugin hook and the this.addWatchFile plugin context function (#2409)\r\n- Using dynamic import statements will by default create a new chunk unless inlineDynamicImports is used (#2293)\r\n- Rollup now uses acorn@6 which means that acorn plugins must be compatible with this version; acorn is now external for non-browser builds to make plugins work (#2293)\r\n</details>\r\n",
+  "closed_by": {
+    "login": "bjacobel",
+    "id": 407639,
+    "node_id": "MDQ6VXNlcjQwNzYzOQ==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/407639?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bjacobel",
+    "html_url": "https://github.com/bjacobel",
+    "followers_url": "https://api.github.com/users/bjacobel/followers",
+    "following_url": "https://api.github.com/users/bjacobel/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bjacobel/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bjacobel/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bjacobel/subscriptions",
+    "organizations_url": "https://api.github.com/users/bjacobel/orgs",
+    "repos_url": "https://api.github.com/users/bjacobel/repos",
+    "events_url": "https://api.github.com/users/bjacobel/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bjacobel/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

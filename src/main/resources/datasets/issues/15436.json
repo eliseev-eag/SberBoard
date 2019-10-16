@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15436",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15436/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15436/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15436/events",
+  "html_url": "https://github.com/facebook/react/issues/15436",
+  "id": 434577783,
+  "node_id": "MDU6SXNzdWU0MzQ1Nzc3ODM=",
+  "number": 15436,
+  "title": "Add System.register output format to published npm package",
+  "user": {
+    "login": "joeldenning",
+    "id": 5524384,
+    "node_id": "MDQ6VXNlcjU1MjQzODQ=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/5524384?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/joeldenning",
+    "html_url": "https://github.com/joeldenning",
+    "followers_url": "https://api.github.com/users/joeldenning/followers",
+    "following_url": "https://api.github.com/users/joeldenning/following{/other_user}",
+    "gists_url": "https://api.github.com/users/joeldenning/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/joeldenning/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/joeldenning/subscriptions",
+    "organizations_url": "https://api.github.com/users/joeldenning/orgs",
+    "repos_url": "https://api.github.com/users/joeldenning/repos",
+    "events_url": "https://api.github.com/users/joeldenning/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/joeldenning/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-04-18T03:50:34Z",
+  "updated_at": "2019-04-18T03:53:16Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nFeature\r\n\r\n**What is the current behavior?**\r\nThe react and react-dom packages are currently published to npm in cjs and umd formats. See the cjs and umd directories at https://unpkg.com/react@16.8.6/\r\n\r\n**What is the expected behavior?**\r\nMyself and the systemjs community would love to see a [System.register](https://github.com/systemjs/systemjs/blob/master/docs/system-register.md) bundle published to npm and cdns. This would be as simple as [creating a new bundle](https://github.com/facebook/react/blob/0b50fb29f7147fd821e9a0c126eb297e27b639a5/scripts/rollup/build.js#L618) that changes the [rollup output format](https://github.com/facebook/react/blob/master/scripts/rollup/build.js#L183) to `system`. The bundle could go into a directory called `system`, similar to the `umd` and `cjs` directories, and would be published to npm. See [this pseudo code demo](https://rollupjs.org/repl?version=1.10.0&shareable=JTdCJTIybW9kdWxlcyUyMiUzQSU1QiU3QiUyMm5hbWUlMjIlM0ElMjJtYWluLmpzJTIyJTJDJTIyY29kZSUyMiUzQSUyMiUyRiUyRiUyMFBzZXVkbyUyMGNvZGUlNUNuJTVDbmV4cG9ydCUyMGRlZmF1bHQlMjAlN0IlNUNuJTVDdGNyZWF0ZUVsZW1lbnQlM0ElMjBmdW5jdGlvbigpJTIwJTdCJTdEJTVDbiU3RCU1Q24lNUNuZXhwb3J0JTIwZnVuY3Rpb24lMjB1c2VTdGF0ZSgpJTIwJTdCJTdEJTIyJTJDJTIyaXNFbnRyeSUyMiUzQXRydWUlN0QlMkMlN0IlMjJuYW1lJTIyJTNBJTIycXV4LmpzJTIyJTJDJTIyY29kZSUyMiUzQSUyMmV4cG9ydCUyMHZhciUyMHF1eCUyMCUzRCUyMCdRVVgnJTNCJTIyJTJDJTIyaXNFbnRyeSUyMiUzQWZhbHNlJTdEJTVEJTJDJTIyb3B0aW9ucyUyMiUzQSU3QiUyMmZvcm1hdCUyMiUzQSUyMnN5c3RlbSUyMiUyQyUyMm5hbWUlMjIlM0ElMjJteUJ1bmRsZSUyMiUyQyUyMmFtZCUyMiUzQSU3QiUyMmlkJTIyJTNBJTIyJTIyJTdEJTJDJTIyZ2xvYmFscyUyMiUzQSU3QiU3RCU3RCUyQyUyMmV4YW1wbGUlMjIlM0FudWxsJTdE) for how rollup very easily compiles bundles to System.register format.\r\n\r\nThe downside to doing this would be that `npm install react react-dom` would include a system bundle that most people would not use -- extra bytes to npm install it. Those bytes would not be included in browser bundles, but only in the node_modules.\r\n\r\nThe advantage would be that those who do use systemjs@>=2 would be able to `System.import('https://unpkg.com/react/system/react.production.min.js')` **without any configuration** and everything would work. Currently, users of systemjs@>=2 must include the [amd and named-exports extras](https://github.com/systemjs/systemjs#extras) in order to be able to System.import react bundles on unpkg, cdnjs, jsdelivr, etc. Those extras are a couple extra network requests that could be avoided, and some configuration that is a barrier for usage.\r\n\r\nSystemJS, although old for an open source project, has seen a recent burst in development with version 2.0 and 3.0 coming out in the last several months. The new 3.0 version is a polyfill for [import maps](https://github.com/WICG/import-maps), which is a compelling browser spec. There are over 100,000 weekly downloads for SystemJS.\r\n\r\nI am happy to PR this myself, if the react team is amenable to the change.",
+  "closed_by": null
+}

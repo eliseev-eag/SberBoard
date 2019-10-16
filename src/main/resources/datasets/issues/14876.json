@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14876",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14876/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14876/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14876/events",
+  "html_url": "https://github.com/facebook/react/pull/14876",
+  "id": 411222610,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjUzNzMyMjM2",
+  "number": 14876,
+  "title": "Add failing test for simple memo components being updated with new se…",
+  "user": {
+    "login": "Andarist",
+    "id": 9800850,
+    "node_id": "MDQ6VXNlcjk4MDA4NTA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/9800850?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Andarist",
+    "html_url": "https://github.com/Andarist",
+    "followers_url": "https://api.github.com/users/Andarist/followers",
+    "following_url": "https://api.github.com/users/Andarist/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Andarist/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Andarist/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Andarist/subscriptions",
+    "organizations_url": "https://api.github.com/users/Andarist/orgs",
+    "repos_url": "https://api.github.com/users/Andarist/repos",
+    "events_url": "https://api.github.com/users/Andarist/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Andarist/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2019-02-17T19:06:33Z",
+  "updated_at": "2019-02-26T22:40:00Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14876",
+    "html_url": "https://github.com/facebook/react/pull/14876",
+    "diff_url": "https://github.com/facebook/react/pull/14876.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14876.patch"
+  },
+  "body": "This is **not ready to be merged yet** because it only provides a failing test, I'd like to work on fixing this issue - but I would really appreciate some guidance with this. I've tried to understand what exactly is happening (wanted to send a PR with a fix already in it 😉 ), but failed to do so - need to dig deeper.\r\n\r\nMy current conclusion is that this fails because of the \"simple memo\" optimization - `workLoop` doesnt see this memo element at all, it \"jumps\" from working on Outer directly to Inner which has fresh `pendingProps` which are used as argument for working on Inner as it correctly has to rerender itself because it reads changed context. So it doesnt bail out on finished work (correctly) and commits used new props as memoized ones later.\r\n\r\n**Why this matters?**\r\nBecause it's inconsistent with \"regular\" memo component. Conceptually from the user's perspective `React.memo(Component)` & `React.memo(Component, shallowEqual)` should behave exactly the same (but they dont)\r\n\r\nI've prepared a demo to showcase the problem - https://codesandbox.io/s/jp21pwzrv9",
+  "closed_by": null
+}

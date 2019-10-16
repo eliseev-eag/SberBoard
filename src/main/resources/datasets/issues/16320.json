@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16320",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16320/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16320/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16320/events",
+  "html_url": "https://github.com/facebook/react/pull/16320",
+  "id": 478618341,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzA1NjkxODI4",
+  "number": 16320,
+  "title": "[react-events] Refactor unit tests for Hover",
+  "user": {
+    "login": "necolas",
+    "id": 239676,
+    "node_id": "MDQ6VXNlcjIzOTY3Ng==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/239676?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/necolas",
+    "html_url": "https://github.com/necolas",
+    "followers_url": "https://api.github.com/users/necolas/followers",
+    "following_url": "https://api.github.com/users/necolas/following{/other_user}",
+    "gists_url": "https://api.github.com/users/necolas/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/necolas/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/necolas/subscriptions",
+    "organizations_url": "https://api.github.com/users/necolas/orgs",
+    "repos_url": "https://api.github.com/users/necolas/repos",
+    "events_url": "https://api.github.com/users/necolas/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/necolas/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 1296748300,
+      "node_id": "MDU6TGFiZWwxMjk2NzQ4MzAw",
+      "url": "https://api.github.com/repos/facebook/react/labels/React%20Flare",
+      "name": "React Flare",
+      "color": "63f2ff",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-08-08T18:15:39Z",
+  "updated_at": "2019-08-09T17:53:50Z",
+  "closed_at": "2019-08-09T17:53:50Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16320",
+    "html_url": "https://github.com/facebook/react/pull/16320",
+    "diff_url": "https://github.com/facebook/react/pull/16320.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16320.patch"
+  },
+  "body": "First pass at refactoring the tests and responders. This only touches `Hover`.\r\n\r\nDemo: https://codesandbox.io/s/refactor-hover-responder-f9k2q\r\n\r\n**Problem**\r\n\r\nThe existing responders listen to pointer events by default and add fallback events if PointerEvent is not supported. However, this complicates the responders and makes it easy to create a problematic unit test environment. jsdom doesn't support PointerEvent, which means that the responders end up listening to pointer events *and* fallback events in unit tests. This isn't a direct problem in production environments, because no browser will fire pointer events if they aren't supported. But in the unit test environment, we often dispatch event sequences taken from browsers that support pointer events. This means that what we're often testing is actually a (complex) scenario that cannot even occur in production: a responder that is listening to and receives both pointer events and fallback events. Not only does this risk making responders more complicated to implement but it could also hide bugs in implementations.\r\n\r\n**Response**\r\n\r\nImplement the responders so that they're only listening to *either* pointer events *or* fallback events, never both. This should make the default pointer events implementations significantly simpler and easier to test, as well as free to rely on the complete PointerEvents API. In the future it should also make DCE easier for target environments that are known to support PointerEvents, as we can use build tools with an equivalent of the runtime check. The fallback events (touch and mouse) need to coexist and be resilient to browser emulated events. Our unit tests should express a suite of high-level interactions that can be run in environments with and without PointerEvents support.",
+  "closed_by": {
+    "login": "necolas",
+    "id": 239676,
+    "node_id": "MDQ6VXNlcjIzOTY3Ng==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/239676?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/necolas",
+    "html_url": "https://github.com/necolas",
+    "followers_url": "https://api.github.com/users/necolas/followers",
+    "following_url": "https://api.github.com/users/necolas/following{/other_user}",
+    "gists_url": "https://api.github.com/users/necolas/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/necolas/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/necolas/subscriptions",
+    "organizations_url": "https://api.github.com/users/necolas/orgs",
+    "repos_url": "https://api.github.com/users/necolas/repos",
+    "events_url": "https://api.github.com/users/necolas/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/necolas/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

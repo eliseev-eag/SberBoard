@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8706",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8706/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8706/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8706/events",
+  "html_url": "https://github.com/facebook/react/pull/8706",
+  "id": 199323660,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTAwNTQ4NzA1",
+  "number": 8706,
+  "title": "Dont recreate maked context unless unmasked context changes",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2017-01-07T00:27:18Z",
+  "updated_at": "2017-01-09T18:58:00Z",
+  "closed_at": "2017-01-09T16:45:02Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8706",
+    "html_url": "https://github.com/facebook/react/pull/8706",
+    "diff_url": "https://github.com/facebook/react/pull/8706.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8706.patch"
+  },
+  "body": "### The problem\r\nFiber memoizes the merged `context` object for context-providers but does not memoize the _masked_ `context` object. This caused `componentWillReceiveProps` to be called tpo frequently for `context` consumers which can result in infinite loops (eg if `componentWillReceiveProps()` calls `setState()`).\r\n\r\nA minimal reproduction of one such infinite loop has been added as a test. It looks a little silly but it is greatly reduced from a bug I was investigating in a larger, real-world app.\r\n\r\n### The proposed solution\r\n\r\nGiven the way `context` is currently implemented, I think the only solution to this issue is to store memoized copies of both the _unmasked_ and _masked_ `context` objects in order to avoid unnecessarily recreating the _masked_ `context`. ([Stack already does something like this](https://github.com/facebook/react/blob/f589274604838ebe479848c816c2f4e7f4c5f292/src/renderers/shared/stack/reconciler/ReactCompositeComponent.js#L832-L838).)\r\n\r\n### Concerns\r\n\r\nThe solution in this PR is kind of awkward due to the facts that:\r\n1. We probably want to cache this memoized `context` on a class instance rather than the Fiber to avoid adding 2 additional fields to all Fibers (because most won't consume `context`). Prior art is `__reactInternalMemoizedMaskedChildContext`.\r\n1. The class instance doesn't yet exist the first time the masked `context` is created so we have to initially set the cached object outside of `ReactFiberContext`.\r\n\r\nThis change is kind of flimsy, but so is `context` in general at the moment (see [this comment](https://github.com/facebook/react/pull/8631#issuecomment-270450606) for elaboration).\r\n\r\nLet's talk about it. 😄 ",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

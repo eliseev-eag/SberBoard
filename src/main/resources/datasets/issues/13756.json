@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13756",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13756/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13756/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13756/events",
+  "html_url": "https://github.com/facebook/react/pull/13756",
+  "id": 365576313,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjE5NDY0MDk1",
+  "number": 13756,
+  "title": "--save is no longer needed",
+  "user": {
+    "login": "JoeCortopassi",
+    "id": 943606,
+    "node_id": "MDQ6VXNlcjk0MzYwNg==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/943606?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/JoeCortopassi",
+    "html_url": "https://github.com/JoeCortopassi",
+    "followers_url": "https://api.github.com/users/JoeCortopassi/followers",
+    "following_url": "https://api.github.com/users/JoeCortopassi/following{/other_user}",
+    "gists_url": "https://api.github.com/users/JoeCortopassi/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/JoeCortopassi/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/JoeCortopassi/subscriptions",
+    "organizations_url": "https://api.github.com/users/JoeCortopassi/orgs",
+    "repos_url": "https://api.github.com/users/JoeCortopassi/repos",
+    "events_url": "https://api.github.com/users/JoeCortopassi/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/JoeCortopassi/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-10-01T18:01:53Z",
+  "updated_at": "2018-10-01T18:26:51Z",
+  "closed_at": "2018-10-01T18:15:12Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13756",
+    "html_url": "https://github.com/facebook/react/pull/13756",
+    "diff_url": "https://github.com/facebook/react/pull/13756.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13756.patch"
+  },
+  "body": "`--save` is on by default as of [npm 5](https://blog.npmjs.org/post/161081169345/v500), and `npm install aphrodite` is functionally equivalent to `npm install --save aphrodite` now\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

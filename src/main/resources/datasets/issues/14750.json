@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14750",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14750/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14750/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14750/events",
+  "html_url": "https://github.com/facebook/react/issues/14750",
+  "id": 406046695,
+  "node_id": "MDU6SXNzdWU0MDYwNDY2OTU=",
+  "number": 14750,
+  "title": "Simultaneous key events in effect handled out of order",
+  "user": {
+    "login": "stuartkeith",
+    "id": 808880,
+    "node_id": "MDQ6VXNlcjgwODg4MA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/808880?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/stuartkeith",
+    "html_url": "https://github.com/stuartkeith",
+    "followers_url": "https://api.github.com/users/stuartkeith/followers",
+    "following_url": "https://api.github.com/users/stuartkeith/following{/other_user}",
+    "gists_url": "https://api.github.com/users/stuartkeith/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/stuartkeith/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/stuartkeith/subscriptions",
+    "organizations_url": "https://api.github.com/users/stuartkeith/orgs",
+    "repos_url": "https://api.github.com/users/stuartkeith/repos",
+    "events_url": "https://api.github.com/users/stuartkeith/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/stuartkeith/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2019-02-03T02:57:23Z",
+  "updated_at": "2019-03-02T18:03:44Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\nReport a bug.\r\n\r\n**What is the current behavior?**\r\n\r\nI have an app that's registering event listeners for `window`'s key events (via `useEffect`). Those event listeners are triggering state updates (via `useState`). I think I have found a bug where simultaneous key events occurring in the same frame (whether down or up) will be handled out of order, causing state to becoming out of sync.\r\n\r\nTake the following simple app (https://codesandbox.io/s/1z3v9zrk4j). I've kept this as keyup only for simplicity.\r\n\r\n```\r\nfunction App() {\r\n  const [keys, setKeys] = useState([]);\r\n\r\n  console.log('App', keys);\r\n\r\n  const onKeyUp = function (event) {\r\n    console.log('onKeyUp', event.key, keys);\r\n\r\n    setKeys([...keys, event.key]);\r\n  };\r\n\r\n  useEffect(function () {\r\n    console.log('effect', keys);\r\n\r\n    window.addEventListener('keyup', onKeyUp);\r\n\r\n    return function () {\r\n      console.log('removing event listener', keys);\r\n\r\n      window.removeEventListener('keyup', onKeyUp);\r\n    };\r\n  });\r\n\r\n  return <p>{keys.join(', ')}</p>;\r\n}\r\n```\r\n\r\nIf I press down any two keys, e.g. the \"q\" and \"w\" keys, and then release them at precisely the same time, the following happens:\r\n\r\n- The `keyup` event listener for `w` is called, which in turn calls `setKeys` with `['w']`\r\n- `App` is re-rendered with `keys === ['w']`\r\n- The `keyup` event listener for `q` is called, which in turn calls `setKeys` with `['q']`\r\n- The effect's cleanup function is called, removing the event listener with `keys === []`\r\n- The effect is run again, the event listener being added with `keys === ['w']`\r\n- `App` is re-rendered with `keys === ['q']`\r\n- The effect's cleanup function is called, removing the event listener with `keys ===['w']`\r\n- The effect is run again, the event listener being added with `keys === ['q']`\r\n\r\nThis results in `keys === ['q']`. The render with `w` has been lost.\r\n\r\nWith three keys, only two keys are reliably shown. Four keys - only two are reliably shown.\r\n\r\nIf I add another `useState` call, the first `useState` has no issues - all keys are reliably detected. See https://codesandbox.io/s/0yo51n5wv:\r\n\r\n```\r\nfunction App() {\r\n  const [keys, setKeys] = useState([]); \r\n  const [dummy, setDummy] = useState('foo');\r\n\r\n  console.log(\"rendering App\", keys);\r\n\r\n  const onKeyUp = function(event) {\r\n    console.log(\"onKeyUp event received\", event.key, keys);\r\n\r\n    setKeys([...keys, event.key]);\r\n    setDummy('foo');\r\n  };\r\n\r\n  useEffect(function() {\r\n    console.log(\"adding event listener\", keys);\r\n\r\n    window.addEventListener(\"keyup\", onKeyUp);\r\n\r\n    return function() {\r\n      console.log(\"removing event listener\", keys);\r\n\r\n      window.removeEventListener(\"keyup\", onKeyUp);\r\n    };\r\n  });\r\n\r\n  return (\r\n    <div>\r\n      <p>Keyups received:</p>\r\n      <p>{keys.join(\", \")}</p>\r\n      <button onClick={() => setKeys([])}>Reset</button>\r\n    </div>\r\n  );\r\n}\r\n```\r\n\r\n**What is the expected behavior?**\r\n\r\nI would expect the final state array to contain all keys released, in order. There are a few workarounds for this issue (e.g. passing a function to `setState` to retrieve the current value instead of using the rendered value), but from the documentation it seems that is an escape hatch for use when the effect's callback is not renewed on each state change, and should not be necessary in this case (unless I've misunderstood).\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nIt happens on both versions that support hooks - `16.8.0-alpha.0` and `16.8.0-alpha.1`. This is on Chrome/Safari/Firefox on MacOS Mojave.\r\n",
+  "closed_by": null
+}

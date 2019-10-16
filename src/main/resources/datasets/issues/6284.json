@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6284",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6284/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6284/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6284/events",
+  "html_url": "https://github.com/facebook/react/issues/6284",
+  "id": 141576362,
+  "node_id": "MDU6SXNzdWUxNDE1NzYzNjI=",
+  "number": 6284,
+  "title": "Form input name='nodeName' breaks onSubmit event handling",
+  "user": {
+    "login": "insonifi",
+    "id": 3122135,
+    "node_id": "MDQ6VXNlcjMxMjIxMzU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/3122135?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/insonifi",
+    "html_url": "https://github.com/insonifi",
+    "followers_url": "https://api.github.com/users/insonifi/followers",
+    "following_url": "https://api.github.com/users/insonifi/following{/other_user}",
+    "gists_url": "https://api.github.com/users/insonifi/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/insonifi/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/insonifi/subscriptions",
+    "organizations_url": "https://api.github.com/users/insonifi/orgs",
+    "repos_url": "https://api.github.com/users/insonifi/repos",
+    "events_url": "https://api.github.com/users/insonifi/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/insonifi/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2016-03-17T12:58:47Z",
+  "updated_at": "2018-05-03T02:52:27Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "It happened that I stumbled on following edge case. If you add `name='nodeName'` attribute to form's _input_, at some point of React event handling (`ChangeEventPlugin.js: shouldUseChangeEvent()`) it will call: `elem.nodeName && elem.nodeName.toLowerCase()`, but coincidentally `nodeName` property refers to _input_ and invocation fails.\n\nHere's a [jsFiddle example](https://jsfiddle.net/tLd7xvwc/)\n",
+  "closed_by": null
+}

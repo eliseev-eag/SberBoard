@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3591",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3591/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3591/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3591/events",
+  "html_url": "https://github.com/facebook/react/pull/3591",
+  "id": 66427471,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzI2NDcxOTM=",
+  "number": 3591,
+  "title": "ReactLink for radio buttons (radioLink)",
+  "user": {
+    "login": "guybenron",
+    "id": 10583243,
+    "node_id": "MDQ6VXNlcjEwNTgzMjQz",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/10583243?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/guybenron",
+    "html_url": "https://github.com/guybenron",
+    "followers_url": "https://api.github.com/users/guybenron/followers",
+    "following_url": "https://api.github.com/users/guybenron/following{/other_user}",
+    "gists_url": "https://api.github.com/users/guybenron/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/guybenron/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/guybenron/subscriptions",
+    "organizations_url": "https://api.github.com/users/guybenron/orgs",
+    "repos_url": "https://api.github.com/users/guybenron/repos",
+    "events_url": "https://api.github.com/users/guybenron/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/guybenron/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2015-04-05T10:56:49Z",
+  "updated_at": "2016-08-03T00:46:45Z",
+  "closed_at": "2015-10-06T05:00:13Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3591",
+    "html_url": "https://github.com/facebook/react/pull/3591",
+    "diff_url": "https://github.com/facebook/react/pull/3591.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3591.patch"
+  },
+  "body": "Adresses #3573 .\n\nI modified LinkedValueUtils.js to add support for the following syntax:\n\n```\n<input type=\"radio\" name=\"mygroup\" value=\"value1\" radioLink={this.linkState(\"myval\")}/>\n<input type=\"radio\" name=\"mygroup\" value=\"value2\" radioLink={this.linkState(\"myval\")}/>\n```\n\nState will have a variable named `myval` that will hold the radio buttons `value` attribute (e.g., `value1` or `value2`). Setting this state variable to a specific value will cause the corresponding radio button to be selected. If there is no corresponding radio button, all will be deselected.\n\nAlso updated documentation.\n",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

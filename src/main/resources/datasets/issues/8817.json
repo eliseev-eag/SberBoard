@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8817",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8817/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8817/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8817/events",
+  "html_url": "https://github.com/facebook/react/pull/8817",
+  "id": 201360027,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTAxOTE0NTIw",
+  "number": 8817,
+  "title": "Changed I to we",
+  "user": {
+    "login": "faheel",
+    "id": 11466676,
+    "node_id": "MDQ6VXNlcjExNDY2Njc2",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/11466676?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/faheel",
+    "html_url": "https://github.com/faheel",
+    "followers_url": "https://api.github.com/users/faheel/followers",
+    "following_url": "https://api.github.com/users/faheel/following{/other_user}",
+    "gists_url": "https://api.github.com/users/faheel/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/faheel/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/faheel/subscriptions",
+    "organizations_url": "https://api.github.com/users/faheel/orgs",
+    "repos_url": "https://api.github.com/users/faheel/repos",
+    "events_url": "https://api.github.com/users/faheel/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/faheel/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-01-17T17:54:59Z",
+  "updated_at": "2017-01-18T18:45:41Z",
+  "closed_at": "2017-01-17T18:01:41Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8817",
+    "html_url": "https://github.com/facebook/react/pull/8817",
+    "diff_url": "https://github.com/facebook/react/pull/8817.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8817.patch"
+  },
+  "body": "Changed `I` to `we` to maintain consistency with the rest of the tutorial.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

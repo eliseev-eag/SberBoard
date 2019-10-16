@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14938",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14938/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14938/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14938/events",
+  "html_url": "https://github.com/facebook/react/pull/14938",
+  "id": 413741437,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjU1NjQwMzI4",
+  "number": 14938,
+  "title": "Fix debug tools crashing on inspecting a component using useContext",
+  "user": {
+    "login": "bdbch",
+    "id": 6538827,
+    "node_id": "MDQ6VXNlcjY1Mzg4Mjc=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/6538827?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bdbch",
+    "html_url": "https://github.com/bdbch",
+    "followers_url": "https://api.github.com/users/bdbch/followers",
+    "following_url": "https://api.github.com/users/bdbch/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bdbch/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bdbch/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bdbch/subscriptions",
+    "organizations_url": "https://api.github.com/users/bdbch/orgs",
+    "repos_url": "https://api.github.com/users/bdbch/repos",
+    "events_url": "https://api.github.com/users/bdbch/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bdbch/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-02-23T21:16:36Z",
+  "updated_at": "2019-02-24T00:55:18Z",
+  "closed_at": "2019-02-24T00:55:18Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14938",
+    "html_url": "https://github.com/facebook/react/pull/14938",
+    "diff_url": "https://github.com/facebook/react/pull/14938.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14938.patch"
+  },
+  "body": "This pull request should fix a bug with the `useContext` function breaking the devtools because the useContext function is  not calling the `nextHook()` function.\r\n\r\nExample Sandbox:\r\nhttps://codesandbox.io/s/z2qok540m\r\n\r\nRelated issue:\r\nhttps://github.com/facebookincubator/redux-react-hook/issues/34",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

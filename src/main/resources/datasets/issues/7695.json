@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7695",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7695/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7695/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7695/events",
+  "html_url": "https://github.com/facebook/react/pull/7695",
+  "id": 176206480,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODQ3Njk1MjI=",
+  "number": 7695,
+  "title": "[rfc] Support nested arrays of styles for inline styling prop",
+  "user": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2016-09-10T22:12:14Z",
+  "updated_at": "2016-09-13T07:23:19Z",
+  "closed_at": "2016-09-12T15:19:08Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7695",
+    "html_url": "https://github.com/facebook/react/pull/7695",
+    "diff_url": "https://github.com/facebook/react/pull/7695.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7695.patch"
+  },
+  "body": "This is already a supported feature in ReactNative.[1](https://facebook.github.io/react-native/docs/style.html) You can write;\n\n``` js\nstyle={[\n  styles.base,\n  cond && styles.cond,\n  [{color: blue}, {color: green}],\n]}\n```\n\nThis diff makes the smallest possible tweak to add support for this\nfeature - if we get a nested array, then merge the nested arrays into\none object and handle it the same as before. Because the merging only\nhappens when the style prop is an array, there should be little or no\neffect on performance when using the old syntax.\n\nEven so, I would like to have more robust testing before landing this.\nIt would be easier to test and benchmark this change if we pulled the\ndiffing logic from the method `_updateDOMProperties` out into a separate\nmodule.\n\nPerhaps before adding this feature we could;\n- pull out the logic for diffing the 'prevProps' and 'nextProps' into a\n  separate module, used by '_updateDOMProperties'.\n- test and benchmark that module\n\nThen we could more easily add test cases for the new syntax that this\nwould support.\n\nOr perhaps I'm over thinking it and this could be landed before doing\nrefactoring.\n\nTest plan;\n- existing unit tests, lints, flow all pass\n  (note: there are some flow errors on master, which I plan to fix in a\n  separate PR. None are introduced by this change though.)\n- added unit test for 'flattenStyleArray' method\n- added example in examples file\n",
+  "closed_by": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

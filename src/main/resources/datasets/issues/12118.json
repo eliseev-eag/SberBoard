@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12118",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12118/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12118/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12118/events",
+  "html_url": "https://github.com/facebook/react/pull/12118",
+  "id": 292638791,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTY1ODc2MDE5",
+  "number": 12118,
+  "title": "ReactDOM.flushControlled",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2018-01-30T03:12:44Z",
+  "updated_at": "2018-01-30T06:36:35Z",
+  "closed_at": "2018-01-30T06:36:35Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12118",
+    "html_url": "https://github.com/facebook/react/pull/12118",
+    "diff_url": "https://github.com/facebook/react/pull/12118.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12118.patch"
+  },
+  "body": "New API for wrapping event handlers that need to fire before React yields to the browser. Previously we thought that `flushSync` was sufficient for this use case, but it turns out that `flushSync` is only safe if you're guaranteed to be at the top of the stack; that is, if you know for sure that your event handler is not nested inside another React event handler or lifecycle. This isn't true for cases like `el.focus`, `el.click`, or `dispatchEvent`, where an event handler can be invoked synchronously from inside an existing stack.\r\n\r\n`flushControlled` has similar semantics to `batchedUpdates`, where if you nest multiple batches, the work is not flushed until the end of the outermost batch. The work is not guaranteed to synchronously flush, as with `flushSync`, but it is guaranteed to flush before React yields to the browser.\r\n\r\n`flushSync` is still the preferred API in most cases, such as inside a `requestAnimationFrame` callback.",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

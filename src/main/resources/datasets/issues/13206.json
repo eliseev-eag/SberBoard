@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13206",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13206/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13206/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13206/events",
+  "html_url": "https://github.com/facebook/react/issues/13206",
+  "id": 341142665,
+  "node_id": "MDU6SXNzdWUzNDExNDI2NjU=",
+  "number": 13206,
+  "title": "[Umbrella] Releasing Suspense",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710615342,
+      "node_id": "MDU6TGFiZWw3MTA2MTUzNDI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Umbrella",
+      "name": "Type: Umbrella",
+      "color": "5319e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 64,
+  "created_at": "2018-07-13T20:01:03Z",
+  "updated_at": "2019-07-29T17:04:01Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "body": "Let's use this issue to track the remaining tasks for releasing Suspense to open source.\r\n\r\n## Initial release (MVP)\r\n\r\n### Core\r\n- [x] API to read context from within any render phase function (@acdlite) [#13139]\r\n- [x] Hide timed-out content instead of deleting it  (@acdlite) [#13120]\r\n- [ ] Automatic injection of context providers per React root (@acdlite) [#13293]\r\n- [ ] Remove `unstable_` prefix from `AsyncMode` (maybe?)\r\n- [ ] Support for synchronous thenables, and for promises that resolve before the render phase is complete.\r\n  - [ ] Confirm that a synchronous thenable that throws an error is handled correctly\r\n- [ ] Confirm it works with `<div hidden>` [#13089]\r\n- [ ] Why does clicking on several detail links in the fixture one by one eventually causes a big placeholder even if I wait for each of them for less than the placeholder delay before clicking the next one ([see tweet](https://mobile.twitter.com/niklasbostrom/status/1025278135082934272))?\r\n\r\n### Simple Cache Provider\r\n- [ ] Cache invalidation (@acdlite) [#13337]\r\n- [ ] Subscriptions (@acdlite) [#13337]\r\n- [ ] Decide on actual name\r\n\r\n### Code splitting\r\n- [x] Support promise as a component type\r\n- [x] (maybe) Open source `lazyLoadComponent`?\r\n\r\n### Test renderer\r\n- [ ] Finalize public APIs for `flushAll`, `yield`, etc\r\n  - Tentative plan is to publish custom matchers for each of the major testing frameworks, a la #13236.\r\n\r\n### Docs\r\n- [ ] Blog post\r\n- [ ] `React.Placeholder`\r\n- [ ] simple-cache-provider\r\n- [ ] Unnamed code-splitting library\r\n\r\n## Follow ups\r\n\r\n### Soft expiration (https://github.com/facebook/react/issues/14248)\r\n- [ ] Implement an API for in-place loading indicators that aren't ancestors\r\n- [ ] Make sure there's a way to avoid flashing the inline spinner if it's fast enough\r\n\r\n### Streaming server renderer\r\n- [ ] Implement a streaming server renderer like the one in @acdlite's ZEIT talk\r\n- [ ] Partial hydration\r\n\r\n------\r\n\r\nRelated: Time Slicing Umbrella (https://github.com/facebook/react/issues/13306)",
+  "closed_by": null
+}

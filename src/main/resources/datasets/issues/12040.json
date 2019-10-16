@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12040",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12040/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12040/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12040/events",
+  "html_url": "https://github.com/facebook/react/pull/12040",
+  "id": 289634680,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTYzNzE2Mjk4",
+  "number": 12040,
+  "title": "Fix copy paste error for file size comparison",
+  "user": {
+    "login": "esbena",
+    "id": 1924993,
+    "node_id": "MDQ6VXNlcjE5MjQ5OTM=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1924993?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/esbena",
+    "html_url": "https://github.com/esbena",
+    "followers_url": "https://api.github.com/users/esbena/followers",
+    "following_url": "https://api.github.com/users/esbena/following{/other_user}",
+    "gists_url": "https://api.github.com/users/esbena/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/esbena/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/esbena/subscriptions",
+    "organizations_url": "https://api.github.com/users/esbena/orgs",
+    "repos_url": "https://api.github.com/users/esbena/repos",
+    "events_url": "https://api.github.com/users/esbena/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/esbena/received_events",
+    "type": "User",
+    "site_admin": true
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2018-01-18T13:49:08Z",
+  "updated_at": "2018-01-19T10:02:15Z",
+  "closed_at": "2018-01-18T13:55:40Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12040",
+    "html_url": "https://github.com/facebook/react/pull/12040",
+    "diff_url": "https://github.com/facebook/react/pull/12040.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12040.patch"
+  },
+  "body": "This PR fixes a copy paste error for file size comparison in #11865 (https://github.com/facebook/react/pull/11865#issuecomment-358642622).\r\n\r\nI do not understand the tool chain well enough to make a test for this.\r\n\r\n\r\n---\r\n\r\nI found the error when looking through recent commits of this project on lgtm.com: https://lgtm.com/projects/g/facebook/react/\r\n\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

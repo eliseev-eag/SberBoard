@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10793",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10793/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10793/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10793/events",
+  "html_url": "https://github.com/facebook/react/pull/10793",
+  "id": 260043357,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQyNzMyMTg5",
+  "number": 10793,
+  "title": "[Gatsby Docs Update] Overlay toggle button",
+  "user": {
+    "login": "joecritch",
+    "id": 24449,
+    "node_id": "MDQ6VXNlcjI0NDQ5",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/24449?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/joecritch",
+    "html_url": "https://github.com/joecritch",
+    "followers_url": "https://api.github.com/users/joecritch/followers",
+    "following_url": "https://api.github.com/users/joecritch/following{/other_user}",
+    "gists_url": "https://api.github.com/users/joecritch/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/joecritch/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/joecritch/subscriptions",
+    "organizations_url": "https://api.github.com/users/joecritch/orgs",
+    "repos_url": "https://api.github.com/users/joecritch/repos",
+    "events_url": "https://api.github.com/users/joecritch/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/joecritch/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2017-09-23T22:40:39Z",
+  "updated_at": "2017-09-27T18:23:27Z",
+  "closed_at": "2017-09-25T20:15:00Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10793",
+    "html_url": "https://github.com/facebook/react/pull/10793",
+    "diff_url": "https://github.com/facebook/react/pull/10793.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10793.patch"
+  },
+  "body": "- Currently, if you have iOS Safari in \"full-height\" mode, and you tap the overlay toggle button, it doesn't actually do anything except turn off the full-height mode. This is because it's inside of Safari's 44px inert area. \r\n- So this is a simplified overlay toggle button (just the icon) that's raised 44px, so it's out of the inert area.\r\n- The text has been removed because, when 44px higher, it's a bit of an intrusive button on longer titles. Feels obvious enough without a label, I think.\r\n\r\n**preview**\r\n\r\n![toggle-btn](https://user-images.githubusercontent.com/24449/30777697-8125a88c-a0b8-11e7-96cb-4b93f67d2b65.gif)\r\n\r\ncc @bvaughn @flarnie \r\n\r\n",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

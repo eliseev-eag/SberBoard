@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16468",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16468/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16468/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16468/events",
+  "html_url": "https://github.com/facebook/react/issues/16468",
+  "id": 482542595,
+  "node_id": "MDU6SXNzdWU0ODI1NDI1OTU=",
+  "number": 16468,
+  "title": "Remember saved component filters by url or in bookmarks",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-08-19T21:43:09Z",
+  "updated_at": "2019-08-19T21:43:17Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "It would be cool if it will support saving filter based on url or some bookmarks. I think it will be really useful for switching between different projects. And seems that bookmarks is better solution because usually people have some different stages like production/pre-production/local development.\r\n\r\n---\r\nOriginally reported by @7rulnik via https://github.com/bvaughn/react-devtools-experimental/issues/359",
+  "closed_by": null
+}

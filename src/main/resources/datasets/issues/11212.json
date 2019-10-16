@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11212",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11212/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11212/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11212/events",
+  "html_url": "https://github.com/facebook/react/pull/11212",
+  "id": 265159659,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ2MzY0Njkx",
+  "number": 11212,
+  "title": "Sync setStates inside willUpdate and didUpdate should flush at same time",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-10-13T03:31:58Z",
+  "updated_at": "2018-04-15T15:50:55Z",
+  "closed_at": "2017-10-13T04:05:59Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11212",
+    "html_url": "https://github.com/facebook/react/pull/11212",
+    "diff_url": "https://github.com/facebook/react/pull/11212.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11212.patch"
+  },
+  "body": "In sync mode, we downgrade sync priority work to task work when we're in the commit phase, but not in the render phase. That means if you schedule updates in both phases, the render phase update will flush first, and the commit phase update will flush after that. What should really happen is that both updates flush at the same time.\r\n\r\nTo solve this, updates in the commit phase are now given sync priority. The distinction between task and sync really only exists to account for a historical quirk in the behavior of top-level mounts. (Refer to the test case titled \"initial mount is sync inside batchedUpdates\".)\r\n\r\nIdeally, there would only be one priority for both sync and task. This gets us closer to that model, while still accounting for top-level mounts.",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

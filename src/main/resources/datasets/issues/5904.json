@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5904",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5904/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5904/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5904/events",
+  "html_url": "https://github.com/facebook/react/pull/5904",
+  "id": 128220805,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTY5MjY3Njg=",
+  "number": 5904,
+  "title": "Overflow problem fixed",
+  "user": {
+    "login": "sercaneraslan",
+    "id": 330566,
+    "node_id": "MDQ6VXNlcjMzMDU2Ng==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/330566?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sercaneraslan",
+    "html_url": "https://github.com/sercaneraslan",
+    "followers_url": "https://api.github.com/users/sercaneraslan/followers",
+    "following_url": "https://api.github.com/users/sercaneraslan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sercaneraslan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sercaneraslan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sercaneraslan/subscriptions",
+    "organizations_url": "https://api.github.com/users/sercaneraslan/orgs",
+    "repos_url": "https://api.github.com/users/sercaneraslan/repos",
+    "events_url": "https://api.github.com/users/sercaneraslan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sercaneraslan/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2016-01-22T18:56:03Z",
+  "updated_at": "2016-01-28T18:20:52Z",
+  "closed_at": "2016-01-22T19:30:06Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5904",
+    "html_url": "https://github.com/facebook/react/pull/5904",
+    "diff_url": "https://github.com/facebook/react/pull/5904.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5904.patch"
+  },
+  "body": "I fixed the overflow problem in \"Playground Preview\" area example.\n\nOld: \n\n<img width=\"436\" alt=\"old\" src=\"https://cloud.githubusercontent.com/assets/330566/12519955/7fe0d34c-c14a-11e5-9497-c6b81b134577.png\">\n\nNew:\n\n<img width=\"426\" alt=\"new\" src=\"https://cloud.githubusercontent.com/assets/330566/12519965/84bcde74-c14a-11e5-9094-a03b084cb1e2.png\">\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10813",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10813/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10813/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10813/events",
+  "html_url": "https://github.com/facebook/react/pull/10813",
+  "id": 260287799,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQyODkwODA1",
+  "number": 10813,
+  "title": "Add TRADEOFFS.md",
+  "user": {
+    "login": "jquense",
+    "id": 339286,
+    "node_id": "MDQ6VXNlcjMzOTI4Ng==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/339286?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jquense",
+    "html_url": "https://github.com/jquense",
+    "followers_url": "https://api.github.com/users/jquense/followers",
+    "following_url": "https://api.github.com/users/jquense/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jquense/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jquense/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jquense/subscriptions",
+    "organizations_url": "https://api.github.com/users/jquense/orgs",
+    "repos_url": "https://api.github.com/users/jquense/repos",
+    "events_url": "https://api.github.com/users/jquense/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jquense/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2017-09-25T14:01:32Z",
+  "updated_at": "2018-01-05T16:31:04Z",
+  "closed_at": "2018-01-05T16:30:55Z",
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10813",
+    "html_url": "https://github.com/facebook/react/pull/10813",
+    "diff_url": "https://github.com/facebook/react/pull/10813.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10813.patch"
+  },
+  "body": "The content here is mostly copied/paraphrased from @gaearon from a [twitter thread](https://twitter.com/dan_abramov/status/909180238856323072) the other day. I saw that Babel [had an issue open](https://github.com/babel/babel/issues/4959) adding a Tradeoffs.md I thought it would be great thing to add to the React repo as well. Maybe we want to move it to the docs directly but I thought i’d get something started, spur some conversation, and make this more of a community endeavor. \r\n\r\nI intentionally left the “pros” sparse for the time being  since I don’t think we’ll all have much trouble enumerating them :)",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

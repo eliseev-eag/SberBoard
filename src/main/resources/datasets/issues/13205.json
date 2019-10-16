@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13205",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13205/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13205/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13205/events",
+  "html_url": "https://github.com/facebook/react/pull/13205",
+  "id": 341104859,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjAxMzU3NTc1",
+  "number": 13205,
+  "title": "Update prettier",
+  "user": {
+    "login": "johanhenrikssn",
+    "id": 2175093,
+    "node_id": "MDQ6VXNlcjIxNzUwOTM=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/2175093?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/johanhenrikssn",
+    "html_url": "https://github.com/johanhenrikssn",
+    "followers_url": "https://api.github.com/users/johanhenrikssn/followers",
+    "following_url": "https://api.github.com/users/johanhenrikssn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/johanhenrikssn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/johanhenrikssn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/johanhenrikssn/subscriptions",
+    "organizations_url": "https://api.github.com/users/johanhenrikssn/orgs",
+    "repos_url": "https://api.github.com/users/johanhenrikssn/repos",
+    "events_url": "https://api.github.com/users/johanhenrikssn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/johanhenrikssn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2018-07-13T17:47:16Z",
+  "updated_at": "2018-07-28T19:28:58Z",
+  "closed_at": "2018-07-17T19:18:35Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13205",
+    "html_url": "https://github.com/facebook/react/pull/13205",
+    "diff_url": "https://github.com/facebook/react/pull/13205.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13205.patch"
+  },
+  "body": "Main improvement in diff is [break nested ternaries](https://github.com/prettier/prettier/pull/4120). \r\n\r\nPrettier >1.12 [don't default to the JavaScript parser](https://github.com/prettier/prettier/pull/4528), so this will also set default parser to babylon in prettier config.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

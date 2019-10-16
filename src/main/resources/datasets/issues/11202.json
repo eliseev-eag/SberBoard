@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11202",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11202/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11202/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11202/events",
+  "html_url": "https://github.com/facebook/react/pull/11202",
+  "id": 264795520,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ2MTA0NjY0",
+  "number": 11202,
+  "title": "Adjust input value detachment to avoid input validation in FireFox",
+  "user": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2017-10-12T02:35:22Z",
+  "updated_at": "2017-12-04T13:21:23Z",
+  "closed_at": "2017-12-04T13:21:22Z",
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11202",
+    "html_url": "https://github.com/facebook/react/pull/11202",
+    "diff_url": "https://github.com/facebook/react/pull/11202.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11202.patch"
+  },
+  "body": "Fixes #8395 \r\n\r\nReact DOM intentionally sets `value` on inputs when they are created. This prevents an issue where changes to `defaultValue` cause the `value` property to change.\r\n\r\nThis is colloquially known as \"value detachment\". Unfortunately, this triggers input validation, displaying a red aura in Firefox. This works around that by:\r\n\r\n1. Only detaching if the related value is truthy.\r\n2. Reassigning the `type` property on date/color inputs to preserve\r\n   the iOS fix.\r\n\r\n**Test Plan**\r\n\r\n1. Open http://react-ff-validate.surge.sh/text-inputs\r\n2. The **Required Inputs** test case inputs should not be invalid (no red)\r\n3. The date input placeholders on the **All inputs** test case should display\r\n\r\nSo far, I have tested in:\r\n\r\n**Success so far:**\r\nSafari Desktop 11\r\nSafari iOS 7, 8.4, 10.2, 11\r\nFirefox 47, 56\r\nChrome 61\r\nIE 10, 11\r\nIE Edge 15",
+  "closed_by": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

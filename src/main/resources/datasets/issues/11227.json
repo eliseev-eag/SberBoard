@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11227",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11227/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11227/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11227/events",
+  "html_url": "https://github.com/facebook/react/pull/11227",
+  "id": 265483186,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ2NTk4MDY1",
+  "number": 11227,
+  "title": "bug fix on input radio",
+  "user": {
+    "login": "landvibe",
+    "id": 3401416,
+    "node_id": "MDQ6VXNlcjM0MDE0MTY=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3401416?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/landvibe",
+    "html_url": "https://github.com/landvibe",
+    "followers_url": "https://api.github.com/users/landvibe/followers",
+    "following_url": "https://api.github.com/users/landvibe/following{/other_user}",
+    "gists_url": "https://api.github.com/users/landvibe/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/landvibe/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/landvibe/subscriptions",
+    "organizations_url": "https://api.github.com/users/landvibe/orgs",
+    "repos_url": "https://api.github.com/users/landvibe/repos",
+    "events_url": "https://api.github.com/users/landvibe/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/landvibe/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2017-10-14T10:55:46Z",
+  "updated_at": "2017-11-19T15:44:35Z",
+  "closed_at": "2017-11-19T15:44:35Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11227",
+    "html_url": "https://github.com/facebook/react/pull/11227",
+    "diff_url": "https://github.com/facebook/react/pull/11227.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11227.patch"
+  },
+  "body": "Fixed: [#7630](https://github.com/facebook/react/issues/7630)\r\n\r\nThe [PR#7333](https://github.com/facebook/react/pull/7333) made this issue.\r\nAnd now there is no validation warning that PR#7333 is mentioning.\r\nI think React 16 resolved the validation warning issue, so I reverted it to the previous of PR#7333.\r\nI also added a test case for [#7630](https://github.com/facebook/react/issues/7630)",
+  "closed_by": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

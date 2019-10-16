@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2262",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2262/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2262/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2262/events",
+  "html_url": "https://github.com/facebook/react/pull/2262",
+  "id": 44186804,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjE4OTI5MjQ=",
+  "number": 2262,
+  "title": "Improve and simplify findComponentRoot, do not optimistically traverse foreign nodes",
+  "user": {
+    "login": "syranide",
+    "id": 1714255,
+    "node_id": "MDQ6VXNlcjE3MTQyNTU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1714255?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/syranide",
+    "html_url": "https://github.com/syranide",
+    "followers_url": "https://api.github.com/users/syranide/followers",
+    "following_url": "https://api.github.com/users/syranide/following{/other_user}",
+    "gists_url": "https://api.github.com/users/syranide/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/syranide/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/syranide/subscriptions",
+    "organizations_url": "https://api.github.com/users/syranide/orgs",
+    "repos_url": "https://api.github.com/users/syranide/repos",
+    "events_url": "https://api.github.com/users/syranide/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/syranide/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2014-09-27T19:12:11Z",
+  "updated_at": "2015-11-25T23:23:04Z",
+  "closed_at": "2015-11-25T23:23:04Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/2262",
+    "html_url": "https://github.com/facebook/react/pull/2262",
+    "diff_url": "https://github.com/facebook/react/pull/2262.diff",
+    "patch_url": "https://github.com/facebook/react/pull/2262.patch"
+  },
+  "body": "Based on code from #1570\nSupersedes #2261 (#2005 for why I think optimistic traversal of foreign nodes is bad).\n\nImproved and simplified implementation of `findComponentRoot`. Makes less use of the \"hacky\" `ReactInstanceHandles`. Once `_parentComponent` makes it appearance, one way or another, the dependency on `ReactInstanceHandles` can be dropped entirely (which is very good).\n- [x] Test plan: `grunt test` and manual testing in our app\n- [ ] If approved: test and tidy up the code, but I imagine there's too much friction for this PR now\n\n```\n   raw     gz Compared to master @ 57de1b07d0b58d5a76d46ee8b429d7d74d175c99\n  -900   -532 build/react-with-addons.js\n  -171    -82 build/react-with-addons.min.js\n  -900   -500 build/react.js\n  -171    -78 build/react.min.js\n```\n",
+  "closed_by": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

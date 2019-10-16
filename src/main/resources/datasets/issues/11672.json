@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11672",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11672/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11672/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11672/events",
+  "html_url": "https://github.com/facebook/react/pull/11672",
+  "id": 277167365,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTU0OTE1Mzg1",
+  "number": 11672,
+  "title": "Re-enable fragment export",
+  "user": {
+    "login": "clemmy",
+    "id": 3696934,
+    "node_id": "MDQ6VXNlcjM2OTY5MzQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3696934?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/clemmy",
+    "html_url": "https://github.com/clemmy",
+    "followers_url": "https://api.github.com/users/clemmy/followers",
+    "following_url": "https://api.github.com/users/clemmy/following{/other_user}",
+    "gists_url": "https://api.github.com/users/clemmy/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/clemmy/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/clemmy/subscriptions",
+    "organizations_url": "https://api.github.com/users/clemmy/orgs",
+    "repos_url": "https://api.github.com/users/clemmy/repos",
+    "events_url": "https://api.github.com/users/clemmy/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/clemmy/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-11-27T21:01:11Z",
+  "updated_at": "2017-11-27T21:15:54Z",
+  "closed_at": "2017-11-27T21:09:16Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11672",
+    "html_url": "https://github.com/facebook/react/pull/11672",
+    "diff_url": "https://github.com/facebook/react/pull/11672.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11672.patch"
+  },
+  "body": "Re-enable fragment export for upcoming release.",
+  "closed_by": {
+    "login": "clemmy",
+    "id": 3696934,
+    "node_id": "MDQ6VXNlcjM2OTY5MzQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3696934?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/clemmy",
+    "html_url": "https://github.com/clemmy",
+    "followers_url": "https://api.github.com/users/clemmy/followers",
+    "following_url": "https://api.github.com/users/clemmy/following{/other_user}",
+    "gists_url": "https://api.github.com/users/clemmy/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/clemmy/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/clemmy/subscriptions",
+    "organizations_url": "https://api.github.com/users/clemmy/orgs",
+    "repos_url": "https://api.github.com/users/clemmy/repos",
+    "events_url": "https://api.github.com/users/clemmy/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/clemmy/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13264",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13264/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13264/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13264/events",
+  "html_url": "https://github.com/facebook/react/pull/13264",
+  "id": 344194645,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjAzNjQ3NzMz",
+  "number": 13264,
+  "title": "Remove 'warning' module from the JS scheduler",
+  "user": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2018-07-24T20:38:17Z",
+  "updated_at": "2018-07-25T15:58:19Z",
+  "closed_at": "2018-07-25T15:58:19Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13264",
+    "html_url": "https://github.com/facebook/react/pull/13264",
+    "diff_url": "https://github.com/facebook/react/pull/13264.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13264.patch"
+  },
+  "body": "**what is the change?:**\r\nSee title\r\n\r\n**why make this change?:**\r\nInternally the 'warning' module has some dependencies which we want to\r\navoid pulling in during the very early stages of initial pageload. It is\r\ncreating a cyclical dependency.\r\n\r\nAnd we wanted to remove this dependency anyway, because this module\r\nshould be kept small and decoupled.\r\n\r\n**test plan:**\r\n- Tested the exact same change internally in Facebook.com\r\n- Ran unit tests\r\n- Tried out the fixture\r\n\r\n**issue:**\r\nInternal task T31831021\r\n\r\n**Before submitting a pull request,** please make sure the following is done:\r\n\r\n1. Fork [the repository](https://github.com/facebook/react) and create your branch from `master`.\r\n2. Run `yarn` in the repository root.\r\n3. If you've fixed a bug or added code that should be tested, add tests!\r\n4. Ensure the test suite passes (`yarn test`). Tip: `yarn test --watch TestName` is helpful in development.\r\n5. Run `yarn test-prod` to test in the production environment. It supports the same options as `yarn test`.\r\n6. If you need a debugger, run `yarn debug-test --watch TestName`, open `chrome://inspect`, and press \"Inspect\".\r\n7. Format your code with [prettier](https://github.com/prettier/prettier) (`yarn prettier`).\r\n8. Make sure your code lints (`yarn lint`). Tip: `yarn linc` to only check changed files.\r\n9. Run the [Flow](https://flowtype.org/) typechecks (`yarn flow`).\r\n10. If you haven't already, complete the CLA.\r\n\r\n**Learn more about contributing:** https://reactjs.org/docs/how-to-contribute.html\r\n",
+  "closed_by": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

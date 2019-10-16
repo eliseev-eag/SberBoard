@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13449",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13449/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13449/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13449/events",
+  "html_url": "https://github.com/facebook/react/issues/13449",
+  "id": 352382255,
+  "node_id": "MDU6SXNzdWUzNTIzODIyNTU=",
+  "number": 13449,
+  "title": "how map ? render An Array Of Elements ",
+  "user": {
+    "login": "zlv-thisF",
+    "id": 24266156,
+    "node_id": "MDQ6VXNlcjI0MjY2MTU2",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/24266156?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zlv-thisF",
+    "html_url": "https://github.com/zlv-thisF",
+    "followers_url": "https://api.github.com/users/zlv-thisF/followers",
+    "following_url": "https://api.github.com/users/zlv-thisF/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zlv-thisF/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zlv-thisF/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zlv-thisF/subscriptions",
+    "organizations_url": "https://api.github.com/users/zlv-thisF/orgs",
+    "repos_url": "https://api.github.com/users/zlv-thisF/repos",
+    "events_url": "https://api.github.com/users/zlv-thisF/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zlv-thisF/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 620368407,
+      "node_id": "MDU6TGFiZWw2MjAzNjg0MDc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Needs%20More%20Information",
+      "name": "Resolution: Needs More Information",
+      "color": "fffde7",
+      "default": false
+    },
+    {
+      "id": 40929155,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1NQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Question",
+      "name": "Type: Question",
+      "color": "cc317c",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2018-08-21T04:33:25Z",
+  "updated_at": "2018-08-26T10:33:53Z",
+  "closed_at": "2018-08-22T12:46:54Z",
+  "author_association": "NONE",
+  "body": "  \r\n **What is the current behavior?**\r\n   react16+ support return array components, for example:\r\n   render() {\r\n      return [\r\n          《Li》1《/Li》\r\n          《Li》2《/Li》\r\n          《Li》3《/Li》\r\n      ]\r\n   }\r\n   export default ArrayDemo\r\n   ----------------\r\n   i want to map it with React.Children.map,\r\n  for example:\r\n  import ArrayDemo from 'xxx/xxx';\r\n  ....\r\n  React.Children.map(ArrayDemo,(item, index) => {\r\n      return 《Col span={6}》{item}《/Col》\r\n  })\r\n  ....\r\n\r\n  -------------------\r\n  but ArrayDemo has become a single element; React.Children.toArray got [0] only;\r\n\r\n**What is the expected behavior?**\r\n\r\n  i expected since React can return array;  how can i map it? for sometimes i want to wrap each\r\n element in array ;\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\n   16.4+\r\n\r\n\r\n---------------------------------------\r\nor am i missing something important?    thx a lot!\r\n\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

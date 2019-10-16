@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6951",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6951/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6951/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6951/events",
+  "html_url": "https://github.com/facebook/react/issues/6951",
+  "id": 158134290,
+  "node_id": "MDU6SXNzdWUxNTgxMzQyOTA=",
+  "number": 6951,
+  "title": "Changing state in onFocus and onChange for a select multiple element does not work in Firefox",
+  "user": {
+    "login": "skleeschulte",
+    "id": 3659947,
+    "node_id": "MDQ6VXNlcjM2NTk5NDc=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3659947?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/skleeschulte",
+    "html_url": "https://github.com/skleeschulte",
+    "followers_url": "https://api.github.com/users/skleeschulte/followers",
+    "following_url": "https://api.github.com/users/skleeschulte/following{/other_user}",
+    "gists_url": "https://api.github.com/users/skleeschulte/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/skleeschulte/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/skleeschulte/subscriptions",
+    "organizations_url": "https://api.github.com/users/skleeschulte/orgs",
+    "repos_url": "https://api.github.com/users/skleeschulte/repos",
+    "events_url": "https://api.github.com/users/skleeschulte/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/skleeschulte/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2016-06-02T12:57:36Z",
+  "updated_at": "2018-07-15T02:17:49Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "I want to use a controlled `<select multiple={true} />` component in React. In addition to the value I also want to keep the focused state of the select in the state. To do this, I update the state with `setState` in the `onChange`, `onFocus` and `onBlur` event handlers. Unfortunately there is an issue in Firefox: Firefox will only update the value on a change event after the select has gained focus. This means that a user has to click twice on the select element to change its value when it does not have focus. I would expect the select to gain focus and change the value at the same click.\n\nI created a jsFiddle to demonstrate the prolem: [React select multiple issue in Firefox demonstration](https://jsfiddle.net/fugf1kw9/2/)\n\nI only see this problem in Firefox and with select multiple. In IE and Chrome it is working as expected, and in Firefox it is working as expected for other form elements (simple select, checkbox, radio, text input, textarea).\n\nMy environment:\n- Firefox 46.0.1 under Win7 x64\n- React 15.1.0\n",
+  "closed_by": null
+}

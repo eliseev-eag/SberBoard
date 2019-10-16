@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16495",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16495/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16495/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16495/events",
+  "html_url": "https://github.com/facebook/react/issues/16495",
+  "id": 482557409,
+  "node_id": "MDU6SXNzdWU0ODI1NTc0MDk=",
+  "number": 16495,
+  "title": "DevTools: Components tree is sometimes unexpectedly empty after navigation",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-08-19T22:27:13Z",
+  "updated_at": "2019-08-19T22:27:13Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "1. Open FB page\r\n2. Open Components tab\r\n3. Change address bar to `https://reactjs.org` and press Enter\r\n\r\nExpected: Components tab gets populated.\r\nActual:\r\n\r\n<img width=\"783\" alt=\"Screen Shot 2019-04-23 at 7 27 37 PM\" src=\"https://user-images.githubusercontent.com/810438/56606380-00247a80-65fe-11e9-988c-2ad3e69eb579.png\">\r\n\r\n~~If I **inspect background page**, I see this:~~ (fixed by #229)\r\n\r\n<img width=\"652\" alt=\"Screen Shot 2019-04-23 at 7 27 12 PM\" src=\"https://user-images.githubusercontent.com/810438/56606408-0b77a600-65fe-11e9-9f65-5502401b7e4a.png\">\r\n\r\n---\r\nOriginally reported by @gaearon via https://github.com/bvaughn/react-devtools-experimental/issues/217",
+  "closed_by": null
+}

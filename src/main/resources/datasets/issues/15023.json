@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15023",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15023/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15023/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15023/events",
+  "html_url": "https://github.com/facebook/react/pull/15023",
+  "id": 417497291,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjU4NDgxODM1",
+  "number": 15023,
+  "title": "Fix SSR missing data-reactroot attribute inside invisible React elements",
+  "user": {
+    "login": "overlookmotel",
+    "id": 557937,
+    "node_id": "MDQ6VXNlcjU1NzkzNw==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/557937?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/overlookmotel",
+    "html_url": "https://github.com/overlookmotel",
+    "followers_url": "https://api.github.com/users/overlookmotel/followers",
+    "following_url": "https://api.github.com/users/overlookmotel/following{/other_user}",
+    "gists_url": "https://api.github.com/users/overlookmotel/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/overlookmotel/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/overlookmotel/subscriptions",
+    "organizations_url": "https://api.github.com/users/overlookmotel/orgs",
+    "repos_url": "https://api.github.com/users/overlookmotel/repos",
+    "events_url": "https://api.github.com/users/overlookmotel/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/overlookmotel/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2019-03-05T20:55:40Z",
+  "updated_at": "2019-07-03T10:03:02Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15023",
+    "html_url": "https://github.com/facebook/react/pull/15023",
+    "diff_url": "https://github.com/facebook/react/pull/15023.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15023.patch"
+  },
+  "body": "PR for #15012.\r\n\r\n```js\r\nconst React = require('react'),\r\n  {renderToString} = require('react-dom/server');\r\n\r\nconst Context = React.createContext();\r\n\r\nconst html = renderToString(\r\n  <Context.Provider>\r\n    <div>Hello!</div>\r\n  </Context.Provider>\r\n);\r\n```\r\n\r\nBefore this PR, outputs:\r\n\r\n```\r\n'<div>Hello!</div>'\r\n```\r\n\r\nwith this PR:\r\n\r\n```\r\n'<div data-reactroot=\"\">Hello!</div>'\r\n```\r\n\r\nImplementation is through addition of a `.domRootFrame` property on `ReactDOMServerRenderer` instance.\r\n\r\n* `domRootFrame` is `null` if no DOM element in stack above currently rendering element.\r\n* When a entering a root DOM element, `domRootFrame` is set to the stack frame for that DOM element.\r\n* When exiting root DOM element, `domRootFrame` is set back to `null` (the root element is identified by checking if the frame being popped from the stack is equal to `domRootFrame`)\r\n\r\nI am not clear what desired behavior is when there are multiple DOM roots e.g.:\r\n\r\n```\r\n<React.Fragment>\r\n  <div>One</div>\r\n  <div>Two</div>\r\n</React.Fragment>\r\n```\r\n\r\nI guess both `<div>`s should get `data-reactroot=\"\"` markup, but not sure what the result on client side would be!\r\n\r\nAny changes you want made, please shout.",
+  "closed_by": null
+}

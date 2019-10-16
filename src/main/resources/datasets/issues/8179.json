@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8179",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8179/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8179/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8179/events",
+  "html_url": "https://github.com/facebook/react/pull/8179",
+  "id": 186751937,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTE5MzU2NDU=",
+  "number": 8179,
+  "title": "Update Flow version to v0.34.0",
+  "user": {
+    "login": "koba04",
+    "id": 250407,
+    "node_id": "MDQ6VXNlcjI1MDQwNw==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/250407?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/koba04",
+    "html_url": "https://github.com/koba04",
+    "followers_url": "https://api.github.com/users/koba04/followers",
+    "following_url": "https://api.github.com/users/koba04/following{/other_user}",
+    "gists_url": "https://api.github.com/users/koba04/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/koba04/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/koba04/subscriptions",
+    "organizations_url": "https://api.github.com/users/koba04/orgs",
+    "repos_url": "https://api.github.com/users/koba04/repos",
+    "events_url": "https://api.github.com/users/koba04/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/koba04/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2016-11-02T09:37:59Z",
+  "updated_at": "2016-11-11T02:14:40Z",
+  "closed_at": "2016-11-11T02:14:40Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8179",
+    "html_url": "https://github.com/facebook/react/pull/8179",
+    "diff_url": "https://github.com/facebook/react/pull/8179.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8179.patch"
+  },
+  "body": "This PR is to update Flowtype version to `v0.34.0` and fix some errors.\r\n\r\nIn Flowtype `v0.34.0`, dictionary types are treated as `invariant`.\r\n\r\n* https://github.com/facebook/flow/releases/tag/v0.34.0\r\n\r\nIn the following case, it has to explicit covariance with `+`.\r\n\r\n* ReactNativeAttributePayload.js\r\n\r\n```js\r\ntype AttributeConfiguration =\r\n  { [key: string]: (\r\n    CustomAttributeConfiguration | AttributeConfiguration /*| boolean*/\r\n  ) };\r\n```\r\n\r\nBut I avoid the error by using `$FlowFixMe` comment because it's needed some works like this.\r\n\r\n1. The covariant syntax(`+`) causes a parse error in ESLint.\r\n2. To fix it, we have to update `babylon` for parse covariant syntax with `+`.\r\n3. `2.` causes other ESLint errors, which are `no-undef` for type parameters.\r\n4. To fix them, We have to use `eslint-plugin-flowtype`.\r\n5. To install `eslint-plugin-flowtype`, We have to update ESLint to `>=2.0.0` because of `peerDependencies`.\r\n7. `5.` causes other ESLint errors, We have to fix them. \r\n\r\nCan I work on this?\r\nIf so, I'll work on this as other PRs. ",
+  "closed_by": {
+    "login": "koba04",
+    "id": 250407,
+    "node_id": "MDQ6VXNlcjI1MDQwNw==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/250407?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/koba04",
+    "html_url": "https://github.com/koba04",
+    "followers_url": "https://api.github.com/users/koba04/followers",
+    "following_url": "https://api.github.com/users/koba04/following{/other_user}",
+    "gists_url": "https://api.github.com/users/koba04/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/koba04/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/koba04/subscriptions",
+    "organizations_url": "https://api.github.com/users/koba04/orgs",
+    "repos_url": "https://api.github.com/users/koba04/repos",
+    "events_url": "https://api.github.com/users/koba04/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/koba04/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

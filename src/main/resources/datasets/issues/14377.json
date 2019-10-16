@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14377",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14377/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14377/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14377/events",
+  "html_url": "https://github.com/facebook/react/issues/14377",
+  "id": 386623497,
+  "node_id": "MDU6SXNzdWUzODY2MjM0OTc=",
+  "number": 14377,
+  "title": "[Scheduler] Add support for delayed scheduling of callbacks.",
+  "user": {
+    "login": "bordoley",
+    "id": 2886153,
+    "node_id": "MDQ6VXNlcjI4ODYxNTM=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/2886153?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bordoley",
+    "html_url": "https://github.com/bordoley",
+    "followers_url": "https://api.github.com/users/bordoley/followers",
+    "following_url": "https://api.github.com/users/bordoley/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bordoley/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bordoley/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bordoley/subscriptions",
+    "organizations_url": "https://api.github.com/users/bordoley/orgs",
+    "repos_url": "https://api.github.com/users/bordoley/repos",
+    "events_url": "https://api.github.com/users/bordoley/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bordoley/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 1155972012,
+      "node_id": "MDU6TGFiZWwxMTU1OTcyMDEy",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Scheduler",
+      "name": "Component: Scheduler",
+      "color": "9de8f9",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2018-12-03T01:04:57Z",
+  "updated_at": "2018-12-10T01:06:51Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "Has the React team considered adding the ability to specify a time delay when scheduling callbacks on Scheduler. This would be useful to enable using Scheduler as a general scheduling solution in a JS environment, removing the need to use and manage setTimeouts/setInterval calls. ",
+  "closed_by": null
+}

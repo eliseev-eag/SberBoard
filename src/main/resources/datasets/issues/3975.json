@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3975",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3975/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3975/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3975/events",
+  "html_url": "https://github.com/facebook/react/pull/3975",
+  "id": 82159425,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzY0NTkyNDU=",
+  "number": 3975,
+  "title": "Update Korean transltaion to 58fb322",
+  "user": {
+    "login": "marocchino",
+    "id": 128431,
+    "node_id": "MDQ6VXNlcjEyODQzMQ==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/128431?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/marocchino",
+    "html_url": "https://github.com/marocchino",
+    "followers_url": "https://api.github.com/users/marocchino/followers",
+    "following_url": "https://api.github.com/users/marocchino/following{/other_user}",
+    "gists_url": "https://api.github.com/users/marocchino/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/marocchino/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/marocchino/subscriptions",
+    "organizations_url": "https://api.github.com/users/marocchino/orgs",
+    "repos_url": "https://api.github.com/users/marocchino/repos",
+    "events_url": "https://api.github.com/users/marocchino/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/marocchino/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-05-28T22:53:26Z",
+  "updated_at": "2015-05-29T21:27:24Z",
+  "closed_at": "2015-05-29T21:25:35Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3975",
+    "html_url": "https://github.com/facebook/react/pull/3975",
+    "diff_url": "https://github.com/facebook/react/pull/3975.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3975.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

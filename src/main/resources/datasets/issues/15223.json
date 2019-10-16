@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15223",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15223/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15223/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15223/events",
+  "html_url": "https://github.com/facebook/react/issues/15223",
+  "id": 425773306,
+  "node_id": "MDU6SXNzdWU0MjU3NzMzMDY=",
+  "number": 15223,
+  "title": "In some cases, maybe we should lie to React about deps of useEffect",
+  "user": {
+    "login": "aimergenge",
+    "id": 13799160,
+    "node_id": "MDQ6VXNlcjEzNzk5MTYw",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/13799160?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aimergenge",
+    "html_url": "https://github.com/aimergenge",
+    "followers_url": "https://api.github.com/users/aimergenge/followers",
+    "following_url": "https://api.github.com/users/aimergenge/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aimergenge/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aimergenge/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aimergenge/subscriptions",
+    "organizations_url": "https://api.github.com/users/aimergenge/orgs",
+    "repos_url": "https://api.github.com/users/aimergenge/repos",
+    "events_url": "https://api.github.com/users/aimergenge/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aimergenge/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 1249821345,
+      "node_id": "MDU6TGFiZWwxMjQ5ODIxMzQ1",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20ESLint%20Rules",
+      "name": "Component: ESLint Rules",
+      "color": "f7afdb",
+      "default": false
+    },
+    {
+      "id": 1109410193,
+      "node_id": "MDU6TGFiZWwxMTA5NDEwMTkz",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Hooks",
+      "name": "Component: Hooks",
+      "color": "c2f27b",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2019-03-27T05:39:24Z",
+  "updated_at": "2019-04-12T22:35:24Z",
+  "closed_at": "2019-04-12T22:35:24Z",
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nfeature\r\n\r\n\r\n**What is the current behavior?**\r\nWe must specify everything used in `useEffect` into the deps array.\r\n\r\n\r\n**To see the special case:**\r\nhttps://codesandbox.io/s/l29rj9n86m\r\n\r\n\r\n**What is the expected behavior?**\r\nI don't know, maybe find a way to avoid lying about the deps, or just make the rule looser(better not). The key is that I want to \"remember\" the state `data` and `newProps.number - data` *only* whenever the prop `number` change.\r\n\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nReact: 16.8.3\r\nBrower: chrome\r\nNo\r\n",
+  "closed_by": {
+    "login": "threepointone",
+    "id": 18808,
+    "node_id": "MDQ6VXNlcjE4ODA4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/18808?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/threepointone",
+    "html_url": "https://github.com/threepointone",
+    "followers_url": "https://api.github.com/users/threepointone/followers",
+    "following_url": "https://api.github.com/users/threepointone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/threepointone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/threepointone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/threepointone/subscriptions",
+    "organizations_url": "https://api.github.com/users/threepointone/orgs",
+    "repos_url": "https://api.github.com/users/threepointone/repos",
+    "events_url": "https://api.github.com/users/threepointone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/threepointone/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

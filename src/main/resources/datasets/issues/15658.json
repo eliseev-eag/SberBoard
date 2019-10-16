@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15658",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15658/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15658/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15658/events",
+  "html_url": "https://github.com/facebook/react/pull/15658",
+  "id": 444541166,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjc5MTgwNTA4",
+  "number": 15658,
+  "title": "Track which fibers scheduled the current render work",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2019-05-15T16:47:08Z",
+  "updated_at": "2019-06-03T14:16:01Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15658",
+    "html_url": "https://github.com/facebook/react/pull/15658",
+    "diff_url": "https://github.com/facebook/react/pull/15658.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15658.patch"
+  },
+  "body": "This PR introduces the concept of tracking which Fiber(s) schedule work with React. Tracked Fibers are called \"updaters\" and are exposed to DevTools via a `memoizedUpdaters` property on the `ReactFiberRoot`. The implementation of this feature follows a vaguely similar approach as interaction tracing, but does not require reference counting since there is no subscriptions API.\r\n\r\nThis change is in support of a new DevTools Profiler feature (https://github.com/bvaughn/react-devtools-experimental/pull/269) that shows which Fiber(s) scheduled the selected commit.\r\n\r\nAll changes have been gated behind a new feature flag, `enableUpdaterTracking`, which is enabled for Profiling builds by default. We also only track updaters when DevTools has been detected, to avoid doing unnecessary work.",
+  "closed_by": null
+}

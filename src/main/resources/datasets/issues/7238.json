@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7238",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7238/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7238/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7238/events",
+  "html_url": "https://github.com/facebook/react/pull/7238",
+  "id": 164693038,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzY4NjEwNTM=",
+  "number": 7238,
+  "title": "Remove uneccesary colon",
+  "user": {
+    "login": "saoirse-zee",
+    "id": 12530451,
+    "node_id": "MDQ6VXNlcjEyNTMwNDUx",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/12530451?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/saoirse-zee",
+    "html_url": "https://github.com/saoirse-zee",
+    "followers_url": "https://api.github.com/users/saoirse-zee/followers",
+    "following_url": "https://api.github.com/users/saoirse-zee/following{/other_user}",
+    "gists_url": "https://api.github.com/users/saoirse-zee/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/saoirse-zee/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/saoirse-zee/subscriptions",
+    "organizations_url": "https://api.github.com/users/saoirse-zee/orgs",
+    "repos_url": "https://api.github.com/users/saoirse-zee/repos",
+    "events_url": "https://api.github.com/users/saoirse-zee/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/saoirse-zee/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-07-10T00:53:18Z",
+  "updated_at": "2016-07-13T18:11:10Z",
+  "closed_at": "2016-07-12T18:19:07Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7238",
+    "html_url": "https://github.com/facebook/react/pull/7238",
+    "diff_url": "https://github.com/facebook/react/pull/7238.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7238.patch"
+  },
+  "body": "_Before_ submitting a pull request, please make sure the following is done...\n1. Fork the repo and create your branch from `master`.\n2. If you've added code that should be tested, add tests!\n3. If you've changed APIs, update the documentation.\n4. Ensure the test suite passes (`grunt test`).\n5. Make sure your code lints (`grunt lint`) - we've done our best to make sure these rules match our internal linting guidelines.\n6. If you haven't already, complete the [CLA](https://code.facebook.com/cla).\n\nOnly use a colon after a statement that is a complete sentence, like [Grammer Girl says](http://www.quickanddirtytips.com/education/grammar/colons).\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

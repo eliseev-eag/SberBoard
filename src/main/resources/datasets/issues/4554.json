@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4554",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4554/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4554/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4554/events",
+  "html_url": "https://github.com/facebook/react/pull/4554",
+  "id": 98957207,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDE1NjQzNjM=",
+  "number": 4554,
+  "title": "Added documentation for <img> events",
+  "user": {
+    "login": "chernysh",
+    "id": 45762,
+    "node_id": "MDQ6VXNlcjQ1NzYy",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/45762?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/chernysh",
+    "html_url": "https://github.com/chernysh",
+    "followers_url": "https://api.github.com/users/chernysh/followers",
+    "following_url": "https://api.github.com/users/chernysh/following{/other_user}",
+    "gists_url": "https://api.github.com/users/chernysh/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/chernysh/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/chernysh/subscriptions",
+    "organizations_url": "https://api.github.com/users/chernysh/orgs",
+    "repos_url": "https://api.github.com/users/chernysh/repos",
+    "events_url": "https://api.github.com/users/chernysh/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/chernysh/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2015-08-04T12:32:30Z",
+  "updated_at": "2015-08-12T19:11:30Z",
+  "closed_at": "2015-08-07T18:07:24Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4554",
+    "html_url": "https://github.com/facebook/react/pull/4554",
+    "diff_url": "https://github.com/facebook/react/pull/4554.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4554.patch"
+  },
+  "body": "Added documentation for Img events regarding this #4527 message.\n",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12060",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12060/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12060/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12060/events",
+  "html_url": "https://github.com/facebook/react/pull/12060",
+  "id": 290162338,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTY0MTA5MzA2",
+  "number": 12060,
+  "title": "Warn if unsafe lifecycle methods are found in an async subtree",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2018-01-20T03:58:31Z",
+  "updated_at": "2018-01-23T22:01:59Z",
+  "closed_at": "2018-01-23T22:01:55Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12060",
+    "html_url": "https://github.com/facebook/react/pull/12060",
+    "diff_url": "https://github.com/facebook/react/pull/12060.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12060.patch"
+  },
+  "body": "Part two of #12046\r\n\r\nThis PR identifies class-components using unsafe lifecycles (`componenWillMount`, `componenWillReceiveProps`, `componenWillUpdate`) during the **begin phase**, and prints warnings about them (and with the location of the async subtree they belong to) during the **commit phase**. In the event of an error, pending warnings are discarded by `performFailedUnitOfWork`.\r\n\r\n## Example warning\r\n\r\nA warning for a particular async subtree will look like this:\r\n> Unsafe lifecycle methods were found within the following async tree:\r\n> &nbsp; &nbsp; &nbsp; in AsyncRoot (at AsyncRoot.js:260)\r\n> &nbsp; &nbsp; &nbsp; in div (at SyncRoot.js:259)\r\n> &nbsp; &nbsp; &nbsp; in SyncRoot (at SyncRoot.js:306)\r\n>\r\n> componentWillMount: Please update the following components to use componentDidMount instead: Foo, Bar\r\n>\r\n> componentWillReceiveProps: Please update the following components to use static getDerivedDataFromState instead: Foo\r\n>\r\n> componentWillUpdate: Please update the following components to use componentDidUpdate instead: Foo, Bar, Baz\r\n>\r\n> Learn more about this warning here:\r\n> https://fb.me/react-async-component-lifecycle-hooks\r\n\r\n## How are warnings grouped?\r\n\r\nI put a lot of consideration into how to group/coalesce the warnings, as well as how to dedup them. I landed on the following:\r\n* Grouped by async subtree, and then printed by lifecycle. I think this grouping makes as much sense as anything else, in terms of how you would approach tracking down and fixing the lifecycles. (Although I'm happy to tweak the wording and format if anyone has suggestions.)\r\n* Deduped per class component type (by way of an dev-only, expando attribute). This was a nice tradeoff between uniqueness concerns (mentioned below) and implementation complexity.\r\n\r\n## Alternatives considered\r\n\r\nI considered different deduping strategies but this felt the most pragmatic. Other considerations were:\r\n* Per async-subtree (aka per component stack). Major drawback: Components not rendered initially (due to conditional logic, blockers, etc) would never get reported.\r\n* Per unsafe component name: Major drawback: Component names might be vague (eg \"Text\") and might have collisions- which could lead to several rounds of fixings warnings about a component with a given name.\r\n* No deduping: Major drawback: Lots of irritating console noise.\r\n\r\n## Open Questions\r\n\r\n- [ ] Is the way I'm flushing or discarding `pendingWarningsMap` safe? Are there cases (like interruptions) that it won't handle well? (cc @acdlite)\r\n- [x] In the event of an error, warnings may be split into multiple messages since the code below the boundary is committed in a different pass. I think this is okay since it's not a common case.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

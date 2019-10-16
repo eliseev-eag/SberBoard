@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13250",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13250/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13250/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13250/events",
+  "html_url": "https://github.com/facebook/react/pull/13250",
+  "id": 343751053,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjAzMzA5MzA1",
+  "number": 13250,
+  "title": "[react-is] export individual modules to enable tree-shaking capabilities",
+  "user": {
+    "login": "pgarciacamou",
+    "id": 8354571,
+    "node_id": "MDQ6VXNlcjgzNTQ1NzE=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/8354571?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/pgarciacamou",
+    "html_url": "https://github.com/pgarciacamou",
+    "followers_url": "https://api.github.com/users/pgarciacamou/followers",
+    "following_url": "https://api.github.com/users/pgarciacamou/following{/other_user}",
+    "gists_url": "https://api.github.com/users/pgarciacamou/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/pgarciacamou/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/pgarciacamou/subscriptions",
+    "organizations_url": "https://api.github.com/users/pgarciacamou/orgs",
+    "repos_url": "https://api.github.com/users/pgarciacamou/repos",
+    "events_url": "https://api.github.com/users/pgarciacamou/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/pgarciacamou/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2018-07-23T18:48:04Z",
+  "updated_at": "2018-07-26T03:00:07Z",
+  "closed_at": "2018-07-26T02:30:38Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13250",
+    "html_url": "https://github.com/facebook/react/pull/13250",
+    "diff_url": "https://github.com/facebook/react/pull/13250.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13250.patch"
+  },
+  "body": "### What is the issue\r\n\r\nTree shaking not enabled with react-is.\r\n\r\n```jsx\r\nimport * as ReactIs from \"react-is\";\r\nReactIs.isValidElementType(<div />); // true\r\n```\r\n\r\n### Expected behavior\r\n\r\nAllow importing individual modules from the package.\r\n\r\n```js\r\nimport { isValidElementType } from \"react-is\";\r\nisElement(<div />); // true\r\n```\r\n\r\n### Checklist\r\n\r\n- [x] fix bug\r\n- [x] `yarn`\r\n- [x] `yarn test`\r\n- [x] `yarn test-prod`\r\n- [x] `yarn prettier`\r\n- [x] `yarn lint`\r\n- [x] `yarn flow dom && yarn flow test`\r\n- [x] complete the CLA",
+  "closed_by": {
+    "login": "pgarciacamou",
+    "id": 8354571,
+    "node_id": "MDQ6VXNlcjgzNTQ1NzE=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/8354571?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/pgarciacamou",
+    "html_url": "https://github.com/pgarciacamou",
+    "followers_url": "https://api.github.com/users/pgarciacamou/followers",
+    "following_url": "https://api.github.com/users/pgarciacamou/following{/other_user}",
+    "gists_url": "https://api.github.com/users/pgarciacamou/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/pgarciacamou/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/pgarciacamou/subscriptions",
+    "organizations_url": "https://api.github.com/users/pgarciacamou/orgs",
+    "repos_url": "https://api.github.com/users/pgarciacamou/repos",
+    "events_url": "https://api.github.com/users/pgarciacamou/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/pgarciacamou/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

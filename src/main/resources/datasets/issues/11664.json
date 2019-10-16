@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11664",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11664/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11664/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11664/events",
+  "html_url": "https://github.com/facebook/react/pull/11664",
+  "id": 276790929,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTU0NjYwMDk5",
+  "number": 11664,
+  "title": "Rewrite ReactTreeTraversal-test.js using public APIs",
+  "user": {
+    "login": "timjacobi",
+    "id": 2023165,
+    "node_id": "MDQ6VXNlcjIwMjMxNjU=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/2023165?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/timjacobi",
+    "html_url": "https://github.com/timjacobi",
+    "followers_url": "https://api.github.com/users/timjacobi/followers",
+    "following_url": "https://api.github.com/users/timjacobi/following{/other_user}",
+    "gists_url": "https://api.github.com/users/timjacobi/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/timjacobi/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/timjacobi/subscriptions",
+    "organizations_url": "https://api.github.com/users/timjacobi/orgs",
+    "repos_url": "https://api.github.com/users/timjacobi/repos",
+    "events_url": "https://api.github.com/users/timjacobi/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/timjacobi/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2017-11-26T01:26:12Z",
+  "updated_at": "2017-11-29T15:17:33Z",
+  "closed_at": "2017-11-29T14:04:18Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11664",
+    "html_url": "https://github.com/facebook/react/pull/11664",
+    "diff_url": "https://github.com/facebook/react/pull/11664.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11664.patch"
+  },
+  "body": "Hej!\r\n\r\nThis is a super interesting test to look at since the tests cover 3 different areas when you try to rewrite them using only public APIs. So far I have converted 1/3 of the tests to use public APIs only. The rest I'd like to discuss.\r\n\r\n### `traverseTwoPhase`\r\nThese were fairly straightforward to rewrite. I could even used the same `expectedCalls` arrays for the expectations on the mock.\r\n\r\nThe only thing that could be a bit nicer is the calls to `eventHandler`. I would like to factor out passing the arguments but #11663 prevents me from passing the event phase dynamically.\r\n\r\n### `traverseEnterLeave`\r\nIn order to test them in the same fashion as most other _public API_ tests I would have to dispatch `onmouseenter` and `onmouseleave` events against the DOM nodes and see which event handlers React calls. Unfortunately dispatching these event types doesn't have an effect and looking at `EnterLeaveEventPlugin.js` it seems like _enter_ and _leave_ events are implemented using `onmouseover` and `onmouseout`. \r\nThe tests seem to verify the _capturing_ and _bubbling_ behaviour which are inherently different between `onmouseenter` and `onmouseover` as well as `onmouseleave` and `onmouseout`. I would be really thank for some ideas on how we could solve this.\r\n\r\n### `getFirstCommonAncestor` aka `getLowestCommonAncestor`\r\nThis function is only used by the `ResponderEventPlugin` which is in turn only used by React Native. This doesn't mean we can't test it only with public APIs but we might struggle with that in our _JSDOM_ environment. Again would be great to discuss alternatives :)  ",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

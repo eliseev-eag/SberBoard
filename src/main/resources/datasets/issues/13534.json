@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13534",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13534/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13534/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13534/events",
+  "html_url": "https://github.com/facebook/react/pull/13534",
+  "id": 356239520,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjEyNTY4NDYy",
+  "number": 13534,
+  "title": "Make IE 11 not complain about non-crucial style attribute hydration mismatch",
+  "user": {
+    "login": "mgol",
+    "id": 1758366,
+    "node_id": "MDQ6VXNlcjE3NTgzNjY=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1758366?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mgol",
+    "html_url": "https://github.com/mgol",
+    "followers_url": "https://api.github.com/users/mgol/followers",
+    "following_url": "https://api.github.com/users/mgol/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mgol/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mgol/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mgol/subscriptions",
+    "organizations_url": "https://api.github.com/users/mgol/orgs",
+    "repos_url": "https://api.github.com/users/mgol/repos",
+    "events_url": "https://api.github.com/users/mgol/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mgol/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2018-09-01T23:20:29Z",
+  "updated_at": "2018-09-04T13:50:33Z",
+  "closed_at": "2018-09-04T13:26:52Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13534",
+    "html_url": "https://github.com/facebook/react/pull/13534",
+    "diff_url": "https://github.com/facebook/react/pull/13534.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13534.patch"
+  },
+  "body": "IE 11 parses & normalizes the style attribute as opposed to other browsers.\r\nThe normalization added in this commit normalizes spacing which resolves most\r\nirrelevant style prop warnings, though a warning will still happen if the style\r\nattribute contains invalid CSS declarations.\r\n\r\nFixes #11807",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

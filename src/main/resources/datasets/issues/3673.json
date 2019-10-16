@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3673",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3673/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3673/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3673/events",
+  "html_url": "https://github.com/facebook/react/pull/3673",
+  "id": 68698672,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzMzNjA1Nzk=",
+  "number": 3673,
+  "title": "\"Advanced performance\" typo fix",
+  "user": {
+    "login": "ultrafez",
+    "id": 1875176,
+    "node_id": "MDQ6VXNlcjE4NzUxNzY=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1875176?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ultrafez",
+    "html_url": "https://github.com/ultrafez",
+    "followers_url": "https://api.github.com/users/ultrafez/followers",
+    "following_url": "https://api.github.com/users/ultrafez/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ultrafez/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ultrafez/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ultrafez/subscriptions",
+    "organizations_url": "https://api.github.com/users/ultrafez/orgs",
+    "repos_url": "https://api.github.com/users/ultrafez/repos",
+    "events_url": "https://api.github.com/users/ultrafez/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ultrafez/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2015-04-15T14:35:14Z",
+  "updated_at": "2015-04-20T15:17:54Z",
+  "closed_at": "2015-04-15T23:42:25Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3673",
+    "html_url": "https://github.com/facebook/react/pull/3673",
+    "diff_url": "https://github.com/facebook/react/pull/3673.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3673.patch"
+  },
+  "body": "Example code used the key \"propsTypes\" - correct to \"propTypes\".\n\nAs this is my first PR on Facebook repos, I've completed a CLA.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

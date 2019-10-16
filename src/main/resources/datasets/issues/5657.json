@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5657",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5657/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5657/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5657/events",
+  "html_url": "https://github.com/facebook/react/pull/5657",
+  "id": 121998127,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTM1MzcyNDQ=",
+  "number": 5657,
+  "title": "Minor typo fixes",
+  "user": {
+    "login": "vasanthk",
+    "id": 3537278,
+    "node_id": "MDQ6VXNlcjM1MzcyNzg=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/3537278?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/vasanthk",
+    "html_url": "https://github.com/vasanthk",
+    "followers_url": "https://api.github.com/users/vasanthk/followers",
+    "following_url": "https://api.github.com/users/vasanthk/following{/other_user}",
+    "gists_url": "https://api.github.com/users/vasanthk/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/vasanthk/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/vasanthk/subscriptions",
+    "organizations_url": "https://api.github.com/users/vasanthk/orgs",
+    "repos_url": "https://api.github.com/users/vasanthk/repos",
+    "events_url": "https://api.github.com/users/vasanthk/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/vasanthk/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-12-14T08:45:12Z",
+  "updated_at": "2015-12-14T21:20:28Z",
+  "closed_at": "2015-12-14T19:22:25Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5657",
+    "html_url": "https://github.com/facebook/react/pull/5657",
+    "diff_url": "https://github.com/facebook/react/pull/5657.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5657.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5195",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5195/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5195/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5195/events",
+  "html_url": "https://github.com/facebook/react/pull/5195",
+  "id": 111860913,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDc5Mjg3OTk=",
+  "number": 5195,
+  "title": "Specify focus events work on all elements in the React DOM",
+  "user": {
+    "login": "trickford",
+    "id": 1444023,
+    "node_id": "MDQ6VXNlcjE0NDQwMjM=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1444023?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trickford",
+    "html_url": "https://github.com/trickford",
+    "followers_url": "https://api.github.com/users/trickford/followers",
+    "following_url": "https://api.github.com/users/trickford/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trickford/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trickford/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trickford/subscriptions",
+    "organizations_url": "https://api.github.com/users/trickford/orgs",
+    "repos_url": "https://api.github.com/users/trickford/repos",
+    "events_url": "https://api.github.com/users/trickford/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trickford/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2015-10-16T16:02:32Z",
+  "updated_at": "2015-10-16T18:50:33Z",
+  "closed_at": "2015-10-16T18:50:22Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5195",
+    "html_url": "https://github.com/facebook/react/pull/5195",
+    "diff_url": "https://github.com/facebook/react/pull/5195.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5195.patch"
+  },
+  "body": "Generally, focus/blur events only apply to focusable elements found in forms. In React, you can listen to focus/blur events on any element.\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

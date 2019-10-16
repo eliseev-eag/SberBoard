@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/1252",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/1252/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/1252/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/1252/events",
+  "html_url": "https://github.com/facebook/react/issues/1252",
+  "id": 29305014,
+  "node_id": "MDU6SXNzdWUyOTMwNTAxNA==",
+  "number": 1252,
+  "title": "noscript contents cause invariant violation",
+  "user": {
+    "login": "matthewwithanm",
+    "id": 126263,
+    "node_id": "MDQ6VXNlcjEyNjI2Mw==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/126263?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/matthewwithanm",
+    "html_url": "https://github.com/matthewwithanm",
+    "followers_url": "https://api.github.com/users/matthewwithanm/followers",
+    "following_url": "https://api.github.com/users/matthewwithanm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/matthewwithanm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/matthewwithanm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/matthewwithanm/subscriptions",
+    "organizations_url": "https://api.github.com/users/matthewwithanm/orgs",
+    "repos_url": "https://api.github.com/users/matthewwithanm/repos",
+    "events_url": "https://api.github.com/users/matthewwithanm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/matthewwithanm/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 18,
+  "created_at": "2014-03-12T21:33:49Z",
+  "updated_at": "2017-11-03T16:16:28Z",
+  "closed_at": "2017-11-03T16:16:28Z",
+  "author_association": "MEMBER",
+  "body": "When using server rendering, putting an `<img>` in a `<noscript>` seems to invariably cause an invariant violation (it can't find the image).\n\nI believe this is because, to the JS enabled browser, the noscript content looks like CDATA.\n\nThis can be worked around by using `dangerouslySetInnerHTML` to actually set the contents to an HTML string, however, you can't nest components with this approach.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

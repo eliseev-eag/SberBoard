@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15942",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15942/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15942/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15942/events",
+  "html_url": "https://github.com/facebook/react/issues/15942",
+  "id": 458917884,
+  "node_id": "MDU6SXNzdWU0NTg5MTc4ODQ=",
+  "number": 15942,
+  "title": "[Flare] focus state not updated when moving to another Focus target with node.focus()",
+  "user": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 1296748300,
+      "node_id": "MDU6TGFiZWwxMjk2NzQ4MzAw",
+      "url": "https://api.github.com/repos/facebook/react/labels/React%20Flare",
+      "name": "React Flare",
+      "color": "63f2ff",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2019-06-20T22:39:17Z",
+  "updated_at": "2019-06-24T21:33:17Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "body": "@trueadm working with `Focus` alongside `@reach/combobox` I encountered what looks like a bug related to programmatically calling `node.focus()` in an effect after a state update from `onFocusVisibleChange` (edit: and `onFocusChange`), where the other `Focus` target that was blurred due to the `focus()` call doesn't call register that it's been blurred.\r\n\r\nThat's a mouth-full, so here's a sample that repro's it for me:\r\n\r\n```jsx\r\n// Simple wrapper around <input> that styles the element on focus\r\nfunction Input() {\r\n  const [isFocused, setFocused] = React.useState(false);\r\n  const backgroundColor = isFocused ? 'red' : 'white';\r\n  const inputRef = React.useRef();\r\n  // This unconditionally steals focus after every update, which isn't very likely, but it's\r\n  // possible components like @reach/combobox will attempt to do this conditionally\r\n  React.useEffect(() => {\r\n    inputRef.current.focus();\r\n  })\r\n  return (\r\n    <Focus\r\n    onFocusVisibleChange={setFocused}>\r\n      <input ref={inputRef} style={{backgroundColor}} placeholder=\"Input\"/>\r\n    </Focus>\r\n  )\r\n}\r\n\r\n// Simple wrapper around <a> that styles the element on focus\r\nfunction Link() {\r\nconst [isFocused, setFocused] = React.useState(false);\r\n  const color = isFocused ? 'red' : 'black';\r\n  return (\r\n    <Focus onFocusVisibleChange={setFocused}>\r\n      <a href=\"#\" style={{color}}>Link!</a>\r\n    </Focus>\r\n  )\r\n}\r\n\r\nfunction Application() {\r\n  return (\r\n    <div>\r\n      <Input />\r\n      <Link />\r\n    </div>\r\n  )\r\n}\r\n```\r\n\r\n## How to Reproduce\r\n\r\nRunning this example with a build from `master` (deployed here http://react-events-focus-effect-bug.surge.sh/)\r\n\r\n1. Open the page and focus the `input` by tabbing to it if it's not already focused\r\n2. Attempt to focus the link by tabbing again\r\n\r\n## What Happens?\r\n\r\nThe link will register as focused (coloring it red) but that state gets stuck once the input is focused again.\r\n\r\n## What Should Happen?\r\n\r\nOnce the input gets focused again the `Focus` target in `Link` should call `onFocusVisibleChange` with `false` so the focus state gets reset.",
+  "closed_by": null
+}

@@ -1,0 +1,99 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11532",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11532/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11532/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11532/events",
+  "html_url": "https://github.com/facebook/react/issues/11532",
+  "id": 273221064,
+  "node_id": "MDU6SXNzdWUyNzMyMjEwNjQ=",
+  "number": 11532,
+  "title": "inline style with decimal numbers",
+  "user": {
+    "login": "cvlmtg",
+    "id": 6401008,
+    "node_id": "MDQ6VXNlcjY0MDEwMDg=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/6401008?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/cvlmtg",
+    "html_url": "https://github.com/cvlmtg",
+    "followers_url": "https://api.github.com/users/cvlmtg/followers",
+    "following_url": "https://api.github.com/users/cvlmtg/following{/other_user}",
+    "gists_url": "https://api.github.com/users/cvlmtg/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/cvlmtg/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/cvlmtg/subscriptions",
+    "organizations_url": "https://api.github.com/users/cvlmtg/orgs",
+    "repos_url": "https://api.github.com/users/cvlmtg/repos",
+    "events_url": "https://api.github.com/users/cvlmtg/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/cvlmtg/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 52079258,
+      "node_id": "MDU6TGFiZWw1MjA3OTI1OA==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Difficulty:%20starter",
+      "name": "Difficulty: starter",
+      "color": "94ce52",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    },
+    {
+      "id": 725156255,
+      "node_id": "MDU6TGFiZWw3MjUxNTYyNTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/good%20first%20issue%20(taken)",
+      "name": "good first issue (taken)",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 15,
+  "created_at": "2017-11-12T11:12:05Z",
+  "updated_at": "2018-01-08T13:22:19Z",
+  "closed_at": "2018-01-05T21:09:52Z",
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\nbug\r\n\r\n\r\n**What is the current behavior?**\r\n\r\nIf the style prop is passed a decimal number, react converts the dot in a comma, resulting in an invalid css value. I suspect this might be due to my locale being different from english, but the behavior should be the same irregardless of the user's locale (and the conversion is correct if I use `String(12.34)`)\r\n\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem**\r\n\r\nhttps://jsfiddle.net/ab4zx24r/3/\r\n\r\n<img width=\"150\" alt=\"schermata 2017-11-12 alle 12 12 46\" src=\"https://user-images.githubusercontent.com/6401008/32698272-e74979de-c7a2-11e7-8005-0e1b6c695916.png\">\r\n\r\n\r\n**What is the expected behavior?**\r\n\r\ndecimal numbers should be always converted with a dot\r\n\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nreact version: 16.x.0\r\nos: macos 10.13.1\r\nbrowsers:\r\n  * chrome 62\r\n  * safari 11.0.1\r\n\r\nfirefox 58.0 beta 1 is unaffected\r\n\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

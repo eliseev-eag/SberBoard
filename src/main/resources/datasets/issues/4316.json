@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4316",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4316/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4316/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4316/events",
+  "html_url": "https://github.com/facebook/react/issues/4316",
+  "id": 93817457,
+  "node_id": "MDU6SXNzdWU5MzgxNzQ1Nw==",
+  "number": 4316,
+  "title": "Example of using TestUtils.Simulate.change on a multiple select field.",
+  "user": {
+    "login": "gruntruk",
+    "id": 41250,
+    "node_id": "MDQ6VXNlcjQxMjUw",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/41250?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gruntruk",
+    "html_url": "https://github.com/gruntruk",
+    "followers_url": "https://api.github.com/users/gruntruk/followers",
+    "following_url": "https://api.github.com/users/gruntruk/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gruntruk/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gruntruk/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gruntruk/subscriptions",
+    "organizations_url": "https://api.github.com/users/gruntruk/orgs",
+    "repos_url": "https://api.github.com/users/gruntruk/repos",
+    "events_url": "https://api.github.com/users/gruntruk/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gruntruk/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 139734344,
+      "node_id": "MDU6TGFiZWwxMzk3MzQzNDQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Test%20Utils",
+      "name": "Component: Test Utils",
+      "color": "eb6420",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-07-08T15:21:58Z",
+  "updated_at": "2018-01-05T21:24:16Z",
+  "closed_at": "2018-01-05T21:24:16Z",
+  "author_association": "NONE",
+  "body": "Hi, I am trying to find a working example of driving a multiple select element using React's TestUtils. For a single select this works fine:\n\n``` javascript\nTestUtils.Simulate.change(el, { target: { value: 1 } });\n```\n\nFor a multiple select field, you get an error:\n\n```\nTypeError: Array.prototype.slice called on null or undefined\n```\n\nIf instead pass an array of arguments to `change` it doesn't seem to be triggering the change handler or being reflected in the component state:\n\n``` javascript\nTestUtils.Simulate.change(el, [{ target: { value: 1 } }]);  // doesn't seem to trigger any change in component state\n```\n\nApologies if I'm missing something obvious but if anyone knows of the proper way to do this any help would be appreciated.\n\nThanks\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

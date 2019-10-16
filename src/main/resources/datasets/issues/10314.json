@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10314",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10314/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10314/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10314/events",
+  "html_url": "https://github.com/facebook/react/pull/10314",
+  "id": 246124151,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTMyODExNDU1",
+  "number": 10314,
+  "title": "FB bundles wrap warning() calls in __DEV__",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 13,
+  "created_at": "2017-07-27T18:10:23Z",
+  "updated_at": "2017-08-02T21:14:30Z",
+  "closed_at": "2017-08-02T21:14:26Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10314",
+    "html_url": "https://github.com/facebook/react/pull/10314",
+    "diff_url": "https://github.com/facebook/react/pull/10314.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10314.patch"
+  },
+  "body": "Historically, UMD and NODE production bundles go through a couple of transforms during the Rollup build process:\r\n1. `__DEV__` conditionals are replaced with `process.env.NODE_ENV !== \"production\"` (which later get converted to values like `\"development\" !== \"production\"`).\r\n1. Calls to the `warning` helper method get wrapped in `__DEV__` conditions to ensure they are dead code eliminated from the production bundle.\r\n1. Inline error messages are replaced with smaller error codes.\r\n\r\nHowever we have not been applying these transforms to the FB production bundle which led to a couple of unexpected breaks after recent React syncs. (Specifically, some calls to the `warning` helper were left in the code even though the imports for `warning` were removed.)\r\n\r\n## Changes\r\nThis PR addresses the FB bundle problem by doing 2 things:\r\n\r\n### 1: Split Transforms\r\nAll three of the above steps were previously done by a single transform, `scripts/error-codes/dev-expression-with-codes.js`. This PR splits them into separate transforms:\r\n1. ~~`scripts/rollup/plugins/convert-dev-to-process-env.js`~~ This was actually an unnecessary transform since we later remove environment conditionals via `stripEnvVariables`; Since the `__DEV__` format results in slightly smaller/faster subsequent code, we're just using it now.\r\n1. `scripts/rollup/plugins/wrap-warning-with-env-check.js`\r\n1. `scripts/error-codes/dev-expression-with-codes.js`\r\n\r\n### 2: Transform FB Bundle\r\nTransforms are now run on bundles as follows:\r\n\r\n| Target | Convert `__DEV__` | Wrap `warning` | Errors to codes |\r\n| ------------- | ------------- | ------------- | ------------- |\r\n| FB |   | ✅  |  |\r\n| NODE |   | ✅  | ✅  |\r\n| UMD |   | ✅  | ✅  |\r\n\r\n## Impact on bundles\r\n\r\nThe change from `process.env` to `__DEV__` (and the subsequent impact on `stripEnvVariables`) resulted in some trivial bundle size savings. Beyond that, comparing the output of `yarn build` for master against this branch (by `diff`ing the `build` directory contents) shows only the following changes:\r\n\r\n### In `build/dist/*.development.js` and `packages/react-dom/cjs/*.development.js`\r\n\r\n#### Before\r\n```js\r\nif ('development' !== 'production' && ...) {\r\n```\r\n#### After\r\n```js\r\nif (true && ...) {\r\n```\r\n\r\n### In `facebook-www/ReactDOMUnstableNativeDependencies-prod.js`\r\n\r\nA single warning, \"_Touch identifier %s is greater than maximum supported %s which causes..._\", was dead code eliminated from `ResponderTouchHistoryStore` -> `getTouchIdentifier`. This could have caused a problem, so it's good that the updated transforms caught it.\r\n\r\n#### Before\r\n```js\r\nfunction getTouchIdentifier(_ref) {\r\n    var identifier = _ref.identifier;\r\n    return invariant(null != identifier, \"Touch object is missing identifier.\"), warning$3(identifier <= MAX_TOUCH_BANK, \"Touch identifier %s is greater than maximum supported %s which causes \" + \"performance issues backfilling array locations for all of the indices.\", identifier, MAX_TOUCH_BANK), \r\n    identifier;\r\n}\r\n```\r\n#### After\r\n```js\r\nfunction getTouchIdentifier(_ref) {\r\n    var identifier = _ref.identifier;\r\n    return invariant(null != identifier, \"Touch object is missing identifier.\"), identifier;\r\n}\r\n```\r\n\r\n## Next steps\r\n\r\nI'd like to log a warning when a `warning()` call is wrapped in a `__DEV__` check since this may indicate other logical errors. I'm not sure yet how to do this though.\r\n\r\nIt may also be worth removing the `invariant` wrapping logic from the `dev-expression-with-codes` transform (since it's not strictly related) and placing it in its own, smaller transform. I'd prefer to do this in a follow-up though to keep things more manageable.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

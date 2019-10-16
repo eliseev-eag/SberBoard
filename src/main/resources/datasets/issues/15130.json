@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15130",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15130/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15130/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15130/events",
+  "html_url": "https://github.com/facebook/react/pull/15130",
+  "id": 421892330,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjYxODI0NjE5",
+  "number": 15130,
+  "title": "test(eslint-plugin-react-hooks): add coverage for unused custom hook",
+  "user": {
+    "login": "RedTn",
+    "id": 3923164,
+    "node_id": "MDQ6VXNlcjM5MjMxNjQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3923164?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/RedTn",
+    "html_url": "https://github.com/RedTn",
+    "followers_url": "https://api.github.com/users/RedTn/followers",
+    "following_url": "https://api.github.com/users/RedTn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/RedTn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/RedTn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/RedTn/subscriptions",
+    "organizations_url": "https://api.github.com/users/RedTn/orgs",
+    "repos_url": "https://api.github.com/users/RedTn/repos",
+    "events_url": "https://api.github.com/users/RedTn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/RedTn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-03-17T07:38:01Z",
+  "updated_at": "2019-04-25T11:15:30Z",
+  "closed_at": "2019-04-25T11:15:30Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15130",
+    "html_url": "https://github.com/facebook/react/pull/15130",
+    "diff_url": "https://github.com/facebook/react/pull/15130.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15130.patch"
+  },
+  "body": "Adds coverage for https://coveralls.io/builds/22217376/source?filename=packages/eslint-plugin-react-hooks/src/ExhaustiveDeps.js#L1297",
+  "closed_by": {
+    "login": "cpojer",
+    "id": 13352,
+    "node_id": "MDQ6VXNlcjEzMzUy",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/13352?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/cpojer",
+    "html_url": "https://github.com/cpojer",
+    "followers_url": "https://api.github.com/users/cpojer/followers",
+    "following_url": "https://api.github.com/users/cpojer/following{/other_user}",
+    "gists_url": "https://api.github.com/users/cpojer/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/cpojer/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/cpojer/subscriptions",
+    "organizations_url": "https://api.github.com/users/cpojer/orgs",
+    "repos_url": "https://api.github.com/users/cpojer/repos",
+    "events_url": "https://api.github.com/users/cpojer/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/cpojer/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

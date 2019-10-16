@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6228",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6228/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6228/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6228/events",
+  "html_url": "https://github.com/facebook/react/pull/6228",
+  "id": 139625322,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjIyNTQ2MTc=",
+  "number": 6228,
+  "title": "set value property explicitly for \"option\" element even if value is empty",
+  "user": {
+    "login": "everdimension",
+    "id": 5347023,
+    "node_id": "MDQ6VXNlcjUzNDcwMjM=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/5347023?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/everdimension",
+    "html_url": "https://github.com/everdimension",
+    "followers_url": "https://api.github.com/users/everdimension/followers",
+    "following_url": "https://api.github.com/users/everdimension/following{/other_user}",
+    "gists_url": "https://api.github.com/users/everdimension/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/everdimension/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/everdimension/subscriptions",
+    "organizations_url": "https://api.github.com/users/everdimension/orgs",
+    "repos_url": "https://api.github.com/users/everdimension/repos",
+    "events_url": "https://api.github.com/users/everdimension/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/everdimension/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2016-03-09T16:23:56Z",
+  "updated_at": "2016-04-05T20:27:13Z",
+  "closed_at": "2016-04-05T20:27:13Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6228",
+    "html_url": "https://github.com/facebook/react/pull/6228",
+    "diff_url": "https://github.com/facebook/react/pull/6228.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6228.patch"
+  },
+  "body": "Fixes https://github.com/facebook/react/issues/6219\n- if `option` element has empty string as `value`, it should be used\n- if `option` has no `value` attribute, the contents of the `option` tag should be used\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

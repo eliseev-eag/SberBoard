@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/1210",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/1210/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/1210/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/1210/events",
+  "html_url": "https://github.com/facebook/react/pull/1210",
+  "id": 28654824,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTMxMzE5ODA=",
+  "number": 1210,
+  "title": "Remove starter kit, replace page",
+  "user": {
+    "login": "petehunt",
+    "id": 239742,
+    "node_id": "MDQ6VXNlcjIzOTc0Mg==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/239742?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/petehunt",
+    "html_url": "https://github.com/petehunt",
+    "followers_url": "https://api.github.com/users/petehunt/followers",
+    "following_url": "https://api.github.com/users/petehunt/following{/other_user}",
+    "gists_url": "https://api.github.com/users/petehunt/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/petehunt/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/petehunt/subscriptions",
+    "organizations_url": "https://api.github.com/users/petehunt/orgs",
+    "repos_url": "https://api.github.com/users/petehunt/repos",
+    "events_url": "https://api.github.com/users/petehunt/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/petehunt/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 71502270,
+      "node_id": "MDU6TGFiZWw3MTUwMjI3MA==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Build%20Infrastructure",
+      "name": "Component: Build Infrastructure",
+      "color": "f9d0c4",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2014-03-03T20:42:05Z",
+  "updated_at": "2014-06-19T16:50:11Z",
+  "closed_at": "2014-06-19T16:50:11Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/1210",
+    "html_url": "https://github.com/facebook/react/pull/1210",
+    "diff_url": "https://github.com/facebook/react/pull/1210.diff",
+    "patch_url": "https://github.com/facebook/react/pull/1210.patch"
+  },
+  "body": "I think much of the starter kit is either outdated or belongs in the tutorial. Here's my pass at it.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16969",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16969/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16969/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16969/events",
+  "html_url": "https://github.com/facebook/react/issues/16969",
+  "id": 500808552,
+  "node_id": "MDU6SXNzdWU1MDA4MDg1NTI=",
+  "number": 16969,
+  "title": "Tabs are there but not showing up components on React Site",
+  "user": {
+    "login": "Dan86de",
+    "id": 23312063,
+    "node_id": "MDQ6VXNlcjIzMzEyMDYz",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/23312063?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Dan86de",
+    "html_url": "https://github.com/Dan86de",
+    "followers_url": "https://api.github.com/users/Dan86de/followers",
+    "following_url": "https://api.github.com/users/Dan86de/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Dan86de/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Dan86de/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Dan86de/subscriptions",
+    "organizations_url": "https://api.github.com/users/Dan86de/orgs",
+    "repos_url": "https://api.github.com/users/Dan86de/repos",
+    "events_url": "https://api.github.com/users/Dan86de/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Dan86de/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 620368407,
+      "node_id": "MDU6TGFiZWw2MjAzNjg0MDc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Needs%20More%20Information",
+      "name": "Resolution: Needs More Information",
+      "color": "fffde7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-10-01T10:33:53Z",
+  "updated_at": "2019-10-01T20:01:25Z",
+  "closed_at": "2019-10-01T20:01:25Z",
+  "author_association": "NONE",
+  "body": "\r\n\r\nI've installed react dev tools and i see two tabs but tab component does not showing up components....\r\n\r\nReact Dev Tools Ver.\r\n4.1.3 (9/30/2019)\r\nChrome Browser Ver.\r\n77.0.3865.90",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

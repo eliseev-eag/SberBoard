@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2578",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2578/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2578/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2578/events",
+  "html_url": "https://github.com/facebook/react/pull/2578",
+  "id": 49620722,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjQ3OTk0NTM=",
+  "number": 2578,
+  "title": "Handle 6 or more arguments to StateSetter.",
+  "user": {
+    "login": "samccone",
+    "id": 883126,
+    "node_id": "MDQ6VXNlcjg4MzEyNg==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/883126?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/samccone",
+    "html_url": "https://github.com/samccone",
+    "followers_url": "https://api.github.com/users/samccone/followers",
+    "following_url": "https://api.github.com/users/samccone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/samccone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/samccone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/samccone/subscriptions",
+    "organizations_url": "https://api.github.com/users/samccone/orgs",
+    "repos_url": "https://api.github.com/users/samccone/repos",
+    "events_url": "https://api.github.com/users/samccone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/samccone/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2014-11-20T21:31:31Z",
+  "updated_at": "2015-09-22T21:40:48Z",
+  "closed_at": "2015-09-22T21:40:48Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/2578",
+    "html_url": "https://github.com/facebook/react/pull/2578",
+    "diff_url": "https://github.com/facebook/react/pull/2578.diff",
+    "patch_url": "https://github.com/facebook/react/pull/2578.patch"
+  },
+  "body": "In some cases I want to pass more than 6 arguments\nbut I can not. This change uses the optimized code path for most people\nhowever it falls back to apply to handle the rare use case of many\narguments, instead of just silently failing.\n",
+  "closed_by": {
+    "login": "samccone",
+    "id": 883126,
+    "node_id": "MDQ6VXNlcjg4MzEyNg==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/883126?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/samccone",
+    "html_url": "https://github.com/samccone",
+    "followers_url": "https://api.github.com/users/samccone/followers",
+    "following_url": "https://api.github.com/users/samccone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/samccone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/samccone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/samccone/subscriptions",
+    "organizations_url": "https://api.github.com/users/samccone/orgs",
+    "repos_url": "https://api.github.com/users/samccone/repos",
+    "events_url": "https://api.github.com/users/samccone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/samccone/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

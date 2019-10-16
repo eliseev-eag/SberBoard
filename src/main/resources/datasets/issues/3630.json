@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3630",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3630/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3630/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3630/events",
+  "html_url": "https://github.com/facebook/react/pull/3630",
+  "id": 67238542,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzI5MTA3NTE=",
+  "number": 3630,
+  "title": "Typo fix: 'input' replaced with 'checkbox'",
+  "user": {
+    "login": "sumnulu",
+    "id": 1442588,
+    "node_id": "MDQ6VXNlcjE0NDI1ODg=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1442588?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sumnulu",
+    "html_url": "https://github.com/sumnulu",
+    "followers_url": "https://api.github.com/users/sumnulu/followers",
+    "following_url": "https://api.github.com/users/sumnulu/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sumnulu/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sumnulu/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sumnulu/subscriptions",
+    "organizations_url": "https://api.github.com/users/sumnulu/orgs",
+    "repos_url": "https://api.github.com/users/sumnulu/repos",
+    "events_url": "https://api.github.com/users/sumnulu/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sumnulu/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-04-08T22:59:31Z",
+  "updated_at": "2015-04-08T23:16:09Z",
+  "closed_at": "2015-04-08T23:05:05Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3630",
+    "html_url": "https://github.com/facebook/react/pull/3630",
+    "diff_url": "https://github.com/facebook/react/pull/3630.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3630.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "sumnulu",
+    "id": 1442588,
+    "node_id": "MDQ6VXNlcjE0NDI1ODg=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1442588?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sumnulu",
+    "html_url": "https://github.com/sumnulu",
+    "followers_url": "https://api.github.com/users/sumnulu/followers",
+    "following_url": "https://api.github.com/users/sumnulu/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sumnulu/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sumnulu/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sumnulu/subscriptions",
+    "organizations_url": "https://api.github.com/users/sumnulu/orgs",
+    "repos_url": "https://api.github.com/users/sumnulu/repos",
+    "events_url": "https://api.github.com/users/sumnulu/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sumnulu/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

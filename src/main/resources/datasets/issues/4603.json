@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4603",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4603/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4603/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4603/events",
+  "html_url": "https://github.com/facebook/react/issues/4603",
+  "id": 100350890,
+  "node_id": "MDU6SXNzdWUxMDAzNTA4OTA=",
+  "number": 4603,
+  "title": "HTML table summary attribute",
+  "user": {
+    "login": "hekar",
+    "id": 16354,
+    "node_id": "MDQ6VXNlcjE2MzU0",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/16354?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/hekar",
+    "html_url": "https://github.com/hekar",
+    "followers_url": "https://api.github.com/users/hekar/followers",
+    "following_url": "https://api.github.com/users/hekar/following{/other_user}",
+    "gists_url": "https://api.github.com/users/hekar/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/hekar/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/hekar/subscriptions",
+    "organizations_url": "https://api.github.com/users/hekar/orgs",
+    "repos_url": "https://api.github.com/users/hekar/repos",
+    "events_url": "https://api.github.com/users/hekar/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/hekar/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 52079258,
+      "node_id": "MDU6TGFiZWw1MjA3OTI1OA==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Difficulty:%20starter",
+      "name": "Difficulty: starter",
+      "color": "94ce52",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2015-08-11T16:20:49Z",
+  "updated_at": "2015-08-14T04:29:17Z",
+  "closed_at": "2015-08-14T04:29:17Z",
+  "author_association": "CONTRIBUTOR",
+  "body": "I'm creating a data table `<table summary=\"...\">...</table>` and noticed that \"summary\" it is not listed in under React's [supported HTML attributes](https://facebook.github.io/react/docs/tags-and-attributes.html#html-attributes).\n\nAny reason for not including the \"summary\" attribute? Or workaround? [It's fairly useful for legacy screen readers](http://www.w3.org/TR/WCAG10-HTML-TECHS/#tables).\n\nhttps://jsfiddle.net/fyu01Lsw/1/\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

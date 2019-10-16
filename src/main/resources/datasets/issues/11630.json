@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11630",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11630/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11630/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11630/events",
+  "html_url": "https://github.com/facebook/react/pull/11630",
+  "id": 276161637,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTU0MjIzNDk5",
+  "number": 11630,
+  "title": "Change DEV-only invariants to be warnings",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-11-22T18:09:50Z",
+  "updated_at": "2017-11-22T19:24:45Z",
+  "closed_at": "2017-11-22T18:58:54Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11630",
+    "html_url": "https://github.com/facebook/react/pull/11630",
+    "diff_url": "https://github.com/facebook/react/pull/11630.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11630.patch"
+  },
+  "body": "Fixes https://github.com/facebook/react/issues/11618.\r\n\r\nIt's confusing to have two different code paths due to throwing in DEV but not in PROD. We try to avoid such cases.\r\n\r\nI found these two as I was working on https://github.com/facebook/react/pull/11616.\r\n\r\nThey were introduced accidentally in https://github.com/facebook/react/commit/4d8174480c6daa2ec49a932b54705d73ba40a398. In the past they would always run.\r\n\r\nI thought about moving them out of the `__DEV__` block but then figured there's no real need to run those extra checks in production. (We didn't for a few months anyway.) In particular it's nice to not run `isArray` checks for every single state object.\r\n\r\nSo we might as well turn them into warnings and keep them DEV-only.\r\n\r\n**Note: if we merge this, we’ll need to enable these warnings on next sync.**",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

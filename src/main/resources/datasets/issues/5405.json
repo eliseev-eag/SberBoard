@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5405",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5405/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5405/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5405/events",
+  "html_url": "https://github.com/facebook/react/pull/5405",
+  "id": 115345725,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDk4NjIzODA=",
+  "number": 5405,
+  "title": "More consistent error message for findRenderedDOMComponentWithX",
+  "user": {
+    "login": "yangshun",
+    "id": 1315101,
+    "node_id": "MDQ6VXNlcjEzMTUxMDE=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1315101?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/yangshun",
+    "html_url": "https://github.com/yangshun",
+    "followers_url": "https://api.github.com/users/yangshun/followers",
+    "following_url": "https://api.github.com/users/yangshun/following{/other_user}",
+    "gists_url": "https://api.github.com/users/yangshun/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/yangshun/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/yangshun/subscriptions",
+    "organizations_url": "https://api.github.com/users/yangshun/orgs",
+    "repos_url": "https://api.github.com/users/yangshun/repos",
+    "events_url": "https://api.github.com/users/yangshun/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/yangshun/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2015-11-05T18:36:29Z",
+  "updated_at": "2015-11-05T20:03:29Z",
+  "closed_at": "2015-11-05T20:03:05Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5405",
+    "html_url": "https://github.com/facebook/react/pull/5405",
+    "diff_url": "https://github.com/facebook/react/pull/5405.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5405.patch"
+  },
+  "body": "With reference to #5401, I found that the error message for `findRenderedComponentWithType` was different from the other two `findRenderedComponentWithX`:\n\n```\n# findRenderedDOMComponentWithClass\nthrow new Error('Did not find exactly one match ' +\n  '(found: ' + all.length + ') for class:' + className\n);\n```\n\n```\n# findRenderedDOMComponentWithTag\nthrow new Error('Did not find exactly one match ' +\n  '(found ' + all.length + ') for tag:' + tagName\n);\n```\n\n```\n# findRenderedComponentWithType\nthrow new Error(\n  'Did not find exactly one match for componentType:' + componentType +\n  ' (found ' + all.length + ')'\n);\n```\n\nHence I modified the error message within `findRenderedComponentWithType`.\n\nFixes #5401 \n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

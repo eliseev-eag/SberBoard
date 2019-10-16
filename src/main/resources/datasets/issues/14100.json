@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14100",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14100/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14100/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14100/events",
+  "html_url": "https://github.com/facebook/react/issues/14100",
+  "id": 377446594,
+  "node_id": "MDU6SXNzdWUzNzc0NDY1OTQ=",
+  "number": 14100,
+  "title": "Simple React app (using hooks) starts using 100% of CPU",
+  "user": {
+    "login": "callmemagnus",
+    "id": 232478,
+    "node_id": "MDQ6VXNlcjIzMjQ3OA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/232478?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/callmemagnus",
+    "html_url": "https://github.com/callmemagnus",
+    "followers_url": "https://api.github.com/users/callmemagnus/followers",
+    "following_url": "https://api.github.com/users/callmemagnus/following{/other_user}",
+    "gists_url": "https://api.github.com/users/callmemagnus/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/callmemagnus/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/callmemagnus/subscriptions",
+    "organizations_url": "https://api.github.com/users/callmemagnus/orgs",
+    "repos_url": "https://api.github.com/users/callmemagnus/repos",
+    "events_url": "https://api.github.com/users/callmemagnus/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/callmemagnus/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 1109410193,
+      "node_id": "MDU6TGFiZWwxMTA5NDEwMTkz",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Hooks",
+      "name": "Component: Hooks",
+      "color": "c2f27b",
+      "default": false
+    },
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2018-11-05T15:20:40Z",
+  "updated_at": "2018-12-12T09:21:35Z",
+  "closed_at": "2018-11-05T17:35:49Z",
+  "author_association": "NONE",
+  "body": "As far as I can understand, this is a bug.\r\n \r\n**What is the current behavior?**\r\n\r\nI have a simple app created with the CLI. I replaced the `App.js` file by the following:\r\n\r\n```javascript\r\nimport React, { useEffect, useState } from \"react\";\r\nimport \"./App.css\";\r\n\r\nconst App = () => {\r\n  const [value1, setValue1] = useState(\"default value1\");\r\n  const [value2, setValue2] = useState(\"default value2\");\r\n\r\n  useEffect(() => {\r\n    setTimeout(() => {\r\n      setValue1(\"done waiting for value1\");\r\n    }, 1000);\r\n  });\r\n\r\n  useEffect(() => {\r\n    setTimeout(() => {\r\n      setValue2(\"done waiting for value2\");\r\n    }, 2000);\r\n  });\r\n\r\n/* // this infinitely tries to load /test hence CPU usage too\r\n  useEffect(() => {\r\n    fetch(\"/test\").then(() => setValue1(\"done waiting for value1\"));\r\n  });\r\n\r\n  useEffect(() => {\r\n    fetch(\"/test\").then(() => setValue2(\"done waiting for value2\"));\r\n  });\r\n*/\r\n\r\n  return (\r\n    <div className=\"App\">\r\n      <p>value 1: {value1}</p>\r\n      <p>value 2: {value2}</p>\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default App;\r\n```\r\nUpgrade to `@next` both react and react-dom. Then run this with `npm start`.\r\n\r\nOn both my linux machines I see:\r\n![image](https://user-images.githubusercontent.com/232478/48005568-0be5b880-e114-11e8-8aa8-99185ff10942.png)\r\n\r\nFirefox starts eating 100% of CPU after a small amount of time. Chromium does the same.\r\n\r\n**What is the expected behavior?**\r\n\r\nI expect that my CPU usage stays low.\r\n\r\nObviously I could test the value of my `value1`and `value2` to not perform the operation if different than the default value but that might be complicated in some cases.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\n    \"react\": \"16.7.0-alpha.0\",\r\n    \"react-dom\": \"16.7.0-alpha.0\",\r\n\r\nfirefox 63.0\r\nChromium 70.0.3538.77\r\nUbuntu 18.04",
+  "closed_by": {
+    "login": "callmemagnus",
+    "id": 232478,
+    "node_id": "MDQ6VXNlcjIzMjQ3OA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/232478?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/callmemagnus",
+    "html_url": "https://github.com/callmemagnus",
+    "followers_url": "https://api.github.com/users/callmemagnus/followers",
+    "following_url": "https://api.github.com/users/callmemagnus/following{/other_user}",
+    "gists_url": "https://api.github.com/users/callmemagnus/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/callmemagnus/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/callmemagnus/subscriptions",
+    "organizations_url": "https://api.github.com/users/callmemagnus/orgs",
+    "repos_url": "https://api.github.com/users/callmemagnus/repos",
+    "events_url": "https://api.github.com/users/callmemagnus/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/callmemagnus/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11020",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11020/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11020/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11020/events",
+  "html_url": "https://github.com/facebook/react/pull/11020",
+  "id": 261966700,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ0MTAwMzg1",
+  "number": 11020,
+  "title": "Update web-component docs to current standard",
+  "user": {
+    "login": "ruphin",
+    "id": 66762,
+    "node_id": "MDQ6VXNlcjY2NzYy",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/66762?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ruphin",
+    "html_url": "https://github.com/ruphin",
+    "followers_url": "https://api.github.com/users/ruphin/followers",
+    "following_url": "https://api.github.com/users/ruphin/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ruphin/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ruphin/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ruphin/subscriptions",
+    "organizations_url": "https://api.github.com/users/ruphin/orgs",
+    "repos_url": "https://api.github.com/users/ruphin/repos",
+    "events_url": "https://api.github.com/users/ruphin/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ruphin/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2017-10-02T02:01:55Z",
+  "updated_at": "2017-10-02T19:21:25Z",
+  "closed_at": "2017-10-02T10:44:57Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11020",
+    "html_url": "https://github.com/facebook/react/pull/11020",
+    "diff_url": "https://github.com/facebook/react/pull/11020.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11020.patch"
+  },
+  "body": "The documentation example for Web Components uses deprecated Custom Element and Shadow DOM APIs [0]. This change updates the example to the v1 APIs, which are the current standard.\r\n\r\n[0] https://developers.google.com/web/fundamentals/web-components/customelements#historysupport",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

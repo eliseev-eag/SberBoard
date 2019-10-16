@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16487",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16487/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16487/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16487/events",
+  "html_url": "https://github.com/facebook/react/issues/16487",
+  "id": 482556578,
+  "node_id": "MDU6SXNzdWU0ODI1NTY1Nzg=",
+  "number": 16487,
+  "title": "DevTools: Crashes and warnings when quickly collapsing",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-08-19T22:24:17Z",
+  "updated_at": "2019-08-19T22:24:17Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "This is weird. Happens if I select a node deeply and then long-press \"left\" arrow.\r\n\r\n```\r\nInvalid index 154 specified; store contains 154 items.\r\n\r\nUncaught Invariant Violation: Expected to find a host parent. This error is likely caused by a bug in React. Please file an issue.\r\n    at ReactError (file:///Users/gaearon/p/react-devtools-experimental/shells/dev/build/devtools.js:8529:40)\r\n```\r\n\r\nIt starts with \"invalid index\" and then gives me different React invariants or warnings depending on how lucky I am.\r\n\r\n![Screen Recording 2019-04-25 at 05 58 PM](https://user-images.githubusercontent.com/810438/56754075-fcbafb80-6783-11e9-8fe6-84aa29d1c120.gif)\r\n\r\n---\r\nMore weird symptoms:\r\n\r\n<img width=\"889\" alt=\"Screen Shot 2019-04-25 at 6 38 22 PM\" src=\"https://user-images.githubusercontent.com/810438/56756281-5671f480-6789-11e9-8d0b-631a5217e63b.png\">\r\n\r\n---\r\n<img width=\"832\" alt=\"Screen Shot 2019-04-25 at 6 41 37 PM\" src=\"https://user-images.githubusercontent.com/810438/56756492-c7191100-6789-11e9-8814-cb849590ee01.png\">\r\n\r\n---\r\nThis \"fixes\" it:\r\n\r\n```diff\r\n       runWithPriority(UserBlockingPriority, () => dispatch(action));\r\n-      next(() => dispatch({ type: 'UPDATE_INSPECTED_ELEMENT_ID' }));\r\n+      runWithPriority(UserBlockingPriority, () => dispatch({ type: 'UPDATE_INSPECTED_ELEMENT_ID' }));\r\n     },\r\n```\r\n\r\nSo I suspect it's a bug with `Scheduler.next()`.\r\n\r\n---\r\nThis also looks funky. Note how somewhere in the middle right pane gets \"stuck\" showing the same cycle of values:\r\n\r\n![Screen Recording 2019-04-25 at 07 36 PM](https://user-images.githubusercontent.com/810438/56759733-8b824500-6791-11e9-95ba-d4d3630a4c5e.gif)\r\n\r\n---\r\nReact bug: https://github.com/facebook/react/issues/15512\r\n\r\n---\r\nOriginally reported by @gaearon via https://github.com/bvaughn/react-devtools-experimental/issues/228",
+  "closed_by": null
+}

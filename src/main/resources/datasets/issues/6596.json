@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6596",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6596/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6596/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6596/events",
+  "html_url": "https://github.com/facebook/react/pull/6596",
+  "id": 150575853,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Njc2MTIyNjM=",
+  "number": 6596,
+  "title": "Fix wrong param name in MountComponentIntoNode function signature",
+  "user": {
+    "login": "cluk3",
+    "id": 6255324,
+    "node_id": "MDQ6VXNlcjYyNTUzMjQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/6255324?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/cluk3",
+    "html_url": "https://github.com/cluk3",
+    "followers_url": "https://api.github.com/users/cluk3/followers",
+    "following_url": "https://api.github.com/users/cluk3/following{/other_user}",
+    "gists_url": "https://api.github.com/users/cluk3/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/cluk3/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/cluk3/subscriptions",
+    "organizations_url": "https://api.github.com/users/cluk3/orgs",
+    "repos_url": "https://api.github.com/users/cluk3/repos",
+    "events_url": "https://api.github.com/users/cluk3/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/cluk3/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-04-23T17:03:44Z",
+  "updated_at": "2016-04-23T17:35:46Z",
+  "closed_at": "2016-04-23T17:35:29Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6596",
+    "html_url": "https://github.com/facebook/react/pull/6596",
+    "diff_url": "https://github.com/facebook/react/pull/6596.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6596.patch"
+  },
+  "body": "The param name in function signature and in the function implementation are actually mismatching.\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

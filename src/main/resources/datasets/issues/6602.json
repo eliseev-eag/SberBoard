@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6602",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6602/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6602/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6602/events",
+  "html_url": "https://github.com/facebook/react/pull/6602",
+  "id": 150671814,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Njc2NDAxOTg=",
+  "number": 6602,
+  "title": "Update tutorial - add link for starting server",
+  "user": {
+    "login": "zky829",
+    "id": 5951798,
+    "node_id": "MDQ6VXNlcjU5NTE3OTg=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/5951798?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zky829",
+    "html_url": "https://github.com/zky829",
+    "followers_url": "https://api.github.com/users/zky829/followers",
+    "following_url": "https://api.github.com/users/zky829/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zky829/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zky829/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zky829/subscriptions",
+    "organizations_url": "https://api.github.com/users/zky829/orgs",
+    "repos_url": "https://api.github.com/users/zky829/repos",
+    "events_url": "https://api.github.com/users/zky829/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zky829/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-04-24T15:18:17Z",
+  "updated_at": "2016-05-09T22:38:37Z",
+  "closed_at": "2016-04-25T18:20:47Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6602",
+    "html_url": "https://github.com/facebook/react/pull/6602",
+    "diff_url": "https://github.com/facebook/react/pull/6602.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6602.patch"
+  },
+  "body": "To be extra helpful to beginners, and avoid questions like this: http://stackoverflow.com/questions/35758956/react-tutorial-how-do-i-start-the-server\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

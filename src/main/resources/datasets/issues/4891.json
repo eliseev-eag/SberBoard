@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4891",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4891/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4891/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4891/events",
+  "html_url": "https://github.com/facebook/react/pull/4891",
+  "id": 106856030,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDUyMTk5MjE=",
+  "number": 4891,
+  "title": "Fix documentation errata",
+  "user": {
+    "login": "igncp",
+    "id": 5245900,
+    "node_id": "MDQ6VXNlcjUyNDU5MDA=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/5245900?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/igncp",
+    "html_url": "https://github.com/igncp",
+    "followers_url": "https://api.github.com/users/igncp/followers",
+    "following_url": "https://api.github.com/users/igncp/following{/other_user}",
+    "gists_url": "https://api.github.com/users/igncp/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/igncp/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/igncp/subscriptions",
+    "organizations_url": "https://api.github.com/users/igncp/orgs",
+    "repos_url": "https://api.github.com/users/igncp/repos",
+    "events_url": "https://api.github.com/users/igncp/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/igncp/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2015-09-16T20:27:22Z",
+  "updated_at": "2015-09-16T20:48:13Z",
+  "closed_at": "2015-09-16T20:48:09Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4891",
+    "html_url": "https://github.com/facebook/react/pull/4891",
+    "diff_url": "https://github.com/facebook/react/pull/4891.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4891.patch"
+  },
+  "body": "Just spotted this, I hope it helps\n\nCheers\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

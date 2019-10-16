@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10836",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10836/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10836/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10836/events",
+  "html_url": "https://github.com/facebook/react/pull/10836",
+  "id": 260699958,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQzMTkxNTY0",
+  "number": 10836,
+  "title": "Doc change for prevContext removal in CDU",
+  "user": {
+    "login": "STRML",
+    "id": 1197375,
+    "node_id": "MDQ6VXNlcjExOTczNzU=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1197375?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/STRML",
+    "html_url": "https://github.com/STRML",
+    "followers_url": "https://api.github.com/users/STRML/followers",
+    "following_url": "https://api.github.com/users/STRML/following{/other_user}",
+    "gists_url": "https://api.github.com/users/STRML/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/STRML/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/STRML/subscriptions",
+    "organizations_url": "https://api.github.com/users/STRML/orgs",
+    "repos_url": "https://api.github.com/users/STRML/repos",
+    "events_url": "https://api.github.com/users/STRML/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/STRML/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-09-26T17:06:40Z",
+  "updated_at": "2017-09-26T17:29:36Z",
+  "closed_at": "2017-09-26T17:29:36Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10836",
+    "html_url": "https://github.com/facebook/react/pull/10836",
+    "diff_url": "https://github.com/facebook/react/pull/10836.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10836.patch"
+  },
+  "body": "Ref: https://github.com/facebook/react/issues/8631",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

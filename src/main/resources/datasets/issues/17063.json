@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/17063",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/17063/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/17063/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/17063/events",
+  "html_url": "https://github.com/facebook/react/pull/17063",
+  "id": 505438849,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzI2ODcyNTY0",
+  "number": 17063,
+  "title": "Pass prod error messages directly to constructor",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-10-10T18:31:19Z",
+  "updated_at": "2019-10-11T16:10:41Z",
+  "closed_at": "2019-10-11T16:10:41Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/17063",
+    "html_url": "https://github.com/facebook/react/pull/17063",
+    "diff_url": "https://github.com/facebook/react/pull/17063.diff",
+    "patch_url": "https://github.com/facebook/react/pull/17063.patch"
+  },
+  "body": "Updates the `invariant` transform to pass an error message string directly to the Error constructor, instead of mutating the message property.\r\n\r\nTurns this code:\r\n\r\n```js\r\ninvariant(condition, 'A %s message that contains %s', adj, noun);\r\n```\r\n\r\ninto this:\r\n\r\n```js\r\nif (!condition) {\r\n  throw Error(\r\n    __DEV__\r\n      ? `A ${adj} message that contains ${noun}`\r\n      : formatProdErrorMessage(ERR_CODE, adj, noun)\r\n  );\r\n}\r\n```",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

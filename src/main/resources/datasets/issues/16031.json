@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16031",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16031/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16031/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16031/events",
+  "html_url": "https://github.com/facebook/react/issues/16031",
+  "id": 463072491,
+  "node_id": "MDU6SXNzdWU0NjMwNzI0OTE=",
+  "number": 16031,
+  "title": "useEffect doesn't work as componentDidMount while using real time connections ",
+  "user": {
+    "login": "md-shahnawaz08",
+    "id": 41724979,
+    "node_id": "MDQ6VXNlcjQxNzI0OTc5",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/41724979?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/md-shahnawaz08",
+    "html_url": "https://github.com/md-shahnawaz08",
+    "followers_url": "https://api.github.com/users/md-shahnawaz08/followers",
+    "following_url": "https://api.github.com/users/md-shahnawaz08/following{/other_user}",
+    "gists_url": "https://api.github.com/users/md-shahnawaz08/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/md-shahnawaz08/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/md-shahnawaz08/subscriptions",
+    "organizations_url": "https://api.github.com/users/md-shahnawaz08/orgs",
+    "repos_url": "https://api.github.com/users/md-shahnawaz08/repos",
+    "events_url": "https://api.github.com/users/md-shahnawaz08/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/md-shahnawaz08/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2019-07-02T07:43:08Z",
+  "updated_at": "2019-08-17T02:05:47Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "```js\r\nuseEffect(() => {\r\n    connection.on('received', (user, message) => {\r\n      if (userName && userName !== user) {\r\n        audio.play()\r\n      }\r\n      const newMessages = [...replies, {userName: user, text: message}]\r\n      setReplies(newMessages)\r\n    })\r\n  }, [connection, replies, audio, userName])\r\n```\r\nI want ```connection.on``` at ```componentDidMount``` or ngOnInit(in Angular). \r\n\r\n- If I add dependencies in the dependency array the ```connection.on``` gets called that many times the dependency states get updated.\r\n- If I don't add the dependencies the states (userName, replies) take the initial values even if they get updated by that time. And I get warning for not adding the dependencies in dependency array.\r\n- If I remove the dependency array the ```connection.on``` gets called that many times any state gets updated.\r\n\r\nCan you please provide any solution for that?",
+  "closed_by": null
+}

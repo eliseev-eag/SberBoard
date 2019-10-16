@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13190",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13190/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13190/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13190/events",
+  "html_url": "https://github.com/facebook/react/pull/13190",
+  "id": 340099463,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjAwNTkyMjEz",
+  "number": 13190,
+  "title": "update devEngines to include nodejs 10.x",
+  "user": {
+    "login": "dongyuwei",
+    "id": 112451,
+    "node_id": "MDQ6VXNlcjExMjQ1MQ==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/112451?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dongyuwei",
+    "html_url": "https://github.com/dongyuwei",
+    "followers_url": "https://api.github.com/users/dongyuwei/followers",
+    "following_url": "https://api.github.com/users/dongyuwei/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dongyuwei/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dongyuwei/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dongyuwei/subscriptions",
+    "organizations_url": "https://api.github.com/users/dongyuwei/orgs",
+    "repos_url": "https://api.github.com/users/dongyuwei/repos",
+    "events_url": "https://api.github.com/users/dongyuwei/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dongyuwei/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-07-11T05:43:34Z",
+  "updated_at": "2018-07-11T10:46:47Z",
+  "closed_at": "2018-07-11T10:46:45Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13190",
+    "html_url": "https://github.com/facebook/react/pull/13190",
+    "diff_url": "https://github.com/facebook/react/pull/13190.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13190.patch"
+  },
+  "body": "Use nodejs **v10.6.0** to run `yarn install` under react directory will throw an exception(triggered by the `postinstall` hook): \r\n```\r\nyarn install\r\nyarn install v1.7.0\r\n[1/4] 🔍  Resolving packages...\r\nsuccess Already up-to-date.\r\n$ node node_modules/fbjs-scripts/node/check-dev-engines.js package.json && node ./scripts/flow/createFlowConfigs.js\r\nassert.js:269\r\n    throw err;\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: Current node version is not supported for development, expected \"10.6.0\" to satisfy \"8.x || 9.x\".\r\n    at Object.<anonymous> (/Users/yuwdong/code/js/react/node_modules/fbjs-scripts/node/check-dev-engines.js:39:3)\r\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\r\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\r\n    at Module.load (internal/modules/cjs/loader.js:599:32)\r\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\r\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\r\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\r\n    at startup (internal/bootstrap/node.js:236:19)\r\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:560:3)\r\nerror Command failed with exit code 1.\r\ninfo Visit https://yarnpkg.com/en/docs/cli/install for documentation about this command.\r\n```\r\n\r\nBecause in current `package.json`, the `devEngines` declaration is:\r\n```\r\n\"devEngines\": {\r\n    \"node\": \"8.x || 9.x\"\r\n  },\r\n```\r\n\r\nCan we think about also support nodejs 10.x as devEngine? Thanks.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

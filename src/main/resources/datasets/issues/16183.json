@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16183",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16183/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16183/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16183/events",
+  "html_url": "https://github.com/facebook/react/pull/16183",
+  "id": 471744449,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzAwMzM1MjU1",
+  "number": 16183,
+  "title": "[Fresh] Track unrecoverable errors",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-07-23T14:51:09Z",
+  "updated_at": "2019-07-23T16:44:27Z",
+  "closed_at": "2019-07-23T15:11:13Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16183",
+    "html_url": "https://github.com/facebook/react/pull/16183",
+    "diff_url": "https://github.com/facebook/react/pull/16183.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16183.patch"
+  },
+  "body": "We have a recovery mechanism in Fresh. If a mounted root fails during an update, we record the last attempted element (by reading it from the current memoized state), and retry rendering it after the next edit. This lets us quickly fix runtime errors that we introduce while editing.\r\n\r\nHowever, this recovery mechanism doesn't work for the initial mount of an app with no error boundaries. In that case, we don't currently have a way to read the last attempted rendered element — because this root has never been committed yet.\r\n\r\nCurrently, in that case we just end up with a blank screen. This is annoying because you get used to just saving a file after seeing a redbox. But in this case you'll keep seeing the blank screen.\r\n\r\nThis PR adds a way for the module environment integration to check whether we have an unrecoverable error like this. In that case, the module environment may decide to do a full reload instead.\r\n\r\nIn the future, we can get rid of this special case if there is some way to know the last attempted rendered element for any given root. For example, we could add a new `onTryRenderRoot(root, element)` DevTools hook that does that. This would also be useful so that we can stop relying on comparing `alternate.memoizedState.element` and `current.memoizedState.element` in DevTools to figure out what happened. This is out of scope of this PR though.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

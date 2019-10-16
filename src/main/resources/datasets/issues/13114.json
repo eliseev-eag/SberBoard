@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13114",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13114/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13114/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13114/events",
+  "html_url": "https://github.com/facebook/react/pull/13114",
+  "id": 336130755,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTk3NjU2NDI0",
+  "number": 13114,
+  "title": "Fix the \"checked\" attribute is not initially set on the input",
+  "user": {
+    "login": "dilidili",
+    "id": 5905726,
+    "node_id": "MDQ6VXNlcjU5MDU3MjY=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/5905726?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dilidili",
+    "html_url": "https://github.com/dilidili",
+    "followers_url": "https://api.github.com/users/dilidili/followers",
+    "following_url": "https://api.github.com/users/dilidili/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dilidili/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dilidili/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dilidili/subscriptions",
+    "organizations_url": "https://api.github.com/users/dilidili/orgs",
+    "repos_url": "https://api.github.com/users/dilidili/repos",
+    "events_url": "https://api.github.com/users/dilidili/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dilidili/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-06-27T08:39:31Z",
+  "updated_at": "2018-07-04T20:00:42Z",
+  "closed_at": "2018-07-04T20:00:42Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13114",
+    "html_url": "https://github.com/facebook/react/pull/13114",
+    "diff_url": "https://github.com/facebook/react/pull/13114.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13114.patch"
+  },
+  "body": "Fix issue #12765",
+  "closed_by": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

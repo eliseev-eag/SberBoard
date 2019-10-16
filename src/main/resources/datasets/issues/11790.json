@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11790",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11790/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11790/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11790/events",
+  "html_url": "https://github.com/facebook/react/pull/11790",
+  "id": 279981502,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTU2ODkxOTY3",
+  "number": 11790,
+  "title": "Add a test-only transform to catch infinite loops",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2017-12-07T02:47:23Z",
+  "updated_at": "2017-12-08T00:31:31Z",
+  "closed_at": "2017-12-07T20:53:13Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11790",
+    "html_url": "https://github.com/facebook/react/pull/11790",
+    "diff_url": "https://github.com/facebook/react/pull/11790.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11790.patch"
+  },
+  "body": "I took @amasad's code from https://repl.it/site/blog/infinite-loops and decided to try it out.\r\nIt's pretty neat.\r\n\r\nThis makes the tests throw when we're inside a loop that has more than M iterations <s>and ran for more than N milliseconds. Currently, both needs to happen although we can of course adjust the conditions</s> (just guarding iterations should be enough for us)\r\n\r\nIt's only enabled for tests.\r\n\r\nFailure looks like this:\r\n\r\n<img width=\"1088\" alt=\"screen shot 2017-12-07 at 02 41 10\" src=\"https://user-images.githubusercontent.com/810438/33696079-6f6f6bda-daf8-11e7-8809-b48423e121d5.png\">\r\n\r\nIn the past, Jest would just hang.\r\n\r\nOpen questions:\r\n\r\n- [x] Is this useful? Do we want this at all? Does showing the loop callsite help?\r\n- [x] We need to make sure this *always* fails the test even if the error ends up being caught.\r\n- [x] <s>If one test case fails with this we probably want to fail others immediately (if they're also stuck in a loop). Otherwise we have to wait for each individual one to fail even though they likely stress the same path. On the other hand only the first one is the actual problem. Need to think about how to present this. Maybe two different messages (\"Potential infinite loop\" vs \"The test failed because another test has a potential infinite loop. Search for it in the output.\" or something.) Or include the bad stack in all messages.</s> Not really. With our current iteration limits they fail pretty fast.\r\n- [x] How many iterations and/or time are we okay with? — Determined this by running tests. Set different limits for source files and test filess.\r\n- [x] License/attribution (I added @amasad to the authors at the top, pretty sure he won't mind it being MIT, but I'll make sure before merging).\r\n\r\nPosting this for @acdlite to play with since he's spent the most time with infinite loops and probably knows what's helpful and what isn't.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

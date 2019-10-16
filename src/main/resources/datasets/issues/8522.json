@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8522",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8522/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8522/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8522/events",
+  "html_url": "https://github.com/facebook/react/pull/8522",
+  "id": 194177960,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTcwMTI2OTU=",
+  "number": 8522,
+  "title": "Pass props down from ReactCSSTransitionGroupChild to child",
+  "user": {
+    "login": "khankuan",
+    "id": 1406170,
+    "node_id": "MDQ6VXNlcjE0MDYxNzA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1406170?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/khankuan",
+    "html_url": "https://github.com/khankuan",
+    "followers_url": "https://api.github.com/users/khankuan/followers",
+    "following_url": "https://api.github.com/users/khankuan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/khankuan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/khankuan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/khankuan/subscriptions",
+    "organizations_url": "https://api.github.com/users/khankuan/orgs",
+    "repos_url": "https://api.github.com/users/khankuan/repos",
+    "events_url": "https://api.github.com/users/khankuan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/khankuan/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-12-07T21:39:30Z",
+  "updated_at": "2017-04-21T16:01:14Z",
+  "closed_at": "2017-04-21T14:15:58Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8522",
+    "html_url": "https://github.com/facebook/react/pull/8522",
+    "diff_url": "https://github.com/facebook/react/pull/8522.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8522.patch"
+  },
+  "body": "Useful for component wrapper that clone children and modify props, new props should be passed down to child.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

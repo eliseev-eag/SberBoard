@@ -1,0 +1,97 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4577",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4577/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4577/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4577/events",
+  "html_url": "https://github.com/facebook/react/pull/4577",
+  "id": 99454469,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDE3OTYyMjQ=",
+  "number": 4577,
+  "title": "Add stop-opacity to unitless style properties",
+  "user": {
+    "login": "marjan-georgiev",
+    "id": 8687,
+    "node_id": "MDQ6VXNlcjg2ODc=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/8687?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/marjan-georgiev",
+    "html_url": "https://github.com/marjan-georgiev",
+    "followers_url": "https://api.github.com/users/marjan-georgiev/followers",
+    "following_url": "https://api.github.com/users/marjan-georgiev/following{/other_user}",
+    "gists_url": "https://api.github.com/users/marjan-georgiev/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/marjan-georgiev/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/marjan-georgiev/subscriptions",
+    "organizations_url": "https://api.github.com/users/marjan-georgiev/orgs",
+    "repos_url": "https://api.github.com/users/marjan-georgiev/repos",
+    "events_url": "https://api.github.com/users/marjan-georgiev/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/marjan-georgiev/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 126382236,
+      "node_id": "MDU6TGFiZWwxMjYzODIyMzY=",
+      "url": "https://api.github.com/repos/facebook/react/labels/SVG",
+      "name": "SVG",
+      "color": "f7c6c7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2015-08-06T14:49:47Z",
+  "updated_at": "2015-08-06T17:20:51Z",
+  "closed_at": "2015-08-06T17:19:27Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4577",
+    "html_url": "https://github.com/facebook/react/pull/4577",
+    "diff_url": "https://github.com/facebook/react/pull/4577.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4577.patch"
+  },
+  "body": "The stop-opacity is used to style the stop tag in the SVG linear-gradient tag, and it doesn't take any units.\n\nCurrently React appends 'px' whenever this property is used in JSX, making it invalid.\n\nThe following JSX\n\n``` javascript\nreturn (\n  <linearGradient id={props.name} x1={x1} y1={y1} x2={x2} y2={y2}>\n    <stop offset='0%'\n      style={{\n        stopColor: props.color,\n        stopOpacity: 0.3\n      }}\n    />\n  </linearGradient>\n);\n```\n\nresults in\n\n``` html\n<linearGradient x1=\"0%\" y1=\"100%\" x2=\"0%\" y2=\"0%\">\n  <stop offset=\"0%\" style=\"stop-color:#FDDE90; stop-opacity:0.3px;\"></stop>\n</linearGradient>\n```\n\n'px' should not be appended to the stop-opacity value.\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

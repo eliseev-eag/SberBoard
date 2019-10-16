@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6217",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6217/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6217/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6217/events",
+  "html_url": "https://github.com/facebook/react/issues/6217",
+  "id": 139359988,
+  "node_id": "MDU6SXNzdWUxMzkzNTk5ODg=",
+  "number": 6217,
+  "title": "onResponderGrant called before onResponderTerminate",
+  "user": {
+    "login": "aleclarson",
+    "id": 1925840,
+    "node_id": "MDQ6VXNlcjE5MjU4NDA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1925840?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aleclarson",
+    "html_url": "https://github.com/aleclarson",
+    "followers_url": "https://api.github.com/users/aleclarson/followers",
+    "following_url": "https://api.github.com/users/aleclarson/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aleclarson/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aleclarson/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aleclarson/subscriptions",
+    "organizations_url": "https://api.github.com/users/aleclarson/orgs",
+    "repos_url": "https://api.github.com/users/aleclarson/repos",
+    "events_url": "https://api.github.com/users/aleclarson/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aleclarson/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 18,
+  "created_at": "2016-03-08T18:46:34Z",
+  "updated_at": "2017-11-21T14:12:50Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "When a responder captures the active responder, it seems that `onResponderTerminate` is not called until after `onResponderGrant`. This seems like the wrong thing to do. Are there reasons for this behavior?\n",
+  "closed_by": {
+    "login": "aleclarson",
+    "id": 1925840,
+    "node_id": "MDQ6VXNlcjE5MjU4NDA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1925840?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aleclarson",
+    "html_url": "https://github.com/aleclarson",
+    "followers_url": "https://api.github.com/users/aleclarson/followers",
+    "following_url": "https://api.github.com/users/aleclarson/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aleclarson/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aleclarson/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aleclarson/subscriptions",
+    "organizations_url": "https://api.github.com/users/aleclarson/orgs",
+    "repos_url": "https://api.github.com/users/aleclarson/repos",
+    "events_url": "https://api.github.com/users/aleclarson/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aleclarson/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

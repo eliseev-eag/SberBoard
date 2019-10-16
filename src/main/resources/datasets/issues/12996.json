@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12996",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12996/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12996/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12996/events",
+  "html_url": "https://github.com/facebook/react/pull/12996",
+  "id": 330498373,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTkzNDk0MDc0",
+  "number": 12996,
+  "title": "Fix an SVG focusing crash in IE11",
+  "user": {
+    "login": "ThaddeusJiang",
+    "id": 17308201,
+    "node_id": "MDQ6VXNlcjE3MzA4MjAx",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/17308201?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ThaddeusJiang",
+    "html_url": "https://github.com/ThaddeusJiang",
+    "followers_url": "https://api.github.com/users/ThaddeusJiang/followers",
+    "following_url": "https://api.github.com/users/ThaddeusJiang/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ThaddeusJiang/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ThaddeusJiang/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ThaddeusJiang/subscriptions",
+    "organizations_url": "https://api.github.com/users/ThaddeusJiang/orgs",
+    "repos_url": "https://api.github.com/users/ThaddeusJiang/repos",
+    "events_url": "https://api.github.com/users/ThaddeusJiang/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ThaddeusJiang/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2018-06-08T02:31:19Z",
+  "updated_at": "2018-06-11T02:39:34Z",
+  "closed_at": "2018-06-11T02:39:31Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12996",
+    "html_url": "https://github.com/facebook/react/pull/12996",
+    "diff_url": "https://github.com/facebook/react/pull/12996.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12996.patch"
+  },
+  "body": "because #12763\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

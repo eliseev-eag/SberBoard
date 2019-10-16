@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5004",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5004/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5004/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5004/events",
+  "html_url": "https://github.com/facebook/react/pull/5004",
+  "id": 109016243,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDYzNjI1MjA=",
+  "number": 5004,
+  "title": "fix onChange with placeholder on IE",
+  "user": {
+    "login": "yiminghe",
+    "id": 200876,
+    "node_id": "MDQ6VXNlcjIwMDg3Ng==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/200876?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/yiminghe",
+    "html_url": "https://github.com/yiminghe",
+    "followers_url": "https://api.github.com/users/yiminghe/followers",
+    "following_url": "https://api.github.com/users/yiminghe/following{/other_user}",
+    "gists_url": "https://api.github.com/users/yiminghe/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/yiminghe/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/yiminghe/subscriptions",
+    "organizations_url": "https://api.github.com/users/yiminghe/orgs",
+    "repos_url": "https://api.github.com/users/yiminghe/repos",
+    "events_url": "https://api.github.com/users/yiminghe/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/yiminghe/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2015-09-30T05:21:47Z",
+  "updated_at": "2015-12-16T23:56:37Z",
+  "closed_at": "2015-12-16T23:56:37Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5004",
+    "html_url": "https://github.com/facebook/react/pull/5004",
+    "diff_url": "https://github.com/facebook/react/pull/5004.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5004.patch"
+  },
+  "body": "IE 10/11 will fire input event when input renders if input's placeholder contains Chinese words:\n\nplain: http://jsfiddle.net/yiminghe/fm3rckaz/2/\nreact: https://jsfiddle.net/yiminghe/69z2wepo/17145/\n\nand other situations: https://connect.microsoft.com/IE/feedback/details/885747/ie-11-fires-the-input-event-when-a-input-field-with-placeholder-is-focused\n",
+  "closed_by": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

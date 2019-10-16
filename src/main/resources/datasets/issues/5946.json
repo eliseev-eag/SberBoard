@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5946",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5946/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5946/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5946/events",
+  "html_url": "https://github.com/facebook/react/pull/5946",
+  "id": 129922595,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTc3MjM5MDk=",
+  "number": 5946,
+  "title": "Fixes highlight issue for code blocks with overflow (css)",
+  "user": {
+    "login": "tjfryan",
+    "id": 3195775,
+    "node_id": "MDQ6VXNlcjMxOTU3NzU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/3195775?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/tjfryan",
+    "html_url": "https://github.com/tjfryan",
+    "followers_url": "https://api.github.com/users/tjfryan/followers",
+    "following_url": "https://api.github.com/users/tjfryan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/tjfryan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/tjfryan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/tjfryan/subscriptions",
+    "organizations_url": "https://api.github.com/users/tjfryan/orgs",
+    "repos_url": "https://api.github.com/users/tjfryan/repos",
+    "events_url": "https://api.github.com/users/tjfryan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/tjfryan/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-01-30T01:05:35Z",
+  "updated_at": "2016-01-30T01:33:44Z",
+  "closed_at": "2016-01-30T01:33:44Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5946",
+    "html_url": "https://github.com/facebook/react/pull/5946",
+    "diff_url": "https://github.com/facebook/react/pull/5946.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5946.patch"
+  },
+  "body": "Fixes the small layout problem referred to in #5937 via css.\n![fix](https://cloud.githubusercontent.com/assets/3195775/12692371/dfa7daea-c6aa-11e5-8768-0bd7b5ae0fa6.gif)\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

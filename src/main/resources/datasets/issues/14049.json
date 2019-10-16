@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14049",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14049/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14049/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14049/events",
+  "html_url": "https://github.com/facebook/react/issues/14049",
+  "id": 376140752,
+  "node_id": "MDU6SXNzdWUzNzYxNDA3NTI=",
+  "number": 14049,
+  "title": "Using both getDerivedStateFromError and getDerivedStateFromProps can be a foot gun",
+  "user": {
+    "login": "blixt",
+    "id": 158591,
+    "node_id": "MDQ6VXNlcjE1ODU5MQ==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/158591?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/blixt",
+    "html_url": "https://github.com/blixt",
+    "followers_url": "https://api.github.com/users/blixt/followers",
+    "following_url": "https://api.github.com/users/blixt/following{/other_user}",
+    "gists_url": "https://api.github.com/users/blixt/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/blixt/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/blixt/subscriptions",
+    "organizations_url": "https://api.github.com/users/blixt/orgs",
+    "repos_url": "https://api.github.com/users/blixt/repos",
+    "events_url": "https://api.github.com/users/blixt/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/blixt/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2018-10-31T20:10:47Z",
+  "updated_at": "2018-11-04T11:31:08Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n\r\nFeature\r\n\r\n**What is the current behavior?**\r\n\r\nIf `componentDidCatch` and/or `getDerivedStateFromError` put the component in a state that avoids the cause of the error, and `getDerivedStateFromProps` reverts that state change, the error boundary will (obviously) fail to avert disaster.\r\n\r\nhttps://codesandbox.io/s/pj0lwxk15j\r\n\r\nIt sounds very obvious when simplified like this, but when my team updated to React 16.5.x (and 16.6.0), suddenly this started happening for us. So something changed internally, but it's hard to pinpoint what. Unfortunately I haven't been able to create a small repro for that specific case that works in 16.4.2 but not 16.5.0 – so I'm making this issue about avoiding the cause in the first place.\r\n\r\n**What is the expected behavior?**\r\n\r\nNaively, my thinking is that because errors are more exceptional, let the state from error handlers take precedence. Probably there's a reason why this can't happen so a warning of some kind when this can happen would be nice. Two ways to do this comes to mind:\r\n\r\n1. Cross-check that keys in state from `getDerivedStateFromProps` or `setState` in `componentDidCatch` don't collide with `getDerivedStateFromError` (sounds a bit far fetched?)\r\n2. Be more explicit in documentation for error boundaries about how `getDerivedStateFromProps` will run last so that a developer can consider this case\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\n16.5.0 and up (16.4.2 behaves a bit differently – see above), all platforms/browsers.",
+  "closed_by": null
+}

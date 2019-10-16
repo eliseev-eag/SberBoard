@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5666",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5666/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5666/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5666/events",
+  "html_url": "https://github.com/facebook/react/pull/5666",
+  "id": 122242619,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTM2ODYwMDY=",
+  "number": 5666,
+  "title": "Allow setting `defaultValue` as a property for #4618",
+  "user": {
+    "login": "hayesgm",
+    "id": 271024,
+    "node_id": "MDQ6VXNlcjI3MTAyNA==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/271024?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/hayesgm",
+    "html_url": "https://github.com/hayesgm",
+    "followers_url": "https://api.github.com/users/hayesgm/followers",
+    "following_url": "https://api.github.com/users/hayesgm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/hayesgm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/hayesgm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/hayesgm/subscriptions",
+    "organizations_url": "https://api.github.com/users/hayesgm/orgs",
+    "repos_url": "https://api.github.com/users/hayesgm/repos",
+    "events_url": "https://api.github.com/users/hayesgm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/hayesgm/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2015-12-15T10:39:08Z",
+  "updated_at": "2015-12-16T22:23:52Z",
+  "closed_at": "2015-12-16T22:23:52Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5666",
+    "html_url": "https://github.com/facebook/react/pull/5666",
+    "diff_url": "https://github.com/facebook/react/pull/5666.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5666.patch"
+  },
+  "body": "Fixes issue #4618, which allows updates to `defaultValue` on uncontrolled `<input>`s. Browsers will reflect changes to `defaultValue` _unless the user has changed the input value_. This patch also allows updates to `defaultValue` on a controlled element with `value == null`.\n\n@spicyj suggested using `setAttribute('value')`, but instead this patch sets the `defaultValue` property as a property. The goal is to keep behavior as consistent with current day as possible.\n\nIf we like this approach, we should consider bringing it to `<textarea>` and `<select>`, as well.\n\nHere's a simple test of the patch on JSBin: https://jsbin.com/yagasi/edit?js,output\n",
+  "closed_by": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13517",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13517/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13517/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13517/events",
+  "html_url": "https://github.com/facebook/react/pull/13517",
+  "id": 355607172,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjEyMDk2Mjg4",
+  "number": 13517,
+  "title": "[ReactFiberScheduler.js] Remove redundant if else branch",
+  "user": {
+    "login": "NE-SmallTown",
+    "id": 18418010,
+    "node_id": "MDQ6VXNlcjE4NDE4MDEw",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/18418010?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/NE-SmallTown",
+    "html_url": "https://github.com/NE-SmallTown",
+    "followers_url": "https://api.github.com/users/NE-SmallTown/followers",
+    "following_url": "https://api.github.com/users/NE-SmallTown/following{/other_user}",
+    "gists_url": "https://api.github.com/users/NE-SmallTown/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/NE-SmallTown/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/NE-SmallTown/subscriptions",
+    "organizations_url": "https://api.github.com/users/NE-SmallTown/orgs",
+    "repos_url": "https://api.github.com/users/NE-SmallTown/repos",
+    "events_url": "https://api.github.com/users/NE-SmallTown/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/NE-SmallTown/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2018-08-30T14:18:39Z",
+  "updated_at": "2018-10-31T15:40:54Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13517",
+    "html_url": "https://github.com/facebook/react/pull/13517",
+    "diff_url": "https://github.com/facebook/react/pull/13517.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13517.patch"
+  },
+  "body": "The codes of [this if statement](https://github.com/facebook/react/blob/4bcee56210bd3ab3f6440ff7313a255148e22107/packages/react-reconciler/src/ReactFiberScheduler.js#L1661-L1667) is same with the [else if statement](https://github.com/facebook/react/blob/4bcee56210bd3ab3f6440ff7313a255148e22107/packages/react-reconciler/src/ReactFiberScheduler.js#L1668-L1674), so we merge them as one branch",
+  "closed_by": null
+}

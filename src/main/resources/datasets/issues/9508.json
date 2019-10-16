@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9508",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9508/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9508/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9508/events",
+  "html_url": "https://github.com/facebook/react/pull/9508",
+  "id": 223817475,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTE3MjYyODc5",
+  "number": 9508,
+  "title": "Warn if a falsy `value` prop is provided without an `onChange`",
+  "user": {
+    "login": "Hypnosphi",
+    "id": 6651625,
+    "node_id": "MDQ6VXNlcjY2NTE2MjU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/6651625?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Hypnosphi",
+    "html_url": "https://github.com/Hypnosphi",
+    "followers_url": "https://api.github.com/users/Hypnosphi/followers",
+    "following_url": "https://api.github.com/users/Hypnosphi/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Hypnosphi/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Hypnosphi/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Hypnosphi/subscriptions",
+    "organizations_url": "https://api.github.com/users/Hypnosphi/orgs",
+    "repos_url": "https://api.github.com/users/Hypnosphi/repos",
+    "events_url": "https://api.github.com/users/Hypnosphi/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Hypnosphi/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-04-24T13:19:37Z",
+  "updated_at": "2018-08-02T01:34:51Z",
+  "closed_at": "2018-08-02T01:34:51Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9508",
+    "html_url": "https://github.com/facebook/react/pull/9508",
+    "diff_url": "https://github.com/facebook/react/pull/9508.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9508.patch"
+  },
+  "body": "React warns when a controlled form filed lacks `onChange` handler, because this makes the field effectively readonly. Unfortunately, when the `value` is falsy (`\"\"`, `0`, or `false`), no such warning is arised. This PR is indended to fix it.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

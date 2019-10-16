@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12846",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12846/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12846/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12846/events",
+  "html_url": "https://github.com/facebook/react/pull/12846",
+  "id": 324144587,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTg4ODMwMTI4",
+  "number": 12846,
+  "title": "Run Flow for each renderer separately",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2018-05-17T18:55:38Z",
+  "updated_at": "2018-09-07T03:43:56Z",
+  "closed_at": "2018-05-18T01:05:20Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12846",
+    "html_url": "https://github.com/facebook/react/pull/12846",
+    "diff_url": "https://github.com/facebook/react/pull/12846.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12846.patch"
+  },
+  "body": "This adds per-renderer Flow commands:\r\n\r\n* `yarn flow dom`\r\n* `yarn flow fabric`\r\n* `yarn flow native`\r\n* `yarn flow test`\r\n\r\nIf you forget to specify the one you need during local development, `yarn flow` will prompt you to do so. It should be possible to even run them in parallel although I’d expect it to be super slow so in practice you’ll probably use one at a time.\r\n\r\nThe typechecks are currently exactly the same between renderers. This is a preparation for https://github.com/facebook/react/pull/12792 which will shim the host config types for each renderer separately.\r\n\r\nThe `yarn flow-ci` command that runs on the CI is changed to run Flow with each renderer, one by one.\r\n\r\nInternally, this works by having separate Flow configs in different directories (thus making Flow treat them as isolated from each other). We generate Flow configs from a single master template if you run `yarn`, `yarn flow`, or `yarn flow-ci`.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

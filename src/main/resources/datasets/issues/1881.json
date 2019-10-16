@@ -1,0 +1,91 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/1881",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/1881/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/1881/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/1881/events",
+  "html_url": "https://github.com/facebook/react/issues/1881",
+  "id": 38233034,
+  "node_id": "MDU6SXNzdWUzODIzMzAzNA==",
+  "number": 1881,
+  "title": "Support !important for styles?",
+  "user": {
+    "login": "syranide",
+    "id": 1714255,
+    "node_id": "MDQ6VXNlcjE3MTQyNTU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1714255?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/syranide",
+    "html_url": "https://github.com/syranide",
+    "followers_url": "https://api.github.com/users/syranide/followers",
+    "following_url": "https://api.github.com/users/syranide/following{/other_user}",
+    "gists_url": "https://api.github.com/users/syranide/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/syranide/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/syranide/subscriptions",
+    "organizations_url": "https://api.github.com/users/syranide/orgs",
+    "repos_url": "https://api.github.com/users/syranide/repos",
+    "events_url": "https://api.github.com/users/syranide/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/syranide/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929156,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Ng==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Wontfix",
+      "name": "Resolution: Wontfix",
+      "color": "ffffff",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 71,
+  "created_at": "2014-07-19T13:05:50Z",
+  "updated_at": "2019-10-15T22:06:37Z",
+  "closed_at": "2019-10-15T17:12:53Z",
+  "author_association": "CONTRIBUTOR",
+  "body": "We currently don't support `!important` as it has to be set using `style.setProperty(name, value, priority)`. This should be trivially easy to implement if it's something want to support, although I'm not sure about the performance implications (**EDIT:** #1886), although I can't imagine it would be measurable as we would be doing the string test ourselves and those are cheap.\n\nhttp://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration\n\n~~OK... apparently IE8 doesn't support this _at all_, it might still be worth implementing, for the future and for those who don't care about IE8.~~ ~~After further experimentation, apparently it is! `style.setAttribute(name, value)` (priority is part of the value).~~ But apparently that was wrong as well, the only way to set it seems to be with `cssText`, an acceptable work-around may be to just use `cssText` when we detect an `!important` style, which should be seldom enough that performance is a non-issue.\n\nAn important consideration is that we _already_ support this for the initial render, but subsequent updates will _fail_ as `!important` isn't recognized for properties.\n",
+  "closed_by": {
+    "login": "necolas",
+    "id": 239676,
+    "node_id": "MDQ6VXNlcjIzOTY3Ng==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/239676?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/necolas",
+    "html_url": "https://github.com/necolas",
+    "followers_url": "https://api.github.com/users/necolas/followers",
+    "following_url": "https://api.github.com/users/necolas/following{/other_user}",
+    "gists_url": "https://api.github.com/users/necolas/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/necolas/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/necolas/subscriptions",
+    "organizations_url": "https://api.github.com/users/necolas/orgs",
+    "repos_url": "https://api.github.com/users/necolas/repos",
+    "events_url": "https://api.github.com/users/necolas/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/necolas/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

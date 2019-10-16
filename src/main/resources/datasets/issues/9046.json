@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9046",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9046/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9046/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9046/events",
+  "html_url": "https://github.com/facebook/react/issues/9046",
+  "id": 209510106,
+  "node_id": "MDU6SXNzdWUyMDk1MTAxMDY=",
+  "number": 9046,
+  "title": "Disabling or destroying event's target stops further event propagation.",
+  "user": {
+    "login": "cristian-eriomenco",
+    "id": 7792886,
+    "node_id": "MDQ6VXNlcjc3OTI4ODY=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/7792886?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/cristian-eriomenco",
+    "html_url": "https://github.com/cristian-eriomenco",
+    "followers_url": "https://api.github.com/users/cristian-eriomenco/followers",
+    "following_url": "https://api.github.com/users/cristian-eriomenco/following{/other_user}",
+    "gists_url": "https://api.github.com/users/cristian-eriomenco/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/cristian-eriomenco/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/cristian-eriomenco/subscriptions",
+    "organizations_url": "https://api.github.com/users/cristian-eriomenco/orgs",
+    "repos_url": "https://api.github.com/users/cristian-eriomenco/repos",
+    "events_url": "https://api.github.com/users/cristian-eriomenco/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/cristian-eriomenco/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2017-02-22T16:39:52Z",
+  "updated_at": "2017-10-04T18:08:51Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "Disabling a submit button within a form on `onClick`, stops the event propagation to the forms `onSubmit` handler.\r\n\r\nThe fiddle:\r\n ```\r\nimport React from \"react\";\r\n\r\nclass SomeForm extends React.Component {\r\n    constructor(props){\r\n       super(props)\r\n       this.state = {\r\n          disabled:false\r\n       }\r\n    }\r\n    handleClick() {\r\n        this.setState({\r\n          disabled:true\r\n        });\r\n        console.log(\"Clicked button\");\r\n    }\r\n    handleSubmit(e){\r\n      alert(\"Submitted the form\")\r\n    }\r\n    render() {\r\n        let opts = {};\r\n        opts.disabled = this.state.disabled; // disabling the button stops the event propagation\r\n        \r\n        return (<form onSubmit={this.handleSubmit.bind(this)}>\r\n              <button {...opts} \r\n                type=\"submit\" \r\n                onClick={this.handleClick.bind(this)}>\r\n                Continue\r\n              </button>\r\n         </form>)\r\n    }\r\n}\r\n\r\nReactDOM.render(<SomeForm />, document.getElementById('a'));\r\n```\r\n[JsBin with the live example](http://jsbin.com/kidabifono/1/edit?js,output)\r\n\r\nExpected behavior: The event gets propagated unless explicitly swallowed via `e.preventDefault() && e.stopPropagation()`\r\n\r\n**React version:** 15.4.2\r\n**Browser:** Chrome 56.0.2924.87 x64\r\n\r\nUnfortunately I cannot tell if this happens with older versions.",
+  "closed_by": null
+}

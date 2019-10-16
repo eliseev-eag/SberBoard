@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15171",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15171/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15171/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15171/events",
+  "html_url": "https://github.com/facebook/react/issues/15171",
+  "id": 423460223,
+  "node_id": "MDU6SXNzdWU0MjM0NjAyMjM=",
+  "number": 15171,
+  "title": "dangerouslySetInnerHTML is left empty on client render on top of bad server markup when rendering HTML",
+  "user": {
+    "login": "petetnt",
+    "id": 7641760,
+    "node_id": "MDQ6VXNlcjc2NDE3NjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/7641760?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/petetnt",
+    "html_url": "https://github.com/petetnt",
+    "followers_url": "https://api.github.com/users/petetnt/followers",
+    "following_url": "https://api.github.com/users/petetnt/following{/other_user}",
+    "gists_url": "https://api.github.com/users/petetnt/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/petetnt/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/petetnt/subscriptions",
+    "organizations_url": "https://api.github.com/users/petetnt/orgs",
+    "repos_url": "https://api.github.com/users/petetnt/repos",
+    "events_url": "https://api.github.com/users/petetnt/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/petetnt/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-03-20T20:35:18Z",
+  "updated_at": "2019-03-21T18:21:55Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "This seems to be an edge case of https://github.com/facebook/react/issues/11789 fixed in https://github.com/facebook/react/pull/13353/files.\r\n\r\nI ran into this when trying to hydrate content rendered with https://github.com/prismicio/prismic-dom `asHtml` method.\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n\r\nBug? I think. \r\n\r\n**What is the current behavior?**\r\n\r\nCurrent behavior:\r\n\r\n1. Server-side stuff comes in from server and contains the things we need\r\n2. Hydration mismatch happens\r\n3. dangerouslySetInnerHTML is called with correct value but an empty string gets rendered instead\r\n\r\nI tried to replicate the issue on https://codesandbox.io/s/2xojk10jln but failed.\r\n\r\nThe following testcase for `packages/react-dom/src/__tests__/ReactDOMServerIntegrationElements-test.js` produces the same result (I tried it first with the same PrismicDOM.RichText.asHtml(obj) call I have in the app) but I am not sure if it's correct:\r\n\r\n  ```js\r\n\r\n# test case\r\n    itRenders(\r\n      'a div with dangerouslySetInnerHTML set to html inserted',\r\n      async render => {\r\n        const obj = '<li>bar</li>';\r\n        const e = await render(\r\n          <div dangerouslySetInnerHTML={{__html: obj }} />,\r\n        );\r\n        expect(e.childNodes.length).toBe(1);\r\n        expect(e.firstChild.tagName).toBe('LI');\r\n        expect(e.firstChild.childNodes.length).toBe(1);\r\n      },\r\n    );\r\n```\r\n\r\n```bash\r\n      ✓ renders a div with dangerouslySetInnerHTML set to html return value of function called with server string render (190ms)\r\n      ✓ renders a div with dangerouslySetInnerHTML set to html return value of function called with server stream render (52ms)\r\n      ✓ renders a div with dangerouslySetInnerHTML set to html return value of function called with clean client render (37ms)\r\n      ✓ renders a div with dangerouslySetInnerHTML set to html return value of function called with client render on top of good server markup (74ms)\r\n      ✕ renders a div with dangerouslySetInnerHTML set to html return value of function called with client render on top of bad server markup (34ms)\r\n\r\n  ● ReactDOMServerIntegration › ... › renders a div with dangerouslySetInnerHTML set to html return value of function called with client render on top of bad server markup\r\n\r\n    expect(received).toBe(expected) // Object.is equality\r\n\r\n    Expected: \"bar\"\r\n    Received: \"\"\r\n```\r\n\r\n\r\n**What is the expected behavior?**\r\n\r\nThe client render would have rendered `<li>bar</li>`\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\ncommit c05b4b8  (latest master) and >16.8.\r\n\r\nSorry for a bit vague bug report.\r\n",
+  "closed_by": null
+}

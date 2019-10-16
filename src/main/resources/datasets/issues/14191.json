@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14191",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14191/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14191/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14191/events",
+  "html_url": "https://github.com/facebook/react/pull/14191",
+  "id": 379554357,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjI5OTcyNDI4",
+  "number": 14191,
+  "title": "Add KeyboardEvent.code to synthetic event",
+  "user": {
+    "login": "jjspace",
+    "id": 8007967,
+    "node_id": "MDQ6VXNlcjgwMDc5Njc=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8007967?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jjspace",
+    "html_url": "https://github.com/jjspace",
+    "followers_url": "https://api.github.com/users/jjspace/followers",
+    "following_url": "https://api.github.com/users/jjspace/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jjspace/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jjspace/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jjspace/subscriptions",
+    "organizations_url": "https://api.github.com/users/jjspace/orgs",
+    "repos_url": "https://api.github.com/users/jjspace/repos",
+    "events_url": "https://api.github.com/users/jjspace/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jjspace/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-11-11T19:27:56Z",
+  "updated_at": "2019-03-13T22:47:43Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14191",
+    "html_url": "https://github.com/facebook/react/pull/14191",
+    "diff_url": "https://github.com/facebook/react/pull/14191.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14191.patch"
+  },
+  "body": "#14102 \r\nPassing along `KeyboardEvent.code` from the native Keyboard Event. This is a very complex calculated value is not effected by keyboard layout unlike other KeyboardEvent values so there is no way to create a polyfill for browsers without support.",
+  "closed_by": null
+}

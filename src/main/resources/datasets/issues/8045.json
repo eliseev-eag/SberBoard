@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8045",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8045/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8045/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8045/events",
+  "html_url": "https://github.com/facebook/react/pull/8045",
+  "id": 184611961,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTA0NzEzNTI=",
+  "number": 8045,
+  "title": "Fix typo in new tutorial code",
+  "user": {
+    "login": "dittos",
+    "id": 2622,
+    "node_id": "MDQ6VXNlcjI2MjI=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/2622?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dittos",
+    "html_url": "https://github.com/dittos",
+    "followers_url": "https://api.github.com/users/dittos/followers",
+    "following_url": "https://api.github.com/users/dittos/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dittos/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dittos/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dittos/subscriptions",
+    "organizations_url": "https://api.github.com/users/dittos/orgs",
+    "repos_url": "https://api.github.com/users/dittos/repos",
+    "events_url": "https://api.github.com/users/dittos/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dittos/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-10-22T05:46:19Z",
+  "updated_at": "2016-10-22T21:07:42Z",
+  "closed_at": "2016-10-22T20:46:51Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8045",
+    "html_url": "https://github.com/facebook/react/pull/8045",
+    "diff_url": "https://github.com/facebook/react/pull/8045.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8045.patch"
+  },
+  "body": "`this.state.xIsNext` is a boolean value, not a function.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

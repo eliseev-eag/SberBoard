@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5145",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5145/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5145/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5145/events",
+  "html_url": "https://github.com/facebook/react/pull/5145",
+  "id": 111021982,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDc0NDU3ODc=",
+  "number": 5145,
+  "title": "Added ClassNameGenerator to React.addons (tested and documented in API docs)",
+  "user": {
+    "login": "vnovick",
+    "id": 3762909,
+    "node_id": "MDQ6VXNlcjM3NjI5MDk=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/3762909?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/vnovick",
+    "html_url": "https://github.com/vnovick",
+    "followers_url": "https://api.github.com/users/vnovick/followers",
+    "following_url": "https://api.github.com/users/vnovick/following{/other_user}",
+    "gists_url": "https://api.github.com/users/vnovick/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/vnovick/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/vnovick/subscriptions",
+    "organizations_url": "https://api.github.com/users/vnovick/orgs",
+    "repos_url": "https://api.github.com/users/vnovick/repos",
+    "events_url": "https://api.github.com/users/vnovick/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/vnovick/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-10-12T17:40:54Z",
+  "updated_at": "2015-10-12T17:46:23Z",
+  "closed_at": "2015-10-12T17:43:42Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5145",
+    "html_url": "https://github.com/facebook/react/pull/5145",
+    "diff_url": "https://github.com/facebook/react/pull/5145.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5145.patch"
+  },
+  "body": "Added ClassNameGenerator addon to React.addons together with it's API docs. \n\nPlease check added Docs for usage. Will appreciate if this will be added to React.addons\nThis addon is kinda classSet on steroids.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

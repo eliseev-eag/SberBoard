@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15940",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15940/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15940/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15940/events",
+  "html_url": "https://github.com/facebook/react/pull/15940",
+  "id": 458712244,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjkwMjU3Mzk2",
+  "number": 15940,
+  "title": "[Fresh] Don't consider require-like calls to be likely HOCs",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-06-20T15:03:31Z",
+  "updated_at": "2019-06-20T15:13:19Z",
+  "closed_at": "2019-06-20T15:13:19Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15940",
+    "html_url": "https://github.com/facebook/react/pull/15940",
+    "diff_url": "https://github.com/facebook/react/pull/15940.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15940.patch"
+  },
+  "body": "I tried running Fresh transform on FB5 to verify it doesn't introduce semantic differences. There is a case where that happens due to inline requires.\r\n\r\nWe currently consider calls like `const Foo = bar()` to be likely component factory calls when `Foo` is used in JSX. E.g. it could be `const Foo = createFluxContainer()`. So we register those with Fresh runtime.\r\n\r\nHowever, in CommonJS those might be *imports*. `const Foo = require('Foo')`. In that case registering them is a bad idea. Both because it's redundant (their own module will register them first anyway), and because this triggers inline requires early. We don't want to trigger inline requires early because that can introduce module cycles in our environment.\r\n\r\nAs a solution, I'm making the heuristic stricter. The dynamic `import()` or function that start with `require` are no longer considered likely component factories, and their result won't be registered even if it's used in JSX. We'll also completely bail out for more complex expressions (e.g. ternaries). We will, however, explicitly whitelist template literals because they're used for things like Styled Components, e.g.\r\n\r\n```js\r\nconst Foo = styled.div`...`\r\n```\r\n\r\nSee snapshots.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

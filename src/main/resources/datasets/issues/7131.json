@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7131",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7131/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7131/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7131/events",
+  "html_url": "https://github.com/facebook/react/issues/7131",
+  "id": 162505660,
+  "node_id": "MDU6SXNzdWUxNjI1MDU2NjA=",
+  "number": 7131,
+  "title": "Deprecate calling PropTypes validators in production",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 52079258,
+      "node_id": "MDU6TGFiZWw1MjA3OTI1OA==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Difficulty:%20starter",
+      "name": "Difficulty: starter",
+      "color": "94ce52",
+      "default": false
+    },
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2016-06-27T17:31:49Z",
+  "updated_at": "2016-07-05T19:02:50Z",
+  "closed_at": "2016-07-05T19:02:50Z",
+  "author_association": "MEMBER",
+  "body": "We want to strip the code _that implements PropTypes validation functions_ in production. This doesn’t mean `React.PropTypes` won’t exist—just that the functions will throw in production every time.\n\nI did an initial attempt at this in #6401 but it’s too much of a change because people might be calling `PropTypes` in production right now for introspection, and we’d need to **deprecate calling them in production** before actually turning them into shims that throw errors.\n\n@spicyj [suggested](https://github.com/facebook/react/pull/6401#issuecomment-224386567) a good first step: we should pass an extra argument to propType checkers. We would warn if that argument is not passed (or, if passed, does not match our “secret” value). This way we can detect if somebody manually calls `PropTypes` validators, and warn with `console.error` in production.\n\nIf you’d like to work on this, please comment here so we don’t have many people implementing this at the same time. You would need to:\n1. Pass an extra argument to prop type checkers.\n2. In production, warn inside the prop type checkers if they don’t receive the expected extra argument.\n3. The warning should say something like `You are manually calling React.PropTypes validation functions in a production build. This is deprecated and will not work in the next major version.`\n4. Don’t forget to write tests. You can peek at #6401 to see how to write tests that simulate production environment.\n5. Send a PR and we’ll discuss further!\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

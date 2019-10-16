@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11224",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11224/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11224/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11224/events",
+  "html_url": "https://github.com/facebook/react/issues/11224",
+  "id": 265449852,
+  "node_id": "MDU6SXNzdWUyNjU0NDk4NTI=",
+  "number": 11224,
+  "title": "Async componentWillReceiveProps to allow state update",
+  "user": {
+    "login": "NeekSandhu",
+    "id": 11316020,
+    "node_id": "MDQ6VXNlcjExMzE2MDIw",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/11316020?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/NeekSandhu",
+    "html_url": "https://github.com/NeekSandhu",
+    "followers_url": "https://api.github.com/users/NeekSandhu/followers",
+    "following_url": "https://api.github.com/users/NeekSandhu/following{/other_user}",
+    "gists_url": "https://api.github.com/users/NeekSandhu/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/NeekSandhu/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/NeekSandhu/subscriptions",
+    "organizations_url": "https://api.github.com/users/NeekSandhu/orgs",
+    "repos_url": "https://api.github.com/users/NeekSandhu/repos",
+    "events_url": "https://api.github.com/users/NeekSandhu/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/NeekSandhu/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 739777675,
+      "node_id": "MDU6TGFiZWw3Mzk3Nzc2NzU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Component%20API",
+      "name": "Component: Component API",
+      "color": "d4c5f9",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2017-10-14T00:28:00Z",
+  "updated_at": "2018-01-06T03:23:40Z",
+  "closed_at": "2018-01-06T03:23:40Z",
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nFeature\r\n\r\n**What is the current behavior?**\r\nAn (almost) immediate re-render is due after `componentWillReceiveProps` is called, unless `shouldComponentUpdate` says otherwise.\r\n\r\n**What is the expected behavior?**\r\nIf new props in `componentWillReceiveProps` cause an async call that's soon going to update the state anyway, won't it be cool if React might as well wait for that async call to do it's thing (which calls `setState`) and do one render instead of two?\r\n\r\nPotential solution: React can see if `componentWillReceiveProps` returns a `Promise`. If it does it defers the re-render until it `resolves`.\r\n\r\n```javascript\r\nasync componentWillReceiveProps(nextProps) {\r\n    const { postId } = nextProps;\r\n    const postTitle = await fetch(`https://api.example.com/posts/${postId}`);\r\n    this.setState({ postTitle });\r\n    return;\r\n}\r\n```\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

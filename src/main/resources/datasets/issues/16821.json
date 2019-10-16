@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16821",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16821/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16821/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16821/events",
+  "html_url": "https://github.com/facebook/react/pull/16821",
+  "id": 495227101,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzE4ODEzMzI4",
+  "number": 16821,
+  "title": "[React Native] Fix for view config registrations",
+  "user": {
+    "login": "rickhanlonii",
+    "id": 2440089,
+    "node_id": "MDQ6VXNlcjI0NDAwODk=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2440089?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rickhanlonii",
+    "html_url": "https://github.com/rickhanlonii",
+    "followers_url": "https://api.github.com/users/rickhanlonii/followers",
+    "following_url": "https://api.github.com/users/rickhanlonii/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rickhanlonii/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rickhanlonii/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rickhanlonii/subscriptions",
+    "organizations_url": "https://api.github.com/users/rickhanlonii/orgs",
+    "repos_url": "https://api.github.com/users/rickhanlonii/repos",
+    "events_url": "https://api.github.com/users/rickhanlonii/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rickhanlonii/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-09-18T13:28:50Z",
+  "updated_at": "2019-10-09T09:17:21Z",
+  "closed_at": "2019-09-18T14:31:01Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16821",
+    "html_url": "https://github.com/facebook/react/pull/16821",
+    "diff_url": "https://github.com/facebook/react/pull/16821.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16821.patch"
+  },
+  "body": "## Overview\r\nThis change fixes a behavior in the React Native view config registry which would hide errors when registering components.\r\n\r\n## Details\r\nBefore this change, even if we failed to register the view config for any reason (e.g. the events are invalid), we would still clear the callback for the view config.\r\n\r\nThis means, the next time that a user renders the component and we check for the view config, we would show this error:\r\n\r\n> View config not found for name Slider\r\n\r\nThis error is wrong. The real error is masked (and may never be shown, if the registration happened before error handling is set up), and may be something like:\r\n\r\n> Event cannot be both direct and bubbling: topChange\r\n\r\nThis PR fixes this behavior by clearing the view config callback only after the view config is successfully registered.\r\n\r\n## Screen\r\n<img width=\"756\" alt=\"Screen Shot 2019-09-18 at 2 28 04 PM\" src=\"https://user-images.githubusercontent.com/2440089/65152802-94193780-da20-11e9-84d6-2d8c6e92912f.png\">\r\n\r\n## Test\r\n\r\n- Added test that fails without this change",
+  "closed_by": {
+    "login": "rickhanlonii",
+    "id": 2440089,
+    "node_id": "MDQ6VXNlcjI0NDAwODk=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2440089?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rickhanlonii",
+    "html_url": "https://github.com/rickhanlonii",
+    "followers_url": "https://api.github.com/users/rickhanlonii/followers",
+    "following_url": "https://api.github.com/users/rickhanlonii/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rickhanlonii/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rickhanlonii/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rickhanlonii/subscriptions",
+    "organizations_url": "https://api.github.com/users/rickhanlonii/orgs",
+    "repos_url": "https://api.github.com/users/rickhanlonii/repos",
+    "events_url": "https://api.github.com/users/rickhanlonii/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rickhanlonii/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

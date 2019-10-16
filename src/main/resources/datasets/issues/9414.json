@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9414",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9414/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9414/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9414/events",
+  "html_url": "https://github.com/facebook/react/pull/9414",
+  "id": 221426502,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTE1NjYyNDA4",
+  "number": 9414,
+  "title": "Added react-dom/test-utils bundle",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2017-04-13T00:26:59Z",
+  "updated_at": "2017-04-14T22:20:40Z",
+  "closed_at": "2017-04-14T22:20:40Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9414",
+    "html_url": "https://github.com/facebook/react/pull/9414",
+    "diff_url": "https://github.com/facebook/react/pull/9414.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9414.patch"
+  },
+  "body": "`react-addons-test-utils` was moved to `react-dom/test-utils` with the release of 15.5. This is my attempt to add a new bundle for 16 alpha in the same place. I did a quick Jest test of the generated bundle and it seemed ok but I'm still learning my way around the new build tools.\r\n\r\nI also removed some indirection in the build/bundling process for `checkPropTypes`. That's now imported directly from `prop-types/checkPropTypes` and the `src/isomorphic/classic/types/checkPropTypes.js` forwarding file has been deleted.\r\n\r\nI'm new to the bundles, but I tested my build changes using `fixtures/dom` and `fixtures/packaging` and I ran some simple Jest tests against the result of the new `test-util` target. Seemed okay. ¯\\_(ツ)_/¯",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12835",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12835/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12835/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12835/events",
+  "html_url": "https://github.com/facebook/react/pull/12835",
+  "id": 323809992,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTg4NTc4MTkx",
+  "number": 12835,
+  "title": "[WIP] API for async-safe access of mutable data",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2018-05-16T22:28:01Z",
+  "updated_at": "2018-05-31T22:25:09Z",
+  "closed_at": "2018-05-31T22:25:09Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12835",
+    "html_url": "https://github.com/facebook/react/pull/12835",
+    "diff_url": "https://github.com/facebook/react/pull/12835.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12835.patch"
+  },
+  "body": "Opening this early so I can get feedback on the overall approach.\r\n\r\nCall `willAccessMutableState` whenever a React component reads from a mutable data source. This includes inside a change event handler (right before calling `setState`) and in a constructor when reading the component's initial state.\r\n\r\nReact keeps track of the the lowest priority update that is the result of a mutable state change.\r\n\r\nIf a component attempts to read from mutable state during the render phase at a higher priority than the lowest priority mutation update, React will suspend the high priority work and coalesce it with the low priority render, to prevent tearing.\r\n\r\nUnresolved questions:\r\n\r\n- This is modeled like a suspend on asynchronous data. The difference is that this should never trigger a placeholder, since the data needed to complete the render is available, just at a lower priority. Because of this, the high priority work is effectively deprioritized. I think an alternative, possibly better, approach would be to increase the priority of the low priority work. I'm not sure yet how we'd implement this, though, since the only other case where we upgrade the priority of pending work is `batch.commit()`, and in that case the work is flushed synchronously.\r\n- For the initial mount, this strategy requires components to subscribe to the data source during the render phase. This cuts against our current recommendation to subscribe in `componentDidMount`.\r\n- Whatever strategy we choose here, we should update `create-subscription` to follow it.",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9146",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9146/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9146/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9146/events",
+  "html_url": "https://github.com/facebook/react/pull/9146",
+  "id": 213213891,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTEwMDQwNzg5",
+  "number": 9146,
+  "title": "add srcObject for getUserMedia",
+  "user": {
+    "login": "acidsound",
+    "id": 623157,
+    "node_id": "MDQ6VXNlcjYyMzE1Nw==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/623157?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acidsound",
+    "html_url": "https://github.com/acidsound",
+    "followers_url": "https://api.github.com/users/acidsound/followers",
+    "following_url": "https://api.github.com/users/acidsound/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acidsound/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acidsound/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acidsound/subscriptions",
+    "organizations_url": "https://api.github.com/users/acidsound/orgs",
+    "repos_url": "https://api.github.com/users/acidsound/repos",
+    "events_url": "https://api.github.com/users/acidsound/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acidsound/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": true,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 14,
+  "created_at": "2017-03-10T01:07:55Z",
+  "updated_at": "2018-01-09T13:45:13Z",
+  "closed_at": "2018-01-05T15:38:44Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9146",
+    "html_url": "https://github.com/facebook/react/pull/9146",
+    "diff_url": "https://github.com/facebook/react/pull/9146.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9146.patch"
+  },
+  "body": "srcObject is useful when use `video` elements in webRTC video chat.\r\n`video.srcObject = stream` is standard and well-implemented. \r\nyou can use `<video src={URL.createObjectURL(stream)}>`\r\nbut it's a hack and deprecated. don't use it.\r\n`<video srcObject={stream}>` is better. neat and clean.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

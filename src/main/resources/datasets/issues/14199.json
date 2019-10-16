@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14199",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14199/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14199/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14199/events",
+  "html_url": "https://github.com/facebook/react/issues/14199",
+  "id": 379903090,
+  "node_id": "MDU6SXNzdWUzNzk5MDMwOTA=",
+  "number": 14199,
+  "title": "Problem with HTML select",
+  "user": {
+    "login": "SilentPick",
+    "id": 32437524,
+    "node_id": "MDQ6VXNlcjMyNDM3NTI0",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/32437524?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/SilentPick",
+    "html_url": "https://github.com/SilentPick",
+    "followers_url": "https://api.github.com/users/SilentPick/followers",
+    "following_url": "https://api.github.com/users/SilentPick/following{/other_user}",
+    "gists_url": "https://api.github.com/users/SilentPick/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/SilentPick/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/SilentPick/subscriptions",
+    "organizations_url": "https://api.github.com/users/SilentPick/orgs",
+    "repos_url": "https://api.github.com/users/SilentPick/repos",
+    "events_url": "https://api.github.com/users/SilentPick/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/SilentPick/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2018-11-12T18:37:12Z",
+  "updated_at": "2019-09-05T23:11:22Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "If any thing updates the state - select work weird - looks as if it reload\r\nTry it here: https://codesandbox.io/s/m7yzxl92xj \r\nI use latest CRA, and test on windows and mac OS",
+  "closed_by": null
+}

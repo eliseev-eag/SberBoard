@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6974",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6974/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6974/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6974/events",
+  "html_url": "https://github.com/facebook/react/issues/6974",
+  "id": 158720498,
+  "node_id": "MDU6SXNzdWUxNTg3MjA0OTg=",
+  "number": 6974,
+  "title": "RFC: Make Refs Opt-in",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 139653724,
+      "node_id": "MDU6TGFiZWwxMzk2NTM3MjQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Core%20Utilities",
+      "name": "Component: Core Utilities",
+      "color": "c5def5",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 24,
+  "created_at": "2016-06-06T16:34:24Z",
+  "updated_at": "2018-03-15T19:50:00Z",
+  "closed_at": "2016-07-06T14:21:17Z",
+  "author_association": "MEMBER",
+  "body": "**Note: This is my personal proposal.**\n**Please don’t announce it anywhere as “React dropping refs!”** 😄 \n\nHigher order components solve many problems of mixins, however they come with their own problems. The most painful one in my experience is that they hide the ref of the wrapped component, so they can’t be treated as transparent wrappers. This is well described in #4213.\n\nAs we prepare for de-emphasizing `createClass` and mixins I think it’s important that we **treat higher order components as first class pattern in React, and provide full support for it without clashes with existing features**. This means we need to fix refs to work well with higher order components.\n\nIn the community, I see that people embrace stateless functional components even though they don’t have public instances and don’t support refs pointed at them. I think that this is a good indication that refs are moving from being a commonly needed feature to an escape hatch, and so it can be further de-emphasized by becoming opt-in.\n### What Doesn’t Change\n\n`<div ref={...} />` works like before and provides node in a callback.\n`<StatelessFunctionalComponent ref={...} />` works like before and provides `null` in a callback.\n### Classes Opt Into Exposing a Ref\n\nIn the spirit of https://github.com/facebook/react/issues/4213#issuecomment-115019321, I propose that **`this.ref` becomes an opt-in API on every class component.** If you want your components to be “reffable” (that is, to expose their public instances as refs), you need to manually call it in your constructor:\n\n``` js\nclass MyComponent extends Component {\n  constructor(props) {\n    super(props)\n    this.ref(this) // I'm exposing my public instance!\n  }\n\n  ...\n}\n\n// Will print MyComponent instance\n<MyComponent ref={instance => console.log(instance)} />\n```\n### By Default, Don’t Expose Refs\n\nIf you don’t call `this.ref(this)` during the constructor, React will automatically call it with `null`:\n\n``` js\nclass MyComponent extends Component {\n  ...\n}\n\n// Will print null\n<MyComponent ref={instance => console.log(instance)} />\n```\n\nThis means that by default, class components will act just like functional components. There is no access to the instance unless the class opts in.\n### Automatic Cleanup\n\nIf the class opts in, it only needs to call `this.ref` in the constructor. React will take care of automatically calling it with `null` when the component unmounts.\n### New! Forwarding a Ref to Another Component\n\n**This is the new feature here.**\nSince we opt into refs, we can cleanly support ref forwarding for higher order components:\n\n``` js\nfunction wrap(WrappedComponent) {\n  return class extends Component {\n    ...\n\n    render() {\n      return <WrappedComponent ref={this.ref} />\n    }\n  }\n}\n```\n\nBy passing `ref={this.ref}`, we let `WrappedComponent` supply its own instance, if available. This way the fact that it’s wrapped with a higher order component becomes unobservable.\n\nThis also works fine if you conditionally switch between different components or delay rendering:\n\n``` js\nfunction wrap(WrappedComponent) {\n  return class extends Component {\n    ...\n\n    render() {\n      return this.state.isReady ? <Spinner /> : <WrappedComponent ref={this.ref} />\n    }\n  }\n}\n```\n\nLet’s say `isReady` is `false` initially. React would take care of calling `this.ref(null)` after the constructor ran (since it knows the constructor never called `this.ref(this)`). So initially the parent receives `null`, as expected.\n\nWhen `WrappedComponent` mounts, it will call `this.ref(this)` with its instance, which make it available to the parent. When `WrappedComponent` unmounts, React will call `this.ref(null)` for its instance, cleaning it up again.\n\nThe same works if we alternate between `<WrappedComponent ref={this.ref} />` and `<SomeOtherComponent ref={this.ref} />`.\n### Upsides\n#### Higher Order Components are Unobservable\n\nThis removes a common pain point in that wrapping a component with a HOC changes its public API.\n#### Refs are Further Discouraged\n\nBy making them opt-in, we better signal that you shouldn’t use them for data flow. The component can also be certain that changing or removing an imperative method is not a breaking change because by default it doesn’t expose the ref. If it exposes the ref, this is done intentionally.\n#### Providing Explicit Imperative APIs\n\nThe component may also choose to provide a subset of methods as its public API:\n\n``` js\nclass MyComponent extends Component {\n  constructor(props) {\n    super(props)\n    // I'm exposing just some stuff!\n    this.ref({\n      focus: this.focus.bind(this)\n    })\n  }\n\n  focus() { ... }\n  privateMethodIDontWantAnybodyToCall() { ... }\n}\n```\n\nThis lets the component choose _which_ methods it wants to expose imperatively, and which are still considered implementation details.\n### Downsides\n#### Migration Cost\n\nThis would be an easy enough codemod for most components (just add `this.ref(this)` to any class component). But it’s still a cost considering some of those components are on npm and out of your control. Arguably most third party components don’t provide imperative methods anyway, but this will cause some trouble.\n#### Potential for Misuse\n\nI can imagine people doing `this.ref(this)` and then `<WrappedComponent ref={this.ref} />` in the `render` method. This could get confusing but I don’t see any easy way to prevent or warn about this.\n#### Too Much Freedom\n\nTechnically you’d be able to pass `this.ref(42)`, `this.ref(findDOMNode(this))` or other weird things. Maybe we could limit possible values to React public instances and `null`. On the other hand, the ability to only provide a subset of methods as described in “Providing Explicit Imperative APIs” seems useful.\n### Other Considerations\n#### `this.props.ref`?\n\nWe could have provided `ref` inside `this.props` as `this.props.ref`. I would argue that we don’t want to do this for two reasons:\n- We want React to still “manage” it partially by calling `this.ref(null)` when component unmounts. Otherwise it’s too easy to introduce memory leaks. Having magic behavior for one of the props would be unexpected.\n- We don’t want `{...this.props}` to transfer the ref over to the child as that would be unexpected in most cases.\n\n---\n\nWhat do you think?\n\ncc @facebook/react-core \n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

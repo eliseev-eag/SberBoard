@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14894",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14894/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14894/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14894/events",
+  "html_url": "https://github.com/facebook/react/pull/14894",
+  "id": 412224983,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjU0NDg1ODEx",
+  "number": 14894,
+  "title": "Add a warning to useRef/useState/useReducer invoked with a missing argument instead of undefined",
+  "user": {
+    "login": "Jessidhia",
+    "id": 73085,
+    "node_id": "MDQ6VXNlcjczMDg1",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/73085?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Jessidhia",
+    "html_url": "https://github.com/Jessidhia",
+    "followers_url": "https://api.github.com/users/Jessidhia/followers",
+    "following_url": "https://api.github.com/users/Jessidhia/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Jessidhia/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Jessidhia/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Jessidhia/subscriptions",
+    "organizations_url": "https://api.github.com/users/Jessidhia/orgs",
+    "repos_url": "https://api.github.com/users/Jessidhia/repos",
+    "events_url": "https://api.github.com/users/Jessidhia/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Jessidhia/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2019-02-20T03:16:16Z",
+  "updated_at": "2019-02-20T18:57:59Z",
+  "closed_at": "2019-02-20T08:35:29Z",
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14894",
+    "html_url": "https://github.com/facebook/react/pull/14894",
+    "diff_url": "https://github.com/facebook/react/pull/14894.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14894.patch"
+  },
+  "body": "As per the discussion on https://twitter.com/dan_abramov/status/1097844767956918274",
+  "closed_by": {
+    "login": "Jessidhia",
+    "id": 73085,
+    "node_id": "MDQ6VXNlcjczMDg1",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/73085?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Jessidhia",
+    "html_url": "https://github.com/Jessidhia",
+    "followers_url": "https://api.github.com/users/Jessidhia/followers",
+    "following_url": "https://api.github.com/users/Jessidhia/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Jessidhia/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Jessidhia/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Jessidhia/subscriptions",
+    "organizations_url": "https://api.github.com/users/Jessidhia/orgs",
+    "repos_url": "https://api.github.com/users/Jessidhia/repos",
+    "events_url": "https://api.github.com/users/Jessidhia/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Jessidhia/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

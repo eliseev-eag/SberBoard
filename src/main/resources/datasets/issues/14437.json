@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14437",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14437/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14437/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14437/events",
+  "html_url": "https://github.com/facebook/react/pull/14437",
+  "id": 390899539,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjM4NTYyMTk5",
+  "number": 14437,
+  "title": "Removed Fabric-specific feature flag files and updated Rollup to use …",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2018-12-13T23:08:07Z",
+  "updated_at": "2018-12-14T15:54:49Z",
+  "closed_at": "2018-12-14T15:54:46Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14437",
+    "html_url": "https://github.com/facebook/react/pull/14437",
+    "diff_url": "https://github.com/facebook/react/pull/14437.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14437.patch"
+  },
+  "body": "Removed Fabric-specific feature flag files and updated Rollup to use the (non-Fabric) React Native flag files. Since the `supportsPersistence` setting now resides in the renderer's \"host config\", there's no reason for these two to have separate flag forks.\r\n\r\nThere were no differences between **OSS** React Native and Fabric flags.\r\n\r\nThere were a few differences between **FB** React Native and Fabric flags:\r\n\r\n| Flag | React Native | Fabric |\r\n| :--- | :--- | :--- |\r\n| `debugRenderPhaseSideEffects` | (dynamic) | `false` |\r\n| `debugRenderPhaseSideEffectsForStrictMode` | `true` | `false` |\r\n| `warnAboutDeprecatedLifecycles` | `true` | `false` |\r\n\r\n(As of this PR, Fabric will now get the React Native flag values shown above.)",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

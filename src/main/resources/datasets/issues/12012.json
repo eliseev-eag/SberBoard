@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12012",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12012/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12012/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12012/events",
+  "html_url": "https://github.com/facebook/react/issues/12012",
+  "id": 288072258,
+  "node_id": "MDU6SXNzdWUyODgwNzIyNTg=",
+  "number": 12012,
+  "title": "React.Children.toArray and React.cloneElement do not work with portal elements",
+  "user": {
+    "login": "radubrehar",
+    "id": 196656,
+    "node_id": "MDQ6VXNlcjE5NjY1Ng==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/196656?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/radubrehar",
+    "html_url": "https://github.com/radubrehar",
+    "followers_url": "https://api.github.com/users/radubrehar/followers",
+    "following_url": "https://api.github.com/users/radubrehar/following{/other_user}",
+    "gists_url": "https://api.github.com/users/radubrehar/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/radubrehar/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/radubrehar/subscriptions",
+    "organizations_url": "https://api.github.com/users/radubrehar/orgs",
+    "repos_url": "https://api.github.com/users/radubrehar/repos",
+    "events_url": "https://api.github.com/users/radubrehar/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/radubrehar/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 139653724,
+      "node_id": "MDU6TGFiZWwxMzk2NTM3MjQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Core%20Utilities",
+      "name": "Component: Core Utilities",
+      "color": "c5def5",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-01-12T10:23:26Z",
+  "updated_at": "2018-08-09T03:08:45Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n\r\nBUG or undefined behaviour\r\n\r\n**What is the current behavior?**\r\n\r\nDoing\r\n```\r\nReact.Children.toArray(\r\n  ReactDOM.createPortal(...)\r\n)\r\n```\r\n\r\nfails with:\r\n```\r\nObjects are not valid as a React child (found: object with keys {$$typeof, key, children, containerInfo, implementation}). If you meant to render a collection of children, use an array instead.\r\n```\r\n\r\nNamely, the following complete snippet fails:\r\n\r\n```jsx\r\nimport React from 'react';\r\nimport { render, createPortal } from 'react-dom';\r\n\r\nconst RenderChildren = ({ children }) => {\r\n  children = React.Children.toArray(children)\r\n  return <h1>Renders children with toArray: {children}</h1>\r\n}\r\n\r\n\r\nconst App = () => ( \r\n  <RenderChildren name=\"CodeSandbox\">\r\n    {createPortal(<div>rendered in portal</div>, document.getElementById('portal'))}\r\n  </RenderChildren>\r\n);\r\n\r\nrender(<App />, document.getElementById('root'));\r\n```\r\n\r\nwhile the following one, which wraps the portal in another element works just fine\r\n\r\n```jsx\r\nimport React from 'react';\r\nimport { render, createPortal } from 'react-dom';\r\n\r\nconst RenderChildren = ({ children }) => {\r\n  children = React.Children.toArray(children)\r\n  return <h1>Renders children with toArray: {children}</h1>\r\n}\r\n\r\n\r\nconst App = () => ( \r\n  <RenderChildren name=\"CodeSandbox\">\r\n    <div>\r\n        {createPortal(<div>rendered in portal</div>, document.getElementById('portal'))}\r\n    </div>\r\n  </RenderChildren>\r\n);\r\n\r\nrender(<App />, document.getElementById('root'));\r\n\r\n```\r\n**What is the expected behavior?**\r\nI am aware that `createPortal` is a new feature, but in the best case scenario it should be possible to use it everywhere other valid nodes are accepted.\r\n\r\nThe same thing is happening for `React.cloneElement(ReactDOM.createPortal(....))` - it's probably weird to try and clone a portal 😄  - but maybe we should specify in the `createPortal` documentation that it cannot be cloned, at least for now. Should I open a PR for that?\r\n\r\nLet me know your thoughts\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nI'm using React 16.*",
+  "closed_by": null
+}

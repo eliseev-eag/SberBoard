@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6101",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6101/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6101/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6101/events",
+  "html_url": "https://github.com/facebook/react/pull/6101",
+  "id": 135813302,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjAzODExMTY=",
+  "number": 6101,
+  "title": "[Docs] JSX category",
+  "user": {
+    "login": "joecritch",
+    "id": 24449,
+    "node_id": "MDQ6VXNlcjI0NDQ5",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/24449?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/joecritch",
+    "html_url": "https://github.com/joecritch",
+    "followers_url": "https://api.github.com/users/joecritch/followers",
+    "following_url": "https://api.github.com/users/joecritch/following{/other_user}",
+    "gists_url": "https://api.github.com/users/joecritch/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/joecritch/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/joecritch/subscriptions",
+    "organizations_url": "https://api.github.com/users/joecritch/orgs",
+    "repos_url": "https://api.github.com/users/joecritch/repos",
+    "events_url": "https://api.github.com/users/joecritch/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/joecritch/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2016-02-23T17:54:06Z",
+  "updated_at": "2016-10-23T14:17:06Z",
+  "closed_at": "2016-10-23T14:17:06Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6101",
+    "html_url": "https://github.com/facebook/react/pull/6101",
+    "diff_url": "https://github.com/facebook/react/pull/6101.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6101.patch"
+  },
+  "body": "**Edit: this pull request is now ready (no longer wip)**\n\nAdds a dedicated JSX category, combining sub-pages from Displaying Data and Tips, along with some new content in the \"JSX Overview\" page (previously JSX in-depth).\n## Rationale\n\nI felt that explaining and justifying JSX was adding noise to certain pages. Isolating it in its own category feels cleaner and easier to navigate for users who are aware of JSX. (Anyone who isn't familiar will be guided via a 'Note' next to any basic code samples, linking them to the JSX Overview.)\n## Notable changes\n- Renamed “JSX in Depth” to “JSX — Overview”\n- Added new “What is JSX” and  “Why JSX” content to “JSX — Overview”\n- Renamed “JSX Gotchas” to “JSX — HTML Differences”\n- Renamed “if/else in JSX” to “JSX — Conditional Statements”\n- Added “Specification” link to left-hand nav\n- Added “HTML to JSX Compiler” link to left-hand nav\n- Added note to “Displaying Data”, notifying the reader that the code uses JSX\n- Merged Displaying Data’s “JSX Syntax” and “React without JSX” fragments into “JSX — Overview”\n- Merged all JSX Tips (“False in JSX”, “Maximum number of Root Nodes”, “Self Closing Tag”) into the relevant JSX pages.\n- Any new content added has not been translated, but previously translated pages has been moved to the new category.\n\n**JSX Overview page screenshot**\n\n![screen shot 2016-02-23 at 17 42 22](https://cloud.githubusercontent.com/assets/24449/13261055/3f96a60c-da56-11e5-91fb-a886d87aa6c3.png)\n\n**Left-hand nav screenshot**\n\n![screen shot 2016-02-23 at 17 47 08](https://cloud.githubusercontent.com/assets/24449/13261066/4bcf3920-da56-11e5-854d-daf661c63b89.png)\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

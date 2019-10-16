@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9128",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9128/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9128/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9128/events",
+  "html_url": "https://github.com/facebook/react/issues/9128",
+  "id": 212321577,
+  "node_id": "MDU6SXNzdWUyMTIzMjE1Nzc=",
+  "number": 9128,
+  "title": "Switch to using createFactory in compiler steps",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 180616330,
+      "node_id": "MDU6TGFiZWwxODA2MTYzMzA=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Optimizing%20Compiler",
+      "name": "Component: Optimizing Compiler",
+      "color": "bfdadc",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2017-03-07T03:36:44Z",
+  "updated_at": "2017-03-13T12:35:59Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "body": "```js\r\nvar Foo = require('Foo');\r\nfunction Bar() {\r\n  return <Foo x={1}>Hi</Foo>;\r\n}\r\n```\r\n\r\nOriginally we intended to compile JSX to this format:\r\n\r\n```js\r\nvar Foo = require('Foo');\r\nvar Foo_ = React.createFactory(Foo);\r\nfunction Bar() {\r\n  return Foo_({ x: 1, children: \"Hi\" });\r\n}\r\n```\r\n\r\nThat allows us to generate a factory that can be more optimized and resolves `defaultProps`.\r\n\r\nThere are some problems with generating an optimized factory in many cases because it can slow down start up. However, if you have an optimizing compiler that can resolve that, we can turn that on in those cases.\r\n\r\nAnother thing we can do is that if the function is a simple functional component then we can just return the functional component itself. So that it becomes just a straight through function call. At least if the element doesn't have a key. (Slight change in semantics but mostly not.)\r\n\r\nAn optimizing compiler or VM (that is aware of the type of \"Foo\" which not known to the Babel transform) can then infer that this function is just a function call and can then proceed to actually inline it.\r\n\r\nFor heavy functions it would be bad to do this though since it can expand the time a render is executed and work against the time slicing mechanism of Fiber.\r\n\r\nTherefore, we might want to use a heuristic to determine if a functional component gets to be \"inlined\" or not. E.g. function length or something.\r\n\r\nA good data point to use in a heuristic is whether the component is part of a loop or a closure (such as being part of a map);\r\n\r\n```js\r\nvar Foo = require('Foo');\r\nfunction Bar({ data }) {\r\n  var children = [];\r\n  for (var i = 0; i < data.length; i++) {\r\n    children.push(<Baz>{data[i]}</Baz>);\r\n  }\r\n  return <Foo x={1}>{children}</Foo>;\r\n}\r\n```\r\n\r\nor\r\n\r\n```js\r\nvar Foo = require('Foo');\r\nfunction Bar({ data }) {\r\n  return <Foo x={1}>{data.map(d => <Baz>{d}</Baz>)}</Foo>;\r\n}\r\n```\r\n\r\nWe could change the transform to treat these special and flag them as part of a hot path by calling a special createFactory:\r\n\r\n```js\r\nvar Foo = require('Foo');\r\nvar Baz = require('Baz');\r\nvar Foo_ = React.createFactory(Foo);\r\nvar Baz_ = React.createFactoryHot(Baz);\r\nfunction Bar({ data }) {\r\n  return Foo_({ x: 1, children: data.map(d => Baz_({ children: d })) });\r\n}\r\n```\r\n\r\nThe neat part of this model is that the transform can be pretty simple and readable.\r\n\r\nThe optimization itself is in createFactory and createFactoryHot.\r\n\r\nIt also doesn't have to reason about cross-module transforms. That's all taken care of by the optimizing compiler or VM.",
+  "closed_by": null
+}

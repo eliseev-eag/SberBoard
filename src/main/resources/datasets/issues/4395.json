@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4395",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4395/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4395/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4395/events",
+  "html_url": "https://github.com/facebook/react/pull/4395",
+  "id": 95353949,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDAwOTU3MzI=",
+  "number": 4395,
+  "title": "add animationIterationCount in isUnitlessNumber",
+  "user": {
+    "login": "wibud",
+    "id": 3693897,
+    "node_id": "MDQ6VXNlcjM2OTM4OTc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/3693897?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/wibud",
+    "html_url": "https://github.com/wibud",
+    "followers_url": "https://api.github.com/users/wibud/followers",
+    "following_url": "https://api.github.com/users/wibud/following{/other_user}",
+    "gists_url": "https://api.github.com/users/wibud/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/wibud/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/wibud/subscriptions",
+    "organizations_url": "https://api.github.com/users/wibud/orgs",
+    "repos_url": "https://api.github.com/users/wibud/repos",
+    "events_url": "https://api.github.com/users/wibud/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/wibud/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2015-07-16T05:28:20Z",
+  "updated_at": "2015-07-23T20:44:16Z",
+  "closed_at": "2015-07-23T20:44:09Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4395",
+    "html_url": "https://github.com/facebook/react/pull/4395",
+    "diff_url": "https://github.com/facebook/react/pull/4395.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4395.patch"
+  },
+  "body": "add an unitless property: `animationIterationCount` in `isUnitlessNumber`\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

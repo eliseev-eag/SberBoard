@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16806",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16806/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16806/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16806/events",
+  "html_url": "https://github.com/facebook/react/pull/16806",
+  "id": 494659991,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzE4MzY5MTA5",
+  "number": 16806,
+  "title": "[react-ui] FocusGrid -> ReactFocusTable + tweaks and fixes",
+  "user": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-09-17T14:28:58Z",
+  "updated_at": "2019-09-17T17:22:22Z",
+  "closed_at": "2019-09-17T17:22:11Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16806",
+    "html_url": "https://github.com/facebook/react/pull/16806",
+    "diff_url": "https://github.com/facebook/react/pull/16806.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16806.patch"
+  },
+  "body": "This PR is the continuation of work for the experimental React Accessibility components. Notably, this PR changes:\r\n\r\n- Rename `FocusGrid` -> `ReactFocusTable` to better reflect that it handles keyboard interactions (arrow keys) with layout matching that of a static table.\r\n- Adds support for getting the props from a scope.\r\n- Fixes a bunch of Flow issues\r\n- Adds a `onNavigateOut` prop that can be used on FocusTables to control the behavior when a user keyboard interactions out of a table's bounds. The callback provides the `direction` and a helper method to select another table of the same type.",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

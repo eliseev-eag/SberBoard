@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16759",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16759/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16759/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16759/events",
+  "html_url": "https://github.com/facebook/react/pull/16759",
+  "id": 492543227,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzE2Njk2Mzg2",
+  "number": 16759,
+  "title": "fix: inspect ClassComponent.render instead of constructor, ",
+  "user": {
+    "login": "theKashey",
+    "id": 582410,
+    "node_id": "MDQ6VXNlcjU4MjQxMA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/582410?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/theKashey",
+    "html_url": "https://github.com/theKashey",
+    "followers_url": "https://api.github.com/users/theKashey/followers",
+    "following_url": "https://api.github.com/users/theKashey/following{/other_user}",
+    "gists_url": "https://api.github.com/users/theKashey/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/theKashey/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/theKashey/subscriptions",
+    "organizations_url": "https://api.github.com/users/theKashey/orgs",
+    "repos_url": "https://api.github.com/users/theKashey/repos",
+    "events_url": "https://api.github.com/users/theKashey/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/theKashey/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2019-09-12T01:51:15Z",
+  "updated_at": "2019-09-12T22:26:56Z",
+  "closed_at": "2019-09-12T15:32:43Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16759",
+    "html_url": "https://github.com/facebook/react/pull/16759",
+    "diff_url": "https://github.com/facebook/react/pull/16759.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16759.patch"
+  },
+  "body": "fixes #16749\r\n\r\n- when `Show source` is clicked open `.render` for class Components instead of `constructor`\r\n\r\nIn the old DevTools the \"real\" `.render` of the instance would be inspected, however, new DevTools has only `$type`, so opening a method on a prototype is the only option for now.\r\n\r\ncc @bvaughn ",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

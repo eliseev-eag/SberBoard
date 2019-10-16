@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10720",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10720/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10720/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10720/events",
+  "html_url": "https://github.com/facebook/react/pull/10720",
+  "id": 258147641,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQxMzg5MjY3",
+  "number": 10720,
+  "title": "Fixes #9667: allow Edge and IE child windows to use Text Components",
+  "user": {
+    "login": "kenotron",
+    "id": 34725,
+    "node_id": "MDQ6VXNlcjM0NzI1",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/34725?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/kenotron",
+    "html_url": "https://github.com/kenotron",
+    "followers_url": "https://api.github.com/users/kenotron/followers",
+    "following_url": "https://api.github.com/users/kenotron/following{/other_user}",
+    "gists_url": "https://api.github.com/users/kenotron/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/kenotron/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/kenotron/subscriptions",
+    "organizations_url": "https://api.github.com/users/kenotron/orgs",
+    "repos_url": "https://api.github.com/users/kenotron/repos",
+    "events_url": "https://api.github.com/users/kenotron/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/kenotron/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2017-09-15T19:55:26Z",
+  "updated_at": "2017-09-16T17:18:03Z",
+  "closed_at": "2017-09-16T17:18:03Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10720",
+    "html_url": "https://github.com/facebook/react/pull/10720",
+    "diff_url": "https://github.com/facebook/react/pull/10720.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10720.patch"
+  },
+  "body": "Fixes #9667\r\n\r\nAppending a child (insertBefore) with a documentFragment apparently isn't supported in IE / Edge. I've added code to simply skip this node and just let the tree walking algo add the nodes below.",
+  "closed_by": {
+    "login": "kenotron",
+    "id": 34725,
+    "node_id": "MDQ6VXNlcjM0NzI1",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/34725?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/kenotron",
+    "html_url": "https://github.com/kenotron",
+    "followers_url": "https://api.github.com/users/kenotron/followers",
+    "following_url": "https://api.github.com/users/kenotron/following{/other_user}",
+    "gists_url": "https://api.github.com/users/kenotron/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/kenotron/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/kenotron/subscriptions",
+    "organizations_url": "https://api.github.com/users/kenotron/orgs",
+    "repos_url": "https://api.github.com/users/kenotron/repos",
+    "events_url": "https://api.github.com/users/kenotron/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/kenotron/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

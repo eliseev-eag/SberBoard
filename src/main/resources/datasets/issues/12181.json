@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12181",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12181/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12181/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12181/events",
+  "html_url": "https://github.com/facebook/react/pull/12181",
+  "id": 295381436,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTY3ODc0ODA5",
+  "number": 12181,
+  "title": "Add support for using !important in inline style values",
+  "user": {
+    "login": "necolas",
+    "id": 239676,
+    "node_id": "MDQ6VXNlcjIzOTY3Ng==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/239676?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/necolas",
+    "html_url": "https://github.com/necolas",
+    "followers_url": "https://api.github.com/users/necolas/followers",
+    "following_url": "https://api.github.com/users/necolas/following{/other_user}",
+    "gists_url": "https://api.github.com/users/necolas/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/necolas/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/necolas/subscriptions",
+    "organizations_url": "https://api.github.com/users/necolas/orgs",
+    "repos_url": "https://api.github.com/users/necolas/repos",
+    "events_url": "https://api.github.com/users/necolas/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/necolas/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 20,
+  "created_at": "2018-02-08T04:25:55Z",
+  "updated_at": "2019-03-28T22:30:56Z",
+  "closed_at": "2018-04-19T14:44:09Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12181",
+    "html_url": "https://github.com/facebook/react/pull/12181",
+    "diff_url": "https://github.com/facebook/react/pull/12181.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12181.patch"
+  },
+  "body": "Proposed solution for supporting the `!important` priority for inline styles (#1881). I couldn't write a test for this change; it looks like jsdom doesn't fully support the browser APIs being used. Please let me know if you've got any ideas.\r\n\r\nI used RNW's early-warning [benchmarks](necolas.github.io/react-native-web/benchmarks) to check how this change affects the `inline-styles` timings in Chrome. I couldn't see any difference when styles don't use `!important`. There is a 10-15% increase in time taken when every node in the tree (>600) has at least one style value using `!important` and going through the new code path. Overall it looks like it avoids introducing a performance regression for existing using of `style` while enabling use of `!important` if needed.\r\n\r\n[A micro-optimization](https://github.com/facebook/fbjs/pull/282) PR for `hyphenateStyleName` in `fbjs` helps a little too.\r\n\r\n(This patch is related to #12179, which adds a warning when `!important` is used.)",
+  "closed_by": {
+    "login": "necolas",
+    "id": 239676,
+    "node_id": "MDQ6VXNlcjIzOTY3Ng==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/239676?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/necolas",
+    "html_url": "https://github.com/necolas",
+    "followers_url": "https://api.github.com/users/necolas/followers",
+    "following_url": "https://api.github.com/users/necolas/following{/other_user}",
+    "gists_url": "https://api.github.com/users/necolas/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/necolas/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/necolas/subscriptions",
+    "organizations_url": "https://api.github.com/users/necolas/orgs",
+    "repos_url": "https://api.github.com/users/necolas/repos",
+    "events_url": "https://api.github.com/users/necolas/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/necolas/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

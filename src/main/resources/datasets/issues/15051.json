@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15051",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15051/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15051/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15051/events",
+  "html_url": "https://github.com/facebook/react/issues/15051",
+  "id": 418284582,
+  "node_id": "MDU6SXNzdWU0MTgyODQ1ODI=",
+  "number": 15051,
+  "title": "React Portals rendered into fragments don't support/listen to events",
+  "user": {
+    "login": "seanlandsman",
+    "id": 1329081,
+    "node_id": "MDQ6VXNlcjEzMjkwODE=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1329081?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/seanlandsman",
+    "html_url": "https://github.com/seanlandsman",
+    "followers_url": "https://api.github.com/users/seanlandsman/followers",
+    "following_url": "https://api.github.com/users/seanlandsman/following{/other_user}",
+    "gists_url": "https://api.github.com/users/seanlandsman/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/seanlandsman/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/seanlandsman/subscriptions",
+    "organizations_url": "https://api.github.com/users/seanlandsman/orgs",
+    "repos_url": "https://api.github.com/users/seanlandsman/repos",
+    "events_url": "https://api.github.com/users/seanlandsman/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/seanlandsman/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-03-07T12:29:22Z",
+  "updated_at": "2019-03-07T12:41:21Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n\r\nBug\r\n\r\n**What is the current behavior?**\r\n\r\nIf you create and render a react component into a Portal using a document fragment then events aren't listened to or triggered\r\n\r\nWe have a library that allows users to supply their own components that are then rendered into our layout at runtime. This works well but the need for us to render the components into divs/spans creates layout issues for our users. \r\n\r\nIn an attempt to mitigate against this problem we tried to use document fragments as the target but have found that doing so solves the rendering issues, but means that events are no longer listened to.\r\n\r\nI've created a repo that illustrates this here: https://github.com/seanlandsman/react-portal-fragment\r\n\r\nThis isn't quite how our library works but I've tried to create a repro of the problem that is as simplified as I could make it\r\n\r\n**What is the expected behavior?**\r\n\r\nComponent events should be triggered/listened \r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nReact 16.8.4\r\n\r\nNo, Portals were only supported in 16.x",
+  "closed_by": null
+}

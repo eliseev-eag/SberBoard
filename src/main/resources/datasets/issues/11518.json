@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11518",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11518/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11518/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11518/events",
+  "html_url": "https://github.com/facebook/react/pull/11518",
+  "id": 273015498,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTUxOTcwMTgw",
+  "number": 11518,
+  "title": "lint task: update scripts/eslint.js sharing code with linc.js;",
+  "user": {
+    "login": "sjy",
+    "id": 1523060,
+    "node_id": "MDQ6VXNlcjE1MjMwNjA=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1523060?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sjy",
+    "html_url": "https://github.com/sjy",
+    "followers_url": "https://api.github.com/users/sjy/followers",
+    "following_url": "https://api.github.com/users/sjy/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sjy/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sjy/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sjy/subscriptions",
+    "organizations_url": "https://api.github.com/users/sjy/orgs",
+    "repos_url": "https://api.github.com/users/sjy/repos",
+    "events_url": "https://api.github.com/users/sjy/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sjy/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2017-11-10T18:08:49Z",
+  "updated_at": "2017-11-13T17:07:40Z",
+  "closed_at": "2017-11-13T17:07:36Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11518",
+    "html_url": "https://github.com/facebook/react/pull/11518",
+    "diff_url": "https://github.com/facebook/react/pull/11518.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11518.patch"
+  },
+  "body": "Use eslint's CLIEngine to run lint task;",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

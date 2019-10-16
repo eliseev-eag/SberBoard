@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/17070",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/17070/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/17070/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/17070/events",
+  "html_url": "https://github.com/facebook/react/pull/17070",
+  "id": 506037898,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzI3MzUxMDc0",
+  "number": 17070,
+  "title": "Make uncontrolled -> controlled warning clearer",
+  "user": {
+    "login": "vcarl",
+    "id": 1551487,
+    "node_id": "MDQ6VXNlcjE1NTE0ODc=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1551487?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/vcarl",
+    "html_url": "https://github.com/vcarl",
+    "followers_url": "https://api.github.com/users/vcarl/followers",
+    "following_url": "https://api.github.com/users/vcarl/following{/other_user}",
+    "gists_url": "https://api.github.com/users/vcarl/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/vcarl/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/vcarl/subscriptions",
+    "organizations_url": "https://api.github.com/users/vcarl/orgs",
+    "repos_url": "https://api.github.com/users/vcarl/repos",
+    "events_url": "https://api.github.com/users/vcarl/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/vcarl/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-10-11T20:12:27Z",
+  "updated_at": "2019-10-16T02:34:46Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/17070",
+    "html_url": "https://github.com/facebook/react/pull/17070",
+    "diff_url": "https://github.com/facebook/react/pull/17070.diff",
+    "patch_url": "https://github.com/facebook/react/pull/17070.patch"
+  },
+  "body": "Fixes #17069. Glad to iterate further on the specific language, but I've found that explaining in this way usually clears it up for people.",
+  "closed_by": null
+}

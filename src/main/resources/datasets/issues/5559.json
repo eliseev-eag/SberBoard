@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5559",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5559/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5559/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5559/events",
+  "html_url": "https://github.com/facebook/react/pull/5559",
+  "id": 119259779,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTIwMjk3NzE=",
+  "number": 5559,
+  "title": "[docs]Add marked source in tutorial doc",
+  "user": {
+    "login": "shogunsea",
+    "id": 2238944,
+    "node_id": "MDQ6VXNlcjIyMzg5NDQ=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/2238944?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/shogunsea",
+    "html_url": "https://github.com/shogunsea",
+    "followers_url": "https://api.github.com/users/shogunsea/followers",
+    "following_url": "https://api.github.com/users/shogunsea/following{/other_user}",
+    "gists_url": "https://api.github.com/users/shogunsea/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/shogunsea/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/shogunsea/subscriptions",
+    "organizations_url": "https://api.github.com/users/shogunsea/orgs",
+    "repos_url": "https://api.github.com/users/shogunsea/repos",
+    "events_url": "https://api.github.com/users/shogunsea/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/shogunsea/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2015-11-28T00:29:51Z",
+  "updated_at": "2015-12-16T17:58:45Z",
+  "closed_at": "2015-12-02T19:30:49Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5559",
+    "html_url": "https://github.com/facebook/react/pull/5559",
+    "diff_url": "https://github.com/facebook/react/pull/5559.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5559.patch"
+  },
+  "body": "In `Getting started` section, add source for `marked.min.js` so that following the steps from tutorial won't lead to this error:\n\n![image](https://cloud.githubusercontent.com/assets/2238944/11449273/bd15d998-9534-11e5-9b9e-278678969630.png)\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

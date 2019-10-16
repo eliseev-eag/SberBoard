@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16799",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16799/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16799/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16799/events",
+  "html_url": "https://github.com/facebook/react/pull/16799",
+  "id": 494329434,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzE4MTA1MzQ1",
+  "number": 16799,
+  "title": "Warning system refactoring (part 1)",
+  "user": {
+    "login": "Jessidhia",
+    "id": 73085,
+    "node_id": "MDQ6VXNlcjczMDg1",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/73085?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Jessidhia",
+    "html_url": "https://github.com/Jessidhia",
+    "followers_url": "https://api.github.com/users/Jessidhia/followers",
+    "following_url": "https://api.github.com/users/Jessidhia/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Jessidhia/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Jessidhia/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Jessidhia/subscriptions",
+    "organizations_url": "https://api.github.com/users/Jessidhia/orgs",
+    "repos_url": "https://api.github.com/users/Jessidhia/repos",
+    "events_url": "https://api.github.com/users/Jessidhia/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Jessidhia/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-09-16T23:46:17Z",
+  "updated_at": "2019-09-25T07:37:06Z",
+  "closed_at": "2019-09-24T12:45:39Z",
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16799",
+    "html_url": "https://github.com/facebook/react/pull/16799",
+    "diff_url": "https://github.com/facebook/react/pull/16799.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16799.patch"
+  },
+  "body": "Step 1 of the refactoring proposed in https://github.com/facebook/react/issues/16753\r\n\r\nIt's pretty much the minimum for now, to make it easier to merge. The `toLowPriorityWarnDev` matcher usage checks still mention the `toWarnDev` name, though. It can be fixed by making the matcher name also an argument to the factory, or the matcher could be forked instead of using a factory.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

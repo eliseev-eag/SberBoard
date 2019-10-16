@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15578",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15578/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15578/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15578/events",
+  "html_url": "https://github.com/facebook/react/pull/15578",
+  "id": 441040547,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjc2NDQ4NTQ3",
+  "number": 15578,
+  "title": "Add Suspense Boundary Context (and unstable_avoidThisFallback)",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-05-07T05:57:26Z",
+  "updated_at": "2019-05-08T01:08:06Z",
+  "closed_at": "2019-05-08T01:08:06Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15578",
+    "html_url": "https://github.com/facebook/react/pull/15578",
+    "diff_url": "https://github.com/facebook/react/pull/15578.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15578.patch"
+  },
+  "body": "This adds a new context for Suspense boundaries. This will be used to implement longer suspense in cases it's undesirable to show a certain fallbacks state and SuspenseList.\r\n\r\nThe context is a bitmask split into two parts. A shallow part that only applies to the direct suspense boundaries below. A subtree part that applies to the entire subtree deeply. Currently there are only two flags but I expect we'll need more in the future. I already have a couple of ideas (like tagging dehydrated boundaries and optimizations for suspense list).\r\n\r\nThe interesting case that this PR models is the difference if suspense happens in a tree that is already showing its content on the screen or if the content of the current suspense boundary is invisible.\r\n\r\nIf the current suspense boundary is showing content, then switching to the fallback would hide that content. This is always undesirable. In a follow up, I will add an option to suspend the commit for longer in this case. This will kick in regardless if there is a `unstable_avoidThisFallback` boundary or not. Having one of these avoided boundaries is completely optional.\r\n\r\nHowever, in the case where we cannot suspend the commit for longer (e.g. because there was no busy spinner or we're in a sync mode), the flag `unstable_avoidThisFallback` can be used as a back up boundary to avoid completely falling back to the outer most boundary. It's never a good idea to have one so I'm not sure we'll actually want to keep this API but this lets us play with it. I didn't bother adding too many tests for it.\r\n\r\nDuring initial render (or if the tree was previously hidden) then a `unstable_avoidThisFallback` boundary behaves as if there was no boundary there at all. The outer one catches it.",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

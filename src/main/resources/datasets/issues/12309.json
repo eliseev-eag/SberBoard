@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12309",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12309/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12309/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12309/events",
+  "html_url": "https://github.com/facebook/react/issues/12309",
+  "id": 301085867,
+  "node_id": "MDU6SXNzdWUzMDEwODU4Njc=",
+  "number": 12309,
+  "title": "Expose the `onSelect` event for any focusable element?",
+  "user": {
+    "login": "danburzo",
+    "id": 205375,
+    "node_id": "MDQ6VXNlcjIwNTM3NQ==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/205375?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/danburzo",
+    "html_url": "https://github.com/danburzo",
+    "followers_url": "https://api.github.com/users/danburzo/followers",
+    "following_url": "https://api.github.com/users/danburzo/following{/other_user}",
+    "gists_url": "https://api.github.com/users/danburzo/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/danburzo/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/danburzo/subscriptions",
+    "organizations_url": "https://api.github.com/users/danburzo/orgs",
+    "repos_url": "https://api.github.com/users/danburzo/repos",
+    "events_url": "https://api.github.com/users/danburzo/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/danburzo/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2018-02-28T16:13:56Z",
+  "updated_at": "2019-03-12T23:41:03Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "I was curious earlier if the `onSelect` event works on things other than form elements and `contentEditable` elements, and by disabling a couple of conditions in the code, it seems — at first brush, at least — that `onSelect` works splendidly on any element that is focusable (via the `tabIndex` attribute), to obtain things like:\r\n\r\n![ezgif-2-326cf42421](https://user-images.githubusercontent.com/205375/36798178-8aa7fdda-1cb2-11e8-8838-46e04300a09a.gif)\r\n\r\nWould there be any problem with relaxing the conditions for allowing `onSelect` to include elements that have a `tabIndex` attribute? (Other than the case where existing implementations in userland rely on the event being disabled when `contenteditable = true` is removed from an element).",
+  "closed_by": null
+}

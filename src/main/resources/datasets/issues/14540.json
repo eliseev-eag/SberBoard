@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14540",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14540/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14540/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14540/events",
+  "html_url": "https://github.com/facebook/react/issues/14540",
+  "id": 396340261,
+  "node_id": "MDU6SXNzdWUzOTYzNDAyNjE=",
+  "number": 14540,
+  "title": "Nested portals should be discoverable",
+  "user": {
+    "login": "theKashey",
+    "id": 582410,
+    "node_id": "MDQ6VXNlcjU4MjQxMA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/582410?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/theKashey",
+    "html_url": "https://github.com/theKashey",
+    "followers_url": "https://api.github.com/users/theKashey/followers",
+    "following_url": "https://api.github.com/users/theKashey/following{/other_user}",
+    "gists_url": "https://api.github.com/users/theKashey/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/theKashey/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/theKashey/subscriptions",
+    "organizations_url": "https://api.github.com/users/theKashey/orgs",
+    "repos_url": "https://api.github.com/users/theKashey/repos",
+    "events_url": "https://api.github.com/users/theKashey/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/theKashey/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-01-07T04:02:48Z",
+  "updated_at": "2019-06-07T03:46:59Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "This is more about a bridge between actual DOM Tree and React Tree.\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\nfeature\r\n\r\n**What is the current behavior?**\r\nYou can _portal_ a part of your rendering tree to another place in Dom Tree, and React would handle events, including events on Capture Phase like there were no portals - events could dive through all the _react_ parents, and bubble up through all the _react_ parents.\r\n\r\nThis is quite useful, as long as portal is an implementation detail, but useful only for normal events; there are more cases around it.\r\n\r\n**What is the expected behavior?**\r\n\r\nIt's better to explain it by example\r\n- you have a Modal Dialog and it uses a Focus Lock, ie focus could not leave it.\r\n- inside Modal you have a Custom Select, with Dropdown menu rendered via a portal.\r\n- you could not use it, as long as from DOM prospective `ModalNode.contains(DropDownNode)` is always false, and Focus Lock will prevent focusing.\r\n\r\nIt's a real issue - https://github.com/reach/reach-ui/issues/83, https://github.com/theKashey/react-focus-lock/issues/19.\r\n\r\nProposed solution:\r\n- `containsNode(domNode):boolean` - _React-aware_ version of DOM API `node.contains(anotherNode)`.\r\n- `getHostNodes():Nodes[]` - returns a list of all root nodes inside \"current component\" including direct children and portals. Similar to `ReactDom.findDomNode`, and (proposed)refs attached to React.Fragment. It just finds all nodes \"you are consists of\". As a result you will be able to `tab` from one `piece` of you to another, making focus management independed of implementation details.\r\n\r\nCons:\r\n- requires Component to access fiber, DOM node to access fiber thought node, or an new `hook` to do it in a functional way.\r\n- does twice dreadfull things than deprecated `findDomNode`\r\n- usage scope is very narrow.\r\n\r\nPros:\r\n- _my_ use case requires _momentum_ access to a rendered tree, and does not suffer async stuff as `findDomNode`, where underlaying node might not be yet created. Stuff like \"_does something `containsNode` right now_\", or _\"`getHostNodes` I consist from right now\"_ are sync, and the question asked about actual DOM tree structure.\r\n\r\nExample using [react-dom-reflection](https://github.com/theKashey/react-dom-reflection), which implements required API - https://codesandbox.io/s/1or60v506l\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nNever worked",
+  "closed_by": null
+}

@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14899",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14899/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14899/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14899/events",
+  "html_url": "https://github.com/facebook/react/issues/14899",
+  "id": 412541333,
+  "node_id": "MDU6SXNzdWU0MTI1NDEzMzM=",
+  "number": 14899,
+  "title": "Using lazy components within react router resulting in strange behavior",
+  "user": {
+    "login": "kmcaloon",
+    "id": 10777353,
+    "node_id": "MDQ6VXNlcjEwNzc3MzUz",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/10777353?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/kmcaloon",
+    "html_url": "https://github.com/kmcaloon",
+    "followers_url": "https://api.github.com/users/kmcaloon/followers",
+    "following_url": "https://api.github.com/users/kmcaloon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/kmcaloon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/kmcaloon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/kmcaloon/subscriptions",
+    "organizations_url": "https://api.github.com/users/kmcaloon/orgs",
+    "repos_url": "https://api.github.com/users/kmcaloon/repos",
+    "events_url": "https://api.github.com/users/kmcaloon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/kmcaloon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 620368407,
+      "node_id": "MDU6TGFiZWw2MjAzNjg0MDc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Needs%20More%20Information",
+      "name": "Resolution: Needs More Information",
+      "color": "fffde7",
+      "default": false
+    },
+    {
+      "id": 1168115654,
+      "node_id": "MDU6TGFiZWwxMTY4MTE1NjU0",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Support%20Redirect",
+      "name": "Resolution: Support Redirect",
+      "color": "106099",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-02-20T17:24:30Z",
+  "updated_at": "2019-02-22T18:55:59Z",
+  "closed_at": "2019-02-22T18:55:59Z",
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\nBug\r\n\r\n**What is the current behavior?**\r\nI am using React.lazy and react-router-dom to dynamically load/render components within routes.  \r\nIf the app initially loads at a route with a non-lazy component, as soon as I click on link to a route with a lazy component the entire page flashes and refreshes at that route. If the app initially loads at a route with a lazy component, as soon as I click on a link to another lazy component route, the app throws the following error:  Uncaught Invariant Violation: Unable to find node on an unmounted component.\r\n\r\nHere is a portion of the code in question:\r\n```\r\nconst DashScreen = React.lazy( () => import( 'screens-pilots/DashScreen' ) );\r\nconst SingleWingScreen = React.lazy( () => import( 'screens-pilots/SingleWingScreen' ) );\r\n\r\n...\r\n\r\n  <Switch>\r\n    <Route\r\n    path={ '/home' }\r\n    render={ router =>\r\n      <DashScreen router={ router }/>\r\n    }\r\n    />\r\n    <Route\r\n    path={ '/wings/:slug' }\r\n    render={ router =>\r\n      <SingleWingScreen\r\n      router={ router }\r\n      data={ p.AppState.is_enterprise_pilot ? p.AppState.company.wings : null }\r\n      />\r\n    }\r\n    />\r\n  </Switch>\r\n\r\n```\r\n\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\n\r\nNot possible at the moment, but if necessary will try to produce a minimal demo.  For what it's worth I am using a customized cra with the following package.json\r\n\r\n```\r\n{\r\n  \"name\": \"hi-there\",\r\n  \"version\": \"0.1.0\",\r\n  \"private\": true,\r\n  \"dependencies\": {\r\n    \"@material-ui/core\": \"^3.9.2\",\r\n    \"@sentry/browser\": \"^4.5.3\",\r\n    \"antd\": \"^3.13.2\",\r\n    \"await-to-js\": \"^2.1.1\",\r\n    \"axios\": \"^0.18.0\",\r\n    \"bootstrap\": \"^4.3.0\",\r\n    \"classnames\": \"^2.2.6\",\r\n    \"craco-preact\": \"^1.1.0\",\r\n    \"date-fns\": \"^1.30.1\",\r\n    \"directory-named-webpack-plugin\": \"^4.0.0\",\r\n    \"js-cookie\": \"^2.2.0\",\r\n    \"material-ui\": \"^0.20.2\",\r\n    \"node-sass\": \"^4.11.0\",\r\n    \"rc-queue-anim\": \"^1.6.11\",\r\n    \"react\": \"^16.8.1\",\r\n    \"react-cache\": \"^2.0.0-alpha.1\",\r\n    \"react-dom\": \"^16.8.1\",\r\n    \"react-helmet\": \"^5.2.0\",\r\n    \"react-loadable\": \"^5.5.0\",\r\n    \"react-router\": \"^4.3.1\",\r\n    \"react-router-dom\": \"^4.3.1\",\r\n    \"react-scripts\": \"^2.1.5\",\r\n    \"react-use\": \"^5.3.0\",\r\n    \"reactstrap\": \"^7.1.0\",\r\n    \"sass-rem\": \"^2.0.1\",\r\n    \"webpack-bundle-analyzer\": \"^3.0.3\",\r\n    \"webpackbar\": \"^3.1.5\"\r\n  },\r\n  \"scripts\": {\r\n    \"start\": \"nodemon -w craco.config.js -w ./src/lib/ant-theme.less --exec 'craco start'\",\r\n    \"start-live-api\": \"REACT_APP_API=production craco start\",\r\n    \"build\": \"craco build\",\r\n    \"test\": \"craco test\",\r\n    \"eject\": \"react-scripts eject\"\r\n  },\r\n  \"eslintConfig\": {\r\n    \"extends\": \"react-app\"\r\n  },\r\n  \"browserslist\": [\r\n    \">0.2%\",\r\n    \"not dead\",\r\n    \"not ie <= 11\",\r\n    \"not op_mini all\"\r\n  ],\r\n  \"devDependencies\": {\r\n    \"@craco/craco\": \"^3.4.1\",\r\n    \"craco-antd\": \"^1.10.0\",\r\n    \"nodemon\": \"^1.18.10\"\r\n  }\r\n}\r\n```\r\n\r\n**What is the expected behavior?**\r\nSmooth navigation.  React Loadable is currently working as expected with this exact setup when I swap it in for React.Lazy().\r\n",
+  "closed_by": {
+    "login": "kmcaloon",
+    "id": 10777353,
+    "node_id": "MDQ6VXNlcjEwNzc3MzUz",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/10777353?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/kmcaloon",
+    "html_url": "https://github.com/kmcaloon",
+    "followers_url": "https://api.github.com/users/kmcaloon/followers",
+    "following_url": "https://api.github.com/users/kmcaloon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/kmcaloon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/kmcaloon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/kmcaloon/subscriptions",
+    "organizations_url": "https://api.github.com/users/kmcaloon/orgs",
+    "repos_url": "https://api.github.com/users/kmcaloon/repos",
+    "events_url": "https://api.github.com/users/kmcaloon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/kmcaloon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

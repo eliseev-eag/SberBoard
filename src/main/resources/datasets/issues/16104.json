@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16104",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16104/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16104/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16104/events",
+  "html_url": "https://github.com/facebook/react/pull/16104",
+  "id": 466546144,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjk2MzY3Mjk2",
+  "number": 16104,
+  "title": "Give unresolved lazy() a name in component stack",
+  "user": {
+    "login": "motiz88",
+    "id": 2246565,
+    "node_id": "MDQ6VXNlcjIyNDY1NjU=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/2246565?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/motiz88",
+    "html_url": "https://github.com/motiz88",
+    "followers_url": "https://api.github.com/users/motiz88/followers",
+    "following_url": "https://api.github.com/users/motiz88/following{/other_user}",
+    "gists_url": "https://api.github.com/users/motiz88/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/motiz88/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/motiz88/subscriptions",
+    "organizations_url": "https://api.github.com/users/motiz88/orgs",
+    "repos_url": "https://api.github.com/users/motiz88/repos",
+    "events_url": "https://api.github.com/users/motiz88/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/motiz88/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-07-10T22:06:17Z",
+  "updated_at": "2019-07-30T20:45:04Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16104",
+    "html_url": "https://github.com/facebook/react/pull/16104",
+    "diff_url": "https://github.com/facebook/react/pull/16104.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16104.patch"
+  },
+  "body": "Currently, if a `React.lazy(...)` component fails to load, React reports the error with a component stack in which the lazy component is represented as `Unknown` ([example](https://codesandbox.io/s/unresolved-lazy-component-stack-qjsb3)).\r\n\r\nWith this PR:\r\n1. The default name reported will instead be `Lazy(Unknown)`.\r\n2. We additionally support setting the `displayName` property on the return value of `lazy()`, in which case the name will be `Lazy(${displayName})`.\r\n\r\nNote that both of these changes only apply while the lazy component is unresolved. This PR also adds a test covering the (unchanged) case of a resolved lazy component that throws an error during rendering.\r\n\r\nThe `displayName` support may be leveraged in a Babel plugin (see https://github.com/babel/babel/pull/10201) to infer the name from context and make this seamless for most users:\r\n\r\n```diff\r\n const Foo = React.lazy(() => import('./FooImplementation'));\r\n+Foo.displayName = 'Foo';\r\n```",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15711",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15711/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15711/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15711/events",
+  "html_url": "https://github.com/facebook/react/pull/15711",
+  "id": 447322128,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjgxMzQyNjY5",
+  "number": 15711,
+  "title": "[Fresh] Initial Babel plugin implementation",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2019-05-22T20:13:17Z",
+  "updated_at": "2019-05-22T23:23:18Z",
+  "closed_at": "2019-05-22T22:11:09Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15711",
+    "html_url": "https://github.com/facebook/react/pull/15711",
+    "diff_url": "https://github.com/facebook/react/pull/15711.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15711.patch"
+  },
+  "body": "This adds a basic implementation of the Babel plugin. It's incomplete and will be expanded as we go.\r\n\r\nIts takes code like\r\n\r\n```js\r\nfunction Foo() {\r\n  // ...\r\n}\r\n\r\nlet Bar = () => {\r\n  // ...\r\n}\r\n```\r\n\r\nand turns it into something like\r\n\r\n```js\r\nfunction Foo() {\r\n  // ...\r\n}\r\n_c = Foo;\r\n\r\nlet Bar = _c2 = () => {\r\n  // ...\r\n}\r\n\r\nvar _c;\r\nvar _c2;\r\n\r\n__register__(_c, 'Foo');\r\n__register__(_c2, 'Bar');\r\n```\r\n\r\nWe rely on var and function declaration hoisting here. The registration all happens at the bottom so that if module init throws, we throw away the broken components.\r\n\r\nThe transform handles some basic cases like top-level functions and arrows (normal or exported). In the future I'll add support for some HOC patterns like `memo`. The transform intentionally injects variable in the middle of assignment so that in theory we could even do things like `_c3 = forwardRef(_c2 = memo(_c1 = function() { }))` without changing code semantics.\r\n\r\nIn the follow-ups, I'll handle more cases and tie this with our integration tests so we can verify the whole thing works as expected.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

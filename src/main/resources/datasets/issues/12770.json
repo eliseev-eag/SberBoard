@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12770",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12770/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12770/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12770/events",
+  "html_url": "https://github.com/facebook/react/pull/12770",
+  "id": 321748498,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTg3MDU3MzA2",
+  "number": 12770,
+  "title": "Rename Scheduler methods more accurately",
+  "user": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2018-05-09T22:31:07Z",
+  "updated_at": "2018-05-16T13:36:07Z",
+  "closed_at": "2018-05-16T13:36:07Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12770",
+    "html_url": "https://github.com/facebook/react/pull/12770",
+    "diff_url": "https://github.com/facebook/react/pull/12770.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12770.patch"
+  },
+  "body": "**what is the change?:**\r\n```\r\nrIC -> scheduleCallback\r\n```\r\nWe will later expose a second method for different priority level, name\r\nTBD. Since we only have one priority right now we can delay the\r\nbikeshedding about the priority names.\r\n\r\n```\r\ncIC -> cancelScheduledCallback\r\n```\r\nThis method can be used to cancel callbacks scheduled at any priority\r\nlevel, and will remain named this way.\r\n\r\nwhy make this change?:\r\nOriginally this module contained a polyfill for requestIdleCallback\r\nand cancelIdleCallback but we are changing the behavior so it's no\r\nlonger just a polyfill. The new names are more semantic and distinguish\r\nthis from the original polyfill functionality.\r\n\r\n**test plan:**\r\nRan the tests\r\n\r\n**why make this change?:**\r\nGetting this out of the way so things are more clear.\r\n\r\n**Coming Up Next:**\r\n- Switching from a Map of ids and an array to a linked list for storing\r\ncallbacks.\r\n- Error handling",
+  "closed_by": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

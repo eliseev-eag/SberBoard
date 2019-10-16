@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/17085",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/17085/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/17085/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/17085/events",
+  "html_url": "https://github.com/facebook/react/issues/17085",
+  "id": 506845531,
+  "node_id": "MDU6SXNzdWU1MDY4NDU1MzE=",
+  "number": 17085,
+  "title": "Can't get the profiler screenshot feature working in the React DevTools",
+  "user": {
+    "login": "gbgdev",
+    "id": 8050903,
+    "node_id": "MDQ6VXNlcjgwNTA5MDM=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/8050903?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gbgdev",
+    "html_url": "https://github.com/gbgdev",
+    "followers_url": "https://api.github.com/users/gbgdev/followers",
+    "following_url": "https://api.github.com/users/gbgdev/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gbgdev/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gbgdev/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gbgdev/subscriptions",
+    "organizations_url": "https://api.github.com/users/gbgdev/orgs",
+    "repos_url": "https://api.github.com/users/gbgdev/repos",
+    "events_url": "https://api.github.com/users/gbgdev/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gbgdev/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 40929155,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1NQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Question",
+      "name": "Type: Question",
+      "color": "cc317c",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-10-14T19:57:20Z",
+  "updated_at": "2019-10-15T04:41:53Z",
+  "closed_at": "2019-10-14T21:02:14Z",
+  "author_association": "NONE",
+  "body": "I've recently come across [this tweet](https://twitter.com/brian_d_vaughn/status/1113200027835310080) and saw that the new DevTools profiler apparently would be able to capture images of the DOM after each commit and display them on the right side (below the commit information). \r\n\r\nWas this feature indeed added to DevTools 4.2.0? Or is it coming out in a future version?\r\n\r\nJust asking because I didn't manage to get it working while trying with my projects.\r\n\r\n**React**: 16.10.2\r\n**Browser:** Google Chrome 77.0.3865.90\r\n**DevTools:** 4.2.0-a8b8ffb89",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

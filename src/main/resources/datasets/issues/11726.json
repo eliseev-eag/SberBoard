@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11726",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11726/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11726/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11726/events",
+  "html_url": "https://github.com/facebook/react/issues/11726",
+  "id": 278248422,
+  "node_id": "MDU6SXNzdWUyNzgyNDg0MjI=",
+  "number": 11726,
+  "title": "client/server mismatch for text inside of an a/button causes the the a/button to focus on page load",
+  "user": {
+    "login": "brucewpaul",
+    "id": 17549440,
+    "node_id": "MDQ6VXNlcjE3NTQ5NDQw",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/17549440?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/brucewpaul",
+    "html_url": "https://github.com/brucewpaul",
+    "followers_url": "https://api.github.com/users/brucewpaul/followers",
+    "following_url": "https://api.github.com/users/brucewpaul/following{/other_user}",
+    "gists_url": "https://api.github.com/users/brucewpaul/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/brucewpaul/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/brucewpaul/subscriptions",
+    "organizations_url": "https://api.github.com/users/brucewpaul/orgs",
+    "repos_url": "https://api.github.com/users/brucewpaul/repos",
+    "events_url": "https://api.github.com/users/brucewpaul/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/brucewpaul/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710332294,
+      "node_id": "MDU6TGFiZWw3MTAzMzIyOTQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Server%20Rendering",
+      "name": "Component: Server Rendering",
+      "color": "d4c5f9",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2017-11-30T19:53:33Z",
+  "updated_at": "2017-12-06T15:23:37Z",
+  "closed_at": "2017-12-06T15:23:37Z",
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nbug\r\n\r\n**What is the current behavior?**\r\nIf there is a client/server mismatch for text inside of an a or button element, it causes it to be automatically focused on page load.\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem via https://jsfiddle.net or similar (template for React 16: https://jsfiddle.net/Luktwrdm/, template for React 15: https://jsfiddle.net/hmbg7e9w/).**\r\n```\r\nlet text;\r\nlet URL = '/randomURL';\r\nif (typeof window !== 'undefined') {\r\n  text = 'CLIENT TEXT';\r\n} else {\r\n  text = 'TEXT';\r\n}\r\n\r\nreturn (\r\n  <a href={URL}>\r\n    {text}\r\n  </a>\r\n);\r\n```\r\n\r\nif the focus is not on the window (i.e. if a dom element is selected in the chrome inspector or react inspector widnow), then it doesn't add the focus.\r\n\r\n**What is the expected behavior?**\r\nThe expected behavior is that it would either show CLIENT TEXT or TEXT (depending on how React16 resolves the diff), but for it not to be automatically highlighted \r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nReact16 / macosx / chrome + ff + safari",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16898",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16898/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16898/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16898/events",
+  "html_url": "https://github.com/facebook/react/pull/16898",
+  "id": 498554170,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzIxNDYzMjQx",
+  "number": 16898,
+  "title": "Add HostComponent type to ReactNative",
+  "user": {
+    "login": "TheSavior",
+    "id": 249164,
+    "node_id": "MDQ6VXNlcjI0OTE2NA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/249164?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/TheSavior",
+    "html_url": "https://github.com/TheSavior",
+    "followers_url": "https://api.github.com/users/TheSavior/followers",
+    "following_url": "https://api.github.com/users/TheSavior/following{/other_user}",
+    "gists_url": "https://api.github.com/users/TheSavior/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/TheSavior/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/TheSavior/subscriptions",
+    "organizations_url": "https://api.github.com/users/TheSavior/orgs",
+    "repos_url": "https://api.github.com/users/TheSavior/repos",
+    "events_url": "https://api.github.com/users/TheSavior/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/TheSavior/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-09-25T22:24:42Z",
+  "updated_at": "2019-09-26T22:05:12Z",
+  "closed_at": "2019-09-26T21:42:19Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16898",
+    "html_url": "https://github.com/facebook/react/pull/16898",
+    "diff_url": "https://github.com/facebook/react/pull/16898.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16898.patch"
+  },
+  "body": "**Note: This change was already landed to React Native in https://github.com/facebook/react-native/commit/69c38e5a639f34620038ae5724426c92c355e509 so this commit just updates the types in React core to make the next sync not have conflicts.**\r\n\r\n---------------\r\n\r\nIn React Native there are three types of \"Native\" components.\r\n\r\n```\r\ncreateReactClass with NativeMethodsMixin\r\n```\r\n```\r\nclass MyComponent extends ReactNative.NativeComponent\r\n```\r\n```\r\nrequireNativeComponent('RCTView')\r\n```\r\n\r\nThe implementation for how to handle all three of these exists in the React Native Renderer. Refs attached to components created via these methods provide a set of functions such as\r\n```\r\n.measure\r\n.measureInWindow\r\n.measureLayout\r\n.setNativeProps\r\n```\r\n\r\nThese methods have been used for our core components in the repo to provide a consistent API. Many of the APIs in React Native require a `reactTag` to a host component. This is acquired by calling `findNodeHandle` with any component. `findNodeHandle` works with the first two approaches.\r\n\r\nFor a lot of our new Fabric APIs, we will require passing a ref to a HostComponent directly instead of relying on `findNodeHandle` to tunnel through the component tree as that behavior isn't safe with React concurrent mode.\r\n\r\nThe goal of this change is to enable us to differentiate between components created with `requireNativeComponent` and the other types. This will be needed to be able to safely type the new APIs.\r\n\r\nFor existing components that should support being a host component but need to use some JS behavior in a wrapper, they should use `forwardRef`. The majority of React Native's core components were migrated to use `forwardRef` last year. Components that can't use forwardRef will need to have a method like `getNativeRef()` to get access to the underlying host component ref.\r\n\r\nNote, we will need follow up changes as well as changes to the React Renderer in the React repo to fully utilize this new type.\r\n",
+  "closed_by": {
+    "login": "TheSavior",
+    "id": 249164,
+    "node_id": "MDQ6VXNlcjI0OTE2NA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/249164?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/TheSavior",
+    "html_url": "https://github.com/TheSavior",
+    "followers_url": "https://api.github.com/users/TheSavior/followers",
+    "following_url": "https://api.github.com/users/TheSavior/following{/other_user}",
+    "gists_url": "https://api.github.com/users/TheSavior/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/TheSavior/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/TheSavior/subscriptions",
+    "organizations_url": "https://api.github.com/users/TheSavior/orgs",
+    "repos_url": "https://api.github.com/users/TheSavior/repos",
+    "events_url": "https://api.github.com/users/TheSavior/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/TheSavior/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

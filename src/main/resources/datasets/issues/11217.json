@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11217",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11217/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11217/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11217/events",
+  "html_url": "https://github.com/facebook/react/pull/11217",
+  "id": 265306843,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ2NDcwMjky",
+  "number": 11217,
+  "title": "Accept React attributes on custom components",
+  "user": {
+    "login": "nuc",
+    "id": 697014,
+    "node_id": "MDQ6VXNlcjY5NzAxNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/697014?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nuc",
+    "html_url": "https://github.com/nuc",
+    "followers_url": "https://api.github.com/users/nuc/followers",
+    "following_url": "https://api.github.com/users/nuc/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nuc/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nuc/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nuc/subscriptions",
+    "organizations_url": "https://api.github.com/users/nuc/orgs",
+    "repos_url": "https://api.github.com/users/nuc/repos",
+    "events_url": "https://api.github.com/users/nuc/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nuc/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2017-10-13T14:22:43Z",
+  "updated_at": "2018-01-05T17:46:07Z",
+  "closed_at": "2018-01-05T16:42:22Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11217",
+    "html_url": "https://github.com/facebook/react/pull/11217",
+    "diff_url": "https://github.com/facebook/react/pull/11217.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11217.patch"
+  },
+  "body": "Hi there,\r\n\r\nIt seems that currently if you pass a React attribute to a custom component, it doesn't replace it with the html counterpart but just renders it as text.\r\n\r\nFor example:\r\n\r\n```<amp-img className=\"my-image\" />``` will render ```<amp-img classname=\"my-image\" />```.\r\n\r\nApparently, that's by design, since we found that [there are tests](https://github.com/facebook/react/blob/ce8c51f8d3c26723c134e23002e7f5195f7b8c68/src/renderers/dom/shared/__tests__/ReactDOMServerIntegration-test.js#L667-L670) explicitly checking this behaviour.\r\n\r\nDo you really think that this should work the way it is? It feels a bit strange that for custom components you would need to use `class` instead of `className`. \r\n\r\n(thanks @jacksbox for the pairing session 😃)\r\n\r\nCheers",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4540",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4540/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4540/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4540/events",
+  "html_url": "https://github.com/facebook/react/pull/4540",
+  "id": 98489103,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDEzOTA1Njc=",
+  "number": 4540,
+  "title": "removed dangling comma that messes up loading in IE8",
+  "user": {
+    "login": "scottburch",
+    "id": 103808,
+    "node_id": "MDQ6VXNlcjEwMzgwOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/103808?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/scottburch",
+    "html_url": "https://github.com/scottburch",
+    "followers_url": "https://api.github.com/users/scottburch/followers",
+    "following_url": "https://api.github.com/users/scottburch/following{/other_user}",
+    "gists_url": "https://api.github.com/users/scottburch/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/scottburch/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/scottburch/subscriptions",
+    "organizations_url": "https://api.github.com/users/scottburch/orgs",
+    "repos_url": "https://api.github.com/users/scottburch/repos",
+    "events_url": "https://api.github.com/users/scottburch/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/scottburch/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2015-07-31T23:38:25Z",
+  "updated_at": "2015-08-20T21:37:25Z",
+  "closed_at": "2015-08-20T21:37:20Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4540",
+    "html_url": "https://github.com/facebook/react/pull/4540",
+    "diff_url": "https://github.com/facebook/react/pull/4540.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4540.patch"
+  },
+  "body": "Dangling comma causes error in IE8\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

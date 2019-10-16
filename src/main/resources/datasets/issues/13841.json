@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13841",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13841/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13841/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13841/events",
+  "html_url": "https://github.com/facebook/react/pull/13841",
+  "id": 369672140,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjIyNTU3MDg2",
+  "number": 13841,
+  "title": "Deprecate findDOMNode in StrictMode",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 31,
+  "created_at": "2018-10-12T18:58:33Z",
+  "updated_at": "2018-12-10T22:20:53Z",
+  "closed_at": "2018-10-12T22:42:01Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13841",
+    "html_url": "https://github.com/facebook/react/pull/13841",
+    "diff_url": "https://github.com/facebook/react/pull/13841.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13841.patch"
+  },
+  "body": "# Motivation\r\n\r\nThe main motivation is that findDOMNode is breaking abstraction levels but allowing a parent to reason about what kind of children a component might render. It creates a refactoring hazard where you can't change the implementation details of a component because a parent might be reaching into its DOM node.\r\n\r\nAttaching explicit refs is the alternative. The main thing that used to be difficult is creating a higher order component that seamlessly work with its children. This can now be achieved using forwardRefs.\r\n\r\nUp until this point it was a loose recommendation that you don't use this functions but there are certain technical details that are twisting our hands to want to deprecate it.\r\n\r\n- In the Fiber architecture it is not possible to cache the \"current\" node at a higher level since at any given point there are several possible future trees. This causes the findDOMNode algorithm to turn into a very complicated and possibly slow search algorithm in bad cases.\r\n- In the compiler project, it becomes difficult to know if any given DOM node might need to be found. That forces us to replicate the tree structure just in case someone calls it. We'd rather not support this. Instead only explicit refs will be the ones that gets materialized.\r\n\r\nWe'll only deprecate this in StrictMode for the foreseeable future. It won't get deleted for a long time because lots of existing code depends on it. This is more about preventing new code being written using this outdated technique.\r\n\r\n# PR\r\n\r\nThere are two scenarios. One is that we pass a component instance that is\r\nalready in strict mode or the node that we find is in strict mode if\r\nan outer component renders into strict mode.\r\n\r\nI use a separate method findHostInstanceWithWarning for this so that\r\na) I can pass the method name (findDOMNode/findNodeHandle).\r\nb) Can ignore this warning in React Native mixins/NativeComponent that use this helper.\r\n\r\nI don't want to expose the fiber to the renderers themselves.",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

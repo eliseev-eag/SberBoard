@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8523",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8523/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8523/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8523/events",
+  "html_url": "https://github.com/facebook/react/pull/8523",
+  "id": 194191832,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTcwMjE3MzY=",
+  "number": 8523,
+  "title": "documentation: designers are friends, not fodder for jokes",
+  "user": {
+    "login": "feministy",
+    "id": 3128783,
+    "node_id": "MDQ6VXNlcjMxMjg3ODM=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3128783?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/feministy",
+    "html_url": "https://github.com/feministy",
+    "followers_url": "https://api.github.com/users/feministy/followers",
+    "following_url": "https://api.github.com/users/feministy/following{/other_user}",
+    "gists_url": "https://api.github.com/users/feministy/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/feministy/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/feministy/subscriptions",
+    "organizations_url": "https://api.github.com/users/feministy/orgs",
+    "repos_url": "https://api.github.com/users/feministy/repos",
+    "events_url": "https://api.github.com/users/feministy/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/feministy/received_events",
+    "type": "User",
+    "site_admin": true
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2016-12-07T22:33:30Z",
+  "updated_at": "2017-01-04T16:02:18Z",
+  "closed_at": "2016-12-07T23:09:38Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8523",
+    "html_url": "https://github.com/facebook/react/pull/8523",
+    "diff_url": "https://github.com/facebook/react/pull/8523.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8523.patch"
+  },
+  "body": "hello friends 👋 \r\n\r\ni don't particularly like it when documentation makes jokes at the expense of my colleagues, so i've gone ahead and removed this unnecessary nugget. ",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

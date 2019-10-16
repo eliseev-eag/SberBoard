@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14861",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14861/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14861/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14861/events",
+  "html_url": "https://github.com/facebook/react/issues/14861",
+  "id": 410767748,
+  "node_id": "MDU6SXNzdWU0MTA3Njc3NDg=",
+  "number": 14861,
+  "title": "Cannot type Chinese  in `<input />`  under controlled mode + ReactDom 16.8.2",
+  "user": {
+    "login": "youluna",
+    "id": 10049465,
+    "node_id": "MDQ6VXNlcjEwMDQ5NDY1",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/10049465?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/youluna",
+    "html_url": "https://github.com/youluna",
+    "followers_url": "https://api.github.com/users/youluna/followers",
+    "following_url": "https://api.github.com/users/youluna/following{/other_user}",
+    "gists_url": "https://api.github.com/users/youluna/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/youluna/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/youluna/subscriptions",
+    "organizations_url": "https://api.github.com/users/youluna/orgs",
+    "repos_url": "https://api.github.com/users/youluna/repos",
+    "events_url": "https://api.github.com/users/youluna/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/youluna/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 13,
+  "created_at": "2019-02-15T13:23:25Z",
+  "updated_at": "2019-02-21T18:31:53Z",
+  "closed_at": "2019-02-21T18:31:53Z",
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\nbug\r\n\r\n**What is the current behavior?**\r\nCannot type Chinese  in `<input />`  under controlled mode when using react-dom 16.8.2 via CND\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\n\r\nhttps://jsfiddle.net/youluna/egz9Lvrp/36/\r\n1. Switch IME(input method editor) into Chinese\r\n2. try type any letters, you can only get English letters but not Chinese characters\r\n![image](https://user-images.githubusercontent.com/10049465/52859396-8be5da80-3167-11e9-96ac-95caa4e7f5a7.png)\r\n\r\n**What is the expected behavior?**\r\nCan type Chinese characters\r\n![image](https://user-images.githubusercontent.com/10049465/52859361-740e5680-3167-11e9-8a7c-6e28d7650b4e.png)\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nNot worked in react-dom 16.8.2 \r\nBut worked well in react-dom 16.8.1 \r\n\r\nrelated https://github.com/alibaba-fusion/next/issues/324\r\n\r\nupdate:\r\nIt's wired that use React as a <script> tag from a CDN doesn't work, but as a react package on npm worked well. Both are version 16.8.2\r\n1. CDN: https://jsfiddle.net/youluna/6o3rhg7u/1/\r\n2. npm: https://codesandbox.io/s/xp15m8woww",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9493",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9493/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9493/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9493/events",
+  "html_url": "https://github.com/facebook/react/pull/9493",
+  "id": 223548747,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTE3MTAwNDY4",
+  "number": 9493,
+  "title": "Warning message updated if defaultProps were defined as an instance property",
+  "user": {
+    "login": "abhaynikam",
+    "id": 7736232,
+    "node_id": "MDQ6VXNlcjc3MzYyMzI=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/7736232?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/abhaynikam",
+    "html_url": "https://github.com/abhaynikam",
+    "followers_url": "https://api.github.com/users/abhaynikam/followers",
+    "following_url": "https://api.github.com/users/abhaynikam/following{/other_user}",
+    "gists_url": "https://api.github.com/users/abhaynikam/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/abhaynikam/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/abhaynikam/subscriptions",
+    "organizations_url": "https://api.github.com/users/abhaynikam/orgs",
+    "repos_url": "https://api.github.com/users/abhaynikam/repos",
+    "events_url": "https://api.github.com/users/abhaynikam/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/abhaynikam/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-04-22T08:05:52Z",
+  "updated_at": "2017-05-01T20:53:50Z",
+  "closed_at": "2017-05-01T18:30:41Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9493",
+    "html_url": "https://github.com/facebook/react/pull/9493",
+    "diff_url": "https://github.com/facebook/react/pull/9493.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9493.patch"
+  },
+  "body": "- Updated the warning message as per @gaearon asked for in PR #9433\r\n- Updated the warning message in the testcases as well.\r\n- Issue related to #9239",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

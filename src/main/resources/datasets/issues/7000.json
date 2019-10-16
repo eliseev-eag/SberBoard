@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7000",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7000/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7000/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7000/events",
+  "html_url": "https://github.com/facebook/react/pull/7000",
+  "id": 159242733,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzMwOTk0NTg=",
+  "number": 7000,
+  "title": "15-next",
+  "user": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2016-06-08T18:47:01Z",
+  "updated_at": "2016-06-15T00:59:01Z",
+  "closed_at": "2016-06-15T00:59:01Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7000",
+    "html_url": "https://github.com/facebook/react/pull/7000",
+    "diff_url": "https://github.com/facebook/react/pull/7000.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7000.patch"
+  },
+  "body": "❗ _not for merge_ ❗\n\nThis is mostly a trial run of everything that would go into the next v15.\\* release using the tool I'm building (more on that later). There is no manual curation here and the tool isn't complete, but I can say confidently that this would be a minor release.\n\nActual plan for releasing this:\n- [ ] triple check that all the PRs that should be here are, will require another triage pass, will possibly re-run entire process.\n- [ ] revert part of #6859 (for the valid element check)\n- [ ] close this PR without merging, instead push 15-dev branch (or maybe call it 15-next to match the milestone)\n- [ ] update milestone for all cherry-picked PRs to ensure we don't get mixed up with other things that might get merged targeted for another version\n- [ ] bump the version\n- [ ] ship as 15.2.0-rc.1 (or alpha?)\n  (this part is interesting - if we picked up more changes we would only change the prerelease part of the version, even if it's a semver-bump-required change)\n- [ ] make sure tests pass\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

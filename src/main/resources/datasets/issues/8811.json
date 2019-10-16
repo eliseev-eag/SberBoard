@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8811",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8811/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8811/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8811/events",
+  "html_url": "https://github.com/facebook/react/pull/8811",
+  "id": 201234262,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTAxODM0NTM3",
+  "number": 8811,
+  "title": "Fix to work fiber debugger with npm start",
+  "user": {
+    "login": "koba04",
+    "id": 250407,
+    "node_id": "MDQ6VXNlcjI1MDQwNw==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/250407?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/koba04",
+    "html_url": "https://github.com/koba04",
+    "followers_url": "https://api.github.com/users/koba04/followers",
+    "following_url": "https://api.github.com/users/koba04/following{/other_user}",
+    "gists_url": "https://api.github.com/users/koba04/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/koba04/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/koba04/subscriptions",
+    "organizations_url": "https://api.github.com/users/koba04/orgs",
+    "repos_url": "https://api.github.com/users/koba04/repos",
+    "events_url": "https://api.github.com/users/koba04/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/koba04/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2017-01-17T10:25:07Z",
+  "updated_at": "2017-02-09T15:40:04Z",
+  "closed_at": "2017-01-17T13:34:03Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8811",
+    "html_url": "https://github.com/facebook/react/pull/8811",
+    "diff_url": "https://github.com/facebook/react/pull/8811.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8811.patch"
+  },
+  "body": "I tried to work ReactFiber Debugger by the following way. But it doesn't work.\r\n\r\n> Running\r\n> \r\n> First, npm run build in React root repo folder.\r\n> \r\n> Then npm install and npm start in this folder.\r\n> \r\n> Open http://localhost:3000 in Chrome.\r\n\r\n* https://github.com/facebook/react/tree/master/examples/fiber/debugger\r\n\r\nThis PR is to fix that.\r\nTo do that, is it ok to add `fiber.js` into `react-dom`?\r\n\r\nIn addition to that, I've fixed warnings about `keys`.\r\n\r\nThanks.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

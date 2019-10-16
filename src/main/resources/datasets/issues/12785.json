@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12785",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12785/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12785/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12785/events",
+  "html_url": "https://github.com/facebook/react/pull/12785",
+  "id": 322396490,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTg3NTQwNTEz",
+  "number": 12785,
+  "title": "Removed dead code from function commitAllLifeCycles in src/ReactFiber…",
+  "user": {
+    "login": "bsheikh",
+    "id": 7809061,
+    "node_id": "MDQ6VXNlcjc4MDkwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/7809061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bsheikh",
+    "html_url": "https://github.com/bsheikh",
+    "followers_url": "https://api.github.com/users/bsheikh/followers",
+    "following_url": "https://api.github.com/users/bsheikh/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bsheikh/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bsheikh/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bsheikh/subscriptions",
+    "organizations_url": "https://api.github.com/users/bsheikh/orgs",
+    "repos_url": "https://api.github.com/users/bsheikh/repos",
+    "events_url": "https://api.github.com/users/bsheikh/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bsheikh/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2018-05-11T18:44:33Z",
+  "updated_at": "2018-05-24T20:50:03Z",
+  "closed_at": "2018-05-24T20:50:03Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12785",
+    "html_url": "https://github.com/facebook/react/pull/12785",
+    "diff_url": "https://github.com/facebook/react/pull/12785.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12785.patch"
+  },
+  "body": "While learning the React Codebase, I believe I've came across some dead code. Let me know if this is being used and I've missed something.\r\n\r\nCheers",
+  "closed_by": {
+    "login": "bsheikh",
+    "id": 7809061,
+    "node_id": "MDQ6VXNlcjc4MDkwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/7809061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bsheikh",
+    "html_url": "https://github.com/bsheikh",
+    "followers_url": "https://api.github.com/users/bsheikh/followers",
+    "following_url": "https://api.github.com/users/bsheikh/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bsheikh/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bsheikh/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bsheikh/subscriptions",
+    "organizations_url": "https://api.github.com/users/bsheikh/orgs",
+    "repos_url": "https://api.github.com/users/bsheikh/repos",
+    "events_url": "https://api.github.com/users/bsheikh/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bsheikh/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

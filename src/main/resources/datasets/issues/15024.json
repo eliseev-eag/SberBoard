@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15024",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15024/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15024/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15024/events",
+  "html_url": "https://github.com/facebook/react/pull/15024",
+  "id": 417526721,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjU4NTA0OTg4",
+  "number": 15024,
+  "title": "v16.8.4 [DO NOT MERGE]",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 74359453,
+      "node_id": "MDU6TGFiZWw3NDM1OTQ1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Release",
+      "name": "Type: Release",
+      "color": "00D8EA",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2019-03-05T22:14:36Z",
+  "updated_at": "2019-03-05T23:26:08Z",
+  "closed_at": "2019-03-05T23:20:43Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15024",
+    "html_url": "https://github.com/facebook/react/pull/15024",
+    "diff_url": "https://github.com/facebook/react/pull/15024.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15024.patch"
+  },
+  "body": "Let CI build a release candidate for v16.8.4\r\n\r\nThis branch was created [following our documented patch release process](https://github.com/facebook/react/blob/master/scripts/release/README.md#creating-a-patch-release). Specifically, I included the following changes:\r\n```sh\r\ngit checkout -b 16.8.4 v16.8.3\r\ngit cherry-pick 8c19665 # package.json versions\r\ngit cherry-pick 4186952 # hooks order bug-fix\r\n```",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

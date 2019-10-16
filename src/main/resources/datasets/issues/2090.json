@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2090",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2090/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2090/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2090/events",
+  "html_url": "https://github.com/facebook/react/issues/2090",
+  "id": 41143542,
+  "node_id": "MDU6SXNzdWU0MTE0MzU0Mg==",
+  "number": 2090,
+  "title": "Support for media events",
+  "user": {
+    "login": "contra",
+    "id": 425716,
+    "node_id": "MDQ6VXNlcjQyNTcxNg==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/425716?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/contra",
+    "html_url": "https://github.com/contra",
+    "followers_url": "https://api.github.com/users/contra/followers",
+    "following_url": "https://api.github.com/users/contra/following{/other_user}",
+    "gists_url": "https://api.github.com/users/contra/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/contra/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/contra/subscriptions",
+    "organizations_url": "https://api.github.com/users/contra/orgs",
+    "repos_url": "https://api.github.com/users/contra/repos",
+    "events_url": "https://api.github.com/users/contra/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/contra/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2014-08-26T07:14:04Z",
+  "updated_at": "2016-01-12T06:06:40Z",
+  "closed_at": "2016-01-12T05:48:20Z",
+  "author_association": "CONTRIBUTOR",
+  "body": "Currently no media events are supported, which makes working with audio or video tags in react a pain in the ass\n\n``` js\ncomponentDidMount: function () {\n    var audioElement = this.refs.audioObject.getDOMNode();\n    audioElement.addEventListener('progress', this.updateProgress);\n    audioElement.addEventListener('timeupdate', this.updateProgress);\n    audioElement.addEventListener('ended', this.handleMediaEnd);\n},\ncomponentWillUnmount: function () {\n    var audioElement = this.refs.audioObject.getDOMNode();\n    audioElement.removeEventListener('progress', this.updateProgress);\n    audioElement.removeEventListener('timeupdate', this.updateProgress);\n    audioElement.removeEventListener('ended', this.handleMediaEnd);\n}\n```\n\nThere are also still many missing attributes for audio and video tags. I find it strange that these tags are completely unsupported - they should probably be removed from the list in the documentation to reduce confusion until they are properly supported.\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

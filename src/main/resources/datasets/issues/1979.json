@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/1979",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/1979/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/1979/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/1979/events",
+  "html_url": "https://github.com/facebook/react/issues/1979",
+  "id": 39357527,
+  "node_id": "MDU6SXNzdWUzOTM1NzUyNw==",
+  "number": 1979,
+  "title": "Server-rendering should be distinct from client-rendering",
+  "user": {
+    "login": "syranide",
+    "id": 1714255,
+    "node_id": "MDQ6VXNlcjE3MTQyNTU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1714255?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/syranide",
+    "html_url": "https://github.com/syranide",
+    "followers_url": "https://api.github.com/users/syranide/followers",
+    "following_url": "https://api.github.com/users/syranide/following{/other_user}",
+    "gists_url": "https://api.github.com/users/syranide/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/syranide/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/syranide/subscriptions",
+    "organizations_url": "https://api.github.com/users/syranide/orgs",
+    "repos_url": "https://api.github.com/users/syranide/repos",
+    "events_url": "https://api.github.com/users/syranide/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/syranide/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710332294,
+      "node_id": "MDU6TGFiZWw3MTAzMzIyOTQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Server%20Rendering",
+      "name": "Component: Server Rendering",
+      "color": "d4c5f9",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 22,
+  "created_at": "2014-08-02T21:20:15Z",
+  "updated_at": "2018-01-09T00:56:59Z",
+  "closed_at": "2018-01-06T03:38:34Z",
+  "author_association": "CONTRIBUTOR",
+  "body": "Kind of related to #1978 (concerns polyfills)\n\nIt seems to me that we should really treat server-rendering as distinct from client-rendering, they have different requirements and priorities.\n1. Server-rendering should be able to generate optimal markup for SEO, markup must also be fully cross-browser compatible and small markup is preferable.\n2. Client-rendering sees SEO as largely irrelevant, full cross-browser compatibility is also irrelevant and rendering performance is of greater importance.\n\nSo I propose that we treat server-rendering as uniquely distinct from client-rendering, e.g. as a separate flag`React.serverSide = true` (which would default to true if document is not available). It's even imaginable that we could extend this with e.g. `React.targetClient = 'SEO' / 'legacyClient' / 'everGreenClient'`, which would optionally allow the markup to be tailored for a specific purpose.\n\nSo when reusing server-rendered markup client-side:\n1. The client should do an initial server-rendering pass being passed the exact same props (and time) as during the server-side rendering, but instances are actually allocated on the client.\n2. Immediately afterwards a client-rendering pass is done with any props (and current time) you like, instances/markup is efficiently reused and should not add significant costs as little DOM manipulation should be involved.\n\nI'm not really affected by this, but for those that do use server-rendering; this seems like the _correct_ way of approaching it (as opposed to just rendering everything exactly the same). However, I'm working on `img`\\- and `picture`-element polyfills, but without this they cannot be made to generate sensible server-side markup.\n\n**PS. I realize this can be done today using a global + mixin**, but without a standardized solution, it's unlikely that third-party (and polyfill) components could ever participate in this. But that doesn't mean that it needs to be shipped with React even (none of this requires core support I believe), as long as it's standardized.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7866",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7866/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7866/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7866/events",
+  "html_url": "https://github.com/facebook/react/pull/7866",
+  "id": 180939770,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODc5Mjc0ODg=",
+  "number": 7866,
+  "title": "Support iframes (nested browsing contexts) in selection event handling",
+  "user": {
+    "login": "acusti",
+    "id": 517889,
+    "node_id": "MDQ6VXNlcjUxNzg4OQ==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/517889?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acusti",
+    "html_url": "https://github.com/acusti",
+    "followers_url": "https://api.github.com/users/acusti/followers",
+    "following_url": "https://api.github.com/users/acusti/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acusti/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acusti/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acusti/subscriptions",
+    "organizations_url": "https://api.github.com/users/acusti/orgs",
+    "repos_url": "https://api.github.com/users/acusti/repos",
+    "events_url": "https://api.github.com/users/acusti/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acusti/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2016-10-04T16:19:22Z",
+  "updated_at": "2017-10-31T14:30:20Z",
+  "closed_at": "2017-10-31T14:29:51Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7866",
+    "html_url": "https://github.com/facebook/react/pull/7866",
+    "diff_url": "https://github.com/facebook/react/pull/7866.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7866.patch"
+  },
+  "body": "Fixes #427 \n\ndda228b90e5676611a7c324aebf12b2751321410 depends on https://github.com/facebook/fbjs/pull/188 to actually work. With the current version of fbjs, the doc argument will be ignored and `getActiveElement` will execute relative to the global `document`.\n\nHad some more tests for `ReactInputSelection` that rely on DOM functionality that jsdom doesn’t yet support. Includes this block, for `setSelection`, but requires a working `getSelection()` implementation (see https://github.com/tmpvar/jsdom/issues/937):\n\n``` js\n    it('sets selection offsets on a contentEditable element', () => {\n      var node = createAndMountElement('div', null, textValue);\n      ReactInputSelection.setSelection(node, {start: 1, end: 10});\n      expect(ReactInputSelection.getSelection(node)).toEqual({start: 1, end: 10});\n    });\n```\n\nAlso, had a suite for `getSelectionInformation/restoreSelection` for a focused element inside an iframe, but it requires jsdom to have accurate `activeElement` functionality with iframes. I made a PR to fix that part of jsdom (https://github.com/tmpvar/jsdom/pull/1621), so hopefully when that functionality gets added, I can add these tests in:\n\n``` js\n    it('gets and restores selection for inputs in an iframe that get remounted', () => {\n      var iframe = document.createElement('iframe');\n      document.body.appendChild(iframe);\n      iframe.focus();\n      var iframeDoc = iframe.contentDocument;\n      var input = document.createElement('input');\n      input.value = textValue;\n      iframeDoc.body.appendChild(input);\n      input.focus();\n      input.selectionStart = 1;\n      input.selectionEnd = 10;\n      var selectionInfo = ReactInputSelection.getSelectionInformation();\n      expect(selectionInfo.focusedElem).toBe(input);\n      expect(selectionInfo.selectionRange).toEqual({start: 1, end: 10});\n      expect(document.activeElement).toBe(iframe);\n      expect(iframeDoc.activeElement).toBe(input);\n\n      input.setSelectionRange(0, 0);\n      iframeDoc.body.removeChild(input);\n      expect(iframeDoc.activeElement).not.toBe(input);\n      expect(input.selectionStart).not.toBe(1);\n      expect(input.selectionEnd).not.toBe(10);\n      iframeDoc.body.appendChild(input);\n      ReactInputSelection.restoreSelection(selectionInfo);\n      expect(iframeDoc.activeElement).toBe(input);\n      expect(input.selectionStart).toBe(1);\n      expect(input.selectionEnd).toBe(10);\n\n      document.body.removeChild(iframe);\n    });\n```\n",
+  "closed_by": {
+    "login": "acusti",
+    "id": 517889,
+    "node_id": "MDQ6VXNlcjUxNzg4OQ==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/517889?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acusti",
+    "html_url": "https://github.com/acusti",
+    "followers_url": "https://api.github.com/users/acusti/followers",
+    "following_url": "https://api.github.com/users/acusti/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acusti/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acusti/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acusti/subscriptions",
+    "organizations_url": "https://api.github.com/users/acusti/orgs",
+    "repos_url": "https://api.github.com/users/acusti/repos",
+    "events_url": "https://api.github.com/users/acusti/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acusti/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

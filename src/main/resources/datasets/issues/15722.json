@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15722",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15722/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15722/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15722/events",
+  "html_url": "https://github.com/facebook/react/issues/15722",
+  "id": 447674204,
+  "node_id": "MDU6SXNzdWU0NDc2NzQyMDQ=",
+  "number": 15722,
+  "title": "Missing SECURITY.md",
+  "user": {
+    "login": "OtacilioN",
+    "id": 10578275,
+    "node_id": "MDQ6VXNlcjEwNTc4Mjc1",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/10578275?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/OtacilioN",
+    "html_url": "https://github.com/OtacilioN",
+    "followers_url": "https://api.github.com/users/OtacilioN/followers",
+    "following_url": "https://api.github.com/users/OtacilioN/following{/other_user}",
+    "gists_url": "https://api.github.com/users/OtacilioN/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/OtacilioN/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/OtacilioN/subscriptions",
+    "organizations_url": "https://api.github.com/users/OtacilioN/orgs",
+    "repos_url": "https://api.github.com/users/OtacilioN/repos",
+    "events_url": "https://api.github.com/users/OtacilioN/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/OtacilioN/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-05-23T13:48:50Z",
+  "updated_at": "2019-05-23T13:49:22Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Feature requested**\r\n\r\nGitHub has just released the Security Policy feature, by writing the SECURITY.md file a new tab with security informations should appear in the repository.\r\n\r\nYou can check the [Electron SECURITY.md example](https://github.com/electron/electron/blob/master/SECURITY.md)\r\n\r\nIt will really improve people trusting in open source security standards\r\n",
+  "closed_by": null
+}

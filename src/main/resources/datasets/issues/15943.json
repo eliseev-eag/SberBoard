@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15943",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15943/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15943/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15943/events",
+  "html_url": "https://github.com/facebook/react/pull/15943",
+  "id": 458960044,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjkwNDI5Mzg5",
+  "number": 15943,
+  "title": "[Flare] Move createEvent back to React object",
+  "user": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 1296748300,
+      "node_id": "MDU6TGFiZWwxMjk2NzQ4MzAw",
+      "url": "https://api.github.com/repos/facebook/react/labels/React%20Flare",
+      "name": "React Flare",
+      "color": "63f2ff",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-06-21T01:15:21Z",
+  "updated_at": "2019-06-21T09:13:01Z",
+  "closed_at": "2019-06-21T09:12:57Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15943",
+    "html_url": "https://github.com/facebook/react/pull/15943",
+    "diff_url": "https://github.com/facebook/react/pull/15943.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15943.patch"
+  },
+  "body": "Internally, we ran into issues with exporting `createEvent` on `ReactDOM`. Moving this back to `React` fixes the issue. This is because the `ReactDOM` module has side-effects that occur upon initialization of the module, which breaks in cases such as server-side rendering.\r\n\r\nLately, given the `useEvent` hook, it might make more sense for us to keep `createEvent` on the `React` object. In the RN integration PR, I found better ways to ensure Flow type safety whilst doing so, so it might be worth while looking at how we can incorporate a polymorphic `createEvent` on the `React` object, where the `responder` field might relate to different responders depending on the platform.\r\n\r\nThe event responders exported should always be the same shape between platforms anyway, the only thing that differs is the props they receive – so this should be safe to do.\r\n\r\n@sebmarkbage I'd really like it if you could chime in on this one too :)",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

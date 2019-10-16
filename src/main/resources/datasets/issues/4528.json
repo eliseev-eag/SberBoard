@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4528",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4528/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4528/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4528/events",
+  "html_url": "https://github.com/facebook/react/pull/4528",
+  "id": 98281332,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDEyOTExNjM=",
+  "number": 4528,
+  "title": "Simplify react-codemod.",
+  "user": {
+    "login": "cpojer",
+    "id": 13352,
+    "node_id": "MDQ6VXNlcjEzMzUy",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/13352?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/cpojer",
+    "html_url": "https://github.com/cpojer",
+    "followers_url": "https://api.github.com/users/cpojer/followers",
+    "following_url": "https://api.github.com/users/cpojer/following{/other_user}",
+    "gists_url": "https://api.github.com/users/cpojer/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/cpojer/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/cpojer/subscriptions",
+    "organizations_url": "https://api.github.com/users/cpojer/orgs",
+    "repos_url": "https://api.github.com/users/cpojer/repos",
+    "events_url": "https://api.github.com/users/cpojer/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/cpojer/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-07-30T22:51:31Z",
+  "updated_at": "2015-07-31T17:33:25Z",
+  "closed_at": "2015-07-31T17:33:12Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4528",
+    "html_url": "https://github.com/facebook/react/pull/4528",
+    "diff_url": "https://github.com/facebook/react/pull/4528.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4528.patch"
+  },
+  "body": "jscodeshift was fully upgraded to babel and now also transforms transform files (hah!). This simplifies the codemod repo structure quite significantly as we no longer need babel or a build process. See https://github.com/facebook/jscodeshift/releases/tag/v0.3.0 (this PR is only blocked by https://github.com/benjamn/ast-types/pull/120 being merged to make the tests pass).\n\nI changed the README instructions to install jscodeshift and clone this repo to run the codemods. If we decide to split off react-codemod into a separate repo, this will make more sense because users won't be required to clone all of React but I think this is fine for now.\n",
+  "closed_by": {
+    "login": "cpojer",
+    "id": 13352,
+    "node_id": "MDQ6VXNlcjEzMzUy",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/13352?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/cpojer",
+    "html_url": "https://github.com/cpojer",
+    "followers_url": "https://api.github.com/users/cpojer/followers",
+    "following_url": "https://api.github.com/users/cpojer/following{/other_user}",
+    "gists_url": "https://api.github.com/users/cpojer/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/cpojer/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/cpojer/subscriptions",
+    "organizations_url": "https://api.github.com/users/cpojer/orgs",
+    "repos_url": "https://api.github.com/users/cpojer/repos",
+    "events_url": "https://api.github.com/users/cpojer/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/cpojer/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

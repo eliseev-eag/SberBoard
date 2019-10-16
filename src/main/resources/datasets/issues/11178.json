@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11178",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11178/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11178/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11178/events",
+  "html_url": "https://github.com/facebook/react/pull/11178",
+  "id": 264311786,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ1NzUzNTY4",
+  "number": 11178,
+  "title": "chore(syntheticEvent): remove IE8 code",
+  "user": {
+    "login": "Haroenv",
+    "id": 6270048,
+    "node_id": "MDQ6VXNlcjYyNzAwNDg=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/6270048?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Haroenv",
+    "html_url": "https://github.com/Haroenv",
+    "followers_url": "https://api.github.com/users/Haroenv/followers",
+    "following_url": "https://api.github.com/users/Haroenv/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Haroenv/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Haroenv/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Haroenv/subscriptions",
+    "organizations_url": "https://api.github.com/users/Haroenv/orgs",
+    "repos_url": "https://api.github.com/users/Haroenv/repos",
+    "events_url": "https://api.github.com/users/Haroenv/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Haroenv/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 15,
+  "created_at": "2017-10-10T17:25:27Z",
+  "updated_at": "2017-10-12T21:38:25Z",
+  "closed_at": "2017-10-12T21:30:48Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11178",
+    "html_url": "https://github.com/facebook/react/pull/11178",
+    "diff_url": "https://github.com/facebook/react/pull/11178.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11178.patch"
+  },
+  "body": "Since IE8 has been deprecated for a while, I thought it might be useful to remove some IE8-only code\r\n\r\nIf this is not something you want to focus on yet, or is too much work to test, feel free to close this PR\r\n\r\n**Before submitting a pull request,** please make sure the following is done:\r\n\r\n1. Fork [the repository](https://github.com/facebook/react) and create your branch from `master`.\r\n2. If you've added code that should be tested, add tests!\r\n3. If you've changed APIs, update the documentation.\r\n4. Ensure the test suite passes (`npm test`).\r\n5. Format your code with [prettier](https://github.com/prettier/prettier) (`npm run prettier`).\r\n6. Make sure your code lints (`npm run lint`).\r\n7. Run the [Flow](https://flowtype.org/) typechecks (`npm run flow`).\r\n8. If you haven't already, complete the CLA.\r\n",
+  "closed_by": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

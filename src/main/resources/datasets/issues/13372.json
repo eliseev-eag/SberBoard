@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13372",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13372/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13372/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13372/events",
+  "html_url": "https://github.com/facebook/react/pull/13372",
+  "id": 349772870,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjA3Nzk4MTAx",
+  "number": 13372,
+  "title": "Warn when \"false\" or \"true\" is the value of a boolean DOM prop",
+  "user": {
+    "login": "motiz88",
+    "id": 2246565,
+    "node_id": "MDQ6VXNlcjIyNDY1NjU=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/2246565?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/motiz88",
+    "html_url": "https://github.com/motiz88",
+    "followers_url": "https://api.github.com/users/motiz88/followers",
+    "following_url": "https://api.github.com/users/motiz88/following{/other_user}",
+    "gists_url": "https://api.github.com/users/motiz88/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/motiz88/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/motiz88/subscriptions",
+    "organizations_url": "https://api.github.com/users/motiz88/orgs",
+    "repos_url": "https://api.github.com/users/motiz88/repos",
+    "events_url": "https://api.github.com/users/motiz88/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/motiz88/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2018-08-12T00:07:56Z",
+  "updated_at": "2018-10-20T18:11:09Z",
+  "closed_at": "2018-08-14T19:51:33Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13372",
+    "html_url": "https://github.com/facebook/react/pull/13372",
+    "diff_url": "https://github.com/facebook/react/pull/13372.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13372.patch"
+  },
+  "body": "Hi! 😄 \r\n\r\nThis is my first contribution that actually changes runtime behaviour, and involved some guesswork as to _where_ to make _what_ change to get the desired effect - so do take it with a grain of salt. I'm super willing to learn more about how React is written and fix anything that needs to be fixed in this PR, if the functionality is welcome.\r\n\r\n---\r\n\r\nThis PR adds a new DEV-mode warning when the value `\"false\"` (case-insensitive) is found in a DOM prop of type `BOOLEAN`, recommending the use of the boolean value `false` instead.\r\n\r\nWhile working on https://github.com/facebook/flow/pull/6727 I came across [the different types of boolean DOM props](https://github.com/facebook/react/blob/725e499cfb4da60da46aa5b44c4bad29cad3d08f/packages/react-dom/src/shared/DOMProperty.js#L22-L37), and specifically the fact that `BOOLEAN` props (e.g. `hidden`) treat the string `\"false\"` as equivalent to boolean _`true`_, whereas `BOOLEANISH_STRING` props (e.g. `spellCheck`) treat it as equivalent to boolean `false` - an inconsistency that follows from the HTML spec, but one that can conceivably trip up developers, hence a warning.\r\n\r\nI'm not entirely sure what `OVERLOADED_BOOLEAN` props should do about `\"false\"` - currently the warning doesn't apply to them.\r\n\r\nEDIT: Per feedback below, this now also warns on `\"true\"`, and only warns on case-sensitive (lowercase) matches.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

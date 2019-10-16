@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7577",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7577/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7577/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7577/events",
+  "html_url": "https://github.com/facebook/react/pull/7577",
+  "id": 173529418,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODI5NDM2ODk=",
+  "number": 7577,
+  "title": "Warn when React DOM modified by not-React",
+  "user": {
+    "login": "SalehHindi",
+    "id": 15721377,
+    "node_id": "MDQ6VXNlcjE1NzIxMzc3",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/15721377?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/SalehHindi",
+    "html_url": "https://github.com/SalehHindi",
+    "followers_url": "https://api.github.com/users/SalehHindi/followers",
+    "following_url": "https://api.github.com/users/SalehHindi/following{/other_user}",
+    "gists_url": "https://api.github.com/users/SalehHindi/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/SalehHindi/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/SalehHindi/subscriptions",
+    "organizations_url": "https://api.github.com/users/SalehHindi/orgs",
+    "repos_url": "https://api.github.com/users/SalehHindi/repos",
+    "events_url": "https://api.github.com/users/SalehHindi/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/SalehHindi/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2016-08-26T19:46:58Z",
+  "updated_at": "2016-10-27T12:55:30Z",
+  "closed_at": "2016-10-27T12:55:30Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7577",
+    "html_url": "https://github.com/facebook/react/pull/7577",
+    "diff_url": "https://github.com/facebook/react/pull/7577.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7577.patch"
+  },
+  "body": "This pull request addresses: Warn when React DOM modified by not-React #3218 \n\nOne issue I had was whether to write tests. I would think I need to but I could not find tests for DOMChildrenOperation. Another issue was that currently jsdom does not currently mock out window.MutationObserver that's defined in the browser so for the purpose of making the tests pass, I used `var MutationObserver = window.MutationObserver || function() {};` that would simply do nothing if window.MutationObserver is not found. \n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

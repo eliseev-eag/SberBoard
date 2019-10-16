@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5476",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5476/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5476/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5476/events",
+  "html_url": "https://github.com/facebook/react/pull/5476",
+  "id": 117017637,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTA3NTYxMTI=",
+  "number": 5476,
+  "title": "Validating PropTypes when a class is created",
+  "user": {
+    "login": "rppc",
+    "id": 9116372,
+    "node_id": "MDQ6VXNlcjkxMTYzNzI=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/9116372?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rppc",
+    "html_url": "https://github.com/rppc",
+    "followers_url": "https://api.github.com/users/rppc/followers",
+    "following_url": "https://api.github.com/users/rppc/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rppc/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rppc/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rppc/subscriptions",
+    "organizations_url": "https://api.github.com/users/rppc/orgs",
+    "repos_url": "https://api.github.com/users/rppc/repos",
+    "events_url": "https://api.github.com/users/rppc/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rppc/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 22,
+  "created_at": "2015-11-15T21:02:12Z",
+  "updated_at": "2016-03-27T10:00:25Z",
+  "closed_at": "2016-03-27T03:42:25Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5476",
+    "html_url": "https://github.com/facebook/react/pull/5476",
+    "diff_url": "https://github.com/facebook/react/pull/5476.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5476.patch"
+  },
+  "body": "**Note:** [This](https://github.com/facebook/react/pull/5475) is the same pull request. I've cleaned up the commit history.\n\nFollowing [this](https://github.com/facebook/react/issues/5468) bug report, the PropTypes are now checked in development mode when the class is created, so that, for instance, the call:\n\n``` javascript\nvar MyComponent = React.createClass({\n        displayName: 'Component',\n        propTypes: {\n            optionalNumber: React.PropTypes.number,\n            optionalEnum: React.PropTypes.oneOf('foo'),       // Invalid.\n          },\n          render: function() {\n            return <span>{this.props.prop}</span>;\n          },\n        });\n```\n\nwill result in a warning being logged, and _optionalEnum_ being cleared from the **propTypes** object.\n\nUp to this point, this check only occurred when **ReactElement.createElement** was called in development mode. Some refactoring might be needed in order to avoid unnecessary tests when **ReactElement.createElement** is called in development mode.\n\nTest cases were included in the file [ReactClass-test.js](https://github.com/rppc/react/blob/changed/src/isomorphic/classic/class/__tests__/ReactClass-test.js#L384) (see the last test).\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

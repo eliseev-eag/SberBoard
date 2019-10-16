@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5122",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5122/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5122/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5122/events",
+  "html_url": "https://github.com/facebook/react/issues/5122",
+  "id": 110807386,
+  "node_id": "MDU6SXNzdWUxMTA4MDczODY=",
+  "number": 5122,
+  "title": "ReactDOM.render vs React.render callback",
+  "user": {
+    "login": "ghost",
+    "id": 10137,
+    "node_id": "MDQ6VXNlcjEwMTM3",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/10137?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ghost",
+    "html_url": "https://github.com/ghost",
+    "followers_url": "https://api.github.com/users/ghost/followers",
+    "following_url": "https://api.github.com/users/ghost/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ghost/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ghost/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ghost/subscriptions",
+    "organizations_url": "https://api.github.com/users/ghost/orgs",
+    "repos_url": "https://api.github.com/users/ghost/repos",
+    "events_url": "https://api.github.com/users/ghost/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ghost/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2015-10-10T17:37:45Z",
+  "updated_at": "2015-10-10T18:35:57Z",
+  "closed_at": "2015-10-10T18:34:57Z",
+  "author_association": "NONE",
+  "body": "I ran into a strange problem when transitioning to React `0.14.0`.\n\nI use a promisified API internally in my application, and for various reasons I need a handle to the mounted instance of an element. No big deal, this is how I get a handle to that instance after react has finished its non-deterministic render:\n\n```\n// some renderer service\nreturn new Promise(function (resolve, reject) {\n    React.render(reactElement, node, function () {\n        resolve(this)\n    })\n})\n\n// someone using the renderer service\nreturn renderer(element, someNode)\n    .then(function (mountedElement) {\n        ...\n    })\n```\n\nWhen I update to `0.14.0`, I should be able to just swap out implementations without a thought, right?\n\n```\nreturn new Promise(function (resolve, reject) {\n    ReactDOM.render(reactElement, node, function () {\n        resolve(this)\n    })\n})\n```\n\nWell, apparently not :(.\n\nI'm getting an error message correlating to [this help wiki](https://gist.github.com/jimfb/4faa6cbfb1ef476bd105)... \n\n```\nUncaught Error: Invariant Violation: addComponentAsRefTo(...): Only a ReactOwner can have refs. You might be adding a ref to a component that was not created inside a component's `render` method, or you have multiple copies of React loaded (details: https://fb.me/react-refs-must-have-owner).\n```\n\nI have scraped through the app looking for some \"invalid usage of refs\", but there aren't any. I also can't see a case where I have more than one React on the page (unless there's some shenanigans caused by including `react-dom/server` in a browser, but I have removed it and checked against that case too: same problem)?\n\nLoading React (browserify):\n\n```\n    let React = require('react')\n    let ReactDOM = require('react-dom')\n    let Server = require('react-dom/server')\n```\n\npackage.json\n\n```\n  \"dependencies\": {\n    \"react\": \"0.14.0\",\n    \"react-dom\": \"0.14.0\"\n  }\n```\n\n`npm ls | grep react`\n\n```\n│ │ ├── babel-plugin-react-constant-elements@1.0.3\n│ │ ├── babel-plugin-react-display-name@1.0.3\n│ │ ├── babel-plugin-react-constant-elements@1.0.3\n│ │ ├── babel-plugin-react-display-name@1.0.3\n├─┬ react@0.14.0\n├─┬ react-dom@0.14.0\n│ └─┬ react@0.14.0\n```\n",
+  "closed_by": null
+}

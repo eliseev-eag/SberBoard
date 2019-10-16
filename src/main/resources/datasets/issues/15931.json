@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15931",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15931/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15931/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15931/events",
+  "html_url": "https://github.com/facebook/react/pull/15931",
+  "id": 458292604,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjg5OTMyMzEz",
+  "number": 15931,
+  "title": "[Flare] Press: fix stale deactivation region state",
+  "user": {
+    "login": "necolas",
+    "id": 239676,
+    "node_id": "MDQ6VXNlcjIzOTY3Ng==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/239676?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/necolas",
+    "html_url": "https://github.com/necolas",
+    "followers_url": "https://api.github.com/users/necolas/followers",
+    "following_url": "https://api.github.com/users/necolas/following{/other_user}",
+    "gists_url": "https://api.github.com/users/necolas/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/necolas/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/necolas/subscriptions",
+    "organizations_url": "https://api.github.com/users/necolas/orgs",
+    "repos_url": "https://api.github.com/users/necolas/repos",
+    "events_url": "https://api.github.com/users/necolas/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/necolas/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 1296748300,
+      "node_id": "MDU6TGFiZWwxMjk2NzQ4MzAw",
+      "url": "https://api.github.com/repos/facebook/react/labels/React%20Flare",
+      "name": "React Flare",
+      "color": "63f2ff",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-06-20T01:28:27Z",
+  "updated_at": "2019-06-21T00:10:55Z",
+  "closed_at": "2019-06-21T00:10:55Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15931",
+    "html_url": "https://github.com/facebook/react/pull/15931",
+    "diff_url": "https://github.com/facebook/react/pull/15931.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15931.patch"
+  },
+  "body": "The responder region calculation logic wasn't updating the deactivation region during the lifetime of an event instance, causing incorrect behaviour when the current press ends outside the press target and if the press target has moved since the last time the first-and-only time the deactivation region was measured.\r\n\r\nNote: we previously discussed adding a warning when the press target has a height or width of `0`, however, that's only a special case for a general \"issue\" (unrelated to the issue this patch address). If the children of a press target are positioned (absolutely or relatively) outside the press target, and the target (and its children) move during a press (e.g., a \"squish\" transform) then the \"pressend\" trigger could be occurring on an element outside the responder's subtree. One that happens, we fallback to checking if the x/y event coordinates overlap with the union of activation/deactivation press target regions. Those regions do not account for protruding children and the \"press\" event might be skipped even if it appears to fall within the press retention region.",
+  "closed_by": {
+    "login": "necolas",
+    "id": 239676,
+    "node_id": "MDQ6VXNlcjIzOTY3Ng==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/239676?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/necolas",
+    "html_url": "https://github.com/necolas",
+    "followers_url": "https://api.github.com/users/necolas/followers",
+    "following_url": "https://api.github.com/users/necolas/following{/other_user}",
+    "gists_url": "https://api.github.com/users/necolas/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/necolas/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/necolas/subscriptions",
+    "organizations_url": "https://api.github.com/users/necolas/orgs",
+    "repos_url": "https://api.github.com/users/necolas/repos",
+    "events_url": "https://api.github.com/users/necolas/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/necolas/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

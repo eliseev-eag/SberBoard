@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5318",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5318/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5318/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5318/events",
+  "html_url": "https://github.com/facebook/react/issues/5318",
+  "id": 113971736,
+  "node_id": "MDU6SXNzdWUxMTM5NzE3MzY=",
+  "number": 5318,
+  "title": "Weird components that can not be referred",
+  "user": {
+    "login": "mayagamer",
+    "id": 1431032,
+    "node_id": "MDQ6VXNlcjE0MzEwMzI=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1431032?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mayagamer",
+    "html_url": "https://github.com/mayagamer",
+    "followers_url": "https://api.github.com/users/mayagamer/followers",
+    "following_url": "https://api.github.com/users/mayagamer/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mayagamer/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mayagamer/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mayagamer/subscriptions",
+    "organizations_url": "https://api.github.com/users/mayagamer/orgs",
+    "repos_url": "https://api.github.com/users/mayagamer/repos",
+    "events_url": "https://api.github.com/users/mayagamer/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mayagamer/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 155984160,
+      "node_id": "MDU6TGFiZWwxNTU5ODQxNjA=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Status:%20Unconfirmed",
+      "name": "Status: Unconfirmed",
+      "color": "d4c5f9",
+      "default": false
+    },
+    {
+      "id": 40929155,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1NQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Question",
+      "name": "Type: Question",
+      "color": "cc317c",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2015-10-29T03:31:47Z",
+  "updated_at": "2015-10-30T08:33:49Z",
+  "closed_at": "2015-10-29T17:21:08Z",
+  "author_association": "NONE",
+  "body": "I use React and Material-UI for my app.\nHere is the part of code:\n\n```\n  render(){\n    return <div>\n       <Table ref='fromform'>\n         <TableHeader>\n      <TableRow>\n        <TableHeaderColumn tooltip='The ID'>No.</TableHeaderColumn>\n        <TableHeaderColumn tooltip='The Name'>Name</TableHeaderColumn>\n        <TableHeaderColumn tooltip='The Status'>Notes</TableHeaderColumn>\n      </TableRow>\n    </TableHeader>\n    <TableBody ref='fromformb'>\n      {playerList.map(function(player, index){\n          return <TableRow onTouchTap={this._onShowInfo.bind(this, index)} key={'row' + index}>\n            <TableRowColumn>{index + 1}</TableRowColumn>\n            <TableRowColumn>{player.name}</TableRowColumn>\n            <TableRowColumn>{player.notes}</TableRowColumn>\n          </TableRow>;\n      }.bind(this))}\n    </TableBody>\n  </Table>\n  <Dialog\n    title='Player Info'\n    ref='playerInfoDialog'>\n    <form role='form' ref='fromfo'>\n      <div className='form-group' ref='frowwmformb'>\n        <TextField type='text' hintText='Player Name' ref='txtName' fullWidth={true} />\n        <TextField type='text' hintText='Notes' ref='txtNotes' fullWidth={true} />\n      </div>\n    </form>\n  </Dialog>\n  <MainButtonGroup page='players' />\n  <Spinner />\n</div>;\n  }\n\n  _onShowInfo(index){\n    var player = playerList[index];\n    console.log(this.refs);\n    this.refs.playerInfoDialog.show();\n    this.refs.txtName.setValue(player.name);\n    this.refs.txtNotes.setValue(player.notes);\n  }\n}\n```\n\nWhat I want to do with this code is to generate rows in a table of player list, and while a row is tapped, a dialog shows up with the data of the row.\n\nBut the two 'TextField's with refs of 'txtName' and 'txtNotes' can't be referred(as on the last 2 lines, produce errors)\n. The pic below is produced by 'console.log' in '_onShowInfo' method. I added some 'ref's with random names just to test.\n\n![ee77834e-7a46-4734-8480-2464e1d65382](https://cloud.githubusercontent.com/assets/1431032/10785424/1588a5b8-7d9f-11e5-8b47-4c8ad4c2828a.png)\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

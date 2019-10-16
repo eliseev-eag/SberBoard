@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8425",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8425/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8425/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8425/events",
+  "html_url": "https://github.com/facebook/react/pull/8425",
+  "id": 191805252,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTUzNzExOTY=",
+  "number": 8425,
+  "title": "update example to use `this.state`",
+  "user": {
+    "login": "thisguychris",
+    "id": 532797,
+    "node_id": "MDQ6VXNlcjUzMjc5Nw==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/532797?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/thisguychris",
+    "html_url": "https://github.com/thisguychris",
+    "followers_url": "https://api.github.com/users/thisguychris/followers",
+    "following_url": "https://api.github.com/users/thisguychris/following{/other_user}",
+    "gists_url": "https://api.github.com/users/thisguychris/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/thisguychris/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/thisguychris/subscriptions",
+    "organizations_url": "https://api.github.com/users/thisguychris/orgs",
+    "repos_url": "https://api.github.com/users/thisguychris/repos",
+    "events_url": "https://api.github.com/users/thisguychris/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/thisguychris/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-11-26T13:09:16Z",
+  "updated_at": "2017-01-04T16:00:37Z",
+  "closed_at": "2016-12-11T13:41:49Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8425",
+    "html_url": "https://github.com/facebook/react/pull/8425",
+    "diff_url": "https://github.com/facebook/react/pull/8425.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8425.patch"
+  },
+  "body": "- In the previous example, the code works even without using `.bind(this)` in the constructor.\r\n- the reason being handleClick doesn't even use `this` and its just calling the global function `alert`.\r\n- this change make use of this via access `this.state`.",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

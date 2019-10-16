@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7419",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7419/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7419/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7419/events",
+  "html_url": "https://github.com/facebook/react/pull/7419",
+  "id": 169235252,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Nzk5Nzk5MjI=",
+  "number": 7419,
+  "title": "dont mutate event type name, just pass it through",
+  "user": {
+    "login": "uxtx",
+    "id": 4459634,
+    "node_id": "MDQ6VXNlcjQ0NTk2MzQ=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/4459634?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/uxtx",
+    "html_url": "https://github.com/uxtx",
+    "followers_url": "https://api.github.com/users/uxtx/followers",
+    "following_url": "https://api.github.com/users/uxtx/following{/other_user}",
+    "gists_url": "https://api.github.com/users/uxtx/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/uxtx/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/uxtx/subscriptions",
+    "organizations_url": "https://api.github.com/users/uxtx/orgs",
+    "repos_url": "https://api.github.com/users/uxtx/repos",
+    "events_url": "https://api.github.com/users/uxtx/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/uxtx/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2016-08-03T21:12:03Z",
+  "updated_at": "2016-08-03T22:48:08Z",
+  "closed_at": "2016-08-03T22:48:00Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7419",
+    "html_url": "https://github.com/facebook/react/pull/7419",
+    "diff_url": "https://github.com/facebook/react/pull/7419.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7419.patch"
+  },
+  "body": "This resolves an issue with mutating the type string that was causing some third party test failures\n\nCloses #7418\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

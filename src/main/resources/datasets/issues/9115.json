@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9115",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9115/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9115/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9115/events",
+  "html_url": "https://github.com/facebook/react/pull/9115",
+  "id": 211928849,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTA5MTM0ODk0",
+  "number": 9115,
+  "title": "Add a section about es6 object shorthand",
+  "user": {
+    "login": "viankakrisna",
+    "id": 9636410,
+    "node_id": "MDQ6VXNlcjk2MzY0MTA=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/9636410?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/viankakrisna",
+    "html_url": "https://github.com/viankakrisna",
+    "followers_url": "https://api.github.com/users/viankakrisna/followers",
+    "following_url": "https://api.github.com/users/viankakrisna/following{/other_user}",
+    "gists_url": "https://api.github.com/users/viankakrisna/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/viankakrisna/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/viankakrisna/subscriptions",
+    "organizations_url": "https://api.github.com/users/viankakrisna/orgs",
+    "repos_url": "https://api.github.com/users/viankakrisna/repos",
+    "events_url": "https://api.github.com/users/viankakrisna/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/viankakrisna/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2017-03-05T04:17:42Z",
+  "updated_at": "2017-10-08T20:50:39Z",
+  "closed_at": "2017-10-08T20:50:38Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9115",
+    "html_url": "https://github.com/facebook/react/pull/9115",
+    "diff_url": "https://github.com/facebook/react/pull/9115.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9115.patch"
+  },
+  "body": "Not quite sure if the heading should be ES6 Object Shorthand or Filtering Props. Thoughts?",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

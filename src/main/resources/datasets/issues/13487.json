@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13487",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13487/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13487/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13487/events",
+  "html_url": "https://github.com/facebook/react/issues/13487",
+  "id": 354093835,
+  "node_id": "MDU6SXNzdWUzNTQwOTM4MzU=",
+  "number": 13487,
+  "title": "react-test-renderer: is possible to test lifecycle functions?",
+  "user": {
+    "login": "FabricioFFC",
+    "id": 139354,
+    "node_id": "MDQ6VXNlcjEzOTM1NA==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/139354?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/FabricioFFC",
+    "html_url": "https://github.com/FabricioFFC",
+    "followers_url": "https://api.github.com/users/FabricioFFC/followers",
+    "following_url": "https://api.github.com/users/FabricioFFC/following{/other_user}",
+    "gists_url": "https://api.github.com/users/FabricioFFC/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/FabricioFFC/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/FabricioFFC/subscriptions",
+    "organizations_url": "https://api.github.com/users/FabricioFFC/orgs",
+    "repos_url": "https://api.github.com/users/FabricioFFC/repos",
+    "events_url": "https://api.github.com/users/FabricioFFC/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/FabricioFFC/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710400704,
+      "node_id": "MDU6TGFiZWw3MTA0MDA3MDQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Test%20Renderer",
+      "name": "Component: Test Renderer",
+      "color": "006b75",
+      "default": false
+    },
+    {
+      "id": 40929155,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1NQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Question",
+      "name": "Type: Question",
+      "color": "cc317c",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2018-08-26T13:10:45Z",
+  "updated_at": "2019-04-16T08:06:39Z",
+  "closed_at": "2018-08-26T15:38:16Z",
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\nQuestion\r\n\r\n**What is the current behavior?**\r\n\r\nI am trying to use `react-test-renderer` and I notice that the lifecycles methods (ex: `componentDidMount`) need to be fired manually - `rendered.getInstance().componentDidMount()`, what solves my problem but reveals an other: I want to use shallow render, to test only the component under test, but then `react-test-renderer/shallow` API is minimal for rendering.\r\n\r\n**What is the expected behavior?**\r\n\r\nI was expecting that `react-test-renderer` would support testing my component reaction to the different lifecycles and be capable to use `shallow` rendering. Is there some way to use `react-test-renderer` in this scenario? Or is better I move to another library like `enzyme`?\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

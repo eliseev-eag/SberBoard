@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16736",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16736/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16736/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16736/events",
+  "html_url": "https://github.com/facebook/react/issues/16736",
+  "id": 491808414,
+  "node_id": "MDU6SXNzdWU0OTE4MDg0MTQ=",
+  "number": 16736,
+  "title": "DevTools: Long interaction names cannot be seen",
+  "user": {
+    "login": "davidmccabe",
+    "id": 132485,
+    "node_id": "MDQ6VXNlcjEzMjQ4NQ==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/132485?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/davidmccabe",
+    "html_url": "https://github.com/davidmccabe",
+    "followers_url": "https://api.github.com/users/davidmccabe/followers",
+    "following_url": "https://api.github.com/users/davidmccabe/following{/other_user}",
+    "gists_url": "https://api.github.com/users/davidmccabe/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/davidmccabe/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/davidmccabe/subscriptions",
+    "organizations_url": "https://api.github.com/users/davidmccabe/orgs",
+    "repos_url": "https://api.github.com/users/davidmccabe/repos",
+    "events_url": "https://api.github.com/users/davidmccabe/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/davidmccabe/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 717031390,
+      "node_id": "MDU6TGFiZWw3MTcwMzEzOTA=",
+      "url": "https://api.github.com/repos/facebook/react/labels/good%20first%20issue",
+      "name": "good first issue",
+      "color": "6ce26a",
+      "default": true
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-09-10T17:38:59Z",
+  "updated_at": "2019-10-12T18:16:00Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "Interaction names longer than about 30 characters are truncated without tooltips and so cannot be seen. If you go to the \"Interactions\" tab of the profiler, both the left-hand column and the right-hand sidebar are of fixed size and show a truncated name.",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9921",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9921/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9921/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9921/events",
+  "html_url": "https://github.com/facebook/react/pull/9921",
+  "id": 235082599,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTI1MDM1MTQy",
+  "number": 9921,
+  "title": "Remove addons path deleted in #9209",
+  "user": {
+    "login": "taehwanno",
+    "id": 7760903,
+    "node_id": "MDQ6VXNlcjc3NjA5MDM=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/7760903?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/taehwanno",
+    "html_url": "https://github.com/taehwanno",
+    "followers_url": "https://api.github.com/users/taehwanno/followers",
+    "following_url": "https://api.github.com/users/taehwanno/following{/other_user}",
+    "gists_url": "https://api.github.com/users/taehwanno/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/taehwanno/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/taehwanno/subscriptions",
+    "organizations_url": "https://api.github.com/users/taehwanno/orgs",
+    "repos_url": "https://api.github.com/users/taehwanno/repos",
+    "events_url": "https://api.github.com/users/taehwanno/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/taehwanno/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-06-11T18:22:08Z",
+  "updated_at": "2017-06-11T20:18:28Z",
+  "closed_at": "2017-06-11T19:23:41Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9921",
+    "html_url": "https://github.com/facebook/react/pull/9921",
+    "diff_url": "https://github.com/facebook/react/pull/9921.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9921.patch"
+  },
+  "body": "Remove already deleted addons path in `scripts/rollup/bundles.js`",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

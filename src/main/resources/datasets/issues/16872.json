@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16872",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16872/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16872/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16872/events",
+  "html_url": "https://github.com/facebook/react/issues/16872",
+  "id": 497457859,
+  "node_id": "MDU6SXNzdWU0OTc0NTc4NTk=",
+  "number": 16872,
+  "title": "Proposal of recommended config in `eslint-plugin-react-hooks`",
+  "user": {
+    "login": "maximandrews",
+    "id": 10967834,
+    "node_id": "MDQ6VXNlcjEwOTY3ODM0",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/10967834?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/maximandrews",
+    "html_url": "https://github.com/maximandrews",
+    "followers_url": "https://api.github.com/users/maximandrews/followers",
+    "following_url": "https://api.github.com/users/maximandrews/following{/other_user}",
+    "gists_url": "https://api.github.com/users/maximandrews/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/maximandrews/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/maximandrews/subscriptions",
+    "organizations_url": "https://api.github.com/users/maximandrews/orgs",
+    "repos_url": "https://api.github.com/users/maximandrews/repos",
+    "events_url": "https://api.github.com/users/maximandrews/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/maximandrews/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-09-24T05:06:18Z",
+  "updated_at": "2019-10-03T16:50:50Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\nFeature\r\n\r\n**What is the current behavior?**\r\nIf you are using `eslint-plugin-react-hooks` you need to put rules configuration manually. What if in the next version you will add some more rules?\r\nShould everyone who use it after future release add all the **new** rules to config manually?\r\n\r\n**What is the expected behavior?**\r\nI propose instead of instructing on every new rule to create `recommended` [config](https://eslint.org/docs/developer-guide/working-with-plugins#configs-in-plugins) as in `eslint-plugin-react`, as follows:\r\n```\r\nexport default {\r\n  rules: {\r\n    'rules-of-hooks': RuleOfHooks,\r\n    'exhaustive-deps': ExhaustiveDeps\r\n  },\r\n  configs: {\r\n    recommended: {\r\n      plugins: [ 'react-hooks' ],\r\n      parserOptions: {\r\n        ecmaFeatures: { jsx: true }\r\n      },\r\n      rules: {\r\n        'react-hooks/rules-of-hooks': 'error',\r\n        'react-hooks/exhaustive-deps': 'warn'\r\n      }\r\n    }\r\n  }\r\n};\r\n```\r\nAlso, to instruct to extend instead:\r\n```\r\nextends: [\r\n  'eslint:recommended',\r\n  'plugin:react/recommended',\r\n  'plugin:react-hooks/recommended'\r\n],\r\n```",
+  "closed_by": null
+}

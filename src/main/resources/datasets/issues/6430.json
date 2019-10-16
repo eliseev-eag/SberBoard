@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6430",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6430/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6430/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6430/events",
+  "html_url": "https://github.com/facebook/react/pull/6430",
+  "id": 146458544,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjU1NDk4Mjc=",
+  "number": 6430,
+  "title": "Fix briefly confusing typo",
+  "user": {
+    "login": "formido",
+    "id": 22295,
+    "node_id": "MDQ6VXNlcjIyMjk1",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/22295?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/formido",
+    "html_url": "https://github.com/formido",
+    "followers_url": "https://api.github.com/users/formido/followers",
+    "following_url": "https://api.github.com/users/formido/following{/other_user}",
+    "gists_url": "https://api.github.com/users/formido/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/formido/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/formido/subscriptions",
+    "organizations_url": "https://api.github.com/users/formido/orgs",
+    "repos_url": "https://api.github.com/users/formido/repos",
+    "events_url": "https://api.github.com/users/formido/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/formido/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2016-04-06T22:58:29Z",
+  "updated_at": "2016-04-07T22:01:08Z",
+  "closed_at": "2016-04-06T23:27:38Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6430",
+    "html_url": "https://github.com/facebook/react/pull/6430",
+    "diff_url": "https://github.com/facebook/react/pull/6430.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6430.patch"
+  },
+  "body": "There are two examples of a text input with initial value  of \"Hello!\" on this page, a controlled and an uncontrolled. The explanation for the uncontrolled version mistakenly says it works much like the earlier \"uncontrolled\" example, but the earlier example was the controlled version.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

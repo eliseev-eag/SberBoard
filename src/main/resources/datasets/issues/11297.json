@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11297",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11297/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11297/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11297/events",
+  "html_url": "https://github.com/facebook/react/pull/11297",
+  "id": 267149942,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ3NzgwOTE0",
+  "number": 11297,
+  "title": "Flatten the shared/ folder",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-10-20T11:46:35Z",
+  "updated_at": "2017-10-20T12:04:50Z",
+  "closed_at": "2017-10-20T11:59:58Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11297",
+    "html_url": "https://github.com/facebook/react/pull/11297",
+    "diff_url": "https://github.com/facebook/react/pull/11297.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11297.patch"
+  },
+  "body": "It’s not like the others as in, it’s not a real package. Doesn’t have `package.json` in the root.\r\nI figured we might as well flatten it. This will make importing less annoying if we drop Haste.\r\n\r\nOld structure:\r\n\r\n```\r\npackages\r\n- shared\r\n  - src\r\n    - event\r\n      ...\r\n    - utils\r\n      ...\r\n    ...\r\n```\r\n\r\n\r\nNew structure:\r\n\r\n```\r\npackages\r\n- shared\r\n  - event\r\n    ...\r\n  ...\r\n```\r\n\r\nThe `utils` folder was unnecessary and we used it inconsistently. I didn’t see much use in it so I flattened it into the root folder.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

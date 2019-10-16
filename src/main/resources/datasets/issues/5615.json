@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5615",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5615/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5615/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5615/events",
+  "html_url": "https://github.com/facebook/react/pull/5615",
+  "id": 120662935,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTI3OTE2NjA=",
+  "number": 5615,
+  "title": "Workaround for dealing with exceptions thrown in asynchronous render method",
+  "user": {
+    "login": "rppc",
+    "id": 9116372,
+    "node_id": "MDQ6VXNlcjkxMTYzNzI=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/9116372?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rppc",
+    "html_url": "https://github.com/rppc",
+    "followers_url": "https://api.github.com/users/rppc/followers",
+    "following_url": "https://api.github.com/users/rppc/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rppc/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rppc/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rppc/subscriptions",
+    "organizations_url": "https://api.github.com/users/rppc/orgs",
+    "repos_url": "https://api.github.com/users/rppc/repos",
+    "events_url": "https://api.github.com/users/rppc/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rppc/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2015-12-06T21:56:43Z",
+  "updated_at": "2015-12-08T01:53:49Z",
+  "closed_at": "2015-12-08T01:53:49Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5615",
+    "html_url": "https://github.com/facebook/react/pull/5615",
+    "diff_url": "https://github.com/facebook/react/pull/5615.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5615.patch"
+  },
+  "body": "We provide a workaround for [this](https://github.com/facebook/react/issues/2461) issue by allowing the user to define a callback function to be executed whenever an exception is thrown inside the body of a `render` method. This function should be called `exceptionCallBack`, as in the following example, adapted from [this](https://github.com/facebook/react/issues/5549) issue:\n\n``` javascript\nvar a = false;\n\nvar MyComponent = React.createClass({\n    render: function() {\n        if (this.props.a) {\n            throw 'err';\n        }\n\n        return (      \n            <h1 onClick={ () => {a = true; run()} }>Hello {this.props.name}</h1>      \n        );\n    },\n    exceptionCallBack: function(e) {\n        console.log(e);\n    }   \n});\n\nfunction run() {\n    ReactDOM.render(\n        <MyComponent a={a} name={\"Rui Cardoso\"} />,\n        document.getElementById('example')\n    );\n}\n\nReactDOM.render(<MyComponent a={false} name={\"Rui Cardoso\"} />, document.getElementById('example'));\n```\n\nThis produces the expected result of **err** being logged to the console when the component is clicked.\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

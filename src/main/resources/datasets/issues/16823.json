@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16823",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16823/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16823/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16823/events",
+  "html_url": "https://github.com/facebook/react/pull/16823",
+  "id": 495292066,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzE4ODY2ODU0",
+  "number": 16823,
+  "title": "[Fresh] Always remount classes",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-09-18T15:15:11Z",
+  "updated_at": "2019-09-18T15:45:33Z",
+  "closed_at": "2019-09-18T15:32:12Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16823",
+    "html_url": "https://github.com/facebook/react/pull/16823",
+    "diff_url": "https://github.com/facebook/react/pull/16823.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16823.patch"
+  },
+  "body": "Class components should never attempt to preserve state.\r\n\r\nNormally this was already being handled by the Fresh Runtime. It chooses whether to put type in `updatedFamilies` (re-render) or `staleFamilies` (re-mount) based on whether it has `.prototype && .prototype.isReactComponent`. This is usually sufficient.\r\n\r\nThere are some corner cases where it isn't sufficient though. Such as recently deprecated factory components. They \"look\" like functions, but their fibers are tagged as a Class. I just spent an hour debugging a Fast Refresh issue in VR code which was caused by old Relay using factory components and hitting this.\r\n\r\nWhile we don't want to support deprecated components, fixing this is easy and may also help with other corner cases we may encounter in the future. Like a second level of defense.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

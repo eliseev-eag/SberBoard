@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9491",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9491/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9491/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9491/events",
+  "html_url": "https://github.com/facebook/react/pull/9491",
+  "id": 223542652,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTE3MDk3MjEz",
+  "number": 9491,
+  "title": "Added a \"Get your system ready\" tab",
+  "user": {
+    "login": "amjoshi91",
+    "id": 14080188,
+    "node_id": "MDQ6VXNlcjE0MDgwMTg4",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/14080188?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/amjoshi91",
+    "html_url": "https://github.com/amjoshi91",
+    "followers_url": "https://api.github.com/users/amjoshi91/followers",
+    "following_url": "https://api.github.com/users/amjoshi91/following{/other_user}",
+    "gists_url": "https://api.github.com/users/amjoshi91/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/amjoshi91/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/amjoshi91/subscriptions",
+    "organizations_url": "https://api.github.com/users/amjoshi91/orgs",
+    "repos_url": "https://api.github.com/users/amjoshi91/repos",
+    "events_url": "https://api.github.com/users/amjoshi91/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/amjoshi91/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-04-22T05:50:26Z",
+  "updated_at": "2017-04-26T13:10:26Z",
+  "closed_at": "2017-04-26T13:10:26Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9491",
+    "html_url": "https://github.com/facebook/react/pull/9491",
+    "diff_url": "https://github.com/facebook/react/pull/9491.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9491.patch"
+  },
+  "body": "**Before submitting a pull request,** please make sure the following is done:\r\n\r\n1. Fork [the repository](https://github.com/facebook/react) and create your branch from `master`.\r\n2. If you've added code that should be tested, add tests!\r\n3. If you've changed APIs, update the documentation.\r\n4. Ensure the test suite passes (`npm test`).\r\n5. Make sure your code lints (`npm run lint`).\r\n6. Format your code with [prettier](https://github.com/prettier/prettier) (`npm run prettier`).\r\n7. Run the [Flow](https://flowtype.org/) typechecks (`npm run flow`).\r\n8. If you added or removed any tests, run `./scripts/fiber/record-tests` before submitting the pull request, and commit the resulting changes.\r\n9. If you haven't already, complete the CLA.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

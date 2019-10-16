@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4724",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4724/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4724/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4724/events",
+  "html_url": "https://github.com/facebook/react/pull/4724",
+  "id": 103538148,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDM1MzI3MDA=",
+  "number": 4724,
+  "title": "Make definitions more readable & optional params more obvious",
+  "user": {
+    "login": "AnSavvides",
+    "id": 2316326,
+    "node_id": "MDQ6VXNlcjIzMTYzMjY=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/2316326?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/AnSavvides",
+    "html_url": "https://github.com/AnSavvides",
+    "followers_url": "https://api.github.com/users/AnSavvides/followers",
+    "following_url": "https://api.github.com/users/AnSavvides/following{/other_user}",
+    "gists_url": "https://api.github.com/users/AnSavvides/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/AnSavvides/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/AnSavvides/subscriptions",
+    "organizations_url": "https://api.github.com/users/AnSavvides/orgs",
+    "repos_url": "https://api.github.com/users/AnSavvides/repos",
+    "events_url": "https://api.github.com/users/AnSavvides/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/AnSavvides/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-08-27T15:41:32Z",
+  "updated_at": "2015-09-14T16:57:02Z",
+  "closed_at": "2015-09-09T07:02:18Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4724",
+    "html_url": "https://github.com/facebook/react/pull/4724",
+    "diff_url": "https://github.com/facebook/react/pull/4724.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4724.patch"
+  },
+  "body": "I have been reading the `TestUtils` docs and struggled with a few things, so I made some small improvements:\n- Spread out function definitions across multiple lines as its done in the rest of the docs (for example the [Top Level API docs](https://facebook.github.io/react/docs/top-level-api.html)); it's a lot easier to read, especially when dealing with very long function names (e.g. `scryRenderedDOMComponentsWithTag`) which also take parameters\n- Used the standard `(required, [optional])` pattern to denote whether a parameter is optional or not\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

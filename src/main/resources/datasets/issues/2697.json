@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2697",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2697/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2697/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2697/events",
+  "html_url": "https://github.com/facebook/react/pull/2697",
+  "id": 51792356,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjU5NjQ4MzY=",
+  "number": 2697,
+  "title": "Add SVG text baseline attributes",
+  "user": {
+    "login": "gentooboontoo",
+    "id": 137324,
+    "node_id": "MDQ6VXNlcjEzNzMyNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/137324?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gentooboontoo",
+    "html_url": "https://github.com/gentooboontoo",
+    "followers_url": "https://api.github.com/users/gentooboontoo/followers",
+    "following_url": "https://api.github.com/users/gentooboontoo/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gentooboontoo/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gentooboontoo/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gentooboontoo/subscriptions",
+    "organizations_url": "https://api.github.com/users/gentooboontoo/orgs",
+    "repos_url": "https://api.github.com/users/gentooboontoo/repos",
+    "events_url": "https://api.github.com/users/gentooboontoo/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gentooboontoo/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 126382236,
+      "node_id": "MDU6TGFiZWwxMjYzODIyMzY=",
+      "url": "https://api.github.com/repos/facebook/react/labels/SVG",
+      "name": "SVG",
+      "color": "f7c6c7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2014-12-12T10:41:34Z",
+  "updated_at": "2015-12-25T19:10:16Z",
+  "closed_at": "2015-12-25T19:10:16Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/2697",
+    "html_url": "https://github.com/facebook/react/pull/2697",
+    "diff_url": "https://github.com/facebook/react/pull/2697.diff",
+    "patch_url": "https://github.com/facebook/react/pull/2697.patch"
+  },
+  "body": "These attributes were needed for my project.\n\nSpec at http://www.w3.org/TR/SVG/styling.html#SVGStylingProperties\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

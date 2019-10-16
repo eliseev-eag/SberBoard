@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9437",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9437/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9437/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9437/events",
+  "html_url": "https://github.com/facebook/react/pull/9437",
+  "id": 221922530,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTE2MDExNTc2",
+  "number": 9437,
+  "title": "Add basic bundle+type filters to Rollup build script",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-04-15T03:00:18Z",
+  "updated_at": "2017-04-15T15:32:21Z",
+  "closed_at": "2017-04-15T15:32:21Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9437",
+    "html_url": "https://github.com/facebook/react/pull/9437",
+    "diff_url": "https://github.com/facebook/react/pull/9437.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9437.patch"
+  },
+  "body": "While working on the new react-dom/test-utils and react-test-renderer/shallow bundles, I frequently found myself wanting to run the build command on only a subset of the bundles. (I just wanted to test some bundle config changes without rebuilding the entire suite.)\r\n\r\nThis PR adds some basic filters that I think might be useful for others when iterating on the builds. When filters are used- results/size will still be displayed but the `results.json` file will not be updated. (This will prevent someone from accidentally deleting some of the stats locally.)\r\n\r\n```bash\r\n# Build everything\r\nnpm run build\r\n\r\n# Build all react-dom bundles+types (react-dom, react-dom/server, etc)\r\nnpm run build --bundle=react-dom\r\n\r\n# Build all FB_PROD bundle-types\r\nnpm run build --bundleType=FB_PROD\r\n\r\n# Build all FB bundle-types (prod and dev)\r\nnpm run build --bundleType=FB\r\n\r\n# Build FB_PROD version of react-dom/server only\r\nnpm run build --bundle=react-dom/server --bundleType=FB_PROD\r\n```",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

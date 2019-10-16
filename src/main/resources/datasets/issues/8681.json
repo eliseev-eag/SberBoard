@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8681",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8681/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8681/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8681/events",
+  "html_url": "https://github.com/facebook/react/pull/8681",
+  "id": 198691960,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTAwMTA0MDg4",
+  "number": 8681,
+  "title": "Fixed stray text appearing on top of the navbar in docs, at small screen sizes",
+  "user": {
+    "login": "karthikchintapalli",
+    "id": 15844775,
+    "node_id": "MDQ6VXNlcjE1ODQ0Nzc1",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/15844775?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/karthikchintapalli",
+    "html_url": "https://github.com/karthikchintapalli",
+    "followers_url": "https://api.github.com/users/karthikchintapalli/followers",
+    "following_url": "https://api.github.com/users/karthikchintapalli/following{/other_user}",
+    "gists_url": "https://api.github.com/users/karthikchintapalli/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/karthikchintapalli/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/karthikchintapalli/subscriptions",
+    "organizations_url": "https://api.github.com/users/karthikchintapalli/orgs",
+    "repos_url": "https://api.github.com/users/karthikchintapalli/repos",
+    "events_url": "https://api.github.com/users/karthikchintapalli/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/karthikchintapalli/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-01-04T11:59:15Z",
+  "updated_at": "2017-01-04T16:14:30Z",
+  "closed_at": "2017-01-04T12:48:54Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8681",
+    "html_url": "https://github.com/facebook/react/pull/8681",
+    "diff_url": "https://github.com/facebook/react/pull/8681.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8681.patch"
+  },
+  "body": "Fixes #8676 \r\n\r\n- Stray text is now removed from the top of the navbar in small screen sizes.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

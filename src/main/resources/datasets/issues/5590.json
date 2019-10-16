@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5590",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5590/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5590/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5590/events",
+  "html_url": "https://github.com/facebook/react/pull/5590",
+  "id": 120193848,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTI1NDY5NjM=",
+  "number": 5590,
+  "title": "Use devtool for unknown property warning",
+  "user": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-12-03T15:16:28Z",
+  "updated_at": "2016-02-19T20:32:26Z",
+  "closed_at": "2015-12-24T03:02:58Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5590",
+    "html_url": "https://github.com/facebook/react/pull/5590",
+    "diff_url": "https://github.com/facebook/react/pull/5590.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5590.patch"
+  },
+  "body": "This builds on https://github.com/facebook/react/pull/5462, and implements a simple devtool that emits the unknown property warning (two commits in PR because the commits should be kept separate).  This PR should have no effect on user-visible behavior.\n\nThe next PR (which builds on top of this one) will add line numbers to the warning, which was not previously possible when the warning lived in DOMPropertyOperations but is now possible because the warning lives in a devtool which can follow along with the lifecycle of the render :).  But let's not get ahead of ourselves - that's a behavior change - we should CR+merge this diff before we get too excited about the massively improved future :).\n\ncc @sebmarkbage @spicyj \n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

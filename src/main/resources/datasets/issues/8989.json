@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8989",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8989/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8989/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8989/events",
+  "html_url": "https://github.com/facebook/react/pull/8989",
+  "id": 207312022,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTA1OTU5NzQz",
+  "number": 8989,
+  "title": "Fix createNodeMock doc to avoid Invariant Violation",
+  "user": {
+    "login": "BDav24",
+    "id": 5574929,
+    "node_id": "MDQ6VXNlcjU1NzQ5Mjk=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/5574929?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/BDav24",
+    "html_url": "https://github.com/BDav24",
+    "followers_url": "https://api.github.com/users/BDav24/followers",
+    "following_url": "https://api.github.com/users/BDav24/following{/other_user}",
+    "gists_url": "https://api.github.com/users/BDav24/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/BDav24/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/BDav24/subscriptions",
+    "organizations_url": "https://api.github.com/users/BDav24/orgs",
+    "repos_url": "https://api.github.com/users/BDav24/repos",
+    "events_url": "https://api.github.com/users/BDav24/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/BDav24/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2017-02-13T19:14:41Z",
+  "updated_at": "2017-02-14T12:26:43Z",
+  "closed_at": "2017-02-13T20:13:32Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8989",
+    "html_url": "https://github.com/facebook/react/pull/8989",
+    "diff_url": "https://github.com/facebook/react/pull/8989.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8989.patch"
+  },
+  "body": "Hi, when I try to mock refs for snapshot testing (described here: https://facebook.github.io/react/blog/2016/11/16/react-v15.4.0.html), I get the error:\r\n\r\n`Invariant Violation: Element appears to be neither ReactComponent nor DOMNode`\r\n\r\nI made use of this line of code to make it work: https://github.com/facebook/react/blob/master/src/renderers/dom/shared/findDOMNode.js#L46\r\n\r\nI'm using react@15.4.2, react-test-renderer@15.4.2, and jest@18.1.0",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

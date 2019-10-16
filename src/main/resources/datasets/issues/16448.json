@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16448",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16448/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16448/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16448/events",
+  "html_url": "https://github.com/facebook/react/pull/16448",
+  "id": 482074035,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzA4NDIwMTgw",
+  "number": 16448,
+  "title": "Fix spelling in react-devtools CHANGELOG.md",
+  "user": {
+    "login": "morgsmccauley",
+    "id": 11974624,
+    "node_id": "MDQ6VXNlcjExOTc0NjI0",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/11974624?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/morgsmccauley",
+    "html_url": "https://github.com/morgsmccauley",
+    "followers_url": "https://api.github.com/users/morgsmccauley/followers",
+    "following_url": "https://api.github.com/users/morgsmccauley/following{/other_user}",
+    "gists_url": "https://api.github.com/users/morgsmccauley/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/morgsmccauley/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/morgsmccauley/subscriptions",
+    "organizations_url": "https://api.github.com/users/morgsmccauley/orgs",
+    "repos_url": "https://api.github.com/users/morgsmccauley/repos",
+    "events_url": "https://api.github.com/users/morgsmccauley/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/morgsmccauley/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-08-19T02:20:06Z",
+  "updated_at": "2019-08-20T20:40:53Z",
+  "closed_at": "2019-08-20T16:47:19Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16448",
+    "html_url": "https://github.com/facebook/react/pull/16448",
+    "diff_url": "https://github.com/facebook/react/pull/16448.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16448.patch"
+  },
+  "body": "**Before submitting a pull request,** please make sure the following is done:\r\n\r\n1. Fork [the repository](https://github.com/facebook/react) and create your branch from `master`.\r\n2. Run `yarn` in the repository root.\r\n3. If you've fixed a bug or added code that should be tested, add tests!\r\n4. Ensure the test suite passes (`yarn test`). Tip: `yarn test --watch TestName` is helpful in development.\r\n5. Run `yarn test-prod` to test in the production environment. It supports the same options as `yarn test`.\r\n6. If you need a debugger, run `yarn debug-test --watch TestName`, open `chrome://inspect`, and press \"Inspect\".\r\n7. Format your code with [prettier](https://github.com/prettier/prettier) (`yarn prettier`).\r\n8. Make sure your code lints (`yarn lint`). Tip: `yarn linc` to only check changed files.\r\n9. Run the [Flow](https://flowtype.org/) typechecks (`yarn flow`).\r\n10. If you haven't already, complete the CLA.\r\n\r\n**Learn more about contributing:** https://reactjs.org/docs/how-to-contribute.html\r\n",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16585",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16585/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16585/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16585/events",
+  "html_url": "https://github.com/facebook/react/issues/16585",
+  "id": 485847978,
+  "node_id": "MDU6SXNzdWU0ODU4NDc5Nzg=",
+  "number": 16585,
+  "title": "useState's setState hangs when called in closed window",
+  "user": {
+    "login": "aaronjensen",
+    "id": 8588,
+    "node_id": "MDQ6VXNlcjg1ODg=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/8588?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aaronjensen",
+    "html_url": "https://github.com/aaronjensen",
+    "followers_url": "https://api.github.com/users/aaronjensen/followers",
+    "following_url": "https://api.github.com/users/aaronjensen/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aaronjensen/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aaronjensen/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aaronjensen/subscriptions",
+    "organizations_url": "https://api.github.com/users/aaronjensen/orgs",
+    "repos_url": "https://api.github.com/users/aaronjensen/repos",
+    "events_url": "https://api.github.com/users/aaronjensen/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aaronjensen/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 1155972012,
+      "node_id": "MDU6TGFiZWwxMTU1OTcyMDEy",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Scheduler",
+      "name": "Component: Scheduler",
+      "color": "9de8f9",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    },
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-08-27T14:32:08Z",
+  "updated_at": "2019-09-13T20:53:45Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n\r\nBug\r\n\r\n**What is the current behavior?**\r\n\r\nIf useState's setState is called in a closed window, it hangs the browser (at least Chrome). I agree that this seems like a weird issue, but we do this all of the time in our plugin we've built for an application that has iframe based UI.\r\n\r\nThis reproduces it. Just click \"Do it\". Note that your codesandbox service worker will spin up to 100% cpu and I can't figure out a way to stop it other than to kill that task in the Chrome task manager\r\n\r\nhttps://codesandbox.io/s/react-setstate-on-hidden-window-hangs-repro-cixqn\r\n\r\n**What is the expected behavior?**\r\n\r\nNo hang, it should just ignore the setState call, ideally.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\n16.9. I'm not sure, but hooks are fairly new. This reproduces in Chrome 76, but not Firefox as far as I can tell.\r\n",
+  "closed_by": null
+}

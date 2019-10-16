@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4230",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4230/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4230/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4230/events",
+  "html_url": "https://github.com/facebook/react/pull/4230",
+  "id": 91146083,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mzg2MTU2MjE=",
+  "number": 4230,
+  "title": "Bundle into a flat file",
+  "user": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 13,
+  "created_at": "2015-06-26T04:02:33Z",
+  "updated_at": "2016-03-26T22:12:52Z",
+  "closed_at": "2016-03-26T22:12:52Z",
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4230",
+    "html_url": "https://github.com/facebook/react/pull/4230",
+    "diff_url": "https://github.com/facebook/react/pull/4230.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4230.patch"
+  },
+  "body": "Just sharing. Can look at incorporating this into our build pipeline if we want to. Produces files that look like https://gist.github.com/spicyj/19df83d04eaad215b92b.\n\n```\n$ node pack-flat.js >react-flat.js\n$ cat react-flat.js | ./node_modules/.bin/uglifyjs -c -m >react-flat.min.js\n```\n\nCuriously, it's bigger after gzipping than the other way:\n\n```\n$ wc -c react-flat.js react-flat.min.js build/react.js build/react.min.js\n  662769 react-flat.js\n  121416 react-flat.min.js\n  601727 build/react.js\n  124097 build/react.min.js\n 1510009 total\n$ gzip <react-flat.min.js | wc -c\n   38355\n$ gzip <build/react.min.js | wc -c\n   36602\n```\n\nInitial startup execution cost looks to be about 14% less though.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

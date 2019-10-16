@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9202",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9202/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9202/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9202/events",
+  "html_url": "https://github.com/facebook/react/pull/9202",
+  "id": 214953209,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTExMjQ0OTQ1",
+  "number": 9202,
+  "title": "Fix Symbol to String conversion in ReactPropTypes.oneOf",
+  "user": {
+    "login": "ooflorent",
+    "id": 168498,
+    "node_id": "MDQ6VXNlcjE2ODQ5OA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/168498?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ooflorent",
+    "html_url": "https://github.com/ooflorent",
+    "followers_url": "https://api.github.com/users/ooflorent/followers",
+    "following_url": "https://api.github.com/users/ooflorent/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ooflorent/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ooflorent/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ooflorent/subscriptions",
+    "organizations_url": "https://api.github.com/users/ooflorent/orgs",
+    "repos_url": "https://api.github.com/users/ooflorent/repos",
+    "events_url": "https://api.github.com/users/ooflorent/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ooflorent/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-03-17T09:43:27Z",
+  "updated_at": "2017-04-09T23:27:32Z",
+  "closed_at": "2017-04-09T21:12:24Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9202",
+    "html_url": "https://github.com/facebook/react/pull/9202",
+    "diff_url": "https://github.com/facebook/react/pull/9202.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9202.patch"
+  },
+  "body": "This PR addresses issues when using symbols in `PropTypes.oneOf` (#9181).\r\n\r\n1.  The safe way to convert a `Symbol` into a `String` is to use `String(sym)` or `sym.toString()`. Using template string interpolation (ES6) or concatenation (ES5/Babel) throws a `TypeError`.\r\n\r\n2. The current warning does not include symbols (because `JSON.stringify` strips them). A _replacer_ is added to handle them. This is done in the second commit (so it can be easily reverted).",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

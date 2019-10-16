@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10228",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10228/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10228/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10228/events",
+  "html_url": "https://github.com/facebook/react/pull/10228",
+  "id": 244217233,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTMxNDUwNjkz",
+  "number": 10228,
+  "title": "More explicit class method for ref doc",
+  "user": {
+    "login": "hartzis",
+    "id": 5378707,
+    "node_id": "MDQ6VXNlcjUzNzg3MDc=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/5378707?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/hartzis",
+    "html_url": "https://github.com/hartzis",
+    "followers_url": "https://api.github.com/users/hartzis/followers",
+    "following_url": "https://api.github.com/users/hartzis/following{/other_user}",
+    "gists_url": "https://api.github.com/users/hartzis/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/hartzis/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/hartzis/subscriptions",
+    "organizations_url": "https://api.github.com/users/hartzis/orgs",
+    "repos_url": "https://api.github.com/users/hartzis/repos",
+    "events_url": "https://api.github.com/users/hartzis/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/hartzis/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-07-20T01:07:08Z",
+  "updated_at": "2017-09-16T06:29:05Z",
+  "closed_at": "2017-09-10T21:48:39Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10228",
+    "html_url": "https://github.com/facebook/react/pull/10228",
+    "diff_url": "https://github.com/facebook/react/pull/10228.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10228.patch"
+  },
+  "body": "After realizing this was the second time I've visited this exact page within a year and second guessing myself that the `textInput` ref isn't actually the `<input />` element; I'd like to submit this PR to attempt to make this more explicit. \r\n\r\nYou are actually accessing the method on the child class and not the `focus` method on the dom input element. \r\n\r\nHaving the methods named the same, `focus`, caused some confusion.",
+  "closed_by": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

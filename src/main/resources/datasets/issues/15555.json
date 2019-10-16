@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15555",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15555/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15555/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15555/events",
+  "html_url": "https://github.com/facebook/react/issues/15555",
+  "id": 439426775,
+  "node_id": "MDU6SXNzdWU0Mzk0MjY3NzU=",
+  "number": 15555,
+  "title": "event.stopPropagation doesnt work for components hydrated inside a content-editable div",
+  "user": {
+    "login": "sujitwarrier11",
+    "id": 32289258,
+    "node_id": "MDQ6VXNlcjMyMjg5MjU4",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/32289258?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sujitwarrier11",
+    "html_url": "https://github.com/sujitwarrier11",
+    "followers_url": "https://api.github.com/users/sujitwarrier11/followers",
+    "following_url": "https://api.github.com/users/sujitwarrier11/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sujitwarrier11/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sujitwarrier11/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sujitwarrier11/subscriptions",
+    "organizations_url": "https://api.github.com/users/sujitwarrier11/orgs",
+    "repos_url": "https://api.github.com/users/sujitwarrier11/repos",
+    "events_url": "https://api.github.com/users/sujitwarrier11/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sujitwarrier11/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2019-05-02T04:54:24Z",
+  "updated_at": "2019-05-21T06:22:22Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\nBug\r\n**What is the current behavior?**\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\n\r\nStoppropagation doesn't work in case a component is hydrated inside a content-editable div\r\nplease check out the following sample which illustrates this problem.\r\n\r\nIn the below code I have attached right click handler to both child and parent. on right clicking child both get triggered even though event,stopPropagation has been called.\r\n\r\nhttps://codesandbox.io/embed/0mkoprryxv\r\n\r\n**What is the expected behavior?**\r\n\r\nthe parent event should not be triggered.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\ntested with 16.8 version of react.\r\n",
+  "closed_by": null
+}

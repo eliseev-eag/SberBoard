@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15872",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15872/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15872/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15872/events",
+  "html_url": "https://github.com/facebook/react/pull/15872",
+  "id": 455360441,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjg3NjI0Nzg1",
+  "number": 15872,
+  "title": "Interaction tracing works across hidden and SSR hydration boundaries",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-06-12T18:27:14Z",
+  "updated_at": "2019-06-15T01:08:26Z",
+  "closed_at": "2019-06-15T01:08:24Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15872",
+    "html_url": "https://github.com/facebook/react/pull/15872",
+    "diff_url": "https://github.com/facebook/react/pull/15872.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15872.patch"
+  },
+  "body": "Prior to this PR, interaction tracing does not work correctly for:\r\n* Hidden subtrees\r\n* SSR hydration containing one or more suspense boundaries\r\n\r\nIn both cases, interactions were not (reliably<sup>1</sup>) carried across any yielded work, which means the `Profiler` did not (reliably) report them and the subscription API prematurely reported an interaction as \"complete\" (no more outstanding work). This PR adds several new tests and fixes this behavior.\r\n\r\nThe decision to trace interactions across hidden tree boundaries may be somewhat controversial. It could be argued that idle work should not be included in a traced interaction because it might result in an interaction intended to trace _high priority_ work being drawn out because it also includes _low priority_ work. However I think this is the right decision because you can always opt out of this behavior by scheduling the low priority (hidden) work within a `unstable_clear()` scope.\r\n\r\n<sup>1</sup> - In the case of hidden subtrees, interactions would be traced across boundaries under certain conditions (if there was other outstanding work scheduled for a given interaction). This was more of an unintentional side effect though. After this PR the behavior is _predictable_.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

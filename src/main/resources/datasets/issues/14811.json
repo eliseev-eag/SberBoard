@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14811",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14811/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14811/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14811/events",
+  "html_url": "https://github.com/facebook/react/issues/14811",
+  "id": 408524489,
+  "node_id": "MDU6SXNzdWU0MDg1MjQ0ODk=",
+  "number": 14811,
+  "title": "unmount an empty component is breaking with ReactDOM portals",
+  "user": {
+    "login": "KhodorAmmar",
+    "id": 854420,
+    "node_id": "MDQ6VXNlcjg1NDQyMA==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/854420?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/KhodorAmmar",
+    "html_url": "https://github.com/KhodorAmmar",
+    "followers_url": "https://api.github.com/users/KhodorAmmar/followers",
+    "following_url": "https://api.github.com/users/KhodorAmmar/following{/other_user}",
+    "gists_url": "https://api.github.com/users/KhodorAmmar/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/KhodorAmmar/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/KhodorAmmar/subscriptions",
+    "organizations_url": "https://api.github.com/users/KhodorAmmar/orgs",
+    "repos_url": "https://api.github.com/users/KhodorAmmar/repos",
+    "events_url": "https://api.github.com/users/KhodorAmmar/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/KhodorAmmar/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    },
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 13,
+  "created_at": "2019-02-10T11:11:20Z",
+  "updated_at": "2019-08-05T22:52:54Z",
+  "closed_at": "2019-02-11T18:37:54Z",
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?** Bug\r\n\r\n**What is the current behavior?** When unmounting a component that has a child being rendered under a different parent (with portals), react is throwing an error\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem:**\r\n\r\nhttps://codesandbox.io/s/73n31lwpjx\r\n\r\n**What is the expected behavior?**\r\n\r\nComponent should unmount normally\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n16.8.1\r\nIssue also happens with 16.7.0 (https://codesandbox.io/s/oxmpxmllvy)\r\n\r\nThe issue is only happening under very strict conditions:\r\n- The component being rendered with ReactDOM Portals (Modal) should not render any HTML\r\n- The parent component (Panel) should render Modal as the first component under <React.Fragment>\r\n\r\nAvoiding this is as simple as moving Modal under some other HTML. I'm not entirely sure this is an issue or I'm just doing something wrong with Fragment and portals.\r\n\r\nThe actual error being thrown is:\r\n`react-dom.development.js:9254 Uncaught DOMException: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.`",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

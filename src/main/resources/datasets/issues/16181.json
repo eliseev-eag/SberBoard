@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16181",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16181/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16181/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16181/events",
+  "html_url": "https://github.com/facebook/react/pull/16181",
+  "id": 471464568,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzAwMTExMDI5",
+  "number": 16181,
+  "title": "[act] with nested act()s from different renderers, flush work on exiting outermost act()",
+  "user": {
+    "login": "threepointone",
+    "id": 18808,
+    "node_id": "MDQ6VXNlcjE4ODA4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/18808?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/threepointone",
+    "html_url": "https://github.com/threepointone",
+    "followers_url": "https://api.github.com/users/threepointone/followers",
+    "following_url": "https://api.github.com/users/threepointone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/threepointone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/threepointone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/threepointone/subscriptions",
+    "organizations_url": "https://api.github.com/users/threepointone/orgs",
+    "repos_url": "https://api.github.com/users/threepointone/repos",
+    "events_url": "https://api.github.com/users/threepointone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/threepointone/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-07-23T03:08:43Z",
+  "updated_at": "2019-07-23T23:20:52Z",
+  "closed_at": "2019-07-23T23:20:29Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16181",
+    "html_url": "https://github.com/facebook/react/pull/16181",
+    "diff_url": "https://github.com/facebook/react/pull/16181.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16181.patch"
+  },
+  "body": "Given this snippet:\r\n```jsx\r\nTestRenderer.act(() => {\r\n  TestUtils.act(() => {\r\n    TestRenderer.create(<Effecty />);\r\n  });\r\n});\r\n```\r\nWe want to make sure that all work is only flushed on exiting the outermost act().\r\n\r\nNow, naively doing this based on actingScopeDepth would work with a mocked scheduler, where flushAll() would flush all work across renderers.\r\n\r\nThis doesn't work without mocking the scheduler though; and where flushing work only works per renderer. So we disable this behaviour for a non-mocked scenario. This seems like an ok tradeoff.",
+  "closed_by": {
+    "login": "threepointone",
+    "id": 18808,
+    "node_id": "MDQ6VXNlcjE4ODA4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/18808?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/threepointone",
+    "html_url": "https://github.com/threepointone",
+    "followers_url": "https://api.github.com/users/threepointone/followers",
+    "following_url": "https://api.github.com/users/threepointone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/threepointone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/threepointone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/threepointone/subscriptions",
+    "organizations_url": "https://api.github.com/users/threepointone/orgs",
+    "repos_url": "https://api.github.com/users/threepointone/repos",
+    "events_url": "https://api.github.com/users/threepointone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/threepointone/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

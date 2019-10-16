@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13862",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13862/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13862/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13862/events",
+  "html_url": "https://github.com/facebook/react/pull/13862",
+  "id": 370742878,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjIzMzUyNzc1",
+  "number": 13862,
+  "title": "[WIP] Replay load/error events that happen earlier than commit",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2018-10-16T18:32:13Z",
+  "updated_at": "2018-10-17T02:09:47Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13862",
+    "html_url": "https://github.com/facebook/react/pull/13862",
+    "diff_url": "https://github.com/facebook/react/pull/13862.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13862.patch"
+  },
+  "body": "If we create an img/image/link those might fire their load event before we commit. If that happens, we need to store the event so that we can replay it during the commit phase.\r\n\r\nI had an idea to fix it but this is still WIP because I actually need to test if this approach works.\r\n\r\n- [x] Write code\r\n- [ ] Write unit tests\r\n- [ ] Write fixtures\r\n",
+  "closed_by": null
+}

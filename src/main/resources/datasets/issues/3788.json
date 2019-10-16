@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3788",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3788/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3788/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3788/events",
+  "html_url": "https://github.com/facebook/react/pull/3788",
+  "id": 72024528,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzQ0MTkxMDg=",
+  "number": 3788,
+  "title": "Better invariant / warning replacement",
+  "user": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2015-04-30T00:25:49Z",
+  "updated_at": "2015-06-16T06:39:57Z",
+  "closed_at": "2015-05-22T02:42:22Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3788",
+    "html_url": "https://github.com/facebook/react/pull/3788",
+    "diff_url": "https://github.com/facebook/react/pull/3788.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3788.patch"
+  },
+  "body": "Does 2 things:\n1. Changes how we replace `invariant` to check the condition before the environment, then call `invariant(false, ...)`\n2. Use an if statement for the environment check around `warning`, not a condition expression.\n\nFixes #3701 \n\nHere are some comparisons:\n\n``` js\n// invariant before\n(\"production\" !== process.env.NODE_ENV ? invariant(\n  componentOrElement.render == null ||\n  typeof componentOrElement.render !== 'function',\n  'Component (with keys: %s) contains `render` method ' +\n  'but is not mounted in the DOM',\n  Object.keys(componentOrElement)\n) : invariant(componentOrElement.render == null ||\ntypeof componentOrElement.render !== 'function'));\n\n// invariant after\nif (!(componentOrElement.render == null || typeof componentOrElement.render !== 'function')) {\n  if (\"production\" !== process.env.NODE_ENV) {\n    invariant(false);\n  } else {\n    invariant(false, 'Component (with keys: %s) contains `render` method ' +\n    'but is not mounted in the DOM', Object.keys(componentOrElement));\n  }\n};\n\n// warning before\n(\"production\" !== process.env.NODE_ENV ? warning(\n  !ieCompatibilityMode,\n  'Internet Explorer is running in compatibility mode; please add the ' +\n  'following tag to your HTML to prevent this from happening: ' +\n  '<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />'\n) : null);\n\n// warning after\nif (\"production\" !== process.env.NODE_ENV) {\n  warning(\n    !ieCompatibilityMode,\n    'Internet Explorer is running in compatibility mode; please add the ' +\n    'following tag to your HTML to prevent this from happening: ' +\n    '<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />'\n  );\n};\n```\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

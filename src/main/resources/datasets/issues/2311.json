@@ -1,0 +1,97 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2311",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2311/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2311/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2311/events",
+  "html_url": "https://github.com/facebook/react/pull/2311",
+  "id": 45316259,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjI0NjU5NTY=",
+  "number": 2311,
+  "title": "Avoid `Unkown runtime error` on IE8 script tag",
+  "user": {
+    "login": "lrowe",
+    "id": 290859,
+    "node_id": "MDQ6VXNlcjI5MDg1OQ==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/290859?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lrowe",
+    "html_url": "https://github.com/lrowe",
+    "followers_url": "https://api.github.com/users/lrowe/followers",
+    "following_url": "https://api.github.com/users/lrowe/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lrowe/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lrowe/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lrowe/subscriptions",
+    "organizations_url": "https://api.github.com/users/lrowe/orgs",
+    "repos_url": "https://api.github.com/users/lrowe/repos",
+    "events_url": "https://api.github.com/users/lrowe/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lrowe/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 332720629,
+      "node_id": "MDU6TGFiZWwzMzI3MjA2Mjk=",
+      "url": "https://api.github.com/repos/facebook/react/labels/HTML",
+      "name": "HTML",
+      "color": "f7c6c7",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2014-10-09T01:02:47Z",
+  "updated_at": "2016-03-26T19:21:39Z",
+  "closed_at": "2016-03-26T19:21:39Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/2311",
+    "html_url": "https://github.com/facebook/react/pull/2311",
+    "diff_url": "https://github.com/facebook/react/pull/2311.diff",
+    "patch_url": "https://github.com/facebook/react/pull/2311.patch"
+  },
+  "body": "It seems that setting innerHTML of raw text elements or manipulating child nodes can trigger `Unknown runtime error` in IE8.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

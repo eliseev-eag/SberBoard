@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15571",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15571/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15571/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15571/events",
+  "html_url": "https://github.com/facebook/react/pull/15571",
+  "id": 440482996,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjc2MDIxNTMz",
+  "number": 15571,
+  "title": "Allow running benchmarks in interleaved (local/remote) or fully random order",
+  "user": {
+    "login": "agasnikov",
+    "id": 7144769,
+    "node_id": "MDQ6VXNlcjcxNDQ3Njk=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/7144769?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/agasnikov",
+    "html_url": "https://github.com/agasnikov",
+    "followers_url": "https://api.github.com/users/agasnikov/followers",
+    "following_url": "https://api.github.com/users/agasnikov/following{/other_user}",
+    "gists_url": "https://api.github.com/users/agasnikov/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/agasnikov/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/agasnikov/subscriptions",
+    "organizations_url": "https://api.github.com/users/agasnikov/orgs",
+    "repos_url": "https://api.github.com/users/agasnikov/repos",
+    "events_url": "https://api.github.com/users/agasnikov/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/agasnikov/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-05-05T19:54:10Z",
+  "updated_at": "2019-05-19T22:10:24Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15571",
+    "html_url": "https://github.com/facebook/react/pull/15571",
+    "diff_url": "https://github.com/facebook/react/pull/15571.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15571.patch"
+  },
+  "body": "**This PR addresses issue #11805**\r\n\r\nMajor changes:\r\n- The control flow is noticeably changed. Individual becnhmarks can't be prepared/run one by one, so the process now consists of the following steps:\r\n   - build React bundles for local and remote repos;\r\n   - define the list of benchmarks to be run (for local and remote);\r\n   - build all benchmarks, copy them to the server root folder;\r\n   - prepare the runner queue (interleaved or random);\r\n   - start HTTP server and run individual benchmarks according to the queue;\r\n   - gather stats, calculate averages;\r\n   - print results;\r\n- Both local and remote benchmarks now served with the same server instance simultaneously. It allows running benchmarks in any order;\r\n- All benchmarks are served from the `/scripts/bench/public` folder, where they are copied on the preparation step;\r\n- Support for mismatching list of becnhmarks on local and remote branch (i.e. a new benchmark is created locally and not exists on the remote master);\r\n- Support for running benchmarks in the interleaved (default) or random (pass `--order=random`) order;\r\n- **Fix:** the original script seems to be serving only from the local branch becnhmark folder, regardless whether it's local or remote becnhmark run;\r\n",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7725",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7725/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7725/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7725/events",
+  "html_url": "https://github.com/facebook/react/pull/7725",
+  "id": 176826618,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODUxNzM2Njk=",
+  "number": 7725,
+  "title": "One-click benchmark runner script",
+  "user": {
+    "login": "keyz",
+    "id": 2268452,
+    "node_id": "MDQ6VXNlcjIyNjg0NTI=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2268452?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/keyz",
+    "html_url": "https://github.com/keyz",
+    "followers_url": "https://api.github.com/users/keyz/followers",
+    "following_url": "https://api.github.com/users/keyz/following{/other_user}",
+    "gists_url": "https://api.github.com/users/keyz/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/keyz/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/keyz/subscriptions",
+    "organizations_url": "https://api.github.com/users/keyz/orgs",
+    "repos_url": "https://api.github.com/users/keyz/repos",
+    "events_url": "https://api.github.com/users/keyz/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/keyz/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-09-14T06:34:49Z",
+  "updated_at": "2017-04-21T14:24:57Z",
+  "closed_at": "2017-04-21T14:24:57Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7725",
+    "html_url": "https://github.com/facebook/react/pull/7725",
+    "diff_url": "https://github.com/facebook/react/pull/7725.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7725.patch"
+  },
+  "body": "It's a bit verbose to run our [benchmark script](https://github.com/facebook/react/blob/master/scripts/bench/README.md) now and I'm thinking about ways to make it easier (open to better ideas).\n\n> ```\n> ./scripts/bench/benchmark-runner [--dev]\n> ```\n> \n> It takes bundles from your local `build` folder and compares them with React's latest master build (from http://react.zpao.com/builds/master/latest/). Notice that it doesn't build React by default; you can run `npm run build` manually before invoking the benchmark runner (like `npm run build && ./scripts/bench/benchmark-runner`).\n\ncc @spicyj @gaearon @zpao \n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

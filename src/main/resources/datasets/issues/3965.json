@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3965",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3965/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3965/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3965/events",
+  "html_url": "https://github.com/facebook/react/issues/3965",
+  "id": 81424043,
+  "node_id": "MDU6SXNzdWU4MTQyNDA0Mw==",
+  "number": 3965,
+  "title": "Support for reparenting",
+  "user": {
+    "login": "dantman",
+    "id": 53399,
+    "node_id": "MDQ6VXNlcjUzMzk5",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/53399?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dantman",
+    "html_url": "https://github.com/dantman",
+    "followers_url": "https://api.github.com/users/dantman/followers",
+    "following_url": "https://api.github.com/users/dantman/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dantman/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dantman/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dantman/subscriptions",
+    "organizations_url": "https://api.github.com/users/dantman/orgs",
+    "repos_url": "https://api.github.com/users/dantman/repos",
+    "events_url": "https://api.github.com/users/dantman/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dantman/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 739777675,
+      "node_id": "MDU6TGFiZWw3Mzk3Nzc2NzU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Component%20API",
+      "name": "Component: Component API",
+      "color": "d4c5f9",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 35,
+  "created_at": "2015-05-27T12:14:07Z",
+  "updated_at": "2019-08-26T11:34:33Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "When writing a component that contains a set of large subtrees that stay relatively the same, but are simply moved around such that React's virtual DOM diffing can't detect the movement, React will end up recreating huge trees it should simply be moving.\n\nFor example, pretend `blockA` and `blockB` are very large structures. They may be made of several levels of children and components. For example one could be the entire page contents and the other the sidebar, while this `render()` is the page root.\n\n``` jsx\nrender() {\n    var blockA = <div>AAA</div>,\n        blockB = <div>BBB</div>;\n\n    if ( this.props.layoutA ) {\n        return <div>\n            <div className=\"something\">{blockB}</div>\n            <div className=\"something\">{blockA}</div>\n        </div>;\n    } else {\n        return <div>\n            {blockA}\n            {blockB}\n        </div>;\n    }\n}\n```\n\nBecause the blocks aren't at the same level React cannot see the relation between these blocks and `key` cannot be used to give React any hints. As a result, when `layoutA` is changed, instead of the two blocks being moved to their new location the entire page is essentially completely unrendered and then re-rendered from scratch.\n\nI understand why this is the case. It would be far to expensive for React to be able to detect movement of nodes like this.\n\nBut I do believe we need a pattern to hint to React that this component has large blocks that may be moved around at different levels.\n\nNote that there may be a component in between the rendering component root and the block. So parent semantics scoped to the nearest component won't work. This'll need owner scoping.\n\nI understand that React is trying to eliminate the need for React.createElement to be used and owner scoping within special attributes interferes with that. So instead of a component scoped `key=\"\"` variant I think a method/object style interface kind of like `React.addons.createFragment` might work.\n",
+  "closed_by": null
+}

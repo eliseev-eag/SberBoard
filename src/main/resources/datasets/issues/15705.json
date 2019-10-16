@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15705",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15705/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15705/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15705/events",
+  "html_url": "https://github.com/facebook/react/issues/15705",
+  "id": 447029557,
+  "node_id": "MDU6SXNzdWU0NDcwMjk1NTc=",
+  "number": 15705,
+  "title": "[ESLINT] Propagate fixed identity function to custom hook",
+  "user": {
+    "login": "ekaradon",
+    "id": 9439390,
+    "node_id": "MDQ6VXNlcjk0MzkzOTA=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9439390?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ekaradon",
+    "html_url": "https://github.com/ekaradon",
+    "followers_url": "https://api.github.com/users/ekaradon/followers",
+    "following_url": "https://api.github.com/users/ekaradon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ekaradon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ekaradon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ekaradon/subscriptions",
+    "organizations_url": "https://api.github.com/users/ekaradon/orgs",
+    "repos_url": "https://api.github.com/users/ekaradon/repos",
+    "events_url": "https://api.github.com/users/ekaradon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ekaradon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-05-22T09:31:06Z",
+  "updated_at": "2019-05-22T10:39:21Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\nA feature I suppose but I think of it as a bug.\r\n\r\n**What is the current behavior?**\r\n\r\nWhen I am creating a custom hook using `useReducer` internally, I lost the immutable trait on the `dispatch` function according to hook lint rules:\r\nhttps://codesandbox.io/s/funny-mcnulty-db9zp\r\n\r\n**What is the expected behavior?**\r\n\r\nWell, I would like very much to see my custom hooks propagate these traits and not losing them. I know that it doesn't hurt to include constants in dependencies, but I very much prefer brevity and clarity on what trigger my `useEffect` reload. \r\n\r\n",
+  "closed_by": null
+}

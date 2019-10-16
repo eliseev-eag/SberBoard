@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8135",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8135/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8135/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8135/events",
+  "html_url": "https://github.com/facebook/react/pull/8135",
+  "id": 186028779,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTE0NTcyNTc=",
+  "number": 8135,
+  "title": "Add support for node 7",
+  "user": {
+    "login": "Shastel",
+    "id": 6017041,
+    "node_id": "MDQ6VXNlcjYwMTcwNDE=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/6017041?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Shastel",
+    "html_url": "https://github.com/Shastel",
+    "followers_url": "https://api.github.com/users/Shastel/followers",
+    "following_url": "https://api.github.com/users/Shastel/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Shastel/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Shastel/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Shastel/subscriptions",
+    "organizations_url": "https://api.github.com/users/Shastel/orgs",
+    "repos_url": "https://api.github.com/users/Shastel/repos",
+    "events_url": "https://api.github.com/users/Shastel/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Shastel/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-10-28T21:41:25Z",
+  "updated_at": "2016-10-29T10:24:20Z",
+  "closed_at": "2016-10-29T10:24:12Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8135",
+    "html_url": "https://github.com/facebook/react/pull/8135",
+    "diff_url": "https://github.com/facebook/react/pull/8135.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8135.patch"
+  },
+  "body": "It's fix for #8134\nAs far as i see all scripts in `package.json` work as expected \n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

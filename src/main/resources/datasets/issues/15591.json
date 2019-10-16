@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15591",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15591/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15591/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15591/events",
+  "html_url": "https://github.com/facebook/react/pull/15591",
+  "id": 441839188,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjc3MDgwMjI3",
+  "number": 15591,
+  "title": "`act()` - s / flushPassiveEffects / Scheduler.unstable_flushWithoutYielding",
+  "user": {
+    "login": "threepointone",
+    "id": 18808,
+    "node_id": "MDQ6VXNlcjE4ODA4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/18808?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/threepointone",
+    "html_url": "https://github.com/threepointone",
+    "followers_url": "https://api.github.com/users/threepointone/followers",
+    "following_url": "https://api.github.com/users/threepointone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/threepointone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/threepointone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/threepointone/subscriptions",
+    "organizations_url": "https://api.github.com/users/threepointone/orgs",
+    "repos_url": "https://api.github.com/users/threepointone/repos",
+    "events_url": "https://api.github.com/users/threepointone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/threepointone/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 139734344,
+      "node_id": "MDU6TGFiZWwxMzk3MzQzNDQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Test%20Utils",
+      "name": "Component: Test Utils",
+      "color": "eb6420",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2019-05-08T17:12:45Z",
+  "updated_at": "2019-05-16T16:12:37Z",
+  "closed_at": "2019-05-16T16:12:37Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15591",
+    "html_url": "https://github.com/facebook/react/pull/15591",
+    "diff_url": "https://github.com/facebook/react/pull/15591.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15591.patch"
+  },
+  "body": "a first crack at flushing the scheduler manually from inside `act()`. \r\n- uses `unstable_flushWithoutYielding()` directly instead of `flushAll()` \r\n- for tests to pass, I mostly replaced `toFlushAndYield(...)` with `toHaveYielded()`. \r\n- for a few tests that tested the state of the tree before flushing effects (but still after updates), I replaced `act()` with `batchedUpdates()`.\r\n\r\nOpen questions - \r\n- uh, is this right? - edit: yes. \r\n- `unstable_flushWithoutYielding` is an odd name, especially when it's followed by `toHaveYielded`. Or am I doing something wrong here? Or should one of these named differently? edit: yup, the names are confusing. will change in a followup PR\r\n\r\ntodo\r\n- [x] add a warning when scheduler isn't mocked (but fallback to a version that works in sync mode)\r\n- [x] make a umd build of scheduler/unstable_mock \r\n- [x] more tests for concurrent mode\r\n- [ ] make a docs page/link explaining more",
+  "closed_by": {
+    "login": "threepointone",
+    "id": 18808,
+    "node_id": "MDQ6VXNlcjE4ODA4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/18808?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/threepointone",
+    "html_url": "https://github.com/threepointone",
+    "followers_url": "https://api.github.com/users/threepointone/followers",
+    "following_url": "https://api.github.com/users/threepointone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/threepointone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/threepointone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/threepointone/subscriptions",
+    "organizations_url": "https://api.github.com/users/threepointone/orgs",
+    "repos_url": "https://api.github.com/users/threepointone/repos",
+    "events_url": "https://api.github.com/users/threepointone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/threepointone/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

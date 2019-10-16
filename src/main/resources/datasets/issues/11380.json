@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11380",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11380/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11380/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11380/events",
+  "html_url": "https://github.com/facebook/react/pull/11380",
+  "id": 268937393,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ5MDY1MDc0",
+  "number": 11380,
+  "title": "[WIP] fix(SelectEventPlugin): reset mouseDown after drop event fires",
+  "user": {
+    "login": "tobiasandersen",
+    "id": 3599069,
+    "node_id": "MDQ6VXNlcjM1OTkwNjk=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/3599069?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/tobiasandersen",
+    "html_url": "https://github.com/tobiasandersen",
+    "followers_url": "https://api.github.com/users/tobiasandersen/followers",
+    "following_url": "https://api.github.com/users/tobiasandersen/following{/other_user}",
+    "gists_url": "https://api.github.com/users/tobiasandersen/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/tobiasandersen/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/tobiasandersen/subscriptions",
+    "organizations_url": "https://api.github.com/users/tobiasandersen/orgs",
+    "repos_url": "https://api.github.com/users/tobiasandersen/repos",
+    "events_url": "https://api.github.com/users/tobiasandersen/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/tobiasandersen/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2017-10-26T22:56:31Z",
+  "updated_at": "2018-08-16T23:16:21Z",
+  "closed_at": "2018-01-05T16:46:17Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11380",
+    "html_url": "https://github.com/facebook/react/pull/11380",
+    "diff_url": "https://github.com/facebook/react/pull/11380.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11380.patch"
+  },
+  "body": "This PR most probably isn't ready, it's rather intended to fix (or at least highlight the problems of) https://github.com/facebook/react/issues/11379. The problem is that `mouseDown` never gets reset after the drop event, since this plugin never receives `topMouseUp` as `topLevelType` when dropping. \r\n\r\nWhat I did here fixes the problem, but I feel like the proper solution would be to make sure that the `topMouseUp` event is received.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

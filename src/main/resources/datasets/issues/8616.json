@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8616",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8616/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8616/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8616/events",
+  "html_url": "https://github.com/facebook/react/pull/8616",
+  "id": 196914015,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTg5MTk0NDU=",
+  "number": 8616,
+  "title": "refine test & tweak gitignore",
+  "user": {
+    "login": "zzz6519003",
+    "id": 1625608,
+    "node_id": "MDQ6VXNlcjE2MjU2MDg=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1625608?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zzz6519003",
+    "html_url": "https://github.com/zzz6519003",
+    "followers_url": "https://api.github.com/users/zzz6519003/followers",
+    "following_url": "https://api.github.com/users/zzz6519003/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zzz6519003/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zzz6519003/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zzz6519003/subscriptions",
+    "organizations_url": "https://api.github.com/users/zzz6519003/orgs",
+    "repos_url": "https://api.github.com/users/zzz6519003/repos",
+    "events_url": "https://api.github.com/users/zzz6519003/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zzz6519003/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-12-21T11:51:25Z",
+  "updated_at": "2017-01-25T15:14:36Z",
+  "closed_at": "2017-01-25T15:14:35Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8616",
+    "html_url": "https://github.com/facebook/react/pull/8616",
+    "diff_url": "https://github.com/facebook/react/pull/8616.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8616.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

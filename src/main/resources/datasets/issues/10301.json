@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10301",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10301/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10301/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10301/events",
+  "html_url": "https://github.com/facebook/react/pull/10301",
+  "id": 245930001,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTMyNjY4MzAy",
+  "number": 10301,
+  "title": "Additional information on PropTypes.func",
+  "user": {
+    "login": "kdr1",
+    "id": 18314209,
+    "node_id": "MDQ6VXNlcjE4MzE0MjA5",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/18314209?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/kdr1",
+    "html_url": "https://github.com/kdr1",
+    "followers_url": "https://api.github.com/users/kdr1/followers",
+    "following_url": "https://api.github.com/users/kdr1/following{/other_user}",
+    "gists_url": "https://api.github.com/users/kdr1/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/kdr1/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/kdr1/subscriptions",
+    "organizations_url": "https://api.github.com/users/kdr1/orgs",
+    "repos_url": "https://api.github.com/users/kdr1/repos",
+    "events_url": "https://api.github.com/users/kdr1/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/kdr1/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-07-27T05:31:03Z",
+  "updated_at": "2017-10-08T20:57:28Z",
+  "closed_at": "2017-10-08T20:57:28Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10301",
+    "html_url": "https://github.com/facebook/react/pull/10301",
+    "diff_url": "https://github.com/facebook/react/pull/10301.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10301.patch"
+  },
+  "body": "Added clarification that PropTypes.func can be used to check for a class components.\r\n",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

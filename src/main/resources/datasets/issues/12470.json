@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12470",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12470/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12470/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12470/events",
+  "html_url": "https://github.com/facebook/react/pull/12470",
+  "id": 309191106,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTc3OTA4NDk3",
+  "number": 12470,
+  "title": "Don't bail out on referential equality of Consumer's props.children function",
+  "user": {
+    "login": "iamdustan",
+    "id": 227879,
+    "node_id": "MDQ6VXNlcjIyNzg3OQ==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/227879?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/iamdustan",
+    "html_url": "https://github.com/iamdustan",
+    "followers_url": "https://api.github.com/users/iamdustan/followers",
+    "following_url": "https://api.github.com/users/iamdustan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/iamdustan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/iamdustan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/iamdustan/subscriptions",
+    "organizations_url": "https://api.github.com/users/iamdustan/orgs",
+    "repos_url": "https://api.github.com/users/iamdustan/repos",
+    "events_url": "https://api.github.com/users/iamdustan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/iamdustan/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2018-03-28T01:39:19Z",
+  "updated_at": "2018-03-29T18:43:06Z",
+  "closed_at": "2018-03-29T18:16:02Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12470",
+    "html_url": "https://github.com/facebook/react/pull/12470",
+    "diff_url": "https://github.com/facebook/react/pull/12470.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12470.patch"
+  },
+  "body": "I was playing around with the new context API and ran into some unexpected bail outs. The exact scenario was something like the following:\r\n\r\n```jsx\r\nclass React extends React.Component {\r\n  state = { name: '' };\r\n  onChange = (event) => {\r\n    const { name, value } = event.currentTarget;\r\n    this.setState({[name]: value});\r\n  };\r\n  renderChildren = (context) => {\r\n    return (\r\n      <form action={context.action}>\r\n        <input value={this.state.value} onChange={this.onChange} name=\"name\" />\r\n      </form>\r\n    );\r\n  };\r\n\r\n  render() {\r\n    return <Consumer>{this.renderChildren}</Consumer>;\r\n  }\r\n}\r\n```\r\n\r\nThe test case here is similar but without any DOM dependencies. I would expect this to “just work” but  alas. My only thoughts for “solving” this is checking if the function exists on the instance before optimistically bailing out and assuming it is pure.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15911",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15911/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15911/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15911/events",
+  "html_url": "https://github.com/facebook/react/pull/15911",
+  "id": 457257125,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjg5MTAyODc3",
+  "number": 15911,
+  "title": "[Scheduler] Integrated timers",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-06-18T04:35:20Z",
+  "updated_at": "2019-06-19T23:05:08Z",
+  "closed_at": "2019-06-19T23:05:08Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15911",
+    "html_url": "https://github.com/facebook/react/pull/15911",
+    "diff_url": "https://github.com/facebook/react/pull/15911.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15911.patch"
+  },
+  "body": "## Based on #15910 \r\n\r\nAdds a `delay` option to `scheduleCallback`. When specified, the task is not scheduled until after the delay has elapsed.\r\n\r\nDelayed tasks are scheduled on a timer queue maintained by Scheduler, instead of directly with the browser. The main benefit is to reduce the number of native browser timers that Scheduler's `message` event handler has to contend with; so, after yielding to the browser at the end of the frame, Scheduler will more quickly regain control of the main thread. Because we're able to flush the timer queue without yielding to browser timer events, there's also less task switching overhead (though in the absence of `isInputPending`, this is mostly a theoretical win since we yield every frame regardless).\r\n\r\nIf the queue of non-delayed tasks is non-empty — that is, if there is pending CPU bound work — Scheduler is able to avoid a browser timer entirely by periodically checking its own timer queue while flushing tasks (inside the `message` event handler). Once the CPU-bound work is complete, if there are still pending delayed tasks, Scheduler will schedule a single browser timer that fires once the earliest delay has elapsed.",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

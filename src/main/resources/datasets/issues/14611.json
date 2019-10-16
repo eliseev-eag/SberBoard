@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14611",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14611/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14611/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14611/events",
+  "html_url": "https://github.com/facebook/react/issues/14611",
+  "id": 400100056,
+  "node_id": "MDU6SXNzdWU0MDAxMDAwNTY=",
+  "number": 14611,
+  "title": "Support Touch/Pointer Event on shape in react-art ?",
+  "user": {
+    "login": "owcc",
+    "id": 5770548,
+    "node_id": "MDQ6VXNlcjU3NzA1NDg=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/5770548?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/owcc",
+    "html_url": "https://github.com/owcc",
+    "followers_url": "https://api.github.com/users/owcc/followers",
+    "following_url": "https://api.github.com/users/owcc/following{/other_user}",
+    "gists_url": "https://api.github.com/users/owcc/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/owcc/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/owcc/subscriptions",
+    "organizations_url": "https://api.github.com/users/owcc/orgs",
+    "repos_url": "https://api.github.com/users/owcc/repos",
+    "events_url": "https://api.github.com/users/owcc/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/owcc/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-01-17T03:54:36Z",
+  "updated_at": "2019-01-17T03:54:36Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\n  *feature*\r\n**What is the expected behavior?**\r\n  Support Support or Touch Event on shape\r\n\r\nI'm working on a project which is create by react & react-art, I need to run it on mobile device so touch or pointer event should be support, is it possible to support it?",
+  "closed_by": null
+}

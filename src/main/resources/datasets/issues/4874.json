@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4874",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4874/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4874/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4874/events",
+  "html_url": "https://github.com/facebook/react/pull/4874",
+  "id": 106470226,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDUwMDUzMzg=",
+  "number": 4874,
+  "title": "Clarifies \"Fetching from the server\"",
+  "user": {
+    "login": "brigand",
+    "id": 936069,
+    "node_id": "MDQ6VXNlcjkzNjA2OQ==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/936069?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/brigand",
+    "html_url": "https://github.com/brigand",
+    "followers_url": "https://api.github.com/users/brigand/followers",
+    "following_url": "https://api.github.com/users/brigand/following{/other_user}",
+    "gists_url": "https://api.github.com/users/brigand/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/brigand/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/brigand/subscriptions",
+    "organizations_url": "https://api.github.com/users/brigand/orgs",
+    "repos_url": "https://api.github.com/users/brigand/repos",
+    "events_url": "https://api.github.com/users/brigand/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/brigand/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2015-09-15T03:27:14Z",
+  "updated_at": "2015-09-15T03:43:00Z",
+  "closed_at": "2015-09-15T03:42:54Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4874",
+    "html_url": "https://github.com/facebook/react/pull/4874",
+    "diff_url": "https://github.com/facebook/react/pull/4874.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4874.patch"
+  },
+  "body": "People following along with the tutorial get confused because this is the first step to produce non-working code.\n\nIt's been asked several times on IRC, including today.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3786",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3786/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3786/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3786/events",
+  "html_url": "https://github.com/facebook/react/pull/3786",
+  "id": 71996667,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzQ0MDg2ODU=",
+  "number": 3786,
+  "title": "check that React renders the menuitem closing tag",
+  "user": {
+    "login": "HurricaneJames",
+    "id": 1138434,
+    "node_id": "MDQ6VXNlcjExMzg0MzQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1138434?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/HurricaneJames",
+    "html_url": "https://github.com/HurricaneJames",
+    "followers_url": "https://api.github.com/users/HurricaneJames/followers",
+    "following_url": "https://api.github.com/users/HurricaneJames/following{/other_user}",
+    "gists_url": "https://api.github.com/users/HurricaneJames/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/HurricaneJames/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/HurricaneJames/subscriptions",
+    "organizations_url": "https://api.github.com/users/HurricaneJames/orgs",
+    "repos_url": "https://api.github.com/users/HurricaneJames/repos",
+    "events_url": "https://api.github.com/users/HurricaneJames/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/HurricaneJames/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-04-29T21:36:01Z",
+  "updated_at": "2015-04-29T21:43:18Z",
+  "closed_at": "2015-04-29T21:43:16Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3786",
+    "html_url": "https://github.com/facebook/react/pull/3786",
+    "diff_url": "https://github.com/facebook/react/pull/3786.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3786.patch"
+  },
+  "body": "This was all wrapped up and ready in #3783, but I had several commits that did not rebase well. There are failing tests now, but they have nothing to do with these changes, they are on the base facebook/react repo (I think the failing test was introduced in #3781).\n",
+  "closed_by": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

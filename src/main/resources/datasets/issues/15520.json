@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15520",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15520/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15520/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15520/events",
+  "html_url": "https://github.com/facebook/react/issues/15520",
+  "id": 437940427,
+  "node_id": "MDU6SXNzdWU0Mzc5NDA0Mjc=",
+  "number": 15520,
+  "title": "Cannot suppress error boundary output using react-test-renderer",
+  "user": {
+    "login": "mpeyper",
+    "id": 23029903,
+    "node_id": "MDQ6VXNlcjIzMDI5OTAz",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/23029903?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mpeyper",
+    "html_url": "https://github.com/mpeyper",
+    "followers_url": "https://api.github.com/users/mpeyper/followers",
+    "following_url": "https://api.github.com/users/mpeyper/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mpeyper/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mpeyper/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mpeyper/subscriptions",
+    "organizations_url": "https://api.github.com/users/mpeyper/orgs",
+    "repos_url": "https://api.github.com/users/mpeyper/repos",
+    "events_url": "https://api.github.com/users/mpeyper/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mpeyper/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-04-27T12:50:04Z",
+  "updated_at": "2019-09-25T01:57:26Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n\r\nBug\r\n\r\n**What is the current behavior?**\r\n\r\nWhen following @gaearon's example on [how to suppress the error boundary logging in tests expecting errors](https://github.com/facebook/react/issues/11098#issuecomment-412682721), it appears to not be working in 16.8.6 (I'm not sure which versions after 16.4.3 is _has_ worked for).\r\n\r\n[Here is a sandbox.](https://codesandbox.io/s/l5mrl747wm?expanddevtools=1&fontsize=14&module=%2Fsrc%2Fexample.test.js&previewwindow=tests)\r\n\r\nI had to make a change to the `renderError` as it looks like the way codesandbox executes the script cause the `event.error` to be hidden from the code (it just had an object with `isTrusted: true` on it - google led me [here](https://stackoverflow.com/a/44862693/6902543) so I changed it to just count the number of errors).\r\n\r\nI also made a change to be able to use `react-test-renderer` as well as `react-dom` as I'm actually after a way to suppress the error using the test renderer for an [issue raised in `react-hooks-testing-library`](https://github.com/mpeyper/react-hooks-testing-library/issues/50).\r\n\r\nIn my sandbox, you will see the errors\r\n\r\n> The above error occurred in the <Darth> component:\r\n> in Darth\r\n> in TestBoundary\r\n>\r\n> React will try to recreate this component tree from scratch using the error boundary you provided, TestBoundary.\r\n\r\nand\r\n\r\n> The above error occurred in the <ObiWan> component:\r\n> in ObiWan\r\n> in TestBoundary\r\n> \r\n> React will try to recreate this component tree from scratch using the error boundary you provided, TestBoundary.\r\n\r\nget printed to the console, despite the `event.preventDefault()` call.\r\n\r\nThe other main thing to note is that the `react-test-renderer` test does not pass, which implies the error listener is not firing for it, which sort of makes sense to me as it's not using the DOM, so it's not erroring on the window, but my understanding of these things is somewhat limited.\r\n\r\n**What is the expected behavior?**\r\n\r\nAssuming the `expectRenderError`, `TestBoundary` and `handleTopLevelError` code is sufficient to suppress the output as indicated in #11098, I would expect the `react-dom` test to produce no output.\r\n\r\nAssuming the same setup should also work for `react-test-renderer`, I would also expect that test to have no output.\r\n\r\nIf either of these assumptions are wrong, how should one go about suppressing the output in these tests?  \r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\n`react`: `16.8.6`\r\n`react-dom`: `16.8.6`\r\n`react-test-renderer`: `16.8.6`",
+  "closed_by": null
+}

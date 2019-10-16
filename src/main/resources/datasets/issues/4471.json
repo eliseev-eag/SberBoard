@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4471",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4471/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4471/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4471/events",
+  "html_url": "https://github.com/facebook/react/pull/4471",
+  "id": 96717860,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDA2MzM0MDM=",
+  "number": 4471,
+  "title": "Docs: Fix jsx iife example",
+  "user": {
+    "login": "Yeti-or",
+    "id": 1813468,
+    "node_id": "MDQ6VXNlcjE4MTM0Njg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1813468?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Yeti-or",
+    "html_url": "https://github.com/Yeti-or",
+    "followers_url": "https://api.github.com/users/Yeti-or/followers",
+    "following_url": "https://api.github.com/users/Yeti-or/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Yeti-or/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Yeti-or/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Yeti-or/subscriptions",
+    "organizations_url": "https://api.github.com/users/Yeti-or/orgs",
+    "repos_url": "https://api.github.com/users/Yeti-or/repos",
+    "events_url": "https://api.github.com/users/Yeti-or/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Yeti-or/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2015-07-23T03:11:44Z",
+  "updated_at": "2015-07-25T00:41:46Z",
+  "closed_at": "2015-07-23T04:04:59Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4471",
+    "html_url": "https://github.com/facebook/react/pull/4471",
+    "diff_url": "https://github.com/facebook/react/pull/4471.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4471.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

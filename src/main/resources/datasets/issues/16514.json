@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16514",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16514/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16514/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16514/events",
+  "html_url": "https://github.com/facebook/react/issues/16514",
+  "id": 482871136,
+  "node_id": "MDU6SXNzdWU0ODI4NzExMzY=",
+  "number": 16514,
+  "title": "DevTools: Firefox extension fails to recognize React on sites with strict CSP",
+  "user": {
+    "login": "tstirrat15",
+    "id": 2581423,
+    "node_id": "MDQ6VXNlcjI1ODE0MjM=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2581423?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/tstirrat15",
+    "html_url": "https://github.com/tstirrat15",
+    "followers_url": "https://api.github.com/users/tstirrat15/followers",
+    "following_url": "https://api.github.com/users/tstirrat15/following{/other_user}",
+    "gists_url": "https://api.github.com/users/tstirrat15/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/tstirrat15/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/tstirrat15/subscriptions",
+    "organizations_url": "https://api.github.com/users/tstirrat15/orgs",
+    "repos_url": "https://api.github.com/users/tstirrat15/repos",
+    "events_url": "https://api.github.com/users/tstirrat15/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/tstirrat15/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-08-20T13:46:06Z",
+  "updated_at": "2019-08-20T22:16:29Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "When I run react devtools on Chrome on https://www.getmyboat.com, it works just fine, but when I go to the same page with react devtools on Firefox, the icon is greyed out and it says the page doesn't appear to be using React.\r\n\r\nThe site uses a strict CSP policy - i.e. no unsafe-inline or unsafe-eval - so I'm wondering if it's something where Firefox treats extension code as injected code, where Chrome doesn't.\r\n\r\nIs this a known issue? I'm fine if it's a wontfix on account of some behavior of Firefox, but I'd like to know for sure that that's the case.\r\n\r\nEDIT: If it is a wontfix, I'll add something to the devtools docs to that effect.",
+  "closed_by": null
+}

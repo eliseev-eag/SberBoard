@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8805",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8805/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8805/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8805/events",
+  "html_url": "https://github.com/facebook/react/pull/8805",
+  "id": 201133984,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTAxNzY4OTgy",
+  "number": 8805,
+  "title": "Add Flow reminder to PR template",
+  "user": {
+    "login": "crosscompile",
+    "id": 1153686,
+    "node_id": "MDQ6VXNlcjExNTM2ODY=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1153686?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/crosscompile",
+    "html_url": "https://github.com/crosscompile",
+    "followers_url": "https://api.github.com/users/crosscompile/followers",
+    "following_url": "https://api.github.com/users/crosscompile/following{/other_user}",
+    "gists_url": "https://api.github.com/users/crosscompile/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/crosscompile/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/crosscompile/subscriptions",
+    "organizations_url": "https://api.github.com/users/crosscompile/orgs",
+    "repos_url": "https://api.github.com/users/crosscompile/repos",
+    "events_url": "https://api.github.com/users/crosscompile/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/crosscompile/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-01-16T22:42:10Z",
+  "updated_at": "2017-01-18T18:45:20Z",
+  "closed_at": "2017-01-17T14:34:45Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8805",
+    "html_url": "https://github.com/facebook/react/pull/8805",
+    "diff_url": "https://github.com/facebook/react/pull/8805.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8805.patch"
+  },
+  "body": "Since CircleCI fails on Flow errors, I think it would be helpful to add a reminder to `npm run flow` before submitting a PR.\r\n\r\nFormatting was inspired by the [Draft.js PR template](https://github.com/facebook/draft-js/blob/master/.github/PULL_REQUEST_TEMPLATE.md).\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

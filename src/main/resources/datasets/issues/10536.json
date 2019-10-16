@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10536",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10536/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10536/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10536/events",
+  "html_url": "https://github.com/facebook/react/pull/10536",
+  "id": 252740862,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTM3NTU5MDcx",
+  "number": 10536,
+  "title": "Add table of attribute behavior",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2017-08-24T21:47:27Z",
+  "updated_at": "2017-08-25T17:03:31Z",
+  "closed_at": "2017-08-25T17:03:31Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10536",
+    "html_url": "https://github.com/facebook/react/pull/10536",
+    "diff_url": "https://github.com/facebook/react/pull/10536.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10536.patch"
+  },
+  "body": "There are many \"special cases\" of attributes that React may recognize and treat in different ways. For each of these cases, we must consider common mis-capitalizations and alternative formats for the attribute name. For all possible value types, we need to verify that any changes between React 15 and 16 are intentional and understood.\r\n\r\nThis is an *unpolished MVP* of a fixture to compare the behavior between React 15 and 16 for every possible value type for each attribute name.\r\n\r\nThis will be useful for verifying and understanding the changed made in:\r\nhttps://github.com/facebook/react/commit/2999811b07a5eb9e04680457a0b56195abd7e08c\r\nhttps://github.com/facebook/react/commit/5ba1803ba2bf8581c2605247f3cf50aebacce1c4\r\nhttps://github.com/facebook/react/commit/35859df9418e3161130d267a27602fc263979a1f",
+  "closed_by": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

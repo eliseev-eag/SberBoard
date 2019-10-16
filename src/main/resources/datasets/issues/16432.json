@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16432",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16432/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16432/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16432/events",
+  "html_url": "https://github.com/facebook/react/pull/16432",
+  "id": 481777784,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzA4MjEyMDc3",
+  "number": 16432,
+  "title": "Babel Transform JSX to React.jsx/React.jsxDEV Plugin",
+  "user": {
+    "login": "lunaruan",
+    "id": 2735514,
+    "node_id": "MDQ6VXNlcjI3MzU1MTQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2735514?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lunaruan",
+    "html_url": "https://github.com/lunaruan",
+    "followers_url": "https://api.github.com/users/lunaruan/followers",
+    "following_url": "https://api.github.com/users/lunaruan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lunaruan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lunaruan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lunaruan/subscriptions",
+    "organizations_url": "https://api.github.com/users/lunaruan/orgs",
+    "repos_url": "https://api.github.com/users/lunaruan/repos",
+    "events_url": "https://api.github.com/users/lunaruan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lunaruan/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-08-16T20:41:25Z",
+  "updated_at": "2019-08-27T23:00:21Z",
+  "closed_at": "2019-08-27T23:00:21Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16432",
+    "html_url": "https://github.com/facebook/react/pull/16432",
+    "diff_url": "https://github.com/facebook/react/pull/16432.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16432.patch"
+  },
+  "body": "**This babel transform is a fork of the @babel/plugin-transform-react-jsx transform and is for experimentation purposes only. We don't plan to own this code in the future, and we will upstream this to Babel at some point once we've proven out the concept.**\r\n\r\nAs per the [RFC to simplify element creation](https://github.com/reactjs/rfcs/blob/createlement-rfc/text/0000-create-element-changes.md), we want to change the JSX transform from targeting `React.createElement(type, props, children)` to `React.jsx(type, props, key)`. This modifies the existing [`@babel/plugin-transform-react-jsx`](https://github.com/babel/babel/blob/master/packages/babel-plugin-transform-react-jsx/src/index.js) (and [helper](https://github.com/babel/babel/blob/master/packages/babel-helper-builder-react-jsx/src/index.js)) babel plugin to support `React.jsx` and `React.jsxDEV`. \r\n\r\nThe main differences between `React.jsx`/`React.jsxDEV` and `React.createElement` are:\r\n  1.) `key` is now passed as an explicit argument rather than through props\r\n  3.) `children` are now passed through props rather than as an explicit argument\r\n  4.) `props` must always be an object\r\n  5.) `__source` and and `__self` are now passed as separate arguments into `React.jsxDEV` rather than through props\r\n\r\nPart of the rationale for this change is that we want to deprecate key spread through props because this is an expensive dynamic comparison operation. We want users instead always explicitly pass key as a prop. However, in the interim, we need a way to distinguish between `<div {...props} key={foo} />` and `<div key={foo} {...props} />`. Therefore, until we completely deprecate key spreading, we will use `React.createElement` to transform `<div {...props} key=\"Hi\" />` and `React.jsx` to transform everything else.",
+  "closed_by": {
+    "login": "lunaruan",
+    "id": 2735514,
+    "node_id": "MDQ6VXNlcjI3MzU1MTQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2735514?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lunaruan",
+    "html_url": "https://github.com/lunaruan",
+    "followers_url": "https://api.github.com/users/lunaruan/followers",
+    "following_url": "https://api.github.com/users/lunaruan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lunaruan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lunaruan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lunaruan/subscriptions",
+    "organizations_url": "https://api.github.com/users/lunaruan/orgs",
+    "repos_url": "https://api.github.com/users/lunaruan/repos",
+    "events_url": "https://api.github.com/users/lunaruan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lunaruan/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

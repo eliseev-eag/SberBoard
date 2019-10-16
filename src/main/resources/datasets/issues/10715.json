@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10715",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10715/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10715/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10715/events",
+  "html_url": "https://github.com/facebook/react/pull/10715",
+  "id": 257913407,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQxMjE4Nzk3",
+  "number": 10715,
+  "title": "Deterministic updates",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2017-09-15T02:57:01Z",
+  "updated_at": "2019-05-03T03:31:46Z",
+  "closed_at": "2017-10-14T00:21:26Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10715",
+    "html_url": "https://github.com/facebook/react/pull/10715",
+    "diff_url": "https://github.com/facebook/react/pull/10715.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10715.patch"
+  },
+  "body": "High priority updates typically require less work to render than low priority ones. It's beneficial to flush those first, in their own batch, before working on more expensive low priority ones. We do this even if a high priority is scheduled after a low priority one.\r\n\r\nHowever, we don't want this reordering of updates to affect the terminal state. State should be deterministic: once all work has been flushed, the final state should be the same regardless of how they were scheduled.\r\n\r\nTo get both properties, we store updates on the queue in insertion order instead of priority order (always append). Then, when processing the queue, we skip over updates with insufficient priority. Instead of removing updates from the queue right after processing them, we only remove them if there are no unprocessed updates before it in the list.\r\n\r\nThis means that updates may be processed more than once.\r\n\r\nAs a bonus, the new implementation is simpler and requires less code.\r\n\r\nTo avoid conflicts, this works off my expiration times (#10426) and prerendering (#10624) PRs.",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

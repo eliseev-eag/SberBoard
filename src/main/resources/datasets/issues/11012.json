@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11012",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11012/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11012/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11012/events",
+  "html_url": "https://github.com/facebook/react/pull/11012",
+  "id": 261933003,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ0MDgwNjAw",
+  "number": 11012,
+  "title": "Ensure all external links have consistent behavior",
+  "user": {
+    "login": "yangshun",
+    "id": 1315101,
+    "node_id": "MDQ6VXNlcjEzMTUxMDE=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1315101?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/yangshun",
+    "html_url": "https://github.com/yangshun",
+    "followers_url": "https://api.github.com/users/yangshun/followers",
+    "following_url": "https://api.github.com/users/yangshun/following{/other_user}",
+    "gists_url": "https://api.github.com/users/yangshun/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/yangshun/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/yangshun/subscriptions",
+    "organizations_url": "https://api.github.com/users/yangshun/orgs",
+    "repos_url": "https://api.github.com/users/yangshun/repos",
+    "events_url": "https://api.github.com/users/yangshun/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/yangshun/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-10-01T17:48:47Z",
+  "updated_at": "2017-10-02T18:27:03Z",
+  "closed_at": "2017-10-02T16:52:40Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11012",
+    "html_url": "https://github.com/facebook/react/pull/11012",
+    "diff_url": "https://github.com/facebook/react/pull/11012.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11012.patch"
+  },
+  "body": "The new docs site looks great! I did an audit of the links on the entire site and found some issues. This PR attempts to address them:\r\n\r\n- The `<ExternalFooterLink>` component was not making use of the `rel` prop passed in. Hence links created by `<ExternalFooterLink>` component could have `target=\"_blank\"` and subjected to the `window.opener` security vulnerabililty. I have made `<ExternalFooterLink>` use the `rel` prop.\r\n- Some links with `target=\"_blank\"` don't have the `rel=\"noopener\"` attribute.\r\n- Reorder the `sectionListCommunity` links on the [Community Resources page](https://reactjs.org/community/support.html) to match the footer.\r\n- Some of the links that have the external icon / render the `<ExternalLinkSvg>` component do not open in new tabs. I made the behavior consistent by adding `target=\"_blank\"` and `rel=\"noopener\"` to them. If this is intended, let me know and I'll revert.\r\n\r\nOther minor stuff:\r\n\r\n- `**remarkable**` on the homepage of the \"A Component Using External Plugins\" section was left as markdown. Changed it to `<strong>` as the line \"JSX is optional and not required to use in the React\" in the \"A Simple Component\" section is also rendered using `<strong>`.\r\n\r\nSome questions/suggestions I have:\r\n\r\n- Some of the links in the templates of the `docs` directory face the issues mentioned above but they are no longer in use. Should they be fixed as well?\r\n- I think `target=\"_blank\"` and `rel=\"noopener\"` should be part of an `<ExternalLink>` component so that all external links on the new docs site can use it without having those two props be repeated so many times like inside `LayoutFooter/Footer.js`. I can do a site-wide refactor for this if there's interest.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

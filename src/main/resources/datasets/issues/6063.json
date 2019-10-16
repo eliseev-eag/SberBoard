@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6063",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6063/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6063/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6063/events",
+  "html_url": "https://github.com/facebook/react/pull/6063",
+  "id": 134471534,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTk3NDYzMDI=",
+  "number": 6063,
+  "title": "Wrap insertBefore in Windows 8 apps",
+  "user": {
+    "login": "Andrew8xx8",
+    "id": 672631,
+    "node_id": "MDQ6VXNlcjY3MjYzMQ==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/672631?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Andrew8xx8",
+    "html_url": "https://github.com/Andrew8xx8",
+    "followers_url": "https://api.github.com/users/Andrew8xx8/followers",
+    "following_url": "https://api.github.com/users/Andrew8xx8/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Andrew8xx8/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Andrew8xx8/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Andrew8xx8/subscriptions",
+    "organizations_url": "https://api.github.com/users/Andrew8xx8/orgs",
+    "repos_url": "https://api.github.com/users/Andrew8xx8/repos",
+    "events_url": "https://api.github.com/users/Andrew8xx8/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Andrew8xx8/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-02-18T03:30:51Z",
+  "updated_at": "2016-02-18T04:28:27Z",
+  "closed_at": "2016-02-18T04:28:27Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6063",
+    "html_url": "https://github.com/facebook/react/pull/6063",
+    "diff_url": "https://github.com/facebook/react/pull/6063.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6063.patch"
+  },
+  "body": "React does not work correctly on Windows 8 app. This platform has security restrictions and in some cases it throws this error:\n\n> 0x800c001c - JavaScript runtime error: Unable to add dynamic content. A script attempted to inject dynamic content, or elements previously modified dynamically, that might be unsafe. For example, using the innerHTML property to add script or malformed HTML will generate this exception. Use the toStaticHTML method to filter dynamic content, or explicitly create elements and attributes with a method such as createElement. For more information, see http://go.microsoft.com/fwlink/?LinkID=247104.\n\nThe bug is related to #441 and have a similar reason but with `insertBefore` call. It can be fixed in the same way.\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

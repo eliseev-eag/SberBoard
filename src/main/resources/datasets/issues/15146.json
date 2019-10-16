@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15146",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15146/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15146/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15146/events",
+  "html_url": "https://github.com/facebook/react/pull/15146",
+  "id": 422553725,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjYyMzE4MTUx",
+  "number": 15146,
+  "title": "feat(eslint-plugin-react-hooks): autofix inject deps on useMemo or useCallback",
+  "user": {
+    "login": "RedTn",
+    "id": 3923164,
+    "node_id": "MDQ6VXNlcjM5MjMxNjQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3923164?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/RedTn",
+    "html_url": "https://github.com/RedTn",
+    "followers_url": "https://api.github.com/users/RedTn/followers",
+    "following_url": "https://api.github.com/users/RedTn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/RedTn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/RedTn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/RedTn/subscriptions",
+    "organizations_url": "https://api.github.com/users/RedTn/orgs",
+    "repos_url": "https://api.github.com/users/RedTn/repos",
+    "events_url": "https://api.github.com/users/RedTn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/RedTn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-03-19T05:44:20Z",
+  "updated_at": "2019-03-21T05:42:08Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15146",
+    "html_url": "https://github.com/facebook/react/pull/15146",
+    "diff_url": "https://github.com/facebook/react/pull/15146.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15146.patch"
+  },
+  "body": "This feat injects dependencies onto useMemo/useCallback if the second argument is not provided and it has a dependency.\r\nI was thinking not to break code that already uses useMemo without the second argument, that the fix shouldn't be applied unless the developer explicitly wants that change, but I'm open to better ideas.\r\nIdeally there would also be a fix option where it just removes the useMemo/useCallback hook if there are no deps required",
+  "closed_by": null
+}

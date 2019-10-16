@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9978",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9978/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9978/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9978/events",
+  "html_url": "https://github.com/facebook/react/pull/9978",
+  "id": 236248960,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTI1ODYzNzk0",
+  "number": 9978,
+  "title": "explicitly warn against updating external state in componentWillUpdate",
+  "user": {
+    "login": "jedwards1211",
+    "id": 1448194,
+    "node_id": "MDQ6VXNlcjE0NDgxOTQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1448194?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jedwards1211",
+    "html_url": "https://github.com/jedwards1211",
+    "followers_url": "https://api.github.com/users/jedwards1211/followers",
+    "following_url": "https://api.github.com/users/jedwards1211/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jedwards1211/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jedwards1211/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jedwards1211/subscriptions",
+    "organizations_url": "https://api.github.com/users/jedwards1211/orgs",
+    "repos_url": "https://api.github.com/users/jedwards1211/repos",
+    "events_url": "https://api.github.com/users/jedwards1211/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jedwards1211/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-06-15T16:36:42Z",
+  "updated_at": "2017-07-11T14:40:17Z",
+  "closed_at": "2017-07-11T14:40:17Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9978",
+    "html_url": "https://github.com/facebook/react/pull/9978",
+    "diff_url": "https://github.com/facebook/react/pull/9978.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9978.patch"
+  },
+  "body": "I mistakenly assumed it was okay to update external state during `componentWillUpdate()` (for instance by dispatching redux actions), so to help other developers avoid this pitfall, I added an explicit warning about this.",
+  "closed_by": {
+    "login": "jedwards1211",
+    "id": 1448194,
+    "node_id": "MDQ6VXNlcjE0NDgxOTQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1448194?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jedwards1211",
+    "html_url": "https://github.com/jedwards1211",
+    "followers_url": "https://api.github.com/users/jedwards1211/followers",
+    "following_url": "https://api.github.com/users/jedwards1211/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jedwards1211/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jedwards1211/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jedwards1211/subscriptions",
+    "organizations_url": "https://api.github.com/users/jedwards1211/orgs",
+    "repos_url": "https://api.github.com/users/jedwards1211/repos",
+    "events_url": "https://api.github.com/users/jedwards1211/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jedwards1211/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

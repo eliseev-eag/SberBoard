@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3583",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3583/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3583/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3583/events",
+  "html_url": "https://github.com/facebook/react/pull/3583",
+  "id": 66247765,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzI2MjM1NDc=",
+  "number": 3583,
+  "title": "[RFC] Trusted sources for React elements.",
+  "user": {
+    "login": "leebyron",
+    "id": 50130,
+    "node_id": "MDQ6VXNlcjUwMTMw",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/50130?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/leebyron",
+    "html_url": "https://github.com/leebyron",
+    "followers_url": "https://api.github.com/users/leebyron/followers",
+    "following_url": "https://api.github.com/users/leebyron/following{/other_user}",
+    "gists_url": "https://api.github.com/users/leebyron/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/leebyron/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/leebyron/subscriptions",
+    "organizations_url": "https://api.github.com/users/leebyron/orgs",
+    "repos_url": "https://api.github.com/users/leebyron/repos",
+    "events_url": "https://api.github.com/users/leebyron/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/leebyron/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 25,
+  "created_at": "2015-04-03T23:29:12Z",
+  "updated_at": "2016-01-14T00:42:18Z",
+  "closed_at": "2015-09-10T06:25:52Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3583",
+    "html_url": "https://github.com/facebook/react/pull/3583",
+    "diff_url": "https://github.com/facebook/react/pull/3583.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3583.patch"
+  },
+  "body": "This is a proposal for tightening React's XSS security model as referenced by #3473.\n\nReact Elements are simply JS objects of a particular shape. Because React applications are frequently assembling large trees of these elements and including user data, it's possible for a malicious user to insert data that appears like a React Element and therefore render arbitrary and potentially dangerous markup.\n\nPrevious versions of React used instanceof, but that limited the ability to use multiple Reacts and tightly coupled JSX to React which we wanted to avoid.\n\nThis proposal augments `{_isReactElement: true}` with `{_source: \"randomstring\"}`. Using React.createElement() automatically adds this _source, but JSX could generate regular object bodies with `{_source: React.getSourceID()}`.\n\nIn order to use multiple Reacts, a new API `React.trustSource(sourceID)` is added. You can imagine using a different React instance in a webworker and using `React.trustSource(sourceIDFromCallingWorkersReactGetSourceID)`.\n\nTo preserve back-compat, the default behavior proposed is to dangerously trust all sources, but to warn! If this proposal lands, then I imagine a future version of React will make the default behavior to not trust unknown sources, removing warnings.\n",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

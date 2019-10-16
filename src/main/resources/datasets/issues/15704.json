@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15704",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15704/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15704/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15704/events",
+  "html_url": "https://github.com/facebook/react/pull/15704",
+  "id": 446896680,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjgxMDA2MDIz",
+  "number": 15704,
+  "title": "Parallelize CircleCI jobs using workflows",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-05-22T01:55:08Z",
+  "updated_at": "2019-05-22T18:14:15Z",
+  "closed_at": "2019-05-22T18:14:15Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15704",
+    "html_url": "https://github.com/facebook/react/pull/15704",
+    "diff_url": "https://github.com/facebook/react/pull/15704.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15704.patch"
+  },
+  "body": "Updates the CircleCI config to use the workflows feature to run jobs in parallel, instead of the `parallelism` option. This change alone doesn't improve the overall build time much, since almost all of the total time is spent running the Rollup script, which runs entirely sequentially. But it does improve reporting, and should make it easier to add additional parallel jobs in the future.\r\n\r\n(My original motivation for this PR was because I want to use a workflow trigger to run a chron job for the fuzz tester.)\r\n\r\nPRs report more granular information about the CI status:\r\n<img width=\"716\" alt=\"Screen Shot 2019-05-21 at 8 41 42 PM\" src=\"https://user-images.githubusercontent.com/3624098/58145952-f3993f00-7c08-11e9-918e-1b7baba4c49d.png\">\r\n\r\nThe Workflows view includes a nice flowchart. Note how the Rollup script takes the bulk of the time, as you would expect. (Parallelizing that step would be an easy win.)\r\n\r\n<img width=\"748\" alt=\"Screen Shot 2019-05-21 at 8 34 12 PM\" src=\"https://user-images.githubusercontent.com/3624098/58146000-293e2800-7c09-11e9-8ebd-26c9f4fbdc60.png\">",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

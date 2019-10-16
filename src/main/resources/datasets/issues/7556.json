@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7556",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7556/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7556/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7556/events",
+  "html_url": "https://github.com/facebook/react/pull/7556",
+  "id": 173017003,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODI1ODc3NTY=",
+  "number": 7556,
+  "title": "Joinable as alternative to classnames",
+  "user": {
+    "login": "rkotze",
+    "id": 10452163,
+    "node_id": "MDQ6VXNlcjEwNDUyMTYz",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/10452163?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rkotze",
+    "html_url": "https://github.com/rkotze",
+    "followers_url": "https://api.github.com/users/rkotze/followers",
+    "following_url": "https://api.github.com/users/rkotze/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rkotze/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rkotze/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rkotze/subscriptions",
+    "organizations_url": "https://api.github.com/users/rkotze/orgs",
+    "repos_url": "https://api.github.com/users/rkotze/repos",
+    "events_url": "https://api.github.com/users/rkotze/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rkotze/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-08-24T17:52:46Z",
+  "updated_at": "2016-08-24T18:05:28Z",
+  "closed_at": "2016-08-24T18:05:28Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7556",
+    "html_url": "https://github.com/facebook/react/pull/7556",
+    "diff_url": "https://github.com/facebook/react/pull/7556.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7556.patch"
+  },
+  "body": "Joinable works in a similar way to classnames but there are differences. Thought this would be a good place to provide an alternative.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

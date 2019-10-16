@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6300",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6300/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6300/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6300/events",
+  "html_url": "https://github.com/facebook/react/pull/6300",
+  "id": 142095970,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjM0NzcwMzA=",
+  "number": 6300,
+  "title": "First-Class Custom PropType Checker",
+  "user": {
+    "login": "ajgreenb",
+    "id": 8922554,
+    "node_id": "MDQ6VXNlcjg5MjI1NTQ=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/8922554?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ajgreenb",
+    "html_url": "https://github.com/ajgreenb",
+    "followers_url": "https://api.github.com/users/ajgreenb/followers",
+    "following_url": "https://api.github.com/users/ajgreenb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ajgreenb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ajgreenb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ajgreenb/subscriptions",
+    "organizations_url": "https://api.github.com/users/ajgreenb/orgs",
+    "repos_url": "https://api.github.com/users/ajgreenb/repos",
+    "events_url": "https://api.github.com/users/ajgreenb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ajgreenb/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2016-03-19T19:54:22Z",
+  "updated_at": "2016-03-21T23:59:54Z",
+  "closed_at": "2016-03-21T23:59:54Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6300",
+    "html_url": "https://github.com/facebook/react/pull/6300",
+    "diff_url": "https://github.com/facebook/react/pull/6300.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6300.patch"
+  },
+  "body": "I'm not sure if this is a desired feature, but I thought it would be nice to have an easy way to make custom `propType` validators required or optional. This patch essentially adds a new property to `ReactPropTypes` called `custom`. You pass it a custom validator function, and it just wraps that validator in `createChainableTypeChecker`.\n\n``` javascript\npropTypes: {\n  warning: React.PropTypes.custom(\n    function (props, propName) {\n      if (!props[propName].startsWith('WARNING: ')) {\n        return new Error('`warning` prop must start with \\'WARNING: \\'');\n      }\n    }\n  ).isRequired,\n},\n```\n\nOn the one hand, it requires you to add a little more code since you're no longer just passing a raw function, but I think it adds the nice benefit of making it simple to enforce required custom-validated `props`. Should passing an unwrapped function still be supported?\n\nAs I write this, it occurs to me (after writing the implementation and tests, sigh) that if you want to make a required custom validator, you can add an `if (!props[propName])` conditional to the body, heh. But this solution makes it a little more idiomatic...?\n\nWhat do you all think?\n",
+  "closed_by": {
+    "login": "ajgreenb",
+    "id": 8922554,
+    "node_id": "MDQ6VXNlcjg5MjI1NTQ=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/8922554?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ajgreenb",
+    "html_url": "https://github.com/ajgreenb",
+    "followers_url": "https://api.github.com/users/ajgreenb/followers",
+    "following_url": "https://api.github.com/users/ajgreenb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ajgreenb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ajgreenb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ajgreenb/subscriptions",
+    "organizations_url": "https://api.github.com/users/ajgreenb/orgs",
+    "repos_url": "https://api.github.com/users/ajgreenb/repos",
+    "events_url": "https://api.github.com/users/ajgreenb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ajgreenb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

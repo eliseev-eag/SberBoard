@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6542",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6542/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6542/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6542/events",
+  "html_url": "https://github.com/facebook/react/pull/6542",
+  "id": 149196884,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjY4Nzk5ODk=",
+  "number": 6542,
+  "title": "Fix format of *.zh-CN.md",
+  "user": {
+    "login": "keyfoxth",
+    "id": 10647132,
+    "node_id": "MDQ6VXNlcjEwNjQ3MTMy",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/10647132?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/keyfoxth",
+    "html_url": "https://github.com/keyfoxth",
+    "followers_url": "https://api.github.com/users/keyfoxth/followers",
+    "following_url": "https://api.github.com/users/keyfoxth/following{/other_user}",
+    "gists_url": "https://api.github.com/users/keyfoxth/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/keyfoxth/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/keyfoxth/subscriptions",
+    "organizations_url": "https://api.github.com/users/keyfoxth/orgs",
+    "repos_url": "https://api.github.com/users/keyfoxth/repos",
+    "events_url": "https://api.github.com/users/keyfoxth/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/keyfoxth/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-04-18T16:09:39Z",
+  "updated_at": "2016-10-23T14:21:07Z",
+  "closed_at": "2016-10-23T14:21:07Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6542",
+    "html_url": "https://github.com/facebook/react/pull/6542",
+    "diff_url": "https://github.com/facebook/react/pull/6542.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6542.patch"
+  },
+  "body": "Fix format of *.zh-CN.md, make them more suitable to read.\n- Turn halfwidth characters into fullwidth characters.\n- Add space between Chinese and English.\n- More details on the changes.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

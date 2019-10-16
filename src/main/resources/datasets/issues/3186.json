@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3186",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3186/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3186/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3186/events",
+  "html_url": "https://github.com/facebook/react/pull/3186",
+  "id": 58156330,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjk1ODA0Nzg=",
+  "number": 3186,
+  "title": "Modify sample CSS so that it works in Safari",
+  "user": {
+    "login": "benekastah",
+    "id": 740268,
+    "node_id": "MDQ6VXNlcjc0MDI2OA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/740268?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/benekastah",
+    "html_url": "https://github.com/benekastah",
+    "followers_url": "https://api.github.com/users/benekastah/followers",
+    "following_url": "https://api.github.com/users/benekastah/following{/other_user}",
+    "gists_url": "https://api.github.com/users/benekastah/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/benekastah/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/benekastah/subscriptions",
+    "organizations_url": "https://api.github.com/users/benekastah/orgs",
+    "repos_url": "https://api.github.com/users/benekastah/repos",
+    "events_url": "https://api.github.com/users/benekastah/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/benekastah/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2015-02-19T01:28:28Z",
+  "updated_at": "2015-07-17T21:24:54Z",
+  "closed_at": "2015-07-16T23:52:21Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3186",
+    "html_url": "https://github.com/facebook/react/pull/3186",
+    "diff_url": "https://github.com/facebook/react/pull/3186.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3186.patch"
+  },
+  "body": "When animating the max-height property in Safari, entering the leave state would trigger an animation to `max-height: 0` (I guess Safari interprets `auto` as `0` when transitioning on that property?). Then when the active state kicked in, it would jump and didn't really look right. Moving the `transition` css property to the active class fixed the issue for me and worked on Safari, Chrome and Firefox. Unfortunately I'm not in a position to test in IE at the moment, but I'll do that at my first convenience tomorrow.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

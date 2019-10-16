@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/1389",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/1389/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/1389/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/1389/events",
+  "html_url": "https://github.com/facebook/react/pull/1389",
+  "id": 31199294,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ1Nzc3MTM=",
+  "number": 1389,
+  "title": "[future uncertain] Add support for pointer events",
+  "user": {
+    "login": "syranide",
+    "id": 1714255,
+    "node_id": "MDQ6VXNlcjE3MTQyNTU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1714255?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/syranide",
+    "html_url": "https://github.com/syranide",
+    "followers_url": "https://api.github.com/users/syranide/followers",
+    "following_url": "https://api.github.com/users/syranide/following{/other_user}",
+    "gists_url": "https://api.github.com/users/syranide/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/syranide/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/syranide/subscriptions",
+    "organizations_url": "https://api.github.com/users/syranide/orgs",
+    "repos_url": "https://api.github.com/users/syranide/repos",
+    "events_url": "https://api.github.com/users/syranide/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/syranide/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 332720629,
+      "node_id": "MDU6TGFiZWwzMzI3MjA2Mjk=",
+      "url": "https://api.github.com/repos/facebook/react/labels/HTML",
+      "name": "HTML",
+      "color": "f7c6c7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 40,
+  "created_at": "2014-04-09T22:09:39Z",
+  "updated_at": "2016-03-26T18:00:08Z",
+  "closed_at": "2016-03-26T18:00:08Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/1389",
+    "html_url": "https://github.com/facebook/react/pull/1389",
+    "diff_url": "https://github.com/facebook/react/pull/1389.diff",
+    "patch_url": "https://github.com/facebook/react/pull/1389.patch"
+  },
+  "body": "**The future of pointer events seem uncertain, this PR should not be accepted until it is decided.**\n\nhttp://www.w3.org/TR/pointerevents/, only IE supports it at the moment it seems, you should be able to polyfill with http://handjs.codeplex.com/\n1. I have reused EnterLeaveEventPlugin to power both Mouse and Pointer, feedback on my rewrite appreciated. One possibility is to construct a lookup map instead for isMouseEvent/isPointerEvent/isOverEvent/isOutEvent/etc, but I'm thinking it might just make the code more complex.\n2. I took the liberty of stripping the alignment spacing in SimpleEventPlugin because I would still have had to realign everything, and this way makes future updates less likely to conflict. It's also consistent with ReactEventEmitter.\n3. Should `mouseListenerNames` in `ReactDOMButton` include pointer events? Touch events too? Are there actually any events that you want it to attach when it's disabled?\n\n```\n   raw     gz Compared to master @ b75d11c6039e4d2ab796bce2a1934e9e69b2b7e7\n +4806   +613 build/react-with-addons.js\n +2175   +431 build/react-with-addons.min.js\n +4813   +591 build/react.js\n +2177   +446 build/react.min.js\n```\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

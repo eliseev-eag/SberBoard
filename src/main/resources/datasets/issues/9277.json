@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9277",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9277/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9277/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9277/events",
+  "html_url": "https://github.com/facebook/react/pull/9277",
+  "id": 217903414,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTEzMjE3NzU4",
+  "number": 9277,
+  "title": "Update installation.md (make the steps more clear)",
+  "user": {
+    "login": "filiphosko",
+    "id": 23213144,
+    "node_id": "MDQ6VXNlcjIzMjEzMTQ0",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/23213144?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/filiphosko",
+    "html_url": "https://github.com/filiphosko",
+    "followers_url": "https://api.github.com/users/filiphosko/followers",
+    "following_url": "https://api.github.com/users/filiphosko/following{/other_user}",
+    "gists_url": "https://api.github.com/users/filiphosko/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/filiphosko/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/filiphosko/subscriptions",
+    "organizations_url": "https://api.github.com/users/filiphosko/orgs",
+    "repos_url": "https://api.github.com/users/filiphosko/repos",
+    "events_url": "https://api.github.com/users/filiphosko/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/filiphosko/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2017-03-29T14:53:50Z",
+  "updated_at": "2017-04-13T19:54:54Z",
+  "closed_at": "2017-04-13T19:54:54Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9277",
+    "html_url": "https://github.com/facebook/react/pull/9277",
+    "diff_url": "https://github.com/facebook/react/pull/9277.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9277.patch"
+  },
+  "body": "I tried to make it more clear that there are two popular ways of starting up with React, my solution is not sophisticated by any means, just tried to propose a simple (temporary) solution that could do the trick. My PR is a reply to this issue https://github.com/facebook/react/issues/9275 .",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

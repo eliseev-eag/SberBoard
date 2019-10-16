@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12553",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12553/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12553/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12553/events",
+  "html_url": "https://github.com/facebook/react/issues/12553",
+  "id": 311732588,
+  "node_id": "MDU6SXNzdWUzMTE3MzI1ODg=",
+  "number": 12553,
+  "title": "[meta] Bringing Flow types in line with 16.3 APIs",
+  "user": {
+    "login": "billyjanitsch",
+    "id": 1158733,
+    "node_id": "MDQ6VXNlcjExNTg3MzM=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1158733?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/billyjanitsch",
+    "html_url": "https://github.com/billyjanitsch",
+    "followers_url": "https://api.github.com/users/billyjanitsch/followers",
+    "following_url": "https://api.github.com/users/billyjanitsch/following{/other_user}",
+    "gists_url": "https://api.github.com/users/billyjanitsch/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/billyjanitsch/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/billyjanitsch/subscriptions",
+    "organizations_url": "https://api.github.com/users/billyjanitsch/orgs",
+    "repos_url": "https://api.github.com/users/billyjanitsch/repos",
+    "events_url": "https://api.github.com/users/billyjanitsch/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/billyjanitsch/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710615342,
+      "node_id": "MDU6TGFiZWw3MTA2MTUzNDI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Umbrella",
+      "name": "Type: Umbrella",
+      "color": "5319e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 14,
+  "created_at": "2018-04-05T19:06:51Z",
+  "updated_at": "2018-12-04T18:13:03Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "Hi!\r\n\r\nI realize that the React team doesn't work on Flow directly, and that the React typings live there. However, there are currently some large gaps in Flow support for the new 16.2/16.3 APIs, and I thought it might be good to raise/track them here, for the benefit of people searching the React tracker.\r\n\r\nI filed issues in the Flow repo for missing typings that didn't have outstanding PRs.\r\n\r\n- [x] `UNSAFE_`-prefixed lifecycles (commit: https://github.com/facebook/flow/commit/cd8fdcdd8719ca0138fb71d30a786d70e98f136c)\r\n- [x] `createContext` (commit: https://github.com/facebook/flow/commit/dd27ebbd14782cc103632e5459e106559d8b5511)\r\n- [x] `createRef` (commits: https://github.com/facebook/flow/commit/dd27ebbd14782cc103632e5459e106559d8b5511, https://github.com/facebook/flow/commit/d74ab13a8dfc5395ec5883aa2fa56be0a03a3a3f)\r\n- [x] `componentDidCatch` (PR: https://github.com/facebook/flow/pull/6044)\r\n- [x] `forwardRef` (PR: https://github.com/facebook/flow/pull/6510)\r\n- [ ] `getDerivedStateFromProps` (PR: https://github.com/facebook/flow/pull/6511)\r\n- [ ] `getSnapshotBeforeUpdate` (PR: https://github.com/facebook/flow/pull/6511)\r\n- [x] `StrictMode` (PR: https://github.com/facebook/flow/pull/6078)\r\n\r\nFeel free to close this issue if you don't think it's useful. But maybe the React team knows someone on the Flow team who can help give priority to these libdef updates (especially those with PRs)?\r\n\r\n❤️",
+  "closed_by": null
+}

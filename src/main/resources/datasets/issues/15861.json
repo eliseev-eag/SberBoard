@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15861",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15861/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15861/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15861/events",
+  "html_url": "https://github.com/facebook/react/pull/15861",
+  "id": 454838884,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjg3MjA5ODEw",
+  "number": 15861,
+  "title": "[Suspense] Use !important to hide Suspended nodes",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-06-11T18:27:04Z",
+  "updated_at": "2019-06-11T18:40:07Z",
+  "closed_at": "2019-06-11T18:40:07Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15861",
+    "html_url": "https://github.com/facebook/react/pull/15861",
+    "diff_url": "https://github.com/facebook/react/pull/15861.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15861.patch"
+  },
+  "body": "Suspended nodes are hidden using an inline `display: none` style. We do this instead of removing the nodes from the DOM so that their state is preserved when they are shown again.\r\n\r\nInline styles have the greatest specificity, but they are superseded by `!important`. To prevent an external style from overriding React's, this commit changes the hidden style to `display: none !important`.\r\n\r\nMaYBE AnDREw sHOulD JusT LEArn Css\r\n\r\nI attempted to write a unit test using `getComputedStyle` but JSDOM doesn't respect `!important`. I think our existing tests are sufficient but if we were to decide we need something more robust, I would set up an e2e test.",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

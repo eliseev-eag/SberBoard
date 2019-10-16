@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/17068",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/17068/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/17068/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/17068/events",
+  "html_url": "https://github.com/facebook/react/pull/17068",
+  "id": 505909846,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzI3MjQ3MDc0",
+  "number": 17068,
+  "title": "More accurate 'why did this render' wording",
+  "user": {
+    "login": "pelotom",
+    "id": 128019,
+    "node_id": "MDQ6VXNlcjEyODAxOQ==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/128019?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/pelotom",
+    "html_url": "https://github.com/pelotom",
+    "followers_url": "https://api.github.com/users/pelotom/followers",
+    "following_url": "https://api.github.com/users/pelotom/following{/other_user}",
+    "gists_url": "https://api.github.com/users/pelotom/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/pelotom/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/pelotom/subscriptions",
+    "organizations_url": "https://api.github.com/users/pelotom/orgs",
+    "repos_url": "https://api.github.com/users/pelotom/repos",
+    "events_url": "https://api.github.com/users/pelotom/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/pelotom/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-10-11T15:11:14Z",
+  "updated_at": "2019-10-11T15:54:53Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/17068",
+    "html_url": "https://github.com/facebook/react/pull/17068",
+    "diff_url": "https://github.com/facebook/react/pull/17068.diff",
+    "patch_url": "https://github.com/facebook/react/pull/17068.patch"
+  },
+  "body": "After using the new devtools profiler (which is awesome btw!) I discovered that one of my components was rerendering because \"the parent component rendered\", despite being `React.memo`ed and taking no props, which seemed like an impossibility (see [twitter thread](https://twitter.com/pelotom/status/1182482183769882626?s=20) documenting my confusion). I eventually discovered that it was in fact updating due to context changes, and @bvaughn [helpfully pointed out](https://twitter.com/brian_d_vaughn/status/1182654239627075584?s=20) that the message was a fallback used when the component rerendered due to reasons other than state and props changing.\r\n\r\nThis PR attempts to make the wording a little more accurate: in addition to adding the \"or context changed\" caveat, it seems like \"Internal state changed\" is a more accurate description than \"Hooks changed\", because updates due to the `useContext` hook don't fall in that category. Ideally in the special case where the component is memoized the message could definitively say the update was due to a context change, but I'm not sure how to detect that situation 🙂",
+  "closed_by": null
+}

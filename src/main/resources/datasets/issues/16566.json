@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16566",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16566/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16566/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16566/events",
+  "html_url": "https://github.com/facebook/react/issues/16566",
+  "id": 484952225,
+  "node_id": "MDU6SXNzdWU0ODQ5NTIyMjU=",
+  "number": 16566,
+  "title": "onMouseEnter event missing when component hides on top of another (i.e. contextual menu)",
+  "user": {
+    "login": "ivalduan",
+    "id": 2285554,
+    "node_id": "MDQ6VXNlcjIyODU1NTQ=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/2285554?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ivalduan",
+    "html_url": "https://github.com/ivalduan",
+    "followers_url": "https://api.github.com/users/ivalduan/followers",
+    "following_url": "https://api.github.com/users/ivalduan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ivalduan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ivalduan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ivalduan/subscriptions",
+    "organizations_url": "https://api.github.com/users/ivalduan/orgs",
+    "repos_url": "https://api.github.com/users/ivalduan/repos",
+    "events_url": "https://api.github.com/users/ivalduan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ivalduan/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-08-25T16:56:06Z",
+  "updated_at": "2019-08-26T19:44:59Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "I provide a codepen example showcasing the issue here,\r\nhttps://codepen.io/ivalduan/pen/VwZpmMQ\r\n\r\n1. The component on the screen tracks correctly a hover state of the mouse pointer\r\n2. With the right button you create a contextual menu without covering the text and the hover state is correct when the mouse is over the menu\r\n3. When you select and option of the contextual menu on top of the background component the second does not receive an onMouseEnter event and the hover state remains false when it should be true",
+  "closed_by": null
+}

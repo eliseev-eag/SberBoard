@@ -1,0 +1,91 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11660",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11660/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11660/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11660/events",
+  "html_url": "https://github.com/facebook/react/issues/11660",
+  "id": 276760192,
+  "node_id": "MDU6SXNzdWUyNzY3NjAxOTI=",
+  "number": 11660,
+  "title": "Add bundle linting and tests to the release script",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 71502270,
+      "node_id": "MDU6TGFiZWw3MTUwMjI3MA==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Build%20Infrastructure",
+      "name": "Component: Build Infrastructure",
+      "color": "f9d0c4",
+      "default": false
+    },
+    {
+      "id": 52079258,
+      "node_id": "MDU6TGFiZWw1MjA3OTI1OA==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Difficulty:%20starter",
+      "name": "Difficulty: starter",
+      "color": "94ce52",
+      "default": false
+    },
+    {
+      "id": 725156255,
+      "node_id": "MDU6TGFiZWw3MjUxNTYyNTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/good%20first%20issue%20(taken)",
+      "name": "good first issue (taken)",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-11-25T16:08:00Z",
+  "updated_at": "2017-11-26T16:47:20Z",
+  "closed_at": "2017-11-26T16:47:20Z",
+  "author_association": "MEMBER",
+  "body": "On CI, we currently lint bundles:\r\n\r\nhttps://github.com/facebook/react/blob/d1cb28c86b966cb33c373b532abe62dfe563d00e/scripts/circleci/build.sh#L11-L12\r\n\r\nand then run both development and production bundle tests:\r\n\r\nhttps://github.com/facebook/react/blob/d1cb28c86b966cb33c373b532abe62dfe563d00e/scripts/circleci/test_entry_point.sh#L24-L25\r\n\r\nWe should add the first step (linting bundles) into a `package.json` script called `lint-build`. Then we can change the CI command to run `yarn lint-build`.\r\n\r\nFinally, we should add both `yarn lint-build`, `yarn test-prod`, `yarn test-build`, and `yarn test-build-prod` to the release script [into this function](https://github.com/facebook/react/blob/d1cb28c86b966cb33c373b532abe62dfe563d00e/scripts/release/build-commands/run-automated-tests.js#L23).\r\n\r\n<s>Note that this function is already broken. We need to replace `runYarnTask(cwd, 'jest', 'Jest failed'),` with `runYarnTask(cwd, 'test', 'Jest failed'),` too since just running `jest` no longer works due to a custom config. Just running `test` should work because we have a custom `test` script.</s> Never mind, I fixed this in https://github.com/facebook/react/commit/f53bd033e79994dbda112a091ddbf784a3c30aaf.\r\n\r\nTo verify your changes, you can run `./scripts/release/build.js -v 16.2.0` and see that the whole workflow can run successfully.\r\n\r\nThis task requires understanding of how `scripts` in `package.json` work.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

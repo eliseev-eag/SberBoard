@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/1104",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/1104/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/1104/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/1104/events",
+  "html_url": "https://github.com/facebook/react/issues/1104",
+  "id": 27685204,
+  "node_id": "MDU6SXNzdWUyNzY4NTIwNA==",
+  "number": 1104,
+  "title": "React.Children.onlyChild throws on text child",
+  "user": {
+    "login": "chenglou",
+    "id": 1909539,
+    "node_id": "MDQ6VXNlcjE5MDk1Mzk=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1909539?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/chenglou",
+    "html_url": "https://github.com/chenglou",
+    "followers_url": "https://api.github.com/users/chenglou/followers",
+    "following_url": "https://api.github.com/users/chenglou/following{/other_user}",
+    "gists_url": "https://api.github.com/users/chenglou/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/chenglou/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/chenglou/subscriptions",
+    "organizations_url": "https://api.github.com/users/chenglou/orgs",
+    "repos_url": "https://api.github.com/users/chenglou/repos",
+    "events_url": "https://api.github.com/users/chenglou/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/chenglou/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 139653724,
+      "node_id": "MDU6TGFiZWwxMzk2NTM3MjQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Core%20Utilities",
+      "name": "Component: Core Utilities",
+      "color": "c5def5",
+      "default": false
+    },
+    {
+      "id": 40929156,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Ng==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Wontfix",
+      "name": "Resolution: Wontfix",
+      "color": "ffffff",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2014-02-16T23:17:50Z",
+  "updated_at": "2016-09-13T18:22:51Z",
+  "closed_at": "2014-12-10T04:02:07Z",
+  "author_association": "CONTRIBUTOR",
+  "body": "Text child is a string so `isValidComponent` fails. Would it make sense for it to accept a string? Frankly I'm confused by this API...\n",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

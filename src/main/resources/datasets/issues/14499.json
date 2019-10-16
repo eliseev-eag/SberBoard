@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14499",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14499/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14499/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14499/events",
+  "html_url": "https://github.com/facebook/react/pull/14499",
+  "id": 394546865,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjQxMjY0NTYz",
+  "number": 14499,
+  "title": "fix: test description",
+  "user": {
+    "login": "yongningfu",
+    "id": 9846613,
+    "node_id": "MDQ6VXNlcjk4NDY2MTM=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/9846613?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/yongningfu",
+    "html_url": "https://github.com/yongningfu",
+    "followers_url": "https://api.github.com/users/yongningfu/followers",
+    "following_url": "https://api.github.com/users/yongningfu/following{/other_user}",
+    "gists_url": "https://api.github.com/users/yongningfu/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/yongningfu/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/yongningfu/subscriptions",
+    "organizations_url": "https://api.github.com/users/yongningfu/orgs",
+    "repos_url": "https://api.github.com/users/yongningfu/repos",
+    "events_url": "https://api.github.com/users/yongningfu/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/yongningfu/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2018-12-28T04:53:18Z",
+  "updated_at": "2019-08-27T16:23:06Z",
+  "closed_at": "2019-08-27T16:23:06Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14499",
+    "html_url": "https://github.com/facebook/react/pull/14499",
+    "diff_url": "https://github.com/facebook/react/pull/14499.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14499.patch"
+  },
+  "body": "This test case should be aimed at unmouted component",
+  "closed_by": {
+    "login": "yongningfu",
+    "id": 9846613,
+    "node_id": "MDQ6VXNlcjk4NDY2MTM=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/9846613?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/yongningfu",
+    "html_url": "https://github.com/yongningfu",
+    "followers_url": "https://api.github.com/users/yongningfu/followers",
+    "following_url": "https://api.github.com/users/yongningfu/following{/other_user}",
+    "gists_url": "https://api.github.com/users/yongningfu/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/yongningfu/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/yongningfu/subscriptions",
+    "organizations_url": "https://api.github.com/users/yongningfu/orgs",
+    "repos_url": "https://api.github.com/users/yongningfu/repos",
+    "events_url": "https://api.github.com/users/yongningfu/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/yongningfu/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

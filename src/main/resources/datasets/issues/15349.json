@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15349",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15349/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15349/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15349/events",
+  "html_url": "https://github.com/facebook/react/pull/15349",
+  "id": 430280240,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjY4MjAxODAw",
+  "number": 15349,
+  "title": "[new] [react-is] add `typeOfElementType`, extracted from `typeOf`",
+  "user": {
+    "login": "ljharb",
+    "id": 45469,
+    "node_id": "MDQ6VXNlcjQ1NDY5",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/45469?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ljharb",
+    "html_url": "https://github.com/ljharb",
+    "followers_url": "https://api.github.com/users/ljharb/followers",
+    "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+    "organizations_url": "https://api.github.com/users/ljharb/orgs",
+    "repos_url": "https://api.github.com/users/ljharb/repos",
+    "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ljharb/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-04-08T06:41:50Z",
+  "updated_at": "2019-06-08T08:03:08Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15349",
+    "html_url": "https://github.com/facebook/react/pull/15349",
+    "diff_url": "https://github.com/facebook/react/pull/15349.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15349.patch"
+  },
+  "body": "By extracting this functionality, I'll be able to simplify the logic in enzyme [here](https://github.com/airbnb/enzyme/blob/master/packages/enzyme-adapter-react-16/src/ReactSixteenAdapter.js#L320-L322) by comparing directly to the type rather than needing to make a fake element.",
+  "closed_by": null
+}

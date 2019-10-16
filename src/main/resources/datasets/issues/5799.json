@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5799",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5799/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5799/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5799/events",
+  "html_url": "https://github.com/facebook/react/pull/5799",
+  "id": 125406397,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTUzNDQ3NjA=",
+  "number": 5799,
+  "title": "[docs] Fix typo in ref-08-reconciliation.md",
+  "user": {
+    "login": "gmcquistin",
+    "id": 2301064,
+    "node_id": "MDQ6VXNlcjIzMDEwNjQ=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/2301064?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gmcquistin",
+    "html_url": "https://github.com/gmcquistin",
+    "followers_url": "https://api.github.com/users/gmcquistin/followers",
+    "following_url": "https://api.github.com/users/gmcquistin/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gmcquistin/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gmcquistin/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gmcquistin/subscriptions",
+    "organizations_url": "https://api.github.com/users/gmcquistin/orgs",
+    "repos_url": "https://api.github.com/users/gmcquistin/repos",
+    "events_url": "https://api.github.com/users/gmcquistin/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gmcquistin/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-01-07T14:41:07Z",
+  "updated_at": "2016-01-08T18:33:11Z",
+  "closed_at": "2016-01-07T17:13:32Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5799",
+    "html_url": "https://github.com/facebook/react/pull/5799",
+    "diff_url": "https://github.com/facebook/react/pull/5799.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5799.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

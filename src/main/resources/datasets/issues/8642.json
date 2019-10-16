@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8642",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8642/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8642/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8642/events",
+  "html_url": "https://github.com/facebook/react/issues/8642",
+  "id": 197517201,
+  "node_id": "MDU6SXNzdWUxOTc1MTcyMDE=",
+  "number": 8642,
+  "title": "textarea + onFocus + stopPropagation = incorrect cursor rendering on Firefox",
+  "user": {
+    "login": "felipeochoa",
+    "id": 2739312,
+    "node_id": "MDQ6VXNlcjI3MzkzMTI=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/2739312?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/felipeochoa",
+    "html_url": "https://github.com/felipeochoa",
+    "followers_url": "https://api.github.com/users/felipeochoa/followers",
+    "following_url": "https://api.github.com/users/felipeochoa/following{/other_user}",
+    "gists_url": "https://api.github.com/users/felipeochoa/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/felipeochoa/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/felipeochoa/subscriptions",
+    "organizations_url": "https://api.github.com/users/felipeochoa/orgs",
+    "repos_url": "https://api.github.com/users/felipeochoa/repos",
+    "events_url": "https://api.github.com/users/felipeochoa/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/felipeochoa/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-12-25T22:25:11Z",
+  "updated_at": "2017-12-21T05:16:18Z",
+  "closed_at": "2017-12-21T05:15:54Z",
+  "author_association": "NONE",
+  "body": "**What is the current behavior?**\r\nUsing `.stopPropagation` in an `onFocus` event on a textarea or its parent causes the cursor to disappear or render at an incorrect location in Firefox.\r\n\r\nYou can see the vanishing cursor [at this fiddle](https://jsfiddle.net/aq59me3d/3/). There are no issues on Chrome and Edge, but FireFox 50.1.0 has this problem. In my full app, the cursor doesn't vanish but rather moves elsewhere (italics are placeholder text):\r\n\r\n<img width=\"118\" alt=\"2016-12-25\" src=\"https://cloud.githubusercontent.com/assets/2739312/21473053/83e67f52-cac5-11e6-8b6c-1e1f98289bb6.png\">\r\n<img width=\"88\" alt=\"2016-12-25 1\" src=\"https://cloud.githubusercontent.com/assets/2739312/21473058/a0e1f168-cac5-11e6-872e-70d8e6d83c93.png\">\r\n<img width=\"66\" alt=\"2016-12-25 2\" src=\"https://cloud.githubusercontent.com/assets/2739312/21473055/8836dc5a-cac5-11e6-8adc-4edb65763104.png\">\r\n\r\nI have not reproduced this behavior in the fiddle.\r\n\r\n**What is the expected behavior?**\r\nIt's hard to say what the expected behavior is, since the real `focus` event does not bubble. [Here](https://jsfiddle.net/axacmxfv/)'s a fiddle to show that the cursor position is not affected when the event is stopped in a vanilla-JS environment.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nThe fiddle shows the issue with `15.4.1` on FF (on Windows 10).  I saw the same issue on `15.3`. \r\n\r\n**Why stopPropagation**\r\nBefore I get eaten alive for using this, I'll just say that having a non-bubbling focus event simplifies one of the interactions I'm setting up. Specifically, my app has a bunch of widgets that can be marked active. When a user clicks into a field in the widget, that widget should be marked active. However, widgets can be nested in other widgets, in which only the inner-most widget should be marked active.",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

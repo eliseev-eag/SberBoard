@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11493",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11493/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11493/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11493/events",
+  "html_url": "https://github.com/facebook/react/pull/11493",
+  "id": 272334308,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTUxNDg0MTA1",
+  "number": 11493,
+  "title": "Update Flow and Fix Hydration Types",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-11-08T20:15:35Z",
+  "updated_at": "2017-11-12T01:00:34Z",
+  "closed_at": "2017-11-12T01:00:34Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11493",
+    "html_url": "https://github.com/facebook/react/pull/11493",
+    "diff_url": "https://github.com/facebook/react/pull/11493.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11493.patch"
+  },
+  "body": "This is an alternative to #11386.\r\n\r\n@gaearon and @calebmer did some digging into why we were seeing inference errors and noticed that `getNextHydratableSibling` and `getFirstHydratableChild` returns a union that is ambiguous when inferred.\r\n\r\nThis highlighted that this API was already poorly defined. This fixes that.\r\n\r\nFirst, we had no refinement on the hydratable child so we just assumed that if `canHydrateInstance` returns true then it is an instance suitable for that Fiber. That only worked because `stateNode` is `any`. This adds a specific refinement and the ability for that instance to be different than the first read. This could be important when the hydratable thing is part of a boxed variant or something.\r\n\r\nAnother thing that this highlighted is that there isn't really any difference between an Instance and a TextInstance. They could be the same type and probably often is in other models.\r\n\r\nSo this PR also introduces a Hydratable Instance type which is really a placeholder value for what we will later refine to an Instance or a TextInstance. This lets something that is both an Instance and a TextInstance be passed along here and only when we try to hydrate it do we define it as one or the other.",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

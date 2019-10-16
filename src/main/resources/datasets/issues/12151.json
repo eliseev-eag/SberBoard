@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12151",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12151/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12151/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12151/events",
+  "html_url": "https://github.com/facebook/react/pull/12151",
+  "id": 294236249,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTY3MDMzMjY5",
+  "number": 12151,
+  "title": "Support context components in react-test-renderer",
+  "user": {
+    "login": "pshrmn",
+    "id": 1127037,
+    "node_id": "MDQ6VXNlcjExMjcwMzc=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1127037?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/pshrmn",
+    "html_url": "https://github.com/pshrmn",
+    "followers_url": "https://api.github.com/users/pshrmn/followers",
+    "following_url": "https://api.github.com/users/pshrmn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/pshrmn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/pshrmn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/pshrmn/subscriptions",
+    "organizations_url": "https://api.github.com/users/pshrmn/orgs",
+    "repos_url": "https://api.github.com/users/pshrmn/repos",
+    "events_url": "https://api.github.com/users/pshrmn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/pshrmn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2018-02-04T22:14:49Z",
+  "updated_at": "2018-02-17T02:01:56Z",
+  "closed_at": "2018-02-16T19:43:44Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12151",
+    "html_url": "https://github.com/facebook/react/pull/12151",
+    "diff_url": "https://github.com/facebook/react/pull/12151.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12151.patch"
+  },
+  "body": "Potential fix for #12150. I had to use the `pendingProps` instead of `memoizedProps` for the `ContextConsumer` (I don't know enough about React's internals to know why that doesn't have a `memoizedProps`).",
+  "closed_by": {
+    "login": "pshrmn",
+    "id": 1127037,
+    "node_id": "MDQ6VXNlcjExMjcwMzc=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1127037?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/pshrmn",
+    "html_url": "https://github.com/pshrmn",
+    "followers_url": "https://api.github.com/users/pshrmn/followers",
+    "following_url": "https://api.github.com/users/pshrmn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/pshrmn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/pshrmn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/pshrmn/subscriptions",
+    "organizations_url": "https://api.github.com/users/pshrmn/orgs",
+    "repos_url": "https://api.github.com/users/pshrmn/repos",
+    "events_url": "https://api.github.com/users/pshrmn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/pshrmn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

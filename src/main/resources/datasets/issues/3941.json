@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3941",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3941/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3941/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3941/events",
+  "html_url": "https://github.com/facebook/react/pull/3941",
+  "id": 79593819,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzYwNjUzMTk=",
+  "number": 3941,
+  "title": "Assert instance type using internal constructor",
+  "user": {
+    "login": "troutowicz",
+    "id": 8117994,
+    "node_id": "MDQ6VXNlcjgxMTc5OTQ=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8117994?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/troutowicz",
+    "html_url": "https://github.com/troutowicz",
+    "followers_url": "https://api.github.com/users/troutowicz/followers",
+    "following_url": "https://api.github.com/users/troutowicz/following{/other_user}",
+    "gists_url": "https://api.github.com/users/troutowicz/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/troutowicz/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/troutowicz/subscriptions",
+    "organizations_url": "https://api.github.com/users/troutowicz/orgs",
+    "repos_url": "https://api.github.com/users/troutowicz/repos",
+    "events_url": "https://api.github.com/users/troutowicz/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/troutowicz/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 139734344,
+      "node_id": "MDU6TGFiZWwxMzk3MzQzNDQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Test%20Utils",
+      "name": "Component: Test Utils",
+      "color": "eb6420",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2015-05-22T20:17:21Z",
+  "updated_at": "2015-06-04T20:31:48Z",
+  "closed_at": "2015-06-04T20:31:23Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3941",
+    "html_url": "https://github.com/facebook/react/pull/3941",
+    "diff_url": "https://github.com/facebook/react/pull/3941.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3941.patch"
+  },
+  "body": "Support type testing of factory based components.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

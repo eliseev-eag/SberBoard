@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/17086",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/17086/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/17086/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/17086/events",
+  "html_url": "https://github.com/facebook/react/pull/17086",
+  "id": 506864272,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzI3OTY0ODA1",
+  "number": 17086,
+  "title": "Update release scripts to support experimental releases",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-10-14T20:42:40Z",
+  "updated_at": "2019-10-14T21:15:24Z",
+  "closed_at": "2019-10-14T21:15:24Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/17086",
+    "html_url": "https://github.com/facebook/react/pull/17086",
+    "diff_url": "https://github.com/facebook/react/pull/17086.diff",
+    "patch_url": "https://github.com/facebook/react/pull/17086.patch"
+  },
+  "body": "Adds a check to the `prepare-stable` script to prevent experimental builds from being published using stable semver versions.\r\n\r\nAlso updates the function that downloads the artifacts to pull from the correct CI job. I think instead of two separate CI workflows, a better approach might be to build stable artifacts to the `build` directory and the experimental artifacts to a `build_experimental` directory, and generate both within the same workflow. This would take some work since lots of things assume the output directory is `build`, but something to consider in the future.\r\n\r\n### Test plan\r\n\r\nRun \r\n\r\n```sh\r\n./scripts/release/prepare-stable.js --skipTests --version=0.0.0-experimental-d364d8555\r\n```\r\n\r\nand confirm that it exits with an error message.",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

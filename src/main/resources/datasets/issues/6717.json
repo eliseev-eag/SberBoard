@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6717",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6717/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6717/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6717/events",
+  "html_url": "https://github.com/facebook/react/issues/6717",
+  "id": 153532835,
+  "node_id": "MDU6SXNzdWUxNTM1MzI4MzU=",
+  "number": 6717,
+  "title": "<datalist> support",
+  "user": {
+    "login": "kevinSuttle",
+    "id": 95672,
+    "node_id": "MDQ6VXNlcjk1Njcy",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/95672?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/kevinSuttle",
+    "html_url": "https://github.com/kevinSuttle",
+    "followers_url": "https://api.github.com/users/kevinSuttle/followers",
+    "following_url": "https://api.github.com/users/kevinSuttle/following{/other_user}",
+    "gists_url": "https://api.github.com/users/kevinSuttle/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/kevinSuttle/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/kevinSuttle/subscriptions",
+    "organizations_url": "https://api.github.com/users/kevinSuttle/orgs",
+    "repos_url": "https://api.github.com/users/kevinSuttle/repos",
+    "events_url": "https://api.github.com/users/kevinSuttle/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/kevinSuttle/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2016-05-06T20:34:52Z",
+  "updated_at": "2018-08-03T23:33:10Z",
+  "closed_at": "2018-08-03T23:33:10Z",
+  "author_association": "CONTRIBUTOR",
+  "body": "Not a _ton_ of browser support for this right now, but it appears to be on the horizon for Webkit. \nhttps://bugs.webkit.org/show_bug.cgi?id=98934\n\nhttp://caniuse.com/#search=datalist\n\nRight now, I'm not getting any DOM events fired from it in Chrome. Wonder if SyntheticEvent could prollyfill. \nhttps://facebook.github.io/react/docs/events.html#form-events\n",
+  "closed_by": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

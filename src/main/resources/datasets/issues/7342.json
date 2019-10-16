@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7342",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7342/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7342/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7342/events",
+  "html_url": "https://github.com/facebook/react/pull/7342",
+  "id": 167185542,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Nzg1NzI4NTE=",
+  "number": 7342,
+  "title": "Added ReactNL conference",
+  "user": {
+    "login": "ghengeveld",
+    "id": 321738,
+    "node_id": "MDQ6VXNlcjMyMTczOA==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/321738?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ghengeveld",
+    "html_url": "https://github.com/ghengeveld",
+    "followers_url": "https://api.github.com/users/ghengeveld/followers",
+    "following_url": "https://api.github.com/users/ghengeveld/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ghengeveld/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ghengeveld/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ghengeveld/subscriptions",
+    "organizations_url": "https://api.github.com/users/ghengeveld/orgs",
+    "repos_url": "https://api.github.com/users/ghengeveld/repos",
+    "events_url": "https://api.github.com/users/ghengeveld/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ghengeveld/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-07-23T14:02:13Z",
+  "updated_at": "2016-07-28T18:41:27Z",
+  "closed_at": "2016-07-25T23:17:05Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7342",
+    "html_url": "https://github.com/facebook/react/pull/7342",
+    "diff_url": "https://github.com/facebook/react/pull/7342.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7342.patch"
+  },
+  "body": "Added ReactNL to the list of conferences. Check out http://reactnl.org/ for details.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

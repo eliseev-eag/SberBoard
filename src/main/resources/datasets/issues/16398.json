@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16398",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16398/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16398/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16398/events",
+  "html_url": "https://github.com/facebook/react/pull/16398",
+  "id": 481011780,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzA3NTk1NTY4",
+  "number": 16398,
+  "title": "Add Experimental Flight Infrastructure",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2019-08-15T06:24:59Z",
+  "updated_at": "2019-08-30T17:14:38Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16398",
+    "html_url": "https://github.com/facebook/react/pull/16398",
+    "diff_url": "https://github.com/facebook/react/pull/16398.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16398.patch"
+  },
+  "body": "This adds some plumbing for the Flight experiment.\r\n\r\nWe'll likely need this to (optionally) support a streaming protocol. This is the same as Fizz (streaming server rendering). There is quite a bit of wiring to make that work. This infra creates a build for each environment with zero overhead cost.\r\n\r\nWe have one build for Node which is the default. We currently have a separate build for a Browser environment (with browser stream support). This is useful for Service Workers or just debugging since the browser debugger is better than Node. We'll likely also have a FB specific one. \r\n\r\nReactServerHostConfig configures the runtime environment and has various overrides.\r\n\r\nAdditionally, we likely want to special case the encoding format for some parts of the protocol depending on what you're rendering into. E.g. a host component tree can be flattened into raw HTML. Therefore, we want one entry point for each renderer type. Not a single one for the whole project. This entry point is `react-dom/unstable-flight`.\r\n\r\nReactServerFormatConfig configures the output format configuration.\r\n\r\nBoth of these are shared between Fizz and Flight. So they each get the host config and the format config compiled in.\r\n\r\nThe second two commits show the actually relevant files.\r\n\r\ncc @timneutkens\r\n\r\n\r\n",
+  "closed_by": null
+}

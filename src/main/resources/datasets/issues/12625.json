@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12625",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12625/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12625/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12625/events",
+  "html_url": "https://github.com/facebook/react/pull/12625",
+  "id": 314840299,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTgyMDA1MTMx",
+  "number": 12625,
+  "title": "Fork React Native renderer into FB and OSS bundles",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2018-04-16T22:27:17Z",
+  "updated_at": "2018-04-18T20:39:16Z",
+  "closed_at": "2018-04-18T20:16:51Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12625",
+    "html_url": "https://github.com/facebook/react/pull/12625",
+    "diff_url": "https://github.com/facebook/react/pull/12625.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12625.patch"
+  },
+  "body": "Fork React Native renderer bundle into separate OSS and FB builds. This is being done in order to minimize unintentional open source impact (e.g. facebook/react-native/issues/18175) and to provide a way for Facebook to test features in RN early, as we do for React DOM.\r\n\r\n### High level changes\r\n\r\n* Added new \"native-fb\" and \"native-fabric-fb\" bundles.\r\n* Split `RN_DEV` and `RN_PROD` bundle types into `RN_OSS_DEV`, `RN_OSS_PROD`, `RN_FB_DEV`, and `RN_FB_PROD`. (This is a bit redundant but it seemed the least intrusive way of supporting a forked feature flags file for these bundles.)\r\n* Renamed `FB_DEV` and `FB_PROD` bundle types to be more explicitly for www (`FB_WWW_DEV` and `FB_WWW_PROD`)\r\n* Removed Haste `@providesModule` headers from the RB-specific RN renderer bundles to avoid a duplicate name conflicts.\r\n* Remove dynamic values from OSS RN feature flags. (Leave them in FB RN feature flags.)\r\n* Updated the sync script(s) to account for new renderer type.\r\n* Move `ReactFeatureFlags.js` shim to FB bundle only (since OSS bundle no longer needs dynamic values).\r\n\r\nThis is the new structure of the built RN bundles:\r\n```sh\r\n./build/react-native/\r\n├── fb    # Used within FB; not synced to GitHub\r\n│   ├── ReactFabric-dev.js\r\n│   ├── ReactFabric-prod.js\r\n│   ├── ReactFeatureFlags.js\r\n│   ├── ReactNativeRenderer-dev.js\r\n│   └── ReactNativeRenderer-prod.js\r\n├── oss   # Ignored within FB; synced to GitHub\r\n│   ├── ReactFabric-dev.js\r\n│   ├── ReactFabric-prod.js\r\n│   ├── ReactNativeRenderer-dev.js\r\n│   └── ReactNativeRenderer-prod.js\r\n└── shims # Shared between fb and oss renderers\r\n    ├── NativeMethodsMixin.js\r\n    ├── ReactDebugTool.js\r\n    ├── ReactFabric.js\r\n    ├── ReactNative.js\r\n    ├── ReactNativeComponentTree.js\r\n    ├── ReactNativeTypes.js\r\n    ├── ReactNativeViewConfigRegistry.js\r\n    ├── ReactPerf.js\r\n    ├── ReactTypes.js\r\n    └── createReactNativeComponentClass.js\r\n```\r\n\r\n### Alternatives considered\r\n\r\n* Rather than creating a new bundle type, I also investigated adding the existing `FB_DEV` / `FB_PROD` types to the \"react-native\" bundle, but this bundle type seems to have some www-specific assumptions built in. It seemed safer to add a new type (\"XPLAT_*\") that could more closely resemble the current RN bundle while still giving us the ability to fork the feature flags file.\r\n* Keep a single renderer but fork the feature flags file internally. I tested how this would impact the RN prod OSS build size, and it looks like enabling performance timings in prod would increase the gzipped production build of RN by ~5.4% (and also probably impact TTI, although I don't know by how much). This particular change is something that we may want to experiment with (based on a chat with Spencer) so it seemed like a reasonable test case.\r\n\r\n### Testing\r\n\r\nI build RN locally and synced to fbsource by running:\r\n```\r\nyarn build -- native --sync-fbsource=~/fbsource/\r\n```\r\n\r\nI compared the diff of the resulting bundles and verified they have only the changes I would expect:\r\n* The open source RN renderer no longer includes the dynamic feature flags require (`require(\"ReactFeatureFlags\")`)\r\n* The FB/xplat specific renderer does.\r\n\r\n### TODO\r\n\r\n- [x] Blacklist the OSS RN renderer `@providesModule` within fbsource so Facebook is not using that build.\r\n- [x] Update Facebook's GitHub sync bot to blacklist the FB-specific renderer directory (so it doesn't get copied to RN GitHub).\r\n- [x] Sync and test the new FB renderer type.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

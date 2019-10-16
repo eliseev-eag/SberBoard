@@ -1,0 +1,91 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11692",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11692/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11692/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11692/events",
+  "html_url": "https://github.com/facebook/react/issues/11692",
+  "id": 277546388,
+  "node_id": "MDU6SXNzdWUyNzc1NDYzODg=",
+  "number": 11692,
+  "title": "ReactDOMServer.renderToStaticMarkup gets stuck while trying to render Portals",
+  "user": {
+    "login": "amoshg",
+    "id": 1724212,
+    "node_id": "MDQ6VXNlcjE3MjQyMTI=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1724212?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/amoshg",
+    "html_url": "https://github.com/amoshg",
+    "followers_url": "https://api.github.com/users/amoshg/followers",
+    "following_url": "https://api.github.com/users/amoshg/following{/other_user}",
+    "gists_url": "https://api.github.com/users/amoshg/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/amoshg/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/amoshg/subscriptions",
+    "organizations_url": "https://api.github.com/users/amoshg/orgs",
+    "repos_url": "https://api.github.com/users/amoshg/repos",
+    "events_url": "https://api.github.com/users/amoshg/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/amoshg/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710332294,
+      "node_id": "MDU6TGFiZWw3MTAzMzIyOTQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Server%20Rendering",
+      "name": "Component: Server Rendering",
+      "color": "d4c5f9",
+      "default": false
+    },
+    {
+      "id": 588833528,
+      "node_id": "MDU6TGFiZWw1ODg4MzM1Mjg=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Difficulty:%20medium",
+      "name": "Difficulty: medium",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2017-11-28T21:36:13Z",
+  "updated_at": "2017-11-29T22:09:06Z",
+  "closed_at": "2017-11-29T21:45:53Z",
+  "author_association": "NONE",
+  "body": "Calling `ReactDOMServer.renderToStaticMarkup(elementWithPortal);` gets stuck in a loop while trying to do a static render.\r\n\r\nCurrent behavior:\r\nThe behavior can be seen here: https://codepen.io/anon/pen/BmqWOM  by un-commenting line 58 (warning: this will make your tab freeze)\r\n\r\nExpected behavior:\r\nIt should return with results or throw some kind of error if the input is not valid\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

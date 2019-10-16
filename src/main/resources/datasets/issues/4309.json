@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4309",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4309/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4309/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4309/events",
+  "html_url": "https://github.com/facebook/react/pull/4309",
+  "id": 93611479,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mzk0MDgzMDM=",
+  "number": 4309,
+  "title": "Concatenate warning message, due to parsing issues",
+  "user": {
+    "login": "mmoss",
+    "id": 648160,
+    "node_id": "MDQ6VXNlcjY0ODE2MA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/648160?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mmoss",
+    "html_url": "https://github.com/mmoss",
+    "followers_url": "https://api.github.com/users/mmoss/followers",
+    "following_url": "https://api.github.com/users/mmoss/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mmoss/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mmoss/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mmoss/subscriptions",
+    "organizations_url": "https://api.github.com/users/mmoss/orgs",
+    "repos_url": "https://api.github.com/users/mmoss/repos",
+    "events_url": "https://api.github.com/users/mmoss/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mmoss/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2015-07-07T19:39:42Z",
+  "updated_at": "2015-07-20T16:19:45Z",
+  "closed_at": "2015-07-08T19:17:35Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4309",
+    "html_url": "https://github.com/facebook/react/pull/4309",
+    "diff_url": "https://github.com/facebook/react/pull/4309.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4309.patch"
+  },
+  "body": "The addons module warning is currently causing issues with babel/JSPM due to the warning message getting parsed as a require statement. Adding a break using string concatenation appears to prevent any issues.\n\nExample error using JSPM:\n\n```\nError loading \"react-addons-{addon}\" from...\n```\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

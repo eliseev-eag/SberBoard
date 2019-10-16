@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8716",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8716/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8716/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8716/events",
+  "html_url": "https://github.com/facebook/react/pull/8716",
+  "id": 199488812,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTAwNjQxMTQx",
+  "number": 8716,
+  "title": "[Fiber] Change work priority to represent the priority of the child",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2017-01-09T07:02:44Z",
+  "updated_at": "2018-01-05T13:52:01Z",
+  "closed_at": "2018-01-05T13:52:01Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8716",
+    "html_url": "https://github.com/facebook/react/pull/8716",
+    "diff_url": "https://github.com/facebook/react/pull/8716.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8716.patch"
+  },
+  "body": "- When the children are reconciled, set the work priority of the parent to the current priority level. Do not set the work priority of the children.\r\n- In `findNextUnitOfWork`, we need to check both the update priority and the work priority of the root, since the work priority field no longer represents both.\r\n- In `scheduleUpdate`, when bubbling the priority to the root, skip the fiber that is being updated on and start with the parent.\r\n- Move `resetWorkPriority` from `commitAllWork` in the scheduler into `ReactFiberCompleteWork` so we can branch on the type of the component. This is needed for HostComponents, which may have leftover work priority if we bailed out on a hidden subtree.\r\n- Because a fiber has no field that represents its own priority, we cannot bailout on low priority at the beginning of `beginWork`. Instead we have to perform that check while performing work on the parent, before its child is returned.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11488",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11488/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11488/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11488/events",
+  "html_url": "https://github.com/facebook/react/issues/11488",
+  "id": 272082581,
+  "node_id": "MDU6SXNzdWUyNzIwODI1ODE=",
+  "number": 11488,
+  "title": "Trigger simulated input value change for React 16 (after react-dom 15.6.0 updated)?",
+  "user": {
+    "login": "gkitarp",
+    "id": 33476086,
+    "node_id": "MDQ6VXNlcjMzNDc2MDg2",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/33476086?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gkitarp",
+    "html_url": "https://github.com/gkitarp",
+    "followers_url": "https://api.github.com/users/gkitarp/followers",
+    "following_url": "https://api.github.com/users/gkitarp/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gkitarp/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gkitarp/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gkitarp/subscriptions",
+    "organizations_url": "https://api.github.com/users/gkitarp/orgs",
+    "repos_url": "https://api.github.com/users/gkitarp/repos",
+    "events_url": "https://api.github.com/users/gkitarp/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gkitarp/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 620368407,
+      "node_id": "MDU6TGFiZWw2MjAzNjg0MDc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Needs%20More%20Information",
+      "name": "Resolution: Needs More Information",
+      "color": "fffde7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 24,
+  "created_at": "2017-11-08T05:55:48Z",
+  "updated_at": "2019-07-01T20:59:35Z",
+  "closed_at": "2017-11-13T07:00:57Z",
+  "author_association": "NONE",
+  "body": "I'm trying to trigger the input/change event on a React form outside react using pure JS or jQuery. With react-dom 15.6.0 you were able to use simulated flag on the event object for the event to pass through\r\n\r\n```\r\nvar element = document.getElementById(\"inputToTriggerByJS\");\r\nvar ev = new Event('input', { bubbles: true});\r\nev.simulated = true;\r\nelement.value = \"Something new\";\r\nelement.defaultValue = \"Something new\";\r\nelement.dispatchEvent(ev);\r\n```\r\nNote I cannot use React even though the form trying to trigger on is based on React, have to pure JS or jQuery to trigger the input value change event.\r\n\r\nSo the original suggestion from this comment used to work: https://github.com/cypress-io/cypress/issues/536#issuecomment-308739206\r\n\r\nBut after React 16 release this is not triggering the input and change event as expected.\r\n\r\nWhat are the internal changes as to how it handles changes to input data in React 16?\r\n\r\nBelieve there is a point here which would give the hint: reactjs.org/blog/2017/09/26/react-v16.0.html#breaking-change‌​s Any idea what it could be?",
+  "closed_by": {
+    "login": "gkitarp",
+    "id": 33476086,
+    "node_id": "MDQ6VXNlcjMzNDc2MDg2",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/33476086?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gkitarp",
+    "html_url": "https://github.com/gkitarp",
+    "followers_url": "https://api.github.com/users/gkitarp/followers",
+    "following_url": "https://api.github.com/users/gkitarp/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gkitarp/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gkitarp/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gkitarp/subscriptions",
+    "organizations_url": "https://api.github.com/users/gkitarp/orgs",
+    "repos_url": "https://api.github.com/users/gkitarp/repos",
+    "events_url": "https://api.github.com/users/gkitarp/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gkitarp/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

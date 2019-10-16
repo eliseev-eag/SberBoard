@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4482",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4482/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4482/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4482/events",
+  "html_url": "https://github.com/facebook/react/pull/4482",
+  "id": 97161837,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDA4MjIzODk=",
+  "number": 4482,
+  "title": "Add additional contextual information to invalid-style-prop warning",
+  "user": {
+    "login": "niole",
+    "id": 6508755,
+    "node_id": "MDQ6VXNlcjY1MDg3NTU=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/6508755?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/niole",
+    "html_url": "https://github.com/niole",
+    "followers_url": "https://api.github.com/users/niole/followers",
+    "following_url": "https://api.github.com/users/niole/following{/other_user}",
+    "gists_url": "https://api.github.com/users/niole/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/niole/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/niole/subscriptions",
+    "organizations_url": "https://api.github.com/users/niole/orgs",
+    "repos_url": "https://api.github.com/users/niole/repos",
+    "events_url": "https://api.github.com/users/niole/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/niole/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 19,
+  "created_at": "2015-07-24T22:39:24Z",
+  "updated_at": "2015-08-28T17:17:14Z",
+  "closed_at": "2015-08-28T01:28:10Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4482",
+    "html_url": "https://github.com/facebook/react/pull/4482",
+    "diff_url": "https://github.com/facebook/react/pull/4482.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4482.patch"
+  },
+  "body": "inline style prop error thrown for JSX React elements now names React class that erroring element is a child of.  Fixes #4168\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

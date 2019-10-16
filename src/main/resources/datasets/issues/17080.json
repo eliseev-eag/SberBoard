@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/17080",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/17080/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/17080/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/17080/events",
+  "html_url": "https://github.com/facebook/react/issues/17080",
+  "id": 506399052,
+  "node_id": "MDU6SXNzdWU1MDYzOTkwNTI=",
+  "number": 17080,
+  "title": "Are useEffect clean-ups called in the wrong order ?",
+  "user": {
+    "login": "ostrebler",
+    "id": 30187797,
+    "node_id": "MDQ6VXNlcjMwMTg3Nzk3",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/30187797?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ostrebler",
+    "html_url": "https://github.com/ostrebler",
+    "followers_url": "https://api.github.com/users/ostrebler/followers",
+    "following_url": "https://api.github.com/users/ostrebler/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ostrebler/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ostrebler/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ostrebler/subscriptions",
+    "organizations_url": "https://api.github.com/users/ostrebler/orgs",
+    "repos_url": "https://api.github.com/users/ostrebler/repos",
+    "events_url": "https://api.github.com/users/ostrebler/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ostrebler/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-10-13T23:48:58Z",
+  "updated_at": "2019-10-15T22:50:06Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**What is the current behavior?**\r\n\r\nI'm trying to write a small `Title` component to render nested document titles. However the kinda unexpected order in which effect clean-up functions are called makes it impossible to do this : \r\n\r\n```javascript\r\nimport { Children, useEffect } from 'react'\r\n\r\nexport default ({ children }) => {\r\n  const subtitle = Children.toArray(children).join('')\r\n  useEffect(() => {\r\n    const root = document.title\r\n    document.title = `${subtitle} - ${root}`\r\n    console.log('Wrote', document.title)\r\n    return () => {\r\n      document.title = root\r\n      console.log('Restored', document.title)\r\n    }\r\n  }, [subtitle])\r\n  return null\r\n}\r\n```\r\n\r\nHere is a loosy sketch of my component structure (handled with `@reach/router`) : \r\n\r\n```\r\nApp                     // contains <Title>App</Title>\r\n> Dashboard             // contains <Title>Dashboard</Title>\r\n> Profile               // contains <Title>Profile</Title>\r\n> Project               // contains <Title>Project</Title>\r\n  > Calendar            // contains <Title>Calendar</Title>\r\n```\r\n\r\nEach one of these components calls my `Title` component. Everything works fine when going from profile to dashboard or from dashboard to project. But when I jump from calendar to dashboard, the document title gets messed up because the clean-up in Project is called **before** the clean-up in Calendar even though Calendar is a child of Project, which is kinda unexpected and makes tree side-effect logic using (just) `useEffect` simply impossible.\r\n\r\nThe order in which the effect functions are called is a direct reflection of the order in which the components are nested. Shouldn't the clean-up functions be called following the exact reverse order ? Isn't that one of the goals of a clean-up ?\r\n\r\nWhen I navigate to the calendar and then back to the dashboard, I get the following logs : \r\n\r\n```\r\nWrote App\r\nWrote Project - App\r\nWrote Calendar - Project - App\r\nRestored App                          // This should happen after...\r\nRestored Project - App                // ...this.\r\nWrote Dashboard - Project - App       // This is messed up.\r\n```\r\n\r\n[codesandbox here](https://codesandbox.io/s/vigilant-feynman-0jxwb?fontsize=14)\r\n\r\n**What is the expected behavior?**\r\n\r\nHere is what I expected and what I would get if clean-ups in children were to be called before clean-ups in parents : \r\n\r\n```\r\nWrote App\r\nWrote Project - App\r\nWrote Calendar - Project - App\r\nRestored Project - App\r\nRestored App\r\nWrote Dashboard - App\r\n```\r\n\r\nI'm using React 16.10.2.\r\n\r\nThis ugly workaround works by \"forcing\" the order of what the clean-ups do (by keeping manually track of the effect functions' order and then just going the other way) : \r\n\r\n```javascript\r\nconst stack = []\r\n\r\nexport default ({ children }) => {\r\n  const subtitle = Children.toArray(children).join('')\r\n  useEffect(() => {\r\n    stack.push(document.title)\r\n    document.title = `${subtitle} - ${last(stack)}`\r\n    return () => {\r\n      document.title = stack.pop()\r\n    }\r\n  }, [subtitle])\r\n  return null\r\n}\r\n```",
+  "closed_by": null
+}

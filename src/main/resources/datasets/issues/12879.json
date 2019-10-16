@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12879",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12879/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12879/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12879/events",
+  "html_url": "https://github.com/facebook/react/pull/12879",
+  "id": 325329314,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTg5Njg5OTM1",
+  "number": 12879,
+  "title": "Rollup freeze: false",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2018-05-22T14:48:44Z",
+  "updated_at": "2018-05-22T15:17:04Z",
+  "closed_at": "2018-05-22T15:17:00Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12879",
+    "html_url": "https://github.com/facebook/react/pull/12879",
+    "diff_url": "https://github.com/facebook/react/pull/12879.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12879.patch"
+  },
+  "body": "Rollup freezes several imported modules in our current bundle. This doesn't really seem necessary, so I've updated the Rollup config to not freeze bundles for the production build.\r\n\r\n### `react-dom.development.js` diff\r\n(no diff)\r\n\r\n### `react-dom.production.min.js` diff\r\nAfter running both files through Prettier.\r\n```diff\r\n147c147\r\n< var va = Object.freeze({\r\n---\r\n> var va = {\r\n155c155\r\n<   }),\r\n---\r\n>   },\r\n247c247\r\n< var Ka = Object.freeze({\r\n---\r\n> var Ka = {\r\n252c252\r\n<   }),\r\n---\r\n>   },\r\n273c273\r\n< var Qa = Object.freeze({\r\n---\r\n> var Qa = {\r\n287c287\r\n< });\r\n---\r\n> };\r\n360c360\r\n< var $a = Object.freeze({\r\n---\r\n> var $a = {\r\n369c369\r\n< });\r\n---\r\n> };\r\n710c710\r\n< var Rb = Object.freeze({\r\n---\r\n> var Rb = {\r\n715c715\r\n< });\r\n---\r\n> };\r\n1780c1780\r\n< var Md = Object.freeze({\r\n---\r\n> var Md = {\r\n1791c1791\r\n<   }),\r\n---\r\n>   },\r\n2619c2619\r\n< var We = Object.freeze({\r\n---\r\n> var We = {\r\n2660c2660\r\n<   }),\r\n---\r\n>   },\r\n5336c5336\r\n< var gi = Object.freeze({\r\n---\r\n> var gi = {\r\n5373c5373\r\n< });\r\n---\r\n> };\r\n5610c5610\r\n< var vi = Object.freeze({ default: qi }),\r\n---\r\n> var vi = { default: qi },\r\n```",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6273",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6273/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6273/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6273/events",
+  "html_url": "https://github.com/facebook/react/pull/6273",
+  "id": 141374020,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjMxMjAzMTk=",
+  "number": 6273,
+  "title": "getEventKey unit tests",
+  "user": {
+    "login": "cbrwizard",
+    "id": 1615659,
+    "node_id": "MDQ6VXNlcjE2MTU2NTk=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1615659?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/cbrwizard",
+    "html_url": "https://github.com/cbrwizard",
+    "followers_url": "https://api.github.com/users/cbrwizard/followers",
+    "following_url": "https://api.github.com/users/cbrwizard/following{/other_user}",
+    "gists_url": "https://api.github.com/users/cbrwizard/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/cbrwizard/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/cbrwizard/subscriptions",
+    "organizations_url": "https://api.github.com/users/cbrwizard/orgs",
+    "repos_url": "https://api.github.com/users/cbrwizard/repos",
+    "events_url": "https://api.github.com/users/cbrwizard/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/cbrwizard/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2016-03-16T19:16:02Z",
+  "updated_at": "2016-03-31T21:02:52Z",
+  "closed_at": "2016-03-17T17:38:16Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6273",
+    "html_url": "https://github.com/facebook/react/pull/6273",
+    "diff_url": "https://github.com/facebook/react/pull/6273.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6273.patch"
+  },
+  "body": "Adds unit tests to getEventKey function.\n\nI have noticed that getEventKey lacks test coverage - here is the fix.\n### Test coverage before\n\n<img width=\"715\" alt=\"2016-03-16 22 03 57\" src=\"https://cloud.githubusercontent.com/assets/1615659/13825578/3454b78c-ebc4-11e5-9a24-64028aa70997.png\">\n<img width=\"738\" alt=\"2016-03-16 22 04 11\" src=\"https://cloud.githubusercontent.com/assets/1615659/13825581/345aff5c-ebc4-11e5-9f1e-464cdf1c81e0.png\">\n### Test coverage after\n\n<img width=\"726\" alt=\"2016-03-16 22 05 46\" src=\"https://cloud.githubusercontent.com/assets/1615659/13825579/34556db2-ebc4-11e5-8c7b-c95672529e34.png\">\n<img width=\"745\" alt=\"2016-03-16 22 05 36\" src=\"https://cloud.githubusercontent.com/assets/1615659/13825580/3456baaa-ebc4-11e5-8d3d-c3e299fe9896.png\">\n\nP.S.\nThis is my first **ever** contribution to an open source project. If improving test coverage is wanted by a React team - I would be glad to open more pull requests. Obviously, if I made an error somewhere - please tell me, I am ready to fix it [:\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

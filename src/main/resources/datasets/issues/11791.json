@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11791",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11791/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11791/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11791/events",
+  "html_url": "https://github.com/facebook/react/pull/11791",
+  "id": 279983783,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTU2ODkzNDQ2",
+  "number": 11791,
+  "title": "Add `yarn debug-test` to debug tests in Chrome",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2017-12-07T03:00:56Z",
+  "updated_at": "2019-06-05T02:28:27Z",
+  "closed_at": "2017-12-07T11:05:40Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11791",
+    "html_url": "https://github.com/facebook/react/pull/11791",
+    "diff_url": "https://github.com/facebook/react/pull/11791.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11791.patch"
+  },
+  "body": "Works just like `yarn test` and can also run with a watcher or for a particular file.\r\n\r\n\r\n```\r\nyarn debug-test\r\nyarn debug-test IncrementalErrorHandling\r\nyarn debug-test --watch IncrementalErrorHandling\r\n```\r\n\r\nTo debug, open `chrome://inspect`, select the target and then press Play.\r\n\r\n<img width=\"702\" alt=\"screen shot 2017-12-07 at 02 59 17\" src=\"https://user-images.githubusercontent.com/810438/33696581-cf088110-dafa-11e7-97b5-692de9ab8322.png\">\r\n\r\nYou can set breakpoints too, both in individual source files and in the test itself.\r\n\r\n<img width=\"681\" alt=\"screen shot 2017-12-07 at 02 56 43\" src=\"https://user-images.githubusercontent.com/810438/33696584-d4198c8a-dafa-11e7-9b3c-73dd0b495981.png\">\r\n\r\nPretty neat!",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

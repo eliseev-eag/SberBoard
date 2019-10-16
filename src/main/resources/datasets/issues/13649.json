@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13649",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13649/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13649/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13649/events",
+  "html_url": "https://github.com/facebook/react/issues/13649",
+  "id": 360217502,
+  "node_id": "MDU6SXNzdWUzNjAyMTc1MDI=",
+  "number": 13649,
+  "title": "Image onError event is getting triggered even if image is loading",
+  "user": {
+    "login": "allanchua101",
+    "id": 26626798,
+    "node_id": "MDQ6VXNlcjI2NjI2Nzk4",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/26626798?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/allanchua101",
+    "html_url": "https://github.com/allanchua101",
+    "followers_url": "https://api.github.com/users/allanchua101/followers",
+    "following_url": "https://api.github.com/users/allanchua101/following{/other_user}",
+    "gists_url": "https://api.github.com/users/allanchua101/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/allanchua101/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/allanchua101/subscriptions",
+    "organizations_url": "https://api.github.com/users/allanchua101/orgs",
+    "repos_url": "https://api.github.com/users/allanchua101/repos",
+    "events_url": "https://api.github.com/users/allanchua101/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/allanchua101/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 620368407,
+      "node_id": "MDU6TGFiZWw2MjAzNjg0MDc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Needs%20More%20Information",
+      "name": "Resolution: Needs More Information",
+      "color": "fffde7",
+      "default": false
+    },
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2018-09-14T09:01:44Z",
+  "updated_at": "2019-09-09T09:30:10Z",
+  "closed_at": "2019-09-09T09:30:10Z",
+  "author_association": "NONE",
+  "body": "***Current Behavior***\r\n\r\nImage _onError_ event is getting triggered every time it loads data from a piped image from Amazon S3:\r\n\r\n*Sample Code*\r\n```jsx\r\n   <img src={this.props.src}\r\n        onError={this.props.onFailedImageLoad} \r\n        onLoad={this.props.onImageLoad}\r\n        alt=\"Cannot load image\" />\r\n```\r\n*Piping Image Code*\r\n```js\r\n    s3ObjectTags\r\n      .execute(s3Config)\r\n      .promise()\r\n      .then(data => {\r\n        res.writeHead(200, { \"content-type\": \"image/png\" });\r\n        s3Streamer.execute(s3Config).createReadStream().pipe(res);\r\n      })\r\n      .catch(err => {\r\n        let filePath = path.join(__dirname, \"..\", \"..\", \"..\", \"images\", \"missing-file.png\");\r\n        let src = fs.createReadStream(filePath);\r\n\r\n        res.writeHead(404, { \"content-type\": \"image/png\" })\r\n        src.pipe(res);\r\n      });\r\n```\r\n***Expected Behavior***\r\n\r\nImage should not trigger onError event if image will loads",
+  "closed_by": {
+    "login": "threepointone",
+    "id": 18808,
+    "node_id": "MDQ6VXNlcjE4ODA4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/18808?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/threepointone",
+    "html_url": "https://github.com/threepointone",
+    "followers_url": "https://api.github.com/users/threepointone/followers",
+    "following_url": "https://api.github.com/users/threepointone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/threepointone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/threepointone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/threepointone/subscriptions",
+    "organizations_url": "https://api.github.com/users/threepointone/orgs",
+    "repos_url": "https://api.github.com/users/threepointone/repos",
+    "events_url": "https://api.github.com/users/threepointone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/threepointone/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4291",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4291/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4291/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4291/events",
+  "html_url": "https://github.com/facebook/react/pull/4291",
+  "id": 93104794,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzkyMTk1NDI=",
+  "number": 4291,
+  "title": "indicate file name requried for static file",
+  "user": {
+    "login": "rwoodnz",
+    "id": 6194471,
+    "node_id": "MDQ6VXNlcjYxOTQ0NzE=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/6194471?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rwoodnz",
+    "html_url": "https://github.com/rwoodnz",
+    "followers_url": "https://api.github.com/users/rwoodnz/followers",
+    "following_url": "https://api.github.com/users/rwoodnz/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rwoodnz/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rwoodnz/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rwoodnz/subscriptions",
+    "organizations_url": "https://api.github.com/users/rwoodnz/orgs",
+    "repos_url": "https://api.github.com/users/rwoodnz/repos",
+    "events_url": "https://api.github.com/users/rwoodnz/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rwoodnz/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2015-07-05T11:38:39Z",
+  "updated_at": "2015-07-17T21:24:54Z",
+  "closed_at": "2015-07-13T20:34:51Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4291",
+    "html_url": "https://github.com/facebook/react/pull/4291",
+    "diff_url": "https://github.com/facebook/react/pull/4291.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4291.patch"
+  },
+  "body": "the text doesn't say explicitly to call your file comments.json, nor to put it in the public directory.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

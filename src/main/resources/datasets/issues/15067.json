@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15067",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15067/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15067/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15067/events",
+  "html_url": "https://github.com/facebook/react/pull/15067",
+  "id": 418847671,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjU5NTIyMzE1",
+  "number": 15067,
+  "title": "Failing test for false positive \"setState on unmounted component\" warning",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-03-08T16:00:29Z",
+  "updated_at": "2019-07-30T18:43:42Z",
+  "closed_at": "2019-07-30T18:43:42Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15067",
+    "html_url": "https://github.com/facebook/react/pull/15067",
+    "diff_url": "https://github.com/facebook/react/pull/15067.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15067.patch"
+  },
+  "body": "Failing test for https://github.com/facebook/react/issues/15057.\r\nPossibly relates to some cases of https://github.com/facebook/react/issues/14369.\r\n\r\nThe crux of the issue is that **even if we use a guard variable, sometimes an effect can't `setState` without triggering a warning**. In particular, this happens if:\r\n\r\n* We set state in a component (e.g. from an event emitter call)\r\n* We flush previous effect before we the state gets set\r\n* Flushing previous effect caused a state change in a parent which resulted in component unmounting\r\n* The scheduler thinks we *called* `setState` on an unmounted component, and warns\r\n\r\nI'm not sure how to fix it. I imagine I'd expect that if `flushPassiveEffects` [here](https://github.com/facebook/react/blob/d0289c7e3a2dfc349dcce7f9eb3dee22464e97bd/packages/react-reconciler/src/ReactFiberHooks.js#L1109) led to unmounting of that component, we ideally shouldn't warn [here](https://github.com/facebook/react/blob/d0289c7e3a2dfc349dcce7f9eb3dee22464e97bd/packages/react-reconciler/src/ReactFiberScheduler.js#L1860).\r\n\r\nI'm not sure if there are any bigger issues in cases where it's *not* unmounted though. Is this just a stray warning or is there a larger potential concern?",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

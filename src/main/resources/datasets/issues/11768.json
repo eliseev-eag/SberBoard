@@ -1,0 +1,107 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11768",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11768/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11768/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11768/events",
+  "html_url": "https://github.com/facebook/react/issues/11768",
+  "id": 279149045,
+  "node_id": "MDU6SXNzdWUyNzkxNDkwNDU=",
+  "number": 11768,
+  "title": "Error Rendering Inputs in Separate Window using Portals",
+  "user": {
+    "login": "kgorgi",
+    "id": 13306845,
+    "node_id": "MDQ6VXNlcjEzMzA2ODQ1",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/13306845?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/kgorgi",
+    "html_url": "https://github.com/kgorgi",
+    "followers_url": "https://api.github.com/users/kgorgi/followers",
+    "following_url": "https://api.github.com/users/kgorgi/following{/other_user}",
+    "gists_url": "https://api.github.com/users/kgorgi/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/kgorgi/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/kgorgi/subscriptions",
+    "organizations_url": "https://api.github.com/users/kgorgi/orgs",
+    "repos_url": "https://api.github.com/users/kgorgi/repos",
+    "events_url": "https://api.github.com/users/kgorgi/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/kgorgi/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 69105383,
+      "node_id": "MDU6TGFiZWw2OTEwNTM4Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Browser:%20IE",
+      "name": "Browser: IE",
+      "color": "c7def8",
+      "default": false
+    },
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 588833528,
+      "node_id": "MDU6TGFiZWw1ODg4MzM1Mjg=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Difficulty:%20medium",
+      "name": "Difficulty: medium",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 717031390,
+      "node_id": "MDU6TGFiZWw3MTcwMzEzOTA=",
+      "url": "https://api.github.com/repos/facebook/react/labels/good%20first%20issue",
+      "name": "good first issue",
+      "color": "6ce26a",
+      "default": true
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 12,
+  "created_at": "2017-12-04T21:05:00Z",
+  "updated_at": "2019-07-01T18:04:28Z",
+  "closed_at": "2018-04-02T15:05:40Z",
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\nBug\r\n\r\n**What is the current behavior?**\r\nI am using React's Portals to render react elements in a completely separate (popup) window. When I attempt to render an `<input />` in the popout window, the following error occurs and React fails to render (the window turns white): \r\n\r\n```'enumerable' attribute on the property descriptor cannot be set to 'true' on this object``` in react-dom.development.js \r\n\r\n**What is the expected behavior?**\r\nThe `<input />` renders correctly in the popout window. \r\n\r\n**Steps to reproduce:**\r\nI have created a repo you can clone to recreate the issue as I cannot use a service like JSFiddle because of a no access-control-allow-origin error. The main browser window and popout window are on separate domains (popout is machine local) if I use JSFiddle. The repo is just modified clone of create-a-react-app. \r\n\r\nThe steps to reproduce are included in repo's README.md. The files of interest in the repo are _App.js_  and _PopoutPortal.js_. \r\n\r\nRepo: [kgorgi/react-popout-bug](https://github.com/kgorgi/react-popout-bug)\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\n- This bug only occurs in Edge and IE 11. The popout window renders correctly in Chrome and Firefox. \r\n- I have only tested this bug on React 16.2.0\r\n- OS: Windows 10",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16443",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16443/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16443/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16443/events",
+  "html_url": "https://github.com/facebook/react/issues/16443",
+  "id": 481981786,
+  "node_id": "MDU6SXNzdWU0ODE5ODE3ODY=",
+  "number": 16443,
+  "title": "[eslint-plugin-react-hooks] JSON.stringify in ehaustive-deps",
+  "user": {
+    "login": "amiralies",
+    "id": 13261088,
+    "node_id": "MDQ6VXNlcjEzMjYxMDg4",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/13261088?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/amiralies",
+    "html_url": "https://github.com/amiralies",
+    "followers_url": "https://api.github.com/users/amiralies/followers",
+    "following_url": "https://api.github.com/users/amiralies/following{/other_user}",
+    "gists_url": "https://api.github.com/users/amiralies/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/amiralies/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/amiralies/subscriptions",
+    "organizations_url": "https://api.github.com/users/amiralies/orgs",
+    "repos_url": "https://api.github.com/users/amiralies/repos",
+    "events_url": "https://api.github.com/users/amiralies/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/amiralies/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 1249821345,
+      "node_id": "MDU6TGFiZWwxMjQ5ODIxMzQ1",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20ESLint%20Rules",
+      "name": "Component: ESLint Rules",
+      "color": "f7afdb",
+      "default": false
+    },
+    {
+      "id": 1109410193,
+      "node_id": "MDU6TGFiZWwxMTA5NDEwMTkz",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Hooks",
+      "name": "Component: Hooks",
+      "color": "c2f27b",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-08-18T11:14:12Z",
+  "updated_at": "2019-09-03T08:48:01Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "If it's practical and safe to use `[JSON.stringify(foo)]` in deps for light weight objects i think plugin should not report a warning in that case.",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/1784",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/1784/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/1784/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/1784/events",
+  "html_url": "https://github.com/facebook/react/pull/1784",
+  "id": 37129199,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTc5NzE3ODY=",
+  "number": 1784,
+  "title": "Add the built source to npm package. See #1699",
+  "user": {
+    "login": "wvl",
+    "id": 387,
+    "node_id": "MDQ6VXNlcjM4Nw==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/387?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/wvl",
+    "html_url": "https://github.com/wvl",
+    "followers_url": "https://api.github.com/users/wvl/followers",
+    "following_url": "https://api.github.com/users/wvl/following{/other_user}",
+    "gists_url": "https://api.github.com/users/wvl/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/wvl/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/wvl/subscriptions",
+    "organizations_url": "https://api.github.com/users/wvl/orgs",
+    "repos_url": "https://api.github.com/users/wvl/repos",
+    "events_url": "https://api.github.com/users/wvl/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/wvl/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 71502270,
+      "node_id": "MDU6TGFiZWw3MTUwMjI3MA==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Build%20Infrastructure",
+      "name": "Component: Build Infrastructure",
+      "color": "f9d0c4",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2014-07-03T22:26:23Z",
+  "updated_at": "2014-07-09T02:22:53Z",
+  "closed_at": "2014-07-09T02:22:53Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/1784",
+    "html_url": "https://github.com/facebook/react/pull/1784",
+    "diff_url": "https://github.com/facebook/react/pull/1784.diff",
+    "patch_url": "https://github.com/facebook/react/pull/1784.patch"
+  },
+  "body": "This will add the built source to the npm package, so that anyone using react via npm (and not using browserify) will have the built source available, with the exact same versions. (vs. tracking the built source from the packaged zip file or some other method).\n\nCLA has been submitted. Thanks.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

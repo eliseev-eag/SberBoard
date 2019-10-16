@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5720",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5720/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5720/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5720/events",
+  "html_url": "https://github.com/facebook/react/pull/5720",
+  "id": 123592972,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTQ0MzU5MjE=",
+  "number": 5720,
+  "title": "Fix #4963 - SVG <use> swallows click events",
+  "user": {
+    "login": "edmellum",
+    "id": 622855,
+    "node_id": "MDQ6VXNlcjYyMjg1NQ==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/622855?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/edmellum",
+    "html_url": "https://github.com/edmellum",
+    "followers_url": "https://api.github.com/users/edmellum/followers",
+    "following_url": "https://api.github.com/users/edmellum/following{/other_user}",
+    "gists_url": "https://api.github.com/users/edmellum/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/edmellum/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/edmellum/subscriptions",
+    "organizations_url": "https://api.github.com/users/edmellum/orgs",
+    "repos_url": "https://api.github.com/users/edmellum/repos",
+    "events_url": "https://api.github.com/users/edmellum/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/edmellum/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 13,
+  "created_at": "2015-12-23T02:35:33Z",
+  "updated_at": "2017-02-21T23:15:37Z",
+  "closed_at": "2016-02-17T15:01:50Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5720",
+    "html_url": "https://github.com/facebook/react/pull/5720",
+    "diff_url": "https://github.com/facebook/react/pull/5720.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5720.patch"
+  },
+  "body": "Info about the issue in #4963\n\nThis fix uses the corresponding `<use>` element as the target of a click handler instead of the `<svg>` it refers to, thereby normalizing the behavior of IE, Edge and iOS to the behavior of Chrome. Without this fix there is no way to handle click events on `<use>` elements in the aforementioned browsers as their target becomes the referred to `<svg>` which may be far outside of the attached click handler causing it to be dropped.\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

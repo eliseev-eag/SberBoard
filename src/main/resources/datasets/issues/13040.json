@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13040",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13040/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13040/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13040/events",
+  "html_url": "https://github.com/facebook/react/issues/13040",
+  "id": 332169372,
+  "node_id": "MDU6SXNzdWUzMzIxNjkzNzI=",
+  "number": 13040,
+  "title": "Key Event not being sent on iPad with a bluetooth keyboard",
+  "user": {
+    "login": "chrisgbaker",
+    "id": 17983534,
+    "node_id": "MDQ6VXNlcjE3OTgzNTM0",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/17983534?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/chrisgbaker",
+    "html_url": "https://github.com/chrisgbaker",
+    "followers_url": "https://api.github.com/users/chrisgbaker/followers",
+    "following_url": "https://api.github.com/users/chrisgbaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/chrisgbaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/chrisgbaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/chrisgbaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/chrisgbaker/orgs",
+    "repos_url": "https://api.github.com/users/chrisgbaker/repos",
+    "events_url": "https://api.github.com/users/chrisgbaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/chrisgbaker/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 620368407,
+      "node_id": "MDU6TGFiZWw2MjAzNjg0MDc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Needs%20More%20Information",
+      "name": "Resolution: Needs More Information",
+      "color": "fffde7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2018-06-13T21:23:27Z",
+  "updated_at": "2018-08-16T21:14:13Z",
+  "closed_at": "2018-08-16T21:14:13Z",
+  "author_association": "NONE",
+  "body": "Demo: https://jsfiddle.net/69z2wepo/190716/\r\n\r\nUsing the above fiddle, focusing on the `<tr>` and sending Key events correctly logs e.Key in any device aside from an iPad. However, when connecting an iPad with a Bluetooth keyboard for debugging, the only key events that seem to make it through correctly are the arrow keys. Everything else comes in as \"Dead\".\r\n\r\nNote: http://jsfiddle.net/5r0enc79/17 Using this fiddle, all key events appear to be correct on the same iPad.\r\n\r\nVersion of React: 16.4\r\niPad: 11.3 (15E216)\r\nBrowser: Safari\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

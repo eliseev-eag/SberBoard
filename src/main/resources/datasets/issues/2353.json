@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2353",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2353/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2353/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2353/events",
+  "html_url": "https://github.com/facebook/react/pull/2353",
+  "id": 45863075,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjI3ODE0NjM=",
+  "number": 2353,
+  "title": "De-register null component flag for _rootNodeID when we remove a composite component.",
+  "user": {
+    "login": "jenshz",
+    "id": 496314,
+    "node_id": "MDQ6VXNlcjQ5NjMxNA==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/496314?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jenshz",
+    "html_url": "https://github.com/jenshz",
+    "followers_url": "https://api.github.com/users/jenshz/followers",
+    "following_url": "https://api.github.com/users/jenshz/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jenshz/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jenshz/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jenshz/subscriptions",
+    "organizations_url": "https://api.github.com/users/jenshz/orgs",
+    "repos_url": "https://api.github.com/users/jenshz/repos",
+    "events_url": "https://api.github.com/users/jenshz/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jenshz/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2014-10-15T13:01:47Z",
+  "updated_at": "2014-11-15T20:48:43Z",
+  "closed_at": "2014-11-15T20:47:08Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/2353",
+    "html_url": "https://github.com/facebook/react/pull/2353",
+    "diff_url": "https://github.com/facebook/react/pull/2353.diff",
+    "patch_url": "https://github.com/facebook/react/pull/2353.patch"
+  },
+  "body": "When React renders a composite component, it registers if the result of the render resulted in an empty element\n(represented by empty noscript tags).\n\nIf the component is removed, this registration is never removed.\nThis pull-request fixes that problem.\n\nSee the following JSFiddle, for an example of one of the possible implications of this.\nhttp://jsfiddle.net/Lhoqemev/2/\n\nIn all cases, we expect the getDOMNode() call to return the mounted div,\nbut because of the above issue, if the previous node was a composite component that rendered to an empty element,\nwe will get a null-reference instead.\n\nAny feedback is welcome. Unit test of the issue included. The added code lints and all tests pass.\n",
+  "closed_by": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

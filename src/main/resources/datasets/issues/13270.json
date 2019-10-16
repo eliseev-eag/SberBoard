@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13270",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13270/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13270/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13270/events",
+  "html_url": "https://github.com/facebook/react/pull/13270",
+  "id": 344621056,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjAzOTc0MTMw",
+  "number": 13270,
+  "title": "Make sure that `select` has `multiple` attribute set to appropriate state before appending options",
+  "user": {
+    "login": "segoddnja",
+    "id": 1170038,
+    "node_id": "MDQ6VXNlcjExNzAwMzg=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1170038?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/segoddnja",
+    "html_url": "https://github.com/segoddnja",
+    "followers_url": "https://api.github.com/users/segoddnja/followers",
+    "following_url": "https://api.github.com/users/segoddnja/following{/other_user}",
+    "gists_url": "https://api.github.com/users/segoddnja/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/segoddnja/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/segoddnja/subscriptions",
+    "organizations_url": "https://api.github.com/users/segoddnja/orgs",
+    "repos_url": "https://api.github.com/users/segoddnja/repos",
+    "events_url": "https://api.github.com/users/segoddnja/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/segoddnja/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 24,
+  "created_at": "2018-07-25T21:53:09Z",
+  "updated_at": "2018-08-03T17:10:32Z",
+  "closed_at": "2018-08-03T17:05:26Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13270",
+    "html_url": "https://github.com/facebook/react/pull/13270",
+    "diff_url": "https://github.com/facebook/react/pull/13270.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13270.patch"
+  },
+  "body": "Applying multiple options to `select` node before it's multiple attribute is set to `true` leads to the first option be selected by default, event in the case there is no `value` or `defaultValue` passed in the props.\r\n\r\nIt leads to another undesired outcome. As setting real `selected` attributes values happens in the post mount wrapper, browser does not scroll list to selected option if it is outside of the select.\r\n\r\nfixes #13222",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

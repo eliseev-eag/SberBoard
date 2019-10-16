@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9441",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9441/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9441/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9441/events",
+  "html_url": "https://github.com/facebook/react/pull/9441",
+  "id": 221984385,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTE2MDQ1Mzcz",
+  "number": 9441,
+  "title": "[Tutorial] ES6, installation, and button closing tag",
+  "user": {
+    "login": "brigand",
+    "id": 936069,
+    "node_id": "MDQ6VXNlcjkzNjA2OQ==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/936069?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/brigand",
+    "html_url": "https://github.com/brigand",
+    "followers_url": "https://api.github.com/users/brigand/followers",
+    "following_url": "https://api.github.com/users/brigand/following{/other_user}",
+    "gists_url": "https://api.github.com/users/brigand/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/brigand/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/brigand/subscriptions",
+    "organizations_url": "https://api.github.com/users/brigand/orgs",
+    "repos_url": "https://api.github.com/users/brigand/repos",
+    "events_url": "https://api.github.com/users/brigand/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/brigand/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-04-16T01:49:27Z",
+  "updated_at": "2017-04-18T17:31:48Z",
+  "closed_at": "2017-04-18T16:34:43Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9441",
+    "html_url": "https://github.com/facebook/react/pull/9441",
+    "diff_url": "https://github.com/facebook/react/pull/9441.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9441.patch"
+  },
+  "body": "Just some minor changes to the tutorial.\r\n\r\nRefs: https://github.com/facebook/react/issues/9440 https://github.com/facebook/react/issues/9122 https://github.com/facebook/react/issues/9120\r\n\r\nI'll see if I can come up with solutions to the remaining issues, but the changes will likely be controversial, so I'll send them as separate PRs. @lacker feel free to work on them, because I don't know when I'll get to it. At worst, we get more ideas to pick from 😄 \r\n\r\nBtw, getting [these files as dirty in git](https://gist.github.com/brigand/d53540f8277e893be33e81fe2cb0d784), which I didn't commit.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

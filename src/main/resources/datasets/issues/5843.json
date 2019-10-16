@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5843",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5843/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5843/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5843/events",
+  "html_url": "https://github.com/facebook/react/pull/5843",
+  "id": 126369486,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTU4NjgyODA=",
+  "number": 5843,
+  "title": "[docs] Thinking in React: move the paragraph of React ignores the input to Step 4",
+  "user": {
+    "login": "mkaschenko",
+    "id": 130269,
+    "node_id": "MDQ6VXNlcjEzMDI2OQ==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/130269?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mkaschenko",
+    "html_url": "https://github.com/mkaschenko",
+    "followers_url": "https://api.github.com/users/mkaschenko/followers",
+    "following_url": "https://api.github.com/users/mkaschenko/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mkaschenko/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mkaschenko/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mkaschenko/subscriptions",
+    "organizations_url": "https://api.github.com/users/mkaschenko/orgs",
+    "repos_url": "https://api.github.com/users/mkaschenko/repos",
+    "events_url": "https://api.github.com/users/mkaschenko/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mkaschenko/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-01-13T08:44:09Z",
+  "updated_at": "2016-01-13T13:46:43Z",
+  "closed_at": "2016-01-13T13:46:43Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5843",
+    "html_url": "https://github.com/facebook/react/pull/5843",
+    "diff_url": "https://github.com/facebook/react/pull/5843.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5843.patch"
+  },
+  "body": "http://facebook.github.io/react/docs/thinking-in-react.html\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

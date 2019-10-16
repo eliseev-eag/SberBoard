@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14980",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14980/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14980/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14980/events",
+  "html_url": "https://github.com/facebook/react/issues/14980",
+  "id": 415741541,
+  "node_id": "MDU6SXNzdWU0MTU3NDE1NDE=",
+  "number": 14980,
+  "title": "Misleading error description when using wrong useRef",
+  "user": {
+    "login": "madroneropaulo",
+    "id": 4364107,
+    "node_id": "MDQ6VXNlcjQzNjQxMDc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/4364107?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/madroneropaulo",
+    "html_url": "https://github.com/madroneropaulo",
+    "followers_url": "https://api.github.com/users/madroneropaulo/followers",
+    "following_url": "https://api.github.com/users/madroneropaulo/following{/other_user}",
+    "gists_url": "https://api.github.com/users/madroneropaulo/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/madroneropaulo/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/madroneropaulo/subscriptions",
+    "organizations_url": "https://api.github.com/users/madroneropaulo/orgs",
+    "repos_url": "https://api.github.com/users/madroneropaulo/repos",
+    "events_url": "https://api.github.com/users/madroneropaulo/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/madroneropaulo/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    },
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2019-02-28T17:35:45Z",
+  "updated_at": "2019-09-04T10:00:47Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "There's a misleading error when using wrong the `useRef` hook.\r\n\r\n```\r\nfunction MyComponent() {\r\n    let nameRef = useRef();\r\n\r\n   return (\r\n      <div>\r\n        <input ref=\"nameRef\" type=\"text\" />       \r\n    </div>\r\n  );\r\n}\r\n```\r\n\r\nSee the example here https://codesandbox.io/s/yvl21qm62j\r\n\r\nThe code above leads to this error `Function components cannot have refs. Did you mean to use React.forwardRef()?`. I'm moving some class components to Hooks, and stumbled upon this, and it took me a while due to the wrong error message.",
+  "closed_by": null
+}

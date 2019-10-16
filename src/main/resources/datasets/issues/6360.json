@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6360",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6360/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6360/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6360/events",
+  "html_url": "https://github.com/facebook/react/pull/6360",
+  "id": 144055671,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjQzNjA1MTM=",
+  "number": 6360,
+  "title": "SyntheticKeyboardEvent unit tests",
+  "user": {
+    "login": "cbrwizard",
+    "id": 1615659,
+    "node_id": "MDQ6VXNlcjE2MTU2NTk=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1615659?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/cbrwizard",
+    "html_url": "https://github.com/cbrwizard",
+    "followers_url": "https://api.github.com/users/cbrwizard/followers",
+    "following_url": "https://api.github.com/users/cbrwizard/following{/other_user}",
+    "gists_url": "https://api.github.com/users/cbrwizard/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/cbrwizard/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/cbrwizard/subscriptions",
+    "organizations_url": "https://api.github.com/users/cbrwizard/orgs",
+    "repos_url": "https://api.github.com/users/cbrwizard/repos",
+    "events_url": "https://api.github.com/users/cbrwizard/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/cbrwizard/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2016-03-28T19:10:09Z",
+  "updated_at": "2016-03-29T19:35:08Z",
+  "closed_at": "2016-03-29T19:35:06Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6360",
+    "html_url": "https://github.com/facebook/react/pull/6360",
+    "diff_url": "https://github.com/facebook/react/pull/6360.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6360.patch"
+  },
+  "body": "Adds unit tests for SyntheticKeyboardEvent.\n## Before\n\n<img width=\"736\" alt=\"2016-03-28 22 04 10\" src=\"https://cloud.githubusercontent.com/assets/1615659/14087094/0a375e3e-f531-11e5-877f-47083f7b4cdc.png\">\n<img width=\"741\" alt=\"2016-03-28 22 03 55\" src=\"https://cloud.githubusercontent.com/assets/1615659/14087093/0a36ae62-f531-11e5-8c51-68ab7da5b9ab.png\">\n## After\n\n<img width=\"736\" alt=\"2016-03-28 22 02 37\" src=\"https://cloud.githubusercontent.com/assets/1615659/14087067/e93bb5cc-f530-11e5-826c-dd417dd55b9d.png\">\n<img width=\"742\" alt=\"2016-03-28 22 02 24\" src=\"https://cloud.githubusercontent.com/assets/1615659/14087066/e93b9650-f530-11e5-96a7-add0fa99453f.png\">\n\nP.S. Does anybody know how to properly mock `getEventCharCode` function for `SyntheticKeyboardEvent`? I wish I could write specs like \n\n``` js\n  describe('KeyboardEvent interface', function() {\n    describe('charCode', function() {\n      describe('when event is `keypress`', function() {\n        it('returns whatever `getEventCharCode` returns', function() {\n          allow(getEventCharCode).to.accept(50).andReturn(150)\n          var keyboardEvent = createEvent({type: 'keypress', charCode: 50});\n\n          expect(keyboardEvent.charCode).toBe(150);\n          expect(getEventCharCode).toHaveBeenCalled.with(50)\n        });\n      });\n    });\n  });\n```\n\nso that this would be a more isolated unit test. I see one option: to move `getEventCharCode` inside `SyntheticKeyboardEvent` so it's mockable, but it will pollute it's api and I'm not sure if it's worth it.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

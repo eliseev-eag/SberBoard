@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10181",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10181/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10181/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10181/events",
+  "html_url": "https://github.com/facebook/react/issues/10181",
+  "id": 242858802,
+  "node_id": "MDU6SXNzdWUyNDI4NTg4MDI=",
+  "number": 10181,
+  "title": "Firefox error: Permission denied to access property \"target\"",
+  "user": {
+    "login": "vineetgopal",
+    "id": 4407810,
+    "node_id": "MDQ6VXNlcjQ0MDc4MTA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/4407810?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/vineetgopal",
+    "html_url": "https://github.com/vineetgopal",
+    "followers_url": "https://api.github.com/users/vineetgopal/followers",
+    "following_url": "https://api.github.com/users/vineetgopal/following{/other_user}",
+    "gists_url": "https://api.github.com/users/vineetgopal/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/vineetgopal/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/vineetgopal/subscriptions",
+    "organizations_url": "https://api.github.com/users/vineetgopal/orgs",
+    "repos_url": "https://api.github.com/users/vineetgopal/repos",
+    "events_url": "https://api.github.com/users/vineetgopal/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/vineetgopal/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 620368407,
+      "node_id": "MDU6TGFiZWw2MjAzNjg0MDc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Needs%20More%20Information",
+      "name": "Resolution: Needs More Information",
+      "color": "fffde7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2017-07-13T23:32:48Z",
+  "updated_at": "2019-02-06T06:50:00Z",
+  "closed_at": "2018-01-02T15:49:19Z",
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nBug.\r\n\r\n**What is the current behavior?**\r\nCertain events in Firefox 54.0 trigger the following error:\r\n\r\n```\r\nError: Permission denied to access property \"target\"\r\n  at target(~/react/lib/getEventTarget.js:23:0)\r\n  at getEventTarget(~/react/lib/ReactEventListener.js:58:0)\r\n  at method(~/react/lib/Transaction.js:138:0)\r\n  at transaction(~/react/lib/ReactDefaultBatchingStrategy.js:63:0)\r\n  at batchingStrategy(~/react/lib/ReactUpdates.js:98:0)\r\n  at ReactUpdates(~/react/lib/ReactEventListener.js:150:0)\r\n  at func(~/raven-js/src/raven.js:265:0)\r\n```\r\n\r\nNote that raven is just wrapping the call, and I don't think that should be relevant.\r\n\r\nThe specific line of code this happens on is:\r\n```\r\nfunction getEventTarget(nativeEvent) {\r\n  var target = nativeEvent.target || nativeEvent.srcElement || window;\r\n```\r\n\r\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Property_access_denied suggests it could be due to an iframe and cross-origin issues. We do have some iframes embedded, although I haven't been able to reproduce the error.\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem via https://jsfiddle.net or similar (template: https://jsfiddle.net/84v837e9/).**\r\nI was unfortunately not able to reproduce this, though it has happened for ~200 separate users since the Firefox 54.0 upgrade on June 13, 2017. If it helps, we reported a similar error a while ago to raven.js (https://github.com/getsentry/raven-js/issues/768) which was fixed using a try/catch.\r\n\r\n**What is the expected behavior?**\r\nNo errors :)\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nReact 15.3.2\r\nFirefox 54.0, Windows and OSX\r\n\r\nI think this is only an issue with the new Firefox, and not new behavior in React.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13673",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13673/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13673/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13673/events",
+  "html_url": "https://github.com/facebook/react/issues/13673",
+  "id": 360969358,
+  "node_id": "MDU6SXNzdWUzNjA5NjkzNTg=",
+  "number": 13673,
+  "title": "Is it possible to use Profiler server side?",
+  "user": {
+    "login": "lazopm",
+    "id": 5622067,
+    "node_id": "MDQ6VXNlcjU2MjIwNjc=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/5622067?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lazopm",
+    "html_url": "https://github.com/lazopm",
+    "followers_url": "https://api.github.com/users/lazopm/followers",
+    "following_url": "https://api.github.com/users/lazopm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lazopm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lazopm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lazopm/subscriptions",
+    "organizations_url": "https://api.github.com/users/lazopm/orgs",
+    "repos_url": "https://api.github.com/users/lazopm/repos",
+    "events_url": "https://api.github.com/users/lazopm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lazopm/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710332294,
+      "node_id": "MDU6TGFiZWw3MTAzMzIyOTQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Server%20Rendering",
+      "name": "Component: Server Rendering",
+      "color": "d4c5f9",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2018-09-17T17:32:15Z",
+  "updated_at": "2018-11-13T12:54:18Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "I'm trying to use the Profiler server side rendering with `renderToString` but the onRender callbacks are not getting called.\r\n\r\nIs there a way to do it?\r\nI'm using 16.5.1, NODE_ENV === \"development\".\r\n\r\nMy code looks like this, works fine client side:\r\n```javascript\r\nimport React, { unstable_Profiler } from 'react';\r\n\r\nconst profilerCallback = (id, phase, actualTime, baseTime, startTime, commitTime) => {\r\n        console.log(`${id}'s ${phase} phase:`);\r\n        console.log(`Actual time: ${actualTime}`);\r\n        console.log(`Base time: ${baseTime}`);\r\n        console.log(`Start time: ${startTime}`);\r\n        console.log(`Commit time: ${commitTime}`);\r\n};\r\n\r\nconst MyComponent = () => (\r\n    <Profiler id=\"card\" onRender={profilerCallback}>\r\n        ...\r\n    </Profiler>\r\n)\r\n```",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15466",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15466/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15466/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15466/events",
+  "html_url": "https://github.com/facebook/react/pull/15466",
+  "id": 435485416,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjcyMjAwMjM2",
+  "number": 15466,
+  "title": "Add function to find all host instances for fiber, not just the first",
+  "user": {
+    "login": "sompylasar",
+    "id": 498274,
+    "node_id": "MDQ6VXNlcjQ5ODI3NA==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/498274?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sompylasar",
+    "html_url": "https://github.com/sompylasar",
+    "followers_url": "https://api.github.com/users/sompylasar/followers",
+    "following_url": "https://api.github.com/users/sompylasar/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sompylasar/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sompylasar/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sompylasar/subscriptions",
+    "organizations_url": "https://api.github.com/users/sompylasar/orgs",
+    "repos_url": "https://api.github.com/users/sompylasar/repos",
+    "events_url": "https://api.github.com/users/sompylasar/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sompylasar/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2019-04-21T07:52:29Z",
+  "updated_at": "2019-04-25T09:55:07Z",
+  "closed_at": "2019-04-24T03:12:47Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15466",
+    "html_url": "https://github.com/facebook/react/pull/15466",
+    "diff_url": "https://github.com/facebook/react/pull/15466.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15466.patch"
+  },
+  "body": "Modified package: `react-reconciler`\r\n- `ReactFiberReconciler`'s `injectIntoDevTools` now injects one more function: `findHostInstancesByFiber`\r\n- `ReactFiberTreeReflection` now exports one more function `findAllCurrentHostFibers`\r\n\r\nThis is required to support highlighting all corresponding DOM elements of Fragments in `react-devtools-experimental`:\r\nhttps://github.com/bvaughn/react-devtools-experimental/issues/131\r\n\r\nCC @bvaughn @sophiebits ",
+  "closed_by": {
+    "login": "sompylasar",
+    "id": 498274,
+    "node_id": "MDQ6VXNlcjQ5ODI3NA==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/498274?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sompylasar",
+    "html_url": "https://github.com/sompylasar",
+    "followers_url": "https://api.github.com/users/sompylasar/followers",
+    "following_url": "https://api.github.com/users/sompylasar/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sompylasar/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sompylasar/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sompylasar/subscriptions",
+    "organizations_url": "https://api.github.com/users/sompylasar/orgs",
+    "repos_url": "https://api.github.com/users/sompylasar/repos",
+    "events_url": "https://api.github.com/users/sompylasar/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sompylasar/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

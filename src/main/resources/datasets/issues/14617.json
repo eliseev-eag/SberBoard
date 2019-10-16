@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14617",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14617/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14617/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14617/events",
+  "html_url": "https://github.com/facebook/react/pull/14617",
+  "id": 400488246,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjQ1NjY1MTcy",
+  "number": 14617,
+  "title": "Prune NPM metadata fields from packages before re-publishing",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-01-17T22:20:51Z",
+  "updated_at": "2019-01-17T22:34:45Z",
+  "closed_at": "2019-01-17T22:34:35Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14617",
+    "html_url": "https://github.com/facebook/react/pull/14617",
+    "diff_url": "https://github.com/facebook/react/pull/14617.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14617.patch"
+  },
+  "body": "The latest React release [has some weird fields in the package JSON](https://unpkg.com/react@16.7.0/package.json) that [weren't there in the canary](https://unpkg.com/react@canary/package.json). These fields (all beginning with \"_\") contain package registry meta data.\r\n\r\nIt's not ideal that we publish package with these fields still around. Technically, they aren't even valid since [NPM rules](https://docs.npmjs.com/files/package.json) and the [packages JSON spec](http://wiki.commonjs.org/wiki/Packages/1.1) say that field names beginning with underscores are reserved.\r\n\r\nSo this PR adds a step that prunes these fields as part of preparing a stable release.\r\n\r\n### JSON diff before\r\n```diff\r\n1a2,25\r\n>   \"_from\": \"react@0.0.0-3e15b1c69\",\r\n>   \"_id\": \"react@0.0.0-3e15b1c69\",\r\n>   \"_inBundle\": false,\r\n>   \"_integrity\": \"sha512-jGp8MiBrV1FuT0kLcUlb7zjZiaWAcaQ001qCbUen7SHHtnE3Apdl7d7fHshrEOytgoPWSm2pc7vdz1nICqmIDw==\",\r\n>   \"_location\": \"/react\",\r\n>   \"_phantomChildren\": {},\r\n>   \"_requested\": {\r\n>     \"type\": \"version\",\r\n>     \"registry\": true,\r\n>     \"raw\": \"react@0.0.0-3e15b1c69\",\r\n>     \"name\": \"react\",\r\n>     \"escapedName\": \"react\",\r\n>     \"rawSpec\": \"0.0.0-3e15b1c69\",\r\n>     \"saveSpec\": null,\r\n>     \"fetchSpec\": \"0.0.0-3e15b1c69\"\r\n>   },\r\n>   \"_requiredBy\": [\r\n>     \"#USER\",\r\n>     \"/\"\r\n>   ],\r\n>   \"_resolved\": \"https://registry.npmjs.org/react/-/react-0.0.0-3e15b1c69.tgz\",\r\n>   \"_shasum\": \"a10d5c3fd611046fd5ab65503e6df0b37db99fc0\",\r\n>   \"_spec\": \"react@0.0.0-3e15b1c69\",\r\n>   \"_where\": \"/Users/bvaughn/Documents/git/react/build/node_modules\",\r\n7c31,34\r\n<   \"bugs\": \"https://github.com/facebook/react/issues\",\r\n---\r\n>   \"bugs\": {\r\n>     \"url\": \"https://github.com/facebook/react/issues\"\r\n>   },\r\n>   \"bundleDependencies\": false,\r\n12,13c39,42\r\n<     \"scheduler\": \"0.0.0-3e15b1c69\"\r\n<   },  \"description\": \"React is a JavaScript library for building user interfaces.\",\r\n---\r\n>     \"scheduler\": \"^0.13.0\"\r\n>   },\r\n>   \"deprecated\": false,\r\n>   \"description\": \"React is a JavaScript library for building user interfaces.\",\r\n32,34c61,66\r\n<   \"repository\": \"facebook/react\",\r\n<   \"version\": \"0.0.0-3e15b1c69\"\r\n< }\r\n\\ No newline at end of file\r\n---\r\n>   \"repository\": {\r\n>     \"type\": \"git\",\r\n>     \"url\": \"git+https://github.com/facebook/react.git\"\r\n>   },\r\n>   \"version\": \"16.8.0\"\r\n> }\r\n```\r\n### JSON diff after\r\n```diff\r\n7c7,10\r\n<   \"bugs\": \"https://github.com/facebook/react/issues\",\r\n---\r\n>   \"bugs\": {\r\n>     \"url\": \"https://github.com/facebook/react/issues\"\r\n>   },\r\n>   \"bundleDependencies\": false,\r\n12,13c15,18\r\n<     \"scheduler\": \"0.0.0-3e15b1c69\"\r\n<   },  \"description\": \"React is a JavaScript library for building user interfaces.\",\r\n---\r\n>     \"scheduler\": \"^0.13.0\"\r\n>   },\r\n>   \"deprecated\": false,\r\n>   \"description\": \"React is a JavaScript library for building user interfaces.\",\r\n32,34c37,42\r\n<   \"repository\": \"facebook/react\",\r\n<   \"version\": \"0.0.0-3e15b1c69\"\r\n< }\r\n\\ No newline at end of file\r\n---\r\n>   \"repository\": {\r\n>     \"type\": \"git\",\r\n>     \"url\": \"git+https://github.com/facebook/react.git\"\r\n>   },\r\n>   \"version\": \"16.8.0\"\r\n> }\r\n```",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

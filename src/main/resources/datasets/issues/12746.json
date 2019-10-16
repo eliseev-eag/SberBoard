@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12746",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12746/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12746/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12746/events",
+  "html_url": "https://github.com/facebook/react/pull/12746",
+  "id": 320455486,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTg2MTIzMDY5",
+  "number": 12746,
+  "title": "[schedule] Support multiple callbacks in scheduler",
+  "user": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-05-04T23:13:30Z",
+  "updated_at": "2018-05-21T17:03:24Z",
+  "closed_at": "2018-05-09T22:28:14Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12746",
+    "html_url": "https://github.com/facebook/react/pull/12746",
+    "diff_url": "https://github.com/facebook/react/pull/12746.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12746.patch"
+  },
+  "body": "NOTE: We still need a way to test the timing out of callbacks, probably with some type of injection we we could create a 'noopSchedule' similar to 'noopRenderer'.\r\n\r\nI'm going to go back and implement that as a 2/n PR, but wanted review of this because it's the direction I would ideally take after that.\r\n\r\nThis PR would be followed by a PR to add error handling.\r\n\r\n---\r\n\r\n    Support multiple callbacks in `ReactScheduler`\r\n    \r\n    **what is the change?:**\r\n    We keep a queue of callbacks instead of just one at a time, and call\r\n    them in order first by their timeoutTime and then by the order which\r\n    they were scheduled in.\r\n    \r\n    **why make this change?:**\r\n    We plan on using this module to coordinate JS outside of React, so we\r\n    will need to schedule more than one callback at a time.\r\n    \r\n    **test plan:**\r\n    Added a boatload of shiny new tests. :)\r\n    \r\n    Plus ran all the old ones.",
+  "closed_by": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

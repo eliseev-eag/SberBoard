@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16030",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16030/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16030/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16030/events",
+  "html_url": "https://github.com/facebook/react/pull/16030",
+  "id": 463039709,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjkzNTk4MDY1",
+  "number": 16030,
+  "title": "Update Suspense Priority Warning to Include Component that Triggered Update",
+  "user": {
+    "login": "lunaruan",
+    "id": 2735514,
+    "node_id": "MDQ6VXNlcjI3MzU1MTQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2735514?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lunaruan",
+    "html_url": "https://github.com/lunaruan",
+    "followers_url": "https://api.github.com/users/lunaruan/followers",
+    "following_url": "https://api.github.com/users/lunaruan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lunaruan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lunaruan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lunaruan/subscriptions",
+    "organizations_url": "https://api.github.com/users/lunaruan/orgs",
+    "repos_url": "https://api.github.com/users/lunaruan/repos",
+    "events_url": "https://api.github.com/users/lunaruan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lunaruan/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-07-02T06:13:55Z",
+  "updated_at": "2019-07-22T21:17:44Z",
+  "closed_at": "2019-07-22T21:17:44Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16030",
+    "html_url": "https://github.com/facebook/react/pull/16030",
+    "diff_url": "https://github.com/facebook/react/pull/16030.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16030.patch"
+  },
+  "body": "Improved warning whenever lower priority events (ex. data fetching, page load) happen during a high priority update (ex. hover/click events) to include:\r\n1.) Name of component that triggered the high priority update or\r\n2.) Information that the update was triggered on the root",
+  "closed_by": {
+    "login": "lunaruan",
+    "id": 2735514,
+    "node_id": "MDQ6VXNlcjI3MzU1MTQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2735514?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lunaruan",
+    "html_url": "https://github.com/lunaruan",
+    "followers_url": "https://api.github.com/users/lunaruan/followers",
+    "following_url": "https://api.github.com/users/lunaruan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lunaruan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lunaruan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lunaruan/subscriptions",
+    "organizations_url": "https://api.github.com/users/lunaruan/orgs",
+    "repos_url": "https://api.github.com/users/lunaruan/repos",
+    "events_url": "https://api.github.com/users/lunaruan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lunaruan/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

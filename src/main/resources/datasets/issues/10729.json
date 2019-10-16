@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10729",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10729/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10729/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10729/events",
+  "html_url": "https://github.com/facebook/react/issues/10729",
+  "id": 258361171,
+  "node_id": "MDU6SXNzdWUyNTgzNjExNzE=",
+  "number": 10729,
+  "title": "`unstable_deferredUpdates` can trigger duplicate `setState` calls and miss out others",
+  "user": {
+    "login": "ryanwilliams",
+    "id": 1215,
+    "node_id": "MDQ6VXNlcjEyMTU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1215?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ryanwilliams",
+    "html_url": "https://github.com/ryanwilliams",
+    "followers_url": "https://api.github.com/users/ryanwilliams/followers",
+    "following_url": "https://api.github.com/users/ryanwilliams/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ryanwilliams/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ryanwilliams/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ryanwilliams/subscriptions",
+    "organizations_url": "https://api.github.com/users/ryanwilliams/orgs",
+    "repos_url": "https://api.github.com/users/ryanwilliams/repos",
+    "events_url": "https://api.github.com/users/ryanwilliams/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ryanwilliams/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 739761016,
+      "node_id": "MDU6TGFiZWw3Mzk3NjEwMTY=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Reconciler",
+      "name": "Component: Reconciler",
+      "color": "f9a798",
+      "default": false
+    },
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2017-09-18T03:13:17Z",
+  "updated_at": "2018-08-15T19:47:44Z",
+  "closed_at": "2018-08-15T19:41:34Z",
+  "author_association": "NONE",
+  "body": "Bug\r\n\r\nI know deferredUpdates are unstable, so maybe this is a known problem.\r\n\r\nThis one is tricky to trigger, but when spamming `setState(function(){})` inside `unstable_deferredUpdates` a LOT you can end up with the same update happening multiple times while other calls are skipped entirely. \r\n\r\nExample code: https://gist.github.com/ryanwilliams/9cfa1bbaa43d8eae6792520a166ae1df\r\nResult: https://i.imgur.com/AOyCNFe.png\r\n\r\nIf you mouse wheel up and down real fast in the red area you see that console output. I would expect the `bar` number that's output in the console to be unique and in sequence as it's incremented every time before the closure captures it inside the new `setState()`.\r\n\r\nVersion: react-16-rc3\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

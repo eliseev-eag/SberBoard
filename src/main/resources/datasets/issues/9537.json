@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9537",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9537/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9537/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9537/events",
+  "html_url": "https://github.com/facebook/react/pull/9537",
+  "id": 224653206,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTE3ODQ4NTIw",
+  "number": 9537,
+  "title": "Update Changelog for v15.5.1-15.5.4",
+  "user": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-04-27T02:43:33Z",
+  "updated_at": "2018-05-25T17:52:35Z",
+  "closed_at": "2017-05-01T15:59:42Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9537",
+    "html_url": "https://github.com/facebook/react/pull/9537",
+    "diff_url": "https://github.com/facebook/react/pull/9537.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9537.patch"
+  },
+  "body": "This could really use extra code review attention since the history of\r\nthese changes was a bit convoluted to follow.\r\n\r\nAfter talking to @bvaughn and @acdlite, we thought it might make sense\r\nto put the 'add-ons' changes in a separate change log. The other option,\r\nof including them in the main React change log, seemed the more\r\nconfusing of the two.\r\n\r\nAlso this commit is related to and somewhat blocked by\r\nhttps://github.com/reactjs/prop-types/pull/40\r\n\r\nAlso - I will update the release tags after we land some version of a changelog.\r\n\r\n**what is the change?:**\r\nAdding the change log for recent patch versions of React.\r\n\r\n**why make this change?:**\r\nWe missed this step in the flurry of releasing patches, and it's useful\r\nfor folks who want info about what version to use.\r\n\r\n**test plan:**\r\nVisual inspection of the change log.\r\n\r\n**issue:**\r\nhttps://github.com/facebook/react/issues/9443",
+  "closed_by": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

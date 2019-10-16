@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7737",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7737/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7737/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7737/events",
+  "html_url": "https://github.com/facebook/react/pull/7737",
+  "id": 177052627,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODUzMjU3MzM=",
+  "number": 7737,
+  "title": "React.createElement can also take a function",
+  "user": {
+    "login": "strangemonad",
+    "id": 133905,
+    "node_id": "MDQ6VXNlcjEzMzkwNQ==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/133905?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/strangemonad",
+    "html_url": "https://github.com/strangemonad",
+    "followers_url": "https://api.github.com/users/strangemonad/followers",
+    "following_url": "https://api.github.com/users/strangemonad/following{/other_user}",
+    "gists_url": "https://api.github.com/users/strangemonad/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/strangemonad/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/strangemonad/subscriptions",
+    "organizations_url": "https://api.github.com/users/strangemonad/orgs",
+    "repos_url": "https://api.github.com/users/strangemonad/repos",
+    "events_url": "https://api.github.com/users/strangemonad/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/strangemonad/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2016-09-14T23:52:14Z",
+  "updated_at": "2016-10-23T14:49:26Z",
+  "closed_at": "2016-10-23T14:49:26Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7737",
+    "html_url": "https://github.com/facebook/react/pull/7737",
+    "diff_url": "https://github.com/facebook/react/pull/7737.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7737.patch"
+  },
+  "body": "or at least that's how I understand it to work.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

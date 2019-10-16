@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9464",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9464/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9464/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9464/events",
+  "html_url": "https://github.com/facebook/react/pull/9464",
+  "id": 223025262,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTE2NzQyMTY5",
+  "number": 9464,
+  "title": "Improve component type check in getComponentKey.",
+  "user": {
+    "login": "bmeurer",
+    "id": 815988,
+    "node_id": "MDQ6VXNlcjgxNTk4OA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/815988?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bmeurer",
+    "html_url": "https://github.com/bmeurer",
+    "followers_url": "https://api.github.com/users/bmeurer/followers",
+    "following_url": "https://api.github.com/users/bmeurer/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bmeurer/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bmeurer/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bmeurer/subscriptions",
+    "organizations_url": "https://api.github.com/users/bmeurer/orgs",
+    "repos_url": "https://api.github.com/users/bmeurer/repos",
+    "events_url": "https://api.github.com/users/bmeurer/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bmeurer/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2017-04-20T10:46:06Z",
+  "updated_at": "2017-04-25T17:21:44Z",
+  "closed_at": "2017-04-25T16:39:30Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9464",
+    "html_url": "https://github.com/facebook/react/pull/9464",
+    "diff_url": "https://github.com/facebook/react/pull/9464.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9464.patch"
+  },
+  "body": "The sequence\r\n```\r\ncomponent && typeof component === 'object'\r\n```\r\nchecks whether component is any JavaScript object except document.all.\r\nSince document.all cannot occur here, this can be replaced with the\r\nusual\r\n```\r\ntypeof component === 'object' && component !== null\r\n```\r\nsequence, which yields true for all JavaScript objects and is well\r\noptimized by all JavaScript engines.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

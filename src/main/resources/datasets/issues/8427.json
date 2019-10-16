@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8427",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8427/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8427/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8427/events",
+  "html_url": "https://github.com/facebook/react/pull/8427",
+  "id": 191829492,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTUzODQ3NTM=",
+  "number": 8427,
+  "title": "adds open source components guide",
+  "user": {
+    "login": "brigand",
+    "id": 936069,
+    "node_id": "MDQ6VXNlcjkzNjA2OQ==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/936069?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/brigand",
+    "html_url": "https://github.com/brigand",
+    "followers_url": "https://api.github.com/users/brigand/followers",
+    "following_url": "https://api.github.com/users/brigand/following{/other_user}",
+    "gists_url": "https://api.github.com/users/brigand/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/brigand/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/brigand/subscriptions",
+    "organizations_url": "https://api.github.com/users/brigand/orgs",
+    "repos_url": "https://api.github.com/users/brigand/repos",
+    "events_url": "https://api.github.com/users/brigand/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/brigand/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2016-11-26T22:11:43Z",
+  "updated_at": "2016-11-27T22:25:26Z",
+  "closed_at": "2016-11-27T22:25:26Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8427",
+    "html_url": "https://github.com/facebook/react/pull/8427",
+    "diff_url": "https://github.com/facebook/react/pull/8427.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8427.patch"
+  },
+  "body": "I'm taking on \"Publishing a Component\" from https://github.com/facebook/react/issues/8060",
+  "closed_by": {
+    "login": "brigand",
+    "id": 936069,
+    "node_id": "MDQ6VXNlcjkzNjA2OQ==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/936069?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/brigand",
+    "html_url": "https://github.com/brigand",
+    "followers_url": "https://api.github.com/users/brigand/followers",
+    "following_url": "https://api.github.com/users/brigand/following{/other_user}",
+    "gists_url": "https://api.github.com/users/brigand/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/brigand/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/brigand/subscriptions",
+    "organizations_url": "https://api.github.com/users/brigand/orgs",
+    "repos_url": "https://api.github.com/users/brigand/repos",
+    "events_url": "https://api.github.com/users/brigand/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/brigand/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

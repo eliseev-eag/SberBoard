@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9973",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9973/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9973/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9973/events",
+  "html_url": "https://github.com/facebook/react/pull/9973",
+  "id": 236044505,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTI1NzE4OTE0",
+  "number": 9973,
+  "title": "Remove duplication in DOM Fiber Component per TODO",
+  "user": {
+    "login": "jfo84",
+    "id": 11723485,
+    "node_id": "MDQ6VXNlcjExNzIzNDg1",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/11723485?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jfo84",
+    "html_url": "https://github.com/jfo84",
+    "followers_url": "https://api.github.com/users/jfo84/followers",
+    "following_url": "https://api.github.com/users/jfo84/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jfo84/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jfo84/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jfo84/subscriptions",
+    "organizations_url": "https://api.github.com/users/jfo84/orgs",
+    "repos_url": "https://api.github.com/users/jfo84/repos",
+    "events_url": "https://api.github.com/users/jfo84/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jfo84/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-06-15T00:18:37Z",
+  "updated_at": "2017-07-22T21:00:26Z",
+  "closed_at": "2017-07-22T21:00:26Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9973",
+    "html_url": "https://github.com/facebook/react/pull/9973",
+    "diff_url": "https://github.com/facebook/react/pull/9973.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9973.patch"
+  },
+  "body": "This is likely a better approach to the issue I was trying to help with in #9924\r\n\r\nThis PR removes the duplicated calls to `trapBubbledEventsLocal` across a tag case statement\r\n",
+  "closed_by": {
+    "login": "jfo84",
+    "id": 11723485,
+    "node_id": "MDQ6VXNlcjExNzIzNDg1",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/11723485?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jfo84",
+    "html_url": "https://github.com/jfo84",
+    "followers_url": "https://api.github.com/users/jfo84/followers",
+    "following_url": "https://api.github.com/users/jfo84/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jfo84/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jfo84/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jfo84/subscriptions",
+    "organizations_url": "https://api.github.com/users/jfo84/orgs",
+    "repos_url": "https://api.github.com/users/jfo84/repos",
+    "events_url": "https://api.github.com/users/jfo84/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jfo84/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

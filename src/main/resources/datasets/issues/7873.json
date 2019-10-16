@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7873",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7873/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7873/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7873/events",
+  "html_url": "https://github.com/facebook/react/pull/7873",
+  "id": 181012169,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODc5Nzk3MTI=",
+  "number": 7873,
+  "title": "Update comment to refer to correct method name",
+  "user": {
+    "login": "mcobrien",
+    "id": 128154,
+    "node_id": "MDQ6VXNlcjEyODE1NA==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/128154?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mcobrien",
+    "html_url": "https://github.com/mcobrien",
+    "followers_url": "https://api.github.com/users/mcobrien/followers",
+    "following_url": "https://api.github.com/users/mcobrien/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mcobrien/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mcobrien/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mcobrien/subscriptions",
+    "organizations_url": "https://api.github.com/users/mcobrien/orgs",
+    "repos_url": "https://api.github.com/users/mcobrien/repos",
+    "events_url": "https://api.github.com/users/mcobrien/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mcobrien/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2016-10-04T21:40:31Z",
+  "updated_at": "2016-10-04T21:54:01Z",
+  "closed_at": "2016-10-04T21:53:26Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7873",
+    "html_url": "https://github.com/facebook/react/pull/7873",
+    "diff_url": "https://github.com/facebook/react/pull/7873.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7873.patch"
+  },
+  "body": "Fixes a small typo / copy-paste error in Reusable Components docs.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

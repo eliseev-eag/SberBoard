@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15301",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15301/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15301/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15301/events",
+  "html_url": "https://github.com/facebook/react/issues/15301",
+  "id": 428538057,
+  "node_id": "MDU6SXNzdWU0Mjg1MzgwNTc=",
+  "number": 15301,
+  "title": "renderWithHooks may initialize workInProgressHook at the beginning",
+  "user": {
+    "login": "Jokcy",
+    "id": 2088642,
+    "node_id": "MDQ6VXNlcjIwODg2NDI=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/2088642?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Jokcy",
+    "html_url": "https://github.com/Jokcy",
+    "followers_url": "https://api.github.com/users/Jokcy/followers",
+    "following_url": "https://api.github.com/users/Jokcy/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Jokcy/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Jokcy/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Jokcy/subscriptions",
+    "organizations_url": "https://api.github.com/users/Jokcy/orgs",
+    "repos_url": "https://api.github.com/users/Jokcy/repos",
+    "events_url": "https://api.github.com/users/Jokcy/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Jokcy/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 1109410193,
+      "node_id": "MDU6TGFiZWwxMTA5NDEwMTkz",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Hooks",
+      "name": "Component: Hooks",
+      "color": "c2f27b",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-04-03T02:47:52Z",
+  "updated_at": "2019-04-03T14:51:59Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nbug\r\n\r\n**What is the current behavior?**\r\nexample here https://codesandbox.io/s/34mvmoln65\r\nBased on issue #15219 I found the reason of this issue is that, when `ErrorThrower` throws `renderWithHooks` just break down and keep `workInProgressHook` stay `useMemo`. Because of the `componentDidCatch` in `ErrorHandler` we can go on the render phase. But when we reach the `StatefulComponent` we got `useMemo` as `workInProgressHook` and it make `StatefulComponent` with first hook `useMemo`.\r\n\r\nI guess we can fix this just set `workInProgressHook` to null at the beginning of `renderWithHooks`. I post this issue because I see this comment in `renderWithHooks`, based on this example, all this variables may also not be reset when start `renderWithHooks`, so maybe it's better to put them back?\r\n\r\n```js\r\n// The following should have already been reset\r\n  // currentHook = null;\r\n  // workInProgressHook = null;\r\n\r\n  // remainingExpirationTime = NoWork;\r\n  // componentUpdateQueue = null;\r\n\r\n  // didScheduleRenderPhaseUpdate = false;\r\n  // renderPhaseUpdates = null;\r\n  // numberOfReRenders = 0;\r\n  // sideEffectTag = 0;\r\n```\r\n\r\nIf no other concerns about this, I just want to put them back to fix this issue.\r\n",
+  "closed_by": null
+}

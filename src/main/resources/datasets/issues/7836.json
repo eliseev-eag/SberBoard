@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7836",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7836/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7836/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7836/events",
+  "html_url": "https://github.com/facebook/react/pull/7836",
+  "id": 180200256,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODc0MjEwOTU=",
+  "number": 7836,
+  "title": "Improve perf of getting capitalized event",
+  "user": {
+    "login": "olegafx",
+    "id": 867546,
+    "node_id": "MDQ6VXNlcjg2NzU0Ng==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/867546?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/olegafx",
+    "html_url": "https://github.com/olegafx",
+    "followers_url": "https://api.github.com/users/olegafx/followers",
+    "following_url": "https://api.github.com/users/olegafx/following{/other_user}",
+    "gists_url": "https://api.github.com/users/olegafx/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/olegafx/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/olegafx/subscriptions",
+    "organizations_url": "https://api.github.com/users/olegafx/orgs",
+    "repos_url": "https://api.github.com/users/olegafx/repos",
+    "events_url": "https://api.github.com/users/olegafx/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/olegafx/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-09-30T01:24:45Z",
+  "updated_at": "2016-09-30T13:17:26Z",
+  "closed_at": "2016-09-30T13:17:26Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7836",
+    "html_url": "https://github.com/facebook/react/pull/7836",
+    "diff_url": "https://github.com/facebook/react/pull/7836.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7836.patch"
+  },
+  "body": "`Bitwise operations` are faster than`toUpperCase`.\n\nI applied that to the `forEach` loop where we're getting event types.\nWe know every event name, so it's safe to use bitwise operations here.\n\nI know that we won't get a lot of perf from that little change, but some ms are good too.\n\n[Benchmark](https://jsbin.com/betoyi/edit?js,console) using benchmark.js\n\nResult on my MBP:\n\n1 item:\n\n| Technique | Ops/sec |\n| --- | --- |\n| toUpperCase | 19,145,910 |\n| **bitwise** | **83,779,805** |\n| bitwise array | 87,807,680 |\n| bitwise array cached | 87,726,636 |\n\n`forEach` on all items:\n\n| Technique | Ops/sec |\n| --- | --- |\n| toUpperCase | 60,439 |\n| **bitwise** | **73,086** |\n| bitwise array | 62,633 |\n| bitwise array cached | 68,193 |\n",
+  "closed_by": {
+    "login": "olegafx",
+    "id": 867546,
+    "node_id": "MDQ6VXNlcjg2NzU0Ng==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/867546?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/olegafx",
+    "html_url": "https://github.com/olegafx",
+    "followers_url": "https://api.github.com/users/olegafx/followers",
+    "following_url": "https://api.github.com/users/olegafx/following{/other_user}",
+    "gists_url": "https://api.github.com/users/olegafx/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/olegafx/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/olegafx/subscriptions",
+    "organizations_url": "https://api.github.com/users/olegafx/orgs",
+    "repos_url": "https://api.github.com/users/olegafx/repos",
+    "events_url": "https://api.github.com/users/olegafx/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/olegafx/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

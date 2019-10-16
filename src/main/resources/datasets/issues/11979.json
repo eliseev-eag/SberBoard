@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11979",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11979/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11979/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11979/events",
+  "html_url": "https://github.com/facebook/react/pull/11979",
+  "id": 286499493,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTYxNDg2OTUz",
+  "number": 11979,
+  "title": "Reconcile Call component children with `current`",
+  "user": {
+    "login": "rmhartog",
+    "id": 2480888,
+    "node_id": "MDQ6VXNlcjI0ODA4ODg=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/2480888?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rmhartog",
+    "html_url": "https://github.com/rmhartog",
+    "followers_url": "https://api.github.com/users/rmhartog/followers",
+    "following_url": "https://api.github.com/users/rmhartog/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rmhartog/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rmhartog/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rmhartog/subscriptions",
+    "organizations_url": "https://api.github.com/users/rmhartog/orgs",
+    "repos_url": "https://api.github.com/users/rmhartog/repos",
+    "events_url": "https://api.github.com/users/rmhartog/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rmhartog/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2018-01-06T16:56:43Z",
+  "updated_at": "2018-01-08T09:06:48Z",
+  "closed_at": "2018-01-07T20:15:06Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11979",
+    "html_url": "https://github.com/facebook/react/pull/11979",
+    "diff_url": "https://github.com/facebook/react/pull/11979.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11979.patch"
+  },
+  "body": "Solves the issue occurring in #11955. Because the `workInProgress.stateNode` was used instead of `current.stateNode`, some Fibers were being deleted twice, causing an invalid state.\r\n\r\nThe implementation of `updateCallComponent` is now also closer to `reconcileChildrenAtExpirationTime`.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

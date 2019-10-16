@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8044",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8044/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8044/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8044/events",
+  "html_url": "https://github.com/facebook/react/pull/8044",
+  "id": 184603682,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTA0Njc3Mzg=",
+  "number": 8044,
+  "title": "Fix typo",
+  "user": {
+    "login": "ssonal",
+    "id": 1973470,
+    "node_id": "MDQ6VXNlcjE5NzM0NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1973470?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ssonal",
+    "html_url": "https://github.com/ssonal",
+    "followers_url": "https://api.github.com/users/ssonal/followers",
+    "following_url": "https://api.github.com/users/ssonal/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ssonal/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ssonal/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ssonal/subscriptions",
+    "organizations_url": "https://api.github.com/users/ssonal/orgs",
+    "repos_url": "https://api.github.com/users/ssonal/repos",
+    "events_url": "https://api.github.com/users/ssonal/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ssonal/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-10-22T02:50:39Z",
+  "updated_at": "2016-10-22T20:45:56Z",
+  "closed_at": "2016-10-22T20:45:56Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8044",
+    "html_url": "https://github.com/facebook/react/pull/8044",
+    "diff_url": "https://github.com/facebook/react/pull/8044.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8044.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

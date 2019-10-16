@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16053",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16053/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16053/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16053/events",
+  "html_url": "https://github.com/facebook/react/issues/16053",
+  "id": 463992381,
+  "node_id": "MDU6SXNzdWU0NjM5OTIzODE=",
+  "number": 16053,
+  "title": "Can't get dynamic data to show up in react component using several hooks...",
+  "user": {
+    "login": "rchrdnsh",
+    "id": 7884263,
+    "node_id": "MDQ6VXNlcjc4ODQyNjM=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/7884263?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rchrdnsh",
+    "html_url": "https://github.com/rchrdnsh",
+    "followers_url": "https://api.github.com/users/rchrdnsh/followers",
+    "following_url": "https://api.github.com/users/rchrdnsh/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rchrdnsh/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rchrdnsh/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rchrdnsh/subscriptions",
+    "organizations_url": "https://api.github.com/users/rchrdnsh/orgs",
+    "repos_url": "https://api.github.com/users/rchrdnsh/repos",
+    "events_url": "https://api.github.com/users/rchrdnsh/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rchrdnsh/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2019-07-03T23:22:08Z",
+  "updated_at": "2019-07-05T06:54:28Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "I have a react component using several hooks in which I'm trying to output the data from `getBoundingCLientRect()` into a box on the site.\r\n\r\nThis is the code:\r\n\r\n\r\n```jsx\r\nconst ContentContainer = (props) => {\r\n\r\n  const elementRef = useRef()\r\n\r\n  function useScrollPosition() {\r\n  \r\n    function getScroll() {\r\n      const data = elementRef.current ? \r\n        elementRef.current.getBoundingCLientRect() : 0\r\n      const { bottom, top, left, right, x, y } = data\r\n      return { bottom, top, left, right, x, y }\r\n    }\r\n\r\n    const [scrollPosition, setScrollPosition] = useState(getScroll)\r\n  \r\n    useEffect(() => {\r\n      \r\n      function handleScroll() {\r\n        setScrollPosition(getScroll())\r\n      }\r\n  \r\n      window.addEventListener('scroll', handleScroll)\r\n      return () => window.removeEventListener('scroll', handleScroll)\r\n    }, []) // Empty array ensures that effect is only run on mount and unmount\r\n  \r\n    return scrollPosition\r\n  }\r\n\r\n  const scroll = useScrollPosition();\r\n\r\n  return (\r\n    <Main ref={elementRef}>\r\n      <ScrollInfo>\r\n        From Top: {scroll.top}px <br/>\r\n        From Bottom: {scroll.bottom}px <br/>\r\n        From Left: {scroll.left}px <br/>\r\n        From right: {scroll.right}px <br/>\r\n        Vertical Scroll: {scroll.y}px <br/>\r\n        Horizontal Scroll: {scroll.x}px <br/>\r\n      </ScrollInfo>\r\n      {props.children}\r\n    </Main>\r\n  )\r\n}\r\n\r\nexport default ContentContainer\r\n```\r\n\r\n...but no dynamic data shows up in the window where it's supposed to be displayed:\r\n\r\n<img width=\"177\" alt=\"Screenshot 2019-07-03 16 15 17\" src=\"https://user-images.githubusercontent.com/7884263/60630205-e9dd2c80-9dad-11e9-897c-bdccfa5fa042.png\">\r\n\r\nno errors show up in the terminal or the console, but it just does not work. Stumped at the current moment, and don't know what to fix to make it work.\r\n",
+  "closed_by": null
+}

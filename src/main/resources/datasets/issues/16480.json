@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16480",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16480/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16480/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16480/events",
+  "html_url": "https://github.com/facebook/react/issues/16480",
+  "id": 482550567,
+  "node_id": "MDU6SXNzdWU0ODI1NTA1Njc=",
+  "number": 16480,
+  "title": "DevTools: Fix disabled hooks lint rule",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-08-19T22:06:06Z",
+  "updated_at": "2019-08-19T22:06:37Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "Disabled via 00f6466\r\n\r\nMore context at https://github.com/bvaughn/react-devtools-experimental/pull/154#discussion_r275134664\r\n\r\n---\r\nOriginally reported via https://github.com/bvaughn/react-devtools-experimental/issues/156",
+  "closed_by": null
+}

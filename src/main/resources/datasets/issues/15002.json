@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15002",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15002/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15002/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15002/events",
+  "html_url": "https://github.com/facebook/react/pull/15002",
+  "id": 416530685,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjU3NzQ2MTY1",
+  "number": 15002,
+  "title": "WIP refactor(es6): eslint-plugin-react-hooks",
+  "user": {
+    "login": "gkal19",
+    "id": 11067705,
+    "node_id": "MDQ6VXNlcjExMDY3NzA1",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/11067705?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gkal19",
+    "html_url": "https://github.com/gkal19",
+    "followers_url": "https://api.github.com/users/gkal19/followers",
+    "following_url": "https://api.github.com/users/gkal19/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gkal19/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gkal19/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gkal19/subscriptions",
+    "organizations_url": "https://api.github.com/users/gkal19/orgs",
+    "repos_url": "https://api.github.com/users/gkal19/repos",
+    "events_url": "https://api.github.com/users/gkal19/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gkal19/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-03-03T15:54:03Z",
+  "updated_at": "2019-03-03T16:36:27Z",
+  "closed_at": "2019-03-03T16:36:23Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15002",
+    "html_url": "https://github.com/facebook/react/pull/15002",
+    "diff_url": "https://github.com/facebook/react/pull/15002.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15002.patch"
+  },
+  "body": "- Introduce `destructuring binding`\r\n- Introduce `includes` (readability)\r\n\r\nThis is my second Pull Request that I submit to this repository. I would like to do this with other files. Do you give me permission to do this?\r\n",
+  "closed_by": {
+    "login": "gkal19",
+    "id": 11067705,
+    "node_id": "MDQ6VXNlcjExMDY3NzA1",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/11067705?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gkal19",
+    "html_url": "https://github.com/gkal19",
+    "followers_url": "https://api.github.com/users/gkal19/followers",
+    "following_url": "https://api.github.com/users/gkal19/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gkal19/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gkal19/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gkal19/subscriptions",
+    "organizations_url": "https://api.github.com/users/gkal19/orgs",
+    "repos_url": "https://api.github.com/users/gkal19/repos",
+    "events_url": "https://api.github.com/users/gkal19/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gkal19/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

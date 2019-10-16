@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13550",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13550/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13550/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13550/events",
+  "html_url": "https://github.com/facebook/react/pull/13550",
+  "id": 356696810,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjEyODg4NTM4",
+  "number": 13550,
+  "title": "Add gridArea to unitless CSS properties",
+  "user": {
+    "login": "mgol",
+    "id": 1758366,
+    "node_id": "MDQ6VXNlcjE3NTgzNjY=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1758366?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mgol",
+    "html_url": "https://github.com/mgol",
+    "followers_url": "https://api.github.com/users/mgol/followers",
+    "following_url": "https://api.github.com/users/mgol/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mgol/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mgol/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mgol/subscriptions",
+    "organizations_url": "https://api.github.com/users/mgol/orgs",
+    "repos_url": "https://api.github.com/users/mgol/repos",
+    "events_url": "https://api.github.com/users/mgol/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mgol/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2018-09-04T08:06:56Z",
+  "updated_at": "2018-09-05T16:09:12Z",
+  "closed_at": "2018-09-04T11:22:21Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13550",
+    "html_url": "https://github.com/facebook/react/pull/13550",
+    "diff_url": "https://github.com/facebook/react/pull/13550.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13550.patch"
+  },
+  "body": "Ref #9185\r\n\r\nBased on https://github.com/jquery/jquery/commit/f997241f0011ed728be71002bc703c7a0d3f01e5\r\n\r\n`grid-area` accepts a numeric value which then translates to `grid-row-start`, setting `grid-row-end`, `grid-column-start` & `grid-column-end` to `auto`.\r\n\r\nI thought about adding a test but I don't understand how the ones in `CSSPropertyOperations-test.js` are supposed to work. For example, setting `grid-row` to `10` will result in a normalized `gridRow` style property with a value `\"10 / auto\"`. It seems they work just because they use `ms`-prefixed properties in format not actually used in IE as IE's grid properties were named differently?\r\n\r\nAnother remark - in jQuery we have been auto-appending `px` to most numerical values as well but we decided it was a bad decision. It doesn't scale as it requires us to add more & more properties to the list. We've actually exposed the list at [jQuery.cssNumber](https://api.jquery.com/jQuery.cssNumber/) so that people don't always have to wait for us to add support for a property and do a release. What's more confusing, some of them would work both with & without the `px` suffix and that changes the meaning.\r\n\r\nThat's why we decided that in jQuery 4 we'll drop the auto-prefixing blacklist and turn to a whitelist that lists only a few most common properties to which we want to auto-append `px` (mostly because they're extremely common and we don't want to break the world too much); we plan to _not_ expand that list. You can see the current plan in my PR: https://github.com/jquery/jquery/pull/4055. In particular, see the proposed whitelist in a (visualized) regexp in:\r\nhttps://github.com/jquery/jquery/blob/03e9dba3882868e1ee79f1fb0504326da925644f/src/css/isAutoPx.js.\r\nSomething to consider for a future React version.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

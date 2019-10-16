@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9858",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9858/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9858/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9858/events",
+  "html_url": "https://github.com/facebook/react/pull/9858",
+  "id": 233770168,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTI0MTAzMjc1",
+  "number": 9858,
+  "title": "Don't hydrate any properties other than event listeners and text content",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2017-06-06T03:35:10Z",
+  "updated_at": "2017-06-06T22:19:39Z",
+  "closed_at": "2017-06-06T22:19:39Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9858",
+    "html_url": "https://github.com/facebook/react/pull/9858",
+    "diff_url": "https://github.com/facebook/react/pull/9858.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9858.patch"
+  },
+  "body": "This strategy assumes that the rendered HTML is correct if the tree lines up. Therefore we don't diff any attributes of the rendered HTML.\r\n\r\nHowever, as a precaution I ensure that textContent *is* updated. This ensures that if something goes wrong with keys lining up etc. at least there is some feedback that the event handlers might not line up. With what you expect. Attributes and styles etc might cause a slightly broken look but that's because the app is considered broken in this state. The textContent updates is just a precaution against the worst things that can happen (e.g. clicking delete on a row with an event listener that doesn't match the row content).\r\n\r\nThis might not be what you want e.g. for date formatting where it can different between server and client though. Since that can cause janky layout and repaint.\r\n\r\nIt is expected that content will line up. To ensure that I will in a follow up ensure that the warning is issued if it doesn't line up so that in development this can be addressed.\r\n\r\nThe text content updates are now moved to the commit phase so if the tree is asynchronously hydrated it doesn't start partially swapping out. I use the regular update side-effect with payload if the content doesn't match up.\r\n\r\nSince we no longer guarantee that attributes is correct I changed the bad mark up SSR integration tests to only assert on the textContent instead.",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

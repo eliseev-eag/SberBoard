@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15877",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15877/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15877/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15877/events",
+  "html_url": "https://github.com/facebook/react/pull/15877",
+  "id": 455761580,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjg3OTQyNTYz",
+  "number": 15877,
+  "title": "Construct Error at invariant call site for clearer stack traces",
+  "user": {
+    "login": "motiz88",
+    "id": 2246565,
+    "node_id": "MDQ6VXNlcjIyNDY1NjU=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/2246565?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/motiz88",
+    "html_url": "https://github.com/motiz88",
+    "followers_url": "https://api.github.com/users/motiz88/followers",
+    "following_url": "https://api.github.com/users/motiz88/following{/other_user}",
+    "gists_url": "https://api.github.com/users/motiz88/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/motiz88/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/motiz88/subscriptions",
+    "organizations_url": "https://api.github.com/users/motiz88/orgs",
+    "repos_url": "https://api.github.com/users/motiz88/repos",
+    "events_url": "https://api.github.com/users/motiz88/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/motiz88/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 16,
+  "created_at": "2019-06-13T14:04:02Z",
+  "updated_at": "2019-06-18T18:38:34Z",
+  "closed_at": "2019-06-18T18:38:34Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15877",
+    "html_url": "https://github.com/facebook/react/pull/15877",
+    "diff_url": "https://github.com/facebook/react/pull/15877.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15877.patch"
+  },
+  "body": "# Summary\r\n\r\nCurrently, when a React invariant fails, it throws an `Error` object constructed inside the `ReactError` (or `ReactErrorProd`) function. Because the stack trace is captured at the point of Error's construction, it always begins with the same frame for ReactError, no matter specific invariant actually failed.\r\n\r\nThis PR moves the Error constructor call to the location of the invariant, removing the stack frame inside ReactError.\r\n\r\n# Test plan\r\n\r\nAdded a test in `ReactError-test.internal.js`.\r\n\r\n---\r\n\r\nNOTE: The PR summary has been significantly edited a couple of times; see edit history for more context.",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10344",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10344/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10344/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10344/events",
+  "html_url": "https://github.com/facebook/react/pull/10344",
+  "id": 247230224,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTMzNTkzMTIz",
+  "number": 10344,
+  "title": "Remove event namespace check from ReactPartialRenderer",
+  "user": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2017-08-01T23:20:58Z",
+  "updated_at": "2017-08-02T10:40:56Z",
+  "closed_at": "2017-08-02T10:30:44Z",
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10344",
+    "html_url": "https://github.com/facebook/react/pull/10344",
+    "diff_url": "https://github.com/facebook/react/pull/10344.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10344.patch"
+  },
+  "body": "Working through https://github.com/facebook/react/pull/10229, I noticed that `onchange` was coming through as markup in the server-side rendering tests. This is because `ReactPartialRenderer` uses a `registrationNameModules` check to see if a prop is an event name. \r\n\r\nI believe `registrationNameModules` is populated by event plugins, which were removed in https://github.com/facebook/react/pull/10173. So this condition always resolves to true. I've confirmed by running test coverage:\r\n\r\n<img width=\"632\" alt=\"screen shot 2017-08-01 at 7 09 57 pm\" src=\"https://user-images.githubusercontent.com/590904/28851057-28765c70-76ee-11e7-96c4-2cd97893ea04.png\">\r\n\r\nIf we remove the attribute whitelist, we need an answer here for event names on server-side rendering. I've added that to my list in #10229 ",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

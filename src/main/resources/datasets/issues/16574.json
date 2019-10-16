@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16574",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16574/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16574/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16574/events",
+  "html_url": "https://github.com/facebook/react/pull/16574",
+  "id": 485432730,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzExMDc3NzUy",
+  "number": 16574,
+  "title": "[Fresh] Don't ignore dependencies for render phase updates",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-08-26T20:23:26Z",
+  "updated_at": "2019-08-28T15:55:57Z",
+  "closed_at": "2019-08-28T15:55:57Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16574",
+    "html_url": "https://github.com/facebook/react/pull/16574",
+    "diff_url": "https://github.com/facebook/react/pull/16574.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16574.patch"
+  },
+  "body": "During a Fresh update, we ignore dependencies. We let the effects re-run, even if deps are `[]`, and free the memo'd values.\r\n\r\nThis is important because it prevents us from referencing stale code. For example, if we edit top-level `computeExpensive`, we still want `useMemo(() => computeExpensive(), [])` to re-evaluate.\r\n\r\nSometimes this may cause problems, but arguably this points to other flaws in components or Hooks that should be fixed regardless.\r\n\r\n---\r\n\r\nThere is a failure case though. Generally, while components shouldn’t *rely* on `useMemo` for semantics, there is still an expectation that memo chains can “settle”. For example, `useSubscription` does a render-phase update if its arguments differ from its state:\r\n\r\nhttps://github.com/facebook/react/blob/0da7bd0604a5be7f96572b9f75d16fef5674bc5d/packages/use-subscription/src/useSubscription.js#L42-L45\r\n\r\nIt has to rely on something like `useMemo` in the calling code to keep the source *eventually stable*.\r\n\r\n---\r\n\r\nThe problem with our current approach is that during a Fresh update, dependencies are ignored completely. So even with `useMemo`, things never truly “settle”. This breaks the pattern relied upon by `useSubscription`, and likely, other similar mechanisms.\r\n\r\nThe fix is to **only ignore dependencies during the first render after the patch**. By that point it has run, all memo'd values have been recreated with fresh code. So it makes sense that we can turn off the cache busting flag for all subsequent render-phase updates of this component, thus letting it settle. This fixes the infinite loop in the regression test I've added.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8432",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8432/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8432/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8432/events",
+  "html_url": "https://github.com/facebook/react/pull/8432",
+  "id": 191879100,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTU0MTI4Nzc=",
+  "number": 8432,
+  "title": "Add docs for publishing a react component",
+  "user": {
+    "login": "laumair",
+    "id": 20437468,
+    "node_id": "MDQ6VXNlcjIwNDM3NDY4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/20437468?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/laumair",
+    "html_url": "https://github.com/laumair",
+    "followers_url": "https://api.github.com/users/laumair/followers",
+    "following_url": "https://api.github.com/users/laumair/following{/other_user}",
+    "gists_url": "https://api.github.com/users/laumair/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/laumair/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/laumair/subscriptions",
+    "organizations_url": "https://api.github.com/users/laumair/orgs",
+    "repos_url": "https://api.github.com/users/laumair/repos",
+    "events_url": "https://api.github.com/users/laumair/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/laumair/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-11-27T19:20:38Z",
+  "updated_at": "2016-11-28T15:52:28Z",
+  "closed_at": "2016-11-28T15:45:51Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8432",
+    "html_url": "https://github.com/facebook/react/pull/8432",
+    "diff_url": "https://github.com/facebook/react/pull/8432.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8432.patch"
+  },
+  "body": "Related to: https://github.com/facebook/react/issues/7882 and https://github.com/facebook/react/issues/8060",
+  "closed_by": {
+    "login": "laumair",
+    "id": 20437468,
+    "node_id": "MDQ6VXNlcjIwNDM3NDY4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/20437468?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/laumair",
+    "html_url": "https://github.com/laumair",
+    "followers_url": "https://api.github.com/users/laumair/followers",
+    "following_url": "https://api.github.com/users/laumair/following{/other_user}",
+    "gists_url": "https://api.github.com/users/laumair/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/laumair/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/laumair/subscriptions",
+    "organizations_url": "https://api.github.com/users/laumair/orgs",
+    "repos_url": "https://api.github.com/users/laumair/repos",
+    "events_url": "https://api.github.com/users/laumair/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/laumair/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

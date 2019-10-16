@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16256",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16256/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16256/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16256/events",
+  "html_url": "https://github.com/facebook/react/pull/16256",
+  "id": 474831983,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzAyNzA0Njkw",
+  "number": 16256,
+  "title": "BugFix: Suspense priority warning firing when not supposed to",
+  "user": {
+    "login": "lunaruan",
+    "id": 2735514,
+    "node_id": "MDQ6VXNlcjI3MzU1MTQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2735514?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lunaruan",
+    "html_url": "https://github.com/lunaruan",
+    "followers_url": "https://api.github.com/users/lunaruan/followers",
+    "following_url": "https://api.github.com/users/lunaruan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lunaruan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lunaruan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lunaruan/subscriptions",
+    "organizations_url": "https://api.github.com/users/lunaruan/orgs",
+    "repos_url": "https://api.github.com/users/lunaruan/repos",
+    "events_url": "https://api.github.com/users/lunaruan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lunaruan/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2019-07-30T21:34:59Z",
+  "updated_at": "2019-08-02T20:54:12Z",
+  "closed_at": "2019-08-02T20:54:12Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16256",
+    "html_url": "https://github.com/facebook/react/pull/16256",
+    "diff_url": "https://github.com/facebook/react/pull/16256.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16256.patch"
+  },
+  "body": "Previously, the suspense priority warning was fired even if the Root wasn't suspended. Changed the warning to fire only when the root is suspended.\r\n\r\nAlso refactored the suspense priority warning so it's easier to read.",
+  "closed_by": {
+    "login": "lunaruan",
+    "id": 2735514,
+    "node_id": "MDQ6VXNlcjI3MzU1MTQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2735514?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lunaruan",
+    "html_url": "https://github.com/lunaruan",
+    "followers_url": "https://api.github.com/users/lunaruan/followers",
+    "following_url": "https://api.github.com/users/lunaruan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lunaruan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lunaruan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lunaruan/subscriptions",
+    "organizations_url": "https://api.github.com/users/lunaruan/orgs",
+    "repos_url": "https://api.github.com/users/lunaruan/repos",
+    "events_url": "https://api.github.com/users/lunaruan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lunaruan/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

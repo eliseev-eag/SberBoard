@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15188",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15188/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15188/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15188/events",
+  "html_url": "https://github.com/facebook/react/issues/15188",
+  "id": 424082507,
+  "node_id": "MDU6SXNzdWU0MjQwODI1MDc=",
+  "number": 15188,
+  "title": "useEffect can very quickly consume free quotas or cost money when used with 3rd party services",
+  "user": {
+    "login": "PutziSan",
+    "id": 13392042,
+    "node_id": "MDQ6VXNlcjEzMzkyMDQy",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/13392042?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/PutziSan",
+    "html_url": "https://github.com/PutziSan",
+    "followers_url": "https://api.github.com/users/PutziSan/followers",
+    "following_url": "https://api.github.com/users/PutziSan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/PutziSan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/PutziSan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/PutziSan/subscriptions",
+    "organizations_url": "https://api.github.com/users/PutziSan/orgs",
+    "repos_url": "https://api.github.com/users/PutziSan/repos",
+    "events_url": "https://api.github.com/users/PutziSan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/PutziSan/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2019-03-22T07:40:58Z",
+  "updated_at": "2019-03-23T16:00:25Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\nFeature / Documentation-Request\r\n\r\n**What is the current behavior?**\r\nWhen I developed my app last week with useEffect and firebase firestore, it happened to me that my effect used up the 20k-write limit within about 20 seconds. Of course this was a bug introduced by myself, but if I had been in a pay-as-you-go plan it could have cost me some money. I now use a custom hook as useEffect, which counts in development whether a hook is executed too often in 500ms and if so, it throws an error.\r\n\r\n**What is the expected behavior?**\r\nI'm not sure how you could solve this on your side. Of course you could do the check in development-mode, but that would probably trigger existing projects too much. However, a small hint in the documentation would be good that you should take care during development that useEffect can quickly lead to this behavior and that you should be careful when using other 3rd-party services that have a quota or have to be paid.\r\n\r\nI just wanted to share my experiences while developing a \"real\" app. If you can't or won't do anything here, you are welcome to close the issue.",
+  "closed_by": null
+}

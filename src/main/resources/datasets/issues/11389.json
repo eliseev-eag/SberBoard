@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11389",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11389/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11389/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11389/events",
+  "html_url": "https://github.com/facebook/react/pull/11389",
+  "id": 269177805,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ5MjQyNjM5",
+  "number": 11389,
+  "title": "Convert the Source to ES Modules",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2017-10-27T17:18:32Z",
+  "updated_at": "2017-11-03T15:15:42Z",
+  "closed_at": "2017-11-02T19:50:04Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11389",
+    "html_url": "https://github.com/facebook/react/pull/11389",
+    "diff_url": "https://github.com/facebook/react/pull/11389.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11389.patch"
+  },
+  "body": "- [x] Fix transforms to work in both CJS and ESM modes\r\n  - [x] `invariant`\r\n  - [x] `object-assign`\r\n  - [x] Jest\r\n- [x] Convert packages to ESM\r\n  - [x] react\r\n  - [x] react-art\r\n  - [x] react-call-return\r\n  - [x] react-test-renderer\r\n  - [x] react-cs-renderer\r\n  - [x] react-rt-renderer\r\n  - [x] react-noop-renderer\r\n  - [x] react-dom\r\n    - [x] server\r\n    - [x] client\r\n    - [x] events\r\n    - [x] shared\r\n  - [x] react-native-renderer\r\n  - [x] react-reconciler\r\n  - [x] events\r\n  - [x] shared\r\n\r\n  Note: ESM can depend on CJS, but not the other way around. Convert things with less dependents on internals first.\r\n\r\n- [ ] Final cleanup\r\n  - [ ] Remove CJS-only code in Rollup build\r\n    - [ ] Forbid CJS\r\n    - [x] Make sure shims work\r\n  - [x] Ensure we don't regress on bundling DEV-only code\r\n    - [ ] <s>Perhaps, a whitelist of modules with no side effects?</s>\r\n    - [x] Don't forget: `lowPriorityWarning`, `warning`, DOM hooks, DOM nesting, hyphenation utils, prop types, dev whitelists, debug things\r\n  - [ ] Revisit the `.default` hack in top-level `index.js` files\r\n    - [ ] Perhaps, also ESM-ify tests?\r\n  - [ ] Consider turning some default exports into named\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11033",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11033/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11033/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11033/events",
+  "html_url": "https://github.com/facebook/react/pull/11033",
+  "id": 262162331,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ0MjM5Mjky",
+  "number": 11033,
+  "title": "Fix tabIndex attribute for SVG",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-10-02T17:31:06Z",
+  "updated_at": "2017-10-09T18:51:54Z",
+  "closed_at": "2017-10-02T17:52:27Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11033",
+    "html_url": "https://github.com/facebook/react/pull/11033",
+    "diff_url": "https://github.com/facebook/react/pull/11033.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11033.patch"
+  },
+  "body": "Fixes https://github.com/facebook/react/issues/10987 which is a regression in 16.\r\n\r\nVerified with a new integration test, and by manually trying https://github.com/forWorkAtML/svg-bug.\r\n\r\nWhy it broke: we removed most of the DOM whitelist recently (#10385), and `tabIndex` was one of the attributes that got nixed because its lowercase version (`tabindex`) \"just works\". However, we forgot it’s also a valid SVG attribute which *is* case sensitive.\r\n\r\nWe currently use a different logic branch for attributes that aren't in the whitelist, so it didn't get properly lowercased in 16.0.0. Adding it back to the whitelist forces it to be lowercased, which fixes it for SVG (and doesn't change how it works for HTML).\r\n\r\nThe way whitelist works is pretty confusing now but I'm going to fix this later in https://github.com/facebook/react/pull/10805. Let's just patch this hole for now.\r\n\r\nI don't expect there to be more regressions like this because it's the only `camelCase` HTML attribute we deleted in #10385 that also happens to apply to SVG.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

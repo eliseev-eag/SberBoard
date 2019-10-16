@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10079",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10079/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10079/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10079/events",
+  "html_url": "https://github.com/facebook/react/pull/10079",
+  "id": 239721280,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTI4MzI3MDQ1",
+  "number": 10079,
+  "title": "Accessibility docs: Two small fixes",
+  "user": {
+    "login": "AlmeroSteyn",
+    "id": 5063473,
+    "node_id": "MDQ6VXNlcjUwNjM0NzM=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/5063473?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/AlmeroSteyn",
+    "html_url": "https://github.com/AlmeroSteyn",
+    "followers_url": "https://api.github.com/users/AlmeroSteyn/followers",
+    "following_url": "https://api.github.com/users/AlmeroSteyn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/AlmeroSteyn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/AlmeroSteyn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/AlmeroSteyn/subscriptions",
+    "organizations_url": "https://api.github.com/users/AlmeroSteyn/orgs",
+    "repos_url": "https://api.github.com/users/AlmeroSteyn/repos",
+    "events_url": "https://api.github.com/users/AlmeroSteyn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/AlmeroSteyn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-06-30T09:12:42Z",
+  "updated_at": "2017-07-11T13:07:56Z",
+  "closed_at": "2017-06-30T11:39:47Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10079",
+    "html_url": "https://github.com/facebook/react/pull/10079",
+    "diff_url": "https://github.com/facebook/react/pull/10079.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10079.patch"
+  },
+  "body": "I found a typo and a grammar thing in the a11y docs page. So I fixed them.\r\n\r\nChanges:\r\n\r\n> The following link **show** us how...\r\n\r\nto\r\n\r\n> The following link **shows** us how...\r\n\r\nAnd\r\n\r\n> ...a focus outline similar to **the that** shown...\r\n\r\nto\r\n\r\n> ...a focus outline similar to **that** shown...",
+  "closed_by": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

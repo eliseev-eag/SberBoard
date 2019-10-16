@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11385",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11385/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11385/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11385/events",
+  "html_url": "https://github.com/facebook/react/pull/11385",
+  "id": 269101909,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ5MTg1Mjkx",
+  "number": 11385,
+  "title": "Rewrite setInnerHTML tests to use Public API.",
+  "user": {
+    "login": "silvestrijonathan",
+    "id": 10540173,
+    "node_id": "MDQ6VXNlcjEwNTQwMTcz",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/10540173?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/silvestrijonathan",
+    "html_url": "https://github.com/silvestrijonathan",
+    "followers_url": "https://api.github.com/users/silvestrijonathan/followers",
+    "following_url": "https://api.github.com/users/silvestrijonathan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/silvestrijonathan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/silvestrijonathan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/silvestrijonathan/subscriptions",
+    "organizations_url": "https://api.github.com/users/silvestrijonathan/orgs",
+    "repos_url": "https://api.github.com/users/silvestrijonathan/repos",
+    "events_url": "https://api.github.com/users/silvestrijonathan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/silvestrijonathan/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 15,
+  "created_at": "2017-10-27T13:10:34Z",
+  "updated_at": "2017-11-05T03:41:51Z",
+  "closed_at": "2017-11-04T18:04:14Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11385",
+    "html_url": "https://github.com/facebook/react/pull/11385",
+    "diff_url": "https://github.com/facebook/react/pull/11385.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11385.patch"
+  },
+  "body": "Ref #11299\r\n\r\nThis rewrites the `setInnerHTML` tests to utilize `dangerouslySetInnerHTML` to ensure that nodes with and without the `innerHTML` attribute are properly set!",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

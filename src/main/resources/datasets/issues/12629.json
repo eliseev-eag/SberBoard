@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12629",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12629/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12629/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12629/events",
+  "html_url": "https://github.com/facebook/react/pull/12629",
+  "id": 314977651,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTgyMTA0Mzg2",
+  "number": 12629,
+  "title": "Use browser event names for top-level event types in React DOM",
+  "user": {
+    "login": "philipp-spiess",
+    "id": 458591,
+    "node_id": "MDQ6VXNlcjQ1ODU5MQ==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/458591?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/philipp-spiess",
+    "html_url": "https://github.com/philipp-spiess",
+    "followers_url": "https://api.github.com/users/philipp-spiess/followers",
+    "following_url": "https://api.github.com/users/philipp-spiess/following{/other_user}",
+    "gists_url": "https://api.github.com/users/philipp-spiess/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/philipp-spiess/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/philipp-spiess/subscriptions",
+    "organizations_url": "https://api.github.com/users/philipp-spiess/orgs",
+    "repos_url": "https://api.github.com/users/philipp-spiess/repos",
+    "events_url": "https://api.github.com/users/philipp-spiess/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/philipp-spiess/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 46,
+  "created_at": "2018-04-17T09:28:28Z",
+  "updated_at": "2018-05-22T16:59:35Z",
+  "closed_at": "2018-05-15T09:38:50Z",
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12629",
+    "html_url": "https://github.com/facebook/react/pull/12629",
+    "diff_url": "https://github.com/facebook/react/pull/12629.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12629.patch"
+  },
+  "body": "This PR builds on top of the great work of @gaearon in #11894. The main idea is to get rid of all `top*` strings used to identify internal events and replace them with numerical values which the compiler can inline.\r\n\r\nBefore merging this, I have two other questions which I've also asked [here](https://github.com/facebook/react/pull/11894#issuecomment-381887113):\r\n\r\n1. Does it really make sense to prefix all event constants with `TOP_`? From the comment in https://github.com/facebook/react/blob/master/packages/react-dom/src/events/BrowserEventConstants.js#L10-L16 it's clear that only _some_ of the events are actually listened to at the top level. However the list contains more than that subset (incl. `input`, `invalid`, `reset`, `submit`, and the media events). With that in mind, I think renaming the module to `EventTypes.js` or `InternalEventTypes.js` would be more fitting. What do you think? I know that currently, the `top` prefix is used everywhere - Is there a reason for that? \r\n2. I had to make some worrisome changes to modules that contain `Native` in their name. Specifically when working on the Flow types [here](https://github.com/facebook/react/blob/master/packages/react-native-renderer/src/ReactNativeBridgeEventPlugin.js#L32) and [here](https://github.com/facebook/react/blob/master/packages/react-native-renderer/src/ReactNativeEventEmitter.js#L91). Would it make sense to type the internal event type as `number | string` so we don't need to touch anything on the react-native side? And what part of the changed modules will also be used on the react-native side? Everything inside `packages/events`?\r\n\r\n## State of this PR\r\n\r\nBesides the open questions, this PR works fine for `react-dom`. The difference in the bundle size is significant (well, at least enough to land #12507 🙈):\r\n\r\n- `react-dom.production.min.js  (UMD_PROD)` `-1.5%` pre, `-0.9%` post gzip\r\n- `react-dom-test-utils.production.min.js (UMD_PROD)` `-13.2%` pre, `-10.2%` post gzip\r\n- `react-dom-unstable-native-dependencies.production.min.js (UMD_PROD)` `-1.2%` pre, `-0.6%` post gzip\r\n\r\nAll dom related unit tests are green and the fixtures behave as described.\r\n\r\nThere's currently one failing unit test suite (`ReactNativeEvents-test.internal.js`). We'll probably need to clearly look at the react-native boundaries here to see how/if we can keep this change to the DOM side.\r\n\r\nSome libraries that depend on this private API will need adjustment as well (e.g. [this file in `react-native-web`](https://github.com/necolas/react-native-web/blob/17f8a674b832e25e973962f77205d13bd3f2e878/packages/react-native-web/src/modules/injectResponderEventPlugin/index.js#L10-L18)). Can we do anything to make that easier? We could, for example, create a mapping from the old `top*` strings to the new numbers as an export in `ReactDOMUnstableNativeDependencies`. A similar mapping is already needed for `ReactTestUtils.js`, so we have to maintain it anyhow. ",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

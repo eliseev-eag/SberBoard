@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10705",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10705/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10705/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10705/events",
+  "html_url": "https://github.com/facebook/react/pull/10705",
+  "id": 257564038,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQwOTYxNzYx",
+  "number": 10705,
+  "title": "[Gatsby Docs Update] Fix meta tags and ssr docs build",
+  "user": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-09-14T01:00:48Z",
+  "updated_at": "2018-05-25T17:51:46Z",
+  "closed_at": "2017-09-15T20:39:10Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10705",
+    "html_url": "https://github.com/facebook/react/pull/10705",
+    "diff_url": "https://github.com/facebook/react/pull/10705.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10705.patch"
+  },
+  "body": "**what is the change?:**\r\nUse `markdownRemark.fields.path` instead of `location.path`. We updated the graphQL query to request this info for all\r\npages, and then use it.\r\n\r\nAlso we had to change the syntax in `gatsby-node.js` because for some\r\nunclear reason, the `fields` came in as `undefined` when using that\r\nshortcut syntax.\r\n\r\n**why make this change?:**\r\n- `location` is undefined during the SSR phase, and we want the SSR\r\n  build to succeed.\r\n\r\n**test plan:**\r\nManual testing -\r\n- Ran `yarn build` (!!!) and it worked\r\n- Ran `yarn dev` and manually inspected the `head` element contents.\r\n<img width=\"809\" alt=\"screen shot 2017-09-14 at 10 46 54 am\" src=\"https://user-images.githubusercontent.com/1114467/30407505-e20ff5be-993b-11e7-935d-0e92113ba32d.png\">\r\n<img width=\"636\" alt=\"screen shot 2017-09-14 at 10 47 20 am\" src=\"https://user-images.githubusercontent.com/1114467/30407507-e21a71a6-993b-11e7-96c8-9abb5d4c5031.png\">\r\n<img width=\"638\" alt=\"screen shot 2017-09-14 at 10 47 40 am\" src=\"https://user-images.githubusercontent.com/1114467/30407506-e212e530-993b-11e7-895a-c449ddce1cbc.png\">\r\n\r\n**issue:**\r\nchecklist on the docs site wiki;\r\nhttps://github.com/bvaughn/react/wiki/Gatsby-check-list\r\nMisc > Meta/Title tags",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

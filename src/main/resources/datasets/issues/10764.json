@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10764",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10764/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10764/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10764/events",
+  "html_url": "https://github.com/facebook/react/pull/10764",
+  "id": 259326001,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQyMjIxMTUz",
+  "number": 10764,
+  "title": "[Gatsby Docs Update] Tutorial: Clicking an anchor tag should auto-close mobile nav",
+  "user": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2017-09-20T22:53:34Z",
+  "updated_at": "2017-09-26T19:46:54Z",
+  "closed_at": "2017-09-26T19:46:54Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10764",
+    "html_url": "https://github.com/facebook/react/pull/10764",
+    "diff_url": "https://github.com/facebook/react/pull/10764.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10764.patch"
+  },
+  "body": "**what is the change?:**\r\n\r\n*Edit:* \r\nAlso fixes the issue where the section listed on the tutorial page was not correct. I can go into more detail if needed.\r\n\r\n---\r\nWe create a prop to close the mobile nav and then pass it all the way\r\ndown through to the links for the tutorial page -\r\n```\r\n<StickyResponsiveSidebar> -> sends down handler to close mobile nav\r\nV\r\n<Sidebar>\r\nV\r\n<Section>\r\nV\r\n<GatsbyLink> -> receives onClick to close mobile nav\r\n```\r\n\r\n**why make this change?:**\r\nSo that the menu doesn't stay open after people click a link :)\r\n\r\nWe considered listening to 'onhashchange' and ran into two problems;\r\n- React doesn't support listening to `onhashchange` on DOMComponents,\r\n  and I'm not sure that would work anyway\r\n- When listening to `window.onhashchange` it didn't seem to fire\r\n- Better to pass something down than to add another global event\r\n  listener imo\r\n\r\n**test plan:**\r\nManual testing\r\nAND I ran `yarn build`\r\n\r\n![bottom_nav_open_close](https://user-images.githubusercontent.com/1114467/30671401-8c6f7a8c-9e1b-11e7-8d4a-65c2bc241c99.gif)\r\n\r\n**issue:**\r\nChecklist item on this wiki;\r\nhttps://github.com/bvaughn/react/wiki/Gatsby-check-list\r\nSidebar Component > Tutorial: Clicking an anchor tag should auto-close mobile nav\r\n",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

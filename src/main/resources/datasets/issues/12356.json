@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12356",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12356/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12356/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12356/events",
+  "html_url": "https://github.com/facebook/react/issues/12356",
+  "id": 304440142,
+  "node_id": "MDU6SXNzdWUzMDQ0NDAxNDI=",
+  "number": 12356,
+  "title": "Potential Future Bug in getEventKey for Edge with Synthetic Event normalization.",
+  "user": {
+    "login": "DanielHaroldLane",
+    "id": 20723724,
+    "node_id": "MDQ6VXNlcjIwNzIzNzI0",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/20723724?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/DanielHaroldLane",
+    "html_url": "https://github.com/DanielHaroldLane",
+    "followers_url": "https://api.github.com/users/DanielHaroldLane/followers",
+    "following_url": "https://api.github.com/users/DanielHaroldLane/following{/other_user}",
+    "gists_url": "https://api.github.com/users/DanielHaroldLane/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/DanielHaroldLane/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/DanielHaroldLane/subscriptions",
+    "organizations_url": "https://api.github.com/users/DanielHaroldLane/orgs",
+    "repos_url": "https://api.github.com/users/DanielHaroldLane/repos",
+    "events_url": "https://api.github.com/users/DanielHaroldLane/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/DanielHaroldLane/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929155,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1NQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Question",
+      "name": "Type: Question",
+      "color": "cc317c",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-03-12T16:16:24Z",
+  "updated_at": "2018-03-12T16:33:23Z",
+  "closed_at": "2018-03-12T16:33:23Z",
+  "author_association": "NONE",
+  "body": "**Bug**\r\n\r\n**Current behavior**\r\nReact currently normalizes keyboard events cross-browser by falling back on the native KeyboardEvent.keyCode property and using a dictionary object to normalize the key. As noted in the source, getEventKey is used for \"Normalization of deprecated HTML5 `key` values\".\r\n\r\nEdge currently does not implement the correct key values and this normalization will fall back to KeyboardEvent.keyCode. KeyboardEvent.keyCode is deprecated and may be dropped at any time.\r\n\r\nMicrosoft as per https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/15907408/ have fixed this issue, but it has not yet been released to insider preview releases. This means there is the potential for the KeyboardEvent.keyCode to be removed from Edge before the fix is made public. It may be a good idea to not rely on keyCode in this instance.\r\n\r\nRefer to https://github.com/facebook/react/blob/5bd2321ae3dd7d68ac02dee3c3f271e9d0ee8784/packages/react-dom/src/events/getEventKey.js Line 103\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nreact-dom version 16.2.0, potentially affects future versions of Edge.\r\n",
+  "closed_by": {
+    "login": "DanielHaroldLane",
+    "id": 20723724,
+    "node_id": "MDQ6VXNlcjIwNzIzNzI0",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/20723724?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/DanielHaroldLane",
+    "html_url": "https://github.com/DanielHaroldLane",
+    "followers_url": "https://api.github.com/users/DanielHaroldLane/followers",
+    "following_url": "https://api.github.com/users/DanielHaroldLane/following{/other_user}",
+    "gists_url": "https://api.github.com/users/DanielHaroldLane/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/DanielHaroldLane/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/DanielHaroldLane/subscriptions",
+    "organizations_url": "https://api.github.com/users/DanielHaroldLane/orgs",
+    "repos_url": "https://api.github.com/users/DanielHaroldLane/repos",
+    "events_url": "https://api.github.com/users/DanielHaroldLane/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/DanielHaroldLane/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

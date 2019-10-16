@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/1355",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/1355/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/1355/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/1355/events",
+  "html_url": "https://github.com/facebook/react/issues/1355",
+  "id": 30900007,
+  "node_id": "MDU6SXNzdWUzMDkwMDAwNw==",
+  "number": 1355,
+  "title": "touchmove doesn't fire on removed element",
+  "user": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2014-04-04T22:32:30Z",
+  "updated_at": "2019-05-08T07:01:22Z",
+  "closed_at": null,
+  "author_association": "COLLABORATOR",
+  "body": "If you have\n\n```\n{this.state.show &&\n  <div onTouchStart={this.hideTheDiv} onTouchMove={...} />}\n```\n\nsuch that the onTouchStart handler removes the div (and maybe replaces it with another one in the same place, useful in certain draggable interactions), the onTouchMove handler doesn't fire because the events of a detached element no longer bubble to document. We should probably bind the touchmove handler when the element receives touchstart instead of delegating to document.\n\nSort of related to #1254.\n\ncc @merbs @eater\n",
+  "closed_by": null
+}

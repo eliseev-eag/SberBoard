@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6208",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6208/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6208/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6208/events",
+  "html_url": "https://github.com/facebook/react/pull/6208",
+  "id": 139168042,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjIwMTkzNjg=",
+  "number": 6208,
+  "title": "Missed parentheses for matchMeida parameter",
+  "user": {
+    "login": "JinxiuLee",
+    "id": 4523355,
+    "node_id": "MDQ6VXNlcjQ1MjMzNTU=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/4523355?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/JinxiuLee",
+    "html_url": "https://github.com/JinxiuLee",
+    "followers_url": "https://api.github.com/users/JinxiuLee/followers",
+    "following_url": "https://api.github.com/users/JinxiuLee/following{/other_user}",
+    "gists_url": "https://api.github.com/users/JinxiuLee/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/JinxiuLee/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/JinxiuLee/subscriptions",
+    "organizations_url": "https://api.github.com/users/JinxiuLee/orgs",
+    "repos_url": "https://api.github.com/users/JinxiuLee/repos",
+    "events_url": "https://api.github.com/users/JinxiuLee/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/JinxiuLee/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-03-08T03:23:43Z",
+  "updated_at": "2016-03-21T18:30:03Z",
+  "closed_at": "2016-03-08T05:39:57Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6208",
+    "html_url": "https://github.com/facebook/react/pull/6208",
+    "diff_url": "https://github.com/facebook/react/pull/6208.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6208.patch"
+  },
+  "body": "https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

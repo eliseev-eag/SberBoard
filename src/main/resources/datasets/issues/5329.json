@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5329",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5329/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5329/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5329/events",
+  "html_url": "https://github.com/facebook/react/pull/5329",
+  "id": 114165808,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDkyMTI1MTc=",
+  "number": 5329,
+  "title": "Fix and test for <input> rerendering issue (and tentative fix for related <textarea> issue)",
+  "user": {
+    "login": "tbroadley",
+    "id": 8731922,
+    "node_id": "MDQ6VXNlcjg3MzE5MjI=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/8731922?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/tbroadley",
+    "html_url": "https://github.com/tbroadley",
+    "followers_url": "https://api.github.com/users/tbroadley/followers",
+    "following_url": "https://api.github.com/users/tbroadley/following{/other_user}",
+    "gists_url": "https://api.github.com/users/tbroadley/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/tbroadley/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/tbroadley/subscriptions",
+    "organizations_url": "https://api.github.com/users/tbroadley/orgs",
+    "repos_url": "https://api.github.com/users/tbroadley/repos",
+    "events_url": "https://api.github.com/users/tbroadley/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/tbroadley/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2015-10-29T23:07:03Z",
+  "updated_at": "2016-05-02T21:21:54Z",
+  "closed_at": "2016-05-02T19:24:54Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5329",
+    "html_url": "https://github.com/facebook/react/pull/5329",
+    "diff_url": "https://github.com/facebook/react/pull/5329.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5329.patch"
+  },
+  "body": "This is a fix for #5295.\n\n`<input>` and `<textarea>` elements are being updated in the DOM every time that `ReactDOMComponent.updateComponent` is called. This PR makes it so that the elements are only updated in the DOM when their values change. I also added tests to make sure that this is the case.\n\nI am not sure about the `<textarea>` fix - it doesn't seem like the right place to be checking if the value has been updated. However, `ReactDOMTextarea.getNativeProps` sets `props.value` to `undefined`, so it isn't possible to compare the previous and next props after that.\n",
+  "closed_by": {
+    "login": "tbroadley",
+    "id": 8731922,
+    "node_id": "MDQ6VXNlcjg3MzE5MjI=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/8731922?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/tbroadley",
+    "html_url": "https://github.com/tbroadley",
+    "followers_url": "https://api.github.com/users/tbroadley/followers",
+    "following_url": "https://api.github.com/users/tbroadley/following{/other_user}",
+    "gists_url": "https://api.github.com/users/tbroadley/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/tbroadley/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/tbroadley/subscriptions",
+    "organizations_url": "https://api.github.com/users/tbroadley/orgs",
+    "repos_url": "https://api.github.com/users/tbroadley/repos",
+    "events_url": "https://api.github.com/users/tbroadley/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/tbroadley/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

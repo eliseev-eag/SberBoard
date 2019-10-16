@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12568",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12568/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12568/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12568/events",
+  "html_url": "https://github.com/facebook/react/pull/12568",
+  "id": 312243774,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTgwMTI1NTMx",
+  "number": 12568,
+  "title": "Add non-standard allowing variants of ReactDOMServer render methods (fixes #10064)",
+  "user": {
+    "login": "dfrankland",
+    "id": 2488926,
+    "node_id": "MDQ6VXNlcjI0ODg5MjY=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/2488926?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dfrankland",
+    "html_url": "https://github.com/dfrankland",
+    "followers_url": "https://api.github.com/users/dfrankland/followers",
+    "following_url": "https://api.github.com/users/dfrankland/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dfrankland/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dfrankland/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dfrankland/subscriptions",
+    "organizations_url": "https://api.github.com/users/dfrankland/orgs",
+    "repos_url": "https://api.github.com/users/dfrankland/repos",
+    "events_url": "https://api.github.com/users/dfrankland/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dfrankland/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2018-04-07T21:15:25Z",
+  "updated_at": "2018-12-12T18:54:22Z",
+  "closed_at": "2018-12-07T16:59:58Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12568",
+    "html_url": "https://github.com/facebook/react/pull/12568",
+    "diff_url": "https://github.com/facebook/react/pull/12568.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12568.patch"
+  },
+  "body": "Adds 4 new methods to ReactDOMServer:\r\n*   `renderToStringNonStandard`\r\n*   `renderToStaticMarkupNonStandard`\r\n*\t`renderToNodeStreamNonStandard`\r\n*\t`renderToStaticNodeStreamNonStandard`\r\n\r\nEach mirrors the existing:\r\n*   `renderToString`\r\n*   `renderToStaticMarkup`\r\n*\t`renderToNodeStream`\r\n*\t`renderToStaticNodeStream`\r\n\r\nThis allows for rendering markup that may not adhere to W3C standards, yet still works in browsers (like [AMP html](https://www.ampproject.org/learn/overview/)).",
+  "closed_by": {
+    "login": "dfrankland",
+    "id": 2488926,
+    "node_id": "MDQ6VXNlcjI0ODg5MjY=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/2488926?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dfrankland",
+    "html_url": "https://github.com/dfrankland",
+    "followers_url": "https://api.github.com/users/dfrankland/followers",
+    "following_url": "https://api.github.com/users/dfrankland/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dfrankland/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dfrankland/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dfrankland/subscriptions",
+    "organizations_url": "https://api.github.com/users/dfrankland/orgs",
+    "repos_url": "https://api.github.com/users/dfrankland/repos",
+    "events_url": "https://api.github.com/users/dfrankland/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dfrankland/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8707",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8707/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8707/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8707/events",
+  "html_url": "https://github.com/facebook/react/pull/8707",
+  "id": 199354084,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTAwNTY1MDcx",
+  "number": 8707,
+  "title": "Added more info about refs in the documentation",
+  "user": {
+    "login": "gyfis",
+    "id": 1632140,
+    "node_id": "MDQ6VXNlcjE2MzIxNDA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1632140?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gyfis",
+    "html_url": "https://github.com/gyfis",
+    "followers_url": "https://api.github.com/users/gyfis/followers",
+    "following_url": "https://api.github.com/users/gyfis/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gyfis/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gyfis/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gyfis/subscriptions",
+    "organizations_url": "https://api.github.com/users/gyfis/orgs",
+    "repos_url": "https://api.github.com/users/gyfis/repos",
+    "events_url": "https://api.github.com/users/gyfis/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gyfis/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2017-01-07T10:23:23Z",
+  "updated_at": "2017-01-12T16:02:54Z",
+  "closed_at": "2017-01-10T20:18:24Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8707",
+    "html_url": "https://github.com/facebook/react/pull/8707",
+    "diff_url": "https://github.com/facebook/react/pull/8707.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8707.patch"
+  },
+  "body": "I want to propose some changes to the Refs and the DOM documentation page. \r\n- Make it clear that string refs are legacy. It seems that this information got lost during the transition to new docs and only some part stayed the same, which was confusing when first reading the docs.\r\n- Clarify and explain that during render, if the ref callback is provided, it will get called twice, first with `null` and then with the rendered DOM element. Discussed in https://github.com/facebook/react/issues/4533 and first proposed docs change in PR #8333.\r\n\r\nI've also planned on adding an example for passing the refs up the component chain based on something I've needed to solve myself (e.g. you want to connect two dynamic components by line in React, so you need to both use refs and propagate them up the chain), and while it would be great to read up on this in the docs, it may be too specific for this section; I'd be happy to hear any recommendations.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

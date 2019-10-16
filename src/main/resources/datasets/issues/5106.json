@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5106",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5106/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5106/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5106/events",
+  "html_url": "https://github.com/facebook/react/pull/5106",
+  "id": 110639718,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDcyNjExNTI=",
+  "number": 5106,
+  "title": "Grammar, jsx syntax highlighting",
+  "user": {
+    "login": "mbrookes",
+    "id": 357702,
+    "node_id": "MDQ6VXNlcjM1NzcwMg==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/357702?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mbrookes",
+    "html_url": "https://github.com/mbrookes",
+    "followers_url": "https://api.github.com/users/mbrookes/followers",
+    "following_url": "https://api.github.com/users/mbrookes/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mbrookes/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mbrookes/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mbrookes/subscriptions",
+    "organizations_url": "https://api.github.com/users/mbrookes/orgs",
+    "repos_url": "https://api.github.com/users/mbrookes/repos",
+    "events_url": "https://api.github.com/users/mbrookes/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mbrookes/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2015-10-09T11:31:00Z",
+  "updated_at": "2015-10-09T13:14:38Z",
+  "closed_at": "2015-10-09T13:14:38Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5106",
+    "html_url": "https://github.com/facebook/react/pull/5106",
+    "diff_url": "https://github.com/facebook/react/pull/5106.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5106.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "mbrookes",
+    "id": 357702,
+    "node_id": "MDQ6VXNlcjM1NzcwMg==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/357702?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mbrookes",
+    "html_url": "https://github.com/mbrookes",
+    "followers_url": "https://api.github.com/users/mbrookes/followers",
+    "following_url": "https://api.github.com/users/mbrookes/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mbrookes/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mbrookes/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mbrookes/subscriptions",
+    "organizations_url": "https://api.github.com/users/mbrookes/orgs",
+    "repos_url": "https://api.github.com/users/mbrookes/repos",
+    "events_url": "https://api.github.com/users/mbrookes/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mbrookes/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

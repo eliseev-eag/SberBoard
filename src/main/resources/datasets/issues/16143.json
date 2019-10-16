@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16143",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16143/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16143/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16143/events",
+  "html_url": "https://github.com/facebook/react/pull/16143",
+  "id": 468812219,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjk4MTY5Mjc0",
+  "number": 16143,
+  "title": "Support React.createContext in ReactShallowRenderer",
+  "user": {
+    "login": "hassaans",
+    "id": 16869548,
+    "node_id": "MDQ6VXNlcjE2ODY5NTQ4",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/16869548?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/hassaans",
+    "html_url": "https://github.com/hassaans",
+    "followers_url": "https://api.github.com/users/hassaans/followers",
+    "following_url": "https://api.github.com/users/hassaans/following{/other_user}",
+    "gists_url": "https://api.github.com/users/hassaans/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/hassaans/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/hassaans/subscriptions",
+    "organizations_url": "https://api.github.com/users/hassaans/orgs",
+    "repos_url": "https://api.github.com/users/hassaans/repos",
+    "events_url": "https://api.github.com/users/hassaans/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/hassaans/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-07-16T18:56:43Z",
+  "updated_at": "2019-07-25T04:52:20Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16143",
+    "html_url": "https://github.com/facebook/react/pull/16143",
+    "diff_url": "https://github.com/facebook/react/pull/16143.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16143.patch"
+  },
+  "body": "Fixes #14442\r\n\r\n- Adds support for `React.createContext` and `contextType` in React.ShallowRenderer.\r\n\r\n- We're still supporting [contextTypes](https://reactjs.org/docs/context.html#legacy-api) in React 16.x releases, so the code for that was not removed.",
+  "closed_by": null
+}

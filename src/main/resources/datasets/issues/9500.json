@@ -1,0 +1,99 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9500",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9500/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9500/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9500/events",
+  "html_url": "https://github.com/facebook/react/issues/9500",
+  "id": 223596050,
+  "node_id": "MDU6SXNzdWUyMjM1OTYwNTA=",
+  "number": 9500,
+  "title": "yarn prettier runs a too long command for OS windows",
+  "user": {
+    "login": "lamo2k123",
+    "id": 674847,
+    "node_id": "MDQ6VXNlcjY3NDg0Nw==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/674847?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lamo2k123",
+    "html_url": "https://github.com/lamo2k123",
+    "followers_url": "https://api.github.com/users/lamo2k123/followers",
+    "following_url": "https://api.github.com/users/lamo2k123/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lamo2k123/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lamo2k123/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lamo2k123/subscriptions",
+    "organizations_url": "https://api.github.com/users/lamo2k123/orgs",
+    "repos_url": "https://api.github.com/users/lamo2k123/repos",
+    "events_url": "https://api.github.com/users/lamo2k123/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lamo2k123/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 71502270,
+      "node_id": "MDU6TGFiZWw3MTUwMjI3MA==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Build%20Infrastructure",
+      "name": "Component: Build Infrastructure",
+      "color": "f9d0c4",
+      "default": false
+    },
+    {
+      "id": 588833528,
+      "node_id": "MDU6TGFiZWw1ODg4MzM1Mjg=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Difficulty:%20medium",
+      "name": "Difficulty: medium",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    },
+    {
+      "id": 717031390,
+      "node_id": "MDU6TGFiZWw3MTcwMzEzOTA=",
+      "url": "https://api.github.com/repos/facebook/react/labels/good%20first%20issue",
+      "name": "good first issue",
+      "color": "6ce26a",
+      "default": true
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2017-04-22T22:03:35Z",
+  "updated_at": "2017-11-05T21:06:09Z",
+  "closed_at": "2017-11-05T21:06:09Z",
+  "author_association": "CONTRIBUTOR",
+  "body": "CLI `yarn prettier` return error too long command.\r\n\r\nThe problem is only on windows OS. Checked on windows 10 x64 CLI cmd\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

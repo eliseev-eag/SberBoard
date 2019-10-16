@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16412",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16412/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16412/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16412/events",
+  "html_url": "https://github.com/facebook/react/issues/16412",
+  "id": 481453891,
+  "node_id": "MDU6SXNzdWU0ODE0NTM4OTE=",
+  "number": 16412,
+  "title": "[react profiler bug]Error: \"getCommitTree(): Unable to reconstruct tree for root \"1\" and commit 1\"",
+  "user": {
+    "login": "Zaynex",
+    "id": 13745971,
+    "node_id": "MDQ6VXNlcjEzNzQ1OTcx",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/13745971?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Zaynex",
+    "html_url": "https://github.com/Zaynex",
+    "followers_url": "https://api.github.com/users/Zaynex/followers",
+    "following_url": "https://api.github.com/users/Zaynex/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Zaynex/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Zaynex/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Zaynex/subscriptions",
+    "organizations_url": "https://api.github.com/users/Zaynex/orgs",
+    "repos_url": "https://api.github.com/users/Zaynex/repos",
+    "events_url": "https://api.github.com/users/Zaynex/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Zaynex/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 15,
+  "created_at": "2019-08-16T05:57:04Z",
+  "updated_at": "2019-09-18T03:08:27Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!-- please provide repro information here -->\r\n\r\n---------------------------------------------\r\nPlease do not remove the text below this line\r\n---------------------------------------------\r\n\r\nDevTools version: 4.0.2-2bcc6c6\r\n\r\nCall stack: at d (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:11:5744)\r\n    at e.getCommitTree (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:11:8526)\r\n    at Ai (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:56:274200)\r\n    at Ha (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:43:55890)\r\n    at bi (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:43:62939)\r\n    at Xl (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:43:99535)\r\n    at Hl (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:43:84255)\r\n    at Fl (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:43:81285)\r\n    at chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:43:25363\r\n    at n.unstable_runWithPriority (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:56:4368)\r\n\r\nComponent stack: in Ai\r\n    in div\r\n    in div\r\n    in div\r\n    in Or\r\n    in Unknown\r\n    in n\r\n    in Unknown\r\n    in div\r\n    in div\r\n    in Ua\r\n    in le\r\n    in ve\r\n    in ko\r\n    in Fl",
+  "closed_by": null
+}

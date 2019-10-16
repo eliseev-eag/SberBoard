@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4166",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4166/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4166/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4166/events",
+  "html_url": "https://github.com/facebook/react/issues/4166",
+  "id": 89199826,
+  "node_id": "MDU6SXNzdWU4OTE5OTgyNg==",
+  "number": 4166,
+  "title": "Use Inline Event Handlers for trapBubbledEventsLocal and the iOS Safari Click Hack",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2015-06-18T05:00:09Z",
+  "updated_at": "2017-10-04T11:29:58Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "body": "We currently do a lot of work at the end of mount to find all the nodes and attach listeners after the fact. This is severely impacting initial rendering performance of `<form />`, `<img />` and click handlers.\n\nInstead we can just use inline event handlers in the innerHTML string. For the iOS Safari hack it should be trivial. The handler doesn't even have to do anything.\n\nThe inline event handler would need to either redispatch the event, or call into some other event handler system. Probably a global listeners.\n\n``` js\nwindow._handleReactEvent = ...;\n```\n\n``` html\n<img onload=\"_handleReactEvent(event)\">\n```\n\nSince there could potentially be multiple Reacts, they should probably chain the handler if there already is one registered. (Although multiple Reacts in the same document is already pretty broken in this regard.)\n\nIt doesn't have to be a global. Since inline event handlers gets the element added as a `with(element)` scope around itself. It is equivalent to add it to the prototype:\n\n``` js\nElement.prototype._handleReactEvent = ...;\n```\n\nor\n\n``` js\nHTMLImgElement.prototype._handleReactEvent = ...;\n```\n\nThis makes them a bit more hidden, unobtrusive.\n\nWe still need to render this string for server-side rendering to avoid needing to change the HTML or wire up handlers after-the-fact on the client.\n\nSince these events can fire before React has loaded, we need to check for the existence of the handler before it is used.\n\n``` js\n<img onload=\"this._handleReactEvent&&_handleReactEvent(event)\">\n```\n\nIt is critical that this string is short - for innerHTML string concat performance and network performance. Yet it needs to be unlikely to collide with anything else.\n\nIs there a unicode character we could use?\n",
+  "closed_by": null
+}

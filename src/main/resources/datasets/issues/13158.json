@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13158",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13158/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13158/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13158/events",
+  "html_url": "https://github.com/facebook/react/pull/13158",
+  "id": 339002074,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTk5Nzk1NTQx",
+  "number": 13158,
+  "title": "Fix stack reporting with re-entrant ReactDOMServer calls",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-07-06T16:38:07Z",
+  "updated_at": "2018-07-11T18:42:32Z",
+  "closed_at": "2018-07-11T18:42:32Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13158",
+    "html_url": "https://github.com/facebook/react/pull/13158",
+    "diff_url": "https://github.com/facebook/react/pull/13158.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13158.patch"
+  },
+  "body": "### Depends on https://github.com/facebook/react/pull/13155\r\n\r\n### (Mostly) fixes https://github.com/facebook/react/issues/10188\r\n\r\nThis ensures that `(ReactDOM | ReactDOMServer) > ReactDOMServer > ... > ReactDOMServer` calls don't lose stacks when we exit the inner `ReactDOMServer`. We do this by keeping a reference to the previous implementation, and restoring it. I added tests that were failing before this change due to the missing stacks.\r\n\r\nSince we already need to replace and restore the inner reference to make `ReactDOM > ReactDOMServer` work, I reused the same mechanism for nested `ReactDOMServer` calls. Instead of tracking the \"current\" stack (or pushing and popping it), I'm using a closure to capture the relevant `this.stack`.\r\n\r\nI considered changing `ReactDebugCurrentFrame`'s API to expose `push` / `pop` for stack implementations instead of direct assignment. But it lives in `react` so relying on it would break usage of `react-dom@16.x` with `react@16.0`. We could maybe detect presence of `push` / `pop` and use them when they exist. For now I didn't see the benefit since Fiber isn't reentrant, and just restoring the value in `ReactDOMServer` is sufficient for most cases. But maybe I'll add this later as I work more on the warnings.\r\n\r\nNote: This doesn't currently handle the case where `ReactDOMServer` errors. I think that's okay given we didn't handle this case before either. I didn't want to try/finally it since it would make it more difficult to split DEV-only code.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11862",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11862/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11862/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11862/events",
+  "html_url": "https://github.com/facebook/react/issues/11862",
+  "id": 282412727,
+  "node_id": "MDU6SXNzdWUyODI0MTI3Mjc=",
+  "number": 11862,
+  "title": "ShallowRenderer not considering contextTypes when rendering children",
+  "user": {
+    "login": "Termit1975",
+    "id": 1929491,
+    "node_id": "MDQ6VXNlcjE5Mjk0OTE=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1929491?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Termit1975",
+    "html_url": "https://github.com/Termit1975",
+    "followers_url": "https://api.github.com/users/Termit1975/followers",
+    "following_url": "https://api.github.com/users/Termit1975/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Termit1975/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Termit1975/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Termit1975/subscriptions",
+    "organizations_url": "https://api.github.com/users/Termit1975/orgs",
+    "repos_url": "https://api.github.com/users/Termit1975/repos",
+    "events_url": "https://api.github.com/users/Termit1975/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Termit1975/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 204945357,
+      "node_id": "MDU6TGFiZWwyMDQ5NDUzNTc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Shallow%20Renderer",
+      "name": "Component: Shallow Renderer",
+      "color": "eb6420",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-12-15T12:26:55Z",
+  "updated_at": "2018-01-05T18:49:58Z",
+  "closed_at": "2018-01-05T18:49:58Z",
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nBug\r\n\r\n**What is the current behavior?**\r\nShallowRenderer not considering contextTypes.\r\n\r\n**Note: I was not able to easily include react-test-renderer in a fiddle so I include a unit test. \r\n\r\n ```\r\n    //Context used in shallow and normal rendering\r\n    const context = { appName: 'abc', mode: 'def' };\r\n\r\n    class TopLevelComponent extends React.Component {\r\n      render() { return <div>{this.props.children}</div>; }\r\n      getChildContext() { return context; }\r\n    }\r\n    TopLevelComponent.childContextTypes = { appName: PropTypes.string, mode: PropTypes.string };\r\n\r\n    class Component1 extends React.Component {\r\n      render() { return <div mode={this.context.mode} appname={this.context.appName}/>; }\r\n    }\r\n    Component1.contextTypes = { appName: PropTypes.string };\r\n\r\n    //Use shallow renderer and assert that we got appName but not mode\r\n    const shallowComponent1 = new ShallowRenderer().render(<Component1/>, context);\r\n    expect(shallowComponent1.props.appname).toBe('abc'); //Pass\r\n    expect(shallowComponent1.props.mode).toBeUndefined(); //This expectation fails\r\n\r\n    //Render Component1 under a component with childContext\r\n    const wrappedEl = React.createElement(() => <TopLevelComponent><Component1/></TopLevelComponent>);\r\n    const domNode = document.createElement('div');\r\n    ReactDOM.render(wrappedEl, domNode);\r\n    const html = domNode.innerHTML;    \r\n    expect(html).toContain('abc'); //Pass\r\n    expect(html).not.toContain('def'); //Pass: As you can see this property is undefined\r\n```\r\n\r\n**What is the expected behavior?**\r\nI would expect that when rendering Component1 with ShallowRenderer, render method would check Component1.contextTypes and mask any property that is not specified there just like function getMaskedContext(workInProgress, unmaskedContext) does in react-dom library.\r\n\r\nI fixed this behavior by changing render method like this: (inpired again by getMaskedContext)\r\n\r\n```\r\n  const oldRender = ShallowRenderer.prototype.render;\r\n  ShallowRenderer.prototype.render = function render(element) {\r\n\r\n    const unmaskedContext = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};\r\n\r\n    if (element && element.type && unmaskedContext) {\r\n      if (element.type.hasOwnProperty('contextTypes')) {\r\n        const context = {};\r\n        for (const key in element.type.contextTypes) {\r\n          context[key] = unmaskedContext[key];\r\n        }\r\n\r\n        arguments[1] = context;\r\n      }\r\n    }\r\n\r\n    return oldRender.apply(this, arguments);\r\n  };\r\n\r\n```\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nThis bug is for version 16. We are upgrading from React 15, we were using enzyme shallow rendering and this wasn't the behavior. It is difficult to say which part of the code has changed between React 15 and enzyme at this point but my code sample includes only code from react libraries.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

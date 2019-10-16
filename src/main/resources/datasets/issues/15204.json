@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15204",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15204/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15204/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15204/events",
+  "html_url": "https://github.com/facebook/react/issues/15204",
+  "id": 424679429,
+  "node_id": "MDU6SXNzdWU0MjQ2Nzk0Mjk=",
+  "number": 15204,
+  "title": "[react-hooks/exhaustive-deps] False positive firing",
+  "user": {
+    "login": "EugeneDraitsev",
+    "id": 16540432,
+    "node_id": "MDQ6VXNlcjE2NTQwNDMy",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/16540432?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/EugeneDraitsev",
+    "html_url": "https://github.com/EugeneDraitsev",
+    "followers_url": "https://api.github.com/users/EugeneDraitsev/followers",
+    "following_url": "https://api.github.com/users/EugeneDraitsev/following{/other_user}",
+    "gists_url": "https://api.github.com/users/EugeneDraitsev/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/EugeneDraitsev/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/EugeneDraitsev/subscriptions",
+    "organizations_url": "https://api.github.com/users/EugeneDraitsev/orgs",
+    "repos_url": "https://api.github.com/users/EugeneDraitsev/repos",
+    "events_url": "https://api.github.com/users/EugeneDraitsev/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/EugeneDraitsev/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 15,
+  "created_at": "2019-03-25T00:20:38Z",
+  "updated_at": "2019-10-09T14:04:18Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n\r\nI want to report a bug\r\n\r\n**What is the current behavior?**\r\n\r\neslint --fix trying to break my hook)\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\n\r\nI have a very simple hook:\r\n```jsx\r\nimport { useEffect, useState } from 'react'\r\n\r\nexport function useSwitchTab(trigger, tabsAmount, initialState = 0) {\r\n  const [currentTab, setTab] = useState(initialState - 1)\r\n\r\n  useEffect(() => {\r\n    setTab(currentTab + 1 >= tabsAmount ? 0 : currentTab + 1)\r\n  }, [tabsAmount, trigger])\r\n\r\n  return [currentTab, setTab]\r\n}\r\n```\r\nIf props `tabsAmount` or `trigger` will change, I need to increase `currentTab` value by 1. It works fine and looks ok for me, but in `eslint-plugin-react-hook` rule `react-hooks/exhaustive-deps` will warn here:\r\n\r\n> React Hook useEffect has a missing dependency: 'currentTab'. Either include it or remove the dependency array. You can also do a functional update 'setTab(c => ...)' if you only need 'c\r\n> urrentTab' in the 'setTab' call  react-hooks/exhaustive-deps\r\n\r\nAnd eslint --fix will break my code like this:\r\n\r\n```jsx\r\nimport { useEffect, useState } from 'react'\r\n\r\nexport function useSwitchTab(trigger, tabsAmount, initialState = 0) {\r\n  const [currentTab, setTab] = useState(initialState - 1)\r\n\r\n  useEffect(() => {\r\n    setTab(currentTab + 1 >= tabsAmount ? 0 : currentTab + 1)\r\n  }, [currentTab, tabsAmount, trigger])\r\n\r\n  return [currentTab, setTab]\r\n}\r\n```\r\nIt will add `currentTab` in deps for useEffect and this will create **endless loop**. \r\n\r\n\r\n**What is the expected behavior?**\r\n\r\nEslint shouldn't fix this warning with --fix option, It may break the code.\r\n\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nreact: 16.8.5\r\neslint-plugin-react-hooks: 1.6.0",
+  "closed_by": null
+}

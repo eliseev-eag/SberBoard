@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13602",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13602/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13602/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13602/events",
+  "html_url": "https://github.com/facebook/react/pull/13602",
+  "id": 358345543,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjE0MTI1NDM4",
+  "number": 13602,
+  "title": "Hydration warnings with DOM diff in react-reconciler (#10085)",
+  "user": {
+    "login": "sompylasar",
+    "id": 498274,
+    "node_id": "MDQ6VXNlcjQ5ODI3NA==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/498274?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sompylasar",
+    "html_url": "https://github.com/sompylasar",
+    "followers_url": "https://api.github.com/users/sompylasar/followers",
+    "following_url": "https://api.github.com/users/sompylasar/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sompylasar/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sompylasar/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sompylasar/subscriptions",
+    "organizations_url": "https://api.github.com/users/sompylasar/orgs",
+    "repos_url": "https://api.github.com/users/sompylasar/repos",
+    "events_url": "https://api.github.com/users/sompylasar/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sompylasar/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 20,
+  "created_at": "2018-09-09T03:13:33Z",
+  "updated_at": "2019-04-26T12:45:23Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13602",
+    "html_url": "https://github.com/facebook/react/pull/13602",
+    "diff_url": "https://github.com/facebook/react/pull/13602.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13602.patch"
+  },
+  "body": "An attempt to implement the hydration warning and DOM diff in react-reconciler package as requested by @gaearon here: https://github.com/facebook/react/pull/12063#pullrequestreview-142612751\r\n\r\n> What would diffing look like if it was implemented in the reconciler? Feel free to change host config API if necessary — the goal is that all hydratable renderers would get nice warnings, not just DOM.\r\n\r\nThe tests and fixtures were copied from the original PR: https://github.com/facebook/react/pull/12063 and slightly modified (see my review below).",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5610",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5610/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5610/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5610/events",
+  "html_url": "https://github.com/facebook/react/pull/5610",
+  "id": 120605452,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTI3NzE5MzY=",
+  "number": 5610,
+  "title": "Change devtools install message on file: URLs",
+  "user": {
+    "login": "yangshun",
+    "id": 1315101,
+    "node_id": "MDQ6VXNlcjEzMTUxMDE=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1315101?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/yangshun",
+    "html_url": "https://github.com/yangshun",
+    "followers_url": "https://api.github.com/users/yangshun/followers",
+    "following_url": "https://api.github.com/users/yangshun/following{/other_user}",
+    "gists_url": "https://api.github.com/users/yangshun/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/yangshun/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/yangshun/subscriptions",
+    "organizations_url": "https://api.github.com/users/yangshun/orgs",
+    "repos_url": "https://api.github.com/users/yangshun/repos",
+    "events_url": "https://api.github.com/users/yangshun/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/yangshun/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 17,
+  "created_at": "2015-12-06T03:40:11Z",
+  "updated_at": "2015-12-10T18:27:22Z",
+  "closed_at": "2015-12-10T16:55:57Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5610",
+    "html_url": "https://github.com/facebook/react/pull/5610",
+    "diff_url": "https://github.com/facebook/react/pull/5610.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5610.patch"
+  },
+  "body": "Fixes #5608 \n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

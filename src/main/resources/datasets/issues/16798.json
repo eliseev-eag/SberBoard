@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16798",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16798/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16798/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16798/events",
+  "html_url": "https://github.com/facebook/react/pull/16798",
+  "id": 494298971,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzE4MDgxMzA3",
+  "number": 16798,
+  "title": "[react-devtools-shared] Added string type check for object name prop in getDisplayName function",
+  "user": {
+    "login": "LetItRock",
+    "id": 2607232,
+    "node_id": "MDQ6VXNlcjI2MDcyMzI=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/2607232?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/LetItRock",
+    "html_url": "https://github.com/LetItRock",
+    "followers_url": "https://api.github.com/users/LetItRock/followers",
+    "following_url": "https://api.github.com/users/LetItRock/following{/other_user}",
+    "gists_url": "https://api.github.com/users/LetItRock/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/LetItRock/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/LetItRock/subscriptions",
+    "organizations_url": "https://api.github.com/users/LetItRock/orgs",
+    "repos_url": "https://api.github.com/users/LetItRock/repos",
+    "events_url": "https://api.github.com/users/LetItRock/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/LetItRock/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-09-16T22:03:33Z",
+  "updated_at": "2019-09-18T15:58:40Z",
+  "closed_at": "2019-09-17T20:17:04Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16798",
+    "html_url": "https://github.com/facebook/react/pull/16798",
+    "diff_url": "https://github.com/facebook/react/pull/16798.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16798.patch"
+  },
+  "body": "Fixes issue #16685\r\n\r\nI've added a small fix in ```getDisplayName``` function from ```utils.js``` file for the case when ```type``` argument doesn't have a ```displayName``` property, but has ```name``` property with incorrect value ex. object. That case means that developer who is using react has in the code something like this: \r\n```\r\nconst Icon = () => {...}\r\nIcon.name = { foo: 'bar' };\r\n```\r\nDevTools relay on displayName/name properties when displaying component names in the tree. \r\n```getDisplayName``` function requires displayName/name properties to be a string values, otherwise it will use fallback name - 'Anonymous'. \r\n\r\nTests are included.\r\nYou can find longer description of what was wrong in the issue.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

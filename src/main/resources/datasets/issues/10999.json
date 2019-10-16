@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10999",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10999/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10999/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10999/events",
+  "html_url": "https://github.com/facebook/react/pull/10999",
+  "id": 261879354,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ0MDQ4NzYw",
+  "number": 10999,
+  "title": "Update Reference-readme to remove React.DOM",
+  "user": {
+    "login": "BookOfGreg",
+    "id": 637868,
+    "node_id": "MDQ6VXNlcjYzNzg2OA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/637868?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/BookOfGreg",
+    "html_url": "https://github.com/BookOfGreg",
+    "followers_url": "https://api.github.com/users/BookOfGreg/followers",
+    "following_url": "https://api.github.com/users/BookOfGreg/following{/other_user}",
+    "gists_url": "https://api.github.com/users/BookOfGreg/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/BookOfGreg/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/BookOfGreg/subscriptions",
+    "organizations_url": "https://api.github.com/users/BookOfGreg/orgs",
+    "repos_url": "https://api.github.com/users/BookOfGreg/repos",
+    "events_url": "https://api.github.com/users/BookOfGreg/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/BookOfGreg/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2017-09-30T23:20:18Z",
+  "updated_at": "2017-10-01T10:53:01Z",
+  "closed_at": "2017-10-01T10:53:01Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10999",
+    "html_url": "https://github.com/facebook/react/pull/10999",
+    "diff_url": "https://github.com/facebook/react/pull/10999.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10999.patch"
+  },
+  "body": "`React.DOM` is now Undefined in React 16 so `React.DOM.div` or `React.DOM.button` are no longer possible.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

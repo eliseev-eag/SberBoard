@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3876",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3876/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3876/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3876/events",
+  "html_url": "https://github.com/facebook/react/pull/3876",
+  "id": 76281274,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzU0MDI3Mjg=",
+  "number": 3876,
+  "title": "Update wording in \"working with the browser\"",
+  "user": {
+    "login": "garethnic",
+    "id": 1523598,
+    "node_id": "MDQ6VXNlcjE1MjM1OTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1523598?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/garethnic",
+    "html_url": "https://github.com/garethnic",
+    "followers_url": "https://api.github.com/users/garethnic/followers",
+    "following_url": "https://api.github.com/users/garethnic/following{/other_user}",
+    "gists_url": "https://api.github.com/users/garethnic/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/garethnic/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/garethnic/subscriptions",
+    "organizations_url": "https://api.github.com/users/garethnic/orgs",
+    "repos_url": "https://api.github.com/users/garethnic/repos",
+    "events_url": "https://api.github.com/users/garethnic/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/garethnic/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-05-14T08:22:44Z",
+  "updated_at": "2015-05-16T13:53:58Z",
+  "closed_at": "2015-05-16T13:53:56Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3876",
+    "html_url": "https://github.com/facebook/react/pull/3876",
+    "diff_url": "https://github.com/facebook/react/pull/3876.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3876.patch"
+  },
+  "body": "Change the order of words.\n",
+  "closed_by": {
+    "login": "garethnic",
+    "id": 1523598,
+    "node_id": "MDQ6VXNlcjE1MjM1OTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1523598?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/garethnic",
+    "html_url": "https://github.com/garethnic",
+    "followers_url": "https://api.github.com/users/garethnic/followers",
+    "following_url": "https://api.github.com/users/garethnic/following{/other_user}",
+    "gists_url": "https://api.github.com/users/garethnic/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/garethnic/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/garethnic/subscriptions",
+    "organizations_url": "https://api.github.com/users/garethnic/orgs",
+    "repos_url": "https://api.github.com/users/garethnic/repos",
+    "events_url": "https://api.github.com/users/garethnic/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/garethnic/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

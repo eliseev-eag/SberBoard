@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15344",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15344/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15344/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15344/events",
+  "html_url": "https://github.com/facebook/react/issues/15344",
+  "id": 430089125,
+  "node_id": "MDU6SXNzdWU0MzAwODkxMjU=",
+  "number": 15344,
+  "title": "useReducer's dispatch should return a promise which resolves once its action has been delivered",
+  "user": {
+    "login": "pelotom",
+    "id": 128019,
+    "node_id": "MDQ6VXNlcjEyODAxOQ==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/128019?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/pelotom",
+    "html_url": "https://github.com/pelotom",
+    "followers_url": "https://api.github.com/users/pelotom/followers",
+    "following_url": "https://api.github.com/users/pelotom/following{/other_user}",
+    "gists_url": "https://api.github.com/users/pelotom/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/pelotom/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/pelotom/subscriptions",
+    "organizations_url": "https://api.github.com/users/pelotom/orgs",
+    "repos_url": "https://api.github.com/users/pelotom/repos",
+    "events_url": "https://api.github.com/users/pelotom/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/pelotom/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 1109410193,
+      "node_id": "MDU6TGFiZWwxMTA5NDEwMTkz",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Hooks",
+      "name": "Component: Hooks",
+      "color": "c2f27b",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2019-04-07T00:04:45Z",
+  "updated_at": "2019-09-27T21:10:52Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "(This is a spinoff from [this thread](https://github.com/facebook/react/issues/15240).)\r\n\r\nIt's sometimes useful to be able to dispatch an action from within an async function, wait for the action to transform the state, and then use the resulting state to determine possible further async work to do. For this purpose it's possible to define a `useNext` hook which returns a promise of the next value:\r\n\r\n```js\r\nfunction useNext(value) {\r\n  const valueRef = useRef(value);\r\n  const resolvesRef = useRef([]);\r\n  useEffect(() => {\r\n    if (valueRef.current !== value) {\r\n      for (const resolve of resolvesRef.current) {\r\n        resolve(value);\r\n      }\r\n      resolvesRef.current = [];\r\n      valueRef.current = value;\r\n    }\r\n  }, [value]);\r\n  return () => new Promise(resolve => {\r\n    resolvesRef.current.push(resolve);\r\n  });\r\n}\r\n```\r\n\r\nand use it like so:\r\n\r\n```js\r\nconst nextState = useNext(state);\r\n\r\nuseEffect(() => {\r\n  fetchStuff(state);\r\n}, []);\r\n\r\nasync function fetchStuff(state) {\r\n  dispatch({ type: 'START_LOADING' });\r\n  \r\n  let data = await xhr.post('/api/data');\r\n  dispatch({ type: 'RECEIVE_DATA', data });\r\n  \r\n  // get the new state after the action has taken effect\r\n  state = await nextState();\r\n\r\n  if (!state.needsMoreData) return;\r\n\r\n  data = await xhr.post('/api/more-data');\r\n  dispatch({ type: 'RECEIVE_MORE_DATA', data });\r\n}\r\n```\r\n\r\n\r\nThis is all well and good, but `useNext` has a fundamental limitation: it only resolves promises when the state _changes_... so if dispatching an action resulted in the same state (thus causing `useReducer` to [bail out](https://reactjs.org/docs/hooks-reference.html#bailing-out-of-a-state-update)), our async function would hang waiting for an update that wasn't coming.\r\n\r\nWhat we _really_ want here is a way to obtain the state after the last dispatch has taken effect, whether or not it resulted in the state changing. Currently I'm not aware of a foolproof way to implement this in userland (happy to be corrected on this point). But it seems like it could be a very useful feature of `useReducer`'s `dispatch` function itself to return a promise of the state resulting from reducing by the action. Then we could rewrite the preceding example as\r\n\r\n```js\r\nuseEffect(() => {\r\n  fetchStuff(state);\r\n}, []);\r\n\r\nasync function fetchStuff(state) {\r\n  dispatch({ type: 'START_LOADING' });\r\n  \r\n  let data = await xhr.post('/api/data');\r\n  state = await dispatch({ type: 'RECEIVE_DATA', data });\r\n  \r\n  if (!state.needsMoreData) return;\r\n\r\n  data = await xhr.post('/api/more-data');\r\n  dispatch({ type: 'RECEIVE_MORE_DATA', data });\r\n}\r\n```\r\n\r\n## EDIT\r\n\r\nThinking about this a little more, the promise returned from `dispatch` doesn't need to carry the next state, because there are other situations where you want to obtain the latest state too and we can already solve that with a simple ref. The narrowly-defined problem is: we need to be able to wait until after a `dispatch()` has taken affect. So `dispatch` could just return a `Promise<void>`:\r\n\r\n```js\r\nconst stateRef = useRef(state);\r\nuseEffect(() => {\r\n  stateRef.current = state;\r\n}, [state]);\r\n\r\nuseEffect(() => {\r\n  fetchStuff();\r\n}, []);\r\n\r\nasync function fetchStuff() {\r\n  dispatch({ type: 'START_LOADING' });\r\n  \r\n  let data = await xhr.post('/api/data');\r\n\r\n  // can look at current state here too\r\n  if (!stateRef.current.shouldReceiveData) return;\r\n  \r\n  await dispatch({ type: 'RECEIVE_DATA', data });\r\n\r\n  if (!stateRef.current.needsMoreData) return;\r\n\r\n  data = await xhr.post('/api/more-data');\r\n  dispatch({ type: 'RECEIVE_MORE_DATA', data });\r\n}\r\n```",
+  "closed_by": null
+}

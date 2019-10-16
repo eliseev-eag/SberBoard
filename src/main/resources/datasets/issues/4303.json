@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4303",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4303/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4303/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4303/events",
+  "html_url": "https://github.com/facebook/react/pull/4303",
+  "id": 93302927,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzkyNzc5NzQ=",
+  "number": 4303,
+  "title": "Make ResponderEventPlugin work with DOM renderer (not in working state)",
+  "user": {
+    "login": "dieppe",
+    "id": 77742,
+    "node_id": "MDQ6VXNlcjc3NzQy",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/77742?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dieppe",
+    "html_url": "https://github.com/dieppe",
+    "followers_url": "https://api.github.com/users/dieppe/followers",
+    "following_url": "https://api.github.com/users/dieppe/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dieppe/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dieppe/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dieppe/subscriptions",
+    "organizations_url": "https://api.github.com/users/dieppe/orgs",
+    "repos_url": "https://api.github.com/users/dieppe/repos",
+    "events_url": "https://api.github.com/users/dieppe/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dieppe/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 347968397,
+      "node_id": "MDU6TGFiZWwzNDc5NjgzOTc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Unsolved",
+      "name": "Resolution: Unsolved",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2015-07-06T15:13:39Z",
+  "updated_at": "2016-03-26T22:23:54Z",
+  "closed_at": "2016-03-26T22:22:39Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4303",
+    "html_url": "https://github.com/facebook/react/pull/4303",
+    "diff_url": "https://github.com/facebook/react/pull/4303.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4303.patch"
+  },
+  "body": "**DISCLAIMER**: this is my first PR to `react`, and I may have missed a lot, since I'm not yet fully acquainted with the internals of `react`, nor am I aware of the possible changes underway in the event system (or any other system, as a matter of fact :wink:).  \nAlso, this PR is not intended to be merged (at least for the time being), but is here as a base for discussion.\n\n---\n\nThis is an attempt at making the `ResponderEventPlugin` closer to working on DOM :smiley:.\n\nThe problems are as follow:\n1. there are some inconsistencies between `react-native` and `react-dom` `Touch` events:\n   - W3C events have a `timeStamp` property on the `Event` object, not on the `Touch` object,\n   - W3C events `changedTouches` property is not an `Array`, but a `TouchList`.\n2. the plugins only handle touch events right now but should be able to handle mouse{Down,Move,Up} events as well,\n3. the `timeStamp` property is not always reliable, see https://github.com/zilverline/react-tap-event-plugin/issues/19.\n\nHere are some ideas:\n- Regarding 1., we can change the way `Touch*` events are created on react native so that they match more closely the W3C events,\n- Regarding 2., I am not sure how to proceed here. First of, it should not be hard to make the `ResponderTouchHistoryStore` work with `Mouse` event, since one can view the `Mouse` event as the unique `Touch` object in both `changedTouches` and `targetTouches` properties.  \n  But we should not in any case use the same `ResponderHistory` for `Touch` and `Mouse` event. First because I don't see how that can make sense :wink:, and second because `Mouse` events can be fired after a `Touch` event, describing the same interaction, if the `Touch` event [was not prevented](http://www.w3.org/TR/touch-events/#mouse-events).  \n  Finally, I fail to see how we can make the `ResponderEventPlugin` truly shared between all platforms (native, browser, ...) if it needs to know about all this...  \n  It seems there was a plan as to how to handle the `Mouse` events during the react-native implementation, as per this comment (in `ReactNativeEventEmitter.js`):\n\n``` js\n  /**\n   * [...]\n   * Web desktop polyfills only need to construct a fake touch event with\n   * identifier 0, also abandoning traditional click handlers.\n   */\n```\n- Regarding 3., again, I'm not sure how to proceed. The easiest way to deal with that is to use `Date.now` instead of the `timeStamp` property, but I'm unclear on the implications. Is there a way to rewrite the `timeStamp` property of the events if we detect we are on iOS 8 **before** any EventPlugin is called?\n\nI included the `PanResponder` from `react-native` as I don't see anything preventing us from using it on desktop too. I did not modify anything, and so it crashes on `Mouse` events for now, but since it depends on the `ResponderEventPlugin`, we should first decide on what to do there.\n\nTo conclude, nothing prevents the `ResponderEventPlugin` to work properly for `Touch` and `Mouse` events, it's only a matter of finding the right way to do that. Since it's such a nice abstraction for event handling, I'm all :ear:s :wink:.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

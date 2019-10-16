@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7612",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7612/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7612/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7612/events",
+  "html_url": "https://github.com/facebook/react/issues/7612",
+  "id": 173991283,
+  "node_id": "MDU6SXNzdWUxNzM5OTEyODM=",
+  "number": 7612,
+  "title": "ReactTestRenderer custom depth rendering",
+  "user": {
+    "login": "lasekio",
+    "id": 8137000,
+    "node_id": "MDQ6VXNlcjgxMzcwMDA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/8137000?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lasekio",
+    "html_url": "https://github.com/lasekio",
+    "followers_url": "https://api.github.com/users/lasekio/followers",
+    "following_url": "https://api.github.com/users/lasekio/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lasekio/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lasekio/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lasekio/subscriptions",
+    "organizations_url": "https://api.github.com/users/lasekio/orgs",
+    "repos_url": "https://api.github.com/users/lasekio/repos",
+    "events_url": "https://api.github.com/users/lasekio/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lasekio/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710400704,
+      "node_id": "MDU6TGFiZWw3MTA0MDA3MDQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Test%20Renderer",
+      "name": "Component: Test Renderer",
+      "color": "006b75",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-08-30T11:08:45Z",
+  "updated_at": "2017-10-04T12:31:27Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "**Do you want to request a _feature_ or report a _bug_?**\nFeature\n\n**What is the current behavior?**\n\n``` jsx\n// MyComponent.js\nimport React from \"react\";\nimport ThirdPartyComponent from 'third-party-component';\n\nfunction MyInternalComponent() {\n  return <div>test</div>;\n}\n\nexport default function MyComponent() {\n  return <div>\n    <MyInternalComponent></MyInternalComponent>\n    <ThirdPartyComponent someProp={true}></ThirdPartyComponent>\n  </div>;\n}\n\n// test.js\nimport ReactTestRenderer from \"react-test-renderer\";\nimport React from \"react\";\nimport MyComponent from \"./MyComponent.js\";\n\nconst renderer = ReactTestRenderer.create(<MyComponent/>);\n\nconsole.log(renderer.toJSON());\n```\n\nThis renders whole tree of DOM which is actually expected behaviour. The problem is, that I dont want render `ThirdPartyComponent`, only `MyInternalComponent`.  Shallow renderer isnt answer because shallow would not render `MyInternalComponent` at all. Which is problem because it's hard to divide component into smaller, internal chunks.\n\nI have done some work in order to achieve this in #5513. It was fully working patch. It was done as part of ShallowRenderer but now we have TestRenderer. Besides this patch is pretty old so resolving conflicts would be very hard.\n\n**What is the expected behavior?**\n\nI would love to provide \"blacklist\" of components which I don't want to render:\n\n``` js\nimport ThirdPartyComponent from 'third-party-component';\n//...\n\nconst renderer = ReactTestRenderer.create(\n    <MyComponent/>, \n    {\n        dontRender: [ThirdPartyComponent]\n    }\n);\n```\n\nThis would return jsx:\n\n``` js\n<div>\n    <div>test</div>\n    <ThirdPartyComponent someProp={true}></ThirdPartyComponent>\n</div>\n```\n\nSo we can test props returned for `ThirdPartyComponent` and internal logic.\n\nIt's combine of full and shallow renderer.\n\nI have some ideas of implementation but i dont want waste my time writing code which won't be marged into master anyway. \n\nThis possibly would allow to resolve https://github.com/airbnb/enzyme/issues/250.\n",
+  "closed_by": null
+}

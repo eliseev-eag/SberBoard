@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10783",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10783/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10783/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10783/events",
+  "html_url": "https://github.com/facebook/react/pull/10783",
+  "id": 259946198,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQyNjc2MDU0",
+  "number": 10783,
+  "title": "Add Fragment as a named export to React",
+  "user": {
+    "login": "clemmy",
+    "id": 3696934,
+    "node_id": "MDQ6VXNlcjM2OTY5MzQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3696934?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/clemmy",
+    "html_url": "https://github.com/clemmy",
+    "followers_url": "https://api.github.com/users/clemmy/followers",
+    "following_url": "https://api.github.com/users/clemmy/following{/other_user}",
+    "gists_url": "https://api.github.com/users/clemmy/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/clemmy/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/clemmy/subscriptions",
+    "organizations_url": "https://api.github.com/users/clemmy/orgs",
+    "repos_url": "https://api.github.com/users/clemmy/repos",
+    "events_url": "https://api.github.com/users/clemmy/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/clemmy/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 139653724,
+      "node_id": "MDU6TGFiZWwxMzk2NTM3MjQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Core%20Utilities",
+      "name": "Component: Core Utilities",
+      "color": "c5def5",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 64,
+  "created_at": "2017-09-22T21:46:04Z",
+  "updated_at": "2018-03-13T06:00:37Z",
+  "closed_at": "2017-10-31T00:52:41Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10783",
+    "html_url": "https://github.com/facebook/react/pull/10783",
+    "diff_url": "https://github.com/facebook/react/pull/10783.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10783.patch"
+  },
+  "body": "This PR is a part of the bigger change to introduce `<></>` fragment syntax to JSX. With this named export, we'll be able to de-sugar `<></>` into `React.createElement(React.Fragment)` calls.\r\n\r\n**UPDATE**:\r\n\r\n# Summary of discussions in PR:\r\n\r\nWe want to align fragment with array behavior. \r\n\r\n- top level keyed React.Fragment => create fragment fiber\r\n- top level un-keyed React.Fragment => no fragment fiber created\r\n- nested fragments => fragment fiber created\r\n- React.Children will treat fragments as a terminal element\r\n- In this gist (https://gist.github.com/clemmy/b3ef00f9507909429d8aa0d3ee4f986b), switching between arrays and un-keyed fragments will preserve state (e.g. Child will be preserved when rendering <>[<Child />]</> and then <><><Child /></></>)\r\n\r\nYou can think of it as the quantum theory of fragments. It has both array-like and element-like properties. 😆 \r\n\r\n",
+  "closed_by": {
+    "login": "clemmy",
+    "id": 3696934,
+    "node_id": "MDQ6VXNlcjM2OTY5MzQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3696934?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/clemmy",
+    "html_url": "https://github.com/clemmy",
+    "followers_url": "https://api.github.com/users/clemmy/followers",
+    "following_url": "https://api.github.com/users/clemmy/following{/other_user}",
+    "gists_url": "https://api.github.com/users/clemmy/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/clemmy/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/clemmy/subscriptions",
+    "organizations_url": "https://api.github.com/users/clemmy/orgs",
+    "repos_url": "https://api.github.com/users/clemmy/repos",
+    "events_url": "https://api.github.com/users/clemmy/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/clemmy/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

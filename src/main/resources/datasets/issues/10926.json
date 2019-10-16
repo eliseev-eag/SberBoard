@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10926",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10926/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10926/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10926/events",
+  "html_url": "https://github.com/facebook/react/pull/10926",
+  "id": 261406919,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQzNzE0ODMy",
+  "number": 10926,
+  "title": "Gatsby markdown cleanup",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-09-28T17:56:00Z",
+  "updated_at": "2017-09-28T19:08:43Z",
+  "closed_at": "2017-09-28T19:08:41Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10926",
+    "html_url": "https://github.com/facebook/react/pull/10926",
+    "diff_url": "https://github.com/facebook/react/pull/10926.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10926.patch"
+  },
+  "body": "* Removed unnecessary `<script>` tags from `index.md`\r\n* Added [`gatsby-plugin-twitter`](https://www.gatsbyjs.org/packages/gatsby-plugin-twitter/) (rather than embedding `<script>` tags in markdown) to auto-load Twitter JS for embedded tweets whenever a blog post with an embedded tweet is loaded.\r\n\r\n#### Screenshot of [/blog/2013/06/02/jsfiddle-integration.html](https://59cd37b3a6188f07e19012b1--reactjs.netlify.com/blog/2013/06/02/jsfiddle-integration.html)\r\n<img width=\"617\" alt=\"screen shot 2017-09-28 at 10 58 38 am\" src=\"https://user-images.githubusercontent.com/29597/30982367-03952afa-a43c-11e7-8c72-0d14be0bacd8.png\">\r\n",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

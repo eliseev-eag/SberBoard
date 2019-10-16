@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11441",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11441/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11441/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11441/events",
+  "html_url": "https://github.com/facebook/react/issues/11441",
+  "id": 270994840,
+  "node_id": "MDU6SXNzdWUyNzA5OTQ4NDA=",
+  "number": 11441,
+  "title": "Remove support for cloneElement(getMountedInstance()) in shallow renderer",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 204945357,
+      "node_id": "MDU6TGFiZWwyMDQ5NDUzNTc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Shallow%20Renderer",
+      "name": "Component: Shallow Renderer",
+      "color": "eb6420",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-11-03T14:22:34Z",
+  "updated_at": "2017-11-03T16:16:56Z",
+  "closed_at": "2017-11-03T16:16:56Z",
+  "author_association": "MEMBER",
+  "body": "There was a test added as part of shallow renderer rewrite (#9426) in https://github.com/facebook/react/pull/9426/commits/fc1c6f913cb74a2cb1ce1cfe6ba91b431786c4ac that I don’t understand.\r\n\r\nIt tests that you can take an *instance*, call `cloneElement` on it, and pass the result to the shallow renderer. If we are doing this internally this seems like a misunderstanding of how the API should work, and we need to fix those callsites to read `getRenderOutput()` instead of `getMountedInstance()`.\r\n\r\nYou can see the test is wrong because if you change it to render to a *different* shallow renderer like this\r\n\r\n```js\r\n    const shallowRenderer = createRenderer();\r\n    let result = shallowRenderer.render(<SimpleComponent foo=\"foo\" />);\r\n    expect(result).toEqual(<div>foo:bar</div>);\r\n    const instance = shallowRenderer.getMountedInstance();\r\n\r\n    const shallowRenderer2 = createRenderer();\r\n    const cloned = React.cloneElement(instance, {foo: 'baz'});\r\n    result = shallowRenderer2.render(cloned);\r\n    expect(result).toEqual(<div>baz:bar</div>);\r\n```\r\n\r\nit will fail with \r\n\r\n```\r\nTypeError: Cannot read property 'prototype' of undefined\r\n```\r\n\r\nThe argument we’re passing in this case is **not** a proper React element and doesn’t actually have `element.type`. It just mostly “happens” to work because both React elements and ShallowRenderer instances have `.props` on them, and code almost doesn’t read anything else in the update path. This [is an example hack](https://github.com/facebook/react/blob/779d23f72e7f2c763f7a3e3373a4134c54356fd6/packages/react-test-renderer/src/ReactShallowRenderer.js#L147-L148) that we needed because of this.\r\n\r\nI think we should just delete this test, and fix the internal callsites. It was never intentionally supported, and prevents me from doing some other fixes in the shalllow renderer.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

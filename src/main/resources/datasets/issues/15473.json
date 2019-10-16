@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15473",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15473/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15473/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15473/events",
+  "html_url": "https://github.com/facebook/react/pull/15473",
+  "id": 436159370,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjcyNzA4NTc0",
+  "number": 15473,
+  "title": "Issues/12615",
+  "user": {
+    "login": "VariableVasasMT",
+    "id": 22634793,
+    "node_id": "MDQ6VXNlcjIyNjM0Nzkz",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/22634793?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/VariableVasasMT",
+    "html_url": "https://github.com/VariableVasasMT",
+    "followers_url": "https://api.github.com/users/VariableVasasMT/followers",
+    "following_url": "https://api.github.com/users/VariableVasasMT/following{/other_user}",
+    "gists_url": "https://api.github.com/users/VariableVasasMT/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/VariableVasasMT/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/VariableVasasMT/subscriptions",
+    "organizations_url": "https://api.github.com/users/VariableVasasMT/orgs",
+    "repos_url": "https://api.github.com/users/VariableVasasMT/repos",
+    "events_url": "https://api.github.com/users/VariableVasasMT/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/VariableVasasMT/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2019-04-23T12:25:51Z",
+  "updated_at": "2019-05-14T00:50:00Z",
+  "closed_at": "2019-05-14T00:50:00Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15473",
+    "html_url": "https://github.com/facebook/react/pull/15473",
+    "diff_url": "https://github.com/facebook/react/pull/15473.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15473.patch"
+  },
+  "body": "**Before submitting a pull request,** please make sure the following is done:\r\n\r\n1. Fork [the repository](https://github.com/facebook/react) and create your branch from `master`.\r\n2. Run `yarn` in the repository root.\r\n3. If you've fixed a bug or added code that should be tested, add tests!\r\n4. Ensure the test suite passes (`yarn test`). Tip: `yarn test --watch TestName` is helpful in development.\r\n5. Run `yarn test-prod` to test in the production environment. It supports the same options as `yarn test`.\r\n6. If you need a debugger, run `yarn debug-test --watch TestName`, open `chrome://inspect`, and press \"Inspect\".\r\n7. Format your code with [prettier](https://github.com/prettier/prettier) (`yarn prettier`).\r\n8. Make sure your code lints (`yarn lint`). Tip: `yarn linc` to only check changed files.\r\n9. Run the [Flow](https://flowtype.org/) typechecks (`yarn flow`).\r\n10. If you haven't already, complete the CLA.\r\n\r\n**Learn more about contributing:** https://reactjs.org/docs/how-to-contribute.html\r\nFor Issue: https://github.com/facebook/react/issues/12615\r\n",
+  "closed_by": {
+    "login": "VariableVasasMT",
+    "id": 22634793,
+    "node_id": "MDQ6VXNlcjIyNjM0Nzkz",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/22634793?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/VariableVasasMT",
+    "html_url": "https://github.com/VariableVasasMT",
+    "followers_url": "https://api.github.com/users/VariableVasasMT/followers",
+    "following_url": "https://api.github.com/users/VariableVasasMT/following{/other_user}",
+    "gists_url": "https://api.github.com/users/VariableVasasMT/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/VariableVasasMT/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/VariableVasasMT/subscriptions",
+    "organizations_url": "https://api.github.com/users/VariableVasasMT/orgs",
+    "repos_url": "https://api.github.com/users/VariableVasasMT/repos",
+    "events_url": "https://api.github.com/users/VariableVasasMT/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/VariableVasasMT/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9730",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9730/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9730/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9730/events",
+  "html_url": "https://github.com/facebook/react/pull/9730",
+  "id": 230195320,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTIxNjQ3MTEy",
+  "number": 9730,
+  "title": "#9685 Updated docs for event handling",
+  "user": {
+    "login": "jordanpapaleo",
+    "id": 1728807,
+    "node_id": "MDQ6VXNlcjE3Mjg4MDc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1728807?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jordanpapaleo",
+    "html_url": "https://github.com/jordanpapaleo",
+    "followers_url": "https://api.github.com/users/jordanpapaleo/followers",
+    "following_url": "https://api.github.com/users/jordanpapaleo/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jordanpapaleo/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jordanpapaleo/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jordanpapaleo/subscriptions",
+    "organizations_url": "https://api.github.com/users/jordanpapaleo/orgs",
+    "repos_url": "https://api.github.com/users/jordanpapaleo/repos",
+    "events_url": "https://api.github.com/users/jordanpapaleo/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jordanpapaleo/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2017-05-21T04:05:25Z",
+  "updated_at": "2017-10-09T00:35:21Z",
+  "closed_at": "2017-10-08T20:53:07Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9730",
+    "html_url": "https://github.com/facebook/react/pull/9730",
+    "diff_url": "https://github.com/facebook/react/pull/9730.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9730.patch"
+  },
+  "body": "Fixes #9624\r\n\r\nI added an explanation and an example of using .bind to the docs to pass arguments to event handlers.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

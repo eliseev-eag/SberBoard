@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7855",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7855/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7855/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7855/events",
+  "html_url": "https://github.com/facebook/react/pull/7855",
+  "id": 180763643,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODc4MDM5MDg=",
+  "number": 7855,
+  "title": "Fix minor typo in closing H1 tag",
+  "user": {
+    "login": "MarceloAlves",
+    "id": 216782,
+    "node_id": "MDQ6VXNlcjIxNjc4Mg==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/216782?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/MarceloAlves",
+    "html_url": "https://github.com/MarceloAlves",
+    "followers_url": "https://api.github.com/users/MarceloAlves/followers",
+    "following_url": "https://api.github.com/users/MarceloAlves/following{/other_user}",
+    "gists_url": "https://api.github.com/users/MarceloAlves/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/MarceloAlves/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/MarceloAlves/subscriptions",
+    "organizations_url": "https://api.github.com/users/MarceloAlves/orgs",
+    "repos_url": "https://api.github.com/users/MarceloAlves/repos",
+    "events_url": "https://api.github.com/users/MarceloAlves/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/MarceloAlves/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-10-03T22:30:13Z",
+  "updated_at": "2016-10-04T11:23:33Z",
+  "closed_at": "2016-10-04T00:07:56Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7855",
+    "html_url": "https://github.com/facebook/react/pull/7855",
+    "diff_url": "https://github.com/facebook/react/pull/7855.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7855.patch"
+  },
+  "body": "In `docs/docs/05-reusable-components.md` there was an extra character in two closing `h1` tags. Removed the extra \"v\" from the tag.\n",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

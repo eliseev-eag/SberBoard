@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5281",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5281/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5281/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5281/events",
+  "html_url": "https://github.com/facebook/react/pull/5281",
+  "id": 113269266,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDg2OTQwOTI=",
+  "number": 5281,
+  "title": "Made it more readable",
+  "user": {
+    "login": "wle8300",
+    "id": 150245,
+    "node_id": "MDQ6VXNlcjE1MDI0NQ==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/150245?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/wle8300",
+    "html_url": "https://github.com/wle8300",
+    "followers_url": "https://api.github.com/users/wle8300/followers",
+    "following_url": "https://api.github.com/users/wle8300/following{/other_user}",
+    "gists_url": "https://api.github.com/users/wle8300/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/wle8300/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/wle8300/subscriptions",
+    "organizations_url": "https://api.github.com/users/wle8300/orgs",
+    "repos_url": "https://api.github.com/users/wle8300/repos",
+    "events_url": "https://api.github.com/users/wle8300/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/wle8300/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2015-10-26T01:27:56Z",
+  "updated_at": "2015-11-05T17:34:45Z",
+  "closed_at": "2015-11-05T17:31:56Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5281",
+    "html_url": "https://github.com/facebook/react/pull/5281",
+    "diff_url": "https://github.com/facebook/react/pull/5281.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5281.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

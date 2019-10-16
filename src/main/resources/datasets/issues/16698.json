@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16698",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16698/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16698/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16698/events",
+  "html_url": "https://github.com/facebook/react/issues/16698",
+  "id": 490632476,
+  "node_id": "MDU6SXNzdWU0OTA2MzI0NzY=",
+  "number": 16698,
+  "title": "[Question]Unnecessary rAF call",
+  "user": {
+    "login": "NE-SmallTown",
+    "id": 18418010,
+    "node_id": "MDQ6VXNlcjE4NDE4MDEw",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/18418010?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/NE-SmallTown",
+    "html_url": "https://github.com/NE-SmallTown",
+    "followers_url": "https://api.github.com/users/NE-SmallTown/followers",
+    "following_url": "https://api.github.com/users/NE-SmallTown/following{/other_user}",
+    "gists_url": "https://api.github.com/users/NE-SmallTown/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/NE-SmallTown/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/NE-SmallTown/subscriptions",
+    "organizations_url": "https://api.github.com/users/NE-SmallTown/orgs",
+    "repos_url": "https://api.github.com/users/NE-SmallTown/repos",
+    "events_url": "https://api.github.com/users/NE-SmallTown/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/NE-SmallTown/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-09-07T12:53:42Z",
+  "updated_at": "2019-09-07T12:53:42Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "At now, for sync mode, we will call `flushSyncCallbackQueue` after `scheduleCallbackForRoot`, but seems all works been done in `flushSyncCallbackQueue`, `scheduleCallbackForRoot` just to push callback in syncQueue. The question here is, `scheduleCallbackForRoot` will trigger rAF + postmessage(only use postmessage a few days ago), so here the rAF/message callback(`performWorkUntilDeadline`) is Unnecessary, you will find that it just execute meaningless code(go to flushWork and return because the work has been done in `flushSyncCallbackQueue`). So, could we avoid this or I miss something, please let me know, thanks!",
+  "closed_by": null
+}

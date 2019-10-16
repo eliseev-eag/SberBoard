@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6744",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6744/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6744/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6744/events",
+  "html_url": "https://github.com/facebook/react/pull/6744",
+  "id": 154160696,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Njk2MTU1OTU=",
+  "number": 6744,
+  "title": "Fix undefined DOM element at transition group",
+  "user": {
+    "login": "malstoun",
+    "id": 1143457,
+    "node_id": "MDQ6VXNlcjExNDM0NTc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1143457?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/malstoun",
+    "html_url": "https://github.com/malstoun",
+    "followers_url": "https://api.github.com/users/malstoun/followers",
+    "following_url": "https://api.github.com/users/malstoun/following{/other_user}",
+    "gists_url": "https://api.github.com/users/malstoun/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/malstoun/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/malstoun/subscriptions",
+    "organizations_url": "https://api.github.com/users/malstoun/orgs",
+    "repos_url": "https://api.github.com/users/malstoun/repos",
+    "events_url": "https://api.github.com/users/malstoun/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/malstoun/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2016-05-11T05:04:15Z",
+  "updated_at": "2016-06-03T20:49:08Z",
+  "closed_at": "2016-06-03T20:49:08Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6744",
+    "html_url": "https://github.com/facebook/react/pull/6744",
+    "diff_url": "https://github.com/facebook/react/pull/6744.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6744.patch"
+  },
+  "body": "It relates to #6619. Since isMounted() 'will likely be removed entirely in a future version of React' (according to [this](https://github.com/facebook/react/blob/15-stable/docs/docs/ref-02-component-api.md#ismounted)) maybe it would be better use findDOMNode to check whether element has node or not.\n\nfindDOMNode returns null if in render method we return null or false (e.g. to hide element), otherwise we have node to make some manipulation with it.\n",
+  "closed_by": {
+    "login": "keyz",
+    "id": 2268452,
+    "node_id": "MDQ6VXNlcjIyNjg0NTI=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2268452?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/keyz",
+    "html_url": "https://github.com/keyz",
+    "followers_url": "https://api.github.com/users/keyz/followers",
+    "following_url": "https://api.github.com/users/keyz/following{/other_user}",
+    "gists_url": "https://api.github.com/users/keyz/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/keyz/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/keyz/subscriptions",
+    "organizations_url": "https://api.github.com/users/keyz/orgs",
+    "repos_url": "https://api.github.com/users/keyz/repos",
+    "events_url": "https://api.github.com/users/keyz/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/keyz/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

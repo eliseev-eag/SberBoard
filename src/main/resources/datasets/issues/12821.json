@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12821",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12821/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12821/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12821/events",
+  "html_url": "https://github.com/facebook/react/pull/12821",
+  "id": 323316329,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTg4MjA0MDI2",
+  "number": 12821,
+  "title": "Only measure \"base\" times within ProfileMode",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2018-05-15T17:39:49Z",
+  "updated_at": "2018-05-15T19:43:58Z",
+  "closed_at": "2018-05-15T19:43:43Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12821",
+    "html_url": "https://github.com/facebook/react/pull/12821",
+    "diff_url": "https://github.com/facebook/react/pull/12821.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12821.patch"
+  },
+  "body": "Follow up for [this comment](https://github.com/facebook/react/pull/12745/files#r186276940) on PR #12745. Previously I was tracking base time for all fibers, regardless of whether they were inside of a `Profiler`, because the place where I started the timer didn't yet know if it was in a `ProfileMode`.\r\n\r\nI could move where I start/stop the timer somewhere else- where it would know- but this approach seemed simpler. It has a small potential downside of not measuring \"base\" time for the `Profiler` component itself- but I think this is okay because (1) that time should be minimal and (2) it isn't really actionable for a developer.\r\n\r\n### Questions\r\n* ~~Should I remove the conditionals around `stopBaseRenderTimerIfRunning`? (Is it worth having them?)~~\r\n\r\n### Caveats\r\n* We pause/resume the global render timer even outside of a `ProfileMode` tree. This only updates a single numeric value though; it doesn't modify any attributes on a fiber.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

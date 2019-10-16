@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13516",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13516/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13516/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13516/events",
+  "html_url": "https://github.com/facebook/react/pull/13516",
+  "id": 355490011,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjEyMDA1MDYz",
+  "number": 13516,
+  "title": "Warn about HTML within SVG tags",
+  "user": {
+    "login": "alex-saunders",
+    "id": 22820481,
+    "node_id": "MDQ6VXNlcjIyODIwNDgx",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/22820481?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/alex-saunders",
+    "html_url": "https://github.com/alex-saunders",
+    "followers_url": "https://api.github.com/users/alex-saunders/followers",
+    "following_url": "https://api.github.com/users/alex-saunders/following{/other_user}",
+    "gists_url": "https://api.github.com/users/alex-saunders/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/alex-saunders/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/alex-saunders/subscriptions",
+    "organizations_url": "https://api.github.com/users/alex-saunders/orgs",
+    "repos_url": "https://api.github.com/users/alex-saunders/repos",
+    "events_url": "https://api.github.com/users/alex-saunders/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/alex-saunders/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-08-30T09:00:27Z",
+  "updated_at": "2018-10-15T08:18:11Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13516",
+    "html_url": "https://github.com/facebook/react/pull/13516",
+    "diff_url": "https://github.com/facebook/react/pull/13516.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13516.patch"
+  },
+  "body": "This PR aims to warn about nesting non-SVG HTML tags within SVG (similar to how developers are warned against nesting `<p>` tags within `<p>` tags).\r\n\r\nExample:\r\n```jsx\r\n<svg>\r\n  <path>\r\n    <div>\r\n      I'm a nested div!\r\n    </div>\r\n  </path>\r\n</svg>\r\n```\r\nProduces the following warning:\r\n<img width=\"465\" alt=\"screen shot 2018-08-30 at 09 57 07\" src=\"https://user-images.githubusercontent.com/22820481/44841366-16c72d00-ac3b-11e8-8792-4239a1595a38.png\">\r\n\r\nHowever, including the `<div>` within a `<foreignObject>`\r\n```jsx\r\n<svg>\r\n  <path>\r\n    <foreignObject>\r\n      <div>\r\n        I'm a nested div!\r\n      </div>\r\n    </foreignObject>\r\n  </path>\r\n</svg>\r\n```\r\nProduces no errors message.\r\n\r\nIdeally, I think the warning should include some messaging about wrapping HTML inside a foreignObject, i.e. '`<div>` cannot appear as a descendant of `<svg>`, consider wrapping it inside a `<foreignObject>`', but I wasn't 100% sure on how to implement this with how `validateDOMNesting.js` currently works.\r\n\r\ncloses #11013 ",
+  "closed_by": null
+}

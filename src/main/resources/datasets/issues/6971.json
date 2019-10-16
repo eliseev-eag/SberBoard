@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6971",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6971/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6971/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6971/events",
+  "html_url": "https://github.com/facebook/react/pull/6971",
+  "id": 158605078,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzI2NTg4MzQ=",
+  "number": 6971,
+  "title": "Fix #6970, make document of test utils up to date",
+  "user": {
+    "login": "kpaxqin",
+    "id": 6220685,
+    "node_id": "MDQ6VXNlcjYyMjA2ODU=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/6220685?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/kpaxqin",
+    "html_url": "https://github.com/kpaxqin",
+    "followers_url": "https://api.github.com/users/kpaxqin/followers",
+    "following_url": "https://api.github.com/users/kpaxqin/following{/other_user}",
+    "gists_url": "https://api.github.com/users/kpaxqin/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/kpaxqin/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/kpaxqin/subscriptions",
+    "organizations_url": "https://api.github.com/users/kpaxqin/orgs",
+    "repos_url": "https://api.github.com/users/kpaxqin/repos",
+    "events_url": "https://api.github.com/users/kpaxqin/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/kpaxqin/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-06-06T05:49:58Z",
+  "updated_at": "2016-06-14T22:02:37Z",
+  "closed_at": "2016-06-14T18:09:20Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6971",
+    "html_url": "https://github.com/facebook/react/pull/6971",
+    "diff_url": "https://github.com/facebook/react/pull/6971.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6971.patch"
+  },
+  "body": "The find/scry methods which returns DOM component in react@0.13 now returns DOMElement in react@0.14 and later.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

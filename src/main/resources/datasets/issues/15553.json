@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15553",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15553/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15553/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15553/events",
+  "html_url": "https://github.com/facebook/react/pull/15553",
+  "id": 439305661,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjc1MTQxNzU5",
+  "number": 15553,
+  "title": "Treat Namespace.use() as a React Hook",
+  "user": {
+    "login": "jamiebuilds",
+    "id": 952783,
+    "node_id": "MDQ6VXNlcjk1Mjc4Mw==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/952783?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jamiebuilds",
+    "html_url": "https://github.com/jamiebuilds",
+    "followers_url": "https://api.github.com/users/jamiebuilds/followers",
+    "following_url": "https://api.github.com/users/jamiebuilds/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jamiebuilds/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jamiebuilds/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jamiebuilds/subscriptions",
+    "organizations_url": "https://api.github.com/users/jamiebuilds/orgs",
+    "repos_url": "https://api.github.com/users/jamiebuilds/repos",
+    "events_url": "https://api.github.com/users/jamiebuilds/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jamiebuilds/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2019-05-01T20:13:29Z",
+  "updated_at": "2019-09-12T05:43:09Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15553",
+    "html_url": "https://github.com/facebook/react/pull/15553",
+    "diff_url": "https://github.com/facebook/react/pull/15553.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15553.patch"
+  },
+  "body": "In watching the [presentation about building the new facebook.com](https://developers.facebook.com/videos/2019/building-the-new-facebookcom-with-react-graphql-and-relay/) I saw a reference to a method called:\r\n\r\n```js\r\nFeature.use()\r\n```\r\n\r\nThat was used conditionally, which was confusing because it looked like a hook to me.\r\n\r\nI was actually surprised to find out that React does not consider `Namespace.use()` to be a hook at all, and even `Namespace.useHook()` was not considered a hook by the ESLint plugin because it isn't `React.useHook()`.\r\n\r\nI want to propose two things:\r\n\r\n1. `Namespace.useHook()` should be considered a hook by the ESLint plugin\r\n2. `Namespace.use()` should be considered a hook by React/ESLint plugin\r\n\r\nI've opened this PR with both changes. Although I can easily update it to only include `Namespace.useHook()` if that is preferred.\r\n\r\nBut I would like to argue for also including `Namespace.use()` because the alternative for people wanting to write that is `Namespace.useNamespace()` which is just silly to write.",
+  "closed_by": null
+}

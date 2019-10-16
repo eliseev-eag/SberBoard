@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4451",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4451/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4451/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4451/events",
+  "html_url": "https://github.com/facebook/react/pull/4451",
+  "id": 96410232,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDA1MDEyODU=",
+  "number": 4451,
+  "title": "improve ReactTestUtils.Simulate documentation",
+  "user": {
+    "login": "dmatteo",
+    "id": 4091059,
+    "node_id": "MDQ6VXNlcjQwOTEwNTk=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/4091059?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dmatteo",
+    "html_url": "https://github.com/dmatteo",
+    "followers_url": "https://api.github.com/users/dmatteo/followers",
+    "following_url": "https://api.github.com/users/dmatteo/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dmatteo/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dmatteo/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dmatteo/subscriptions",
+    "organizations_url": "https://api.github.com/users/dmatteo/orgs",
+    "repos_url": "https://api.github.com/users/dmatteo/repos",
+    "events_url": "https://api.github.com/users/dmatteo/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dmatteo/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2015-07-21T20:33:29Z",
+  "updated_at": "2015-08-26T06:50:56Z",
+  "closed_at": "2015-08-17T21:51:05Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4451",
+    "html_url": "https://github.com/facebook/react/pull/4451",
+    "diff_url": "https://github.com/facebook/react/pull/4451.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4451.patch"
+  },
+  "body": "As per issue https://github.com/facebook/react/issues/4375, I've found the docs for Simulate.change misleading as I needed to bother @jimfb to make it work.\n\nI've also added another example, since it doesn't seems very clear how the optional eventData are used.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

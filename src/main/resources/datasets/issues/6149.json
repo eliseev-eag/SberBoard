@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6149",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6149/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6149/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6149/events",
+  "html_url": "https://github.com/facebook/react/pull/6149",
+  "id": 137378127,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjExNDYwODg=",
+  "number": 6149,
+  "title": "Preserve order in `mergeChildMappings`",
+  "user": {
+    "login": "hellosmithy",
+    "id": 866604,
+    "node_id": "MDQ6VXNlcjg2NjYwNA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/866604?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/hellosmithy",
+    "html_url": "https://github.com/hellosmithy",
+    "followers_url": "https://api.github.com/users/hellosmithy/followers",
+    "following_url": "https://api.github.com/users/hellosmithy/following{/other_user}",
+    "gists_url": "https://api.github.com/users/hellosmithy/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/hellosmithy/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/hellosmithy/subscriptions",
+    "organizations_url": "https://api.github.com/users/hellosmithy/orgs",
+    "repos_url": "https://api.github.com/users/hellosmithy/repos",
+    "events_url": "https://api.github.com/users/hellosmithy/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/hellosmithy/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 12,
+  "created_at": "2016-02-29T21:14:57Z",
+  "updated_at": "2016-06-26T19:08:35Z",
+  "closed_at": "2016-06-26T19:08:35Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6149",
+    "html_url": "https://github.com/facebook/react/pull/6149",
+    "diff_url": "https://github.com/facebook/react/pull/6149.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6149.patch"
+  },
+  "body": "This relates to the issue described here: https://github.com/facebook/react/issues/6142\n\nI believe this fixes the intended behavior - unless I have misunderstood the old implementations comment and prepending was the desired behavior. It certainly fixes an issue I was having with this when the children are completely replaced with a new array of children.\n\n`mergeChildMappings` now preserves the order so that new children are appended rather than prepended when _all_ old nodes are removed.\n\nI've also added tests and updated a couple of `CSSTransitionGroup` tests to reflect this.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

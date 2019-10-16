@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16863",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16863/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16863/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16863/events",
+  "html_url": "https://github.com/facebook/react/pull/16863",
+  "id": 497163163,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzIwMzQ3NjQ5",
+  "number": 16863,
+  "title": "Expose shared/getComponentName as React.getComponentName",
+  "user": {
+    "login": "koba04",
+    "id": 250407,
+    "node_id": "MDQ6VXNlcjI1MDQwNw==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/250407?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/koba04",
+    "html_url": "https://github.com/koba04",
+    "followers_url": "https://api.github.com/users/koba04/followers",
+    "following_url": "https://api.github.com/users/koba04/following{/other_user}",
+    "gists_url": "https://api.github.com/users/koba04/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/koba04/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/koba04/subscriptions",
+    "organizations_url": "https://api.github.com/users/koba04/orgs",
+    "repos_url": "https://api.github.com/users/koba04/repos",
+    "events_url": "https://api.github.com/users/koba04/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/koba04/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-09-23T15:16:51Z",
+  "updated_at": "2019-09-24T10:25:28Z",
+  "closed_at": "2019-09-24T10:25:23Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16863",
+    "html_url": "https://github.com/facebook/react/pull/16863",
+    "diff_url": "https://github.com/facebook/react/pull/16863.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16863.patch"
+  },
+  "body": "`getComponentName` is a handy helper function to get a component name for 3rd party libraries and custom renderers.\r\n\r\nTo get a proper component name, we have to deal with React internals like `shared/getComponentNam` does.\r\nSo I think it's beneficial for 3rd party developers to expose the function.\r\nThis PR exposes the API as `React.getComponentName` but it's ok to expose the API as an npm package like `react-component-name` instead of adding a function into `React`.\r\n\r\n",
+  "closed_by": {
+    "login": "koba04",
+    "id": 250407,
+    "node_id": "MDQ6VXNlcjI1MDQwNw==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/250407?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/koba04",
+    "html_url": "https://github.com/koba04",
+    "followers_url": "https://api.github.com/users/koba04/followers",
+    "following_url": "https://api.github.com/users/koba04/following{/other_user}",
+    "gists_url": "https://api.github.com/users/koba04/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/koba04/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/koba04/subscriptions",
+    "organizations_url": "https://api.github.com/users/koba04/orgs",
+    "repos_url": "https://api.github.com/users/koba04/repos",
+    "events_url": "https://api.github.com/users/koba04/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/koba04/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14039",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14039/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14039/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14039/events",
+  "html_url": "https://github.com/facebook/react/issues/14039",
+  "id": 375731590,
+  "node_id": "MDU6SXNzdWUzNzU3MzE1OTA=",
+  "number": 14039,
+  "title": "Improve message \"dispatcher.useState is not a function\" when mixing react@next with react-dom@16.5.2",
+  "user": {
+    "login": "geoffdavis92",
+    "id": 7330124,
+    "node_id": "MDQ6VXNlcjczMzAxMjQ=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/7330124?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/geoffdavis92",
+    "html_url": "https://github.com/geoffdavis92",
+    "followers_url": "https://api.github.com/users/geoffdavis92/followers",
+    "following_url": "https://api.github.com/users/geoffdavis92/following{/other_user}",
+    "gists_url": "https://api.github.com/users/geoffdavis92/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/geoffdavis92/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/geoffdavis92/subscriptions",
+    "organizations_url": "https://api.github.com/users/geoffdavis92/orgs",
+    "repos_url": "https://api.github.com/users/geoffdavis92/repos",
+    "events_url": "https://api.github.com/users/geoffdavis92/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/geoffdavis92/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2018-10-30T23:08:04Z",
+  "updated_at": "2019-01-15T15:18:40Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\nReport a bug\r\n\r\n**What is the current behavior?**\r\nGetting `TypeError: dispatcher.useState is not a function` when trying to call `useState`; this is happening in a create-react-app, as well as in the CodeSandbox example below.\r\n\r\n**Example:**\r\nhttps://codesandbox.io/s/7kp55lwwpj\r\n\r\n**What is the expected behavior?**\r\n`useState` hook function should execute without error as defined in the [API documentation](https://reactjs.org/docs/hooks-reference.html#usestate)\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\n**React**: v16.7.0-alpha.0\r\n**React-DOM**: 16.5.2 (CSB), 16.7.0-alpha.0 (local)\r\n**React-Scripts**: 2.0.3 (CSB), 2.1.0 (local)\r\n",
+  "closed_by": null
+}

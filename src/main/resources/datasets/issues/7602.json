@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7602",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7602/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7602/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7602/events",
+  "html_url": "https://github.com/facebook/react/pull/7602",
+  "id": 173786834,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODMxMDc1NTY=",
+  "number": 7602,
+  "title": "docs: re-position comments to account for code sample width",
+  "user": {
+    "login": "nikolas",
+    "id": 59292,
+    "node_id": "MDQ6VXNlcjU5Mjky",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/59292?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nikolas",
+    "html_url": "https://github.com/nikolas",
+    "followers_url": "https://api.github.com/users/nikolas/followers",
+    "following_url": "https://api.github.com/users/nikolas/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nikolas/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nikolas/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nikolas/subscriptions",
+    "organizations_url": "https://api.github.com/users/nikolas/orgs",
+    "repos_url": "https://api.github.com/users/nikolas/repos",
+    "events_url": "https://api.github.com/users/nikolas/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nikolas/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-08-29T14:25:01Z",
+  "updated_at": "2016-09-06T22:36:22Z",
+  "closed_at": "2016-08-29T17:08:07Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7602",
+    "html_url": "https://github.com/facebook/react/pull/7602",
+    "diff_url": "https://github.com/facebook/react/pull/7602.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7602.patch"
+  },
+  "body": "This addresses the issue where these comments are running off the screen:\n![2016-08-29-102338_681x318_scrot](https://cloud.githubusercontent.com/assets/59292/18054660/bc53b850-6dd2-11e6-9a1a-17d42f946701.png)\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

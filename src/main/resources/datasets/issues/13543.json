@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13543",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13543/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13543/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13543/events",
+  "html_url": "https://github.com/facebook/react/pull/13543",
+  "id": 356566660,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjEyNzk1Nzc5",
+  "number": 13543,
+  "title": "Rename \"react-scheduler\" package to \"schedule\"",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-09-03T17:06:22Z",
+  "updated_at": "2018-09-03T18:27:51Z",
+  "closed_at": "2018-09-03T18:27:51Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13543",
+    "html_url": "https://github.com/facebook/react/pull/13543",
+    "diff_url": "https://github.com/facebook/react/pull/13543.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13543.patch"
+  },
+  "body": "This is mostly all rote search-and-replace.\r\n\r\nThe only commit that seems sketchy is the last one– c84b3d6. I couldn't get our packages or suspense fixtures to install correctly. Yarn seemed to want to pull the `schedule` dependency from NPM even though I'd told it to install the local version. This resulted in two packages being installed: one in `node_modules` and one in `node_modules/react-dom/node_modules`. So I added a pre script to remove the redundant one.\r\n\r\nWe can also test our fixtures without this hack by publishing `schedule` version 0.2.0 to NPM (which will also unblock the React Native sync).\r\n\r\nI'm going to step away for a bit (holiday in the US) but I'll check back later... 😄 ",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

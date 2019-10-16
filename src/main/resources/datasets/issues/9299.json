@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9299",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9299/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9299/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9299/events",
+  "html_url": "https://github.com/facebook/react/pull/9299",
+  "id": 218348607,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTEzNTQwMDA2",
+  "number": 9299,
+  "title": "Added explicit null return to completeUnitOfWork() to resolve Flow error",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-03-30T22:38:55Z",
+  "updated_at": "2017-03-30T22:45:15Z",
+  "closed_at": "2017-03-30T22:45:14Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9299",
+    "html_url": "https://github.com/facebook/react/pull/9299",
+    "diff_url": "https://github.com/facebook/react/pull/9299.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9299.patch"
+  },
+  "body": "`completeUnitOfWork` causes Flow errors because of this `while (true)` loop:\r\n```js\r\nfunction completeUnitOfWork(workInProgress: Fiber): Fiber | null {\r\n  while (true) {\r\n    // ...\r\n  }\r\n}\r\n```\r\n\r\n[Here](https://flow.org/try/#0GYVwdgxgLglg9mABMOcAUBKAXIgzlAJxjAHNEBvAKEUQHcALGAGwFNE1CQWMLqbECLKCAJIA5GIDcfAL6U5QA) is a smaller repro.\r\n\r\nMaybe we should remove or reconsider this `while` loop but for now I've fixed the issue by adding an explicit `null` return outside of the loop. (It was blocking a merge in fbsource so I fixed it there and this is an upstream sync.)",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

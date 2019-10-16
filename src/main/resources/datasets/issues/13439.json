@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13439",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13439/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13439/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13439/events",
+  "html_url": "https://github.com/facebook/react/issues/13439",
+  "id": 351917796,
+  "node_id": "MDU6SXNzdWUzNTE5MTc3OTY=",
+  "number": 13439,
+  "title": "Cache Provider: Add hooks to read and preload in dev mode",
+  "user": {
+    "login": "dan-kez",
+    "id": 6778796,
+    "node_id": "MDQ6VXNlcjY3Nzg3OTY=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/6778796?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dan-kez",
+    "html_url": "https://github.com/dan-kez",
+    "followers_url": "https://api.github.com/users/dan-kez/followers",
+    "following_url": "https://api.github.com/users/dan-kez/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dan-kez/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dan-kez/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dan-kez/subscriptions",
+    "organizations_url": "https://api.github.com/users/dan-kez/orgs",
+    "repos_url": "https://api.github.com/users/dan-kez/repos",
+    "events_url": "https://api.github.com/users/dan-kez/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dan-kez/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2018-08-19T16:58:06Z",
+  "updated_at": "2018-08-19T19:10:48Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "This topic originally came up in a `react-devtools` discussion: https://github.com/facebook/react-devtools/issues/1099#issuecomment-414138771.\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\nFeature\r\n\r\n**What is the current behavior?**\r\nThe package `simple-cache-provider` does not presently provide hooks to understand when we've pulled a resource for the first time, hit the cache, or dropped something from the cache due to `MAX_SIZE`.\r\n\r\nDue to this, tools such as `react-devtools` cannot provide an interface around our cached resources which makes debugging / inspection harder.\r\n\r\n**What is the expected behavior?**\r\nIt would be great if there was a way to expose callbacks / events for when the cache resource has resolved. An idea would be to fire these callbacks / events in the existing switch statement in `read` / `preload` if we are in `__DEV__` mode.\r\n\r\nWith this information we could have a \"redux-devtools\"-esque interface to better understand where our data is coming from and when we're hitting the cache in dev mode.\r\n\r\nTools like this would also be useful to people new to the Suspend API to visually see their resources transition between the various record states.\r\n\r\n",
+  "closed_by": null
+}

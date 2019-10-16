@@ -1,0 +1,72 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16478",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16478/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16478/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16478/events",
+  "html_url": "https://github.com/facebook/react/issues/16478",
+  "id": 482547444,
+  "node_id": "MDU6SXNzdWU0ODI1NDc0NDQ=",
+  "number": 16478,
+  "title": "DevTools: Component bookmarks",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-08-19T21:57:12Z",
+  "updated_at": "2019-08-19T21:57:12Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "Product developers sometimes find it useful to jump back and forth between a few components in a tree. Currently this requires scrolling or using the selection tool. Maybe we could allow you to temporarily bookmark one or more components somehow? Then the existing Search interface could maybe be repurposed to let you step between bookmarked components (when there's no search text).\r\n\r\nThese bookmarks would probably not need to be persisted between reloads, so they could be associated with the specific in-memory element<sup>1</sup>.\r\n\r\n<sup>1</sup> Although this association would be lost with a filter change.\r\n\r\n---\r\nOriginally reported via https://github.com/bvaughn/react-devtools-experimental/issues/305",
+  "closed_by": null
+}

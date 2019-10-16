@@ -1,0 +1,72 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/17033",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/17033/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/17033/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/17033/events",
+  "html_url": "https://github.com/facebook/react/issues/17033",
+  "id": 503529466,
+  "node_id": "MDU6SXNzdWU1MDM1Mjk0NjY=",
+  "number": 17033,
+  "title": "Annoying popup from chrome devtools wrongly telling me I'm using an old version of React",
+  "user": {
+    "login": "LukenAgile42",
+    "id": 49654474,
+    "node_id": "MDQ6VXNlcjQ5NjU0NDc0",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/49654474?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/LukenAgile42",
+    "html_url": "https://github.com/LukenAgile42",
+    "followers_url": "https://api.github.com/users/LukenAgile42/followers",
+    "following_url": "https://api.github.com/users/LukenAgile42/following{/other_user}",
+    "gists_url": "https://api.github.com/users/LukenAgile42/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/LukenAgile42/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/LukenAgile42/subscriptions",
+    "organizations_url": "https://api.github.com/users/LukenAgile42/orgs",
+    "repos_url": "https://api.github.com/users/LukenAgile42/repos",
+    "events_url": "https://api.github.com/users/LukenAgile42/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/LukenAgile42/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 620368407,
+      "node_id": "MDU6TGFiZWw2MjAzNjg0MDc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Needs%20More%20Information",
+      "name": "Resolution: Needs More Information",
+      "color": "fffde7",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2019-10-07T15:32:38Z",
+  "updated_at": "2019-10-09T16:38:44Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "I am given a rather annoying popup message\r\n\r\n```\r\nUnsupported React version detected\r\nThis version of React DevTools supports React DOM v15+ and React Native v61+.\r\n\r\nIn order to use DevTools with an older version of React, you'll need to install an older version of the extension.\r\n```\r\n\r\nevery single time I want to use devtools.\r\n\r\nThis is NOT correct. I am using React 16.8 with a standard create-react-app build.",
+  "closed_by": null
+}

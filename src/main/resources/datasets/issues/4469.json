@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4469",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4469/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4469/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4469/events",
+  "html_url": "https://github.com/facebook/react/pull/4469",
+  "id": 96695856,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDA2MjU3MTU=",
+  "number": 4469,
+  "title": "Fixes #4265 - Clarify React.render note in documentation",
+  "user": {
+    "login": "KevinTCoughlin",
+    "id": 706967,
+    "node_id": "MDQ6VXNlcjcwNjk2Nw==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/706967?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/KevinTCoughlin",
+    "html_url": "https://github.com/KevinTCoughlin",
+    "followers_url": "https://api.github.com/users/KevinTCoughlin/followers",
+    "following_url": "https://api.github.com/users/KevinTCoughlin/following{/other_user}",
+    "gists_url": "https://api.github.com/users/KevinTCoughlin/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/KevinTCoughlin/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/KevinTCoughlin/subscriptions",
+    "organizations_url": "https://api.github.com/users/KevinTCoughlin/orgs",
+    "repos_url": "https://api.github.com/users/KevinTCoughlin/repos",
+    "events_url": "https://api.github.com/users/KevinTCoughlin/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/KevinTCoughlin/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2015-07-23T00:13:16Z",
+  "updated_at": "2015-08-12T19:11:30Z",
+  "closed_at": "2015-07-27T18:06:58Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4469",
+    "html_url": "https://github.com/facebook/react/pull/4469",
+    "diff_url": "https://github.com/facebook/react/pull/4469.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4469.patch"
+  },
+  "body": "This updates the note text to that found in #4265 in an effort to clarify`React.render()`'s documentation.\n\n> Note:\n> \n> `React.render()` controls the contents of the container node you pass in*. Any existing DOM elements\n> inside are replaced when first called. Later calls use React’s DOM diffing algorithm for efficient \n> updates.\n> \n> \\* `React.render()` does not modify the container node (only modifies the children of the container). In\n> the future, it may be possible to insert a component to an existing DOM node without overwriting \n> the existing children.\n\nUnsure if you want the function call highlight in the second paragraph.\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

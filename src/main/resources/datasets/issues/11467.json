@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11467",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11467/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11467/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11467/events",
+  "html_url": "https://github.com/facebook/react/pull/11467",
+  "id": 271362258,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTUwNzcyMzU0",
+  "number": 11467,
+  "title": "Use const/let in more places",
+  "user": {
+    "login": "raphamorim",
+    "id": 3630346,
+    "node_id": "MDQ6VXNlcjM2MzAzNDY=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/3630346?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/raphamorim",
+    "html_url": "https://github.com/raphamorim",
+    "followers_url": "https://api.github.com/users/raphamorim/followers",
+    "following_url": "https://api.github.com/users/raphamorim/following{/other_user}",
+    "gists_url": "https://api.github.com/users/raphamorim/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/raphamorim/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/raphamorim/subscriptions",
+    "organizations_url": "https://api.github.com/users/raphamorim/orgs",
+    "repos_url": "https://api.github.com/users/raphamorim/repos",
+    "events_url": "https://api.github.com/users/raphamorim/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/raphamorim/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-11-06T05:18:10Z",
+  "updated_at": "2017-11-06T11:30:17Z",
+  "closed_at": "2017-11-06T11:30:04Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11467",
+    "html_url": "https://github.com/facebook/react/pull/11467",
+    "diff_url": "https://github.com/facebook/react/pull/11467.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11467.patch"
+  },
+  "body": "* Convert ReactDOM to const/let\r\n* Convert ReactDOMComponentTree to const/let\r\n* Convert ReactDOMComponentTree to const/let\r\n* Convert getNodeForCharacterOffset to const/let\r\n* Convert getTextContentAccessor to const/let\r\n* Convert inputValueTracking to const/let\r\n* Convert setInnerHTML to const/let\r\n* Convert setTextContent to const/let\r\n* Convert validateDOMNesting to const/let\r\n\r\n<!--\r\n**Before submitting a pull request,** please make sure the following is done:\r\n\r\n1. Fork [the repository](https://github.com/facebook/react) and create your branch from `master`.\r\n2. Run `yarn` in the repository root.\r\n3. If you've fixed a bug or added code that should be tested, add tests!\r\n4. Ensure the test suite passes (`yarn test`). Tip: `yarn test --watch TestName` is helpful in development.\r\n5. Format your code with [prettier](https://github.com/prettier/prettier) (`yarn prettier`).\r\n6. Make sure your code lints (`yarn lint`). Tip: `yarn linc` to only check changed files.\r\n7. Run the [Flow](https://flowtype.org/) typechecks (`yarn flow`).\r\n8. If you haven't already, complete the CLA.\r\n\r\n**Learn more about contributing:** https://reactjs.org/docs/how-to-contribute.html\r\n-->",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8011",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8011/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8011/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8011/events",
+  "html_url": "https://github.com/facebook/react/issues/8011",
+  "id": 183838077,
+  "node_id": "MDU6SXNzdWUxODM4MzgwNzc=",
+  "number": 8011,
+  "title": "[RFC] Enabling form.reset() on controlled inputs, make value and defaultValue more transparent",
+  "user": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2016-10-19T00:39:21Z",
+  "updated_at": "2018-09-04T01:00:27Z",
+  "closed_at": "2018-09-04T01:00:27Z",
+  "author_association": "COLLABORATOR",
+  "body": "I would like to make a case for supporting `form.reset()` for controlled inputs, and to make control over value and defaultValue more direct.\r\n\r\n### Background\r\n\r\nReact synchronizes the `value` attribute _and_ the `value` property on inputs. I believe this is for two reasons:\r\n\r\n1. It is easy for testing frameworks like Selenium to select on `[value=\"*\"]` when testing\r\n2. `form.reset` reverts an input back to it's value attribute. It also does not trigger change events, which causes input state to be out of sync with React state.\r\n\r\nThere are many reasons listed in https://github.com/facebook/react/issues/11896 to stop syncing the value attribute, so I'll keep this issue focused on my desired outcome.\r\n\r\n### The Change\r\n\r\nI want to be able to control the value attribute _and_ property directly from a component, at the same time:\r\n\r\n```javascript\r\n// I won't add Flow types, but this is just for clarity\r\ntype Widget {\r\n  name: string\r\n}\r\n\r\nclass EditWidget extends React.Component {\r\n  constructor() { \r\n    this.state = this.props.widget\r\n  }\r\n  onChange(event) {\r\n    this.setState({ name: event.target.value })\r\n  }\r\n  render() {\r\n    return (\r\n      <form>\r\n        <input value={this.state.name} defaultValue={this.props.widget.name} onChange={this.onChange} />\r\n        <button type=\"reset\">Revert</button>\r\n        <button type=\"submit\">Save</button>\r\n      </form>\r\n    )\r\n  }\r\n}\r\n```\r\n\r\n#### With this change:\r\n\r\n1. The `value` React property directly maps to the value _property_\r\n2. The `defaultValue` React property directly maps to the value _attribute_\r\n3. Both `value` and `defaultValue` are configurable at the same time\r\n4. An input becomes controlled when it specifies a `value` property\r\n5. Support form.reset, sending synthetic change events for fields that mismatch the last tracked value (or maybe just fire blindly for simplicity)\r\n\r\n### Why\r\n\r\nThis change creates a more controlled input, and makes it much clearer how React applies changes. More control is granted to the user. It provides away to allow props coming into a form to dictate a canonical state for the form, while still supporting native browser behavior.\r\n\r\nAlso, it means that we don't synchronize the value attribute, which would save a lot of headaches 😄.\r\n\r\n### Things to figure out\r\n\r\nServer rendering. What property do we use? In the case, we can only send along the default value. That might be fine for most cases, but I have not thought through the edge cases.",
+  "closed_by": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

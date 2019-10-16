@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10026",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10026/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10026/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10026/events",
+  "html_url": "https://github.com/facebook/react/pull/10026",
+  "id": 237994316,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTI3MTAzMDIz",
+  "number": 10026,
+  "title": "Warn When The HTML Mismatches in DEV",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-06-22T22:42:49Z",
+  "updated_at": "2017-07-03T06:21:32Z",
+  "closed_at": "2017-06-30T02:47:44Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10026",
+    "html_url": "https://github.com/facebook/react/pull/10026",
+    "diff_url": "https://github.com/facebook/react/pull/10026.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10026.patch"
+  },
+  "body": "In the new hydration strategy we do our best to recover when the server response isn't valid but we don't check the attributes. However, we should still warn in DEV because that can end up pretty bad.\r\n\r\nThis starts adding warnings for those cases. I still have several steps left but this can ideally be landed at any midway point if someone wants to review it.\r\n\r\n- [x] Warn for differences in text content.\r\n- [x] Warn for known props that have different values.\r\n- [x] Warn for extra attributes that are not known.\r\n- [x] Warn for dangerouslySetInnerHTML differences.\r\n- [x] Warn for extra nodes that will be deleted.\r\n- [x] Warn for missing nodes that will have a new node inserted.\r\n\r\nLeft this for a follow up PR.\r\n\r\n- [x] Warn for inline styles that have different values. #10084\r\n- [x] Add more test coverage for individual attribute mismatches, insert/delete, style mismatches, single child text content mismatches. #10084\r\n- [ ] Consolidate multiple warnings into a single warn (ideally with a HTML diff like format) instead of just warning for one difference at a time. #10085\r\n",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

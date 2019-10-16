@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14043",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14043/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14043/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14043/events",
+  "html_url": "https://github.com/facebook/react/issues/14043",
+  "id": 375879383,
+  "node_id": "MDU6SXNzdWUzNzU4NzkzODM=",
+  "number": 14043,
+  "title": "Display a warning if Component is called without props",
+  "user": {
+    "login": "bisubus",
+    "id": 2905949,
+    "node_id": "MDQ6VXNlcjI5MDU5NDk=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2905949?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bisubus",
+    "html_url": "https://github.com/bisubus",
+    "followers_url": "https://api.github.com/users/bisubus/followers",
+    "following_url": "https://api.github.com/users/bisubus/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bisubus/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bisubus/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bisubus/subscriptions",
+    "organizations_url": "https://api.github.com/users/bisubus/orgs",
+    "repos_url": "https://api.github.com/users/bisubus/repos",
+    "events_url": "https://api.github.com/users/bisubus/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bisubus/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2018-10-31T09:51:27Z",
+  "updated_at": "2019-01-09T03:59:55Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n\r\nThis is a feature (enhancement).\r\n\r\n**What is the current behavior?**\r\n\r\n`props` parameter isn't validated in `Component` and `PureComponent`. Omitted `props` is a common mistake that results in undefined `this.props` in constructor. This may result in a problem:\r\n\r\n```js\r\nclass MyComponent extends Component {\r\n  constructor() {\r\n    super();\r\n    this.state = { a: 1, b: this.props.b }; // cannot read b property of undefined\r\n  }\r\n}\r\n```\r\n\r\nA problem may be harder to determine if previously working code stops working when refactored:\r\n\r\n```js\r\nclass MyComponent extends Component {\r\n  constructor() {\r\n    super(); // no error\r\n  }\r\n\r\n  componentWillMount() {\r\n    // rewriting this to constructor code will result in situation above\r\n    this.setState({ a: 1, b: this.props.b });\r\n  }\r\n}\r\n```\r\n\r\n**What is the expected behavior?**\r\n\r\n`Component` and `PureComponent` validate `props` parameter to be an object, or `arguments > 0` at least and display a warning in development mode in case `props` isn't passed from child constructor.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nReact 16.7.0-alpha.0",
+  "closed_by": null
+}

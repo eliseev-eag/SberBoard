@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16607",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16607/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16607/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16607/events",
+  "html_url": "https://github.com/facebook/react/pull/16607",
+  "id": 486802688,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzEyMTkyMDkw",
+  "number": 16607,
+  "title": "[eslint-plugin-react-hooks] Added meta property (including docs)",
+  "user": {
+    "login": "ghmcadams",
+    "id": 16076085,
+    "node_id": "MDQ6VXNlcjE2MDc2MDg1",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/16076085?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ghmcadams",
+    "html_url": "https://github.com/ghmcadams",
+    "followers_url": "https://api.github.com/users/ghmcadams/followers",
+    "following_url": "https://api.github.com/users/ghmcadams/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ghmcadams/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ghmcadams/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ghmcadams/subscriptions",
+    "organizations_url": "https://api.github.com/users/ghmcadams/orgs",
+    "repos_url": "https://api.github.com/users/ghmcadams/repos",
+    "events_url": "https://api.github.com/users/ghmcadams/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ghmcadams/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-08-29T08:04:12Z",
+  "updated_at": "2019-08-29T08:08:24Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16607",
+    "html_url": "https://github.com/facebook/react/pull/16607",
+    "diff_url": "https://github.com/facebook/react/pull/16607.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16607.patch"
+  },
+  "body": "ESLint v4.15.0 added an official location for rules to store metadata such as a URL to their documentation (see eslint/eslint#9788). This adds the URL to all the existing rules so anything consuming them can know where their documentation is without having to resort to external packages to guess.  Plugins such as this one can also help the ESLint ecosystem benefit from the same information by adding the `type` and `docs` properties to the `meta` object in their rule definitions.\r\n\r\nIn order to allow my vscode extension [lintlens](https://marketplace.visualstudio.com/items?itemName=ghmcadams.lintlens) to direct users to the right documentation, this PR adds/updates the meta property (in accordance with ESLint's [Rule Basics](https://eslint.org/docs/developer-guide/working-with-rules#rule-basics)) to each of the rules in the `eslint-plugin-react-hooks` package.\r\n\r\nI tried my best to determine the correct values for `type`, `docs.description`, `docs.category`, and `docs.url`.  Usually, plugins would place a markdown file under `/docs/rules` (EX: [ESLint Rules](https://github.com/eslint/eslint/tree/master/docs/rules)) for each rule and use that as the url property value.  I did not include such documentation myself.  Rather, I pointed to existing documentation for each rule:\r\n- exhaustive-deps: [https://github.com/facebook/react/issues/14920](https://github.com/facebook/react/issues/14920)\r\n- rules-of-hooks: [https://reactjs.org/docs/hooks-rules.html](https://reactjs.org/docs/hooks-rules.html)",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11966",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11966/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11966/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11966/events",
+  "html_url": "https://github.com/facebook/react/pull/11966",
+  "id": 286184404,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTYxMjY3MjYx",
+  "number": 11966,
+  "title": "Clearer ssr error message 11902",
+  "user": {
+    "login": "HeroProtagonist",
+    "id": 12506217,
+    "node_id": "MDQ6VXNlcjEyNTA2MjE3",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/12506217?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/HeroProtagonist",
+    "html_url": "https://github.com/HeroProtagonist",
+    "followers_url": "https://api.github.com/users/HeroProtagonist/followers",
+    "following_url": "https://api.github.com/users/HeroProtagonist/following{/other_user}",
+    "gists_url": "https://api.github.com/users/HeroProtagonist/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/HeroProtagonist/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/HeroProtagonist/subscriptions",
+    "organizations_url": "https://api.github.com/users/HeroProtagonist/orgs",
+    "repos_url": "https://api.github.com/users/HeroProtagonist/repos",
+    "events_url": "https://api.github.com/users/HeroProtagonist/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/HeroProtagonist/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2018-01-05T03:55:45Z",
+  "updated_at": "2018-02-05T21:46:20Z",
+  "closed_at": "2018-02-05T17:09:11Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11966",
+    "html_url": "https://github.com/facebook/react/pull/11966",
+    "diff_url": "https://github.com/facebook/react/pull/11966.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11966.patch"
+  },
+  "body": "Resolves #11902\r\n\r\nOnly in development was a [`warning`](https://github.com/facebook/react/blob/master/packages/react/src/ReactElementValidator.js#L280) being thrown about `ReactElements` with non `string` type. Nothing stopped the code from continuing to execute calling the `string` method on invalid types. \r\n\r\nI added a check in `ReactPartialRenderer.js` that throws an error before `toLowerCase` is called. Also a simple test of this new behavior.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

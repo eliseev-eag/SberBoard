@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13314",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13314/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13314/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13314/events",
+  "html_url": "https://github.com/facebook/react/pull/13314",
+  "id": 347238645,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjA1OTEwMzA5",
+  "number": 13314,
+  "title": "Suspense fixture large placeholder styling improvement",
+  "user": {
+    "login": "jegtnes",
+    "id": 1315463,
+    "node_id": "MDQ6VXNlcjEzMTU0NjM=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1315463?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jegtnes",
+    "html_url": "https://github.com/jegtnes",
+    "followers_url": "https://api.github.com/users/jegtnes/followers",
+    "following_url": "https://api.github.com/users/jegtnes/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jegtnes/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jegtnes/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jegtnes/subscriptions",
+    "organizations_url": "https://api.github.com/users/jegtnes/orgs",
+    "repos_url": "https://api.github.com/users/jegtnes/repos",
+    "events_url": "https://api.github.com/users/jegtnes/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jegtnes/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-08-03T02:37:58Z",
+  "updated_at": "2018-08-03T12:08:48Z",
+  "closed_at": "2018-08-03T12:08:46Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13314",
+    "html_url": "https://github.com/facebook/react/pull/13314",
+    "diff_url": "https://github.com/facebook/react/pull/13314.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13314.patch"
+  },
+  "body": "Vertically and horizontally center 'large' placeholder spinner in suspense demo as per @gaearon's tweet:\r\nhttps://twitter.com/dan_abramov/status/1025190261784289280\r\n\r\nThis is my first PR to React, so let me know if something's not right. Have ran prettier, signed the CLA, and ensured all test suites and Flow checks pass.\r\n\r\nGIF of the change in action:\r\n![prgif](https://user-images.githubusercontent.com/1315463/43621219-2b8b0812-968b-11e8-9d46-7b1ca796327c.gif)",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

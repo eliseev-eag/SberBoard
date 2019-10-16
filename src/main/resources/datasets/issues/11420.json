@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11420",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11420/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11420/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11420/events",
+  "html_url": "https://github.com/facebook/react/pull/11420",
+  "id": 270149144,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ5OTMwODA2",
+  "number": 11420,
+  "title": "Depend on prop-types/checkPropTypes, not prop-types itself",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-10-31T23:22:09Z",
+  "updated_at": "2017-11-01T10:57:25Z",
+  "closed_at": "2017-11-01T10:57:25Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11420",
+    "html_url": "https://github.com/facebook/react/pull/11420",
+    "diff_url": "https://github.com/facebook/react/pull/11420.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11420.patch"
+  },
+  "body": "Two small changes.\r\n\r\n1. Instead of reimplementing `prop-types/checkPropTypes` we can just use it. I think it didn't exist when this copy was written but now we can switch to it.\r\n\r\n2. Importing `prop-types` itself is going to be harder to DCE in DEV only once we move to ES Modules. It is doing some funky business in entry points, and builds up exports in a way that Rollup might consider side effectful. <s>It seems much simpler to just inline the implementation since we only need a subset and there are no other places where we need it.</s> We can delete it—see below.\r\n\r\n3. Actually I just checked, and the `onChange` annotation can be removed altogether. That check existed before we had DEV-time hooks verifying prop types. So currently we fire the warning twice:\r\n\r\n<img width=\"545\" alt=\"screen shot 2017-10-31 at 23 34 24\" src=\"https://user-images.githubusercontent.com/810438/32253732-5de671c2-be94-11e7-860f-3aa5023f1c76.png\">\r\n\r\nThis removes the unnecessary extra warning, so now it is handled once just like all other host elements:\r\n\r\n<img width=\"542\" alt=\"screen shot 2017-10-31 at 23 34 02\" src=\"https://user-images.githubusercontent.com/810438/32253737-6b366af8-be94-11e7-8a76-9687362188b4.png\">\r\n\r\nSo this both makes DEV bundle smaller, and removes an unnecessary noisy warning.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

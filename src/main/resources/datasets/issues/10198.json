@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10198",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10198/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10198/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10198/events",
+  "html_url": "https://github.com/facebook/react/pull/10198",
+  "id": 243377776,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTMwODQyNjQx",
+  "number": 10198,
+  "title": "Add playground homescreen to DOM Fixtures",
+  "user": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2017-07-17T12:21:17Z",
+  "updated_at": "2017-10-12T22:21:32Z",
+  "closed_at": "2017-10-12T21:37:02Z",
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10198",
+    "html_url": "https://github.com/facebook/react/pull/10198",
+    "diff_url": "https://github.com/facebook/react/pull/10198.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10198.patch"
+  },
+  "body": "This pull request adds a new home screen for the DOM test fixtures that should make it easier to produce test cases without having to setup React locally. Additionally, it provides a \"file github issue\" button that will generate a new issue with auto-populated browser information:\r\n\r\n![example](https://user-images.githubusercontent.com/590904/28267459-20d00638-6ac8-11e7-96c5-a99b57d7ff0a.gif)\r\n\r\nCheck it out here:\r\nhttp://react-dom-fixtures.surge.sh\r\n\r\n## Why this PR is so big\r\n\r\nIn order for this to work, I'm leaning on Formidable's [component-playground](https://github.com/FormidableLabs/component-playground). Naturally, they import React using commonjs. This is problematic for our existing way of handling versioned React code: `const React = window.React`. Webpack can smooth this over using the [`externals`](https://webpack.js.org/configuration/externals/) configuration, but that we can't (as far as I know) do that with `create-react-app`.\r\n\r\nSo I've ejected `create-react-app`, added this configuration, and updated all of the fixtures to use `import React` instead of `const React = window.React`. I've also tried my best to simplify/cut some fat, but this change set is bigger than I would have liked. \r\n\r\n## Other thoughts\r\n\r\nLong term, I would love to deploy this and make it a part of the release process. It would be awesome if we could farm out manual DOM testing to the community (though this is more of a pipe dream at the moment).",
+  "closed_by": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

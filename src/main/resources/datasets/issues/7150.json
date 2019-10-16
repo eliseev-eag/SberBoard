@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7150",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7150/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7150/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7150/events",
+  "html_url": "https://github.com/facebook/react/pull/7150",
+  "id": 163030096,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzU3MjQxMzE=",
+  "number": 7150,
+  "title": "Update 05-reusable-components.md",
+  "user": {
+    "login": "cheesemacfly",
+    "id": 1007819,
+    "node_id": "MDQ6VXNlcjEwMDc4MTk=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1007819?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/cheesemacfly",
+    "html_url": "https://github.com/cheesemacfly",
+    "followers_url": "https://api.github.com/users/cheesemacfly/followers",
+    "following_url": "https://api.github.com/users/cheesemacfly/following{/other_user}",
+    "gists_url": "https://api.github.com/users/cheesemacfly/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/cheesemacfly/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/cheesemacfly/subscriptions",
+    "organizations_url": "https://api.github.com/users/cheesemacfly/orgs",
+    "repos_url": "https://api.github.com/users/cheesemacfly/repos",
+    "events_url": "https://api.github.com/users/cheesemacfly/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/cheesemacfly/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-06-29T21:24:07Z",
+  "updated_at": "2016-07-12T18:37:02Z",
+  "closed_at": "2016-07-12T18:37:02Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7150",
+    "html_url": "https://github.com/facebook/react/pull/7150",
+    "diff_url": "https://github.com/facebook/react/pull/7150.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7150.patch"
+  },
+  "body": "Updating the Autobinding section with the relevant part from the v0.13.0 update (https://facebook.github.io/react/blog/2015/01/27/react-v0.13.0-beta-1.html#autobinding)\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

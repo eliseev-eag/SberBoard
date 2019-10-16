@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16573",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16573/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16573/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16573/events",
+  "html_url": "https://github.com/facebook/react/issues/16573",
+  "id": 485401156,
+  "node_id": "MDU6SXNzdWU0ODU0MDExNTY=",
+  "number": 16573,
+  "title": "[react-hooks/exhaustive-deps] missed warning when passing a function",
+  "user": {
+    "login": "whatisaphone",
+    "id": 772985,
+    "node_id": "MDQ6VXNlcjc3Mjk4NQ==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/772985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/whatisaphone",
+    "html_url": "https://github.com/whatisaphone",
+    "followers_url": "https://api.github.com/users/whatisaphone/followers",
+    "following_url": "https://api.github.com/users/whatisaphone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/whatisaphone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/whatisaphone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/whatisaphone/subscriptions",
+    "organizations_url": "https://api.github.com/users/whatisaphone/orgs",
+    "repos_url": "https://api.github.com/users/whatisaphone/repos",
+    "events_url": "https://api.github.com/users/whatisaphone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/whatisaphone/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 1249821345,
+      "node_id": "MDU6TGFiZWwxMjQ5ODIxMzQ1",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20ESLint%20Rules",
+      "name": "Component: ESLint Rules",
+      "color": "f7afdb",
+      "default": false
+    },
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-08-26T19:19:58Z",
+  "updated_at": "2019-09-03T10:12:11Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n\r\nArguably a **bug** in eslint-plugin-react-hooks\r\n\r\n**What is the current behavior?**\r\n\r\nThe exhaustive-deps rule does not catch the following case:\r\n\r\n```js\r\nconst FooContext = React.createContext(() => {});\r\n\r\n// Meanwhile, somewhere deep in the component tree\r\nfunction Bar() {\r\n  const foo = useContext(FooContext);\r\n  useEffect(foo, []);\r\n  return <div>A div walks into a Bar…</div>;\r\n}\r\n```\r\n\r\n**What is the expected behavior?**\r\n\r\nI think the plugin should suggest adding the dependency on `foo`:\r\n\r\n```js\r\nuseEffect(foo, [foo]);\r\n```\r\n\r\nIt already makes this suggestion for the verbose form of the code:\r\n\r\n```js\r\n// This code:\r\nuseEffect(() => foo(), []);\r\n// is fixed to:\r\nuseEffect(() => foo(), [foo]);\r\n```\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\n- eslint@6.2.2\r\n- eslint-plugin-react-hooks@2.0.1\r\n- react@16.9.0",
+  "closed_by": null
+}

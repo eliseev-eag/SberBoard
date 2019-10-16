@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5456",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5456/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5456/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5456/events",
+  "html_url": "https://github.com/facebook/react/pull/5456",
+  "id": 116523667,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTA0OTUzMTI=",
+  "number": 5456,
+  "title": "Revert class name manipulation doc to english",
+  "user": {
+    "login": "codeheroics",
+    "id": 1598317,
+    "node_id": "MDQ6VXNlcjE1OTgzMTc=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1598317?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/codeheroics",
+    "html_url": "https://github.com/codeheroics",
+    "followers_url": "https://api.github.com/users/codeheroics/followers",
+    "following_url": "https://api.github.com/users/codeheroics/following{/other_user}",
+    "gists_url": "https://api.github.com/users/codeheroics/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/codeheroics/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/codeheroics/subscriptions",
+    "organizations_url": "https://api.github.com/users/codeheroics/orgs",
+    "repos_url": "https://api.github.com/users/codeheroics/repos",
+    "events_url": "https://api.github.com/users/codeheroics/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/codeheroics/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2015-11-12T10:39:47Z",
+  "updated_at": "2015-11-12T22:28:22Z",
+  "closed_at": "2015-11-12T17:57:55Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5456",
+    "html_url": "https://github.com/facebook/react/pull/5456",
+    "diff_url": "https://github.com/facebook/react/pull/5456.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5456.patch"
+  },
+  "body": "Hi! While checking a warning given by React 0.13, I had the surprise to stumble on a Korean translation on the documentation website : http://facebook.github.io/react/docs/class-name-manipulation.html\n\nIt seems there's been a mistake in https://github.com/facebook/react/pull/5385 and that `docs/docs/10.3-class-name-manipulation.md` was edited instead of `docs/docs/10.3-class-name-manipulation.ko-KR.md`\n\nThis restores the english translation of the main file.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

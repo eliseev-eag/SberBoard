@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9399",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9399/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9399/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9399/events",
+  "html_url": "https://github.com/facebook/react/pull/9399",
+  "id": 220807985,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTE1MjE5NTgy",
+  "number": 9399,
+  "title": "createClass + PropTypes + checkPropTypes warnings",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2017-04-11T00:38:27Z",
+  "updated_at": "2017-04-11T21:28:07Z",
+  "closed_at": "2017-04-11T21:28:04Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9399",
+    "html_url": "https://github.com/facebook/react/pull/9399",
+    "diff_url": "https://github.com/facebook/react/pull/9399.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9399.patch"
+  },
+  "body": "This PR is prep work for a new 16 alpha release that (temporarily) re-adds getters with deprecation warnings for `React.PropTypes`, `React.checkPropTypes`, and `React.createClass`. I'm hoping to get this new alpha cherry picked into RN 44.\r\n\r\nI've broken this PR into multiple commits to make it easier to review:\r\n* 08bd020: Replace all references to `React.PropTypes` with `prop-types` to avoid triggering our own warning message.\r\n* ef5b5c6: Removed several references to `React.createClass` that appeared after rebasing this branch. (reviewed by @flarnie)\r\n* 524ce20: Added getters for `createClass` and `PropTypes` to the main `React` isomorphic object, behind one-time warning messages. (reviewed by @spicyj)\r\n* db48f54: Fixed Rollup bundles to inline 'prop-types' and 'create-react-class' for UMD builds only. (reviewed by @spicyj, @trueadm )\r\n* cf49cfd: Updated `tests-passing.txt` to remove tests that were deleted in this branch.\r\n* d34109a: Responses to PR feedback from @spicyj. (Added `package.json` dependencies to packages/react and packages/react-dom. Renamed a var. Expanded on an inline comment.)\r\n* 488c8d2: Added warning for moved package to `React.checkPropTypes` accessor too and updated build script.\r\n* 83bcb29: Wordsmithing for deprecation notices (added fb.me links).\r\n* afdc9d2: Tweaked legacy module inlining to remove order-of-deps constraint\r\n* d1348b9: Removed `$FlowFixMe`.\r\n* 7dbc3e7: More wordsmithing of deprecation notices based on Dan's feedback.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

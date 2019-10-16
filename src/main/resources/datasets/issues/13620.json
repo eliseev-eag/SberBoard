@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13620",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13620/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13620/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13620/events",
+  "html_url": "https://github.com/facebook/react/pull/13620",
+  "id": 359098969,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjE0NjcyMTYw",
+  "number": 13620,
+  "title": "Fix warning without stack for ie9",
+  "user": {
+    "login": "link-alex",
+    "id": 3674073,
+    "node_id": "MDQ6VXNlcjM2NzQwNzM=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/3674073?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/link-alex",
+    "html_url": "https://github.com/link-alex",
+    "followers_url": "https://api.github.com/users/link-alex/followers",
+    "following_url": "https://api.github.com/users/link-alex/following{/other_user}",
+    "gists_url": "https://api.github.com/users/link-alex/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/link-alex/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/link-alex/subscriptions",
+    "organizations_url": "https://api.github.com/users/link-alex/orgs",
+    "repos_url": "https://api.github.com/users/link-alex/repos",
+    "events_url": "https://api.github.com/users/link-alex/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/link-alex/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2018-09-11T15:25:39Z",
+  "updated_at": "2018-09-12T17:44:21Z",
+  "closed_at": "2018-09-12T14:09:58Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13620",
+    "html_url": "https://github.com/facebook/react/pull/13620",
+    "diff_url": "https://github.com/facebook/react/pull/13620.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13620.patch"
+  },
+  "body": "Where console methods like log, error etc. don't have 'apply' method.\r\nBecause of the lot of tests already expect that exactly console['method']\r\nwill be called - had to reapply references for console.error method\r\n\r\nhttps://github.com/facebook/react/issues/13610\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

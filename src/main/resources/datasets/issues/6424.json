@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6424",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6424/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6424/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6424/events",
+  "html_url": "https://github.com/facebook/react/issues/6424",
+  "id": 146346474,
+  "node_id": "MDU6SXNzdWUxNDYzNDY0NzQ=",
+  "number": 6424,
+  "title": "componentDidUnmount functionality (in addition to componentWillUnmount)",
+  "user": {
+    "login": "hadjiada",
+    "id": 2135998,
+    "node_id": "MDQ6VXNlcjIxMzU5OTg=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/2135998?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/hadjiada",
+    "html_url": "https://github.com/hadjiada",
+    "followers_url": "https://api.github.com/users/hadjiada/followers",
+    "following_url": "https://api.github.com/users/hadjiada/following{/other_user}",
+    "gists_url": "https://api.github.com/users/hadjiada/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/hadjiada/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/hadjiada/subscriptions",
+    "organizations_url": "https://api.github.com/users/hadjiada/orgs",
+    "repos_url": "https://api.github.com/users/hadjiada/repos",
+    "events_url": "https://api.github.com/users/hadjiada/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/hadjiada/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 739777675,
+      "node_id": "MDU6TGFiZWw3Mzk3Nzc2NzU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Component%20API",
+      "name": "Component: Component API",
+      "color": "d4c5f9",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 18,
+  "created_at": "2016-04-06T15:18:13Z",
+  "updated_at": "2019-05-16T07:02:14Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "It would be great if it was possible to run some code after the component actually unmounted. This is useful where you consider the following:\n\n```\ncomponent Parent {\n    has service Service\n    has child Child\n\n    componentWillUnmount: {\n         destroys Service\n    }\n\n    render: {\n         Service gets passed to Child as prop\n    }\n}\n\ncomponent Child {\n    componentWillMount: {\n         starts listening to Service\n    }\n\n    componentWillUnmount: {\n         stops listening to Service\n    }\n}\n\n```\n\nThe above will throw exception during Child componentWillUnmount since Parent gets unmounted first so Service is already destroyed.\n\nIf there existed componentDidUnmount the Service can be destroyed after the children are unmounted, i.e.\n\n```\ncomponent Parent {\n    has service Service\n    has child Child\n\n    componentDidUnmount: {\n         destroys Service\n    }\n\n    render: {\n         Service gets passed to Child as prop\n    }\n}\n\ncomponent Child {\n    componentWillMount: {\n         starts listening to Service\n    }\n\n    componentWillUnmount: {\n         stops listening to Service\n    }\n}\n\n```\n",
+  "closed_by": null
+}

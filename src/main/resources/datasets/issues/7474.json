@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7474",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7474/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7474/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7474/events",
+  "html_url": "https://github.com/facebook/react/pull/7474",
+  "id": 170734748,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODEwMjI0MTc=",
+  "number": 7474,
+  "title": "Use an ordered property list for inputs, fix some Chrome number input issues",
+  "user": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2016-08-11T20:11:04Z",
+  "updated_at": "2016-11-19T17:10:36Z",
+  "closed_at": "2016-11-19T17:10:36Z",
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7474",
+    "html_url": "https://github.com/facebook/react/pull/7474",
+    "diff_url": "https://github.com/facebook/react/pull/7474.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7474.patch"
+  },
+  "body": "Discussed in https://github.com/facebook/react/issues/7428. I'm finally to a point where I feel good enough about this code and I thought I'd make it easier to comment on it.\n\nThis is a reimplementation of https://github.com/facebook/react/pull/7359 that additionally eliminates much of the work done inside of ReactDOMInput to handle quirks associated with `defaultValue`, `value`, `defaultChecked`, and `checked`.\n\nIt does this by ensuring a specific order for property assignment on the `input` element. This is implemented within `DOMProperty` and `HTMLDOMPropertyConfig`, which may allow for other elements to eventually take advantage of it (should they need it).\n## Performance changes\n\nSince they do less work, controlled inputs are slightly faster, while non-ordered HTML tags have no observable performance regression (in my ability to test, anyway). \n## Fixes from the original PR\n\nThis is a major deviation from my solution in https://github.com/facebook/react/pull/7359, but it includes the same input fixes. These are enumerated in https://github.com/facebook/react/issues/7253#issuecomment-236074326. Basically, since the mutation method for `value` first checks to see if the property is loosely the same, it eliminates many edge cases with controlled number inputs, like:\n- Controlled and uncontrolled numbers won't drop off decimal places when backspacing, like converting `3.` to `3`\n- Controlled numbers that use `parseFloat` or `parseInt` won't \"expand\" values, like magically replace `3e1` with `30`.\n## Other fixes\n\nSome fixes are no longer necessary inside of `ReactDOMInput`:\n- Assigning `type` and `step` before `value` for IE11\n- Properly ordering `defaultValue`/`value` for inputs to ensure date inputs display properly on Android and iOS.\n- Ensure `defaultChecked` does not influence `checked` in Chrome 50.x\n\n---\n\nThis is a big change. I don't expect it to be merged easily. If there is any additional documentation I can provide, or benchmarks you would like to see, I am happy to produce them.\n",
+  "closed_by": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

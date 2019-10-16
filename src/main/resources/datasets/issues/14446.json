@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14446",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14446/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14446/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14446/events",
+  "html_url": "https://github.com/facebook/react/issues/14446",
+  "id": 391411153,
+  "node_id": "MDU6SXNzdWUzOTE0MTExNTM=",
+  "number": 14446,
+  "title": "[Hooks] Proposal: expose info about current component for custom hooks",
+  "user": {
+    "login": "steadicat",
+    "id": 6031,
+    "node_id": "MDQ6VXNlcjYwMzE=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/6031?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/steadicat",
+    "html_url": "https://github.com/steadicat",
+    "followers_url": "https://api.github.com/users/steadicat/followers",
+    "following_url": "https://api.github.com/users/steadicat/following{/other_user}",
+    "gists_url": "https://api.github.com/users/steadicat/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/steadicat/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/steadicat/subscriptions",
+    "organizations_url": "https://api.github.com/users/steadicat/orgs",
+    "repos_url": "https://api.github.com/users/steadicat/repos",
+    "events_url": "https://api.github.com/users/steadicat/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/steadicat/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 1109410193,
+      "node_id": "MDU6TGFiZWwxMTA5NDEwMTkz",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Hooks",
+      "name": "Component: Hooks",
+      "color": "c2f27b",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-12-15T20:58:16Z",
+  "updated_at": "2019-02-08T17:18:13Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\nfeature\r\n\r\n**What is the current behavior?**\r\nThe core built-in hooks – `useRef`, `useMemo`, etc. – rely on internal React state which is not exposed, namely the current rendering component. This means that these hooks cannot be implemented in user-land. Similar hooks cannot be implemented either.\r\n\r\nI'm proposing adding a built-in hook which would provide information about the current rendering component. This would enable more advanced hooks to be implementable in user-land.\r\n\r\nI have a use case which is a perfect example. I need a hook similar to `useMemo`, but where the computed value is shared across all components of the same type. I’m calling it `useSharedMemo`.\r\n\r\nThe ideal API would look something like this:\r\n\r\n```typescript\r\nconst Component = ({cacheKey}) => {\r\n  const value1 = useSharedMemo(() => /* expensive computation 1 */, [cacheKey]);\r\n  const value2 = useSharedMemo(() => /* expensive computation 2 */, [cacheKey]);\r\n  return <>{value1} {value2}</>;\r\n};\r\n```\r\n\r\nIn the code above, every instance of `Component` would get the same values for `value1` and `value2`, provided `cacheKey` is the same. When `cacheKey` changes, the two values would recompute once and the new values would be returned to all instances as they re-render. (The actual use case in my app is styles that need to update only when the theme changes.)\r\n\r\nI have a [hacky implementation](https://codesandbox.io/s/jplyz2pkr9) of this hook that works, but it requires changing the API to the following:\r\n\r\n```typescript\r\nconst useSharedMemo = createUseSharedMemo();\r\n\r\nconst Component = ({cacheKey}) => {\r\n  const ref = React.useRef();\r\n  const value1 = useSharedMemo(ref, () => /* expensive computation 1 */, [cacheKey]);\r\n  const value2 = useSharedMemo(ref, () => /* expensive computation 2 */, [cacheKey]);\r\n  return <>{value1} {value2}</>;\r\n};\r\n```\r\n\r\nFor this to work, the [implementation](https://codesandbox.io/s/jplyz2pkr9) has to keep a counter of calls that resets every time a component’s render call starts or ends. This would be trivial if there were a way to know which component is currently rendering. Since there is no way, the implementation has to make up for it by requiring a `ref` be passed in. Since it has no information about the type of the current component, it also requires that a `useSharedMemo` “instance” be created in the component definition’s enclosing scope.\r\n\r\nWorse, the implementation uses `useLayoutEffect` to detect when the render is done, which might break with concurrent mode or with future React changes.\r\n\r\n**What is the expected behavior?**\r\n\r\nIf React provided information about the current rendering component, the implementation of `useSharedMemo` would be much easier and less brittle.\r\n\r\nA possible solution is a hook like the following:\r\n\r\n```typescript\r\nconst [currentType, currentRef] = React.useCurrentComponent();\r\n```\r\n\r\nWith this information, we can implement the ideal API above and we do not have to rely on `useLayoutEffect`:\r\n\r\n```typescript\r\nlet values = new WeakMap();\r\nlet cacheKeys = new WeakMap();\r\nlet lastRef = null;\r\nlet callIndex = 0;\r\n\r\nfunction useSharedMemo(fn, keys) {\r\n  const [currentType, currentRef] = React.useCurrentComponent();\r\n  if (currentRef !== lastRef) {\r\n    callIndex = 0;\r\n  }\r\n  const index = callIndex;\r\n  callIndex++;\r\n  const typeValues = values.get(currentType) || [];\r\n  const typeCacheKeys = cacheKeys.get(currentType) || [];\r\n  if (!typeValues[index] || !compareKeys(keys, typeCacheKeys[index])) {\r\n    typeValues[index] = fn();\r\n    typeCacheKeys[index] = keys;\r\n    values.set(currentType, typeValues);\r\n    cacheKeys.set(currentType, typeCacheKeys);\r\n  }\r\n  return typeValues[index];\r\n}\r\n```\r\n\r\n(Note that I’m treating `currentType` and `currentRef` as opaque values, so for my purposes it doesn’t matter if they are the actual type and an actual ref to the component instance. I imagine having them be accurate would be a more powerful API, but the implementation might require them to be opaque values.)\r\n\r\nP.S. - A common use case that would benefit from `useSharedMemo` is `useCallback`. 99% of the time callbacks are identical across components of the same type. It’s wasteful not to share the cache.\r\n\r\n**Demo**\r\nhttps://codesandbox.io/s/jplyz2pkr9\r\n",
+  "closed_by": null
+}

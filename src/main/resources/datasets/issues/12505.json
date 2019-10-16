@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12505",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12505/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12505/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12505/events",
+  "html_url": "https://github.com/facebook/react/pull/12505",
+  "id": 310242600,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTc4NjgzNTA0",
+  "number": 12505,
+  "title": "Fix IE9 Undo Bug",
+  "user": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2018-03-31T13:57:16Z",
+  "updated_at": "2018-06-29T02:06:57Z",
+  "closed_at": null,
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12505",
+    "html_url": "https://github.com/facebook/react/pull/12505",
+    "diff_url": "https://github.com/facebook/react/pull/12505.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12505.patch"
+  },
+  "body": "This commit fixes a case where IE9 raises an exception if modifying a detached text node.\r\n\r\nThis is reproducible with the following steps:\r\n\r\n1. Open http://react-dom-ie9-undo.surge.sh/text-inputs?version=16.3.0 in IE9\r\n2. Scroll to the \"Bubbled Change Events\" fixture\r\n2. Change the text in input\r\n3. Start debugging in the IE9 developer tools\r\n4. Press ctrl+z to undo your text change\r\n5. IE9 raises an exception when setting the nodeValue of the text label to the right of the input \"invalid arguments\".\r\n\r\nThe \"local\" build for that branch addresses the issue by removing a subscription to `onpropertychange` unique to IE9, which avoids a forced batch update that appears to be the root of the problem.\r\n\r\n---\r\n\r\nFixes https://github.com/facebook/react/issues/11609",
+  "closed_by": null
+}

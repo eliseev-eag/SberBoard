@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12334",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12334/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12334/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12334/events",
+  "html_url": "https://github.com/facebook/react/issues/12334",
+  "id": 302645565,
+  "node_id": "MDU6SXNzdWUzMDI2NDU1NjU=",
+  "number": 12334,
+  "title": "For Controlled Input, step does not work as expected unless initialized with null or \"\".",
+  "user": {
+    "login": "andyboyne",
+    "id": 3295544,
+    "node_id": "MDQ6VXNlcjMyOTU1NDQ=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/3295544?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/andyboyne",
+    "html_url": "https://github.com/andyboyne",
+    "followers_url": "https://api.github.com/users/andyboyne/followers",
+    "following_url": "https://api.github.com/users/andyboyne/following{/other_user}",
+    "gists_url": "https://api.github.com/users/andyboyne/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/andyboyne/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/andyboyne/subscriptions",
+    "organizations_url": "https://api.github.com/users/andyboyne/orgs",
+    "repos_url": "https://api.github.com/users/andyboyne/repos",
+    "events_url": "https://api.github.com/users/andyboyne/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/andyboyne/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2018-03-06T10:30:40Z",
+  "updated_at": "2019-01-12T18:45:17Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "*BUG*\r\n\r\n**What is the current behavior?**\r\nFor input type=\"number\", step does not work as expected if there is an initial value set. Step only seems to get honored if the initial value is \"\" or null.\r\n\r\nExample:\r\nhttps://codepen.io/anon/pen/MQMBmX\r\n\r\nThe example uses a controlled input binding value and step. Step is 1/10th of the value. If you edit the value in the textbox to 50000 and increment using the stepper, it will increment to 50100 (i.e. by the initial value and not by the current step).\r\n\r\nEdit the code so initial value is \"\" or null. Edit textbox to 50000 and step up - value goes to 55000 as expected.\r\n\r\n**What is the expected behavior?**\r\nIt should be possible to render a number input that honors step without having to initialize the input component value to null or \"\" first.\r\n\r\nIt seems when there is an initial value provided, it will write a value attribute into the DOM (e.g. value=\"100\").  When initial value is \"\" or null then just the value attribute is written to DOM with no assignment. e.g. (value).\r\n\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\n16.3.0-alpha.1  (ported to this version to confirm if still an issue)\r\n0.14.7 (originally found in this version)\r\n\r\nSeems to affect Chrome only (confirmed windows and mac, versions 59 and 64). Bug does not appear in Safari (on a mac at least).",
+  "closed_by": null
+}

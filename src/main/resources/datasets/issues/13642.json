@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13642",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13642/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13642/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13642/events",
+  "html_url": "https://github.com/facebook/react/pull/13642",
+  "id": 360067259,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjE1NDE2Nzcx",
+  "number": 13642,
+  "title": "Add UMD production+profiling entry points",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-09-13T21:08:33Z",
+  "updated_at": "2018-09-14T02:05:17Z",
+  "closed_at": "2018-09-14T00:44:08Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13642",
+    "html_url": "https://github.com/facebook/react/pull/13642",
+    "diff_url": "https://github.com/facebook/react/pull/13642.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13642.patch"
+  },
+  "body": "Resolves #13634 by enabling apps that use the UMD build of React (and co) to use the new profiling and tracing APIs in production mode.\r\n\r\nNote that this PR builds on top of PR #13641. The only commit this branch contains is 18b4a27.\r\n\r\n### Changes\r\n* Removed unnecessary CJS profiling bundle for `react` package (since it's not necessary).\r\n* Added new `UMD_PROFILING` bundle type and plugged into `react` and `react-dom`.\r\n* Added new `umd/schedule.profiling.min.js` shim to `schedule` package. (This is just a copy of `umd/schedule.production.min.js`.)",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

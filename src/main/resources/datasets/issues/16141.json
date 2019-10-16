@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16141",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16141/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16141/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16141/events",
+  "html_url": "https://github.com/facebook/react/pull/16141",
+  "id": 468518301,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjk3OTMwMDc3",
+  "number": 16141,
+  "title": "Move ReactFiberErrorDialog RN fork into RN itself",
+  "user": {
+    "login": "motiz88",
+    "id": 2246565,
+    "node_id": "MDQ6VXNlcjIyNDY1NjU=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/2246565?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/motiz88",
+    "html_url": "https://github.com/motiz88",
+    "followers_url": "https://api.github.com/users/motiz88/followers",
+    "following_url": "https://api.github.com/users/motiz88/following{/other_user}",
+    "gists_url": "https://api.github.com/users/motiz88/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/motiz88/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/motiz88/subscriptions",
+    "organizations_url": "https://api.github.com/users/motiz88/orgs",
+    "repos_url": "https://api.github.com/users/motiz88/repos",
+    "events_url": "https://api.github.com/users/motiz88/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/motiz88/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-07-16T08:30:39Z",
+  "updated_at": "2019-07-16T10:20:03Z",
+  "closed_at": "2019-07-16T08:38:15Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16141",
+    "html_url": "https://github.com/facebook/react/pull/16141",
+    "diff_url": "https://github.com/facebook/react/pull/16141.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16141.patch"
+  },
+  "body": "Along with facebook/react-native#25671, moves the RN-specific implementation of `ReactFiberErrorDialog` from React to RN. This should only be merged (and subsequently synced to RN) _after_ facebook/react-native#25671 lands.\r\n\r\nAlso, with this, React doesn't use `ExceptionsManager` directly anymore, so we remove it from the RN private interface definition.",
+  "closed_by": {
+    "login": "cpojer",
+    "id": 13352,
+    "node_id": "MDQ6VXNlcjEzMzUy",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/13352?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/cpojer",
+    "html_url": "https://github.com/cpojer",
+    "followers_url": "https://api.github.com/users/cpojer/followers",
+    "following_url": "https://api.github.com/users/cpojer/following{/other_user}",
+    "gists_url": "https://api.github.com/users/cpojer/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/cpojer/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/cpojer/subscriptions",
+    "organizations_url": "https://api.github.com/users/cpojer/orgs",
+    "repos_url": "https://api.github.com/users/cpojer/repos",
+    "events_url": "https://api.github.com/users/cpojer/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/cpojer/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

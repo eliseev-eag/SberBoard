@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13871",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13871/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13871/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13871/events",
+  "html_url": "https://github.com/facebook/react/pull/13871",
+  "id": 371055340,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjIzNTg5MDAw",
+  "number": 13871,
+  "title": "Replacement of old links, by the new ones of the documentation.",
+  "user": {
+    "login": "overridesh",
+    "id": 25152524,
+    "node_id": "MDQ6VXNlcjI1MTUyNTI0",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/25152524?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/overridesh",
+    "html_url": "https://github.com/overridesh",
+    "followers_url": "https://api.github.com/users/overridesh/followers",
+    "following_url": "https://api.github.com/users/overridesh/following{/other_user}",
+    "gists_url": "https://api.github.com/users/overridesh/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/overridesh/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/overridesh/subscriptions",
+    "organizations_url": "https://api.github.com/users/overridesh/orgs",
+    "repos_url": "https://api.github.com/users/overridesh/repos",
+    "events_url": "https://api.github.com/users/overridesh/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/overridesh/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-10-17T12:46:20Z",
+  "updated_at": "2018-10-17T14:20:06Z",
+  "closed_at": "2018-10-17T14:08:06Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13871",
+    "html_url": "https://github.com/facebook/react/pull/13871",
+    "diff_url": "https://github.com/facebook/react/pull/13871.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13871.patch"
+  },
+  "body": "Replacement of old links, by the new ones of the documentation.\r\n\r\n```\r\n /**\r\n- * See https://reactjs.org/docs/react-dom-stream.html#rendertonodestream\r\n+ * See https://reactjs.org/docs/react-dom-server.html#rendertonodestream\r\n\r\n /**\r\n- * See https://reactjs.org/docs/react-dom-stream.html#rendertostaticnodestream\r\n+ * See https://reactjs.org/docs/react-dom-server.html#rendertostaticnodestream\r\n  */\r\n``` ",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

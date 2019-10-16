@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6317",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6317/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6317/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6317/events",
+  "html_url": "https://github.com/facebook/react/pull/6317",
+  "id": 142563819,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjM2NzY1Njc=",
+  "number": 6317,
+  "title": "Add context/detail to missing-key warning",
+  "user": {
+    "login": "bpedersen",
+    "id": 1903016,
+    "node_id": "MDQ6VXNlcjE5MDMwMTY=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1903016?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bpedersen",
+    "html_url": "https://github.com/bpedersen",
+    "followers_url": "https://api.github.com/users/bpedersen/followers",
+    "following_url": "https://api.github.com/users/bpedersen/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bpedersen/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bpedersen/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bpedersen/subscriptions",
+    "organizations_url": "https://api.github.com/users/bpedersen/orgs",
+    "repos_url": "https://api.github.com/users/bpedersen/repos",
+    "events_url": "https://api.github.com/users/bpedersen/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bpedersen/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2016-03-22T06:49:15Z",
+  "updated_at": "2016-06-26T20:12:04Z",
+  "closed_at": "2016-06-26T20:12:04Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6317",
+    "html_url": "https://github.com/facebook/react/pull/6317",
+    "diff_url": "https://github.com/facebook/react/pull/6317.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6317.patch"
+  },
+  "body": "Fix for #6163\n\nAdded offendingElement key to addenda object and `func ElementToString()` to provide more information on the element with the missing key\n\n_This is my first pull request, so feedback is appreciated_\n\nI have completed the CLA agreement as well :)\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

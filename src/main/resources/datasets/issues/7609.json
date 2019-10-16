@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7609",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7609/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7609/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7609/events",
+  "html_url": "https://github.com/facebook/react/pull/7609",
+  "id": 173909945,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODMxOTQ5MDk=",
+  "number": 7609,
+  "title": "s/npmcdn/unpkg/g",
+  "user": {
+    "login": "mjackson",
+    "id": 92839,
+    "node_id": "MDQ6VXNlcjkyODM5",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/92839?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mjackson",
+    "html_url": "https://github.com/mjackson",
+    "followers_url": "https://api.github.com/users/mjackson/followers",
+    "following_url": "https://api.github.com/users/mjackson/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mjackson/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mjackson/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mjackson/subscriptions",
+    "organizations_url": "https://api.github.com/users/mjackson/orgs",
+    "repos_url": "https://api.github.com/users/mjackson/repos",
+    "events_url": "https://api.github.com/users/mjackson/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mjackson/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-08-30T01:30:14Z",
+  "updated_at": "2016-09-06T22:36:22Z",
+  "closed_at": "2016-08-30T02:45:31Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7609",
+    "html_url": "https://github.com/facebook/react/pull/7609",
+    "diff_url": "https://github.com/facebook/react/pull/7609.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7609.patch"
+  },
+  "body": "[npmcdn.com is moving to unpkg.com](https://twitter.com/mjackson/status/770424625754939394). Same backend, one less letter in the domain name.\n\nThis is primarily to avoid any possible future naming disputes with npm, Inc. Also, unpkg.com runs on a bigger CloudFlare plan, so we have more room to grow.\n\nHappy to answer any questions you may have. :)\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

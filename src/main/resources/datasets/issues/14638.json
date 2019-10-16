@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14638",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14638/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14638/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14638/events",
+  "html_url": "https://github.com/facebook/react/pull/14638",
+  "id": 400991580,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjQ2MDQ0NTQ2",
+  "number": 14638,
+  "title": "Support Suspense in shallow renderer",
+  "user": {
+    "login": "chenesan",
+    "id": 7620906,
+    "node_id": "MDQ6VXNlcjc2MjA5MDY=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/7620906?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/chenesan",
+    "html_url": "https://github.com/chenesan",
+    "followers_url": "https://api.github.com/users/chenesan/followers",
+    "following_url": "https://api.github.com/users/chenesan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/chenesan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/chenesan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/chenesan/subscriptions",
+    "organizations_url": "https://api.github.com/users/chenesan/orgs",
+    "repos_url": "https://api.github.com/users/chenesan/repos",
+    "events_url": "https://api.github.com/users/chenesan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/chenesan/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-01-19T12:31:32Z",
+  "updated_at": "2019-01-29T01:57:18Z",
+  "closed_at": "2019-01-29T01:57:17Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14638",
+    "html_url": "https://github.com/facebook/react/pull/14638",
+    "diff_url": "https://github.com/facebook/react/pull/14638.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14638.patch"
+  },
+  "body": "Try to support `Suspense` in shallow renderer, which may partially solve #14170 . Also in airbnb/enzyme#1975 I'm trying to add support of Suspense and Lazy but stuck with that shallow renderer not support it.\r\n\r\nI know this is arguable - or even not make sense - to shallow render Suspense. But, in some of use cases people would be like to know what's rendering in one layer down of `Suspense` (like [wrapper.dive](https://airbnb.io/enzyme/docs/api/ShallowWrapper/dive.html)), so I think it's still valuable.\r\n\r\nCurrently in the PR I haven't handled the `fallback` and `lazy`, just plainly return children under Suspense. I'm not sure if it's good to handle fallback - find all the lazy component under Suspense and render it and wait for thenable resolve to update, which is complicated in fiber implementaion - in shallow rendering. I think it would be great for testing to have a simpler implementation, but not sure if there is other consideration here.",
+  "closed_by": {
+    "login": "chenesan",
+    "id": 7620906,
+    "node_id": "MDQ6VXNlcjc2MjA5MDY=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/7620906?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/chenesan",
+    "html_url": "https://github.com/chenesan",
+    "followers_url": "https://api.github.com/users/chenesan/followers",
+    "following_url": "https://api.github.com/users/chenesan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/chenesan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/chenesan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/chenesan/subscriptions",
+    "organizations_url": "https://api.github.com/users/chenesan/orgs",
+    "repos_url": "https://api.github.com/users/chenesan/repos",
+    "events_url": "https://api.github.com/users/chenesan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/chenesan/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

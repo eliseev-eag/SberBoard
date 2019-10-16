@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8592",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8592/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8592/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8592/events",
+  "html_url": "https://github.com/facebook/react/pull/8592",
+  "id": 196201240,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTg0MzQzMTg=",
+  "number": 8592,
+  "title": "shallow rendering: create node mock",
+  "user": {
+    "login": "charlierudolph",
+    "id": 1676758,
+    "node_id": "MDQ6VXNlcjE2NzY3NTg=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1676758?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/charlierudolph",
+    "html_url": "https://github.com/charlierudolph",
+    "followers_url": "https://api.github.com/users/charlierudolph/followers",
+    "following_url": "https://api.github.com/users/charlierudolph/following{/other_user}",
+    "gists_url": "https://api.github.com/users/charlierudolph/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/charlierudolph/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/charlierudolph/subscriptions",
+    "organizations_url": "https://api.github.com/users/charlierudolph/orgs",
+    "repos_url": "https://api.github.com/users/charlierudolph/repos",
+    "events_url": "https://api.github.com/users/charlierudolph/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/charlierudolph/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-12-17T05:43:17Z",
+  "updated_at": "2017-04-21T14:21:48Z",
+  "closed_at": "2017-04-21T14:21:47Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8592",
+    "html_url": "https://github.com/facebook/react/pull/8592",
+    "diff_url": "https://github.com/facebook/react/pull/8592.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8592.patch"
+  },
+  "body": "Following in the footsteps of #7649 and #8261, bringing `createNodeMock` to shallow rendering so enzyme's shallow rendering (airbnb/enzyme#721) can make use of it.\r\n\r\nCurrently this breaks the unit test related to shallow rendering and the legacy ref api. Any suggestions about what to do in that case? ",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

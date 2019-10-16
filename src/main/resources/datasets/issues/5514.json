@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5514",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5514/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5514/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5514/events",
+  "html_url": "https://github.com/facebook/react/pull/5514",
+  "id": 117963413,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTEzMTY3MzQ=",
+  "number": 5514,
+  "title": "Fix typo",
+  "user": {
+    "login": "justanman",
+    "id": 12095931,
+    "node_id": "MDQ6VXNlcjEyMDk1OTMx",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/12095931?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/justanman",
+    "html_url": "https://github.com/justanman",
+    "followers_url": "https://api.github.com/users/justanman/followers",
+    "following_url": "https://api.github.com/users/justanman/following{/other_user}",
+    "gists_url": "https://api.github.com/users/justanman/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/justanman/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/justanman/subscriptions",
+    "organizations_url": "https://api.github.com/users/justanman/orgs",
+    "repos_url": "https://api.github.com/users/justanman/repos",
+    "events_url": "https://api.github.com/users/justanman/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/justanman/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-11-20T04:27:13Z",
+  "updated_at": "2015-11-20T06:27:53Z",
+  "closed_at": "2015-11-20T06:27:53Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5514",
+    "html_url": "https://github.com/facebook/react/pull/5514",
+    "diff_url": "https://github.com/facebook/react/pull/5514.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5514.patch"
+  },
+  "body": "\"A textInput should become responder iff the\" should be \"A textInput should become responder if the\".\n",
+  "closed_by": {
+    "login": "justanman",
+    "id": 12095931,
+    "node_id": "MDQ6VXNlcjEyMDk1OTMx",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/12095931?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/justanman",
+    "html_url": "https://github.com/justanman",
+    "followers_url": "https://api.github.com/users/justanman/followers",
+    "following_url": "https://api.github.com/users/justanman/following{/other_user}",
+    "gists_url": "https://api.github.com/users/justanman/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/justanman/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/justanman/subscriptions",
+    "organizations_url": "https://api.github.com/users/justanman/orgs",
+    "repos_url": "https://api.github.com/users/justanman/repos",
+    "events_url": "https://api.github.com/users/justanman/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/justanman/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4594",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4594/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4594/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4594/events",
+  "html_url": "https://github.com/facebook/react/issues/4594",
+  "id": 100158031,
+  "node_id": "MDU6SXNzdWUxMDAxNTgwMzE=",
+  "number": 4594,
+  "title": "Hibernating State (Not Necessarily Serialized)",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 270986513,
+      "node_id": "MDU6TGFiZWwyNzA5ODY1MTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Big%20Picture",
+      "name": "Type: Big Picture",
+      "color": "61dafb",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-08-10T20:09:41Z",
+  "updated_at": "2015-10-12T19:51:09Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "body": "Relay and others currently abuses some internals to get some persistent identity of a component. This effectively is used to restore the state of a component after it has been temporarily unmounted. It is also common to abuse Flux stores for this use case. Basically, since this capability doesn't currently exists, you're encouraged to use Flux for everything just in case you need this capability later on.\n\nThe purpose of this issue is to discuss a public API for hibernating the state of a component and then restoring it once the component remounts.\n\nThe use cases can be broken down into three scenarios:\n- **List Item Out of View**:  E.g. Infinite scrolling (such as \"table views\") where one row eventually needs to be reclaimed to save the memory used by the tree that is out of view.\n- **Detail View**: In a master-detail view, clicking one item in the list switches the state of the detail view. When you click on the original view again.\n- **Back/Forward Button**: You want to save a snapshot of the state when you navigate. The new view can then change the state and when you hit the back button to return to a previous state, you want to restore the original state of the subtree.\n\nWe would like to support this at least in a non-serialized form. You could imagine having an API that serializes this to JSON or some other data structure too but that's a potential follow up and not necessarily part of this.\n\nOne potential API:\n\n``` js\nclass View {\n  state = { stateKeys: [{}, {}, {}] }\n  render() {\n    return <ChildView key={this.state.stateKeys[this.props.index]} />;\n  }\n}\n```\n\nBasically, an object is used as a key. Unlike the normal key semantics, the state of the subtree is kept in memory indefinitely. We use a WeakMap to keep the state. If the object ever goes away, the GC will collect the state of that subtree. This solves all three use cases.\n",
+  "closed_by": null
+}

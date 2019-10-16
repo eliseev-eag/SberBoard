@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12585",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12585/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12585/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12585/events",
+  "html_url": "https://github.com/facebook/react/pull/12585",
+  "id": 312650258,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTgwMzk5Mjkz",
+  "number": 12585,
+  "title": "Unfork invariant and instead use it from reactProdInvariant",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2018-04-09T19:08:49Z",
+  "updated_at": "2018-04-09T22:58:34Z",
+  "closed_at": "2018-04-09T22:58:34Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12585",
+    "html_url": "https://github.com/facebook/react/pull/12585",
+    "diff_url": "https://github.com/facebook/react/pull/12585.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12585.patch"
+  },
+  "body": "Follow-up to https://github.com/facebook/react/pull/12539. After chatting with @sophiebits we decided it would be clearer if we just used `invariant` in both places.\r\n\r\nPros:\r\n\r\n* Less forks to maintain.\r\n* We have error codes in www (same as https://github.com/facebook/react/pull/12539).\r\n* If the error code URL for some reason contains `%s`, on www we'll no longer attempt to replace it (that was a potential bug in https://github.com/facebook/react/pull/12539).\r\n\r\nCons:\r\n\r\n* Slightly larger bundles. (A few dozen bytes.)\r\n* In www's `invariant` implementation, `framesToProp` might need to account for React errors specifically (and be `2`). Or maybe it doesn't matter since we get the exact message through the decoder anyway.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

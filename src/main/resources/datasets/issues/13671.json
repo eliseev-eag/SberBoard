@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13671",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13671/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13671/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13671/events",
+  "html_url": "https://github.com/facebook/react/pull/13671",
+  "id": 360781053,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjE1OTE1NTky",
+  "number": 13671,
+  "title": "remove unused try block",
+  "user": {
+    "login": "Kachulio1",
+    "id": 22243090,
+    "node_id": "MDQ6VXNlcjIyMjQzMDkw",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/22243090?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Kachulio1",
+    "html_url": "https://github.com/Kachulio1",
+    "followers_url": "https://api.github.com/users/Kachulio1/followers",
+    "following_url": "https://api.github.com/users/Kachulio1/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Kachulio1/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Kachulio1/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Kachulio1/subscriptions",
+    "organizations_url": "https://api.github.com/users/Kachulio1/orgs",
+    "repos_url": "https://api.github.com/users/Kachulio1/repos",
+    "events_url": "https://api.github.com/users/Kachulio1/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Kachulio1/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2018-09-17T09:12:43Z",
+  "updated_at": "2018-09-17T16:38:42Z",
+  "closed_at": "2018-09-17T16:38:42Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13671",
+    "html_url": "https://github.com/facebook/react/pull/13671",
+    "diff_url": "https://github.com/facebook/react/pull/13671.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13671.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

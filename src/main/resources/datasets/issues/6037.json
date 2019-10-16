@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6037",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6037/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6037/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6037/events",
+  "html_url": "https://github.com/facebook/react/pull/6037",
+  "id": 133577752,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTkzMDUyOTA=",
+  "number": 6037,
+  "title": "Fix #5929. Set default prop when prop is undefined while cloning",
+  "user": {
+    "login": "arjunsharma",
+    "id": 1245477,
+    "node_id": "MDQ6VXNlcjEyNDU0Nzc=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1245477?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/arjunsharma",
+    "html_url": "https://github.com/arjunsharma",
+    "followers_url": "https://api.github.com/users/arjunsharma/followers",
+    "following_url": "https://api.github.com/users/arjunsharma/following{/other_user}",
+    "gists_url": "https://api.github.com/users/arjunsharma/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/arjunsharma/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/arjunsharma/subscriptions",
+    "organizations_url": "https://api.github.com/users/arjunsharma/orgs",
+    "repos_url": "https://api.github.com/users/arjunsharma/repos",
+    "events_url": "https://api.github.com/users/arjunsharma/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/arjunsharma/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-02-14T20:43:57Z",
+  "updated_at": "2016-02-15T17:35:27Z",
+  "closed_at": "2016-02-15T17:35:27Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6037",
+    "html_url": "https://github.com/facebook/react/pull/6037",
+    "diff_url": "https://github.com/facebook/react/pull/6037.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6037.patch"
+  },
+  "body": "Set default props if a passed in prop is undefined while using cloneElement, the same as what happens when doing createElement.\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

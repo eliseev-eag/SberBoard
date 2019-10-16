@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8840",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8840/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8840/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8840/events",
+  "html_url": "https://github.com/facebook/react/pull/8840",
+  "id": 202299268,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTAyNTczOTA1",
+  "number": 8840,
+  "title": "[Fiber] Simplify coroutines by making yields stateless",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2017-01-21T07:21:42Z",
+  "updated_at": "2017-01-26T15:15:37Z",
+  "closed_at": "2017-01-26T15:15:37Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8840",
+    "html_url": "https://github.com/facebook/react/pull/8840",
+    "diff_url": "https://github.com/facebook/react/pull/8840.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8840.patch"
+  },
+  "body": "Builds on top of #8414 and #8413\r\n\r\nCoroutines was kind of broken because it tried to do reparenting and enabling state preservation to be passed along the coroutine. However, since we couldn't determine which Fiber was \"current\" on a reified yield this was kind of broken.\r\n\r\nThis removes the \"continuation\" part of yields so they're basically just return values. It is still possible to do continuations by just passing simple functions or classes as part of the return value but they're not stateful.\r\n\r\nThis means that we won't have reparenting, but I actually don't think we need it. There's another way to structure this by doing all the state in the first phase and then yielding a stateless representation of the result. This stateless representation of the tree can then be rendered in different (or even multiple) locations.\r\n\r\nBecause we no longer have a stateful continuation, you may have noticed that this really no longer represent the \"coroutine\" concept. I will rename it in a follow up PR. I'm thinking `createWait` and `createReturn` maybe?",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

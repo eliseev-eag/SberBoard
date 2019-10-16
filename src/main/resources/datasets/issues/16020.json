@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16020",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16020/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16020/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16020/events",
+  "html_url": "https://github.com/facebook/react/issues/16020",
+  "id": 462390749,
+  "node_id": "MDU6SXNzdWU0NjIzOTA3NDk=",
+  "number": 16020,
+  "title": "Update parent component passing lazy initialized refs",
+  "user": {
+    "login": "Kashio",
+    "id": 16501683,
+    "node_id": "MDQ6VXNlcjE2NTAxNjgz",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/16501683?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Kashio",
+    "html_url": "https://github.com/Kashio",
+    "followers_url": "https://api.github.com/users/Kashio/followers",
+    "following_url": "https://api.github.com/users/Kashio/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Kashio/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Kashio/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Kashio/subscriptions",
+    "organizations_url": "https://api.github.com/users/Kashio/orgs",
+    "repos_url": "https://api.github.com/users/Kashio/repos",
+    "events_url": "https://api.github.com/users/Kashio/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Kashio/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-06-30T10:31:18Z",
+  "updated_at": "2019-06-30T10:31:18Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "I have a Parent to Children component relationship.\r\nThe Parent passes refs to each child.\r\nThe refs are initialized lazy because so are the children since their render is dependent on a prop array value.\r\nWhen the prop array value is passed to the Parent component I initialize the ref array with `useMemo` and then the children are rendered and are being passed the references respectively.\r\nMy problem is that after the refs are set no additional renders in the Parent component happens and I rely on the children refs to calculate Parent style.\r\nHere's an example:\r\n```\r\nimport React, {useEffect, useRef, useMemo} from 'react';\r\nimport PropTypes from 'prop-types';\r\nimport './SvgMap.scss';\r\nimport classNames from \"classnames\";\r\nimport {Tooltip} from 'react-svg-tooltip';\r\n\r\nconst propTypes = {\r\n    map: PropTypes.node.isRequired,\r\n    marker: PropTypes.node,\r\n    coordinates: PropTypes.array,\r\n    transform: PropTypes.func,\r\n    backgroundColor: PropTypes.string,\r\n    backgroundHoverColor: PropTypes.string,\r\n    bubbleWidth: PropTypes.number\r\n};\r\n\r\nconst DEFAULT_BUBBLE_WIDTH = 425;\r\nconst DEFAULT_BUBBLE_HEIGHT = 125;\r\n\r\nconst SvgMap = ({map, marker, coordinates, transform, className, backgroundColor, backgroundHoverColor, bubbleWidth, bubbleHeight}) => {\r\n    const mapContainerRef = useRef();\r\n    const glasspaneRef = useRef();\r\n    const mapRef = useRef();\r\n    const markersRef = useMemo(() => {\r\n        return coordinates.map(() => ({ref: React.createRef()}))\r\n    }, [coordinates]);\r\n\r\n    useEffect(() => {\r\n        if (mapRef.current) {\r\n            const paths = mapRef.current.getElementsByTagName(\"path\");\r\n            for (let i = 0; i < paths.length; i++) {\r\n                const path = paths[i];\r\n                const pathStyle = path.getAttribute(\"style\").replace(/fill: [^;]+;\\s/, '');\r\n                if (backgroundColor) {\r\n                    path.setAttribute(\"style\", `${pathStyle} fill: ${backgroundColor};`);\r\n                    path.addEventListener(\"mouseleave\", e => {\r\n                        e.currentTarget.setAttribute(\"style\", `${pathStyle} fill: ${backgroundColor};`);\r\n                    });\r\n                }\r\n                if (backgroundHoverColor) {\r\n                    path.addEventListener(\"mouseenter\", e => {\r\n                        e.currentTarget.setAttribute(\"style\", `${pathStyle} fill: ${backgroundHoverColor};`);\r\n                    });\r\n                }\r\n            }\r\n        }\r\n    }, [mapRef, backgroundColor, backgroundHoverColor]);\r\n\r\n    const getMarkersStyle = () => {\r\n        if (markersRef.length && markersRef[0].ref.current) {\r\n            return {\r\n                transform: `translate(-${markersRef[0].ref.current.width.baseVal.value / 2}px, -${markersRef[0].ref.current.height.baseVal.value}px)`\r\n            };\r\n        }\r\n    };\r\n\r\n    const renderMarkers = () => {\r\n        if (mapContainerRef.current && mapRef.current && marker && coordinates.length) {\r\n            const mapGeoViewBox = mapRef.current.getAttribute(\"mapsvggeoviewbox\").split(' ');\r\n            return coordinates.map((coordinate, i) => {\r\n                return <svg>\r\n                    {markersRef.length && markersRef[i].current &&\r\n                    <Tooltip triggerRef={markersRef[i]} containerRef={glasspaneRef}>\r\n                        <rect x={2} y={2} width={10} height={5} rx={.5} ry={.5} fill='black'/>\r\n                        <text x={5} y={5} fontSize={2} fill='white'>Yay!</text>\r\n                    </Tooltip>}\r\n                    {marker.render({\r\n                            ...transform(coordinate.lat, coordinate.lng, mapRef.current.width.baseVal.value, mapRef.current.height.baseVal.value, mapGeoViewBox[0], mapGeoViewBox[2], mapGeoViewBox[3])\r\n                        },\r\n                        markersRef[i].ref\r\n                    )}\r\n                </svg>;\r\n            })\r\n        }\r\n        return null;\r\n    };\r\n\r\n    return <svg className={classNames(\"map-container\", className)} ref={mapContainerRef}>\r\n        <svg ref={glasspaneRef} className=\"glasspane\" viewBox=\"0 0 100 100\"/>\r\n        <g className=\"map-wrapper\">\r\n            {map.render({}, mapRef)}\r\n        </g>\r\n        <g className=\"markers\" style={getMarkersStyle()}>\r\n            {renderMarkers()}\r\n        </g>\r\n    </svg>;\r\n};\r\n\r\nSvgMap.propTypes = propTypes;\r\n\r\nexport default SvgMap;\r\n```\r\n\r\n",
+  "closed_by": null
+}

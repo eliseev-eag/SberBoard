@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14780",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14780/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14780/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14780/events",
+  "html_url": "https://github.com/facebook/react/issues/14780",
+  "id": 407412754,
+  "node_id": "MDU6SXNzdWU0MDc0MTI3NTQ=",
+  "number": 14780,
+  "title": "react-cache alphas don't work with 16.8+",
+  "user": {
+    "login": "subtleGradient",
+    "id": 4117,
+    "node_id": "MDQ6VXNlcjQxMTc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/4117?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/subtleGradient",
+    "html_url": "https://github.com/subtleGradient",
+    "followers_url": "https://api.github.com/users/subtleGradient/followers",
+    "following_url": "https://api.github.com/users/subtleGradient/following{/other_user}",
+    "gists_url": "https://api.github.com/users/subtleGradient/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/subtleGradient/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/subtleGradient/subscriptions",
+    "organizations_url": "https://api.github.com/users/subtleGradient/orgs",
+    "repos_url": "https://api.github.com/users/subtleGradient/repos",
+    "events_url": "https://api.github.com/users/subtleGradient/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/subtleGradient/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 40929155,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1NQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Question",
+      "name": "Type: Question",
+      "color": "cc317c",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2019-02-06T20:18:31Z",
+  "updated_at": "2019-03-28T20:35:11Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "> `react-cache` was not published with 16.8.1 like the rest of the react packages.\r\nThis means that the platform's Suspense stuff will not work.\r\n\r\n_Originally posted by @jaredpalmer in https://github.com/palmerhq/the-platform/pull/70#issuecomment-461170282_\r\n",
+  "closed_by": null
+}

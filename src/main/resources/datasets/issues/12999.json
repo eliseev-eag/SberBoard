@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12999",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12999/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12999/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12999/events",
+  "html_url": "https://github.com/facebook/react/pull/12999",
+  "id": 330654495,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTkzNjExMDE1",
+  "number": 12999,
+  "title": "enqueueUpdate() - update expiration time of *both* queues in the case where both are non-empty",
+  "user": {
+    "login": "nateq314",
+    "id": 1175921,
+    "node_id": "MDQ6VXNlcjExNzU5MjE=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1175921?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nateq314",
+    "html_url": "https://github.com/nateq314",
+    "followers_url": "https://api.github.com/users/nateq314/followers",
+    "following_url": "https://api.github.com/users/nateq314/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nateq314/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nateq314/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nateq314/subscriptions",
+    "organizations_url": "https://api.github.com/users/nateq314/orgs",
+    "repos_url": "https://api.github.com/users/nateq314/repos",
+    "events_url": "https://api.github.com/users/nateq314/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nateq314/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2018-06-08T13:16:59Z",
+  "updated_at": "2018-08-02T00:51:19Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12999",
+    "html_url": "https://github.com/facebook/react/pull/12999",
+    "diff_url": "https://github.com/facebook/react/pull/12999.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12999.patch"
+  },
+  "body": "I still have a very shallow understanding of everything but just following along with the code as best I can and it seems that `queue2`'s expiration time needs to be updated when a new update is added? At least in the case where only one is non-empty, that is what happens (both `queue1` and `queue2` expiration times are updated). But not when both are non-empty. This PR fixes that.",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14875",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14875/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14875/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14875/events",
+  "html_url": "https://github.com/facebook/react/pull/14875",
+  "id": 411192430,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjUzNzE0NDA2",
+  "number": 14875,
+  "title": "[refactor][client/ReactDOM] convert force Boolean casting to Flow Ano…",
+  "user": {
+    "login": "ryota-murakami",
+    "id": 5501268,
+    "node_id": "MDQ6VXNlcjU1MDEyNjg=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/5501268?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ryota-murakami",
+    "html_url": "https://github.com/ryota-murakami",
+    "followers_url": "https://api.github.com/users/ryota-murakami/followers",
+    "following_url": "https://api.github.com/users/ryota-murakami/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ryota-murakami/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ryota-murakami/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ryota-murakami/subscriptions",
+    "organizations_url": "https://api.github.com/users/ryota-murakami/orgs",
+    "repos_url": "https://api.github.com/users/ryota-murakami/repos",
+    "events_url": "https://api.github.com/users/ryota-murakami/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ryota-murakami/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-02-17T14:19:18Z",
+  "updated_at": "2019-02-19T12:46:17Z",
+  "closed_at": "2019-02-18T17:49:31Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14875",
+    "html_url": "https://github.com/facebook/react/pull/14875",
+    "diff_url": "https://github.com/facebook/react/pull/14875.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14875.patch"
+  },
+  "body": "Change as title.\r\n\r\n### why\r\nI think this is safer than before.\r\n\r\nFor example, add deliberately value change as a invalid for Logical Expression.\r\n\r\n```diff\r\n-    node &&\r\n+  NaN &&\r\n    (node.nodeType === ELEMENT_NODE ||\r\n      node.nodeType === DOCUMENT_NODE ||\r\n```\r\n\r\nAfter that run ` yarn flow dom` command.  \r\nAs a result Flow can find illegal values by static analysis before runtime.  \r\nIn addition if assigned illegal values into the expression,\r\nresult value is forcibly cast to boolean, making debugging difficult.\r\n\r\n- console output\r\n```diff\r\nryota.murakami@ryotas-MacBook-Pro ~/f/react> yarn flow dom\r\nyarn run v1.12.3\r\n$ node ./scripts/tasks/flow.js dom\r\nRunning Flow on the dom renderer...\r\nLaunching Flow server for /Users/ryota.murakami/fork/react/scripts/flow/dom\r\nSpawned flow server (pid=2118)\r\nLogs will go to /private/tmp/flow/zSUserszSryota.murakamizSforkzSreactzSscriptszSflowzSdom.log\r\nMonitor logs will go to /private/tmp/flow/zSUserszSryota.murakamizSforkzSreactzSscriptszSflowzSdom.monitor_log\r\nError ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ ../../../packages/react-dom/src/client/ReactDOM.js:457:5\r\n\r\n+ Cannot return\r\n+ NaN && ((node.nodeType === ELEMENT_NODE) || (node.nodeType === DOCUMENT_NODE) || (node.nodeType === DOCUMENT_FRAGMENT_NO\r\n+ DE) || ((node.nodeType === COMMENT_NODE) && (node.nodeValue === ' react-mou...'))) because number [1] is incompatible\r\n+ with boolean [2].\r\n\r\n     ../../../packages/react-dom/src/client/ReactDOM.js\r\n     454│  */\r\n [2] 455│ function isValidContainer(node): boolean {\r\n     456│   return (\r\n     457│     NaN &&\r\n     458│     (node.nodeType === ELEMENT_NODE ||\r\n     459│       node.nodeType === DOCUMENT_NODE ||\r\n     460│       node.nodeType === DOCUMENT_FRAGMENT_NODE ||\r\n     461│       (node.nodeType === COMMENT_NODE &&\r\n     462│         node.nodeValue === ' react-mount-point-unstable '))\r\n     463│   );\r\n     464│ }\r\n     465│\r\n\r\n     /private/tmp/flow/flowlib_bb4a3db/core.js\r\n [1]  11│ declare var NaN: number;\r\n\r\n\r\n\r\nFound 1 error\r\nFlow failed for the dom renderer\r\n```\r\n\r\nThank you so much😀",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

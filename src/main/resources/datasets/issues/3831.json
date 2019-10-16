@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3831",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3831/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3831/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3831/events",
+  "html_url": "https://github.com/facebook/react/pull/3831",
+  "id": 74089674,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzQ5NDYzMjk=",
+  "number": 3831,
+  "title": "Add support for unitless tabSize/tab-size",
+  "user": {
+    "login": "MadLittleMods",
+    "id": 558581,
+    "node_id": "MDQ6VXNlcjU1ODU4MQ==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/558581?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/MadLittleMods",
+    "html_url": "https://github.com/MadLittleMods",
+    "followers_url": "https://api.github.com/users/MadLittleMods/followers",
+    "following_url": "https://api.github.com/users/MadLittleMods/following{/other_user}",
+    "gists_url": "https://api.github.com/users/MadLittleMods/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/MadLittleMods/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/MadLittleMods/subscriptions",
+    "organizations_url": "https://api.github.com/users/MadLittleMods/orgs",
+    "repos_url": "https://api.github.com/users/MadLittleMods/repos",
+    "events_url": "https://api.github.com/users/MadLittleMods/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/MadLittleMods/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2015-05-07T18:52:41Z",
+  "updated_at": "2015-05-07T20:09:17Z",
+  "closed_at": "2015-05-07T20:09:17Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3831",
+    "html_url": "https://github.com/facebook/react/pull/3831",
+    "diff_url": "https://github.com/facebook/react/pull/3831.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3831.patch"
+  },
+  "body": "Fixes #3823 \n\nSee [_Shorthand for Specifying Pixel Values in style props_](https://facebook.github.io/react/tips/style-props-value-px.html) in the React docs.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

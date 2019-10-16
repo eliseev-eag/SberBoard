@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4202",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4202/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4202/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4202/events",
+  "html_url": "https://github.com/facebook/react/pull/4202",
+  "id": 90525198,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzgzOTY5OTU=",
+  "number": 4202,
+  "title": "Translate 02-displaying-data.md to Japanese",
+  "user": {
+    "login": "kohei-takata",
+    "id": 7623979,
+    "node_id": "MDQ6VXNlcjc2MjM5Nzk=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/7623979?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/kohei-takata",
+    "html_url": "https://github.com/kohei-takata",
+    "followers_url": "https://api.github.com/users/kohei-takata/followers",
+    "following_url": "https://api.github.com/users/kohei-takata/following{/other_user}",
+    "gists_url": "https://api.github.com/users/kohei-takata/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/kohei-takata/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/kohei-takata/subscriptions",
+    "organizations_url": "https://api.github.com/users/kohei-takata/orgs",
+    "repos_url": "https://api.github.com/users/kohei-takata/repos",
+    "events_url": "https://api.github.com/users/kohei-takata/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/kohei-takata/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-06-24T00:24:20Z",
+  "updated_at": "2015-06-25T03:31:12Z",
+  "closed_at": "2015-06-24T14:42:48Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4202",
+    "html_url": "https://github.com/facebook/react/pull/4202",
+    "diff_url": "https://github.com/facebook/react/pull/4202.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4202.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15577",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15577/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15577/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15577/events",
+  "html_url": "https://github.com/facebook/react/issues/15577",
+  "id": 440823488,
+  "node_id": "MDU6SXNzdWU0NDA4MjM0ODg=",
+  "number": 15577,
+  "title": "useEffect: separate refreshing dependencies from running effect",
+  "user": {
+    "login": "gnordhielm",
+    "id": 8869040,
+    "node_id": "MDQ6VXNlcjg4NjkwNDA=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8869040?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gnordhielm",
+    "html_url": "https://github.com/gnordhielm",
+    "followers_url": "https://api.github.com/users/gnordhielm/followers",
+    "following_url": "https://api.github.com/users/gnordhielm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gnordhielm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gnordhielm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gnordhielm/subscriptions",
+    "organizations_url": "https://api.github.com/users/gnordhielm/orgs",
+    "repos_url": "https://api.github.com/users/gnordhielm/repos",
+    "events_url": "https://api.github.com/users/gnordhielm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gnordhielm/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2019-05-06T18:19:53Z",
+  "updated_at": "2019-05-31T16:06:14Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\nLooking for a clarification.\r\n\r\n---\r\n\r\n`useEffect` assumes a connection between a change in dependencies and the effect running. \r\n\r\nFollowing the exhaustive dependencies rule, I'm running into quite a few cases where I'm stuck in a confusing middle space.\r\n\r\nFor example:\r\n\r\n```\r\nuseEffect(() => {\r\n  if (thisCommentId === focusedCommentId && isCommentCollapsed) \r\n    setIsCommentCollapsed(false)\r\n\r\n}, [focusedCommentId, thisCommentId, isCommentCollapsed, setIsCommentCollapsed])\r\n```\r\n\r\nThe idea here: a comment is specified as \"focused\" in some higher-level state, when that happens, I want to make sure that comment, when rendered, is not \"collapsed\".\r\n\r\nNow, I can't collapse this comment while it's focused, because the effect will fire and set collapsed to \"false\" whenever a new collapsed value comes through. I can't avoid passing it through, because it's a legitimate dependency of the effect. But it's also not a reason to run the effect.\r\n\r\nI suspect that my whole approach to this is not quite aligned with how hooks are meant to be used. Does the question \"how to I separate dependencies from re-run conditions?\" reveal a problem in this approach? Otherwise - what's the right way to do this?\r\n",
+  "closed_by": null
+}

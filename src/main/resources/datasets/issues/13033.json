@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13033",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13033/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13033/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13033/events",
+  "html_url": "https://github.com/facebook/react/pull/13033",
+  "id": 331830736,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTk0NDYzMjgy",
+  "number": 13033,
+  "title": "Small tweak to improve readability",
+  "user": {
+    "login": "jddxf",
+    "id": 11155177,
+    "node_id": "MDQ6VXNlcjExMTU1MTc3",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/11155177?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jddxf",
+    "html_url": "https://github.com/jddxf",
+    "followers_url": "https://api.github.com/users/jddxf/followers",
+    "following_url": "https://api.github.com/users/jddxf/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jddxf/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jddxf/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jddxf/subscriptions",
+    "organizations_url": "https://api.github.com/users/jddxf/orgs",
+    "repos_url": "https://api.github.com/users/jddxf/repos",
+    "events_url": "https://api.github.com/users/jddxf/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jddxf/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2018-06-13T03:41:36Z",
+  "updated_at": "2018-06-13T13:51:35Z",
+  "closed_at": "2018-06-13T12:49:03Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13033",
+    "html_url": "https://github.com/facebook/react/pull/13033",
+    "diff_url": "https://github.com/facebook/react/pull/13033.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13033.patch"
+  },
+  "body": "Seems more clear to me and aligns with the code just below it:\r\nhttps://github.com/facebook/react/blob/945fc1bfce5f2a93ac6ff0c53da3fd57e81b5a63/packages/react-reconciler/src/ReactFiberScheduler.js#L827-L834",
+  "closed_by": {
+    "login": "jquense",
+    "id": 339286,
+    "node_id": "MDQ6VXNlcjMzOTI4Ng==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/339286?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jquense",
+    "html_url": "https://github.com/jquense",
+    "followers_url": "https://api.github.com/users/jquense/followers",
+    "following_url": "https://api.github.com/users/jquense/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jquense/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jquense/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jquense/subscriptions",
+    "organizations_url": "https://api.github.com/users/jquense/orgs",
+    "repos_url": "https://api.github.com/users/jquense/repos",
+    "events_url": "https://api.github.com/users/jquense/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jquense/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

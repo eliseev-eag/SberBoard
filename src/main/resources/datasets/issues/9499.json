@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9499",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9499/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9499/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9499/events",
+  "html_url": "https://github.com/facebook/react/pull/9499",
+  "id": 223586268,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTE3MTIxNzYw",
+  "number": 9499,
+  "title": "[site] Load libraries from unpkg",
+  "user": {
+    "login": "Daniel15",
+    "id": 91933,
+    "node_id": "MDQ6VXNlcjkxOTMz",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/91933?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Daniel15",
+    "html_url": "https://github.com/Daniel15",
+    "followers_url": "https://api.github.com/users/Daniel15/followers",
+    "following_url": "https://api.github.com/users/Daniel15/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Daniel15/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Daniel15/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Daniel15/subscriptions",
+    "organizations_url": "https://api.github.com/users/Daniel15/orgs",
+    "repos_url": "https://api.github.com/users/Daniel15/repos",
+    "events_url": "https://api.github.com/users/Daniel15/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Daniel15/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-04-22T19:14:48Z",
+  "updated_at": "2017-04-26T16:29:41Z",
+  "closed_at": "2017-04-26T13:02:50Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9499",
+    "html_url": "https://github.com/facebook/react/pull/9499",
+    "diff_url": "https://github.com/facebook/react/pull/9499.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9499.patch"
+  },
+  "body": "The site already loads one library from a CDN (docsearch.js from jsdelivr), why not all of them? We already suggest unpkg all over the site, we should use it ourselves 😃 \r\n\r\nThis diff removes all the third party libraries from the website, instead loading them via unpkg. docsearch.js was also switched to use unpkg, as using two different CDNs doesn't really make sense (using the one CDN for everything allows pipelining and reduces the number of DNS lookups).",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

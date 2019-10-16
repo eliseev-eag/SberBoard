@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3923",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3923/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3923/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3923/events",
+  "html_url": "https://github.com/facebook/react/pull/3923",
+  "id": 78778267,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzU4OTMxNjk=",
+  "number": 3923,
+  "title": "Fixed failing unit tests in browsers that don't support WebComponents",
+  "user": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2015-05-21T01:46:42Z",
+  "updated_at": "2015-05-22T20:48:03Z",
+  "closed_at": "2015-05-22T20:48:03Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3923",
+    "html_url": "https://github.com/facebook/react/pull/3923",
+    "diff_url": "https://github.com/facebook/react/pull/3923.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3923.patch"
+  },
+  "body": "As per https://github.com/facebook/react/issues/3919, our tests currently only pass in the browser when running in Chrome because when webcomponents.js is actually loaded, it's currently getting packaged into react-test because we're requiring it. It creates a new Node which is resulting in nodes we create with createNodeFromMarkup to have a different prototype than what is expected in WebComponents. WebComponents's new Node prototype has a different implementation of insertBefore which does an instanceof Node check which our nodes are failing.\n\nThis PR explicitly checks for PhantomJS (probably not strictly necessary, since we had the try-catch there before, but Paul asked for a check).  Also loads webcomponents.js for tests before any of the other javascript.\n\nThere are still a couple of tests failing in my Firefox, but presumably that's unrelated.  We can investigate those tests further tomorrow.  In the mean time, this diff should be ready to land.\n\ncc @zpao \n\nFixes #3919\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

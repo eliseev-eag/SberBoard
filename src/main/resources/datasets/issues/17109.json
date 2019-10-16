@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/17109",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/17109/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/17109/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/17109/events",
+  "html_url": "https://github.com/facebook/react/issues/17109",
+  "id": 507682173,
+  "node_id": "MDU6SXNzdWU1MDc2ODIxNzM=",
+  "number": 17109,
+  "title": "Question: How to rewrite setState(state, callback) with hooks",
+  "user": {
+    "login": "yoyo837",
+    "id": 6134547,
+    "node_id": "MDQ6VXNlcjYxMzQ1NDc=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/6134547?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/yoyo837",
+    "html_url": "https://github.com/yoyo837",
+    "followers_url": "https://api.github.com/users/yoyo837/followers",
+    "following_url": "https://api.github.com/users/yoyo837/following{/other_user}",
+    "gists_url": "https://api.github.com/users/yoyo837/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/yoyo837/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/yoyo837/subscriptions",
+    "organizations_url": "https://api.github.com/users/yoyo837/orgs",
+    "repos_url": "https://api.github.com/users/yoyo837/repos",
+    "events_url": "https://api.github.com/users/yoyo837/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/yoyo837/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-10-16T07:59:49Z",
+  "updated_at": "2019-10-16T07:59:49Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "First of all, I am sorry that my English is poor.\r\n\r\n#14493\r\n#15772 \r\n\r\nI found some similar issues, but I think the things I want to explain will be different. When my callback doesn't always do something periodically based on some conditions, it seems that useEffect doesn't quite meet the requirements.\r\n\r\nFor example, using setState data to modify the DOM, and in rare cases, other processing of the DOM will be required in the callback. But the prerequisites for doing these things can be complex and irregular, so useEffect seems to be difficult to do.",
+  "closed_by": null
+}

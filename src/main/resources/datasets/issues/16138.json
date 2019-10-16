@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16138",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16138/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16138/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16138/events",
+  "html_url": "https://github.com/facebook/react/issues/16138",
+  "id": 468336917,
+  "node_id": "MDU6SXNzdWU0NjgzMzY5MTc=",
+  "number": 16138,
+  "title": "Memory leak - React DOM keeps references to previous states/props/children of component",
+  "user": {
+    "login": "dmitrysteblyuk",
+    "id": 19614814,
+    "node_id": "MDQ6VXNlcjE5NjE0ODE0",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/19614814?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dmitrysteblyuk",
+    "html_url": "https://github.com/dmitrysteblyuk",
+    "followers_url": "https://api.github.com/users/dmitrysteblyuk/followers",
+    "following_url": "https://api.github.com/users/dmitrysteblyuk/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dmitrysteblyuk/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dmitrysteblyuk/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dmitrysteblyuk/subscriptions",
+    "organizations_url": "https://api.github.com/users/dmitrysteblyuk/orgs",
+    "repos_url": "https://api.github.com/users/dmitrysteblyuk/repos",
+    "events_url": "https://api.github.com/users/dmitrysteblyuk/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dmitrysteblyuk/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2019-07-15T21:10:04Z",
+  "updated_at": "2019-10-08T16:17:04Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\nReport a bug.\r\n\r\n**What is the current behavior?**\r\nReactDOM keeps references to previous states/props/children when component gets updated. All in all consuming three times as much memory as it really needed.\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\n\r\nLink to the example below (using production versions of `react` and `react-dom`):\r\nhttps://codesandbox.io/s/epic-bartik-pvgqx.\r\n\r\nConsider following example:\r\n```\r\nimport * as React from 'react';\r\nimport * as ReactDOM from 'react-dom';\r\n\r\nlet dataInstanceCount = 0;\r\nclass MyBigData {\r\n  constructor() {\r\n    const id = `my-big-data:${dataInstanceCount++}`;\r\n    this.getMyDataId = () => id;\r\n    this.data = new Array(100000).fill('');\r\n  }\r\n}\r\n\r\nlet componentInstanceCount = 0;\r\nclass MyItem extends React.Component {\r\n  constructor(props) {\r\n    super(props);\r\n    this._myItemId = `my-item:${componentInstanceCount++}`;\r\n    this.state = {list: []};\r\n  }\r\n\r\n  render() {\r\n    return this.props.item.getMyDataId();\r\n  }\r\n}\r\n\r\nclass MyApp extends React.Component {\r\n  constructor(props) {\r\n    super(props);\r\n    this.state = {list: []};\r\n  }\r\n\r\n  componentDidMount() {\r\n    this.updateList(() => {\r\n      this.updateList(() => {\r\n        this.updateList();\r\n      });\r\n    });\r\n  }\r\n\r\n  updateList(callback) {\r\n    this.setState({\r\n      list: [new MyBigData()]\r\n    }, callback);\r\n  }\r\n\r\n  render() {\r\n    return this.state.list.map((item) => (\r\n      <MyItem key={item.getMyDataId()} item={item} />\r\n    ));\r\n  }\r\n}\r\n\r\nconst rootElement = document.getElementById('root');\r\nReactDOM.render(\r\n  <MyApp />,\r\n  rootElement\r\n);\r\n\r\nsetTimeout(() => {\r\n  console.log(\r\n    rootElement._reactRootContainer._internalRoot.current.alternate.firstEffect.memoizedProps.item.getMyDataId(),\r\n    rootElement._reactRootContainer._internalRoot.current.alternate.firstEffect.stateNode._myItemId\r\n  );\r\n  // > my-big-data:0, my-item:0\r\n  console.log(\r\n    rootElement._reactRootContainer._internalRoot.current.firstEffect.memoizedProps.item.getMyDataId(),\r\n    rootElement._reactRootContainer._internalRoot.current.firstEffect.stateNode._myItemId\r\n  );\r\n  // > my-big-data:1, my-item:1\r\n  console.log(\r\n    rootElement._reactRootContainer._internalRoot.current.lastEffect.memoizedProps.item.getMyDataId(),\r\n    rootElement._reactRootContainer._internalRoot.current.lastEffect.stateNode._myItemId\r\n  );\r\n  // > my-big-data:2, my-item:2\r\n}, 1000);\r\n```\r\n\r\nI expect only one `MyBigObject` and one `MyItem` component to be in the memory. But instead I can see three of each in memory heap snapshot.\r\n\r\n***UPDATE***\r\nAs shown in the updated example the references to these objects and components can be accessed in the sub-properties of the root DOM element.\r\n\r\n**What is the expected behavior?**\r\nThere's no justifiable reason to keep in memory unmounted components and previous states/props of component after it was updated.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nReact 16.9.0, ReactDOM 16.9.0 (Production versions)\r\nMac/Win\r\n",
+  "closed_by": null
+}

@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15035",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15035/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15035/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15035/events",
+  "html_url": "https://github.com/facebook/react/pull/15035",
+  "id": 417679107,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjU4NjIxNDE1",
+  "number": 15035,
+  "title": "add Rollup build fail information for the developer",
+  "user": {
+    "login": "kunukn",
+    "id": 3199603,
+    "node_id": "MDQ6VXNlcjMxOTk2MDM=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/3199603?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/kunukn",
+    "html_url": "https://github.com/kunukn",
+    "followers_url": "https://api.github.com/users/kunukn/followers",
+    "following_url": "https://api.github.com/users/kunukn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/kunukn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/kunukn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/kunukn/subscriptions",
+    "organizations_url": "https://api.github.com/users/kunukn/orgs",
+    "repos_url": "https://api.github.com/users/kunukn/repos",
+    "events_url": "https://api.github.com/users/kunukn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/kunukn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-03-06T08:27:30Z",
+  "updated_at": "2019-04-02T09:33:48Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15035",
+    "html_url": "https://github.com/facebook/react/pull/15035",
+    "diff_url": "https://github.com/facebook/react/pull/15035.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15035.patch"
+  },
+  "body": "Purpose:\r\n\r\nAs a developer, I would be really nice to easily identify whether a build failed due to external or internal reasons.\r\n\r\nInternal reasons are where we deliberately fail a build. \r\nAs I experimented with updating the Rollup version I experienced failures due to Rollup warnings.\r\n\r\nIn newer versions of Rollup they introduced \"CIRCULAR_DEPENDENCY\" warning which will fail the react-dom build.\r\n\r\nIf I knew the build fail was due to the build.js file explicitly invoking process.exit(1), then I would have spend less time debugging the reason of the build failure.\r\n",
+  "closed_by": null
+}

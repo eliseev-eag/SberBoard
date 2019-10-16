@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11152",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11152/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11152/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11152/events",
+  "html_url": "https://github.com/facebook/react/issues/11152",
+  "id": 263840007,
+  "node_id": "MDU6SXNzdWUyNjM4NDAwMDc=",
+  "number": 11152,
+  "title": "onMouseEnter triggered on children in React 16",
+  "user": {
+    "login": "dbismut",
+    "id": 5003380,
+    "node_id": "MDQ6VXNlcjUwMDMzODA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/5003380?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dbismut",
+    "html_url": "https://github.com/dbismut",
+    "followers_url": "https://api.github.com/users/dbismut/followers",
+    "following_url": "https://api.github.com/users/dbismut/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dbismut/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dbismut/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dbismut/subscriptions",
+    "organizations_url": "https://api.github.com/users/dbismut/orgs",
+    "repos_url": "https://api.github.com/users/dbismut/repos",
+    "events_url": "https://api.github.com/users/dbismut/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dbismut/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2017-10-09T09:57:11Z",
+  "updated_at": "2017-11-03T08:18:42Z",
+  "closed_at": "2017-10-09T19:30:27Z",
+  "author_association": "NONE",
+  "body": "Hi, I'm having an issue with `onMouseEnter` being triggered on children of a component. *It only occurs with React 16*.\r\n\r\nI've created a [CodePen that shows the issue](https://codepen.io/testprofile75/pen/VMXXdb).\r\n\r\nSimplified structure is as below:\r\n```\r\n           <Card/> :\r\n–––––––––––––––––––––––––––––\r\n|                            |\r\n|          <Cover/>          |\r\n|                            |\r\n------------------------------\r\n|                            |\r\n|    <div class=\"text\" />    |\r\n|                            |\r\n–––––––––––––––––––––––––––––\r\n```\r\n\r\n`<Card />` is a component that needs to capture `onMouseMove` events (and trigger a `render`) and `<Cover/>` is a simple component that waits for an image (passed as a `prop`) to be loaded before displaying it (using `onload` on an `Image` created in the `constructor`).\r\n\r\nIf you open the console, you'll see that `onMouseEnter` is triggered when hovering `<Card />` (normal behavior), but also when hovering the `.text` div (which is not supposed to happen).\r\n\r\nIf you remove the whole `onload` logic from the `<Cover/>` element, then `onMouseEnter` works as intended.\r\n\r\nIt's possible that I'm coding this in a way that isn't appropriate, but it does look like a bug anyway :)\r\n\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

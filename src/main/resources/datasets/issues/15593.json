@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15593",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15593/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15593/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15593/events",
+  "html_url": "https://github.com/facebook/react/pull/15593",
+  "id": 442002200,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjc3MjEwMzk0",
+  "number": 15593,
+  "title": "Add withSuspenseConfig API",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2019-05-09T00:49:25Z",
+  "updated_at": "2019-05-23T03:29:39Z",
+  "closed_at": "2019-05-16T23:51:18Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15593",
+    "html_url": "https://github.com/facebook/react/pull/15593",
+    "diff_url": "https://github.com/facebook/react/pull/15593.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15593.patch"
+  },
+  "body": "This adds `unstable_withSuspenseConfig(callback, config)` to the `react` package. This is a primitive that can be used to implement \"busy spinners\". __I recommend reviewing the code commit by commit.__\r\n\r\nThis sets the config as a global state available to all React renderers during the scope of the synchronously executed callback (first arg). If you don't pass a config, it disables suspense (for longer than the default JND).\r\n\r\nIf any updates are scheduled (render, setState, dispatch) during this scope, then they get this \"suspense config\" associated with the update.\r\n\r\nIf during a render pass, we process one of those updates, we mark this render pass as having a \"suspense config\".\r\n\r\nIf during a render pass, we are forced to turn already visible content back into a fallback, we mark this render as suspended with a delay if possible. (This doesn't not happen during initial render of new content.)\r\n\r\nIf we have both marked this render as having a suspense config and it was suspended with delay, then we extend the suspended time beyond JND all the way to the timeout defined in the suspense config.\r\n\r\nThe suspense config has these options:\r\n\r\n```\r\n{\r\n  timeoutMs: number,\r\n  loadingDelayMs?: number,\r\n  minLoadingDurationMs?: number,\r\n}\r\n```\r\n\r\nThe last two are used when we have actually completed a render fairly quickly. If we have exceeded `loadingDelayMs` but have not yet exceeded `loadingDelayMs + minLoadingDurationMs` then we suspend the commit until that time even though we could commit early. This can be used to implement busy spinners that delay when they first show but want to stay visible for a minimum time if they do show, to avoid flickering.\r\n\r\nTasks:\r\n- [x] Implementation\r\n- [ ] Tests",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

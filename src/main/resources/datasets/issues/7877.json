@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7877",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7877/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7877/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7877/events",
+  "html_url": "https://github.com/facebook/react/pull/7877",
+  "id": 181057808,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODgwMTE0NTE=",
+  "number": 7877,
+  "title": "Adds mention of handling properties on web components in docs",
+  "user": {
+    "login": "briandeheus",
+    "id": 995280,
+    "node_id": "MDQ6VXNlcjk5NTI4MA==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/995280?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/briandeheus",
+    "html_url": "https://github.com/briandeheus",
+    "followers_url": "https://api.github.com/users/briandeheus/followers",
+    "following_url": "https://api.github.com/users/briandeheus/following{/other_user}",
+    "gists_url": "https://api.github.com/users/briandeheus/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/briandeheus/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/briandeheus/subscriptions",
+    "organizations_url": "https://api.github.com/users/briandeheus/orgs",
+    "repos_url": "https://api.github.com/users/briandeheus/repos",
+    "events_url": "https://api.github.com/users/briandeheus/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/briandeheus/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-10-05T03:36:55Z",
+  "updated_at": "2016-10-23T14:50:34Z",
+  "closed_at": "2016-10-23T14:50:34Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7877",
+    "html_url": "https://github.com/facebook/react/pull/7877",
+    "diff_url": "https://github.com/facebook/react/pull/7877.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7877.patch"
+  },
+  "body": "Because my [pull request](https://github.com/facebook/react/pull/7843) was closed, and I couldn't find any mention of this specific behavior in the documentation.\n\n![screencapture-localhost-4000-react-docs-webcomponents-html-1475638181714](https://cloud.githubusercontent.com/assets/995280/19100265/2688cbc4-8af8-11e6-8e2f-e39cae3d8a71.png)\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

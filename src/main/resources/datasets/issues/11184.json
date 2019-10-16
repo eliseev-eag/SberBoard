@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11184",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11184/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11184/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11184/events",
+  "html_url": "https://github.com/facebook/react/issues/11184",
+  "id": 264346979,
+  "node_id": "MDU6SXNzdWUyNjQzNDY5Nzk=",
+  "number": 11184,
+  "title": "React16 not compatible with x3dom",
+  "user": {
+    "login": "pgruenbacher",
+    "id": 3332598,
+    "node_id": "MDQ6VXNlcjMzMzI1OTg=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/3332598?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/pgruenbacher",
+    "html_url": "https://github.com/pgruenbacher",
+    "followers_url": "https://api.github.com/users/pgruenbacher/followers",
+    "following_url": "https://api.github.com/users/pgruenbacher/following{/other_user}",
+    "gists_url": "https://api.github.com/users/pgruenbacher/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/pgruenbacher/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/pgruenbacher/subscriptions",
+    "organizations_url": "https://api.github.com/users/pgruenbacher/orgs",
+    "repos_url": "https://api.github.com/users/pgruenbacher/repos",
+    "events_url": "https://api.github.com/users/pgruenbacher/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/pgruenbacher/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2017-10-10T19:25:21Z",
+  "updated_at": "2017-10-11T20:44:33Z",
+  "closed_at": "2017-10-11T20:44:33Z",
+  "author_association": "NONE",
+  "body": "** This is both bug / feature\r\nhttps://www.x3dom.org/\r\n\r\nI used to be able to use x3dom with React. It was great.\r\n\r\n** React ^15 I was able to use the **is** property to generate custom elements and custom attributes that could be picked up by x3dom i.e. <shape is render=\"true\"/>\r\n\r\nNow with React16 i get many warning messages for all of the custom x3dom tag elements. Likewise it seems that certain attributes aren't getting rendered either. For instance if I do x3dom elements like so:\r\n\r\n`<fontstyle size=\"0.6\"/>` I'll get `<fontstyle/>` output without the size attribute.\r\n\r\nI don't think React should have to know what x3dom tags are, nor should they be hard-coded into React. There has got to be a way to have React output custom tags without throwing warning messsages. Why not just re-introduce the **is** attribute to indicate that it's a custom tag with custom attributes? ",
+  "closed_by": {
+    "login": "pgruenbacher",
+    "id": 3332598,
+    "node_id": "MDQ6VXNlcjMzMzI1OTg=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/3332598?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/pgruenbacher",
+    "html_url": "https://github.com/pgruenbacher",
+    "followers_url": "https://api.github.com/users/pgruenbacher/followers",
+    "following_url": "https://api.github.com/users/pgruenbacher/following{/other_user}",
+    "gists_url": "https://api.github.com/users/pgruenbacher/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/pgruenbacher/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/pgruenbacher/subscriptions",
+    "organizations_url": "https://api.github.com/users/pgruenbacher/orgs",
+    "repos_url": "https://api.github.com/users/pgruenbacher/repos",
+    "events_url": "https://api.github.com/users/pgruenbacher/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/pgruenbacher/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

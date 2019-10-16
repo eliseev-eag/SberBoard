@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13974",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13974/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13974/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13974/events",
+  "html_url": "https://github.com/facebook/react/pull/13974",
+  "id": 374149042,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjI1OTE2OTY3",
+  "number": 13974,
+  "title": "Fixed a random bug in react-dom development",
+  "user": {
+    "login": "jld3103",
+    "id": 26026535,
+    "node_id": "MDQ6VXNlcjI2MDI2NTM1",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/26026535?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jld3103",
+    "html_url": "https://github.com/jld3103",
+    "followers_url": "https://api.github.com/users/jld3103/followers",
+    "following_url": "https://api.github.com/users/jld3103/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jld3103/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jld3103/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jld3103/subscriptions",
+    "organizations_url": "https://api.github.com/users/jld3103/orgs",
+    "repos_url": "https://api.github.com/users/jld3103/repos",
+    "events_url": "https://api.github.com/users/jld3103/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jld3103/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2018-10-25T21:56:50Z",
+  "updated_at": "2018-10-26T00:45:43Z",
+  "closed_at": "2018-10-26T00:45:43Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13974",
+    "html_url": "https://github.com/facebook/react/pull/13974",
+    "diff_url": "https://github.com/facebook/react/pull/13974.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13974.patch"
+  },
+  "body": "I found a random bug in react-dom, but only in development:\r\n```\r\nERROR in ./node_modules/react-dom/cjs/react-dom.development.js\r\nModule build failed (from ./node_modules/babel-loader/lib/index.js):\r\nSyntaxError: node_modules/react-dom/cjs/react-dom.development.js: Unexpected token, expected \";\" (13463:228)\r\n```\r\n\r\nA string was not escaped correctly, but only in development it throws this error.",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

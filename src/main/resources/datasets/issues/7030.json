@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7030",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7030/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7030/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7030/events",
+  "html_url": "https://github.com/facebook/react/pull/7030",
+  "id": 159971868,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzM1OTA1Njc=",
+  "number": 7030,
+  "title": "Added link to HyperDev version of tutorial app (#1)",
+  "user": {
+    "login": "garethx",
+    "id": 1830035,
+    "node_id": "MDQ6VXNlcjE4MzAwMzU=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1830035?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/garethx",
+    "html_url": "https://github.com/garethx",
+    "followers_url": "https://api.github.com/users/garethx/followers",
+    "following_url": "https://api.github.com/users/garethx/following{/other_user}",
+    "gists_url": "https://api.github.com/users/garethx/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/garethx/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/garethx/subscriptions",
+    "organizations_url": "https://api.github.com/users/garethx/orgs",
+    "repos_url": "https://api.github.com/users/garethx/repos",
+    "events_url": "https://api.github.com/users/garethx/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/garethx/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-06-13T15:02:14Z",
+  "updated_at": "2016-07-25T23:29:42Z",
+  "closed_at": "2016-07-25T23:29:42Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7030",
+    "html_url": "https://github.com/facebook/react/pull/7030",
+    "diff_url": "https://github.com/facebook/react/pull/7030.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7030.patch"
+  },
+  "body": "This adds a remix link to a version of the React tutorial on HyperDev - some users might prefer this as they get a copy of the code that just runs without any setup, and they can edit it straight away. I can add maintainers to the HyperDev project (like with the React JSFiddle examples).\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

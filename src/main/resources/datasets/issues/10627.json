@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10627",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10627/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10627/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10627/events",
+  "html_url": "https://github.com/facebook/react/pull/10627",
+  "id": 255747385,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTM5NjY4NDk4",
+  "number": 10627,
+  "title": "React native event type fixes",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-09-06T21:25:28Z",
+  "updated_at": "2017-09-06T22:34:06Z",
+  "closed_at": "2017-09-06T22:34:03Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10627",
+    "html_url": "https://github.com/facebook/react/pull/10627",
+    "diff_url": "https://github.com/facebook/react/pull/10627.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10627.patch"
+  },
+  "body": "* 5a12260: **Added invariant check for native dispatching an unsupported event type**\r\nThis prevents a case of a silent failure when native dispatches an event that JavaScript does not know how to handle.\r\n* 633235e: **Added iOS direct event type \"onSnapshotReady\"**\r\nThis is used for snapshot testing. I missed it initially since I didn't gather event types from test-specific native views.\r\n\r\nThese issues were uncovered while running integration tests during a React Native fbsource sync.\r\n* Before this fix, our snapshot tests failed due to timeouts.\r\n* After commit 5a12260, snapshot tests failed with: _Unhandled JS Exception: Unsupported top level event type \"topSnapshotReady\"_\r\n* After 633235e, snapshot tests pass.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

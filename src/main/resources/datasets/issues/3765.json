@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3765",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3765/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3765/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3765/events",
+  "html_url": "https://github.com/facebook/react/pull/3765",
+  "id": 71570344,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzQyNTk2MDU=",
+  "number": 3765,
+  "title": "Add CNAME file to claim react.js.org",
+  "user": {
+    "login": "ianobermiller",
+    "id": 897931,
+    "node_id": "MDQ6VXNlcjg5NzkzMQ==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/897931?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ianobermiller",
+    "html_url": "https://github.com/ianobermiller",
+    "followers_url": "https://api.github.com/users/ianobermiller/followers",
+    "following_url": "https://api.github.com/users/ianobermiller/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ianobermiller/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ianobermiller/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ianobermiller/subscriptions",
+    "organizations_url": "https://api.github.com/users/ianobermiller/orgs",
+    "repos_url": "https://api.github.com/users/ianobermiller/repos",
+    "events_url": "https://api.github.com/users/ianobermiller/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ianobermiller/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-04-28T12:05:45Z",
+  "updated_at": "2015-04-28T17:16:27Z",
+  "closed_at": "2015-04-28T17:16:27Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3765",
+    "html_url": "https://github.com/facebook/react/pull/3765",
+    "diff_url": "https://github.com/facebook/react/pull/3765.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3765.patch"
+  },
+  "body": "Fixes #3754. Note that this will **not** cause the existing page http://facebook.github.io/react/ to redirect.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

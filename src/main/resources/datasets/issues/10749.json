@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10749",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10749/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10749/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10749/events",
+  "html_url": "https://github.com/facebook/react/pull/10749",
+  "id": 258946706,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQxOTQzNzQ0",
+  "number": 10749,
+  "title": "Header component search input fixed for mobile",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2017-09-19T20:04:29Z",
+  "updated_at": "2017-09-20T15:44:25Z",
+  "closed_at": "2017-09-19T22:12:54Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10749",
+    "html_url": "https://github.com/facebook/react/pull/10749",
+    "diff_url": "https://github.com/facebook/react/pull/10749.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10749.patch"
+  },
+  "body": "### Header\r\n![mobile-search-bar](https://user-images.githubusercontent.com/29597/30613399-c1f3ca12-9d3c-11e7-9dd6-fab98589ec0b.gif)\r\n\r\n### Popup\r\n![screen shot 2017-09-19 at 2 11 46 pm](https://user-images.githubusercontent.com/29597/30615673-8101c114-9d44-11e7-8688-9d876f665308.png)\r\n\r\nThe mobile CSS is pretty hacky, but then again- so is the entire algolia.css file. I'm not too concerned about it though since one of our follow-up items (post launch) is to replace it with a client-side search.\r\n\r\nThe popup is also a bit blurry on mobile. This has something to do with the fixed position, but I'm not sure what else is causing it. Since it impacts mobile only, and we plan to replace this popup soon, I don't consider it a blocker.\r\n\r\ncc @joecritch",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

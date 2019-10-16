@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7365",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7365/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7365/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7365/events",
+  "html_url": "https://github.com/facebook/react/pull/7365",
+  "id": 168021943,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzkxNDI1NTc=",
+  "number": 7365,
+  "title": "Fix incorrect doc location",
+  "user": {
+    "login": "keyz",
+    "id": 2268452,
+    "node_id": "MDQ6VXNlcjIyNjg0NTI=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2268452?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/keyz",
+    "html_url": "https://github.com/keyz",
+    "followers_url": "https://api.github.com/users/keyz/followers",
+    "following_url": "https://api.github.com/users/keyz/following{/other_user}",
+    "gists_url": "https://api.github.com/users/keyz/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/keyz/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/keyz/subscriptions",
+    "organizations_url": "https://api.github.com/users/keyz/orgs",
+    "repos_url": "https://api.github.com/users/keyz/repos",
+    "events_url": "https://api.github.com/users/keyz/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/keyz/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-07-28T06:23:22Z",
+  "updated_at": "2016-07-28T18:41:27Z",
+  "closed_at": "2016-07-28T18:03:07Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7365",
+    "html_url": "https://github.com/facebook/react/pull/7365",
+    "diff_url": "https://github.com/facebook/react/pull/7365.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7365.patch"
+  },
+  "body": "Sorry, I didn't notice that #7284 was not in the right folder. cc @zpao\n",
+  "closed_by": {
+    "login": "keyz",
+    "id": 2268452,
+    "node_id": "MDQ6VXNlcjIyNjg0NTI=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2268452?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/keyz",
+    "html_url": "https://github.com/keyz",
+    "followers_url": "https://api.github.com/users/keyz/followers",
+    "following_url": "https://api.github.com/users/keyz/following{/other_user}",
+    "gists_url": "https://api.github.com/users/keyz/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/keyz/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/keyz/subscriptions",
+    "organizations_url": "https://api.github.com/users/keyz/orgs",
+    "repos_url": "https://api.github.com/users/keyz/repos",
+    "events_url": "https://api.github.com/users/keyz/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/keyz/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

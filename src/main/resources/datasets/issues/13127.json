@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13127",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13127/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13127/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13127/events",
+  "html_url": "https://github.com/facebook/react/pull/13127",
+  "id": 336987014,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTk4MzA4MTE4",
+  "number": 13127,
+  "title": "[#12589] Multiple Renderers Should Allow Context",
+  "user": {
+    "login": "stereobooster",
+    "id": 179534,
+    "node_id": "MDQ6VXNlcjE3OTUzNA==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/179534?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/stereobooster",
+    "html_url": "https://github.com/stereobooster",
+    "followers_url": "https://api.github.com/users/stereobooster/followers",
+    "following_url": "https://api.github.com/users/stereobooster/following{/other_user}",
+    "gists_url": "https://api.github.com/users/stereobooster/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/stereobooster/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/stereobooster/subscriptions",
+    "organizations_url": "https://api.github.com/users/stereobooster/orgs",
+    "repos_url": "https://api.github.com/users/stereobooster/repos",
+    "events_url": "https://api.github.com/users/stereobooster/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/stereobooster/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2018-06-29T12:51:20Z",
+  "updated_at": "2018-07-04T16:59:08Z",
+  "closed_at": "2018-07-04T07:04:13Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13127",
+    "html_url": "https://github.com/facebook/react/pull/13127",
+    "diff_url": "https://github.com/facebook/react/pull/13127.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13127.patch"
+  },
+  "body": "Implementation of https://github.com/facebook/react/issues/12589. Firs commit with test, so it fails. Second commit with implementation so it is green",
+  "closed_by": {
+    "login": "stereobooster",
+    "id": 179534,
+    "node_id": "MDQ6VXNlcjE3OTUzNA==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/179534?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/stereobooster",
+    "html_url": "https://github.com/stereobooster",
+    "followers_url": "https://api.github.com/users/stereobooster/followers",
+    "following_url": "https://api.github.com/users/stereobooster/following{/other_user}",
+    "gists_url": "https://api.github.com/users/stereobooster/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/stereobooster/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/stereobooster/subscriptions",
+    "organizations_url": "https://api.github.com/users/stereobooster/orgs",
+    "repos_url": "https://api.github.com/users/stereobooster/repos",
+    "events_url": "https://api.github.com/users/stereobooster/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/stereobooster/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

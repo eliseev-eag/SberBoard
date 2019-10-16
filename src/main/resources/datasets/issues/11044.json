@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11044",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11044/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11044/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11044/events",
+  "html_url": "https://github.com/facebook/react/pull/11044",
+  "id": 262219139,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ0Mjc3MTM0",
+  "number": 11044,
+  "title": " Throw better error when rendering into parentless commentNode ",
+  "user": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2017-10-02T20:34:47Z",
+  "updated_at": "2018-01-05T16:35:15Z",
+  "closed_at": "2018-01-05T16:35:15Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11044",
+    "html_url": "https://github.com/facebook/react/pull/11044",
+    "diff_url": "https://github.com/facebook/react/pull/11044.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11044.patch"
+  },
+  "body": "We have come across a use case where React renders into a comment node\r\nwith no parent, and this code assumes that there is always a parent node\r\nfor a comment node.\r\n\r\n**what is the change?:**\r\n- Instead of trying to succeed somehow when rendering into a commentNode\r\n  which has no parent, we should throw an informative error.\r\n- Changes the test to check for the informative error\r\n- Also updates the test to use a valid commentNode; previously the test\r\n  was failing because apparently you need the commentNode to have the\r\n  text ' react-mount-point-unstable ' and not just\r\n  'react-mount-point-unstable'.\r\n\r\n**why make this change?:**\r\nTo debug and mitigate effect of bug reported in https://our.intern.facebook.com/intern/tasks/?t=22198152\r\n\r\n**test plan:**\r\n`yarn test src/renderers/dom/shared/__tests__/ReactMount-test.js`\r\n\r\n**issue:**\r\nSee internal task https://our.intern.facebook.com/intern/tasks/?t=22198152",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

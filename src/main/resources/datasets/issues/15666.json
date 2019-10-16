@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15666",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15666/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15666/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15666/events",
+  "html_url": "https://github.com/facebook/react/pull/15666",
+  "id": 444716856,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjc5MzE5MTAz",
+  "number": 15666,
+  "title": "Bail out of updates in offscreen trees",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-05-16T01:49:43Z",
+  "updated_at": "2019-05-16T13:28:49Z",
+  "closed_at": "2019-05-16T10:12:06Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15666",
+    "html_url": "https://github.com/facebook/react/pull/15666",
+    "diff_url": "https://github.com/facebook/react/pull/15666.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15666.patch"
+  },
+  "body": "Currently `setState` inside `flushSync` will flush within an offscreen tree. This is because our offscreen bailout is buried into `updateHostComponent` which doesn't run in the jump-over bailout codepath as we go towards the deep update. This duplicates the check there. The new test fails on master. (I'm not sure I understand the change needed in another test so this needs some caution.)\r\n\r\nI've also flipped the condition in both places to check the mode first. Since this is likely a more common first check that will be false.\r\n\r\nNote this adds some overhead in CM to the jump-over bailout codepath. Maybe this is the time to add `<Offscreen />` instead?",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

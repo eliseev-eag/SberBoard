@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13357",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13357/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13357/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13357/events",
+  "html_url": "https://github.com/facebook/react/pull/13357",
+  "id": 349211518,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjA3MzgxNjQ1",
+  "number": 13357,
+  "title": "Failing test for removing nodes with dupe keys",
+  "user": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2018-08-09T17:00:05Z",
+  "updated_at": "2019-08-07T11:45:23Z",
+  "closed_at": null,
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13357",
+    "html_url": "https://github.com/facebook/react/pull/13357",
+    "diff_url": "https://github.com/facebook/react/pull/13357.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13357.patch"
+  },
+  "body": "We don't really support duplicate keys, but the fact that we don't means you can get totally inconsistent output -- where your component thinks it is rendering one thing but is actually rendering another. The simplest manifestation of this is:\n\n```js\nfunction Foo(props) {\n  if (props.step === 1) {\n    return <>\n      <div key=\"bar\" />\n      <div key=\"bar\" />\n    </>;\n  } else {\n    return <>\n      <div key=\"baz\" />\n    </>;\n  }\n}\n```\n\nIf you render step=1 then step=2, you'll end up with a DOM containing `bar` then `baz` even though that's \"logically impossible\".\n\nPeople who see a dupe key warning in DEV should heed it, but this is still pretty odd behavior (that can be caused by fluke unreliable server data), so maybe we can do better?",
+  "closed_by": null
+}

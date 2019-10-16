@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5239",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5239/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5239/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5239/events",
+  "html_url": "https://github.com/facebook/react/pull/5239",
+  "id": 112700002,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDg0MDE3OTQ=",
+  "number": 5239,
+  "title": "Fix 10.1-animation.md doc",
+  "user": {
+    "login": "gontux",
+    "id": 1781548,
+    "node_id": "MDQ6VXNlcjE3ODE1NDg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1781548?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gontux",
+    "html_url": "https://github.com/gontux",
+    "followers_url": "https://api.github.com/users/gontux/followers",
+    "following_url": "https://api.github.com/users/gontux/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gontux/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gontux/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gontux/subscriptions",
+    "organizations_url": "https://api.github.com/users/gontux/orgs",
+    "repos_url": "https://api.github.com/users/gontux/repos",
+    "events_url": "https://api.github.com/users/gontux/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gontux/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2015-10-21T23:34:54Z",
+  "updated_at": "2015-10-22T06:22:41Z",
+  "closed_at": "2015-10-22T06:22:41Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5239",
+    "html_url": "https://github.com/facebook/react/pull/5239",
+    "diff_url": "https://github.com/facebook/react/pull/5239.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5239.patch"
+  },
+  "body": "Missing `.bind(this)`\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

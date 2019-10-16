@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5098",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5098/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5098/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5098/events",
+  "html_url": "https://github.com/facebook/react/pull/5098",
+  "id": 110537507,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDcyMDM5ODc=",
+  "number": 5098,
+  "title": "Fix confusing whitespace nesting warning",
+  "user": {
+    "login": "loganhenson",
+    "id": 2792946,
+    "node_id": "MDQ6VXNlcjI3OTI5NDY=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2792946?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/loganhenson",
+    "html_url": "https://github.com/loganhenson",
+    "followers_url": "https://api.github.com/users/loganhenson/followers",
+    "following_url": "https://api.github.com/users/loganhenson/following{/other_user}",
+    "gists_url": "https://api.github.com/users/loganhenson/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/loganhenson/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/loganhenson/subscriptions",
+    "organizations_url": "https://api.github.com/users/loganhenson/orgs",
+    "repos_url": "https://api.github.com/users/loganhenson/repos",
+    "events_url": "https://api.github.com/users/loganhenson/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/loganhenson/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2015-10-08T20:44:57Z",
+  "updated_at": "2015-10-08T20:58:24Z",
+  "closed_at": "2015-10-08T20:58:09Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5098",
+    "html_url": "https://github.com/facebook/react/pull/5098",
+    "diff_url": "https://github.com/facebook/react/pull/5098.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5098.patch"
+  },
+  "body": "![image](https://cloud.githubusercontent.com/assets/2792946/10379314/4b621ec0-6dd3-11e5-817f-4e106fd432d0.png)\n",
+  "closed_by": {
+    "login": "loganhenson",
+    "id": 2792946,
+    "node_id": "MDQ6VXNlcjI3OTI5NDY=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2792946?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/loganhenson",
+    "html_url": "https://github.com/loganhenson",
+    "followers_url": "https://api.github.com/users/loganhenson/followers",
+    "following_url": "https://api.github.com/users/loganhenson/following{/other_user}",
+    "gists_url": "https://api.github.com/users/loganhenson/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/loganhenson/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/loganhenson/subscriptions",
+    "organizations_url": "https://api.github.com/users/loganhenson/orgs",
+    "repos_url": "https://api.github.com/users/loganhenson/repos",
+    "events_url": "https://api.github.com/users/loganhenson/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/loganhenson/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

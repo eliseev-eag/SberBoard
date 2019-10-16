@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8514",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8514/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8514/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8514/events",
+  "html_url": "https://github.com/facebook/react/issues/8514",
+  "id": 194037954,
+  "node_id": "MDU6SXNzdWUxOTQwMzc5NTQ=",
+  "number": 8514,
+  "title": "Undo behavior in controlled textareas works differently from the default behaviour in chrome",
+  "user": {
+    "login": "fabsor",
+    "id": 203018,
+    "node_id": "MDQ6VXNlcjIwMzAxOA==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/203018?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/fabsor",
+    "html_url": "https://github.com/fabsor",
+    "followers_url": "https://api.github.com/users/fabsor/followers",
+    "following_url": "https://api.github.com/users/fabsor/following{/other_user}",
+    "gists_url": "https://api.github.com/users/fabsor/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/fabsor/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/fabsor/subscriptions",
+    "organizations_url": "https://api.github.com/users/fabsor/orgs",
+    "repos_url": "https://api.github.com/users/fabsor/repos",
+    "events_url": "https://api.github.com/users/fabsor/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/fabsor/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-12-07T12:33:02Z",
+  "updated_at": "2017-10-04T15:32:25Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "If you control a textarea with **value**, it behaves differently when you use undo. When the textarea is controlled, you can only undo one letter at a time. This is not how undo works normally with an uncontrolled component. Undo seems to work as expected with input components.\r\n\r\nWith a controlled textarea component, you can only undo one letter at a time. The normal undo works with some kind of algorithm for how much is going to be un- or redone.\r\n\r\nYou can try the difference in this codepen:\r\n\r\nhttps://codepen.io/fabsor/pen/LbmBOv\r\n\r\nTested with React 15.3.1 and Chrome 54 and Chrome Canary. Works as expected in Firefox and Safari. It might be a Chrome bug?",
+  "closed_by": null
+}

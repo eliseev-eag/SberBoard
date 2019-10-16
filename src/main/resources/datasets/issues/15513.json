@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15513",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15513/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15513/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15513/events",
+  "html_url": "https://github.com/facebook/react/issues/15513",
+  "id": 437759455,
+  "node_id": "MDU6SXNzdWU0Mzc3NTk0NTU=",
+  "number": 15513,
+  "title": "Allow ReactNode as a type for the child of <option/>",
+  "user": {
+    "login": "vandercloak",
+    "id": 7164984,
+    "node_id": "MDQ6VXNlcjcxNjQ5ODQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/7164984?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/vandercloak",
+    "html_url": "https://github.com/vandercloak",
+    "followers_url": "https://api.github.com/users/vandercloak/followers",
+    "following_url": "https://api.github.com/users/vandercloak/following{/other_user}",
+    "gists_url": "https://api.github.com/users/vandercloak/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/vandercloak/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/vandercloak/subscriptions",
+    "organizations_url": "https://api.github.com/users/vandercloak/orgs",
+    "repos_url": "https://api.github.com/users/vandercloak/repos",
+    "events_url": "https://api.github.com/users/vandercloak/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/vandercloak/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 12,
+  "created_at": "2019-04-26T16:51:51Z",
+  "updated_at": "2019-05-24T08:58:55Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nFeature\r\n\r\n**What is the current behavior?**\r\nCurrently, the options element only allows types number and string. \r\n\r\n**What is the expected behavior?**\r\nAn option should allow for a ReactNode as a child in addition to a number + string. \r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nAll versions.\r\nAll browser types.\r\nTo the best of my knowledge, no.\r\n\r\np.s. This is my first feature request here, so let me know if I need to adjust the feature request in any way. ",
+  "closed_by": null
+}

@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11097",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11097/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11097/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11097/events",
+  "html_url": "https://github.com/facebook/react/issues/11097",
+  "id": 262945079,
+  "node_id": "MDU6SXNzdWUyNjI5NDUwNzk=",
+  "number": 11097,
+  "title": "Umbrella: React DOM Bugs",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710615342,
+      "node_id": "MDU6TGFiZWw3MTA2MTUzNDI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Umbrella",
+      "name": "Type: Umbrella",
+      "color": "5319e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2017-10-04T22:02:59Z",
+  "updated_at": "2018-11-01T19:59:28Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "body": "Since I was going through all open issues yesterday and today, I also compiled a list of things that seem broken in ReactDOM, grouped by areas.\r\n\r\nI don’t think all of these issues are equally important but I’d like to start a discussion around how we can start attacking them—both in shorter and in longer term. For example any potential fixes to the onChange event logic would need to take https://github.com/facebook/react/issues/9657 into account (or even inform it).\r\n\r\nI think it would be a good topic for our next chat, cc @jquense @aweary @nhunzaker. Maybe we could also broadcast it this time? 😃  \r\n\r\n## Autofill\r\n\r\n* [ ] https://github.com/facebook/react/issues/1159 Provide a way to handle browser-autocompleted form values on controlled components\r\n* [ ] https://github.com/facebook/react/issues/7328 IE 11 and Edge no longer prompt to remember password on controlled form\r\n* [ ] https://github.com/facebook/react/issues/10468 DOM Fixture Form Coverage: Restored State and Auto-fill \r\n\r\n## Composition Events\r\n\r\n### Issues\r\n\r\n* [x] https://github.com/facebook/react/issues/10217 Incorrect data in compositionend event when typing Korean on IE11\r\n* [ ] https://github.com/facebook/react/issues/3926 Change event fires too many times when inputing Chinese characters\r\n* [ ] https://github.com/facebook/react/issues/8423 onChange does not work well with IE11 at Japanese IME. in React 15.4.0\r\n\r\n### PRs\r\n\r\n* [x] https://github.com/facebook/react/pull/7926 Try to generate a beforeInput event for buggy composition scenarios in IE\r\n* [x] https://github.com/facebook/react/pull/8438 Handle composition events in ChangeEventPlugin\r\n\r\n## Mouse Enter / Leave\r\n\r\n* [ ] https://github.com/facebook/react/issues/4251 mouseenter fires on disabled inputs whereas mouseleave does not\r\n* [ ] https://github.com/facebook/react/issues/10109 Mouseenter event not triggered when cursor moves from disabled button\r\n* [ ] https://github.com/facebook/react/issues/7135 onMouseEnter propagation in double reactroot\r\n* [ ] https://github.com/facebook/react/issues/6807 onMouseLeave not working as expected\r\n* [ ] https://github.com/facebook/react/issues/13956 onMouseEnter doesn't fire under removed node\r\n\r\n## Input, Checkbox, and Select\r\n\r\n* [x] https://github.com/facebook/react/issues/4672 Change event does not fire in IE and Edge under certain circumstances\r\n* [x] https://github.com/facebook/react/issues/4854 Pressing spacebar on a checked radio button only fires click in some browsers\r\n* [x] https://github.com/facebook/react/issues/6368 Input type 'email' as controlled component does not control white spaces\r\n* [ ] https://github.com/facebook/react/issues/6951 Changing state in onFocus and onChange for a select multiple element does not work in Firefox\r\n* [x] https://github.com/facebook/react/issues/7024 select onChange not firing when using keyboard\r\n* [ ] https://github.com/facebook/react/issues/7281 Input onChange not triggered every time in IE11 if e.preventDefault() used\r\n* [ ] https://github.com/facebook/react/issues/7489 input element `setSelectionRange` after backspace does not work in IE10\r\n* [x] https://github.com/facebook/react/issues/7630 Radio buttons are not correctly checked when using multiple lists of radio buttons\r\n* [ ] https://github.com/facebook/react/issues/7769 input autoFocus causes focus to be emitted before ref\r\n* [ ] https://github.com/facebook/react/issues/8514 Undo behavior in controlled textareas works differently from the default behaviour in chrome\r\n* [ ] https://github.com/facebook/react/issues/8531 IE10 triggers onChange twice when replacing a text selection \r\n* [x] https://github.com/facebook/react/issues/8642 textarea + onFocus + stopPropagation = incorrect cursor rendering on Firefox\r\n* [x] https://github.com/facebook/react/issues/8876 onBeforeInput fires after Edge updates the DOM\r\n* [ ] https://github.com/facebook/react/issues/8938 Clear button on iOS date input does not return correct event value \r\n* [ ] https://github.com/facebook/react/issues/9023 event.preventDefault in click handler does not prevent onChange from being called \r\n* [x] https://github.com/facebook/react/issues/11010 Reset of select ignores defaultValue\r\n",
+  "closed_by": null
+}

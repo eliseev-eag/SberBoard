@@ -1,0 +1,72 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14442",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14442/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14442/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14442/events",
+  "html_url": "https://github.com/facebook/react/issues/14442",
+  "id": 391209942,
+  "node_id": "MDU6SXNzdWUzOTEyMDk5NDI=",
+  "number": 14442,
+  "title": "ShallowRenderer does not work with Class.contextType",
+  "user": {
+    "login": "mpmaia",
+    "id": 324301,
+    "node_id": "MDQ6VXNlcjMyNDMwMQ==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/324301?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mpmaia",
+    "html_url": "https://github.com/mpmaia",
+    "followers_url": "https://api.github.com/users/mpmaia/followers",
+    "following_url": "https://api.github.com/users/mpmaia/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mpmaia/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mpmaia/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mpmaia/subscriptions",
+    "organizations_url": "https://api.github.com/users/mpmaia/orgs",
+    "repos_url": "https://api.github.com/users/mpmaia/repos",
+    "events_url": "https://api.github.com/users/mpmaia/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mpmaia/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 52079258,
+      "node_id": "MDU6TGFiZWw1MjA3OTI1OA==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Difficulty:%20starter",
+      "name": "Difficulty: starter",
+      "color": "94ce52",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    },
+    {
+      "id": 725156255,
+      "node_id": "MDU6TGFiZWw3MjUxNTYyNTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/good%20first%20issue%20(taken)",
+      "name": "good first issue (taken)",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 14,
+  "created_at": "2018-12-14T18:00:51Z",
+  "updated_at": "2019-07-01T12:50:43Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n\r\nBug\r\n\r\n**What is the current behavior?**\r\n\r\nThe shallow renderer from the 'react-test-renderer' package does not work with [Class.contextType](https://reactjs.org/docs/context.html#classcontexttype). The component always receives an empty object as the context.\r\n\r\n**What is the expected behavior?**\r\n\r\nThe shallow renderer should forward the context provided to the render method to the rendered component's this.context.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\n16.6.3\r\n\r\n**Steps to reproduce**\r\n\r\nThe test below can be used to reproduce the problem ([Open on codesandbox.io](https://codesandbox.io/s/oql0l6p95)). The first test reproduces the bug and the second test shows a workaround.\r\n\r\n\r\n    import * as React from \"react\";\r\n    import ShallowRenderer from 'react-test-renderer/shallow'\r\n    import PropTypes from 'prop-types';\r\n    \r\n    const TestContext = React.createContext({message:\"TEST1\"});\r\n    class TestShallow extends React.Component {\r\n    \r\n        static contextType = TestContext;\r\n    \r\n        componentDidMount() {\r\n            console.log(this.context.message);\r\n        }\r\n    \r\n        render() {\r\n            return <h1>{this.context.message}</h1>;\r\n        }\r\n    }\r\n    \r\n    it('shallow render with contextType', () => {\r\n    \r\n        const result = new ShallowRenderer().render(<TestShallow />, {message:\"TEST2\"});\r\n        expect(result).toEqual(<h1>TEST2</h1>); //FAILS\r\n    \r\n    });\r\n    \r\n    it('workaround shallow render with contextType', () => {\r\n    \r\n        TestShallow.contextTypes = {\r\n            message: PropTypes.string\r\n        };\r\n    \r\n        const result = new ShallowRenderer().render(<TestShallow />, {message:\"TEST2\"});\r\n        expect(result).toEqual(<h1>TEST2</h1>); //WORKS\r\n    \r\n    });\r\n\r\n\r\nThe problem seems to be located [here](https://github.com/facebook/react/blob/2743fb7b23a5af42059a9b07c5f6048f941709d9/packages/react-test-renderer/src/ReactShallowRenderer.js#L146). The function getMaskedContext() checks the properties declared on type.contextTypes and filters out the properties from the context provided to the shallow render unless the types.contextTypes is declared.\r\n\r\n",
+  "closed_by": null
+}

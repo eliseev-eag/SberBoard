@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11914",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11914/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11914/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11914/events",
+  "html_url": "https://github.com/facebook/react/pull/11914",
+  "id": 284253388,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTU5OTM0NTQ2",
+  "number": 11914,
+  "title": "Adds module and bundle type metadata to the rollup results json",
+  "user": {
+    "login": "orta",
+    "id": 49038,
+    "node_id": "MDQ6VXNlcjQ5MDM4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/49038?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/orta",
+    "html_url": "https://github.com/orta",
+    "followers_url": "https://api.github.com/users/orta/followers",
+    "following_url": "https://api.github.com/users/orta/following{/other_user}",
+    "gists_url": "https://api.github.com/users/orta/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/orta/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/orta/subscriptions",
+    "organizations_url": "https://api.github.com/users/orta/orgs",
+    "repos_url": "https://api.github.com/users/orta/repos",
+    "events_url": "https://api.github.com/users/orta/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/orta/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2017-12-22T21:15:46Z",
+  "updated_at": "2017-12-24T03:25:43Z",
+  "closed_at": "2017-12-23T19:22:59Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11914",
+    "html_url": "https://github.com/facebook/react/pull/11914",
+    "diff_url": "https://github.com/facebook/react/pull/11914.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11914.patch"
+  },
+  "body": "For #11865 - @gaearon and I discussed the idea of having smaller tables which were grouped by the module name. I had a think about how to do this with the current JSON but it currently looks like this:\r\n\r\n```json\r\n{\r\n  \"bundleSizes\": {\r\n    \"react.development.js (UMD_DEV)\": {\r\n      \"size\": 55220,\r\n      \"gzip\": 14986\r\n    },\r\n    \"react.production.min.js (UMD_PROD)\": {\r\n      \"size\": 6546,\r\n      \"gzip\": 2789\r\n    },\r\n    \"react.development.js (NODE_DEV)\": {\r\n      \"size\": 45636,\r\n      \"gzip\": 12675\r\n    },\r\n    \"react.production.min.js (NODE_PROD)\": {\r\n      \"size\": 5444,\r\n      \"gzip\": 2373\r\n    },\r\n    \"React-dev.js (FB_DEV)\": {\r\n      \"size\": 44974,\r\n      \"gzip\": 12197\r\n    },\r\n    \"React-prod.js (FB_PROD)\": {\r\n      \"size\": 12746,\r\n      \"gzip\": 3440\r\n    },\r\n```\r\n\r\n* I could grab the environment out of the name, but it'd be brittle. \r\n* I could grab the module name from the string also, with some real funky string normalization, but that'd be even more brittle. \r\n\r\nSo instead I updated the results generator to include the actual package name and the environment it was built in. Making it more future proofed.\r\n\r\nMade as a separate PR so that the PR #11865 can reference this in master.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

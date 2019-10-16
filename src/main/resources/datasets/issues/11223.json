@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11223",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11223/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11223/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11223/events",
+  "html_url": "https://github.com/facebook/react/pull/11223",
+  "id": 265435571,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ2NTY3MTA1",
+  "number": 11223,
+  "title": "Release script",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 13,
+  "created_at": "2017-10-13T22:31:53Z",
+  "updated_at": "2017-10-16T22:11:18Z",
+  "closed_at": "2017-10-16T22:01:15Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11223",
+    "html_url": "https://github.com/facebook/react/pull/11223",
+    "diff_url": "https://github.com/facebook/react/pull/11223.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11223.patch"
+  },
+  "body": "This script automates the release process outlined in #10620 (thanks @gaearon ❤️) but with the following deviations:\r\n* The steps have been rearranged slightly to combine building the release (`yarn build`) and generating updated error codes (`yarn build -- --extract-errors`) so that we don't have to do this slow step twice.\r\n* I did not implement Bower support. (We can add this to the `CHANGELOG` for the upcoming 16.1 release.)\r\n\r\nAt a high-level, the new release script runs in 2 passes: build and publish.\r\n\r\nThe `build` script does the heavy lifting (eg checking CI, running automated tests, building Rollup bundles) and then prints instructions for manual verification. This script could be run multiple times if problems are detected during testing (although it might require some slight resetting of state unless you're using the `--dry` option).\r\n\r\nThe `release` script is run after manual tests. It publishes the built artifacts to NPM and pushes commits and tags to GitHub. It also prints some post-deploy instructions.\r\n\r\nBoth scripts support a `--dry` flag which will log (rather than executing) commands like `git commit` or `npm publish`. This is useful for testing an upcoming build without committing to publishing it as well as for working on the release scripts themselves.\r\n\r\nThese scripts also support running against a separate git checkout (to simplify the process of testing changes to the release scripts themselves).\r\n\r\nEverybody likes pictures, so here's a few:\r\n\r\n## `build`\r\n### usage\r\n![screen shot 2017-10-13 at 3 21 38 pm](https://user-images.githubusercontent.com/29597/31568616-40dc8f26-b02a-11e7-9c66-430996d36a16.png)\r\n### successful (dry) run\r\n![screen shot 2017-10-13 at 3 26 58 pm](https://user-images.githubusercontent.com/29597/31568743-f92c72e4-b02a-11e7-8452-7544b18ca930.png)\r\n### example errors\r\n![screen shot 2017-10-13 at 3 48 56 pm](https://user-images.githubusercontent.com/29597/31569221-14f30e9a-b02e-11e7-8634-fdd6480a8aaa.png)\r\n![screen shot 2017-10-13 at 3 29 22 pm](https://user-images.githubusercontent.com/29597/31568803-53260580-b02b-11e7-9daf-e978165ac2cf.png)\r\n## `publish`\r\n### usage\r\n![screen shot 2017-10-13 at 3 21 45 pm](https://user-images.githubusercontent.com/29597/31568617-40f84a90-b02a-11e7-9299-aa9c02132440.png)\r\n### successful (dry) run\r\n![screen shot 2017-10-13 at 3 30 34 pm](https://user-images.githubusercontent.com/29597/31568839-7977e078-b02b-11e7-90c2-cec307fdc9cf.png)\r\n### example error\r\n![screen shot 2017-10-13 at 3 31 34 pm](https://user-images.githubusercontent.com/29597/31568862-9fbb58fa-b02b-11e7-82df-38b09786df2f.png)\r\n\r\nResolves #11198",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

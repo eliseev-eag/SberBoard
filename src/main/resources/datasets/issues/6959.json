@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6959",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6959/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6959/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6959/events",
+  "html_url": "https://github.com/facebook/react/issues/6959",
+  "id": 158449680,
+  "node_id": "MDU6SXNzdWUxNTg0NDk2ODA=",
+  "number": 6959,
+  "title": "Should React warn when controlled <select> components have duplicate values?",
+  "user": {
+    "login": "jbinto",
+    "id": 2664611,
+    "node_id": "MDQ6VXNlcjI2NjQ2MTE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/2664611?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jbinto",
+    "html_url": "https://github.com/jbinto",
+    "followers_url": "https://api.github.com/users/jbinto/followers",
+    "following_url": "https://api.github.com/users/jbinto/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jbinto/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jbinto/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jbinto/subscriptions",
+    "organizations_url": "https://api.github.com/users/jbinto/orgs",
+    "repos_url": "https://api.github.com/users/jbinto/repos",
+    "events_url": "https://api.github.com/users/jbinto/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jbinto/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 14,
+  "created_at": "2016-06-03T20:36:36Z",
+  "updated_at": "2017-10-04T00:25:44Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "Consider the following example (live at http://www.webpackbin.com/Vk0Q_FqmZ with React 15.0.1):\n\n``` js\nconst MySelect = (props) => (\n  <select value={this.props.value} onChange={this.props.onChange}>\n    <option value=\"fruit\">banana</option>\n    <option value=\"vegetable\">broccoli</option>\n    <option value=\"fruit\">orange</option>\n    <option value=\"vegetable\">tomato</option>\n  </select>\n);\n\nclass App extends React.Component {\n  constructor() {\n    super()\n    this.state = {}\n    this.onSelectChange = this.onSelectChange.bind(this)\n  }\n\n  onSelectChange(e) {\n    this.setState({ selectedValue: e.target.value })\n  }\n\n  render() {\n    return <MySelect \n      value={this.state.selectedValue} \n      onChange={this.onSelectChange}\n    />\n  }\n}\n```\n\nHTML itself doesn't seem to have any problems with duplicate values in the `<select>` tag. As you can see in the example above, there are semantically valid reasons you might want to do this.\n\nBut this controlled component example makes it impossible to select e.g. \"orange\" or \"tomato\": the selection will be forced to the first matching value.  \n\nI thought about a solution that stores both the `selectedValue` and the `selectedIndex`, but react-dom's `<select>` does not take any sort of index prop, so I'd have to manipulate the internal DOM node, which I'm sure is bad form.  \n\nReact _could_ be enhanced to take a `selectedIndex`, but I foresee problems with single source of truth.\n\nThe fruit/vegetable example is a bit contrived, and there may not be many real-world scenarios you would want to do this in. My gut feeling is this should be a warning so developers (like me) don't paint themselves into a corner trying to support this case.  \n",
+  "closed_by": null
+}

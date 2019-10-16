@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/17077",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/17077/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/17077/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/17077/events",
+  "html_url": "https://github.com/facebook/react/pull/17077",
+  "id": 506318896,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzI3NTUxMjIz",
+  "number": 17077,
+  "title": "Fix typo in TestCase description",
+  "user": {
+    "login": "pennyJack",
+    "id": 21247504,
+    "node_id": "MDQ6VXNlcjIxMjQ3NTA0",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/21247504?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/pennyJack",
+    "html_url": "https://github.com/pennyJack",
+    "followers_url": "https://api.github.com/users/pennyJack/followers",
+    "following_url": "https://api.github.com/users/pennyJack/following{/other_user}",
+    "gists_url": "https://api.github.com/users/pennyJack/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/pennyJack/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/pennyJack/subscriptions",
+    "organizations_url": "https://api.github.com/users/pennyJack/orgs",
+    "repos_url": "https://api.github.com/users/pennyJack/repos",
+    "events_url": "https://api.github.com/users/pennyJack/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/pennyJack/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-10-13T12:28:34Z",
+  "updated_at": "2019-10-13T12:34:51Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/17077",
+    "html_url": "https://github.com/facebook/react/pull/17077",
+    "diff_url": "https://github.com/facebook/react/pull/17077.diff",
+    "patch_url": "https://github.com/facebook/react/pull/17077.patch"
+  },
+  "body": "",
+  "closed_by": null
+}

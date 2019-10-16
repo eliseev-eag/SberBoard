@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3641",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3641/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3641/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3641/events",
+  "html_url": "https://github.com/facebook/react/pull/3641",
+  "id": 67448678,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzI5OTUwNTg=",
+  "number": 3641,
+  "title": "Updating `es5-shim` URL",
+  "user": {
+    "login": "ljharb",
+    "id": 45469,
+    "node_id": "MDQ6VXNlcjQ1NDY5",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/45469?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ljharb",
+    "html_url": "https://github.com/ljharb",
+    "followers_url": "https://api.github.com/users/ljharb/followers",
+    "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+    "organizations_url": "https://api.github.com/users/ljharb/orgs",
+    "repos_url": "https://api.github.com/users/ljharb/repos",
+    "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ljharb/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-04-09T20:51:43Z",
+  "updated_at": "2016-01-17T21:40:04Z",
+  "closed_at": "2015-04-09T21:24:26Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3641",
+    "html_url": "https://github.com/facebook/react/pull/3641",
+    "diff_url": "https://github.com/facebook/react/pull/3641.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3641.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

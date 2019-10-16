@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9431",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9431/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9431/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9431/events",
+  "html_url": "https://github.com/facebook/react/pull/9431",
+  "id": 221788619,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTE1OTE2MzM2",
+  "number": 9431,
+  "title": "[Docs] Add accessibility to tabs in installation documentation",
+  "user": {
+    "login": "AlmeroSteyn",
+    "id": 5063473,
+    "node_id": "MDQ6VXNlcjUwNjM0NzM=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/5063473?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/AlmeroSteyn",
+    "html_url": "https://github.com/AlmeroSteyn",
+    "followers_url": "https://api.github.com/users/AlmeroSteyn/followers",
+    "following_url": "https://api.github.com/users/AlmeroSteyn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/AlmeroSteyn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/AlmeroSteyn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/AlmeroSteyn/subscriptions",
+    "organizations_url": "https://api.github.com/users/AlmeroSteyn/orgs",
+    "repos_url": "https://api.github.com/users/AlmeroSteyn/repos",
+    "events_url": "https://api.github.com/users/AlmeroSteyn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/AlmeroSteyn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2017-04-14T10:56:22Z",
+  "updated_at": "2017-04-19T12:37:12Z",
+  "closed_at": "2017-04-19T11:31:39Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9431",
+    "html_url": "https://github.com/facebook/react/pull/9431",
+    "diff_url": "https://github.com/facebook/react/pull/9431.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9431.patch"
+  },
+  "body": "For your consideration:\r\n\r\nAfter seeing the mention of the awesome addition of tabs in the docs, I added some accessibility features so that all users will be able to use these tabs easily.\r\n\r\n\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

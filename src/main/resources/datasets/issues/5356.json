@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5356",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5356/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5356/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5356/events",
+  "html_url": "https://github.com/facebook/react/pull/5356",
+  "id": 114470968,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDkzNzIzNjk=",
+  "number": 5356,
+  "title": "fix shallowRenderer.getRenderOutput() return type in docs",
+  "user": {
+    "login": "rpominov",
+    "id": 825702,
+    "node_id": "MDQ6VXNlcjgyNTcwMg==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/825702?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rpominov",
+    "html_url": "https://github.com/rpominov",
+    "followers_url": "https://api.github.com/users/rpominov/followers",
+    "following_url": "https://api.github.com/users/rpominov/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rpominov/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rpominov/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rpominov/subscriptions",
+    "organizations_url": "https://api.github.com/users/rpominov/orgs",
+    "repos_url": "https://api.github.com/users/rpominov/repos",
+    "events_url": "https://api.github.com/users/rpominov/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rpominov/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2015-11-01T13:59:20Z",
+  "updated_at": "2015-11-10T18:56:02Z",
+  "closed_at": "2015-11-03T01:27:08Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5356",
+    "html_url": "https://github.com/facebook/react/pull/5356",
+    "diff_url": "https://github.com/facebook/react/pull/5356.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5356.patch"
+  },
+  "body": "As far as I understand `shallowRenderer.getRenderOutput()` returns an Element, not Component. At least when I try to run following, I get `findAllInRenderedTree(...): instance must be a composite component` although types seem to match.\n\n``` js\nconst renderer = createRenderer()\nrenderer.render(<Comp />)\nconst tree = renderer.getRenderOutput()\nfindAllInRenderedTree(tree, fn)\n```\n",
+  "closed_by": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

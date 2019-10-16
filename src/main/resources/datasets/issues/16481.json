@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16481",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16481/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16481/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16481/events",
+  "html_url": "https://github.com/facebook/react/issues/16481",
+  "id": 482550722,
+  "node_id": "MDU6SXNzdWU0ODI1NTA3MjI=",
+  "number": 16481,
+  "title": "DevTools: Collect more info when profiling",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-08-19T22:06:29Z",
+  "updated_at": "2019-09-03T17:08:19Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "Some feedback I've heard from a DevTools user (roughly transcribed by me):\r\n\r\n> I'm trying to pinpoint those renders...with hooks, it's sometimes more unclear to me why something is rendering...I generally don't use devtools much anywhere. I use console.log. But Redux devtools worked really well for me because I could see when things were changing and what exactly changed.\r\n\r\nMaybe we could add an opt-in mode (in Settings > Profiler) to collect more data when profiling about _why_ a component rendered. For example, if `props` or `state` changed, we could show which keys changed (just their name, not their values). Maybe we could do something similar for context and for hooks?\r\n\r\nThen we could add this information to the right side panel for the selected fiber in the Profiler UI.\r\n\r\n---\r\nOriginally reported via https://github.com/bvaughn/react-devtools-experimental/issues/98",
+  "closed_by": null
+}

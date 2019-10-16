@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6493",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6493/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6493/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6493/events",
+  "html_url": "https://github.com/facebook/react/issues/6493",
+  "id": 147700427,
+  "node_id": "MDU6SXNzdWUxNDc3MDA0Mjc=",
+  "number": 6493,
+  "title": "TestUtils: Better errors for methods when passing in arguments with wrong type",
+  "user": {
+    "login": "petetnt",
+    "id": 7641760,
+    "node_id": "MDQ6VXNlcjc2NDE3NjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/7641760?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/petetnt",
+    "html_url": "https://github.com/petetnt",
+    "followers_url": "https://api.github.com/users/petetnt/followers",
+    "following_url": "https://api.github.com/users/petetnt/following{/other_user}",
+    "gists_url": "https://api.github.com/users/petetnt/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/petetnt/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/petetnt/subscriptions",
+    "organizations_url": "https://api.github.com/users/petetnt/orgs",
+    "repos_url": "https://api.github.com/users/petetnt/repos",
+    "events_url": "https://api.github.com/users/petetnt/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/petetnt/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 139734344,
+      "node_id": "MDU6TGFiZWwxMzk3MzQzNDQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Test%20Utils",
+      "name": "Component: Test Utils",
+      "color": "eb6420",
+      "default": false
+    },
+    {
+      "id": 52079258,
+      "node_id": "MDU6TGFiZWw1MjA3OTI1OA==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Difficulty:%20starter",
+      "name": "Difficulty: starter",
+      "color": "94ce52",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2016-04-12T10:10:42Z",
+  "updated_at": "2016-04-22T00:09:05Z",
+  "closed_at": "2016-04-22T00:09:05Z",
+  "author_association": "CONTRIBUTOR",
+  "body": "Rather minor issue, but the fix should be simple enough so I thought that I'd file this anyway:\n\nWhen using `react-addons-testutils`, sometimes I write simple errors such as \n\n```\nTestUtils.scryRenderedDOMComponentsWithClass(\"foo\")\n\n// expected:\nTestUtils.scryRenderedDOMComponentsWithClass(reactComponentInstance, \"foo\")\n\n```\n\nThis throws a stack trace of ~80 lines with a type error of `TypeError: Cannot read property 'split' of undefined`. Fixing this is trivial (and the first line of the stack trace points to the offending line as expected), but the error itself isn't really obvious. \n\nSome others such as `scryRenderedDOMComponentsWithTag` don't throw until `findAllInRenderedTree` is reached, which throws a bit more helpful error of `Error: findAllInRenderedTree(...): instance must be a composite component(…)`. \n\nWould it make sense to check that the arguments passed are valid and throw immediately if they aren't, so the user would end up with errors along the lines of `scryRenderedDOMComponentsWithClass: first argument must be an instance of ReactComponent`?\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

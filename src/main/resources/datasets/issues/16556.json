@@ -1,0 +1,91 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16556",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16556/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16556/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16556/events",
+  "html_url": "https://github.com/facebook/react/issues/16556",
+  "id": 484579829,
+  "node_id": "MDU6SXNzdWU0ODQ1Nzk4Mjk=",
+  "number": 16556,
+  "title": "React DevTools not persisting settings",
+  "user": {
+    "login": "brianblakely",
+    "id": 401422,
+    "node_id": "MDQ6VXNlcjQwMTQyMg==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/401422?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/brianblakely",
+    "html_url": "https://github.com/brianblakely",
+    "followers_url": "https://api.github.com/users/brianblakely/followers",
+    "following_url": "https://api.github.com/users/brianblakely/following{/other_user}",
+    "gists_url": "https://api.github.com/users/brianblakely/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/brianblakely/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/brianblakely/subscriptions",
+    "organizations_url": "https://api.github.com/users/brianblakely/orgs",
+    "repos_url": "https://api.github.com/users/brianblakely/repos",
+    "events_url": "https://api.github.com/users/brianblakely/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/brianblakely/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 40929152,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mg==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Duplicate",
+      "name": "Resolution: Duplicate",
+      "color": "cccccc",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-08-23T15:08:58Z",
+  "updated_at": "2019-08-23T17:50:08Z",
+  "closed_at": "2019-08-23T17:50:00Z",
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n\r\nBug\r\n\r\n**What is the current behavior?**\r\n\r\nDevTools extension does not persist state. For example, the “Welcome” dialog displays upon every refresh.\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\n\r\n1. Open React DevTools in a React app.\r\n2. Change DevTools settings.\r\n3. Refresh app in browser. \r\n\r\n**What is the expected behavior?**\r\n\r\nSettings should be changed. \r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nThis is in a corporate install of Chrome 71. It’s possible that it blocks whichever persistence API React DevTools is using (Chrome DevTools itself persists settings successfully).\r\n",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

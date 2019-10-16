@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6972",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6972/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6972/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6972/events",
+  "html_url": "https://github.com/facebook/react/pull/6972",
+  "id": 158611535,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzI2NjMyMjE=",
+  "number": 6972,
+  "title": "Update 03-interactivity-and-dynamic-uis.md",
+  "user": {
+    "login": "segmentationfaulter",
+    "id": 6733537,
+    "node_id": "MDQ6VXNlcjY3MzM1Mzc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6733537?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/segmentationfaulter",
+    "html_url": "https://github.com/segmentationfaulter",
+    "followers_url": "https://api.github.com/users/segmentationfaulter/followers",
+    "following_url": "https://api.github.com/users/segmentationfaulter/following{/other_user}",
+    "gists_url": "https://api.github.com/users/segmentationfaulter/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/segmentationfaulter/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/segmentationfaulter/subscriptions",
+    "organizations_url": "https://api.github.com/users/segmentationfaulter/orgs",
+    "repos_url": "https://api.github.com/users/segmentationfaulter/repos",
+    "events_url": "https://api.github.com/users/segmentationfaulter/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/segmentationfaulter/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2016-06-06T06:54:04Z",
+  "updated_at": "2016-07-19T23:39:15Z",
+  "closed_at": "2016-07-13T20:14:41Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6972",
+    "html_url": "https://github.com/facebook/react/pull/6972",
+    "diff_url": "https://github.com/facebook/react/pull/6972.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6972.patch"
+  },
+  "body": "fixed a typo\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

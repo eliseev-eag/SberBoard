@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16297",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16297/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16297/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16297/events",
+  "html_url": "https://github.com/facebook/react/pull/16297",
+  "id": 477103923,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzA0NDk3NTA2",
+  "number": 16297,
+  "title": "Babel 7",
+  "user": {
+    "login": "lunaruan",
+    "id": 2735514,
+    "node_id": "MDQ6VXNlcjI3MzU1MTQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2735514?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lunaruan",
+    "html_url": "https://github.com/lunaruan",
+    "followers_url": "https://api.github.com/users/lunaruan/followers",
+    "following_url": "https://api.github.com/users/lunaruan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lunaruan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lunaruan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lunaruan/subscriptions",
+    "organizations_url": "https://api.github.com/users/lunaruan/orgs",
+    "repos_url": "https://api.github.com/users/lunaruan/repos",
+    "events_url": "https://api.github.com/users/lunaruan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lunaruan/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-08-05T23:46:56Z",
+  "updated_at": "2019-08-09T06:45:06Z",
+  "closed_at": "2019-08-09T00:46:36Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16297",
+    "html_url": "https://github.com/facebook/react/pull/16297",
+    "diff_url": "https://github.com/facebook/react/pull/16297.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16297.patch"
+  },
+  "body": "For #12548 \r\n\r\nUpgraded from Babel 6 to Babel 7.\r\n\r\nThe only significant change seems to be the way `@babel/plugin-transform-classes` handles classes differently from `babel-plugin-transform-es2015-classes`. In regular mode, the former injects a `_createClass` function that increases the bundle size, and in the latter it removes the safeguard checks. However, this is okay because we don't all classes in new features, and we want to deprecate class usage in the future in the react repo.\r\n\r\nDifferences between classes in Babel 6 (left) and Babel 7 (right)\r\n![image](https://user-images.githubusercontent.com/2735514/62641015-9fdcee80-b8f7-11e9-951e-779e9c869d3c.png)\r\n![image](https://user-images.githubusercontent.com/2735514/62641068-bc792680-b8f7-11e9-9388-3f8a2608b430.png)\r\n\r\nExample diffs (6 on the left and 7 on the right):\r\n[ReactDOM-prod.js (facebook-www)](https://www.diffchecker.com/l6yOxMlv)\r\n[ReactDOM-dev.js (facebook-www)](https://www.diffchecker.com/qX91sRbT)\r\n[react-dom.development.js (UMD)](https://www.diffchecker.com/nNATN138)\r\n[react-dom.production.js (UMD)](https://www.diffchecker.com/qenU4uy8)\r\n[react-dom.development.js (CommonJS)](https://www.diffchecker.com/KyACMHRa)\r\n[react-dom.production.js (CommonJS)](https://www.diffchecker.com/7PjUMRjo)\r\n[react-dom-server.node.production.min.js (CommonJS)](https://www.diffchecker.com/YYEcoNzs)\r\n[react-dom-server.browser.production.min.js (UMD)](https://www.diffchecker.com/hkhunOI0)\r\n\r\n",
+  "closed_by": {
+    "login": "lunaruan",
+    "id": 2735514,
+    "node_id": "MDQ6VXNlcjI3MzU1MTQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2735514?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lunaruan",
+    "html_url": "https://github.com/lunaruan",
+    "followers_url": "https://api.github.com/users/lunaruan/followers",
+    "following_url": "https://api.github.com/users/lunaruan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lunaruan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lunaruan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lunaruan/subscriptions",
+    "organizations_url": "https://api.github.com/users/lunaruan/orgs",
+    "repos_url": "https://api.github.com/users/lunaruan/repos",
+    "events_url": "https://api.github.com/users/lunaruan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lunaruan/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

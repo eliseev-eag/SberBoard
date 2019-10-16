@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15075",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15075/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15075/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15075/events",
+  "html_url": "https://github.com/facebook/react/issues/15075",
+  "id": 419122601,
+  "node_id": "MDU6SXNzdWU0MTkxMjI2MDE=",
+  "number": 15075,
+  "title": "shallow renderer: wrong initial state passed to getDerivedStateFromProps",
+  "user": {
+    "login": "ljharb",
+    "id": 45469,
+    "node_id": "MDQ6VXNlcjQ1NDY5",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/45469?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ljharb",
+    "html_url": "https://github.com/ljharb",
+    "followers_url": "https://api.github.com/users/ljharb/followers",
+    "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+    "organizations_url": "https://api.github.com/users/ljharb/orgs",
+    "repos_url": "https://api.github.com/users/ljharb/repos",
+    "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ljharb/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 204945357,
+      "node_id": "MDU6TGFiZWwyMDQ5NDUzNTc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Shallow%20Renderer",
+      "name": "Component: Shallow Renderer",
+      "color": "eb6420",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2019-03-09T22:31:03Z",
+  "updated_at": "2019-03-24T07:32:37Z",
+  "closed_at": "2019-03-24T07:32:37Z",
+  "author_association": "CONTRIBUTOR",
+  "body": "Demonstrated in https://github.com/airbnb/enzyme/pull/2027 - when gDSFP returns a state change, cDU does not seem to be called by the shallow renderer. I'm not sure how to make a simple test case; but the identical enzyme tests pass for `mount` (ie, when using React itself) but fail for `shallow` (when using the shallow renderer). enzyme doesn't have any logic for calling or interacting with `getDerivedStateFromProps`, so I suspect it's not an issue with enzyme (but it might be!)",
+  "closed_by": {
+    "login": "ljharb",
+    "id": 45469,
+    "node_id": "MDQ6VXNlcjQ1NDY5",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/45469?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ljharb",
+    "html_url": "https://github.com/ljharb",
+    "followers_url": "https://api.github.com/users/ljharb/followers",
+    "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+    "organizations_url": "https://api.github.com/users/ljharb/orgs",
+    "repos_url": "https://api.github.com/users/ljharb/repos",
+    "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ljharb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

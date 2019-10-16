@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5701",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5701/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5701/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5701/events",
+  "html_url": "https://github.com/facebook/react/pull/5701",
+  "id": 123328509,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTQyODUyMjI=",
+  "number": 5701,
+  "title": "Fix typo",
+  "user": {
+    "login": "cesarwbr",
+    "id": 248140,
+    "node_id": "MDQ6VXNlcjI0ODE0MA==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/248140?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/cesarwbr",
+    "html_url": "https://github.com/cesarwbr",
+    "followers_url": "https://api.github.com/users/cesarwbr/followers",
+    "following_url": "https://api.github.com/users/cesarwbr/following{/other_user}",
+    "gists_url": "https://api.github.com/users/cesarwbr/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/cesarwbr/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/cesarwbr/subscriptions",
+    "organizations_url": "https://api.github.com/users/cesarwbr/orgs",
+    "repos_url": "https://api.github.com/users/cesarwbr/repos",
+    "events_url": "https://api.github.com/users/cesarwbr/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/cesarwbr/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2015-12-21T18:04:40Z",
+  "updated_at": "2015-12-23T20:54:46Z",
+  "closed_at": "2015-12-21T18:29:09Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5701",
+    "html_url": "https://github.com/facebook/react/pull/5701",
+    "diff_url": "https://github.com/facebook/react/pull/5701.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5701.patch"
+  },
+  "body": "Fix the conference talk youtube url.\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

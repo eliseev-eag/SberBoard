@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16614",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16614/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16614/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16614/events",
+  "html_url": "https://github.com/facebook/react/pull/16614",
+  "id": 487230947,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzEyNTM5MjMw",
+  "number": 16614,
+  "title": "[Hydration Bugfix] Updates to dehydrated content when `disableSchedulerTimeoutBasedOnReactExpirationTime` is enabled",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-08-30T00:30:20Z",
+  "updated_at": "2019-08-30T22:07:16Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16614",
+    "html_url": "https://github.com/facebook/react/pull/16614",
+    "diff_url": "https://github.com/facebook/react/pull/16614.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16614.patch"
+  },
+  "body": "## The Bug\r\n\r\nWhen server rendered content that hasn't finished hydrating yet (\"dehydrated\" content) receives an update (via props or context), React has a mechanism to force the content to hydrate before applying the update. It does this by increasing the priority of the hydration task from Idle to a level slightly higher than the current render. React will abort the current render, perform the hydration, then try the update again on top of the now-fully-hydrated content.\r\n\r\nThere are unit tests that cover this case. The bug starts happening when `disableSchedulerTimeoutBasedOnReactExpirationTime` is enabled. It turns out that the mechanism to interrupt the current rendering task depends on the hydration task having a slightly earlier timeout, because Scheduler tasks are sorted by their timeouts. When the hydration task is higher priority, it causes `shouldYield` to flip to true, forcing the render to yield execution and allowing the hydration task to start. (This is similar to how input events can interrupt normal priority renders.)\r\n\r\n`disableSchedulerTimeoutBasedOnReactExpirationTime` breaks this mechanism, because when it is enabled, the timeout given to Scheduler is no longer based on React's internal expiration times. Effectively, all rendering tasks within the same priority category are first-in-first-out. So, the hydration task comes *after* the original task in the Scheduler queue, and therefore `shouldYield` will keep returning `false`, and the original task will run to completion. (See https://github.com/facebook/react/pull/16284 for more information on `disableSchedulerTimeoutBasedOnReactExpirationTime`.)\r\n\r\nThe first commit in this PR adds a regression test for this case.\r\n\r\n## The Fix\r\n\r\nThere are several potential fixes. The one I've chosen is not ideal in the long term, but it's lower risk compared to the complete solution, which will likely require some refactoring of how rendering tasks are scheduled.\r\n\r\nThe work loop already has some logic to cancel a rendering task in favor of a higher priority one, using `Scheduler.cancelCallback`. It does this by comparing the React expiration times of each task, so it doesn't depend on the ordering of tasks in Scheduler. This works when the high priority task is received during an input event.\r\n\r\nHowever, `Scheduler.cancelCallback` is currently a no-op when given an already-running task. It does not cause the task to stop execution, and if the task does yield with a continuation, then the continuation will run. Which means it won't work if React is already inside the render phase. (Note the distinction between \"inside the render phase\" versus \"in an event that fires in between two chunks of a time sliced task.\")\r\n\r\nThe fix in the second commit addresses both parts: canceling the current task causes `shouldYield` to return `true`, and if the canceled task returns a continuation, the continuation is ignored.\r\n\r\nThis is sufficient to fix the regression.\r\n\r\n## Alternative Fixes\r\n\r\nA proper fix would be to model interruptions of in-progress renders in such a way that it does not depend on Scheduler's semantics for canceling and yielding. However, because of the inherent risk involved in changing how rendering tasks are scheduled, I would prefer to land this smaller fix first before attempting a refactor.\r\n\r\n(There's already a planned mini-refactor of the work loop, e.g. to optimize how pings and restarts are modeled. We can fold this into that larger change.)",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14766",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14766/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14766/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14766/events",
+  "html_url": "https://github.com/facebook/react/pull/14766",
+  "id": 407209320,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjUwNzMzNjE0",
+  "number": 14766,
+  "title": "fix: react-test-utils act function accessing document before its defined",
+  "user": {
+    "login": "BenRevell96",
+    "id": 40356722,
+    "node_id": "MDQ6VXNlcjQwMzU2NzIy",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/40356722?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/BenRevell96",
+    "html_url": "https://github.com/BenRevell96",
+    "followers_url": "https://api.github.com/users/BenRevell96/followers",
+    "following_url": "https://api.github.com/users/BenRevell96/following{/other_user}",
+    "gists_url": "https://api.github.com/users/BenRevell96/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/BenRevell96/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/BenRevell96/subscriptions",
+    "organizations_url": "https://api.github.com/users/BenRevell96/orgs",
+    "repos_url": "https://api.github.com/users/BenRevell96/repos",
+    "events_url": "https://api.github.com/users/BenRevell96/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/BenRevell96/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-02-06T12:20:03Z",
+  "updated_at": "2019-02-06T13:51:56Z",
+  "closed_at": "2019-02-06T13:51:56Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14766",
+    "html_url": "https://github.com/facebook/react/pull/14766",
+    "diff_url": "https://github.com/facebook/react/pull/14766.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14766.patch"
+  },
+  "body": "Fix for issue https://github.com/facebook/react/issues/14764\r\n\r\nLooks like document was being accessed before it was defined.\r\n\r\nAll tests green",
+  "closed_by": {
+    "login": "threepointone",
+    "id": 18808,
+    "node_id": "MDQ6VXNlcjE4ODA4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/18808?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/threepointone",
+    "html_url": "https://github.com/threepointone",
+    "followers_url": "https://api.github.com/users/threepointone/followers",
+    "following_url": "https://api.github.com/users/threepointone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/threepointone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/threepointone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/threepointone/subscriptions",
+    "organizations_url": "https://api.github.com/users/threepointone/orgs",
+    "repos_url": "https://api.github.com/users/threepointone/repos",
+    "events_url": "https://api.github.com/users/threepointone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/threepointone/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

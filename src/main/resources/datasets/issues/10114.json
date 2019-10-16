@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10114",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10114/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10114/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10114/events",
+  "html_url": "https://github.com/facebook/react/pull/10114",
+  "id": 240804969,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTI5MDc2NjAy",
+  "number": 10114,
+  "title": "Add ReactNext 2017 to conference list",
+  "user": {
+    "login": "ilyagelman",
+    "id": 139322,
+    "node_id": "MDQ6VXNlcjEzOTMyMg==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/139322?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ilyagelman",
+    "html_url": "https://github.com/ilyagelman",
+    "followers_url": "https://api.github.com/users/ilyagelman/followers",
+    "following_url": "https://api.github.com/users/ilyagelman/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ilyagelman/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ilyagelman/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ilyagelman/subscriptions",
+    "organizations_url": "https://api.github.com/users/ilyagelman/orgs",
+    "repos_url": "https://api.github.com/users/ilyagelman/repos",
+    "events_url": "https://api.github.com/users/ilyagelman/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ilyagelman/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-07-05T23:38:12Z",
+  "updated_at": "2017-07-11T13:07:56Z",
+  "closed_at": "2017-07-05T23:44:04Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10114",
+    "html_url": "https://github.com/facebook/react/pull/10114",
+    "diff_url": "https://github.com/facebook/react/pull/10114.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10114.patch"
+  },
+  "body": "**Before submitting a pull request,** please make sure the following is done:\r\n\r\n1. Fork [the repository](https://github.com/facebook/react) and create your branch from `master`.\r\n2. If you've added code that should be tested, add tests!\r\n3. If you've changed APIs, update the documentation.\r\n4. Ensure the test suite passes (`npm test`).\r\n5. Format your code with [prettier](https://github.com/prettier/prettier) (`npm run prettier`).\r\n6. Make sure your code lints (`npm run lint`).\r\n7. Run the [Flow](https://flowtype.org/) typechecks (`npm run flow`).\r\n8. If you added or removed any tests, run `./scripts/fiber/record-tests` before submitting the pull request, and commit the resulting changes.\r\n9. If you haven't already, complete the CLA.\r\n",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

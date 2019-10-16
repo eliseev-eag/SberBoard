@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4522",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4522/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4522/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4522/events",
+  "html_url": "https://github.com/facebook/react/pull/4522",
+  "id": 98165950,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDEyMzE4MDY=",
+  "number": 4522,
+  "title": "Wrap lifecycle events with ReactPerf.measure if __DEV__",
+  "user": {
+    "login": "gfogle",
+    "id": 7015773,
+    "node_id": "MDQ6VXNlcjcwMTU3NzM=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/7015773?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gfogle",
+    "html_url": "https://github.com/gfogle",
+    "followers_url": "https://api.github.com/users/gfogle/followers",
+    "following_url": "https://api.github.com/users/gfogle/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gfogle/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gfogle/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gfogle/subscriptions",
+    "organizations_url": "https://api.github.com/users/gfogle/orgs",
+    "repos_url": "https://api.github.com/users/gfogle/repos",
+    "events_url": "https://api.github.com/users/gfogle/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gfogle/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2015-07-30T13:12:13Z",
+  "updated_at": "2015-10-23T04:04:02Z",
+  "closed_at": "2015-10-23T04:04:02Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4522",
+    "html_url": "https://github.com/facebook/react/pull/4522",
+    "diff_url": "https://github.com/facebook/react/pull/4522.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4522.patch"
+  },
+  "body": "In order to do more advanced metrics with ReactPerf, ReactDefaultPerf, etc. we really need to have those being run through the measure cycle as well as renders.\n\nThis will allow for more advanced metrics like `# of times should component update called per component`, etc.\n\nUltimately, would like to see React pump out warnings for things like `component has no state or props and no shouldComponentUpdate` or `shouldComponentUpdate always returns true/false`.\n\nSeems like this would be much more impactful if baked into core rather than having to write additional 3rd-party tools to hijack ReactComponents to measure them.\n",
+  "closed_by": {
+    "login": "gfogle",
+    "id": 7015773,
+    "node_id": "MDQ6VXNlcjcwMTU3NzM=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/7015773?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gfogle",
+    "html_url": "https://github.com/gfogle",
+    "followers_url": "https://api.github.com/users/gfogle/followers",
+    "following_url": "https://api.github.com/users/gfogle/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gfogle/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gfogle/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gfogle/subscriptions",
+    "organizations_url": "https://api.github.com/users/gfogle/orgs",
+    "repos_url": "https://api.github.com/users/gfogle/repos",
+    "events_url": "https://api.github.com/users/gfogle/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gfogle/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

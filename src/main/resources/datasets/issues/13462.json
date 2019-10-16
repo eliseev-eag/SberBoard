@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13462",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13462/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13462/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13462/events",
+  "html_url": "https://github.com/facebook/react/pull/13462",
+  "id": 353060930,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjEwMjE1NTg0",
+  "number": 13462,
+  "title": "Revert \"Rely on bubbling for submit and reset events (#13358)\"",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 13,
+  "created_at": "2018-08-22T17:57:37Z",
+  "updated_at": "2018-08-22T20:20:49Z",
+  "closed_at": "2018-08-22T18:33:43Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13462",
+    "html_url": "https://github.com/facebook/react/pull/13462",
+    "diff_url": "https://github.com/facebook/react/pull/13462.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13462.patch"
+  },
+  "body": "This reverts commit 725e499cfb4da60da46aa5b44c4bad29cad3d08f.\r\n\r\nIt broke registration on Workplace (thankfully end-to-end tests caught this before the rollout 😛).\r\n\r\nI'm not sure why yet. We'll need to dig in deeper. The symptom is that the form that's normally controlled from JavaScript was always being submitted with default action. I guess one way this could happen is the React handler does `e.preventDefault()`, but there's a native DOM handler in the middle that does `e.stopPropagation()`. This would have no effect before this change, but with this change it would actually prevent the React handler from reaching the document. That's my hypothesis anyway. I don't know if this is what happened.\r\n\r\nThis means we probably can't make more changes to how native/React event mapping works without putting them behind feature flags. There is too much legacy code that can break unintentionally.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12745",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12745/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12745/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12745/events",
+  "html_url": "https://github.com/facebook/react/pull/12745",
+  "id": 320422247,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTg2MDk3OTUw",
+  "number": 12745,
+  "title": "Add ProfileRoot component for collecting new time metrics",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 20,
+  "created_at": "2018-05-04T20:39:03Z",
+  "updated_at": "2018-08-03T05:29:48Z",
+  "closed_at": "2018-05-10T22:25:33Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12745",
+    "html_url": "https://github.com/facebook/react/pull/12745",
+    "diff_url": "https://github.com/facebook/react/pull/12745.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12745.patch"
+  },
+  "body": "Add a new component type, `Profiler`, that can be used to collect new render time metrics. Since this is a new, experimental API, it will be exported as `React.unstable_Profiler` initially.\r\n\r\nMost of the functionality for this component has been added behind a feature flag, `enableProfileModeMetrics`. When the feature flag is disabled, the component will just render its children with no additional behavior. When the flag is enabled, React will also collect timing information and pass it to the `onRender` function (as described below).\r\n\r\nThis flag will be enabled for the DEV bundle in the future. A special profiling+production build will likely be created as well, in order to use these new metrics in production mode without impacting existing applications.\r\n\r\n## How is it used?\r\n\r\n```js\r\nconst Profiler = React.unstable_Profiler;\r\n\r\nrender(\r\n  {/* Components not measured... */}\r\n  <Profiler id=\"some identifier\" onRender={loggingFunction}>\r\n    {/* Components to be measured... */}\r\n  </Profiler>\r\n  {/* Components not measured... */}\r\n);\r\n```\r\n\r\n`Profiler` can be declared anywhere within a React tree and can be nested to measure multiple components within the same tree.\r\n\r\nThe `onRender` callback is called each time the root renders. It receives the following parameters:\r\n* `id: string` - The `id` value of the `Profiler` tag that was measured.\r\n* `phase: string` - Either \"mount\" or \"update\" (depending on whether this root was newly mounted or has just been updated).\r\n* `actualTime: number` - Time spent rendering the `Profiler` and its descendants for the most recent \"mount\" or \"update\" render. <sup>1</sup>\r\n* `baseTime: number` - Duration of the most recent `render` time for each individual component within the `Profiler` tree. <sup>1</sup>\r\n\r\n<sup>1: See below for more detailed information about what this time represents.</sup>\r\n\r\n## Timing metrics\r\n\r\nHere is a review of the types of timing React is now capable of reporting:\r\n\r\n### User Timing API\r\n\r\nMeasures start/stop times for each component lifecycle.\r\n\r\n* **Opt in mechanism**: Feature flag (typically DEV mode only)\r\n* **Scope**: Tracked for all components in an app\r\n* **How is it measured?**\r\n    * Start/stop times for each component lifecycle\r\n    * Measured as a realtime graph\r\n* **When is it recorded?**\r\n    * Realtime graph is recorded after each lifecycle call.\r\n* **What does it tell us?**\r\n    *  Flame graph paints a useful picture of how events (e.g. mouse clicks) tie together with rendering.\r\n\r\n### “Actual” render time (new)\r\n\r\nTime spent rendering the `Profiler` and its descendants for the most recent render/update.\r\n\r\n* **Opt in mechanism**: Wrap a component with `<Profiler>`\r\n* **Scope**: Measured for descendants of `Profiler` only\r\n* **How is it measured?**\r\n    * Start timer during “begin” phase, stop during “complete” phase\r\n    * Paused (and accumulated) for scheduling/timing interruptions <sup>2</sup>\r\n    * Paused (and accumulated) for aborted renders (e.g. suspense)\r\n* **When is it recorded?**\r\n    * A new snapshot is recorded each time a `Profiler` is re-rendered\r\n* **What does it tell us?**\r\n    * How well does the subtree make use of `shouldComponentUpdate` for memoization?\r\n    * The more this time decreases for update renders, the better the memoization.\r\n\r\n### “Base” render time (new)\r\n\r\nDuration of the most recent `render` time for each individual component within the `Profiler` tree.\r\n\r\n* **Opt in mechanism**: Wrap a component with `<Profiler>`\r\n* **Scope**: Measured for descendants of `Profiler` only\r\n* **How is it measured?**\r\n    * Measured for each fiber below a `Profiler` component.\r\n    * Recorded during “begin” phase.\r\n        * Times are not updated/recorded if a component skips render because of `shouldComponentUpdate`\r\n        * (Descendant times are also not updated in that case)\r\n    * Bubble up (summed) for the `Profiler` during “complete” phase\r\n    * Total times logged for `Profiler` (not for individual fibers)\r\n* **When is it recorded?**\r\n    * A new snapshot is recorded each time a `Profiler` is re-rendered\r\n* **What does it tell us?**\r\n    * How expensive our render functions are in the worst case (no memoization).\r\n    * Lower this number by reducing the work done in render.\r\n\r\n<sup>2: Until \"resume\" behavior is implemented, interruptions will not accumulate time.</sup>\r\n\r\n## TODO\r\n\r\n- [x] Guard new functionality behind a feature flag so it isn't included in e.g. production bundle\r\n- [x] Add tests for new functionality\r\n- [x] `getComponentName` (so flame graph labels will appear correctly)\r\n- [x] `ReactIs`\r\n- [x] Test renderer `toJSON` and `toTree` methods\r\n- [x] Shallow renderer\r\n- [ ] DevTools (will be done with a follow up PR)",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

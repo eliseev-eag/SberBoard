@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15145",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15145/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15145/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15145/events",
+  "html_url": "https://github.com/facebook/react/pull/15145",
+  "id": 422504632,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjYyMjgxNjgw",
+  "number": 15145,
+  "title": "Deprecate module pattern (factory) components",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-03-19T01:38:38Z",
+  "updated_at": "2019-03-19T19:55:28Z",
+  "closed_at": "2019-03-19T19:55:28Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15145",
+    "html_url": "https://github.com/facebook/react/pull/15145",
+    "diff_url": "https://github.com/facebook/react/pull/15145.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15145.patch"
+  },
+  "body": "This is part of https://github.com/reactjs/rfcs/pull/107 but it's not the only reason we want to deprecate it.\r\n\r\nIt requires a fairly complex code path in React that is forked from how class components are initialized. It makes function components slower, adds code bloat to React and is a maintenance burden.\r\n\r\nIt was really kind of supported from the beginning. It was originally added at a time where createClass and class-like abstractions were more popular. We also hit quirks with compile-to-JS languages when we changed how our class abstractions worked. E.g. we had to make accommodations to support ScalaJS. To avoid future problems, we kept this style of class working since it's really the simplest form of constructor in JavaScript.\r\n\r\nHowever, since then when we ultimately supported both ES classes (must be called with `new`) and arrow function components (cannot be called with `new`), we had to start getting more selective about which components we call with `new` and which we don't.\r\n\r\nIn practice, I don't think this pattern has been widely used even by compile to JS languages or class-like abstractions.\r\n\r\nIn any official capacity, its support has only been briefly noted at the bottom of the [React v0.13.0 Beta 1](https://reactjs.org/blog/2015/01/27/react-v0.13.0-beta-1.html#other-languages) post.\r\n\r\nIt is currently used by at least [Relay Classic](https://github.com/facebook/relay/blob/master/packages/react-relay/buildReactRelayContainer.js#L52-L73) so some libraries will need to upgrade.\r\n\r\nA neat trick is that you can almost always just add:\r\n\r\n```js\r\nFoo.prototype = React.Component.prototype;\r\n```\r\n\r\nThis tricks React's class detection into thinking it's a class and we'll call it with `new`, which means that this doesn't work on arrow functions.",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

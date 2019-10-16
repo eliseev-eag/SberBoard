@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5185",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5185/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5185/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5185/events",
+  "html_url": "https://github.com/facebook/react/pull/5185",
+  "id": 111665862,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDc4MTU4MDg=",
+  "number": 5185,
+  "title": "Remove \"Invariant Violation: \" from Invariant Error Messages",
+  "user": {
+    "login": "yungsters",
+    "id": 55161,
+    "node_id": "MDQ6VXNlcjU1MTYx",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/55161?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/yungsters",
+    "html_url": "https://github.com/yungsters",
+    "followers_url": "https://api.github.com/users/yungsters/followers",
+    "following_url": "https://api.github.com/users/yungsters/following{/other_user}",
+    "gists_url": "https://api.github.com/users/yungsters/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/yungsters/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/yungsters/subscriptions",
+    "organizations_url": "https://api.github.com/users/yungsters/orgs",
+    "repos_url": "https://api.github.com/users/yungsters/repos",
+    "events_url": "https://api.github.com/users/yungsters/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/yungsters/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2015-10-15T17:20:36Z",
+  "updated_at": "2015-10-19T19:07:59Z",
+  "closed_at": "2015-10-19T19:07:59Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5185",
+    "html_url": "https://github.com/facebook/react/pull/5185",
+    "diff_url": "https://github.com/facebook/react/pull/5185.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5185.patch"
+  },
+  "body": "This upgrades all expectations of `invariant`'s error message to exclude the \"Invariant Violation: \" prefix when facebook/fbjs#71 lands.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

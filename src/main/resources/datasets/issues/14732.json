@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14732",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14732/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14732/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14732/events",
+  "html_url": "https://github.com/facebook/react/issues/14732",
+  "id": 404984850,
+  "node_id": "MDU6SXNzdWU0MDQ5ODQ4NTA=",
+  "number": 14732,
+  "title": "Memory leak on React > 16.2.5",
+  "user": {
+    "login": "mgreer",
+    "id": 643930,
+    "node_id": "MDQ6VXNlcjY0MzkzMA==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/643930?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mgreer",
+    "html_url": "https://github.com/mgreer",
+    "followers_url": "https://api.github.com/users/mgreer/followers",
+    "following_url": "https://api.github.com/users/mgreer/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mgreer/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mgreer/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mgreer/subscriptions",
+    "organizations_url": "https://api.github.com/users/mgreer/orgs",
+    "repos_url": "https://api.github.com/users/mgreer/repos",
+    "events_url": "https://api.github.com/users/mgreer/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mgreer/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 620368407,
+      "node_id": "MDU6TGFiZWw2MjAzNjg0MDc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Needs%20More%20Information",
+      "name": "Resolution: Needs More Information",
+      "color": "fffde7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 19,
+  "created_at": "2019-01-30T22:03:07Z",
+  "updated_at": "2019-08-15T16:09:12Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\nPossible bug, or unexpected change in internal behavior\r\n\r\n**What is the current behavior?**\r\nWe are seeing a substantial memory leak in our codebase in versions of React > 16.5.2. Bisecting the issue, it seemed to appear at commit 7bee9fbdd49aa5b9365a94b0ddf6db04bc1bf51c.\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\n\r\nOur apologies, we are unable to fully isolate the issue to a minimal demo, and suspect it is not a bug but a behavior change which our code relied on. The leak seems to be in the messages area, where many components are created and released quickly.\r\n\r\n**What is the expected behavior?**\r\nOld fibers should be garbage collected, but cannot be. Components are retained in memory.\r\nWe have run the affected code area in StrictMode, which allowed us to identify some event leakage but even when this was addressed (by moving listeners to componentDidMount from the constructor) the memory leak continues. There are some findDomNode usages remaining, but even if we move those it does not fill the leak.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n16.5.3+\r\n\r\nWe are seeking suggestions on what internal could be causing retention of components and nodes by our code, and better ways to isolate the issue.\r\n\r\nThank you!\r\n-Mike",
+  "closed_by": null
+}

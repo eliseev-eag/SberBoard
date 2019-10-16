@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16997",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16997/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16997/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16997/events",
+  "html_url": "https://github.com/facebook/react/pull/16997",
+  "id": 501934181,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzI0MTA5NTc1",
+  "number": 16997,
+  "title": "[react-interactions] Repurpose React a11y modules",
+  "user": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-10-03T08:49:38Z",
+  "updated_at": "2019-10-03T09:19:27Z",
+  "closed_at": "2019-10-03T09:19:25Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16997",
+    "html_url": "https://github.com/facebook/react/pull/16997",
+    "diff_url": "https://github.com/facebook/react/pull/16997.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16997.patch"
+  },
+  "body": "This PR mostly just re-labels and re-purposes some of the accessibility modules and the components in them. It comes from internal feedback that some of the names were confusing and some of the components felt misaligned for their real main benefit. Notably: folks only cared for using the `FocusManager` component for handling focus containment, and didn't see what it really had to do with managing focus other that that. Based all this feedback, the following changes have been made:\r\n\r\n- `FocusManager` -> `FocusContain`\r\n- `FocusContain` component now only handles containment, and requires a scope be passed to the component via `tabScope`. The documentation has been updated to also reflect this.\r\n- `FocusControl` -> `FocusManager` as people mentioned that the set of functions from this module are essentially management helpers. The docs have also been updated to reflect this.\r\n- `FocusList` -> `FocusGroup`",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

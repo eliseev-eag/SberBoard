@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16094",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16094/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16094/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16094/events",
+  "html_url": "https://github.com/facebook/react/pull/16094",
+  "id": 466085437,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjk1OTk2NjE2",
+  "number": 16094,
+  "title": "Add warning when single item or nested arrays are used with SuspenseList",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-07-10T03:56:57Z",
+  "updated_at": "2019-07-10T18:07:29Z",
+  "closed_at": "2019-07-10T18:07:29Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16094",
+    "html_url": "https://github.com/facebook/react/pull/16094",
+    "diff_url": "https://github.com/facebook/react/pull/16094.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16094.patch"
+  },
+  "body": "SuspenseList is a new type of component because its children have \"row\" semantics. Each child component or fragment in the children array is its own row. Regardless if that component renders a fragment. Fragments or nested arrays are also considered a whole row for the whole list.\r\n\r\nAnother confusing thing is that a single slot in JSX passes that straight through but multiple slots are wrapped in an array, causing nested arrays.\r\n\r\nEffectively this means that there's only really two legit ways to specify children to SuspenseList:\r\n\r\nStatic Children:\r\n\r\n```js\r\n<SuspenseList revealOrder=\"forwards\">\r\n  <A />\r\n  <B />\r\n  <C />\r\n</SuspenseList>\r\n```\r\n\r\nDynamic Children:\r\n\r\n```js\r\n<SuspenseList revealOrder=\"forwards\">\r\n  {items.map(item => <Item key={item.key} />)}\r\n</SuspenseList>\r\n```\r\n\r\nA combination is not legit because it's confusing (this would be two rows, not N+1):\r\n\r\n```js\r\n<SuspenseList revealOrder=\"forwards\">\r\n  {items.map(item => <Item key={item.key} />)}\r\n  <A />\r\n</SuspenseList>\r\n```\r\n\r\nTherefore this adds a warning for that case.\r\n\r\nThis case is also confusing because we special case keyless single fragments to get unwrapped. So this actually will not be a single row but N rows.\r\n\r\n```js\r\n<SuspenseList revealOrder=\"forwards\">\r\n  <>{items.map(item => <Item key={item.key} />)}</>\r\n</SuspenseList>\r\n```\r\n\r\nPassing a single static item also isn't really ever useful with the \"forwards\" option since there's nothing to coordinate. You can just use the \"together\" mode then.\r\n\r\nI added a warning if we see any single item since that seems like a mistake.\r\n\r\nPerhaps we should even fork child fiber to special case this type of reconciliation but that would cause more code so many a warning is sufficient for now.\r\n\r\nAnother quirky thing is that the \"together\" mode doesn't really have the same quirks. It would be reasonable even to render a single component that has many boundaries inside of it.\r\n\r\nSo arguably this is legit so I disable the warning for this mode:\r\n\r\n```\r\n<SuspenseList revealOrder=\"together\">\r\n  <Component />\r\n</SuspenseList>\r\n```\r\n\r\nWhere the Component contains something like:\r\n\r\n```\r\n<div>\r\n  <header><Suspense>...</Suspense></header>\r\n  <footer><Suspense>...</Suspense></footer>\r\n</div>\r\n```\r\n\r\nThis is unfortunate because now it gets trickier to enforce the types of children in a type system since it now depends on the revealOrder flag. That's what I get for putting the notion of a Suspense \"group\" and \"list\" in the same component. In the type system, we could say that even this case should include no nested arrays just for consistency. That's probably ok.",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

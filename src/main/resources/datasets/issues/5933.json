@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5933",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5933/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5933/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5933/events",
+  "html_url": "https://github.com/facebook/react/pull/5933",
+  "id": 129603724,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTc1NzczNTc=",
+  "number": 5933,
+  "title": "isRequiredIf proptype feature",
+  "user": {
+    "login": "evcohen",
+    "id": 7098243,
+    "node_id": "MDQ6VXNlcjcwOTgyNDM=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/7098243?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/evcohen",
+    "html_url": "https://github.com/evcohen",
+    "followers_url": "https://api.github.com/users/evcohen/followers",
+    "following_url": "https://api.github.com/users/evcohen/following{/other_user}",
+    "gists_url": "https://api.github.com/users/evcohen/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/evcohen/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/evcohen/subscriptions",
+    "organizations_url": "https://api.github.com/users/evcohen/orgs",
+    "repos_url": "https://api.github.com/users/evcohen/repos",
+    "events_url": "https://api.github.com/users/evcohen/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/evcohen/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-01-28T22:33:37Z",
+  "updated_at": "2016-02-10T23:39:04Z",
+  "closed_at": "2016-02-10T23:39:04Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5933",
+    "html_url": "https://github.com/facebook/react/pull/5933",
+    "diff_url": "https://github.com/facebook/react/pull/5933.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5933.patch"
+  },
+  "body": "Hey everyone, thanks for all of your work here on React. First PR!\n\nI ran into a use case the other day where I wanted to conditionally enforce isRequired based on another prop's existence. It was fairly simple using a custom validator but this required re-implementing all of the type checking that comes for free with PropTypes anyway. With this change, it will introduce chaining any propType with `isRequiredIf(condition)` where `condition` can be a boolean or a function that returns a truthy value. \n\nThe function has the same arguments as a custom propType validator: \n`isRequiredIf((props, propName, componentName) => props.hasOwnProperty('otherProp'))`\n\nThanks!\n",
+  "closed_by": {
+    "login": "evcohen",
+    "id": 7098243,
+    "node_id": "MDQ6VXNlcjcwOTgyNDM=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/7098243?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/evcohen",
+    "html_url": "https://github.com/evcohen",
+    "followers_url": "https://api.github.com/users/evcohen/followers",
+    "following_url": "https://api.github.com/users/evcohen/following{/other_user}",
+    "gists_url": "https://api.github.com/users/evcohen/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/evcohen/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/evcohen/subscriptions",
+    "organizations_url": "https://api.github.com/users/evcohen/orgs",
+    "repos_url": "https://api.github.com/users/evcohen/repos",
+    "events_url": "https://api.github.com/users/evcohen/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/evcohen/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

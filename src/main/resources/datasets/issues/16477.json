@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16477",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16477/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16477/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16477/events",
+  "html_url": "https://github.com/facebook/react/issues/16477",
+  "id": 482547222,
+  "node_id": "MDU6SXNzdWU0ODI1NDcyMjI=",
+  "number": 16477,
+  "title": "DevTools: Profiler: Show which hooks changed",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-08-19T21:56:36Z",
+  "updated_at": "2019-09-20T22:35:52Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "# \"Can you show which hooks changed?\"\r\n\r\n...is a question I've heard a couple of times with regard to the new Profiler change-tracking feature. This request is certainly understandable, but it presents a couple of challenges:\r\n\r\n1. Identifying which hooks values change would requires shallowly re-rendering each function component.\r\n2. Identifying a hook in a non-ambiguous way requires displaying the full hooks tree structure (since hooks aren't named).\r\n\r\nLet's take each of a look at each of these below.\r\n\r\n## 1 - Identifying which hooks values change\r\n\r\nOne of the challenge for DevTools when it comes to hooks is identifying custom hooks. Sebastian's [proposed solution](https://github.com/bvaughn/react-devtools-experimental/blob/master/src/backend/ReactDebugHooks.js) is that DevTools temporarily overrides React's hooks dispatcher while it shallowly re-renders the component. During the re-render, each time one of the built-in hooks is used, our override implementation parses the stack to identify \"custom hooks\" (functions higher up in the callstack that begin with \"use\"). After render is completed, we reassemble this information into a tree structure which DevTools can display.\r\n\r\nCurrently we only do this  shallow render when a component is [inspected](https://github.com/bvaughn/react-devtools-experimental/blob/master/OVERVIEW.md#inspecting-an-element), but in order for us to track which hooks have changed while profiling, we would need to shallowly render _every_ component using hooks during the profiling session. Mostly likely we would have to do this during the performance sensitive \"commit\" phase since that's when DevTools is notified of an update.\r\n\r\nI think we could do better than re-running the above hooks override for every component on every commit if we:\r\n* Created a map of Fiber to cached hooks tree structure.\r\n* Lazily populate the above map (by shallow re-rendering) only when a component was updated for the first time.\r\n* Compared Fiber `memoizedState`s to identify changes on future commits and map them back to the tree structure based on their position in the list structure. <sup>1</sup>\r\n\r\nHowever, even with the above optimizations this would still add significant overhead to a performance sensitive phase.\r\n\r\n<sup>1</sup> I think this should work but might also end up being complicated to implement.\r\n\r\n## 2 - Identifying a hook\r\n\r\nAlthough the variables that hooks values are assigned to are meaningfully named, the hooks themselves are unnamed. Because of this, DevTools has no feasible way of identifying a hook short of displaying the entire hooks tree structure. Consider the following example code:\r\n\r\n```js\r\nfunction useCustomHook(...) {\r\n  const [foo, setFoo] = useState(...);\r\n  // ...\r\n}\r\n\r\nfunction ExampleComponent(props) {\r\n  const [bar, setBar] = useState(...);\r\n  const [baz, setBaz] = useState(...);\r\n  const custom = useCustomHook(...);\r\n  // ...\r\n}\r\n```\r\n\r\nThe example above shows 4 hooks: three `useState` and one custom. Let's say that \"foo\" and \"baz\" changed in a particular render. How would DevTools identify this? It could just show \"two state hooks\" but that's not very helpful. I think the only way we could identify it would be to show the entire tree, and visually highlight which hooks in it have changed:\r\n\r\n```\r\nState\r\nState *\r\nCustomHook\r\n  State *\r\n```\r\n\r\nThis is _okay_ but it's not great unless the developer is cross-referencing the component (and probably the custom hooks definition as well). To help with this, we could also _show the values_ but now we're adding more overhead in terms of trackin and bridge traffic.\r\n\r\n## In summary\r\n\r\nClearly both of these challenges can be overcome but they are non-trivial to implement and they will certainly add more runtime overhead to the profiler. Because of this, it may be a while before we add this feature to the DevTools.\r\n\r\n---\r\nOriginally reported via https://github.com/bvaughn/react-devtools-experimental/issues/312",
+  "closed_by": null
+}

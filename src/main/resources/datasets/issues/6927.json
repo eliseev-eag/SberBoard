@@ -1,0 +1,72 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6927",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6927/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6927/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6927/events",
+  "html_url": "https://github.com/facebook/react/issues/6927",
+  "id": 157600069,
+  "node_id": "MDU6SXNzdWUxNTc2MDAwNjk=",
+  "number": 6927,
+  "title": "Change event fires too many times when inputing Chinese characters in IE 9",
+  "user": {
+    "login": "suhaotian",
+    "id": 6512574,
+    "node_id": "MDQ6VXNlcjY1MTI1NzQ=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/6512574?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/suhaotian",
+    "html_url": "https://github.com/suhaotian",
+    "followers_url": "https://api.github.com/users/suhaotian/followers",
+    "following_url": "https://api.github.com/users/suhaotian/following{/other_user}",
+    "gists_url": "https://api.github.com/users/suhaotian/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/suhaotian/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/suhaotian/subscriptions",
+    "organizations_url": "https://api.github.com/users/suhaotian/orgs",
+    "repos_url": "https://api.github.com/users/suhaotian/repos",
+    "events_url": "https://api.github.com/users/suhaotian/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/suhaotian/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 69105383,
+      "node_id": "MDU6TGFiZWw2OTEwNTM4Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Browser:%20IE",
+      "name": "Browser: IE",
+      "color": "c7def8",
+      "default": false
+    },
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2016-05-31T06:40:13Z",
+  "updated_at": "2018-08-18T01:49:55Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "like #3926, but in ie9\n",
+  "closed_by": null
+}

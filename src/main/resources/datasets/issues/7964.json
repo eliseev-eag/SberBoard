@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7964",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7964/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7964/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7964/events",
+  "html_url": "https://github.com/facebook/react/pull/7964",
+  "id": 182672511,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODkxMjIzNDY=",
+  "number": 7964,
+  "title": "[New Docs] Added: Lists & Conditional Rendering & Forms",
+  "user": {
+    "login": "ericnakagawa",
+    "id": 23874,
+    "node_id": "MDQ6VXNlcjIzODc0",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/23874?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ericnakagawa",
+    "html_url": "https://github.com/ericnakagawa",
+    "followers_url": "https://api.github.com/users/ericnakagawa/followers",
+    "following_url": "https://api.github.com/users/ericnakagawa/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ericnakagawa/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ericnakagawa/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ericnakagawa/subscriptions",
+    "organizations_url": "https://api.github.com/users/ericnakagawa/orgs",
+    "repos_url": "https://api.github.com/users/ericnakagawa/repos",
+    "events_url": "https://api.github.com/users/ericnakagawa/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ericnakagawa/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2016-10-13T01:22:23Z",
+  "updated_at": "2016-10-20T17:43:49Z",
+  "closed_at": "2016-10-20T17:43:48Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7964",
+    "html_url": "https://github.com/facebook/react/pull/7964",
+    "diff_url": "https://github.com/facebook/react/pull/7964.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7964.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "ericnakagawa",
+    "id": 23874,
+    "node_id": "MDQ6VXNlcjIzODc0",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/23874?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ericnakagawa",
+    "html_url": "https://github.com/ericnakagawa",
+    "followers_url": "https://api.github.com/users/ericnakagawa/followers",
+    "following_url": "https://api.github.com/users/ericnakagawa/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ericnakagawa/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ericnakagawa/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ericnakagawa/subscriptions",
+    "organizations_url": "https://api.github.com/users/ericnakagawa/orgs",
+    "repos_url": "https://api.github.com/users/ericnakagawa/repos",
+    "events_url": "https://api.github.com/users/ericnakagawa/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ericnakagawa/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

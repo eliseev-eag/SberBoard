@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8866",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8866/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8866/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8866/events",
+  "html_url": "https://github.com/facebook/react/pull/8866",
+  "id": 203133631,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTAzMTQwNzcy",
+  "number": 8866,
+  "title": "Improve tests",
+  "user": {
+    "login": "jddxf",
+    "id": 11155177,
+    "node_id": "MDQ6VXNlcjExMTU1MTc3",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/11155177?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jddxf",
+    "html_url": "https://github.com/jddxf",
+    "followers_url": "https://api.github.com/users/jddxf/followers",
+    "following_url": "https://api.github.com/users/jddxf/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jddxf/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jddxf/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jddxf/subscriptions",
+    "organizations_url": "https://api.github.com/users/jddxf/orgs",
+    "repos_url": "https://api.github.com/users/jddxf/repos",
+    "events_url": "https://api.github.com/users/jddxf/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jddxf/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-01-25T15:27:22Z",
+  "updated_at": "2017-01-25T16:13:21Z",
+  "closed_at": "2017-01-25T16:13:09Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8866",
+    "html_url": "https://github.com/facebook/react/pull/8866",
+    "diff_url": "https://github.com/facebook/react/pull/8866.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8866.patch"
+  },
+  "body": "I've refactored a test suite to use jest's mock function instead of manual stuffs.",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13201",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13201/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13201/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13201/events",
+  "html_url": "https://github.com/facebook/react/pull/13201",
+  "id": 340823370,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjAxMTQ1Mjcx",
+  "number": 13201,
+  "title": "Reorganize how shared internals are accessed",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-07-12T22:43:16Z",
+  "updated_at": "2018-07-14T14:10:21Z",
+  "closed_at": "2018-07-13T01:45:37Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13201",
+    "html_url": "https://github.com/facebook/react/pull/13201",
+    "diff_url": "https://github.com/facebook/react/pull/13201.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13201.patch"
+  },
+  "body": "This is mechanical refactor. This removes a small level of indirection in favor of a more direct relationship between how these internals are exported and accessed. One new thing here is that unlike the old `shared/ReactSharedGlobalState`, the new `shared/ReactSharedInternals` can be imported from React itself without a cyclical dependency — thanks to a Jest and Rollup mock. I'll need that later.\r\n\r\n* Replaces `ReactSharedGlobalState` with `ReactSharedInternals` which match the secret field 1:1.\r\n* This makes it easy to shim the module so `shared/ReactSharedInternals` can be imported either in renderers *or* in `react` package itself. Without the shim, we can't make `shared/ReactSharedInternals` truly \"universal\" — which is necessary to allow `warning` to automatically read the stack in the future.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

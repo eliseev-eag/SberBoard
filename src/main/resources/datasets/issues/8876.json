@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8876",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8876/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8876/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8876/events",
+  "html_url": "https://github.com/facebook/react/issues/8876",
+  "id": 203709640,
+  "node_id": "MDU6SXNzdWUyMDM3MDk2NDA=",
+  "number": 8876,
+  "title": "onBeforeInput fires after Edge updates the DOM",
+  "user": {
+    "login": "colinjeanne",
+    "id": 6133448,
+    "node_id": "MDQ6VXNlcjYxMzM0NDg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/6133448?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/colinjeanne",
+    "html_url": "https://github.com/colinjeanne",
+    "followers_url": "https://api.github.com/users/colinjeanne/followers",
+    "following_url": "https://api.github.com/users/colinjeanne/following{/other_user}",
+    "gists_url": "https://api.github.com/users/colinjeanne/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/colinjeanne/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/colinjeanne/subscriptions",
+    "organizations_url": "https://api.github.com/users/colinjeanne/orgs",
+    "repos_url": "https://api.github.com/users/colinjeanne/repos",
+    "events_url": "https://api.github.com/users/colinjeanne/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/colinjeanne/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-01-27T18:44:50Z",
+  "updated_at": "2018-01-06T13:12:00Z",
+  "closed_at": "2018-01-06T13:12:00Z",
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nBug\r\n\r\n**What is the current behavior?**\r\nIn Edge the onBeforeInput event is fired after Edge has already made changes to the DOM negating the purpose of the event and breaking the assumptions of components built on this event, such as Draft.\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem via https://jsfiddle.net or similar (template: https://jsfiddle.net/reactjs/69z2wepo/).**\r\nhttps://jsfiddle.net/max_winderbaum/yv38s3xe/3/ demonstrates the issue in general but to see the effects on other components consider these steps\r\n\r\n1. Go to https://facebook.github.io/draft-js\r\n2. Type `hello world`\r\n3. Bold `hello`\r\n4. Underline the space between the words\r\n5. Select both `hello` and the space and press `a`\r\n6. The entire control's text is replaced with `a`\r\n7. Hit undo several times to observe further broken states until finally React fails with a `NotFoundError` in `removeChild`\r\n\r\nThis issue is opened in Draft because the core issue is that onBeforeInput is misbehaving on Edge and so breaks Draft's assumptions.\r\n\r\n**What is the expected behavior?**\r\n\r\nonBeforeInput should fire before any changes occur in the DOM\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nThis repros in the latest version of Draft.\r\n\r\nThe root cause here is the same root cause as in #7269, although that issue no longer repros. The fix referenced in that issue, #7270, fixes this issue as well.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

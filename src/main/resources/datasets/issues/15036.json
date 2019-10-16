@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15036",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15036/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15036/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15036/events",
+  "html_url": "https://github.com/facebook/react/pull/15036",
+  "id": 417787201,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjU4NzA2MzUz",
+  "number": 15036,
+  "title": "Add infrastructure for passive/non-passive event support for future API exploration",
+  "user": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 1296748300,
+      "node_id": "MDU6TGFiZWwxMjk2NzQ4MzAw",
+      "url": "https://api.github.com/repos/facebook/react/labels/React%20Flare",
+      "name": "React Flare",
+      "color": "63f2ff",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2019-03-06T12:49:51Z",
+  "updated_at": "2019-04-26T07:33:45Z",
+  "closed_at": "2019-03-15T09:39:44Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15036",
+    "html_url": "https://github.com/facebook/react/pull/15036",
+    "diff_url": "https://github.com/facebook/react/pull/15036.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15036.patch"
+  },
+  "body": "## Summary\r\nThis PR makes a bunch of changes to the underlying implementation for how ReactDOM listens to events on the DOM. Notably, it opens up the possibility of exploring the proper handling of passive/non-passive event listeners. As to not break existing event listeners, they now fall under \"legacy\", where they work 100% as they do now without any changes in control flow. Also some old code has been tidied up and Flow annotations have been added where they were previously missing.\r\n\r\n## Why do we need this?\r\nFor future event API exploration we need to properly hook into controlling how event listeners are registered with respect to if they are passive or non-passive. The way ReactDOM deals with events now is to not specify if an event is passive or non-passive. By doing so, we let the browser determine the behaviour behind the scenes. Common cases like when `touchmove` is registered by React to the `document` mean browsers actually make the events `passive` behind the scenes. This is the ideal case, but in the future we also need ways of controlling this behaviour for future event API work.\r\n\r\n## Validate this works\r\nThis PR is a part of a larger part of work which has implementations and tests that validate that the passive/non-passive logic works. In the interests of keeping this PR slim, I've intentionally omitted that code. In further follow up PRs, I'll add that logic to validate the behaviour of this PR. I know this isn't the most ideal case, but it was the best approach I could come up with.\r\n\r\n## Polyfills\r\nIn the future, if we decide to ship an API that makes use of passive events, support for `addEventListener` and specifically the third argument on `addEventListener` where the argument is an object needs to supported. There is a [polyfill](https://github.com/WICG/EventListenerOptions/blob/gh-pages/EventListenerOptions.polyfill.js) we could advise people to use or we could try and check for this in DEV and warn. I'm not fully sure on the path we should take yet - maybe it's something we should consider in the future once we're ready to ship said features.",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

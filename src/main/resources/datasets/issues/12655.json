@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12655",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12655/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12655/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12655/events",
+  "html_url": "https://github.com/facebook/react/pull/12655",
+  "id": 316034820,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTgyODk0MjA4",
+  "number": 12655,
+  "title": "Perform null check on sourceFiber ",
+  "user": {
+    "login": "JeffUberman",
+    "id": 7062515,
+    "node_id": "MDQ6VXNlcjcwNjI1MTU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/7062515?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/JeffUberman",
+    "html_url": "https://github.com/JeffUberman",
+    "followers_url": "https://api.github.com/users/JeffUberman/followers",
+    "following_url": "https://api.github.com/users/JeffUberman/following{/other_user}",
+    "gists_url": "https://api.github.com/users/JeffUberman/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/JeffUberman/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/JeffUberman/subscriptions",
+    "organizations_url": "https://api.github.com/users/JeffUberman/orgs",
+    "repos_url": "https://api.github.com/users/JeffUberman/repos",
+    "events_url": "https://api.github.com/users/JeffUberman/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/JeffUberman/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2018-04-19T20:47:52Z",
+  "updated_at": "2018-04-19T20:56:46Z",
+  "closed_at": "2018-04-19T20:54:45Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12655",
+    "html_url": "https://github.com/facebook/react/pull/12655",
+    "diff_url": "https://github.com/facebook/react/pull/12655.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12655.patch"
+  },
+  "body": "Presented with a similar error to the issue presented in 12449, the \"Cannot read property 'return' of null\" of error can still be thrown due to a possible null value. This PR adds a nullcheck.\r\n\r\nError: \r\n![](https://user-images.githubusercontent.com/7062515/39015394-e4bdce6a-43e2-11e8-909a-1120d36d8a30.png)\r\n",
+  "closed_by": {
+    "login": "JeffUberman",
+    "id": 7062515,
+    "node_id": "MDQ6VXNlcjcwNjI1MTU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/7062515?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/JeffUberman",
+    "html_url": "https://github.com/JeffUberman",
+    "followers_url": "https://api.github.com/users/JeffUberman/followers",
+    "following_url": "https://api.github.com/users/JeffUberman/following{/other_user}",
+    "gists_url": "https://api.github.com/users/JeffUberman/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/JeffUberman/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/JeffUberman/subscriptions",
+    "organizations_url": "https://api.github.com/users/JeffUberman/orgs",
+    "repos_url": "https://api.github.com/users/JeffUberman/repos",
+    "events_url": "https://api.github.com/users/JeffUberman/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/JeffUberman/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

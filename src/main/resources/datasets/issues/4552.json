@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4552",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4552/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4552/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4552/events",
+  "html_url": "https://github.com/facebook/react/pull/4552",
+  "id": 98918548,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDE1NDU5MTU=",
+  "number": 4552,
+  "title": "Include Haskell language",
+  "user": {
+    "login": "psibi",
+    "id": 737477,
+    "node_id": "MDQ6VXNlcjczNzQ3Nw==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/737477?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/psibi",
+    "html_url": "https://github.com/psibi",
+    "followers_url": "https://api.github.com/users/psibi/followers",
+    "following_url": "https://api.github.com/users/psibi/following{/other_user}",
+    "gists_url": "https://api.github.com/users/psibi/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/psibi/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/psibi/subscriptions",
+    "organizations_url": "https://api.github.com/users/psibi/orgs",
+    "repos_url": "https://api.github.com/users/psibi/repos",
+    "events_url": "https://api.github.com/users/psibi/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/psibi/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2015-08-04T08:37:01Z",
+  "updated_at": "2015-08-12T19:11:30Z",
+  "closed_at": "2015-08-04T10:35:34Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4552",
+    "html_url": "https://github.com/facebook/react/pull/4552",
+    "diff_url": "https://github.com/facebook/react/pull/4552.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4552.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

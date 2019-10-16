@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13384",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13384/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13384/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13384/events",
+  "html_url": "https://github.com/facebook/react/pull/13384",
+  "id": 350156948,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjA4MDc1Mzk1",
+  "number": 13384,
+  "title": "Allow the user to opt out of seeing \"The above error...\" addendum",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-08-13T19:15:08Z",
+  "updated_at": "2018-08-13T20:43:01Z",
+  "closed_at": "2018-08-13T20:33:56Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13384",
+    "html_url": "https://github.com/facebook/react/pull/13384",
+    "diff_url": "https://github.com/facebook/react/pull/13384.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13384.patch"
+  },
+  "body": "This partially addresses https://github.com/facebook/react/issues/11098.\r\n\r\nCurrently, when we have an error in development, we later print an error addendum:\r\n\r\n```\r\nThe above error occurred in <BadRenderComponent>.\r\nConsider adding an error boundary...\r\n```\r\n\r\nThis creates a lot of noise in tests for error boundaries, i.e. when you *expect* that an error would be thrown and handled. The original error also gets reported by jsdom even if it's wrapped in a catch block. Just like in the browser. So you end up with two `console.error` warnings you have to mock or ignore.\r\n\r\nHowever, both browsers and jsdom already provide a way to suppress the error message:\r\n\r\n```js\r\nwindow.addEventListener('error', e => {\r\n  e.preventDefault();\r\n});\r\n```\r\n\r\nIn this case neither the browser nor jsdom print the original error. But we still print our addendum which is now taken out of context (it says \"The above error occurred\" — but there's no above error!)\r\n\r\n**In this PR, I'm making React respect `e.preventDefault()` in the `window` handler of the `error` event in a browser environment in some circumstances.**\r\n\r\nIn particular:\r\n\r\n1. If we're in development mode, **and**\r\n2. If an error was successfully caught by an error boundary, **and**\r\n3. If the user has called `event.preventDefault()` for that error in a custom `error` event handler, **then**\r\n4. We won't show the \"The above error occurred...\" addendum.\r\n\r\nWe still show it if the error was fatal (either because you didn't have a boundary or because the boundary failed). This is to reduce the risk of accidental silencing of errors with a rogue `error` handler.\r\n\r\nWhat about the cases like https://github.com/facebook/react/issues/11098#issue-262949027 where you don't have a boundary but still want to avoid warning noise? The solution I'd recommend is to create a boundary, and test that it caught the error.\r\n\r\nSo how would you use this in tests?\r\n\r\nConsider this `App` component.\r\n\r\n```js\r\nimport React, { Component } from 'react';\r\n\r\nclass Crash extends Component {\r\n  componentDidMount() {\r\n    throw new Error('noo');\r\n  }\r\n  render() {\r\n    return <h1>hi</h1>\r\n  }\r\n}\r\n\r\nclass Boundary extends Component {\r\n  state = {failed: false};\r\n\r\n  componentDidCatch() {\r\n    this.setState({\r\n      failed: true\r\n    })\r\n  }\r\n\r\n  render() {\r\n    if (this.state.failed) {\r\n      return 'oopsie';\r\n    }\r\n    return (\r\n      <div>\r\n        {this.props.children}\r\n      </div>\r\n    );\r\n  }\r\n}\r\n\r\nclass App extends Component {\r\n  render() {\r\n    return (\r\n      <Boundary>\r\n        <Crash />\r\n      </Boundary>\r\n    );\r\n  }\r\n}\r\n\r\nexport default App;\r\n```\r\n\r\nPreviously you couldn't test that error boundary worked without mocking `console.error`. Now you can:\r\n\r\n```js\r\nimport React from 'react';\r\nimport ReactDOM from 'react-dom';\r\nimport App from './App';\r\n\r\nlet caughtErrors = [];\r\nfunction onError(e) {\r\n  caughtErrors.push(e.error);\r\n  e.preventDefault();\r\n}\r\n\r\nbeforeEach(() => {\r\n  caughtErrors.length = 0;\r\n  window.addEventListener('error', onError);\r\n});\r\n\r\nafterEach(() => {\r\n  window.removeEventListener('error', onError);\r\n  caughtErrors.length = 0;\r\n});\r\n\r\nit('renders without crashing', () => {\r\n  const div = document.createElement('div');\r\n  ReactDOM.render(<App />, div);\r\n  ReactDOM.unmountComponentAtNode(div);\r\n  expect(caughtErrors.length).toBe(1);\r\n  expect(caughtErrors[0].message).toContain('noo');\r\n});\r\n```\r\n\r\nThis already wouldn't print the browser error, but with this change, it doesn't print our addendum either.\r\n\r\n-----\r\n\r\nThere is one final detail. If the error *was* fatal, I think we should still show it. The problem is that if the user silenced it with `preventDefault()`, our addendum is a bit useless because it doesn't contain the error itself — only the stack. So I changed this codepath to *also* emit the `error` object if it has been silenced via a separate `console.error()` call prior to the addendum log. This mimics what the browser does normally, and I think is a reasonable precaution against badly behaved `error` handlers. If you want to avoid this, add error boundaries and you'll be good.\r\n\r\n----\r\n\r\nI added some DOM fixtures to verify the new behavior.\r\n\r\nThese changes have no effect on production or non-DOM code paths. This means that people using test renderer or running ReactDOM in production mode would still have to mock `console.error` in tests. But I think it's reasonable to solve the most common case — and for `console.error`, it's less of a hassle to mock when there's only one of them, and it matches the error exactly (as opposed to jsdom / React emitting two different error logs).",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

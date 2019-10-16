@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9259",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9259/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9259/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9259/events",
+  "html_url": "https://github.com/facebook/react/pull/9259",
+  "id": 217043855,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTEyNjIzMTEy",
+  "number": 9259,
+  "title": "Unique headings for linking purposes",
+  "user": {
+    "login": "fraserhaer",
+    "id": 4345010,
+    "node_id": "MDQ6VXNlcjQzNDUwMTA=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/4345010?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/fraserhaer",
+    "html_url": "https://github.com/fraserhaer",
+    "followers_url": "https://api.github.com/users/fraserhaer/followers",
+    "following_url": "https://api.github.com/users/fraserhaer/following{/other_user}",
+    "gists_url": "https://api.github.com/users/fraserhaer/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/fraserhaer/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/fraserhaer/subscriptions",
+    "organizations_url": "https://api.github.com/users/fraserhaer/orgs",
+    "repos_url": "https://api.github.com/users/fraserhaer/repos",
+    "events_url": "https://api.github.com/users/fraserhaer/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/fraserhaer/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-03-26T11:04:05Z",
+  "updated_at": "2017-04-18T15:51:09Z",
+  "closed_at": "2017-04-18T13:47:45Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9259",
+    "html_url": "https://github.com/facebook/react/pull/9259",
+    "diff_url": "https://github.com/facebook/react/pull/9259.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9259.patch"
+  },
+  "body": "As mentioned here: https://github.com/facebook/react/issues/8035#issuecomment-255522350\r\n\r\nPreviously two headings in the docs 'JSX in Depth' were both 'Javascript Expressions'. This made linking impossible.\r\n\r\nThe headings are now 'Javascript Expressions as Props' and 'Javascript Expressions as Children'.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

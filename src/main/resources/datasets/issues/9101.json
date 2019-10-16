@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9101",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9101/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9101/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9101/events",
+  "html_url": "https://github.com/facebook/react/pull/9101",
+  "id": 211588668,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTA4OTAyNTk3",
+  "number": 9101,
+  "title": "Use Prettier",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2017-03-03T03:52:01Z",
+  "updated_at": "2017-03-15T01:10:57Z",
+  "closed_at": "2017-03-14T22:33:27Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9101",
+    "html_url": "https://github.com/facebook/react/pull/9101",
+    "diff_url": "https://github.com/facebook/react/pull/9101.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9101.patch"
+  },
+  "body": "Because manual code formatting in so 2016.\r\n\r\nA few caveats... \r\n\r\nLint has an issue with some of this stuff. We need to modify lint to exclude the rules that are incompatible with prettier.\r\n\r\nWe have been inconsistent with line wrapping. We used to strict follow 80 characters but recently we've been more up to 120ish. ~~In this run I used 100 as a compromise to minimize reformatting but we should probably just pick one.~~ 80 characters seems like the way to go.\r\n\r\nOverall it seems pretty good!\r\n\r\nThe change of concatenated string on multiple lines is probably the biggest change.",
+  "closed_by": {
+    "login": "jlongster",
+    "id": 17031,
+    "node_id": "MDQ6VXNlcjE3MDMx",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/17031?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jlongster",
+    "html_url": "https://github.com/jlongster",
+    "followers_url": "https://api.github.com/users/jlongster/followers",
+    "following_url": "https://api.github.com/users/jlongster/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jlongster/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jlongster/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jlongster/subscriptions",
+    "organizations_url": "https://api.github.com/users/jlongster/orgs",
+    "repos_url": "https://api.github.com/users/jlongster/repos",
+    "events_url": "https://api.github.com/users/jlongster/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jlongster/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

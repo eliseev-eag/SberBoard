@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3081",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3081/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3081/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3081/events",
+  "html_url": "https://github.com/facebook/react/issues/3081",
+  "id": 56869851,
+  "node_id": "MDU6SXNzdWU1Njg2OTg1MQ==",
+  "number": 3081,
+  "title": "Automatically Object.assign when `styles` receives an Array",
+  "user": {
+    "login": "appsforartists",
+    "id": 926648,
+    "node_id": "MDQ6VXNlcjkyNjY0OA==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/926648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/appsforartists",
+    "html_url": "https://github.com/appsforartists",
+    "followers_url": "https://api.github.com/users/appsforartists/followers",
+    "following_url": "https://api.github.com/users/appsforartists/following{/other_user}",
+    "gists_url": "https://api.github.com/users/appsforartists/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/appsforartists/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/appsforartists/subscriptions",
+    "organizations_url": "https://api.github.com/users/appsforartists/orgs",
+    "repos_url": "https://api.github.com/users/appsforartists/repos",
+    "events_url": "https://api.github.com/users/appsforartists/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/appsforartists/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2015-02-06T21:22:45Z",
+  "updated_at": "2018-06-25T18:38:13Z",
+  "closed_at": "2018-06-25T18:38:13Z",
+  "author_association": "NONE",
+  "body": "In React Native, these two styles are automatically composed:\n\n```\n<Text style={[styles.ratingValue, getStyleFromScore(criticsScore)]}>\n```\n\nCurrently, trying a similar technique in React DOM produces this:\n\n```\n<span style=\"0:[object Object];1:[object Object];\">\n```\n\nFollowing the principles of \"Learn Once, Write Everywhere\", the style prop should behave similarly across implementations.\n",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

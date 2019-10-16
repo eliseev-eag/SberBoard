@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15488",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15488/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15488/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15488/events",
+  "html_url": "https://github.com/facebook/react/issues/15488",
+  "id": 436828895,
+  "node_id": "MDU6SXNzdWU0MzY4Mjg4OTU=",
+  "number": 15488,
+  "title": "eslint-plugin-react-hooks suggests adding a dependency on a function that always changes",
+  "user": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 1249821345,
+      "node_id": "MDU6TGFiZWwxMjQ5ODIxMzQ1",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20ESLint%20Rules",
+      "name": "Component: ESLint Rules",
+      "color": "f7afdb",
+      "default": false
+    },
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2019-04-24T17:50:17Z",
+  "updated_at": "2019-08-21T23:25:19Z",
+  "closed_at": null,
+  "author_association": "COLLABORATOR",
+  "body": "If you write:\r\n\r\n```js\r\nimport React, {useEffect} from 'react';\r\nconst Foo = ({ orgId }) => {\r\n  const fetchOrg = () => {\r\n    alert(orgId);\r\n  };\r\n  useEffect(() => {\r\n    fetchOrg();\r\n  }, [orgId]);\r\n  return <div />;\r\n};\r\n```\r\n\r\nthen you get the error:\r\n\r\n> React Hook useEffect has a missing dependency: 'fetchOrg'. Either include it or remove the dependency array\r\n\r\nBut if you follow that advice and add `fetchOrg` to the dep array, you get:\r\n\r\n> The 'fetchOrg' function makes the dependencies of useEffect Hook (at line 6) change on every render. Move it inside the useEffect callback. Alternatively, wrap the 'fetchOrg' definition into its own useCallback() Hook\r\n\r\nIdeally it could suggest the second solution immediately, instead of suggesting a remediation that it will immediately warn about.",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5320",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5320/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5320/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5320/events",
+  "html_url": "https://github.com/facebook/react/pull/5320",
+  "id": 113992118,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDkxMDQzMzY=",
+  "number": 5320,
+  "title": "Overwriting of mutated props in constructor",
+  "user": {
+    "login": "drdelambre",
+    "id": 1434802,
+    "node_id": "MDQ6VXNlcjE0MzQ4MDI=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1434802?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/drdelambre",
+    "html_url": "https://github.com/drdelambre",
+    "followers_url": "https://api.github.com/users/drdelambre/followers",
+    "following_url": "https://api.github.com/users/drdelambre/following{/other_user}",
+    "gists_url": "https://api.github.com/users/drdelambre/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/drdelambre/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/drdelambre/subscriptions",
+    "organizations_url": "https://api.github.com/users/drdelambre/orgs",
+    "repos_url": "https://api.github.com/users/drdelambre/repos",
+    "events_url": "https://api.github.com/users/drdelambre/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/drdelambre/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 14,
+  "created_at": "2015-10-29T06:51:52Z",
+  "updated_at": "2015-10-30T16:48:56Z",
+  "closed_at": "2015-10-30T01:15:52Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5320",
+    "html_url": "https://github.com/facebook/react/pull/5320",
+    "diff_url": "https://github.com/facebook/react/pull/5320.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5320.patch"
+  },
+  "body": "When rendering the class `Bar` from the following example, the `Bar` instance has the moo prop set as 'BOO' and not the expected 'BOO!' because the props passed to the constructor are overwritten with their initial state in the chance they are undefined. This PR just ignores that logic if props is defined.\n\n``` Javascript\nclass Foo extends React.Component {\n  constructor(props) {\n    var _props = { moo: new.target.defaultProps.moo + '!' }\n    super(_props);\n  }\n}\nFoo.defaultProps = { moo: 'MOO' };\n\nclass Bar extends Foo {}\nBar.defaultProps = { moo: 'BOO' };\n```\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

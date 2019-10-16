@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7059",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7059/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7059/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7059/events",
+  "html_url": "https://github.com/facebook/react/pull/7059",
+  "id": 160754432,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzQxNDczNzk=",
+  "number": 7059,
+  "title": "update babel-core to 5.8.34 in tutorial docs",
+  "user": {
+    "login": "nikolas",
+    "id": 59292,
+    "node_id": "MDQ6VXNlcjU5Mjky",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/59292?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nikolas",
+    "html_url": "https://github.com/nikolas",
+    "followers_url": "https://api.github.com/users/nikolas/followers",
+    "following_url": "https://api.github.com/users/nikolas/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nikolas/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nikolas/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nikolas/subscriptions",
+    "organizations_url": "https://api.github.com/users/nikolas/orgs",
+    "repos_url": "https://api.github.com/users/nikolas/repos",
+    "events_url": "https://api.github.com/users/nikolas/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nikolas/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2016-06-16T20:33:59Z",
+  "updated_at": "2016-06-20T23:43:59Z",
+  "closed_at": "2016-06-17T03:50:14Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7059",
+    "html_url": "https://github.com/facebook/react/pull/7059",
+    "diff_url": "https://github.com/facebook/react/pull/7059.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7059.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

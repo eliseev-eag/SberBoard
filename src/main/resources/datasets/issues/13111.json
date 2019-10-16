@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13111",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13111/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13111/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13111/events",
+  "html_url": "https://github.com/facebook/react/issues/13111",
+  "id": 335938959,
+  "node_id": "MDU6SXNzdWUzMzU5Mzg5NTk=",
+  "number": 13111,
+  "title": "Warn when setState is a function that doesn't return",
+  "user": {
+    "login": "sw-yx",
+    "id": 6764957,
+    "node_id": "MDQ6VXNlcjY3NjQ5NTc=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/6764957?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sw-yx",
+    "html_url": "https://github.com/sw-yx",
+    "followers_url": "https://api.github.com/users/sw-yx/followers",
+    "following_url": "https://api.github.com/users/sw-yx/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sw-yx/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sw-yx/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sw-yx/subscriptions",
+    "organizations_url": "https://api.github.com/users/sw-yx/orgs",
+    "repos_url": "https://api.github.com/users/sw-yx/repos",
+    "events_url": "https://api.github.com/users/sw-yx/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sw-yx/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2018-06-26T18:24:00Z",
+  "updated_at": "2018-06-28T15:24:26Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\nI am proposing adding a warning in development.\r\n\r\n**What is the current behavior?**\r\n\r\nwhen I do `this.setState(({ bool }) => { bool: !bool });` this is valid javascript but is meaningless in React. ESLint:no-label helps to catch this but we can probably do one better by building a warning into dev-mode React itself.\r\n\r\nsandbox demo: https://codesandbox.io/s/xopj5nx07o\r\n\r\n**What is the expected behavior?**\r\n\r\nwarn when a function is applied to setState that returns undefined. if the user wants to indicate nothing changed they should return null.",
+  "closed_by": null
+}

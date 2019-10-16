@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8274",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8274/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8274/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8274/events",
+  "html_url": "https://github.com/facebook/react/pull/8274",
+  "id": 188919292,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTM0NDMyNjA=",
+  "number": 8274,
+  "title": "Fix bug #1919",
+  "user": {
+    "login": "wojtekmaj",
+    "id": 5426427,
+    "node_id": "MDQ6VXNlcjU0MjY0Mjc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/5426427?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/wojtekmaj",
+    "html_url": "https://github.com/wojtekmaj",
+    "followers_url": "https://api.github.com/users/wojtekmaj/followers",
+    "following_url": "https://api.github.com/users/wojtekmaj/following{/other_user}",
+    "gists_url": "https://api.github.com/users/wojtekmaj/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/wojtekmaj/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/wojtekmaj/subscriptions",
+    "organizations_url": "https://api.github.com/users/wojtekmaj/orgs",
+    "repos_url": "https://api.github.com/users/wojtekmaj/repos",
+    "events_url": "https://api.github.com/users/wojtekmaj/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/wojtekmaj/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2016-11-12T16:07:27Z",
+  "updated_at": "2017-04-09T21:04:56Z",
+  "closed_at": "2017-04-09T21:04:56Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8274",
+    "html_url": "https://github.com/facebook/react/pull/8274",
+    "diff_url": "https://github.com/facebook/react/pull/8274.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8274.patch"
+  },
+  "body": "Added a warning when an array of PropTypes was supplied to as an argument to oneOf checker.\r\n\r\nAll PropType checkers now have a flag isReactTypeChecker that enables us to easily identify them later on.",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

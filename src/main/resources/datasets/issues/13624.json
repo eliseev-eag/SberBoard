@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13624",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13624/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13624/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13624/events",
+  "html_url": "https://github.com/facebook/react/issues/13624",
+  "id": 359274835,
+  "node_id": "MDU6SXNzdWUzNTkyNzQ4MzU=",
+  "number": 13624,
+  "title": "passing React.createContext() mistakenly as if it were an element causes confusing error",
+  "user": {
+    "login": "cellog",
+    "id": 98250,
+    "node_id": "MDQ6VXNlcjk4MjUw",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/98250?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/cellog",
+    "html_url": "https://github.com/cellog",
+    "followers_url": "https://api.github.com/users/cellog/followers",
+    "following_url": "https://api.github.com/users/cellog/following{/other_user}",
+    "gists_url": "https://api.github.com/users/cellog/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/cellog/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/cellog/subscriptions",
+    "organizations_url": "https://api.github.com/users/cellog/orgs",
+    "repos_url": "https://api.github.com/users/cellog/repos",
+    "events_url": "https://api.github.com/users/cellog/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/cellog/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2018-09-12T00:48:19Z",
+  "updated_at": "2018-10-26T13:51:07Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\nbug\r\n\r\n**What is the current behavior?**\r\n\r\nIf you're really tired and forget to use a `Context.Provider`, and instead use the `Context` as if it were a provider, React (understandably) freaks out, but the error message is confusing. i.e.:\r\n\r\n```js\r\nimport React from \"react\";\r\nimport ReactDOM from \"react-dom\";\r\n\r\nconst Context = React.createContext();\r\n\r\nimport \"./styles.css\";\r\n\r\nfunction App() {\r\n  return (\r\n    <div className=\"App\">\r\n      <h1>Hello CodeSandbox</h1>\r\n      <Context value={\"oops\"}>\r\n        <div>duh</div>\r\n      </Context>\r\n    </div>\r\n  );\r\n}\r\n\r\nconst rootElement = document.getElementById(\"root\");\r\nReactDOM.render(<App />, rootElement);\r\n```\r\n\r\nThis results in the console looking something like (pasted from codesandbox):\r\n\r\n```\r\nWarning: A context consumer was rendered with multiple children, or a child that isn't a function. A context consumer expects a single child that is a function. If you did pass a function, make sure there is no trailing or leading whitespace around it.\r\nWarning: A context consumer was rendered with multiple children, or a child that isn't a function. A context consumer expects a single child that is a function. If you did pass a function, make sure there is no trailing or leading whitespace around it.\r\nThe above error occurred in one of your React components:\r\nError in sandbox: \r\nTypeError: render is not a function\r\nCould not consume error: \r\nError {}\r\n```\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\n\r\n[![Edit 1wv0ly494l](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/1wv0ly494l)\r\n\r\n**What is the expected behavior?**\r\n\r\nAn error that (roughly paraphrased) says something along the lines of:\r\n\r\n```\r\nhey idiot, you're trying to use a context directly. You want to use context.Provider. Go take a shower and try again.\r\n```\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\n16.3+\r\n",
+  "closed_by": null
+}

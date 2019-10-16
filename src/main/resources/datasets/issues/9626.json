@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9626",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9626/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9626/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9626/events",
+  "html_url": "https://github.com/facebook/react/pull/9626",
+  "id": 227201626,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTE5NTUzODQy",
+  "number": 9626,
+  "title": "ReactNative flat renderer bundles",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2017-05-08T23:12:49Z",
+  "updated_at": "2017-05-24T16:06:41Z",
+  "closed_at": "2017-05-24T16:06:30Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9626",
+    "html_url": "https://github.com/facebook/react/pull/9626",
+    "diff_url": "https://github.com/facebook/react/pull/9626.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9626.patch"
+  },
+  "body": "Introduces ReactNative flat renderer bundles.\r\n\r\nThere's more that could be done to improve consistency and sharing between the www and fbsource sync scripts. Given the size and duration of this PR I'd prefer to defer that work to a follow-up issue, #9763.\r\n\r\n# Building and syncing ReactNative flat renderer\r\n\r\nThis PR introduces an optional flag to the Rollup build scripts that enables syncing the built ReactNative renderer (and its Flow types and shims) to fbsource.\r\n\r\n```bash\r\n# Build ReactNative flat bundles\r\nyarn build -- --type=RN\r\n\r\n# Build bundles and sync (to default location)\r\nyarn build -- --type=RN --sync-fbsource\r\n\r\n# Build bundles and sync (to custom location)\r\nyarn build -- --type=RN --sync-fbsource=/path/to/fbsource/\r\n```\r\n\r\n# Changes\r\n\r\n### Rollup changes\r\n\r\n* Updated the Rollup build script to strip Haste `@providesModule` headers for RN_* builds.\r\n* Updated Rollup build script to add `@noflow` header to flat bundle to tell Flow not to try to infer types. (We'll have to use explicit types instead.) This is necessary to avoid causing huge memory and CPU uses in Flow.\r\n* Added a new `REACT_NATIVE_USE_FIBER` env variable to prevent a mismatch of stack+fiber components at runtime.\r\n  * `ReactNativeFeatureFlags` uses this env variable to enable tests to cover both versions. \r\n  * The Rollup build script uses this variable as well to support proper bundles.\r\n* Packaging script copies `PooledClass` to fbsource rather than including it in the RN renderer bundle based on [PR feedback](https://github.com/facebook/react/pull/9626#discussion_r115456809).\r\n* Packaging script copies `ReactTypes` and `ReactNativeTypes` files as well to avoid Flow inferring the types (which is super slow / impossible).\r\n* New `sync-fbsource` flag added to enable copying the built RN bundle (and shims) to fbsource (cc @trueadm).\r\n\r\n### Flat renderer bundle\r\n\r\n* Added `__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED` object to `ReactNative` for objects required by fbsource.\r\n* Added shims for modules directly required in fbsource that read from the new secret property.\r\n* Re-organized code to avoid circular dependencies that would break Rollup:\r\n  * Move `NativeRenderer` (the thing returned from `ReactFiberReconciler`) out of `ReactNativeFiber` and into its own package, `ReactNativeFiberRenderer`. (This way the fiber version of `findNodeHandle` can access `NativeRenderer.findHostInstance` without having to require all of `ReactNativeFiber`.)\r\n  * Fork `findNodeHandle` internally (based on feature flag) rather than relying on injecting. (This is only temporary, until stack has been deprecated.) This will ease the requirement that `ReactNative` be loaded before findNodeHandle can be guaranteed to be functional.\r\n  * `takeSnapshot` uses new forked `findNodeHandler` wrappers (rather than `ReactNative.findNodeHandle`) and avoids requiring `ReactNative` directly.\r\n* Collocated externally exposed `ReactTypes` and `ReactNativeTypes` into single files to be synced to fbsource automatically since types can no longer be inferred. (This mostly involved moving a few types around and changing their imports.) These types are used internally as well to ensure they stay in sync with the implementations.\r\n\r\n### Miscellaneous\r\n\r\n* Addressed a TODO in `NativeMethodsMixin` and `ReactNativeFiberHostComponent` to correctly share the same underlying Flow type between them.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

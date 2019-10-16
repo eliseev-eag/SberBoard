@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12263",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12263/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12263/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12263/events",
+  "html_url": "https://github.com/facebook/react/pull/12263",
+  "id": 299108434,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTcwNTczNTU5",
+  "number": 12263,
+  "title": "Unperformant Stringify Warning - WIP",
+  "user": {
+    "login": "Swieckowski",
+    "id": 31023010,
+    "node_id": "MDQ6VXNlcjMxMDIzMDEw",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/31023010?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Swieckowski",
+    "html_url": "https://github.com/Swieckowski",
+    "followers_url": "https://api.github.com/users/Swieckowski/followers",
+    "following_url": "https://api.github.com/users/Swieckowski/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Swieckowski/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Swieckowski/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Swieckowski/subscriptions",
+    "organizations_url": "https://api.github.com/users/Swieckowski/orgs",
+    "repos_url": "https://api.github.com/users/Swieckowski/repos",
+    "events_url": "https://api.github.com/users/Swieckowski/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Swieckowski/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2018-02-21T20:02:08Z",
+  "updated_at": "2019-08-08T07:34:06Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12263",
+    "html_url": "https://github.com/facebook/react/pull/12263",
+    "diff_url": "https://github.com/facebook/react/pull/12263.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12263.patch"
+  },
+  "body": "Closes #12209. \r\n`performance.now()` was not supported while I was writing this, so I'm using the less precise `Date.now()`.\r\n\r\nI have written a test to see if the warning shows up if something takes too long to stringify, but don't have one for if it does not warn, since I didn't see anyone else test for anything like that. ",
+  "closed_by": null
+}

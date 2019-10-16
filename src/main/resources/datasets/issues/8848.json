@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8848",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8848/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8848/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8848/events",
+  "html_url": "https://github.com/facebook/react/pull/8848",
+  "id": 202455251,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTAyNjY0MDI5",
+  "number": 8848,
+  "title": "Add a guide on routing",
+  "user": {
+    "login": "jamesknelson",
+    "id": 161707,
+    "node_id": "MDQ6VXNlcjE2MTcwNw==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/161707?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jamesknelson",
+    "html_url": "https://github.com/jamesknelson",
+    "followers_url": "https://api.github.com/users/jamesknelson/followers",
+    "following_url": "https://api.github.com/users/jamesknelson/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jamesknelson/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jamesknelson/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jamesknelson/subscriptions",
+    "organizations_url": "https://api.github.com/users/jamesknelson/orgs",
+    "repos_url": "https://api.github.com/users/jamesknelson/repos",
+    "events_url": "https://api.github.com/users/jamesknelson/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jamesknelson/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": true,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2017-01-23T06:27:08Z",
+  "updated_at": "2017-03-12T01:55:05Z",
+  "closed_at": "2017-03-12T00:47:00Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8848",
+    "html_url": "https://github.com/facebook/react/pull/8848",
+    "diff_url": "https://github.com/facebook/react/pull/8848.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8848.patch"
+  },
+  "body": "This guide demonstrates how to implement a simple Router using the history library. It addresses the Routing item in #8060.\r\n\r\nI've tried to keep it as brief as possible, there may be parts where I need to expand on the current content. Let me know/",
+  "closed_by": {
+    "login": "jamesknelson",
+    "id": 161707,
+    "node_id": "MDQ6VXNlcjE2MTcwNw==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/161707?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jamesknelson",
+    "html_url": "https://github.com/jamesknelson",
+    "followers_url": "https://api.github.com/users/jamesknelson/followers",
+    "following_url": "https://api.github.com/users/jamesknelson/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jamesknelson/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jamesknelson/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jamesknelson/subscriptions",
+    "organizations_url": "https://api.github.com/users/jamesknelson/orgs",
+    "repos_url": "https://api.github.com/users/jamesknelson/repos",
+    "events_url": "https://api.github.com/users/jamesknelson/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jamesknelson/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

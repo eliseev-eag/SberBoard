@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10832",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10832/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10832/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10832/events",
+  "html_url": "https://github.com/facebook/react/pull/10832",
+  "id": 260663588,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQzMTY0ODUw",
+  "number": 10832,
+  "title": "\"Write Code in Your Editor\": Split step 5 into 2 steps",
+  "user": {
+    "login": "lxxxvi",
+    "id": 1409672,
+    "node_id": "MDQ6VXNlcjE0MDk2NzI=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1409672?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lxxxvi",
+    "html_url": "https://github.com/lxxxvi",
+    "followers_url": "https://api.github.com/users/lxxxvi/followers",
+    "following_url": "https://api.github.com/users/lxxxvi/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lxxxvi/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lxxxvi/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lxxxvi/subscriptions",
+    "organizations_url": "https://api.github.com/users/lxxxvi/orgs",
+    "repos_url": "https://api.github.com/users/lxxxvi/repos",
+    "events_url": "https://api.github.com/users/lxxxvi/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lxxxvi/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-09-26T15:15:19Z",
+  "updated_at": "2017-09-27T15:15:48Z",
+  "closed_at": "2017-09-27T12:17:24Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10832",
+    "html_url": "https://github.com/facebook/react/pull/10832",
+    "diff_url": "https://github.com/facebook/react/pull/10832.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10832.patch"
+  },
+  "body": "In the Tutorial, to me it wasn't clear (enough) that I had to copy the file's content from [here](https://codepen.io/gaearon/pen/oWWQNa?editors=0010) *and* add the three lines to the top.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

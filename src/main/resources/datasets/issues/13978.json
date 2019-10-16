@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13978",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13978/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13978/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13978/events",
+  "html_url": "https://github.com/facebook/react/issues/13978",
+  "id": 374212134,
+  "node_id": "MDU6SXNzdWUzNzQyMTIxMzQ=",
+  "number": 13978,
+  "title": "More helpful interaction for \"React does not recognize the 'propName' prop on a DOM Element\"",
+  "user": {
+    "login": "James-E-Adams",
+    "id": 9067274,
+    "node_id": "MDQ6VXNlcjkwNjcyNzQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/9067274?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/James-E-Adams",
+    "html_url": "https://github.com/James-E-Adams",
+    "followers_url": "https://api.github.com/users/James-E-Adams/followers",
+    "following_url": "https://api.github.com/users/James-E-Adams/following{/other_user}",
+    "gists_url": "https://api.github.com/users/James-E-Adams/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/James-E-Adams/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/James-E-Adams/subscriptions",
+    "organizations_url": "https://api.github.com/users/James-E-Adams/orgs",
+    "repos_url": "https://api.github.com/users/James-E-Adams/repos",
+    "events_url": "https://api.github.com/users/James-E-Adams/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/James-E-Adams/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 620368407,
+      "node_id": "MDU6TGFiZWw2MjAzNjg0MDc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Needs%20More%20Information",
+      "name": "Resolution: Needs More Information",
+      "color": "fffde7",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2018-10-26T03:24:35Z",
+  "updated_at": "2018-12-05T02:23:06Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\nFeature\r\n\r\n**What is the current behavior?**\r\n\r\nWhen you pass a unknown prop to a DOM element - common when you pass `{...props}` to something that turns out to be a div/span/any other DOM element rather than a composite component - you get a warning like so:\r\n\r\n```Warning: React does not recognize the `propName` prop on a DOM element. ....```\r\n\r\nIf the tree is pretty complicated, especially if you're using HOCs, it can be very hard to find where this prop has been passed and to which DOM element. \r\n\r\n**What is the expected behavior?**\r\n\r\nWe had a quick muck around with react-dom and logging the DOM element that triggers this warning allows you to see the element in the DOM and makes it much easier to work out where the prop is being accidentally passed. You can even use the react dev tools to work out exactly which line the component is defined in the code.\r\n\r\nSimply logging the element is obviously not the most elegant way of showing the user where the mistake is, but would it be possible to do _something_ in order to make it quicker to fix mistaken prop passing like this?\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nAll.",
+  "closed_by": null
+}

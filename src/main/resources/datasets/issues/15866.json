@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15866",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15866/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15866/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15866/events",
+  "html_url": "https://github.com/facebook/react/pull/15866",
+  "id": 455136016,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjg3NDQ0NTg0",
+  "number": 15866,
+  "title": "[React Native] Replace touch discrepancy errors to warnings",
+  "user": {
+    "login": "yungsters",
+    "id": 55161,
+    "node_id": "MDQ6VXNlcjU1MTYx",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/55161?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/yungsters",
+    "html_url": "https://github.com/yungsters",
+    "followers_url": "https://api.github.com/users/yungsters/followers",
+    "following_url": "https://api.github.com/users/yungsters/following{/other_user}",
+    "gists_url": "https://api.github.com/users/yungsters/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/yungsters/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/yungsters/subscriptions",
+    "organizations_url": "https://api.github.com/users/yungsters/orgs",
+    "repos_url": "https://api.github.com/users/yungsters/repos",
+    "events_url": "https://api.github.com/users/yungsters/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/yungsters/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-06-12T10:32:26Z",
+  "updated_at": "2019-06-12T10:37:42Z",
+  "closed_at": "2019-06-12T10:37:42Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15866",
+    "html_url": "https://github.com/facebook/react/pull/15866",
+    "diff_url": "https://github.com/facebook/react/pull/15866.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15866.patch"
+  },
+  "body": "Replaces `console.error` with `console.warn` so that we do not trigger RedBox in React Native.",
+  "closed_by": {
+    "login": "cpojer",
+    "id": 13352,
+    "node_id": "MDQ6VXNlcjEzMzUy",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/13352?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/cpojer",
+    "html_url": "https://github.com/cpojer",
+    "followers_url": "https://api.github.com/users/cpojer/followers",
+    "following_url": "https://api.github.com/users/cpojer/following{/other_user}",
+    "gists_url": "https://api.github.com/users/cpojer/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/cpojer/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/cpojer/subscriptions",
+    "organizations_url": "https://api.github.com/users/cpojer/orgs",
+    "repos_url": "https://api.github.com/users/cpojer/repos",
+    "events_url": "https://api.github.com/users/cpojer/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/cpojer/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

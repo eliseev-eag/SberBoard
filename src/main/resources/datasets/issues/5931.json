@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5931",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5931/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5931/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5931/events",
+  "html_url": "https://github.com/facebook/react/pull/5931",
+  "id": 129565009,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTc1NTgyMTY=",
+  "number": 5931,
+  "title": "fix: typo in jsx html",
+  "user": {
+    "login": "ericjim",
+    "id": 1329167,
+    "node_id": "MDQ6VXNlcjEzMjkxNjc=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1329167?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ericjim",
+    "html_url": "https://github.com/ericjim",
+    "followers_url": "https://api.github.com/users/ericjim/followers",
+    "following_url": "https://api.github.com/users/ericjim/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ericjim/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ericjim/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ericjim/subscriptions",
+    "organizations_url": "https://api.github.com/users/ericjim/orgs",
+    "repos_url": "https://api.github.com/users/ericjim/repos",
+    "events_url": "https://api.github.com/users/ericjim/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ericjim/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2016-01-28T20:09:47Z",
+  "updated_at": "2016-01-28T20:29:47Z",
+  "closed_at": "2016-01-28T20:29:47Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5931",
+    "html_url": "https://github.com/facebook/react/pull/5931",
+    "diff_url": "https://github.com/facebook/react/pull/5931.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5931.patch"
+  },
+  "body": "Minor issue in sample code would prevent example from working.\n",
+  "closed_by": {
+    "login": "ericjim",
+    "id": 1329167,
+    "node_id": "MDQ6VXNlcjEzMjkxNjc=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1329167?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ericjim",
+    "html_url": "https://github.com/ericjim",
+    "followers_url": "https://api.github.com/users/ericjim/followers",
+    "following_url": "https://api.github.com/users/ericjim/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ericjim/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ericjim/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ericjim/subscriptions",
+    "organizations_url": "https://api.github.com/users/ericjim/orgs",
+    "repos_url": "https://api.github.com/users/ericjim/repos",
+    "events_url": "https://api.github.com/users/ericjim/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ericjim/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

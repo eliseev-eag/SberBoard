@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9695",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9695/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9695/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9695/events",
+  "html_url": "https://github.com/facebook/react/pull/9695",
+  "id": 228906358,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTIwNzM4MzMw",
+  "number": 9695,
+  "title": "Refactor progressed work model",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2017-05-16T03:36:30Z",
+  "updated_at": "2018-01-05T15:14:55Z",
+  "closed_at": "2018-01-05T15:14:55Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9695",
+    "html_url": "https://github.com/facebook/react/pull/9695",
+    "diff_url": "https://github.com/facebook/react/pull/9695.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9695.patch"
+  },
+  "body": "As the title suggests, this isn't ready for review yet, but I think the big pieces are in place.\r\n\r\nThis refactors the whole begin phase, particularly our model for progressed work. I tried to avoid doing a big refactor like this in the first pass, but eventually gave up — there are just too many inter-related things that had to change.\r\n\r\nThis also incorporates a change to make pendingWorkPriority exclude the priority of the fiber it belongs to, as in https://github.com/facebook/react/pull/8716. Again, I tried to keep this separate but it was too tied to everything else.\r\n\r\nI wrote detailed comments inline as I refactored. I'll do an additional pass once it's closer to review.\r\n\r\nIf you're interested in taking a look, read through ReactFiberBeginWork.js. I think it's easier to follow conceptually. The basic algorithm is now:\r\n\r\n- Do we have progressed work since the last commit?\r\n  - If not, reset to current.\r\n  - If we do, did it render at the current priority?\r\n    - If not, stash the progressed work and reset to current. This \"forks\" the child set.\r\n    - If it did, reuse the progressed work.\r\n- Do we have pending props, state, or context?\r\n  - If so, reconcile. This will update the progressed work.\r\n  - If not, bailout. This will leave the progressed work alone.\r\n\r\nTODO:\r\n- [x] `pendingWorkPriority` should represent subtree, excluding fiber it belongs to\r\n- [x] Rebase on top of https://github.com/facebook/react/pull/9580 once that lands.\r\n- [x] Finish implementing types of work\r\n  - [x] HostRoot\r\n  - [x] HostComponent\r\n    - [x] `hidden`\r\n  - [x] HostText\r\n  - [x] IndeterminateComponent\r\n  - [x] FunctionalComponent\r\n  - [x] Fragments\r\n  - [x] Classes\r\n  - [x] Portals\r\n  - [x] Coroutines\r\n- [x] Decide on heuristic for determining whether a work-in-progress fiber has been worked on since the previous commit, or if it's actually the \"previous current.\" This can be tricky after a bailout because fibers that bail out aren't marked as progressed work.\r\n- [x] Hydration\r\n- [ ] Bikeshed on naming before landing:\r\n  - [ ] Distinguish between the last work that was reconciled (currently called \"progressed\" work) and the most recent fiber that was worked on, including bailouts (currently called \"newest\" work).\r\n  - [ ] \"Resume\" a work-in-progress versus \"resetting\" by cloning from current.\r\n  - [ ] We use \"bailout\" to mean \"don't reconcile,\" but can we be more specific? Sometimes you bailout and continue working on the child, and other times we do a \"full\" bailout, reuse the current child, and return null.\r\n- [ ] Write additional unit tests (or possible rewrite some existing ones) using an explicit `yield` API to avoid brittleness. (Will probably do this in a later PR; tests aren't changing significantly and I don't think it's blocking.)\r\n- [ ] Follow up with DevTools after this is merged https://github.com/facebook/react-devtools/pull/755",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

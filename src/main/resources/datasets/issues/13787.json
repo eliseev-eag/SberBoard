@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13787",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13787/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13787/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13787/events",
+  "html_url": "https://github.com/facebook/react/pull/13787",
+  "id": 367471531,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjIwODk1NzAx",
+  "number": 13787,
+  "title": "Add `use strict` to .prettierrc.js",
+  "user": {
+    "login": "ZYSzys",
+    "id": 23313266,
+    "node_id": "MDQ6VXNlcjIzMzEzMjY2",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/23313266?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ZYSzys",
+    "html_url": "https://github.com/ZYSzys",
+    "followers_url": "https://api.github.com/users/ZYSzys/followers",
+    "following_url": "https://api.github.com/users/ZYSzys/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ZYSzys/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ZYSzys/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ZYSzys/subscriptions",
+    "organizations_url": "https://api.github.com/users/ZYSzys/orgs",
+    "repos_url": "https://api.github.com/users/ZYSzys/repos",
+    "events_url": "https://api.github.com/users/ZYSzys/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ZYSzys/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-10-06T16:14:48Z",
+  "updated_at": "2018-10-21T00:06:26Z",
+  "closed_at": "2018-10-20T21:42:12Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13787",
+    "html_url": "https://github.com/facebook/react/pull/13787",
+    "diff_url": "https://github.com/facebook/react/pull/13787.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13787.patch"
+  },
+  "body": "Just simply add `use strict` to .prettierrc.js like other js files.",
+  "closed_by": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

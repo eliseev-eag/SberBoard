@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15517",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15517/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15517/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15517/events",
+  "html_url": "https://github.com/facebook/react/pull/15517",
+  "id": 437869766,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjc0MDU1OTI0",
+  "number": 15517,
+  "title": "Invariant that throws when committing wrong tree",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-04-26T22:40:08Z",
+  "updated_at": "2019-05-13T23:15:51Z",
+  "closed_at": "2019-05-13T23:15:51Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15517",
+    "html_url": "https://github.com/facebook/react/pull/15517",
+    "diff_url": "https://github.com/facebook/react/pull/15517.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15517.patch"
+  },
+  "body": "If React finishes rendering a tree, delays committing it (e.g. Suspense), then subsequently starts over or renders a new tree, the pending tree is no longer valid. That's because rendering a new work-in progress mutates the old one in place.\r\n\r\nThe current structure of the work loop makes this hard to reason about because, although `renderRoot` and `commitRoot` are separate functions, they can't be interleaved. If they are interleaved by accident, it either results in inconsistent render output or invariant violations that are hard to debug.\r\n\r\nThis commit adds an invariant that throws if the new tree is the same as the old one. This won't prevent all bugs of this class, but it should catch the most common kind.\r\n\r\nTo implement the invariant, I store the finished tree on a field on the root. We already had a field for this, but it was only being used for the unstable `createBatch` feature.\r\n\r\nA more rigorous way to address this type of problem could be to unify `renderRoot` and `commitRoot` into a single function, so that it's harder to accidentally interleave the two phases. I plan to do something like this in a follow-up.",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

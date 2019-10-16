@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16516",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16516/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16516/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16516/events",
+  "html_url": "https://github.com/facebook/react/pull/16516",
+  "id": 482938774,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzA5MTE0MTMz",
+  "number": 16516,
+  "title": "Use renderToStaticMarkup for tests",
+  "user": {
+    "login": "devknoll",
+    "id": 1477230,
+    "node_id": "MDQ6VXNlcjE0NzcyMzA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1477230?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/devknoll",
+    "html_url": "https://github.com/devknoll",
+    "followers_url": "https://api.github.com/users/devknoll/followers",
+    "following_url": "https://api.github.com/users/devknoll/following{/other_user}",
+    "gists_url": "https://api.github.com/users/devknoll/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/devknoll/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/devknoll/subscriptions",
+    "organizations_url": "https://api.github.com/users/devknoll/orgs",
+    "repos_url": "https://api.github.com/users/devknoll/repos",
+    "events_url": "https://api.github.com/users/devknoll/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/devknoll/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-08-20T15:40:59Z",
+  "updated_at": "2019-08-29T15:10:13Z",
+  "closed_at": "2019-08-29T15:08:38Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16516",
+    "html_url": "https://github.com/facebook/react/pull/16516",
+    "diff_url": "https://github.com/facebook/react/pull/16516.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16516.patch"
+  },
+  "body": "Make sure the tests under `renderToStaticMarkup` actually use `renderToStaticMarkup`, rather than `renderToString`.",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

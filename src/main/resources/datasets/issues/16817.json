@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16817",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16817/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16817/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16817/events",
+  "html_url": "https://github.com/facebook/react/issues/16817",
+  "id": 495017510,
+  "node_id": "MDU6SXNzdWU0OTUwMTc1MTA=",
+  "number": 16817,
+  "title": "Wrong warning message is shown",
+  "user": {
+    "login": "kambleaa007",
+    "id": 19818679,
+    "node_id": "MDQ6VXNlcjE5ODE4Njc5",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/19818679?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/kambleaa007",
+    "html_url": "https://github.com/kambleaa007",
+    "followers_url": "https://api.github.com/users/kambleaa007/followers",
+    "following_url": "https://api.github.com/users/kambleaa007/following{/other_user}",
+    "gists_url": "https://api.github.com/users/kambleaa007/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/kambleaa007/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/kambleaa007/subscriptions",
+    "organizations_url": "https://api.github.com/users/kambleaa007/orgs",
+    "repos_url": "https://api.github.com/users/kambleaa007/repos",
+    "events_url": "https://api.github.com/users/kambleaa007/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/kambleaa007/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 13,
+  "created_at": "2019-09-18T06:33:36Z",
+  "updated_at": "2019-09-21T00:20:43Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\nBUG\r\n**What is the current behavior?**\r\nWrong warning message is shown\r\n![image](https://user-images.githubusercontent.com/19818679/65120957-13e8d700-da0c-11e9-8289-e5ed7e5fe422.png)\r\n![image](https://user-images.githubusercontent.com/19818679/65120992-206d2f80-da0c-11e9-948d-c7ab494879cf.png)\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\n\r\nwrite simple functional componenet, put return method NOT render,\r\nwarning tells its render,\r\nactually its not render, its return method \r\n\r\n**What is the expected behavior?**\r\nShould tell, its return method of something.....\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\n  \"name\": \"confusion\",\r\n  \"version\": \"0.1.0\",\r\n  \"private\": true,\r\n  \"dependencies\": {\r\n    \"bootstrap\": \"4.0.0\",\r\n    \"bootstrap-social\": \"5.1.1\",\r\n    \"cross-fetch\": \"2.1.0\",\r\n    \"font-awesome\": \"4.7.0\",\r\n    \"gh-pages\": \"^2.0.1\",\r\n    \"mdbreact\": \"^4.18.0\",\r\n    \"prop-types\": \"15.6.0\",\r\n    \"react\": \"^16.4.0\",\r\n    \"react-animation-components\": \"3.0.0\",\r\n    \"react-dom\": \"^16.4.0\",\r\n    \"react-popper\": \"0.9.2\",\r\n    \"react-redux\": \"5.0.7\",\r\n    \"react-redux-form\": \"1.16.8\",\r\n    \"react-router-dom\": \"4.2.2\",\r\n    \"react-scripts\": \"1.1.4\",\r\n    \"react-transition-group\": \"2.3.0\",\r\n    \"reactstrap\": \"5.0.0\",\r\n    \"redux\": \"3.7.2\",\r\n    \"redux-logger\": \"3.0.6\",\r\n    \"redux-thunk\": \"2.2.0\"",
+  "closed_by": null
+}

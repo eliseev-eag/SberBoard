@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15879",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15879/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15879/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15879/events",
+  "html_url": "https://github.com/facebook/react/issues/15879",
+  "id": 455872346,
+  "node_id": "MDU6SXNzdWU0NTU4NzIzNDY=",
+  "number": 15879,
+  "title": "Component delegation to context",
+  "user": {
+    "login": "RafaelCorreaQuantik",
+    "id": 43479034,
+    "node_id": "MDQ6VXNlcjQzNDc5MDM0",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/43479034?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/RafaelCorreaQuantik",
+    "html_url": "https://github.com/RafaelCorreaQuantik",
+    "followers_url": "https://api.github.com/users/RafaelCorreaQuantik/followers",
+    "following_url": "https://api.github.com/users/RafaelCorreaQuantik/following{/other_user}",
+    "gists_url": "https://api.github.com/users/RafaelCorreaQuantik/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/RafaelCorreaQuantik/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/RafaelCorreaQuantik/subscriptions",
+    "organizations_url": "https://api.github.com/users/RafaelCorreaQuantik/orgs",
+    "repos_url": "https://api.github.com/users/RafaelCorreaQuantik/repos",
+    "events_url": "https://api.github.com/users/RafaelCorreaQuantik/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/RafaelCorreaQuantik/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-06-13T17:47:48Z",
+  "updated_at": "2019-06-13T17:47:48Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nReport a bug\r\n\r\n**Introduction/Concept**\r\nI was trying to make a modal package (bootstrap visual as a placeholder) that instead of instancing modals all over the DOM and virtual DOM, would concentrate the data in a holder/controller. This controller would be responsible for providing the modal context and display/hide when necessary.\r\n\r\n**What is the current behavior?**\r\nThe state of the modal content only updates when I recall the show method. \r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\nhttps://codesandbox.io/s/modals-react-i8bdn (Bootstrap is included only to make the modal work)\r\n\r\n**What is the expected behavior?**\r\nThat React would keep the state sync with the counter value.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n16.8.6\r\nAll browsers/OS\r\nNo",
+  "closed_by": null
+}

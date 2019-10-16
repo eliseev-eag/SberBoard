@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2193",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2193/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2193/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2193/events",
+  "html_url": "https://github.com/facebook/react/issues/2193",
+  "id": 42741069,
+  "node_id": "MDU6SXNzdWU0Mjc0MTA2OQ==",
+  "number": 2193,
+  "title": "getEventKey implementation inconsistent with DOM3 spec / Firefox implementation",
+  "user": {
+    "login": "Daniel15",
+    "id": 91933,
+    "node_id": "MDQ6VXNlcjkxOTMz",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/91933?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Daniel15",
+    "html_url": "https://github.com/Daniel15",
+    "followers_url": "https://api.github.com/users/Daniel15/followers",
+    "following_url": "https://api.github.com/users/Daniel15/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Daniel15/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Daniel15/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Daniel15/subscriptions",
+    "organizations_url": "https://api.github.com/users/Daniel15/orgs",
+    "repos_url": "https://api.github.com/users/Daniel15/repos",
+    "events_url": "https://api.github.com/users/Daniel15/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Daniel15/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2014-09-15T04:41:21Z",
+  "updated_at": "2018-06-25T18:11:25Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "body": "There are some inconsistencies between `getEventKey` and the DOM3 keyboard event spec (as well as what Firefox has implemented):\n- `key` property is not correctly set for printable characters on `keydown` and `keyup` events. This works properly in Firefox, and my interpretation of the standard is that Firefox's behaviour is correct here. From the spec: _If the key generates a printable character, and there exists an appropriate Unicode code point, then the KeyboardEvent.key attribute must be a string consisting of the char value of that character._\n- Enter key only fires keydown in Firefox, but fires both keydown and keypress in Chrome. This should be consistent across browsers\n- CapsLock key only fires keydown when it is toggled on. When caps lock is toggled from on to off, no keydown event is fired (this may be a browser limitation in Chrome)\n\nRepro: Test this page in Firefox and compare the result to Chrome: http://jsfiddle.net/63ycmLhe/1/\n",
+  "closed_by": null
+}

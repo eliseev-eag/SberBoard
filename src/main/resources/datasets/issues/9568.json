@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9568",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9568/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9568/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9568/events",
+  "html_url": "https://github.com/facebook/react/pull/9568",
+  "id": 225427434,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTE4MzcyMTIz",
+  "number": 9568,
+  "title": "Reference process as global's property, so webpack users dont get who…",
+  "user": {
+    "login": "Andarist",
+    "id": 9800850,
+    "node_id": "MDQ6VXNlcjk4MDA4NTA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/9800850?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Andarist",
+    "html_url": "https://github.com/Andarist",
+    "followers_url": "https://api.github.com/users/Andarist/followers",
+    "following_url": "https://api.github.com/users/Andarist/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Andarist/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Andarist/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Andarist/subscriptions",
+    "organizations_url": "https://api.github.com/users/Andarist/orgs",
+    "repos_url": "https://api.github.com/users/Andarist/repos",
+    "events_url": "https://api.github.com/users/Andarist/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Andarist/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2017-05-01T12:27:46Z",
+  "updated_at": "2017-05-01T20:58:56Z",
+  "closed_at": "2017-05-01T12:35:13Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9568",
+    "html_url": "https://github.com/facebook/react/pull/9568",
+    "diff_url": "https://github.com/facebook/react/pull/9568.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9568.patch"
+  },
+  "body": "I know [we've agreed](https://github.com/facebook/react/pull/9518#discussion_r113145331) that this should wait for React 16, but I've found a way (credits to @benjamn) to improve those checks so they produce smaller polyfill when bundled by webpack (only `global` - which is few lines of code, and not whole `process`).\r\n\r\nIf you agree on the change this commit should be cherry-picked into the `v15` line. Can also be merged into the master as precaution for now if somebody's using already `next`. \r\n\r\nI've confirmed that bundles are ok, tests are passing and this is in fact 'fixing' the whole auto-polyfill situation for webpack's users. If you decide its not a time for such fix, just close the PR :)\r\n\r\ncc @gaearon ",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

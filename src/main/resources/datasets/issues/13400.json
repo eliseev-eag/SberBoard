@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13400",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13400/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13400/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13400/events",
+  "html_url": "https://github.com/facebook/react/issues/13400",
+  "id": 350627761,
+  "node_id": "MDU6SXNzdWUzNTA2Mjc3NjE=",
+  "number": 13400,
+  "title": "Boolean DOM properties coerce empty string to false, contrary to HTML standard",
+  "user": {
+    "login": "motiz88",
+    "id": 2246565,
+    "node_id": "MDQ6VXNlcjIyNDY1NjU=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/2246565?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/motiz88",
+    "html_url": "https://github.com/motiz88",
+    "followers_url": "https://api.github.com/users/motiz88/followers",
+    "following_url": "https://api.github.com/users/motiz88/following{/other_user}",
+    "gists_url": "https://api.github.com/users/motiz88/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/motiz88/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/motiz88/subscriptions",
+    "organizations_url": "https://api.github.com/users/motiz88/orgs",
+    "repos_url": "https://api.github.com/users/motiz88/repos",
+    "events_url": "https://api.github.com/users/motiz88/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/motiz88/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2018-08-14T23:04:45Z",
+  "updated_at": "2018-08-15T00:22:01Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\nThis is in kind of the same space as https://github.com/facebook/react/pull/13372 and is an offshoot of my attempt to better [model React DOM props in Flow](https://github.com/facebook/flow/pull/6727).\r\n\r\n**tl;dr:** Should React warn when the value `\"\"` is passed into a known boolean DOM prop?\r\n\r\n---\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n\r\nDepends on interpretation 😅  This is possibly a bug, definitely an inconsistency worth mitigating IMHO.\r\n\r\n**What is the current behavior?**\r\n\r\nReact normalises values supplied to [known DOM boolean props](https://github.com/facebook/react/blob/69e2a0d732e1ca74f6dc5df9d0ddd0bf24373965/packages/react-dom/src/shared/DOMProperty.js#L278-L331) (e.g. `readOnly`) such that passing the empty string `\"\"` (being falsy in JavaScript) results in the corresponding attribute being omitted from the HTML output. However, in [HTML](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#boolean-attribute), the empty string is a truthy value in this context; it's one of the values that the standard specifically allows in boolean attributes.\r\n\r\nThe above is a potential source of confusion in itself, but React 16's handling of unknown attributes gives rise to the following hypothetical scenario: a new DOM boolean attribute `foobar` is introduced, some people write JSX code that uses it as `foobar=\"\"` (passed through to HTML, truthy), and later React adds `foobar` to its internal whitelist in a minor/patch version and starts processing it as a boolean (JS falsy, omitted from HTML); this would _technically_ be a breaking change for those people.\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem.**\r\n\r\nhttps://codesandbox.io/s/y0pmz9149x\r\n\r\n**What is the expected behavior?**\r\n\r\nThere is definitely a clash of expectations here at the interface of JS and HTML.\r\n\r\n1. Coming from JS, `\"\"` is falsy and treating it as such in a \"boolean\" prop is fine; from this perspective, the current behaviour is justifiable.\r\n2. Coming from HTML, it might not be obvious that React is doing this \"extra\" processing and deviating from what's clearly stated in the HTML spec; from this perspective, the current behaviour is surprising.\r\n\r\nThere probably isn't justification for changing React's actual handling of `\"\"` (not least for fear of breaking code that relies on this long-standing behaviour, see version information below), but perhaps a warning about the ambiguity is warranted, a la #13372?\r\n\r\nNote that a warning won't fully mitigate the worst-case scenario I mentioned above (since we can't warn about a prop that we don't _know_ is a DOM boolean), but at least it would give some signal _after_ the React version update that the code might not be doing the expected thing anymore.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nVersions of React as far back as 0.14 (and probably way older) process whitelisted boolean DOM props the same way.",
+  "closed_by": null
+}

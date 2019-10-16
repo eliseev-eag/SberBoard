@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16344",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16344/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16344/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16344/events",
+  "html_url": "https://github.com/facebook/react/issues/16344",
+  "id": 479182859,
+  "node_id": "MDU6SXNzdWU0NzkxODI4NTk=",
+  "number": 16344,
+  "title": "Would throwing lazy thenables would avoid side effects in render?",
+  "user": {
+    "login": "dfahlander",
+    "id": 6791329,
+    "node_id": "MDQ6VXNlcjY3OTEzMjk=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/6791329?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dfahlander",
+    "html_url": "https://github.com/dfahlander",
+    "followers_url": "https://api.github.com/users/dfahlander/followers",
+    "following_url": "https://api.github.com/users/dfahlander/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dfahlander/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dfahlander/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dfahlander/subscriptions",
+    "organizations_url": "https://api.github.com/users/dfahlander/orgs",
+    "repos_url": "https://api.github.com/users/dfahlander/repos",
+    "events_url": "https://api.github.com/users/dfahlander/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dfahlander/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-08-09T22:03:13Z",
+  "updated_at": "2019-08-09T22:03:13Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n\r\nSharing idea\r\n\r\n**What is the current behavior?**\r\n\r\nThrowing a promise when rendering means side effects happen at render, such as HTTP requests going out to a server.\r\n\r\nIsn't this something that prevent calling render in a 'dry-run'? A future concrete use case could be if you would need to call render internally from react-conciler for some dependency analytics or similar, wouldn't it be great if the thrown thenable didn't start off it's side effect until 'then' is actually called?\r\n\r\nIf so, your own reference libraries, like react-cache could be adjusted to not calling 'then()' on given thenable, but instead throw a suspender that lazily would call given thenable when framework calls suspender.then().\r\n\r\nJust a thought that I couldn't get out of my mind for a while.\r\n",
+  "closed_by": null
+}

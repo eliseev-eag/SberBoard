@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6874",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6874/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6874/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6874/events",
+  "html_url": "https://github.com/facebook/react/pull/6874",
+  "id": 156826407,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzE0NDU3NzY=",
+  "number": 6874,
+  "title": "RFC: Error code system",
+  "user": {
+    "login": "keyz",
+    "id": 2268452,
+    "node_id": "MDQ6VXNlcjIyNjg0NTI=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2268452?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/keyz",
+    "html_url": "https://github.com/keyz",
+    "followers_url": "https://api.github.com/users/keyz/followers",
+    "following_url": "https://api.github.com/users/keyz/following{/other_user}",
+    "gists_url": "https://api.github.com/users/keyz/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/keyz/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/keyz/subscriptions",
+    "organizations_url": "https://api.github.com/users/keyz/orgs",
+    "repos_url": "https://api.github.com/users/keyz/repos",
+    "events_url": "https://api.github.com/users/keyz/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/keyz/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2016-05-25T19:05:30Z",
+  "updated_at": "2016-06-17T22:34:12Z",
+  "closed_at": "2016-06-08T00:12:14Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6874",
+    "html_url": "https://github.com/facebook/react/pull/6874",
+    "diff_url": "https://github.com/facebook/react/pull/6874.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6874.patch"
+  },
+  "body": "This is a _work in progress_ on implementing React's [Error Code System](https://github.com/reactjs/core-notes/blob/master/2016-05/may-12.md#error-messages). Comments and feedback are more than welcome!\n#### Background\n\nWe currently have [fbjs-scripts/babel-6/dev-expression](https://github.com/facebook/fbjs/blob/master/babel-preset/plugins/dev-expression.js) as a babel pass. It rewrites all `invariant` calls from \n\n``` js\ninvariant(condition, argument, argument);\n```\n\nto \n\n``` js\nif (!condition) {\n  if (\"production\" !== process.env.NODE_ENV) {\n    invariant(false, argument, argument);\n  } else {\n    invariant(false);\n  }\n}\n```\n\nIf you take a look at `invariant`'s [implementation](https://github.com/facebook/fbjs/blob/master/src/__forks__/invariant.js#L34-L38), this is why we have the \"Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.\" error message in production.\n#### What's new\n\nThis PR implements an error code system and changes the rewriting to\n\n``` js\nif (!condition) {\n  if (\"production\" !== process.env.NODE_ENV) {\n    invariant(false, argument, 'foo', 'bar');\n  } else {\n    PROD_INVARIANT('XYZ', 'foo', 'bar');\n  }\n}\n```\n\nwhere\n- `XYZ` is an error code: an unique identifier (a number string) that references a verbose error message. The mapping is stored in `scripts/error-codes/codes.json`.\n- `PROD_INVARIANT` is the `reactProdInvariant` function that always throw with an error URL like https://facebook.github.io/react/docs/error-decoder.html?invariant=109&args[]=Foo. A demo can be found [here](https://facebook.github.io/react/docs/error-decoder.html?invariant=109&args[]=Foo).\n#### How it works\n1. We have a script that extracts error codes to a JSON file. Implemented in #6882\n2. Add a page to display the error codes. Implemented in #6946\n3. As we walk through files, the second argument (the error message template) of `invariant` is taken. Then it rewrites the `invariant` in production to `reactProdInvariant` using error IDs. #6948\n#### Size comparison\n\n```\n   raw     gz Compared to master\n     =      = build/react-dom-server.js\n     =      = build/react-dom-server.min.js\n     =      = build/react-dom.js\n     =      = build/react-dom.min.js\n +2191   -276 build/react-with-addons.js\n +2363  +1045 build/react-with-addons.min.js\n +1605   -382 build/react.js\n +2261  +1007 build/react.min.js\n```\n",
+  "closed_by": {
+    "login": "keyz",
+    "id": 2268452,
+    "node_id": "MDQ6VXNlcjIyNjg0NTI=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2268452?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/keyz",
+    "html_url": "https://github.com/keyz",
+    "followers_url": "https://api.github.com/users/keyz/followers",
+    "following_url": "https://api.github.com/users/keyz/following{/other_user}",
+    "gists_url": "https://api.github.com/users/keyz/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/keyz/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/keyz/subscriptions",
+    "organizations_url": "https://api.github.com/users/keyz/orgs",
+    "repos_url": "https://api.github.com/users/keyz/repos",
+    "events_url": "https://api.github.com/users/keyz/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/keyz/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

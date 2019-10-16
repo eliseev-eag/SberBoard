@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3926",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3926/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3926/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3926/events",
+  "html_url": "https://github.com/facebook/react/issues/3926",
+  "id": 78854591,
+  "node_id": "MDU6SXNzdWU3ODg1NDU5MQ==",
+  "number": 3926,
+  "title": "Change event fires extra times before IME composition ends",
+  "user": {
+    "login": "chenxsan",
+    "id": 1091472,
+    "node_id": "MDQ6VXNlcjEwOTE0NzI=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1091472?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/chenxsan",
+    "html_url": "https://github.com/chenxsan",
+    "followers_url": "https://api.github.com/users/chenxsan/followers",
+    "following_url": "https://api.github.com/users/chenxsan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/chenxsan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/chenxsan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/chenxsan/subscriptions",
+    "organizations_url": "https://api.github.com/users/chenxsan/orgs",
+    "repos_url": "https://api.github.com/users/chenxsan/repos",
+    "events_url": "https://api.github.com/users/chenxsan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/chenxsan/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 42,
+  "created_at": "2015-05-21T06:30:30Z",
+  "updated_at": "2019-08-21T03:19:24Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "### Extra details\r\n\r\n* Similar discussion with extra details and reproducing analysis: https://github.com/facebook/react/issues/8683\r\n* Previous attempt to fix it: https://github.com/facebook/react/pull/8438 (includes some unit tests, but sufficient to be confident in the fix)\r\n\r\n------\r\n\r\n### Original Issue\r\n\r\n\r\nWhen I was trying this [example](https://jsfiddle.net/reactjs/n47gckhr/light/) from https://facebook.github.io/react/blog/2013/11/05/thinking-in-react.html, any Chinese characters inputted by Chinese pinyin input method would fire too many renders like:\r\n\r\n![screen shot 2015-05-21 at 14 04 36](https://cloud.githubusercontent.com/assets/1091472/7742565/2c8625b0-ffc3-11e4-8ac2-d7eb22a3aef3.png)\r\n\r\nActually I would expect those not to fire before I confirm the Chinese character.\r\n\r\nThen I tried another kind of input method - wubi input method, I got this:\r\n\r\n![screen shot 2015-05-21 at 14 17 15](https://cloud.githubusercontent.com/assets/1091472/7742657/42c27bac-ffc4-11e4-8a3a-7d4550e88a59.png)\r\n\r\nIt's weird too. So I did a test [in jQuery](http://jsbin.com/yepogahobo/1/edit?html,js,console,output):\r\n\r\n![screen shot 2015-05-21 at 14 05 12](https://cloud.githubusercontent.com/assets/1091472/7742591/71da6842-ffc3-11e4-9d7a-a8438721029c.png)\r\n\r\nOnly after I press the space bar to confirm the character, the `keyup` event would fire.\r\n\r\nI know it might be different between the implementation of jQuery `keyup` and react `onChange` , but I would expect the way how jQuery `keyup` handles Chinese characters instead of react's `onChange`.\r\n",
+  "closed_by": null
+}

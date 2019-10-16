@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/264",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/264/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/264/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/264/events",
+  "html_url": "https://github.com/facebook/react/issues/264",
+  "id": 18061927,
+  "node_id": "MDU6SXNzdWUxODA2MTkyNw==",
+  "number": 264,
+  "title": "\"rowspan\" attribute does not appear in DOM",
+  "user": {
+    "login": "ericclemmons",
+    "id": 15182,
+    "node_id": "MDQ6VXNlcjE1MTgy",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/15182?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ericclemmons",
+    "html_url": "https://github.com/ericclemmons",
+    "followers_url": "https://api.github.com/users/ericclemmons/followers",
+    "following_url": "https://api.github.com/users/ericclemmons/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ericclemmons/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ericclemmons/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ericclemmons/subscriptions",
+    "organizations_url": "https://api.github.com/users/ericclemmons/orgs",
+    "repos_url": "https://api.github.com/users/ericclemmons/repos",
+    "events_url": "https://api.github.com/users/ericclemmons/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ericclemmons/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 52079258,
+      "node_id": "MDU6TGFiZWw1MjA3OTI1OA==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Difficulty:%20starter",
+      "name": "Difficulty: starter",
+      "color": "94ce52",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2013-08-14T16:24:14Z",
+  "updated_at": "2014-05-05T14:15:26Z",
+  "closed_at": "2013-08-25T18:34:36Z",
+  "author_association": "CONTRIBUTOR",
+  "body": "`<th rowspan=\"2\"></th>` does not set `rowspan` in the DOM.\n\nComponent:\n\n``` js\nrender: function() {\n  return (\n    <thead>\n      <tr>\n        {this.props.columns.map(this.renderColumnLabel)}\n        <th rowspan=\"2\"></th>\n      </tr>\n      <tr>\n        {this.props.columns.map(this.renderColumnControl)}\n      </tr>\n    </thead>\n  );\n}\n```\n\nOutput:\n\n``` html\n...\n<th data-reactid=\".r[5je1f].[0].[1].[1].[6].[0].[0].[1].[0].[0].[0].[1]\"></th>\n...\n```\n\nCan this be my first PR? :)\n",
+  "closed_by": {
+    "login": "ericclemmons",
+    "id": 15182,
+    "node_id": "MDQ6VXNlcjE1MTgy",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/15182?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ericclemmons",
+    "html_url": "https://github.com/ericclemmons",
+    "followers_url": "https://api.github.com/users/ericclemmons/followers",
+    "following_url": "https://api.github.com/users/ericclemmons/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ericclemmons/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ericclemmons/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ericclemmons/subscriptions",
+    "organizations_url": "https://api.github.com/users/ericclemmons/orgs",
+    "repos_url": "https://api.github.com/users/ericclemmons/repos",
+    "events_url": "https://api.github.com/users/ericclemmons/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ericclemmons/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

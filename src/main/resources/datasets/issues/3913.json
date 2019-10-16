@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3913",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3913/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3913/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3913/events",
+  "html_url": "https://github.com/facebook/react/pull/3913",
+  "id": 78577393,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzU4NDYyMzI=",
+  "number": 3913,
+  "title": "Added component displayName to warning message in ReactUpdateQueue.js",
+  "user": {
+    "login": "edvinerikson",
+    "id": 3890572,
+    "node_id": "MDQ6VXNlcjM4OTA1NzI=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/3890572?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/edvinerikson",
+    "html_url": "https://github.com/edvinerikson",
+    "followers_url": "https://api.github.com/users/edvinerikson/followers",
+    "following_url": "https://api.github.com/users/edvinerikson/following{/other_user}",
+    "gists_url": "https://api.github.com/users/edvinerikson/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/edvinerikson/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/edvinerikson/subscriptions",
+    "organizations_url": "https://api.github.com/users/edvinerikson/orgs",
+    "repos_url": "https://api.github.com/users/edvinerikson/repos",
+    "events_url": "https://api.github.com/users/edvinerikson/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/edvinerikson/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2015-05-20T15:46:39Z",
+  "updated_at": "2016-09-05T13:04:46Z",
+  "closed_at": "2015-06-04T22:00:36Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3913",
+    "html_url": "https://github.com/facebook/react/pull/3913",
+    "diff_url": "https://github.com/facebook/react/pull/3913.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3913.patch"
+  },
+  "body": "ref https://github.com/facebook/react/issues/3878\nNew message will look like this:\n\n> Warning: setState(...): Can only update a mounted or mounting component. This usually means you called setState() on an unmounted component. Please check the code for the ExampleApplication component. This is a no-op.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

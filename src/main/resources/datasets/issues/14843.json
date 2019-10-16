@@ -1,0 +1,72 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14843",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14843/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14843/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14843/events",
+  "html_url": "https://github.com/facebook/react/issues/14843",
+  "id": 410083829,
+  "node_id": "MDU6SXNzdWU0MTAwODM4Mjk=",
+  "number": 14843,
+  "title": "Warning: Did not expect server HTML to contain a <ul> in <div>",
+  "user": {
+    "login": "heathzipongo",
+    "id": 36862526,
+    "node_id": "MDQ6VXNlcjM2ODYyNTI2",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/36862526?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/heathzipongo",
+    "html_url": "https://github.com/heathzipongo",
+    "followers_url": "https://api.github.com/users/heathzipongo/followers",
+    "following_url": "https://api.github.com/users/heathzipongo/following{/other_user}",
+    "gists_url": "https://api.github.com/users/heathzipongo/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/heathzipongo/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/heathzipongo/subscriptions",
+    "organizations_url": "https://api.github.com/users/heathzipongo/orgs",
+    "repos_url": "https://api.github.com/users/heathzipongo/repos",
+    "events_url": "https://api.github.com/users/heathzipongo/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/heathzipongo/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 710332294,
+      "node_id": "MDU6TGFiZWw3MTAzMzIyOTQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Server%20Rendering",
+      "name": "Component: Server Rendering",
+      "color": "d4c5f9",
+      "default": false
+    },
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2019-02-14T01:34:31Z",
+  "updated_at": "2019-02-25T19:10:52Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\nBug\r\n**What is the current behavior?**\r\nI'm using Server Side rendering with `react-loadable` and my home page see this in the browser.  The warning test to be a bit different on other pages, but still seems to happen generally.  My app is using Grommet in case that matters...\r\n\r\nWhen the page renders I see the following in the console:\r\n```\r\nWarning: Did not expect server HTML to contain a <ul> in <div>.\r\n\r\nwarningWithoutStack | @ | react-dom.development.js:506\r\n-- | -- | --\r\n  | warnForDeletedHydratableElement | @ | react-dom.development.js:8254\r\n  | didNotHydrateInstance | @ | react-dom.development.js:8960\r\n  | deleteHydratableInstance | @ | react-dom.development.js:13964\r\n  | popHydrationState | @ | react-dom.development.js:14183\r\n  | completeWork | @ | react-dom.development.js:15801\r\n  | completeUnitOfWork | @ | react-dom.development.js:17981\r\n  | performUnitOfWork | @ | react-dom.development.js:18179\r\n  | workLoop | @ | react-dom.development.js:18191\r\n  | renderRoot | @ | react-dom.development.js:18277\r\n  | performWorkOnRoot | @ | react-dom.development.js:19166\r\n  | performWork | @ | react-dom.development.js:19078\r\n  | performSyncWork | @ | react-dom.development.js:19052\r\n  | requestWork | @ | react-dom.development.js:18921\r\n  | scheduleWork | @ | react-dom.development.js:18730\r\n  | scheduleRootUpdate | @ | react-dom.development.js:19398\r\n  | updateContainerAtExpirationTime | @ | react-dom.development.js:19426\r\n  | updateContainer | @ | react-dom.development.js:19483\r\n  | ReactRoot.render | @ | react-dom.development.js:19775\r\n  | (anonymous) | @ | react-dom.development.js:19915\r\n  | unbatchedUpdates | @ | react-dom.development.js:19281\r\n  | legacyRenderSubtreeIntoContainer | @ | react-dom.development.js:19911\r\n  | hydrate | @ | react-dom.development.js:19969\r\n  | (anonymous) | @ | client.js:52\r\n  | Promise.then (async) |   |  \r\n  | renderApp | @ | client.js:51\r\n  | (anonymous) | @ | client.js:60\r\n  | (anonymous) | @ | client.js:90\r\n  | ./src/client.js | @ | main.js:10934\r\n  | __webpack_require__ | @ | main.js:767\r\n  | fn | @ | main.js:130\r\n  | (anonymous) | @ | client.js:4\r\n  | 0 | @ | main.js:11473\r\n  | __webpack_require__ | @ | main.js:767\r\n  | (anonymous) | @ | main.js:902\r\n  | (anonymous) | @ | main.js:905\r\n```\r\nThe html captured on the server was as follows:\r\n```\r\n<div lang=\"en-US\" class=\"grommet grommetux-app grommetux-app--centered\"><div class=\"grommetux-header__container grommetux-header__container--fixed grommetux-header__container--fill\"><div class=\"grommetux-header__mirror\"></div><div class=\"grommetux-header__wrapper grommetux-header__wrapper--small\"><div class=\"grommetux-box grommetux-box--direction-column grommetux-box--responsive grommetux-box--pad-none grommetux-box--flex-off\"><header class=\"grommetux-box grommetux-box--direction-row grommetux-box--align-center grommetux-box--pad-horizontal-none grommetux-box--pad-vertical-none grommetux-box--pad-between-small grommetux-header grommetux-header--small header\"><div class=\"grommetux-box grommetux-box--direction-column grommetux-box--responsive grommetux-box--pad-none grommetux-menu grommetux-menu--column grommetux-menu--small grommetux-menu--controlled grommetux-menu__control\"><button type=\"button\" class=\"grommetux-button grommetux-button--plain\" aria-label=\"Open  Menu\"><span class=\"grommetux-button__icon\"><svg version=\"1.1\" viewBox=\"0 0 24 24\" width=\"24px\" height=\"24px\" role=\"img\" class=\"grommetux-control-icon grommetux-control-icon-menu grommetux-control-icon--responsive\" aria-label=\"menu\"><path fill=\"none\" stroke=\"#000\" stroke-width=\"2\" d=\"M2,19 L22,19 M2,5 L22,5 M2,12 L22,12\"></path></svg></span></button></div><div class=\"grommetux-box grommetux-box--direction-row grommetux-box--justify-start grommetux-box--align-center grommetux-box--flex-grow grommetux-box--pad-none grommetux-box--size-small grommetux-box--size grommetux-title grommetux-title--responsive grommetux-title--truncate\"><a href=\"/\" class=\"grommetux-anchor link link-white\">Zipongo Admin Tool</a></div></header></div></div></div><div class=\"grommetux-box grommetux-box--direction-column grommetux-box--responsive grommetux-box--pad-small\"><ul class=\"home-container small-block-grid-1 medium-block-grid-3 large-block-grid-5 text-center\"><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/cafes\">Cafe home</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/cms\">CMS home</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/daily-emails\">Daily email home</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/easy-meals\">Easy meals</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/foodscripts/plan\">Foodscripts plan</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/household-invites/custom-text\">Household custom text</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/mobile-push\">Mobile push</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/partner-events\">Partner events</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/orderwell-data\">Orderwell data</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/tools\">Tools home</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/user\">User home</a></li></ul></div><span style=\"display:none\"></span><div class=\"grommetux-app__announcer\" aria-live=\"polite\"></div></div>\r\n```\r\n I went in and added some debug logging in `warnForDeletedHydratableElement()` to output the `parentNode` and `child`, as follows:\r\n\r\n```\r\nparentNode:\r\n<div class=\"grommetux-box grommetux-box--direction-column grommetux-box--responsive grommetux-box--pad-small\"><ul class=\"home-container small-block-grid-1 medium-block-grid-3 large-block-grid-5 text-center\"><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/cafes\">Cafe home</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/cms\">CMS home</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/daily-emails\">Daily email home</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/easy-meals\">Easy meals</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/foodscripts/plan\">Foodscripts plan</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/household-invites/custom-text\">Household custom text</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/mobile-push\">Mobile push</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/partner-events\">Partner events</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/orderwell-data\">Orderwell data</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/tools\">Tools home</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/user\">User home</a></li></ul></div>\r\n```\r\n```\r\nchild:\r\n<ul class=\"home-container small-block-grid-1 medium-block-grid-3 large-block-grid-5 text-center\"><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/cafes\">Cafe home</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/cms\">CMS home</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/daily-emails\">Daily email home</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/easy-meals\">Easy meals</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/foodscripts/plan\">Foodscripts plan</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/household-invites/custom-text\">Household custom text</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/mobile-push\">Mobile push</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/partner-events\">Partner events</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/orderwell-data\">Orderwell data</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/tools\">Tools home</a></li><li class=\"home-item-container\"><a class=\"home-item link link-white bold\" href=\"/user\">User home</a></li></ul>\r\n```\r\nIt was then I noticed something suspicious... in the browser inspector `parentNode` had a little bit different HTML than the server because the browser added `::before` and `::after` pseudo elements into the DOM of the `ul` as is noticeable in a screenshot I attached below.\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\nI'm not in a place to be able to boil this down to a simple test case at this time, but at least it would be interesting to know if these pseudo elements in the DOM would break the hydration code?\r\n\r\n**What is the expected behavior?**\r\nThat my hydrate doesn't fail because of these pseudo elements (it thats what it is)\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nNot sure, but it definitely happened with 16.7.0 and continues with 16.8.1\r\n",
+  "closed_by": null
+}

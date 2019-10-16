@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15759",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15759/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15759/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15759/events",
+  "html_url": "https://github.com/facebook/react/issues/15759",
+  "id": 449732573,
+  "node_id": "MDU6SXNzdWU0NDk3MzI1NzM=",
+  "number": 15759,
+  "title": "Event not invoked in ShadowDom's non-root node.",
+  "user": {
+    "login": "Jack-Works",
+    "id": 5390719,
+    "node_id": "MDQ6VXNlcjUzOTA3MTk=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/5390719?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Jack-Works",
+    "html_url": "https://github.com/Jack-Works",
+    "followers_url": "https://api.github.com/users/Jack-Works/followers",
+    "following_url": "https://api.github.com/users/Jack-Works/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Jack-Works/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Jack-Works/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Jack-Works/subscriptions",
+    "organizations_url": "https://api.github.com/users/Jack-Works/orgs",
+    "repos_url": "https://api.github.com/users/Jack-Works/repos",
+    "events_url": "https://api.github.com/users/Jack-Works/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Jack-Works/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-05-29T10:42:56Z",
+  "updated_at": "2019-06-14T07:35:03Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\nBug\r\n**What is the current behavior?**\r\nThe second h1 onClick not responding\r\n\r\n**Reproduce:**\r\n```html\r\n<script crossorigin src=\"https://unpkg.com/react@16/umd/react.development.js\"></script>\r\n<script crossorigin src=\"https://unpkg.com/react-dom@16/umd/react-dom.development.js\"></script>\r\n\r\n<body>\r\n    <div id=\"1\"></div>\r\n    <div id=\"2\"></div>\r\n</body>\r\n<script>\r\n    function Component() {\r\n        return React.createElement('h1', {onClick() { alert('click!') }}, 'Click me!')\r\n    }\r\n    const shadow1 = document.getElementById('1').attachShadow({mode: 'closed'})\r\n    const shadow2 = document.getElementById('2').attachShadow({mode: 'closed'})\r\n    const inner = document.createElement('div')\r\n    shadow2.appendChild(inner)\r\n\r\n    ReactDOM.render(React.createElement(Component), shadow1)\r\n    ReactDOM.render(React.createElement(Component), inner)\r\n</script>\r\n```\r\n\r\n**What is the expected behavior?**\r\nThe first h1 works, the second h1 works too.\r\n",
+  "closed_by": null
+}

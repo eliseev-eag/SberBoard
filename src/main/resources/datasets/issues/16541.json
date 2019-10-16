@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16541",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16541/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16541/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16541/events",
+  "html_url": "https://github.com/facebook/react/issues/16541",
+  "id": 483964734,
+  "node_id": "MDU6SXNzdWU0ODM5NjQ3MzQ=",
+  "number": 16541,
+  "title": "DevTools: Ability to save inspected values as global variable (as it was in previous version)",
+  "user": {
+    "login": "AkhmedovValikhan",
+    "id": 9393189,
+    "node_id": "MDQ6VXNlcjkzOTMxODk=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/9393189?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/AkhmedovValikhan",
+    "html_url": "https://github.com/AkhmedovValikhan",
+    "followers_url": "https://api.github.com/users/AkhmedovValikhan/followers",
+    "following_url": "https://api.github.com/users/AkhmedovValikhan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/AkhmedovValikhan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/AkhmedovValikhan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/AkhmedovValikhan/subscriptions",
+    "organizations_url": "https://api.github.com/users/AkhmedovValikhan/orgs",
+    "repos_url": "https://api.github.com/users/AkhmedovValikhan/repos",
+    "events_url": "https://api.github.com/users/AkhmedovValikhan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/AkhmedovValikhan/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2019-08-22T12:29:14Z",
+  "updated_at": "2019-09-03T17:35:02Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "Hi, I really like new dev tools (4.0.5), but I would like to request one useful feature.\r\n\r\nIn previous version it was possible to save inspected value (prop/state/context) and its parts as a global variable using context menu->store as global variable, so it can be easily be accessed through console using `$tmp{n}`. In current version this is behaviour was replaced be creating new \"bug\" button which will just print all values in console. Unfortunately it's hard to navigate through this object, because $_ in console will return undefined. And in order to access it you need to expand group, find desired property and open context menu->store as global variable. \r\nIt would be perfect if you combine these 2 approaches so it would be possible to both print values using \"bug\" button and opening context menu directly in react dev tools panel wihtout need of intermediate step. \r\n\r\nThanks! \r\n\r\n",
+  "closed_by": null
+}

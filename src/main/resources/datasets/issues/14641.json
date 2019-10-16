@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14641",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14641/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14641/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14641/events",
+  "html_url": "https://github.com/facebook/react/issues/14641",
+  "id": 401136526,
+  "node_id": "MDU6SXNzdWU0MDExMzY1MjY=",
+  "number": 14641,
+  "title": "\"Invariant Violation: Unable to find node on an unmounted component\" on `react-test-renderer`'s `renderer.create` when react package versions don't match",
+  "user": {
+    "login": "thisismydesign",
+    "id": 3299948,
+    "node_id": "MDQ6VXNlcjMyOTk5NDg=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/3299948?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/thisismydesign",
+    "html_url": "https://github.com/thisismydesign",
+    "followers_url": "https://api.github.com/users/thisismydesign/followers",
+    "following_url": "https://api.github.com/users/thisismydesign/following{/other_user}",
+    "gists_url": "https://api.github.com/users/thisismydesign/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/thisismydesign/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/thisismydesign/subscriptions",
+    "organizations_url": "https://api.github.com/users/thisismydesign/orgs",
+    "repos_url": "https://api.github.com/users/thisismydesign/repos",
+    "events_url": "https://api.github.com/users/thisismydesign/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/thisismydesign/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710400704,
+      "node_id": "MDU6TGFiZWw3MTA0MDA3MDQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Test%20Renderer",
+      "name": "Component: Test Renderer",
+      "color": "006b75",
+      "default": false
+    },
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-01-20T20:37:19Z",
+  "updated_at": "2019-01-21T18:01:11Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n\r\nbug\r\n\r\n**What is the current behavior?**\r\n\r\n```\r\nimport renderer from 'react-test-renderer';\r\n\r\nconst tree = renderer.create(<MyComponent />);\r\n// => Invariant Violation: Unable to find node on an unmounted component\r\n```\r\n\r\nThere're many people complaining about this issue in many different contexts. It seems to be coming from `findDOMNode`. The discussions are very vague and varied, e.g.\r\n- https://stackoverflow.com/questions/52734483/reactdom-render-unable-to-find-node-on-an-unmounted-component-after-react-upgra\r\n- https://github.com/Pomax/react-onclickoutside/issues/231\r\n- https://github.com/airbnb/enzyme/issues/1411\r\n- and the many more refernced issues\r\n\r\nI'm not sure if all has the same root cause but many advise to upgrade/downgrade seemingly randomly. Also seemingly randomly it works for some and doesn't for others. Would be great to get a general recommendation / fix.\r\n\r\nMy use case:\r\n\r\n`MyComponent` above is a simple `styled-component` (`styled.ul`).\r\n\r\nThe issue seem to be related to versions or version mismatches between `react`, `react-dom` and `react-test-renderer`. In my case, the error disappears locally by having `v16.5.0` install of all. However, the issue still occurs in GitLab CI. The only obvious difference is that the CI uses `yarn` and I use `npm`. **I was finally able to solve it in both environments by upgrading all three to the latest, `v16.7.0`.** Having any minor version mismatches seemed to reproduce the error locally.\r\n\r\nComplete trace of error:\r\n```\r\n      at invariant (node_modules/react-dom/cjs/react-dom.development.js:55:15)\r\n      at findCurrentFiberUsingSlowPath (node_modules/react-dom/cjs/react-dom.development.js:4125:30)\r\n      at findCurrentHostFiber (node_modules/react-dom/cjs/react-dom.development.js:4233:23)\r\n      at findHostInstanceWithWarning (node_modules/react-dom/cjs/react-dom.development.js:19454:21)\r\n      at Object.findDOMNode (node_modules/react-dom/cjs/react-dom.development.js:19962:14)\r\n      at StyledComponent.componentDidMount (node_modules/styled-components/dist/styled-components.cjs.js:1927:25)\r\n      at commitLifeCycles (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:7019:22)\r\n      at commitAllLifeCycles (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:8234:7)\r\n      at HTMLUnknownElement.callCallback (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:2312:14)\r\n      at invokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:193:27)\r\n      at HTMLUnknownElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:119:9)\r\n      at HTMLUnknownElementImpl.dispatchEvent (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:82:17)\r\n      at HTMLUnknownElementImpl.dispatchEvent (node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:30:27)\r\n      at HTMLUnknownElement.dispatchEvent (node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:157:21)\r\n      at Object.invokeGuardedCallbackDev (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:2362:16)\r\n      at invokeGuardedCallback (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:2411:31)\r\n      at commitRoot (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:8404:7)\r\n      at completeRoot (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:9769:3)\r\n      at performWorkOnRoot (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:9697:9)\r\n      at performWork (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:9601:7)\r\n      at performSyncWork (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:9573:3)\r\n      at requestWork (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:9461:5)\r\n      at scheduleWork (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:9256:5)\r\n      at scheduleRootUpdate (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:9865:3)\r\n      at updateContainerAtExpirationTime (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:9892:10)\r\n      at updateContainer (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:9903:10)\r\n      at Object.create (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:10428:5)\r\n      at Object.<anonymous> (src/components/Selectors/DownShiftSelector/DownShiftSelector.test.js:45:44)\r\n```\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\n\r\n**What is the expected behavior?**\r\n\r\nno error\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nas described above",
+  "closed_by": null
+}

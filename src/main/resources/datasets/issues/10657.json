@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10657",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10657/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10657/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10657/events",
+  "html_url": "https://github.com/facebook/react/issues/10657",
+  "id": 256445676,
+  "node_id": "MDU6SXNzdWUyNTY0NDU2NzY=",
+  "number": 10657,
+  "title": "BFcache, SSR and form elements",
+  "user": {
+    "login": "oliviertassinari",
+    "id": 3165635,
+    "node_id": "MDQ6VXNlcjMxNjU2MzU=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/3165635?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/oliviertassinari",
+    "html_url": "https://github.com/oliviertassinari",
+    "followers_url": "https://api.github.com/users/oliviertassinari/followers",
+    "following_url": "https://api.github.com/users/oliviertassinari/following{/other_user}",
+    "gists_url": "https://api.github.com/users/oliviertassinari/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/oliviertassinari/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/oliviertassinari/subscriptions",
+    "organizations_url": "https://api.github.com/users/oliviertassinari/orgs",
+    "repos_url": "https://api.github.com/users/oliviertassinari/repos",
+    "events_url": "https://api.github.com/users/oliviertassinari/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/oliviertassinari/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-09-09T15:23:08Z",
+  "updated_at": "2019-09-25T14:22:32Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\n Bug\r\n\r\n**What is the current behavior?**\r\n\r\nLet's say you start filling a form input type text or a select element with `foo`. Then you click on a link and press the back button. The browser back-forward cache will kick in and change the initial value of the form elements. We will get our `foo` value back.\r\nHowever, React doesn't account for it when the component is controlled.\r\n\r\nI have tried reproducing the behavior with jsfiddle with [react@latest](https://jsfiddle.net/d4fovwxx/) and [react@next](https://jsfiddle.net/vm5vouqo/) with no luck as the BFcache doesn't kick in without SSR.\r\n\r\n**What is the expected behavior?**\r\n\r\nI expect React triggering a `onChange` event to replicate the actual form value.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\n- React `@latest`.\r\n- Chrome `@latest`\r\n\r\nWe have been [using the following hack](https://github.com/callemall/material-ui/blob/v1-beta/src/Input/Input.js#L349-#L356) on Material-UI:\r\n```js\r\n  componentDidMount() {\r\n    // Fix SSR issue with the go back feature of the browsers.\r\n    // Let's say you start filling the input with \"foo\", you change the page then after comes back.\r\n    // The browser will reset the input value to \"foo\", but we also need to tell React about it.\r\n    this.handleChange({\r\n      target: this.input,\r\n    });\r\n  }\r\n```\r\n\r\nBut it comes with issues: https://github.com/callemall/material-ui/pull/8110.\r\nSo instead, we tried simulating a change event [as suggested in StackOverflow](https://stackoverflow.com/questions/23892547/what-is-the-best-way-to-trigger-onchange-event-in-react-js) but it doesn't work anymore\r\n```js\r\nvar event = new Event('input', { bubbles: true });\r\nelement.dispatchEvent(event);\r\n```\r\n\r\nSo for now, we are going to disable the BFcache with `<form autoComplete=\"off\">`.",
+  "closed_by": null
+}

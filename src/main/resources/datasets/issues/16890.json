@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16890",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16890/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16890/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16890/events",
+  "html_url": "https://github.com/facebook/react/issues/16890",
+  "id": 498246148,
+  "node_id": "MDU6SXNzdWU0OTgyNDYxNDg=",
+  "number": 16890,
+  "title": "Problem with updating component state in the \"Components\" tab of React Developer Tools -  Chrome extension",
+  "user": {
+    "login": "marcinszymaszek",
+    "id": 40744326,
+    "node_id": "MDQ6VXNlcjQwNzQ0MzI2",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/40744326?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/marcinszymaszek",
+    "html_url": "https://github.com/marcinszymaszek",
+    "followers_url": "https://api.github.com/users/marcinszymaszek/followers",
+    "following_url": "https://api.github.com/users/marcinszymaszek/following{/other_user}",
+    "gists_url": "https://api.github.com/users/marcinszymaszek/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/marcinszymaszek/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/marcinszymaszek/subscriptions",
+    "organizations_url": "https://api.github.com/users/marcinszymaszek/orgs",
+    "repos_url": "https://api.github.com/users/marcinszymaszek/repos",
+    "events_url": "https://api.github.com/users/marcinszymaszek/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/marcinszymaszek/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 40929152,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mg==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Duplicate",
+      "name": "Resolution: Duplicate",
+      "color": "cccccc",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-09-25T12:13:45Z",
+  "updated_at": "2019-09-25T20:43:10Z",
+  "closed_at": "2019-09-25T20:43:10Z",
+  "author_association": "NONE",
+  "body": "Hello everyone,\r\n\r\nI have a problem with Chrome extension -  React Developer Tools, if I change component's state it's not changing in the dev tools window (as in the screenshot below) I am only able to see arrows with title \"Reset value\". \r\nDoes somebody know how it could be fixed?\r\n\r\nThanks a lot for help!\r\n\r\n![Zrzut ekranu z 2019-09-25 14-06-22](https://user-images.githubusercontent.com/40744326/65599624-8e7e9d00-df9e-11e9-9f5e-4be249278c6d.png)\r\n\r\n",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

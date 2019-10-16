@@ -1,0 +1,91 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16012",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16012/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16012/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16012/events",
+  "html_url": "https://github.com/facebook/react/issues/16012",
+  "id": 461554280,
+  "node_id": "MDU6SXNzdWU0NjE1NTQyODA=",
+  "number": 16012,
+  "title": "react-test-renderer with jest.resetModules: invariant violiation for hooks",
+  "user": {
+    "login": "entropitor",
+    "id": 896093,
+    "node_id": "MDQ6VXNlcjg5NjA5Mw==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/896093?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/entropitor",
+    "html_url": "https://github.com/entropitor",
+    "followers_url": "https://api.github.com/users/entropitor/followers",
+    "following_url": "https://api.github.com/users/entropitor/following{/other_user}",
+    "gists_url": "https://api.github.com/users/entropitor/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/entropitor/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/entropitor/subscriptions",
+    "organizations_url": "https://api.github.com/users/entropitor/orgs",
+    "repos_url": "https://api.github.com/users/entropitor/repos",
+    "events_url": "https://api.github.com/users/entropitor/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/entropitor/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 1109410193,
+      "node_id": "MDU6TGFiZWwxMTA5NDEwMTkz",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Hooks",
+      "name": "Component: Hooks",
+      "color": "c2f27b",
+      "default": false
+    },
+    {
+      "id": 710400704,
+      "node_id": "MDU6TGFiZWw3MTA0MDA3MDQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Test%20Renderer",
+      "name": "Component: Test Renderer",
+      "color": "006b75",
+      "default": false
+    },
+    {
+      "id": 620368407,
+      "node_id": "MDU6TGFiZWw2MjAzNjg0MDc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Needs%20More%20Information",
+      "name": "Resolution: Needs More Information",
+      "color": "fffde7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-06-27T14:13:00Z",
+  "updated_at": "2019-09-24T01:07:13Z",
+  "closed_at": "2019-07-01T11:34:04Z",
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nbug\r\n\r\n**What is the current behavior?**\r\nWhen writing a test with jest (and requiring a component with hooks after `jest.resetModules()`), `react-test-renderer` complains \r\n> Invariant Violation: Hooks can only be called inside the body of a function component. (https://fb.me/react-invalid-hook-call)\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\n1. Write a functional component using a hook\r\n2. Create a test using jest\r\n3. Call `jest.resetModules`\r\n4. Require the module\r\n5. Call `renderer.create(<MyComponent />).toJSON()` \r\n6. Run test, it fails with the error above\r\n\r\n**What is the expected behavior?**\r\nThe test should not crash on hooks in tests where resetModules() is called\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n16.8. as hooks were introduced",
+  "closed_by": {
+    "login": "threepointone",
+    "id": 18808,
+    "node_id": "MDQ6VXNlcjE4ODA4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/18808?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/threepointone",
+    "html_url": "https://github.com/threepointone",
+    "followers_url": "https://api.github.com/users/threepointone/followers",
+    "following_url": "https://api.github.com/users/threepointone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/threepointone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/threepointone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/threepointone/subscriptions",
+    "organizations_url": "https://api.github.com/users/threepointone/orgs",
+    "repos_url": "https://api.github.com/users/threepointone/repos",
+    "events_url": "https://api.github.com/users/threepointone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/threepointone/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

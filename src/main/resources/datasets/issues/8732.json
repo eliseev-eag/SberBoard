@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8732",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8732/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8732/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8732/events",
+  "html_url": "https://github.com/facebook/react/pull/8732",
+  "id": 199744146,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTAwODE4NDY4",
+  "number": 8732,
+  "title": "Add specs about issue #8731",
+  "user": {
+    "login": "Sheile",
+    "id": 191358,
+    "node_id": "MDQ6VXNlcjE5MTM1OA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/191358?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Sheile",
+    "html_url": "https://github.com/Sheile",
+    "followers_url": "https://api.github.com/users/Sheile/followers",
+    "following_url": "https://api.github.com/users/Sheile/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Sheile/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Sheile/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Sheile/subscriptions",
+    "organizations_url": "https://api.github.com/users/Sheile/orgs",
+    "repos_url": "https://api.github.com/users/Sheile/repos",
+    "events_url": "https://api.github.com/users/Sheile/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Sheile/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-01-10T06:38:11Z",
+  "updated_at": "2017-04-21T14:38:44Z",
+  "closed_at": "2017-04-21T14:38:44Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8732",
+    "html_url": "https://github.com/facebook/react/pull/8732",
+    "diff_url": "https://github.com/facebook/react/pull/8732.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8732.patch"
+  },
+  "body": "This PR contains only two specs about issue #8731 \r\nFirst spec are passed, second spec are failed.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

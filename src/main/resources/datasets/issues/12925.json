@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12925",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12925/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12925/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12925/events",
+  "html_url": "https://github.com/facebook/react/pull/12925",
+  "id": 327293992,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTkxMTI1NzYz",
+  "number": 12925,
+  "title": "Do not assign node.value on input creation if no change will occur",
+  "user": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-05-29T12:14:35Z",
+  "updated_at": "2018-05-29T13:48:59Z",
+  "closed_at": "2018-05-29T13:48:59Z",
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12925",
+    "html_url": "https://github.com/facebook/react/pull/12925",
+    "diff_url": "https://github.com/facebook/react/pull/12925.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12925.patch"
+  },
+  "body": "**What**\r\n\r\nThis commit fixes an issue where assigning an empty string to required text inputs triggers the invalid state in Firefox (~60.0.1).\r\n\r\nIt does this by first comparing the initial state value to the current value property on the text element. Doing so:\r\n\r\n1. Prevents the validation issue\r\n2. Avoids an extra DOM Mutation in some cases\r\n\r\nI have also updated the text fixtures to include the empty string test case presented in https://github.com/facebook/react/issues/8395#issuecomment-392724376\r\n\r\n**Test Plan**\r\n\r\n1. Open http://react-more-required-validation-pass.surge.sh/text-inputs\r\n2. View the Required Input test case\r\n3. All inputs should appear valid\r\n4. On iOS and Android, date inputs should present a value\r\n\r\n<img width=\"870\" alt=\"screen shot 2018-05-29 at 7 47 11 am\" src=\"https://user-images.githubusercontent.com/590904/40657087-9767b6a2-6314-11e8-90ba-60e3aaf02c34.png\">\r\n\r\n**Tested In**\r\n\r\n- [x] Safari 9, 11\r\n- [x] Chrome 49, 66\r\n- [x] Firefox 47, 60\r\n- [x] IE 9, 11\r\n- [x] Edge 16, 17\r\n- [x] iOS 9, 11 Safari \r\n- [x] Chrome for Android \r\n\r\n---\r\n\r\nRelated: https://github.com/facebook/react/issues/8395#issuecomment-392724376",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

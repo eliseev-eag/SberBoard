@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12544",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12544/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12544/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12544/events",
+  "html_url": "https://github.com/facebook/react/pull/12544",
+  "id": 311363308,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTc5NDkxMjI0",
+  "number": 12544,
+  "title": "[WIP] Optimize context by using an object for stateNode",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2018-04-04T19:38:16Z",
+  "updated_at": "2018-05-23T13:14:35Z",
+  "closed_at": "2018-05-23T13:14:35Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12544",
+    "html_url": "https://github.com/facebook/react/pull/12544",
+    "diff_url": "https://github.com/facebook/react/pull/12544.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12544.patch"
+  },
+  "body": "I tested a tree view with this, and there appears to be a significant improvement in DEV.\r\n\r\nMy hypothesis is that `stateNode` being an object prevents some kind of deopt in the propagation loop where `fiber` type switches from one with a number `stateNode` to one with an object `stateNode`.\r\n\r\nDetails below.\r\n\r\n## Self Time\r\n\r\n### Before\r\n\r\n<img width=\"745\" alt=\"dev\" src=\"https://user-images.githubusercontent.com/810438/38329659-6c4259c6-3846-11e8-8e8b-49fc4428f2ee.png\">\r\n\r\n### After\r\n\r\n<img width=\"746\" alt=\"dev\" src=\"https://user-images.githubusercontent.com/810438/38329694-815724c2-3846-11e8-974a-dd2a06e6fccc.png\">\r\n\r\n## Detailed Breakdown\r\n\r\n### Before\r\n\r\n<img width=\"420\" alt=\"hotness_dev\" src=\"https://user-images.githubusercontent.com/810438/38329733-97124e7c-3846-11e8-9a1b-199621ead0c0.png\">\r\n\r\n### After\r\n\r\n<img width=\"375\" alt=\"hotness_dev\" src=\"https://user-images.githubusercontent.com/810438/38329715-8d4d518e-3846-11e8-8e91-44d853bfdc5f.png\">\r\n\r\n## Summary\r\n\r\n### Before\r\n<img width=\"168\" alt=\"screen shot 2018-04-04 at 20 36 05\" src=\"https://user-images.githubusercontent.com/810438/38330242-f566e680-3847-11e8-9d61-073dd165e717.png\">\r\n\r\n### After\r\n\r\n<img width=\"174\" alt=\"screen shot 2018-04-04 at 20 36 54\" src=\"https://user-images.githubusercontent.com/810438/38330253-fa641aa4-3847-11e8-8ae2-ffe006cade73.png\">\r\n\r\n## Firefox \r\n\r\n### Before\r\n<img width=\"694\" alt=\"ff_dev\" src=\"https://user-images.githubusercontent.com/810438/38329915-134711a8-3847-11e8-8b96-3da8446998bd.png\">\r\n\r\n\r\n### After\r\n\r\n<img width=\"724\" alt=\"ff_dev\" src=\"https://user-images.githubusercontent.com/810438/38329880-075c71a8-3847-11e8-904b-e19204a5997f.png\">\r\n\r\n-----\r\n\r\nWhat’s odd is, I haven’t seen a noticeable difference in production builds.\r\nMaybe there’s something GCC does that accidentally mitigates this.\r\n\r\nMy testing procedure is to make a tree view with 1,000 consumers, and then update the root context 10 times. I tried swapping the bundles here and back a few times, and the difference in DEV consistently reproduces.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

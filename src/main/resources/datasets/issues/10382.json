@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10382",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10382/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10382/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10382/events",
+  "html_url": "https://github.com/facebook/react/issues/10382",
+  "id": 248003365,
+  "node_id": "MDU6SXNzdWUyNDgwMDMzNjU=",
+  "number": 10382,
+  "title": "Too much unnecessary updates when a child element is moved to the front",
+  "user": {
+    "login": "yelouafi",
+    "id": 5453835,
+    "node_id": "MDQ6VXNlcjU0NTM4MzU=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/5453835?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/yelouafi",
+    "html_url": "https://github.com/yelouafi",
+    "followers_url": "https://api.github.com/users/yelouafi/followers",
+    "following_url": "https://api.github.com/users/yelouafi/following{/other_user}",
+    "gists_url": "https://api.github.com/users/yelouafi/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/yelouafi/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/yelouafi/subscriptions",
+    "organizations_url": "https://api.github.com/users/yelouafi/orgs",
+    "repos_url": "https://api.github.com/users/yelouafi/repos",
+    "events_url": "https://api.github.com/users/yelouafi/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/yelouafi/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 739761016,
+      "node_id": "MDU6TGFiZWw3Mzk3NjEwMTY=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Reconciler",
+      "name": "Component: Reconciler",
+      "color": "f9a798",
+      "default": false
+    },
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2017-08-04T13:18:50Z",
+  "updated_at": "2018-03-01T13:28:14Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\nNot sure if it's a bug or an 'accepted' behavior. But this can affect performance in some situations or even 'break the expectations' in others (e.g. animating moved elements [i.e. simple moves]) \r\n\r\n**What is the current behavior?**\r\n\r\nWhen a child element moves from the end of the list to the front  React actually moves all the other elements after the moved/last element instead of simply inserting the moved element at the front of the list.\r\n\r\nThis also can be stated more generally for an element or a block of elements moving backward with a significant shift.\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem via https://jsfiddle.net or similar (template: https://jsfiddle.net/84v837e9/).**\r\n\r\nHere is a [demo](https://codesandbox.io/s/wjZkrGVzJ) that shows the DOM operations performed on DOM nodes (moves & insertions) during reconciliation. To reproduce the issue\r\n\r\n- type '0123456789x' in the input field then click `Patch!`\r\n\r\n- now type 'x0123456789' (move the last 'x' to the front) then click `Patch!` again\r\n\r\nHere's the output\r\n\r\n![image](https://user-images.githubusercontent.com/5453835/28969007-affc2dae-791a-11e7-951a-37856bc53f00.png)\r\n\r\nInstead of moving the 'x' to the front. React actually moves all the other elements after the 'x'\r\n\r\n*Note: the demo uses MutationObserver api to find out the operations. But you can also verify this behavior directly by commenting out the code that activates the dom observer (in componentDidMount) and watch the dom operations manually in the devtools element inspector*\r\n\r\n**What is the expected behavior?**\r\n\r\nReact should perform the minimal number of operations. I know that the 'minimum' will vary for each situation and not trivial to infer for the general case. But for some common cases like this one it should be feasible.\r\n\r\nFor info this use case is handled in most of the other virtual dom libs like preact, snabbdom. Inferno is a remarkable case as it will always infer the minimum number of operations (it uses an algorithm to find the [longest increasing subsequence](https://en.wikipedia.org/wiki/Longest_increasing_subsequence) on an array containing the indexes of the old elements).\r\n\r\nI found this behavior while working on a demo to find out how vdom libs rearrange nodes during children reconciliation. For example here is the same output for other libs ([demo](https://codesandbox.io/s/BkLpXYQn))\r\n\r\n![image](https://user-images.githubusercontent.com/5453835/28969902-567219c0-791e-11e7-9f3d-29bf988cdab1.png)\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nThe demo uses the 0.16 version. But I tried with 0.15 and it has the same behavior",
+  "closed_by": null
+}

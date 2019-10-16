@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8917",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8917/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8917/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8917/events",
+  "html_url": "https://github.com/facebook/react/pull/8917",
+  "id": 204933030,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTA0Mzc5MTU4",
+  "number": 8917,
+  "title": "Update cloneElement() description",
+  "user": {
+    "login": "nativedone",
+    "id": 20998754,
+    "node_id": "MDQ6VXNlcjIwOTk4NzU0",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/20998754?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nativedone",
+    "html_url": "https://github.com/nativedone",
+    "followers_url": "https://api.github.com/users/nativedone/followers",
+    "following_url": "https://api.github.com/users/nativedone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nativedone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nativedone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nativedone/subscriptions",
+    "organizations_url": "https://api.github.com/users/nativedone/orgs",
+    "repos_url": "https://api.github.com/users/nativedone/repos",
+    "events_url": "https://api.github.com/users/nativedone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nativedone/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2017-02-02T16:56:22Z",
+  "updated_at": "2017-02-02T18:40:53Z",
+  "closed_at": "2017-02-02T18:40:53Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8917",
+    "html_url": "https://github.com/facebook/react/pull/8917",
+    "diff_url": "https://github.com/facebook/react/pull/8917.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8917.patch"
+  },
+  "body": "Hi guys,\r\n\r\nTo have success using `cloneElement()`  I have to pass new props in a name-value pair fashion, rather than using [props]:  \r\n\r\n`React.cloneElement(\r\n  element,\r\n  {propA: valueA, propB: valueB},\r\n  [...children]\r\n)\r\n`\r\n\r\nSo, If it's the correct way I think we can be more explicit on that instruction.  Let me know if any change is needed.\r\n\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

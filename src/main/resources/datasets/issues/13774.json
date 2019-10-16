@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13774",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13774/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13774/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13774/events",
+  "html_url": "https://github.com/facebook/react/pull/13774",
+  "id": 366908815,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjIwNDY5NTA4",
+  "number": 13774,
+  "title": "Restart from root if promise pings before end of render phase",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2018-10-04T18:11:43Z",
+  "updated_at": "2018-10-05T06:26:52Z",
+  "closed_at": "2018-10-04T19:55:53Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13774",
+    "html_url": "https://github.com/facebook/react/pull/13774",
+    "diff_url": "https://github.com/facebook/react/pull/13774.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13774.patch"
+  },
+  "body": "Possible alternative to https://github.com/facebook/react/pull/13767\r\n\r\nSee my comment here: https://github.com/facebook/react/pull/13767#issuecomment-427094770:\r\n\r\n> When a ping happens (\"ping\" means the promise resolves, so we should attempt to render the placeholder again), we mark the fiber as \"dirty\" by increasing the priority of its `expirationTime` field, and traverse back through to the root. We also set the pending priority on all the ancestors (using `childExpirationTime`).  This part is the same as a typical update.\r\n> \r\n> Unlike a typical update, we don't add anything to the update queue. We used to, but both for performance and modeling purposes, we moved away from that model. The idea is that a ping doesn't have a payload; it doesn't represent or contain any data, it's only a signal to re-render. In that way, it's kind of like `forceUpdate`: it means some other mutable source, in this case a cache, has been updated.\r\n> \r\n> I'm not ready to give up on this model, but I don't think we fully thought through the implications of concurrent pings and updates. Some cases to consider:\r\n> \r\n>  - What if a promise resolves before the end of the current render phase, while React has yielded?\r\n>  - What if a thenable resolves synchronously inside the current render phase? (An edge case, but still important. Even just for modeling purposes.)\r\n>  - What if a thenable resolves synchronously when calling `then`? (We should special case this one.)\r\n>  - What if a placeholder is pinged, but subsequently the placeholder re-renders at a higher priority? Does the priority of the ping get dropped when we complete the placeholder fiber at the higher priority? For a typical update, the lower priority would not get dropped because we read the remaining priority from the update queue, but we don't have an update queue in this case.\r\n>  - What if a placeholder times out, and the original update that suspended the render was part of the primary children, which are then unmounted? Is it possible this priority level gets lost, maybe if combined with the previous case? (If so, storing the two sets of children separately as in https://github.com/facebook/react/pull/13120 would fix it)\r\n\r\nWill add more tests",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

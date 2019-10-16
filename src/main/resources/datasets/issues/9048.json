@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9048",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9048/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9048/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9048/events",
+  "html_url": "https://github.com/facebook/react/pull/9048",
+  "id": 209536030,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTA3NDY2MzY4",
+  "number": 9048,
+  "title": "docs/docs/reference-react-component: Document throwing errors",
+  "user": {
+    "login": "wking",
+    "id": 209920,
+    "node_id": "MDQ6VXNlcjIwOTkyMA==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/209920?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/wking",
+    "html_url": "https://github.com/wking",
+    "followers_url": "https://api.github.com/users/wking/followers",
+    "following_url": "https://api.github.com/users/wking/following{/other_user}",
+    "gists_url": "https://api.github.com/users/wking/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/wking/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/wking/subscriptions",
+    "organizations_url": "https://api.github.com/users/wking/orgs",
+    "repos_url": "https://api.github.com/users/wking/repos",
+    "events_url": "https://api.github.com/users/wking/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/wking/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2017-02-22T18:11:54Z",
+  "updated_at": "2017-04-21T16:52:06Z",
+  "closed_at": "2017-04-21T15:00:46Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9048",
+    "html_url": "https://github.com/facebook/react/pull/9048",
+    "diff_url": "https://github.com/facebook/react/pull/9048.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9048.patch"
+  },
+  "body": "So folks know not to intentionally throw errors from these methods, and understand that if/when that happens anyway the resulting error may not be very helpful.\n\nIt [sounds][1] [like][2] React will do a better job of providing helpful errors in the next release.  I haven't been able to track down the commit/branch where that is happening, so I can't provide more specific advice on how to catch errors in components (although there [will be a way to do that][2]).\n\nSpun off from #9037.\n\n[1]: https://github.com/facebook/react/issues/6895#issuecomment-281405036\n[2]: https://github.com/facebook/react/issues/9037#issuecomment-281558149",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6011",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6011/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6011/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6011/events",
+  "html_url": "https://github.com/facebook/react/pull/6011",
+  "id": 132593463,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTg4NDEzMTU=",
+  "number": 6011,
+  "title": "[WIP] Move child recursion to ReactReconciler",
+  "user": {
+    "login": "mridgway",
+    "id": 191142,
+    "node_id": "MDQ6VXNlcjE5MTE0Mg==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/191142?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mridgway",
+    "html_url": "https://github.com/mridgway",
+    "followers_url": "https://api.github.com/users/mridgway/followers",
+    "following_url": "https://api.github.com/users/mridgway/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mridgway/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mridgway/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mridgway/subscriptions",
+    "organizations_url": "https://api.github.com/users/mridgway/orgs",
+    "repos_url": "https://api.github.com/users/mridgway/repos",
+    "events_url": "https://api.github.com/users/mridgway/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mridgway/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2016-02-10T02:41:34Z",
+  "updated_at": "2016-03-03T21:27:14Z",
+  "closed_at": "2016-03-03T21:10:04Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6011",
+    "html_url": "https://github.com/facebook/react/pull/6011",
+    "diff_url": "https://github.com/facebook/react/pull/6011.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6011.patch"
+  },
+  "body": "This is a PR for ideas that @sebmarkbage recommended in  https://github.com/facebook/react/issues/4012. \n\nThe idea is to centralize the recursion logic so that React is more pluggable for separate renderers and to support streaming in the future. I am hoisting all of the `ReactReconciler` calls out of `React*Component`s and implementing the recursion inside of `ReactReconciler.mountComponent` and other methods. This will affect the `React*Component` interface and implementation due to the need for post-recursion logic for things like event queueing.\n\nFrom my analysis these are the spots that need to be addressed and the progress of this PR with respect to each:\n## ReactCompositeComponent\n### mountComponent\n\nMount queue: componentDidMount (post-recursion)\n- [x] hoist ReactReconciler calls\n- [x] Add postMount interface to handle post-recursion\n### receiveComponent\n\nMount queue: componentDidUpdate (post-recursion)\n- [ ] hoist ReactReconciler calls\n- [ ] Add postUpdate interface to handle post-recursion\n### unmountComponent\n- [ ] hoist ReactReconciler calls\n## ReactDOMComponent\n### mountComponent\n\nMount queue: trapBubbledEventsLocal (pre-recursion), putListener (pre-recursion), focusDOMComponent (post-recursion)\n- [x] hoist ReactReconciler calls\n- [x] Add postMount interface to handle post-recursion\n### receiveComponent\n\nMount queue: putListener (pre-recursion), postUpdateSelectWrapper (post-recursion)\n- [ ] hoist ReactReconciler calls\n- [ ] Add postUpdate interface to handle post-recursion\n### unmountComponent\n- [ ] hoist ReactReconciler calls\n## ReactReconciler\n\nAlso, `ReactDOMComponent` uses `DomLazyTree` objects that the reconciler would need to recognize. In order to keep `ReactReconciler` decoupled, there will need to be a generic interface for trees and a plugin for handling `DomLazyTree` specifically.\n### mountComponent\n- [x] implement recursion\n- [x] attachRefs queue (pre: **must** be before other queued methods)\n- [x] implement generic `LazyTree` injection\n- [x] call `postMount` on `React*Component` for implementing post-recursion event queueing\n### receiveComponent\n- [ ] implement recursion\n- [ ] call `postUpdate` on `React*Component` for implementing post-recursion event queueing\n### unmountComponent\n- [ ] implement recursion\n- [ ] call `postUnmount` for implementing post-recursion event removal\n## Testing\n- [ ] Fix tests that are affected by internal API changes\n\nIt would be good to get thoughts on whether this is going down the right path or if there's duplicate/conflicting work that is currently underway. So far I have only implemented the `mountComponent` path and tested against the example applications, but will continue the work for updates and unmounts as well.\n",
+  "closed_by": {
+    "login": "mridgway",
+    "id": 191142,
+    "node_id": "MDQ6VXNlcjE5MTE0Mg==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/191142?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mridgway",
+    "html_url": "https://github.com/mridgway",
+    "followers_url": "https://api.github.com/users/mridgway/followers",
+    "following_url": "https://api.github.com/users/mridgway/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mridgway/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mridgway/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mridgway/subscriptions",
+    "organizations_url": "https://api.github.com/users/mridgway/orgs",
+    "repos_url": "https://api.github.com/users/mridgway/repos",
+    "events_url": "https://api.github.com/users/mridgway/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mridgway/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

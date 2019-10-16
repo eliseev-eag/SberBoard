@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/17004",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/17004/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/17004/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/17004/events",
+  "html_url": "https://github.com/facebook/react/pull/17004",
+  "id": 502176387,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzI0MzA4MTQ1",
+  "number": 17004,
+  "title": "[Selective Hydration] ReactDOM.unstable_scheduleHydration(domNode)",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-10-03T16:43:17Z",
+  "updated_at": "2019-10-03T21:49:30Z",
+  "closed_at": "2019-10-03T21:48:29Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/17004",
+    "html_url": "https://github.com/facebook/react/pull/17004",
+    "diff_url": "https://github.com/facebook/react/pull/17004.diff",
+    "patch_url": "https://github.com/facebook/react/pull/17004.patch"
+  },
+  "body": "Adds an API to explicitly prioritize hydrating the path to a particular  DOM node without relying on events to do it.\r\n\r\nThe API uses the current scheduler priority to schedule it. For the same priority, the last one wins. This allows a similar effect as continuous events. This is useful for example to hydrate based on scroll position, or prioritize components that will upgrade to client-rendered-only content.\r\n\r\nI considered having an API that explicitly overrides the current target(s). However that makes it difficult to coordinate across components in an app.\r\n\r\nThis just hydrates one target at a time but if it is blocked on I/O we could consider increasing priority of later targets too.",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

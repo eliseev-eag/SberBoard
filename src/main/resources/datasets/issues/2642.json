@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2642",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2642/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2642/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2642/events",
+  "html_url": "https://github.com/facebook/react/issues/2642",
+  "id": 50654808,
+  "node_id": "MDU6SXNzdWU1MDY1NDgwOA==",
+  "number": 2642,
+  "title": "Make setState return a promise",
+  "user": {
+    "login": "marosurbanec",
+    "id": 5611622,
+    "node_id": "MDQ6VXNlcjU2MTE2MjI=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/5611622?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/marosurbanec",
+    "html_url": "https://github.com/marosurbanec",
+    "followers_url": "https://api.github.com/users/marosurbanec/followers",
+    "following_url": "https://api.github.com/users/marosurbanec/following{/other_user}",
+    "gists_url": "https://api.github.com/users/marosurbanec/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/marosurbanec/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/marosurbanec/subscriptions",
+    "organizations_url": "https://api.github.com/users/marosurbanec/orgs",
+    "repos_url": "https://api.github.com/users/marosurbanec/repos",
+    "events_url": "https://api.github.com/users/marosurbanec/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/marosurbanec/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 139653724,
+      "node_id": "MDU6TGFiZWwxMzk2NTM3MjQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Core%20Utilities",
+      "name": "Component: Core Utilities",
+      "color": "c5def5",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": true,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 49,
+  "created_at": "2014-12-02T14:12:11Z",
+  "updated_at": "2017-12-15T23:17:53Z",
+  "closed_at": "2017-06-16T21:48:00Z",
+  "author_association": "NONE",
+  "body": "_setState()_ currently accepts an optional second argument for callback and returns _undefined_.\n\nThis results in a callback hell for a very stateful component. Having it return a promise would make it much more managable.\n\nIt is somewhat of a convention in JS world to have API symmetric - if a method accepts a callback, it returns a promise. if it returns a promise, it can accept a callback.\n\nIn my case, I have an editable table. If user presses enter, he is moved to the next row (call setState). If the user is on a last row, I'd like to create a new row (call setState) and focus on this new row (call setState). Currently the only way is to achieve this is to have a nested callback hell.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

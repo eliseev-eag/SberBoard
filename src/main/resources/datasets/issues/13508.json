@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13508",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13508/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13508/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13508/events",
+  "html_url": "https://github.com/facebook/react/issues/13508",
+  "id": 355198151,
+  "node_id": "MDU6SXNzdWUzNTUxOTgxNTE=",
+  "number": 13508,
+  "title": "Relax ToString consistency guarantees",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-08-29T14:50:15Z",
+  "updated_at": "2018-08-29T15:08:16Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "body": "We recently chatted about https://github.com/facebook/react/pull/13367 and related work (e.g. https://github.com/facebook/react/pull/13394) with @sebmarkbage, and he raised a good point.\r\n\r\nIt seems like overall treating them consistently is adding significant overhead in the implementation readability. And there’s undoubtedly runtime overhead to it too. There are two separate issues here:\r\n\r\n* **warning** for invalid values\r\n* ensuring that the output for invalid values is **consistent** (e.g. functions are always skipped)\r\n\r\nThe conclusion we came to is that we should keep **warning** for bad values, but **as long as we warn, consistency is not necessary**. It's fine if we sometimes stringify a function, and sometimes skip it, as long as we always warn for those cases\r\n\r\n**Our guiding principle for invalid inputs should be that we handle them with the least amount of overhead** (both at runtime, and in terms of code size), not that they’re always handled the same way.\r\n\r\nOne exception to this is probably Symbols because they throw when stringified. So it seems like skipping them is actually desirable — unless we're okay with errors.",
+  "closed_by": null
+}

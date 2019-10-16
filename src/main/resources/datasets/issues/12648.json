@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12648",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12648/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12648/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12648/events",
+  "html_url": "https://github.com/facebook/react/pull/12648",
+  "id": 315962951,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTgyODQwNDc3",
+  "number": 12648,
+  "title": "Remove the 'alwaysUseRequestIdleCallbackPolyfill' feature flag",
+  "user": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 15,
+  "created_at": "2018-04-19T17:04:07Z",
+  "updated_at": "2018-04-23T22:25:46Z",
+  "closed_at": "2018-04-23T22:25:46Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12648",
+    "html_url": "https://github.com/facebook/react/pull/12648",
+    "diff_url": "https://github.com/facebook/react/pull/12648.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12648.patch"
+  },
+  "body": "**Edit:**\r\n\r\nWhen we ran the tests, it became clear that tests were relying on the old version using rIC and the way that either our tests or Jest was polyfilling rIC.\r\nIn the new version of this scheduler, we rely on browser APIs which either aren't fully mocked or aren't mocked at all in the tests by default, so the tests failed.\r\nThis PR now updates all relevant tests to mock out the browser APIs used by ReactScheduler, and also adds an initial test for ReactScheduler to verify it works in the Jest test environment with the mocked browser APIs.\r\nA follow-up PR will pull the mocking logic into a reusable helper\r\n\r\n---\r\n\r\n**what is the change?:**\r\nRemoves the feature flag 'alwaysUseRequestIdleCallbackPolyfill', such\r\nthat we **always** use the polyfill for requestIdleCallback.\r\n\r\n**why make this change?:**\r\nWe have been testing this feature flag at 100% for some time internally,\r\nand determined it works better for React than the native implementation.\r\nLooks like RN was overriding the flag to use the native when possible,\r\nbut since no RN products are using 'async' mode it should be safe to\r\nswitch this flag over for RN as well.\r\n\r\n**test plan:**\r\nWe have already been testing this internally for some time.\r\n\r\n**issue:**\r\ninternal task t28128480",
+  "closed_by": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

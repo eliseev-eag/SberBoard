@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3683",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3683/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3683/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3683/events",
+  "html_url": "https://github.com/facebook/react/pull/3683",
+  "id": 69163054,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzM1NTYwNDc=",
+  "number": 3683,
+  "title": "Docs: Update code comment to match correct property name",
+  "user": {
+    "login": "frostney",
+    "id": 554648,
+    "node_id": "MDQ6VXNlcjU1NDY0OA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/554648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/frostney",
+    "html_url": "https://github.com/frostney",
+    "followers_url": "https://api.github.com/users/frostney/followers",
+    "following_url": "https://api.github.com/users/frostney/following{/other_user}",
+    "gists_url": "https://api.github.com/users/frostney/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/frostney/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/frostney/subscriptions",
+    "organizations_url": "https://api.github.com/users/frostney/orgs",
+    "repos_url": "https://api.github.com/users/frostney/repos",
+    "events_url": "https://api.github.com/users/frostney/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/frostney/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-04-17T15:39:44Z",
+  "updated_at": "2015-04-17T18:12:05Z",
+  "closed_at": "2015-04-17T15:54:14Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3683",
+    "html_url": "https://github.com/facebook/react/pull/3683",
+    "diff_url": "https://github.com/facebook/react/pull/3683.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3683.patch"
+  },
+  "body": "In the tip \"Props in getInitialState is an Anti Pattern\", the code comment refers to a property called `initialX`, but the actual property name is `initialCount`. This patch corrects the code comment.\n",
+  "closed_by": {
+    "login": "frostney",
+    "id": 554648,
+    "node_id": "MDQ6VXNlcjU1NDY0OA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/554648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/frostney",
+    "html_url": "https://github.com/frostney",
+    "followers_url": "https://api.github.com/users/frostney/followers",
+    "following_url": "https://api.github.com/users/frostney/following{/other_user}",
+    "gists_url": "https://api.github.com/users/frostney/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/frostney/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/frostney/subscriptions",
+    "organizations_url": "https://api.github.com/users/frostney/orgs",
+    "repos_url": "https://api.github.com/users/frostney/repos",
+    "events_url": "https://api.github.com/users/frostney/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/frostney/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

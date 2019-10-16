@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10457",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10457/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10457/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10457/events",
+  "html_url": "https://github.com/facebook/react/pull/10457",
+  "id": 250112894,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTM1NjU2NjEy",
+  "number": 10457,
+  "title": "Added \"Advanced Guides\" page about cross-origin Errros",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-08-14T18:25:13Z",
+  "updated_at": "2017-08-14T20:43:27Z",
+  "closed_at": "2017-08-14T20:43:25Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10457",
+    "html_url": "https://github.com/facebook/react/pull/10457",
+    "diff_url": "https://github.com/facebook/react/pull/10457.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10457.patch"
+  },
+  "body": "Follow-up for #10447; resolves #10441.\r\n\r\n### Follow-up items\r\n\r\n* Cherry-pick this commit into the `15-stable` branch to update the current docs site.\r\n* Setup the `fb.me/react-crossorigin-error` redirect to [facebook.github.io/react/docs/cross-origin-errors.html](https://facebook.github.io/react/docs/cross-origin-errors.html).\r\n\r\n### Preview in the new docs site\r\n![screen shot 2017-08-14 at 11 23 13 am](https://user-images.githubusercontent.com/29597/29285383-31729fe2-80e3-11e7-9bd3-997e26806728.png)\r\n",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/17008",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/17008/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/17008/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/17008/events",
+  "html_url": "https://github.com/facebook/react/issues/17008",
+  "id": 502310985,
+  "node_id": "MDU6SXNzdWU1MDIzMTA5ODU=",
+  "number": 17008,
+  "title": "[eslint-plugin-react-hooks] Using typeof adds variable to list of necessary dependencies",
+  "user": {
+    "login": "wbobeirne",
+    "id": 649992,
+    "node_id": "MDQ6VXNlcjY0OTk5Mg==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/649992?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/wbobeirne",
+    "html_url": "https://github.com/wbobeirne",
+    "followers_url": "https://api.github.com/users/wbobeirne/followers",
+    "following_url": "https://api.github.com/users/wbobeirne/following{/other_user}",
+    "gists_url": "https://api.github.com/users/wbobeirne/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/wbobeirne/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/wbobeirne/subscriptions",
+    "organizations_url": "https://api.github.com/users/wbobeirne/orgs",
+    "repos_url": "https://api.github.com/users/wbobeirne/repos",
+    "events_url": "https://api.github.com/users/wbobeirne/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/wbobeirne/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-10-03T21:35:29Z",
+  "updated_at": "2019-10-03T21:35:29Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n\r\nBug\r\n\r\n**What is the current behavior?**\r\n\r\nIf you use Typescript's `typeof` keyword inside of a hook that `exhaustive-deps` watches for, it'll add the variable you `typeof`'d to the list of expected dependencies. However, there's no runtime effect to typeof, it's just for typing. Here's a test case where it'll warn you:\r\n\r\n```ts\r\nconst [state, setState] = useState(true);\r\n\r\nconst callback = useCallback((newState: typeof state) => {\r\n  setState(newState);\r\n}, []);\r\n```\r\n\r\nresults in\r\n\r\n> React Hook useCallback has a missing dependency: 'state'. Either include it or remove the dependency array.\r\n\r\n**What is the expected behavior?**\r\n\r\n`state` should not be an expected dependency\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\n`eslint-plugin-react-hooks@1.7.0`",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5418",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5418/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5418/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5418/events",
+  "html_url": "https://github.com/facebook/react/pull/5418",
+  "id": 115711611,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTAwNTQxMTA=",
+  "number": 5418,
+  "title": "Add warning for putting React prop types inside oneOf.",
+  "user": {
+    "login": "RaasAhsan",
+    "id": 2617549,
+    "node_id": "MDQ6VXNlcjI2MTc1NDk=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/2617549?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/RaasAhsan",
+    "html_url": "https://github.com/RaasAhsan",
+    "followers_url": "https://api.github.com/users/RaasAhsan/followers",
+    "following_url": "https://api.github.com/users/RaasAhsan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/RaasAhsan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/RaasAhsan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/RaasAhsan/subscriptions",
+    "organizations_url": "https://api.github.com/users/RaasAhsan/orgs",
+    "repos_url": "https://api.github.com/users/RaasAhsan/repos",
+    "events_url": "https://api.github.com/users/RaasAhsan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/RaasAhsan/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 18,
+  "created_at": "2015-11-08T06:18:13Z",
+  "updated_at": "2016-04-01T02:17:05Z",
+  "closed_at": "2016-04-01T02:13:31Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5418",
+    "html_url": "https://github.com/facebook/react/pull/5418",
+    "diff_url": "https://github.com/facebook/react/pull/5418.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5418.patch"
+  },
+  "body": "First PR!\n\nTook me a few minutes to figure out I needed `oneOfType` instead. Is this worthy? My reasoning for this was that there isn't much to differentiate between `oneOf` and `oneOfType`, if one or the other wasn't known, as opposed to `number` and `string`.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

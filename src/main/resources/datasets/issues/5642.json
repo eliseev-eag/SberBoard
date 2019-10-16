@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5642",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5642/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5642/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5642/events",
+  "html_url": "https://github.com/facebook/react/pull/5642",
+  "id": 121576697,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTMzMTY0Mjc=",
+  "number": 5642,
+  "title": "Make StatelessComponent work with ReactTestUtils",
+  "user": {
+    "login": "bouk",
+    "id": 97820,
+    "node_id": "MDQ6VXNlcjk3ODIw",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/97820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bouk",
+    "html_url": "https://github.com/bouk",
+    "followers_url": "https://api.github.com/users/bouk/followers",
+    "following_url": "https://api.github.com/users/bouk/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bouk/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bouk/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bouk/subscriptions",
+    "organizations_url": "https://api.github.com/users/bouk/orgs",
+    "repos_url": "https://api.github.com/users/bouk/repos",
+    "events_url": "https://api.github.com/users/bouk/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bouk/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-12-10T21:02:54Z",
+  "updated_at": "2015-12-10T23:46:30Z",
+  "closed_at": "2015-12-10T23:36:13Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5642",
+    "html_url": "https://github.com/facebook/react/pull/5642",
+    "diff_url": "https://github.com/facebook/react/pull/5642.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5642.patch"
+  },
+  "body": "ReactTestUtils doesn't recognize StatelessComponent as a CompositeComponent right now and doesn't add it to the list of components found by findAllInRenderedTree.\n\nThis makes ReactTestUtils recognize StatelessComponents as composite components and makes findAllInRenderedTree push the instance correctly.\n\nFixes https://github.com/facebook/react/issues/5555\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7780",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7780/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7780/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7780/events",
+  "html_url": "https://github.com/facebook/react/pull/7780",
+  "id": 178176818,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODYwNTM4ODI=",
+  "number": 7780,
+  "title": "[babel-plugin] Avoid circular dependency of 'object-assign' on itself",
+  "user": {
+    "login": "aleclarson",
+    "id": 1925840,
+    "node_id": "MDQ6VXNlcjE5MjU4NDA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1925840?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aleclarson",
+    "html_url": "https://github.com/aleclarson",
+    "followers_url": "https://api.github.com/users/aleclarson/followers",
+    "following_url": "https://api.github.com/users/aleclarson/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aleclarson/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aleclarson/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aleclarson/subscriptions",
+    "organizations_url": "https://api.github.com/users/aleclarson/orgs",
+    "repos_url": "https://api.github.com/users/aleclarson/repos",
+    "events_url": "https://api.github.com/users/aleclarson/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aleclarson/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2016-09-20T20:51:12Z",
+  "updated_at": "2016-09-21T00:31:40Z",
+  "closed_at": "2016-09-21T00:31:40Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7780",
+    "html_url": "https://github.com/facebook/react/pull/7780",
+    "diff_url": "https://github.com/facebook/react/pull/7780.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7780.patch"
+  },
+  "body": "The `transform-object-assign-require.js` plugin replaces usage of Object.assign with `require('object-assign')`.\nBut it needs to make sure the current file is not `object-assign` itself.\nOtherwise a circular dependency will be introduced.\n",
+  "closed_by": {
+    "login": "aleclarson",
+    "id": 1925840,
+    "node_id": "MDQ6VXNlcjE5MjU4NDA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1925840?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aleclarson",
+    "html_url": "https://github.com/aleclarson",
+    "followers_url": "https://api.github.com/users/aleclarson/followers",
+    "following_url": "https://api.github.com/users/aleclarson/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aleclarson/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aleclarson/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aleclarson/subscriptions",
+    "organizations_url": "https://api.github.com/users/aleclarson/orgs",
+    "repos_url": "https://api.github.com/users/aleclarson/repos",
+    "events_url": "https://api.github.com/users/aleclarson/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aleclarson/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

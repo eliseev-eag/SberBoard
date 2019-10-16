@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2065",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2065/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2065/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2065/events",
+  "html_url": "https://github.com/facebook/react/pull/2065",
+  "id": 40555870,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTk5NTg5MTE=",
+  "number": 2065,
+  "title": "Warn when passing invalid containers to render and unmountComponentAtNode",
+  "user": {
+    "login": "crm416",
+    "id": 1309177,
+    "node_id": "MDQ6VXNlcjEzMDkxNzc=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1309177?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/crm416",
+    "html_url": "https://github.com/crm416",
+    "followers_url": "https://api.github.com/users/crm416/followers",
+    "following_url": "https://api.github.com/users/crm416/following{/other_user}",
+    "gists_url": "https://api.github.com/users/crm416/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/crm416/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/crm416/subscriptions",
+    "organizations_url": "https://api.github.com/users/crm416/orgs",
+    "repos_url": "https://api.github.com/users/crm416/repos",
+    "events_url": "https://api.github.com/users/crm416/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/crm416/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2014-08-19T03:51:33Z",
+  "updated_at": "2015-09-04T00:02:10Z",
+  "closed_at": "2015-09-04T00:02:10Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/2065",
+    "html_url": "https://github.com/facebook/react/pull/2065",
+    "diff_url": "https://github.com/facebook/react/pull/2065.diff",
+    "patch_url": "https://github.com/facebook/react/pull/2065.patch"
+  },
+  "body": "Resolves #1858 and #2045.\n\nThe `hasNonRootReactChild` method checks if the container has a React-rendered child (i.e., is non-empty) with a non-root ID, which is used as the criteria for warning in both `renderComponent` and `unmountComponentAtNode`. Note that there's also a specific warning for when you pass in a root node, rather than a container.\n\nFor example, if your markup is:\n\n``` html\n<div id=\"root\" data-reactid=\".0\">\n  <div id=\"non-root\" data-reactid=\".0.0\">\n    <div data-reactid=\".0.0.0\"></div>\n  </div>\n</div>\n```\n\nThen you see the following warnings (prepended with method name, `warning`, etc.):\n\n``` js\nvar nonRoot = document.getElementById('non-root');\nReact.unmountComponentAtNode(nonRoot);\n>>> \"The node you're attempting to unmount is not a valid React root node, and thus cannot be unmounted.\"\n```\n\nOr:\n\n``` js\nvar root = document.getElementById('root');\nReact.unmountComponentAtNode(root);\n>>> \"The node you're attempting to unmount... You may have passed in a React root node as argument, rather than its container.\"\n```\n\nOr:\n\n``` js\nvar root = document.getElementById('root');\nReact.renderComponent(<div />, root);\n>>> \"Replacing React-rendered children with a new root component.\"\n```\n\nThe naming here got a little verbose, so I'm open to suggestions. I think the specific warning for passing in a root node as a container is also worth discussing, but I left it in for now as it's easy to remove.\n",
+  "closed_by": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

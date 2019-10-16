@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14357",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14357/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14357/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14357/events",
+  "html_url": "https://github.com/facebook/react/issues/14357",
+  "id": 385816884,
+  "node_id": "MDU6SXNzdWUzODU4MTY4ODQ=",
+  "number": 14357,
+  "title": "findDOMNode deprecation",
+  "user": {
+    "login": "eps1lon",
+    "id": 12292047,
+    "node_id": "MDQ6VXNlcjEyMjkyMDQ3",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/12292047?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/eps1lon",
+    "html_url": "https://github.com/eps1lon",
+    "followers_url": "https://api.github.com/users/eps1lon/followers",
+    "following_url": "https://api.github.com/users/eps1lon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/eps1lon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/eps1lon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/eps1lon/subscriptions",
+    "organizations_url": "https://api.github.com/users/eps1lon/orgs",
+    "repos_url": "https://api.github.com/users/eps1lon/repos",
+    "events_url": "https://api.github.com/users/eps1lon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/eps1lon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2018-11-29T16:24:15Z",
+  "updated_at": "2019-02-07T17:57:31Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "## Timeline\r\n1. <= 16.3: `findDOMNode` is *discouraged* but accepted for certain use cases\r\n2. 16.3 (2018-03-28): `forwardRef` is introduced:\r\n  It can be used in HOCs to avoid using `findDOMNode` on the enhanced component\r\n3. 16.6 (2018-10-23): `findDOMNode` is deprecated in `React.StrictMode`\r\n4. 16.7.alpha (2018-10-24): `React.Concurrent` mode is released:\r\n  This mode *extends* `React.StrictMode` in a way that `findDOMNode` is deprecated in that mode too.\r\n5. 16.8 (Q2 2019): stable `React.Concurrent` mode\r\n  \r\n## findDOMNode use cases\r\nIf you have more use cases please let me know. I only started with some examples from `mui-org/material-ui`.\r\n### with a planned alternative\r\n- focus handling (React Fire, \"exploratory phase\") \r\n- passive event listeners ([facebook/react#6436]). \"Passive events will likely be a part of [React Fire].\" - [facebook/react#13525]\r\n\r\n## State of `forwardRef`\r\n`react` has 3.4M downloads/week.\r\n\r\n### `hoist-non-react-statics` (3.9M downloads/week; not clear what percentage is 2.x)\r\nA utility mainly used in HOCs and [encouraged to use in the official react docs](https://reactjs.org/docs/higher-order-components.html#static-methods-must-be-copied-over). However everyone stuck at `2.x` will likely encounter issues with `forwardRef` since that version\r\ndoes not handle any `react@^16.3` features. ^3.2.0 should have no issues apart from some minor\r\nissues with propTypes hoisting from `forwardRef` to `forwardRef`. The latest stable from zeit/next still uses that outdated version. However the latest canary for 7.0.3 does not.\r\n\r\n### react-docgen (400k downloads/week)\r\nNot recognized as a valid component definition. PR open at [reactjs/react-docgen#311].\r\n\r\n### react-redux (1.4M downloads/week)\r\n`connect` does properly forward their refs in the beta release of 6.x. No timeline for stable release given\r\nhowever 3 betas have already been released so it's probably soon.\r\n\r\n### react-router (1.4M downloads/week)\r\n`withRouter` is planned to forward refs ([ReactTraining/react-router#6056#issuecomment-435524678]).\r\nHowever no comment about the other components and no major release candidate is published.\r\n\r\n### display name\r\n`React.forwardRef` components are recognized by `react-devtools`. However when wrapped\r\nin a HOC it's very likely that the display name is lost. See [facebook/react#14319]\r\n\r\n### The issue\r\n**Assumptions:**\r\n- you are not in control of your whole component tree i.e. you use components from 3rd party libraries\r\n- you want to use `React.ConcurrentMode`\r\n- Usable includes production and development. It specifically means for development that deprecation warnings in a component\r\n  make that component not usable in development mode because of all the *noise* it adds in those cases.\r\n  *Noise* because it's not actionable if that component is from a 3rd party library.\r\n\r\nIf none of those applies to you then you probably don't have an issue with `findDOMNode` deprecation.\r\n\r\nThe mode of a partial tree can only be made more restrictive but not loosened up. If\r\nyou wrap your tree in `React.StrictMode` and use a component from a 3rd party library\r\nthat 3rd party library has to be `React.StrictMode` compliant too. \r\n\r\nThis means that you can't use `React.StrictMode` effectiveley. This might be ok since it's for development only anyway and has no implications for production. However Concurrent mode can have actual implications for production.  Since it is new and the community wants to use new things libraries have to make sure that they are strict mode compliant too.\r\n\r\nIn addition between the relase of an alternative in the form of `React.forwardRef` and the deprecation only 7 months have passed. One could argue that this is plenty of time but (at least from my perspective) the work on migrating from `findDOMNode` to refs and `forwardRef` was postponed because `findDOMNode` was not deprecated yet.  However the actual deprecation happened one day before the release of `unstable_ConcurrentMode` virtually giving no time to migrate. ~We'll have to see when a stable `16.7` release will happen but assuming this happens today only a month has passed between deprecation and *virtual* removal.~ [React 16.x Roadmap] was release pointing towards Q2 2019 as a release date of stable `React.Concurrent` mode. This relaxes pressure for library maintainers quite a bit IMO.\r\n\r\n### Conclusion\r\nRefs are not a viable upgrade path to replace `findDOMNode` yet. \r\nUntil refs are usable without headaches from forwarding refs `findDOMNode` should be undeprecated.\r\n\r\n## Releated\r\n- [forwarding Refs guide on official react docs](https://reactjs.org/docs/forwarding-refs.html)\r\n- [findDOMNode API documentation](https://reactjs.org/docs/react-dom.html#finddomnode) (includes arguments against usage)\r\n- [pull request that deprecated findDOMNode](https://github.com/facebook/react/pull/13841)\r\n\r\n[facebook/react#6436]: https://github.com/facebook/react/issues/6436\r\n[facebook/react#13525]: https://github.com/facebook/react/issues/13525\r\n[facebook/react#14319]: https://github.com/facebook/react/issues/14319\r\n[reactjs/react-docgen#311]: https://github.com/reactjs/react-docgen/pull/311\r\n[ReactTraining/react-router#6056#issuecomment-435524678]: https://github.com/ReactTraining/react-router/issues/6056#issuecomment-435524678\r\n[React 16.x Roadmap]: https://reactjs.org/blog/2018/11/27/react-16-roadmap.html",
+  "closed_by": null
+}

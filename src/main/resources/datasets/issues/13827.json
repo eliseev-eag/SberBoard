@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13827",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13827/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13827/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13827/events",
+  "html_url": "https://github.com/facebook/react/pull/13827",
+  "id": 369046522,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjIyMDc4NjY2",
+  "number": 13827,
+  "title": "move maxSigned31BitInt.js",
+  "user": {
+    "login": "SaeedMalikx",
+    "id": 25725772,
+    "node_id": "MDQ6VXNlcjI1NzI1Nzcy",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/25725772?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/SaeedMalikx",
+    "html_url": "https://github.com/SaeedMalikx",
+    "followers_url": "https://api.github.com/users/SaeedMalikx/followers",
+    "following_url": "https://api.github.com/users/SaeedMalikx/following{/other_user}",
+    "gists_url": "https://api.github.com/users/SaeedMalikx/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/SaeedMalikx/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/SaeedMalikx/subscriptions",
+    "organizations_url": "https://api.github.com/users/SaeedMalikx/orgs",
+    "repos_url": "https://api.github.com/users/SaeedMalikx/repos",
+    "events_url": "https://api.github.com/users/SaeedMalikx/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/SaeedMalikx/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-10-11T10:05:44Z",
+  "updated_at": "2018-10-11T10:48:01Z",
+  "closed_at": "2018-10-11T10:14:16Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13827",
+    "html_url": "https://github.com/facebook/react/pull/13827",
+    "diff_url": "https://github.com/facebook/react/pull/13827.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13827.patch"
+  },
+  "body": "moved maxSigned31BitInt.js to shared as it was being reused in the scheduler.js\r\n\r\nalso in ReactFiberExpirationTimer the exported const\r\n\r\n**Never** \r\n\r\ncould also be reworked but I don't know if there is a specific reason for it or not. It's exported to BeginWork and Scheduler. My bad if this is unnecessary but it was ruining the vibe cause all Files have React except maxSigned31BitInt.js. Also I'll probably close this so ya all can submit your own PR cause I'm sure this variable is used in a bunch of other places.\r\n",
+  "closed_by": {
+    "login": "SaeedMalikx",
+    "id": 25725772,
+    "node_id": "MDQ6VXNlcjI1NzI1Nzcy",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/25725772?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/SaeedMalikx",
+    "html_url": "https://github.com/SaeedMalikx",
+    "followers_url": "https://api.github.com/users/SaeedMalikx/followers",
+    "following_url": "https://api.github.com/users/SaeedMalikx/following{/other_user}",
+    "gists_url": "https://api.github.com/users/SaeedMalikx/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/SaeedMalikx/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/SaeedMalikx/subscriptions",
+    "organizations_url": "https://api.github.com/users/SaeedMalikx/orgs",
+    "repos_url": "https://api.github.com/users/SaeedMalikx/repos",
+    "events_url": "https://api.github.com/users/SaeedMalikx/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/SaeedMalikx/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

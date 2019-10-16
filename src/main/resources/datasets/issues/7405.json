@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7405",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7405/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7405/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7405/events",
+  "html_url": "https://github.com/facebook/react/pull/7405",
+  "id": 168969908,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Nzk3OTUxNjA=",
+  "number": 7405,
+  "title": "Update componentWillReceiveProps docs",
+  "user": {
+    "login": "hnordt",
+    "id": 1625399,
+    "node_id": "MDQ6VXNlcjE2MjUzOTk=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1625399?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/hnordt",
+    "html_url": "https://github.com/hnordt",
+    "followers_url": "https://api.github.com/users/hnordt/followers",
+    "following_url": "https://api.github.com/users/hnordt/following{/other_user}",
+    "gists_url": "https://api.github.com/users/hnordt/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/hnordt/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/hnordt/subscriptions",
+    "organizations_url": "https://api.github.com/users/hnordt/orgs",
+    "repos_url": "https://api.github.com/users/hnordt/repos",
+    "events_url": "https://api.github.com/users/hnordt/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/hnordt/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-08-02T19:37:08Z",
+  "updated_at": "2016-08-02T19:39:21Z",
+  "closed_at": "2016-08-02T19:39:03Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7405",
+    "html_url": "https://github.com/facebook/react/pull/7405",
+    "diff_url": "https://github.com/facebook/react/pull/7405.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7405.patch"
+  },
+  "body": "The previous example shows a incorrect use case for state. `likesIncreasing` is a good candidate to be calculated on `render()` or in a custom method instead being saved as state.\n",
+  "closed_by": {
+    "login": "hnordt",
+    "id": 1625399,
+    "node_id": "MDQ6VXNlcjE2MjUzOTk=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1625399?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/hnordt",
+    "html_url": "https://github.com/hnordt",
+    "followers_url": "https://api.github.com/users/hnordt/followers",
+    "following_url": "https://api.github.com/users/hnordt/following{/other_user}",
+    "gists_url": "https://api.github.com/users/hnordt/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/hnordt/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/hnordt/subscriptions",
+    "organizations_url": "https://api.github.com/users/hnordt/orgs",
+    "repos_url": "https://api.github.com/users/hnordt/repos",
+    "events_url": "https://api.github.com/users/hnordt/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/hnordt/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

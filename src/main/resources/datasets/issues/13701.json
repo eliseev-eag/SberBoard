@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13701",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13701/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13701/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13701/events",
+  "html_url": "https://github.com/facebook/react/issues/13701",
+  "id": 362182117,
+  "node_id": "MDU6SXNzdWUzNjIxODIxMTc=",
+  "number": 13701,
+  "title": "Upgrade Rollup",
+  "user": {
+    "login": "mmarkelov",
+    "id": 22371328,
+    "node_id": "MDQ6VXNlcjIyMzcxMzI4",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/22371328?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mmarkelov",
+    "html_url": "https://github.com/mmarkelov",
+    "followers_url": "https://api.github.com/users/mmarkelov/followers",
+    "following_url": "https://api.github.com/users/mmarkelov/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mmarkelov/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mmarkelov/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mmarkelov/subscriptions",
+    "organizations_url": "https://api.github.com/users/mmarkelov/orgs",
+    "repos_url": "https://api.github.com/users/mmarkelov/repos",
+    "events_url": "https://api.github.com/users/mmarkelov/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mmarkelov/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 71502270,
+      "node_id": "MDU6TGFiZWw3MTUwMjI3MA==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Build%20Infrastructure",
+      "name": "Component: Build Infrastructure",
+      "color": "f9d0c4",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2018-09-20T13:14:41Z",
+  "updated_at": "2018-11-01T19:05:31Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "Working on upgrading rollup - some test builds show decreasing in size of bundles.\r\nBut also there are some problems with it:\r\n\r\n1. The `legacy` option is now deprecated, so is it critical for building **react** ?\r\nI checked this [issue](https://github.com/rollup/rollup/issues/2135) - and it tells that it's totally fine.\r\n2. There are couples **circular dependency** warnings with `ReactFiberScheduler.js`  and also some **default' is not exported** warnings\r\n\r\nYou also can check my [branch](https://github.com/mmarkelov/react/tree/Upgrade_Rollup)\r\nMaybe you can help me with it\r\n\r\nSo what do you think about this? Does that make sense?\r\n",
+  "closed_by": null
+}

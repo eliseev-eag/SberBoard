@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/17028",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/17028/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/17028/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/17028/events",
+  "html_url": "https://github.com/facebook/react/issues/17028",
+  "id": 503306794,
+  "node_id": "MDU6SXNzdWU1MDMzMDY3OTQ=",
+  "number": 17028,
+  "title": "[Concurrent mode] Scheduled updates are lost when parent state update happens",
+  "user": {
+    "login": "albertogasparin",
+    "id": 84136,
+    "node_id": "MDQ6VXNlcjg0MTM2",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/84136?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/albertogasparin",
+    "html_url": "https://github.com/albertogasparin",
+    "followers_url": "https://api.github.com/users/albertogasparin/followers",
+    "following_url": "https://api.github.com/users/albertogasparin/following{/other_user}",
+    "gists_url": "https://api.github.com/users/albertogasparin/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/albertogasparin/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/albertogasparin/subscriptions",
+    "organizations_url": "https://api.github.com/users/albertogasparin/orgs",
+    "repos_url": "https://api.github.com/users/albertogasparin/repos",
+    "events_url": "https://api.github.com/users/albertogasparin/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/albertogasparin/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-10-07T08:35:21Z",
+  "updated_at": "2019-10-07T08:35:21Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nProbably a bug\r\n\r\n**What is the current behavior?**\r\nWhen in concurrent mode (render with `unstable_createRoot`), triggering a state change via an event (eg click) on the parent makes React loose the scheduled updates in the children. See:\r\n\r\nhttps://codesandbox.io/s/react-concurrent-state-bug-sp6zq\r\n\r\nNot an expert on concurrent mode here, was just playing around with it. Noticed that when some interactions happen the work (probably moved to the other tree) gets lost if the parent re-renders. You can see by clicking anywhere in the sandbox page vs clicking on the button that changes some local state. But that is just my educated guess on what might be happening.\r\n\r\n**What is the expected behavior?**\r\n\r\nState updates that are scheduled in children components should happen and the DOM value should reflect the state.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nreact: 16.10.2\r\nreact-dom: 16.10.2",
+  "closed_by": null
+}

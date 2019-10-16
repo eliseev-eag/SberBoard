@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9209",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9209/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9209/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9209/events",
+  "html_url": "https://github.com/facebook/react/pull/9209",
+  "id": 215058113,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTExMzE5OTEz",
+  "number": 9209,
+  "title": "Delete addons",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-03-17T16:38:36Z",
+  "updated_at": "2017-05-15T04:08:00Z",
+  "closed_at": "2017-03-20T16:15:02Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9209",
+    "html_url": "https://github.com/facebook/react/pull/9209",
+    "diff_url": "https://github.com/facebook/react/pull/9209.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9209.patch"
+  },
+  "body": "I’m deleting addons packages (and a few other abandoned packages) and “React with addons” UMD build on master. See https://github.com/facebook/react/issues/9207 for rationale and the plan.\r\n\r\nWe will be releasing 15.5 with some updates to addons, and some deprecations (as explained in https://github.com/facebook/react/issues/9207) but we'll be cutting it from a branch since it diverged too much already. I’d like to delete them in master so that we can fork a copy in www for old code that still depends on them.\r\n\r\nNote this means that **15.5 release must be done manually and not with the release manager**.\r\n\r\nTODO:\r\n\r\n- [x] Fix tests to not depend on ReactFragment.\r\n- [x] Fix warnings to not mention createFragment.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

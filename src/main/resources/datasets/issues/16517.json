@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16517",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16517/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16517/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16517/events",
+  "html_url": "https://github.com/facebook/react/pull/16517",
+  "id": 483116808,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzA5MjU4NjIz",
+  "number": 16517,
+  "title": " [react-events] Press responder simplification ",
+  "user": {
+    "login": "necolas",
+    "id": 239676,
+    "node_id": "MDQ6VXNlcjIzOTY3Ng==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/239676?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/necolas",
+    "html_url": "https://github.com/necolas",
+    "followers_url": "https://api.github.com/users/necolas/followers",
+    "following_url": "https://api.github.com/users/necolas/following{/other_user}",
+    "gists_url": "https://api.github.com/users/necolas/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/necolas/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/necolas/subscriptions",
+    "organizations_url": "https://api.github.com/users/necolas/orgs",
+    "repos_url": "https://api.github.com/users/necolas/repos",
+    "events_url": "https://api.github.com/users/necolas/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/necolas/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 1296748300,
+      "node_id": "MDU6TGFiZWwxMjk2NzQ4MzAw",
+      "url": "https://api.github.com/repos/facebook/react/labels/React%20Flare",
+      "name": "React Flare",
+      "color": "63f2ff",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-08-20T22:44:23Z",
+  "updated_at": "2019-08-22T22:53:46Z",
+  "closed_at": "2019-08-22T22:53:45Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16517",
+    "html_url": "https://github.com/facebook/react/pull/16517",
+    "diff_url": "https://github.com/facebook/react/pull/16517.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16517.patch"
+  },
+  "body": "NOTE: this stacks on top of #16479 which I'll merge once we've internally synced what is currently in master. Preview-review should only look at the second commit in this PR \"Press responder simplification\".\r\n\r\n* Remove 'pressRetentionOffset' so we don't have to perform layout measurements during moves.\r\n* Maintain the pressed state while a pointer is down and moving, even if it moves outside the target.\r\n* Determine whether to call 'onPress' based on whether the pointer was released over the target.\r\n\r\nThis aligns more closely with how the web natively deals with pointers and simplifies the responder.\r\nWe only need to call getBoundingClientRect for touch pointers. Further revisions could be made to\r\navoid target capturing for touch pointers with PointerEvents, which would leave the gBCR call only\r\nfor the fallback TouchEvents.\r\n\r\nDemo: https://codesandbox.io/s/latest-responder-build-rz96j30rp",
+  "closed_by": {
+    "login": "necolas",
+    "id": 239676,
+    "node_id": "MDQ6VXNlcjIzOTY3Ng==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/239676?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/necolas",
+    "html_url": "https://github.com/necolas",
+    "followers_url": "https://api.github.com/users/necolas/followers",
+    "following_url": "https://api.github.com/users/necolas/following{/other_user}",
+    "gists_url": "https://api.github.com/users/necolas/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/necolas/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/necolas/subscriptions",
+    "organizations_url": "https://api.github.com/users/necolas/orgs",
+    "repos_url": "https://api.github.com/users/necolas/repos",
+    "events_url": "https://api.github.com/users/necolas/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/necolas/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14748",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14748/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14748/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14748/events",
+  "html_url": "https://github.com/facebook/react/pull/14748",
+  "id": 406012666,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjQ5ODMxMTg4",
+  "number": 14748,
+  "title": "fix typo",
+  "user": {
+    "login": "ryota-murakami",
+    "id": 5501268,
+    "node_id": "MDQ6VXNlcjU1MDEyNjg=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/5501268?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ryota-murakami",
+    "html_url": "https://github.com/ryota-murakami",
+    "followers_url": "https://api.github.com/users/ryota-murakami/followers",
+    "following_url": "https://api.github.com/users/ryota-murakami/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ryota-murakami/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ryota-murakami/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ryota-murakami/subscriptions",
+    "organizations_url": "https://api.github.com/users/ryota-murakami/orgs",
+    "repos_url": "https://api.github.com/users/ryota-murakami/repos",
+    "events_url": "https://api.github.com/users/ryota-murakami/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ryota-murakami/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-02-02T19:13:10Z",
+  "updated_at": "2019-02-04T09:36:32Z",
+  "closed_at": "2019-02-04T09:36:32Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14748",
+    "html_url": "https://github.com/facebook/react/pull/14748",
+    "diff_url": "https://github.com/facebook/react/pull/14748.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14748.patch"
+  },
+  "body": "that's it.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

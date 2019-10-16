@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10599",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10599/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10599/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10599/events",
+  "html_url": "https://github.com/facebook/react/pull/10599",
+  "id": 254887324,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTM5MDU0Mjcz",
+  "number": 10599,
+  "title": "Changed value property in example code to defaultValue",
+  "user": {
+    "login": "therustydev",
+    "id": 16139945,
+    "node_id": "MDQ6VXNlcjE2MTM5OTQ1",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/16139945?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/therustydev",
+    "html_url": "https://github.com/therustydev",
+    "followers_url": "https://api.github.com/users/therustydev/followers",
+    "following_url": "https://api.github.com/users/therustydev/following{/other_user}",
+    "gists_url": "https://api.github.com/users/therustydev/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/therustydev/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/therustydev/subscriptions",
+    "organizations_url": "https://api.github.com/users/therustydev/orgs",
+    "repos_url": "https://api.github.com/users/therustydev/repos",
+    "events_url": "https://api.github.com/users/therustydev/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/therustydev/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2017-09-03T17:05:03Z",
+  "updated_at": "2017-09-30T23:46:19Z",
+  "closed_at": "2017-09-05T17:34:37Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10599",
+    "html_url": "https://github.com/facebook/react/pull/10599",
+    "diff_url": "https://github.com/facebook/react/pull/10599.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10599.patch"
+  },
+  "body": "When using the value property, form input is fixed. Had to change it to the defaultValue property to allow for mutation\r\n\r\n**Before submitting a pull request,** please make sure the following is done:\r\n\r\n1. Fork [the repository](https://github.com/facebook/react) and create your branch from `master`.\r\n2. If you've added code that should be tested, add tests!\r\n3. If you've changed APIs, update the documentation.\r\n4. Ensure the test suite passes (`npm test`).\r\n5. Format your code with [prettier](https://github.com/prettier/prettier) (`npm run prettier`).\r\n6. Make sure your code lints (`npm run lint`).\r\n7. Run the [Flow](https://flowtype.org/) typechecks (`npm run flow`).\r\n8. If you haven't already, complete the CLA.\r\n",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

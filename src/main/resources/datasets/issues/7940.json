@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7940",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7940/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7940/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7940/events",
+  "html_url": "https://github.com/facebook/react/pull/7940",
+  "id": 182272923,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODg4Mzg2NTQ=",
+  "number": 7940,
+  "title": "[New Docs] Remove entries under Old Docs for content that has been updated.",
+  "user": {
+    "login": "hramos",
+    "id": 165856,
+    "node_id": "MDQ6VXNlcjE2NTg1Ng==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/165856?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/hramos",
+    "html_url": "https://github.com/hramos",
+    "followers_url": "https://api.github.com/users/hramos/followers",
+    "following_url": "https://api.github.com/users/hramos/following{/other_user}",
+    "gists_url": "https://api.github.com/users/hramos/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/hramos/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/hramos/subscriptions",
+    "organizations_url": "https://api.github.com/users/hramos/orgs",
+    "repos_url": "https://api.github.com/users/hramos/repos",
+    "events_url": "https://api.github.com/users/hramos/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/hramos/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-10-11T14:05:06Z",
+  "updated_at": "2016-10-12T17:57:26Z",
+  "closed_at": "2016-10-12T17:57:26Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7940",
+    "html_url": "https://github.com/facebook/react/pull/7940",
+    "diff_url": "https://github.com/facebook/react/pull/7940.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7940.patch"
+  },
+  "body": "All the content in these old guides has been moved elsewhere.\n\nAlso updated the ids/permalinks for the Reference guides to be consistent.\n",
+  "closed_by": {
+    "login": "hramos",
+    "id": 165856,
+    "node_id": "MDQ6VXNlcjE2NTg1Ng==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/165856?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/hramos",
+    "html_url": "https://github.com/hramos",
+    "followers_url": "https://api.github.com/users/hramos/followers",
+    "following_url": "https://api.github.com/users/hramos/following{/other_user}",
+    "gists_url": "https://api.github.com/users/hramos/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/hramos/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/hramos/subscriptions",
+    "organizations_url": "https://api.github.com/users/hramos/orgs",
+    "repos_url": "https://api.github.com/users/hramos/repos",
+    "events_url": "https://api.github.com/users/hramos/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/hramos/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

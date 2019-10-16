@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13914",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13914/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13914/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13914/events",
+  "html_url": "https://github.com/facebook/react/pull/13914",
+  "id": 372319414,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjI0NTQ0Mzk4",
+  "number": 13914,
+  "title": "Refactor ESLint configuration to enable better IDE integration",
+  "user": {
+    "login": "NMinhNguyen",
+    "id": 2852660,
+    "node_id": "MDQ6VXNlcjI4NTI2NjA=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/2852660?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/NMinhNguyen",
+    "html_url": "https://github.com/NMinhNguyen",
+    "followers_url": "https://api.github.com/users/NMinhNguyen/followers",
+    "following_url": "https://api.github.com/users/NMinhNguyen/following{/other_user}",
+    "gists_url": "https://api.github.com/users/NMinhNguyen/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/NMinhNguyen/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/NMinhNguyen/subscriptions",
+    "organizations_url": "https://api.github.com/users/NMinhNguyen/orgs",
+    "repos_url": "https://api.github.com/users/NMinhNguyen/repos",
+    "events_url": "https://api.github.com/users/NMinhNguyen/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/NMinhNguyen/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-10-21T14:15:13Z",
+  "updated_at": "2018-11-08T17:56:38Z",
+  "closed_at": "2018-11-08T17:56:36Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13914",
+    "html_url": "https://github.com/facebook/react/pull/13914",
+    "diff_url": "https://github.com/facebook/react/pull/13914.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13914.patch"
+  },
+  "body": "Per https://github.com/facebook/react/pull/11794#issuecomment-350736314, this change ensures a single ESLint config is used for source code, Node.js scripts, and `npm` files via the [`overrides`](https://eslint.org/docs/user-guide/configuring#configuration-based-on-glob-patterns) option, which should allow IDEs to provide lint feedback inline without having to use `yarn linc`.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

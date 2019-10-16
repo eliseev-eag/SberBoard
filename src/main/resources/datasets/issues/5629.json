@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5629",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5629/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5629/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5629/events",
+  "html_url": "https://github.com/facebook/react/pull/5629",
+  "id": 121096576,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTMwMzY2ODk=",
+  "number": 5629,
+  "title": "Add sample HTML",
+  "user": {
+    "login": "mmorearty",
+    "id": 207671,
+    "node_id": "MDQ6VXNlcjIwNzY3MQ==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/207671?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mmorearty",
+    "html_url": "https://github.com/mmorearty",
+    "followers_url": "https://api.github.com/users/mmorearty/followers",
+    "following_url": "https://api.github.com/users/mmorearty/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mmorearty/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mmorearty/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mmorearty/subscriptions",
+    "organizations_url": "https://api.github.com/users/mmorearty/orgs",
+    "repos_url": "https://api.github.com/users/mmorearty/repos",
+    "events_url": "https://api.github.com/users/mmorearty/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mmorearty/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2015-12-08T20:52:13Z",
+  "updated_at": "2016-01-08T01:17:53Z",
+  "closed_at": "2016-01-08T01:17:53Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5629",
+    "html_url": "https://github.com/facebook/react/pull/5629",
+    "diff_url": "https://github.com/facebook/react/pull/5629.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5629.patch"
+  },
+  "body": "Added a sample HTML file to go with the sample JavaScript file.\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

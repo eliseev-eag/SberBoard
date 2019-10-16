@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2056",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2056/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2056/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2056/events",
+  "html_url": "https://github.com/facebook/react/pull/2056",
+  "id": 40412721,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTk4ODA1MTc=",
+  "number": 2056,
+  "title": "Add maskUnits and maskContentUnits",
+  "user": {
+    "login": "vanwagonet",
+    "id": 270632,
+    "node_id": "MDQ6VXNlcjI3MDYzMg==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/270632?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/vanwagonet",
+    "html_url": "https://github.com/vanwagonet",
+    "followers_url": "https://api.github.com/users/vanwagonet/followers",
+    "following_url": "https://api.github.com/users/vanwagonet/following{/other_user}",
+    "gists_url": "https://api.github.com/users/vanwagonet/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/vanwagonet/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/vanwagonet/subscriptions",
+    "organizations_url": "https://api.github.com/users/vanwagonet/orgs",
+    "repos_url": "https://api.github.com/users/vanwagonet/repos",
+    "events_url": "https://api.github.com/users/vanwagonet/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/vanwagonet/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 126382236,
+      "node_id": "MDU6TGFiZWwxMjYzODIyMzY=",
+      "url": "https://api.github.com/repos/facebook/react/labels/SVG",
+      "name": "SVG",
+      "color": "f7c6c7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2014-08-16T15:12:52Z",
+  "updated_at": "2015-12-26T15:11:15Z",
+  "closed_at": "2015-12-25T19:11:25Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/2056",
+    "html_url": "https://github.com/facebook/react/pull/2056",
+    "diff_url": "https://github.com/facebook/react/pull/2056.diff",
+    "patch_url": "https://github.com/facebook/react/pull/2056.patch"
+  },
+  "body": "These attributes are essential for creating a mask in svg.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

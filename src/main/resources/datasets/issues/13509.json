@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13509",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13509/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13509/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13509/events",
+  "html_url": "https://github.com/facebook/react/pull/13509",
+  "id": 355256812,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjExODI3ODEw",
+  "number": 13509,
+  "title": "Interaction tracking follow up",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 81,
+  "created_at": "2018-08-29T17:18:58Z",
+  "updated_at": "2018-09-01T19:18:50Z",
+  "closed_at": "2018-09-01T19:00:00Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13509",
+    "html_url": "https://github.com/facebook/react/pull/13509",
+    "diff_url": "https://github.com/facebook/react/pull/13509.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13509.patch"
+  },
+  "body": "Follow up for PR #13253. Resolves #13512\r\n\r\n* **Reduce new dependencies** by merging the new interaction-tracking package into the (not yet released) react-scheduler package (final name TBD).\r\n* **Avoid breaking backwards compatibility**.\r\n  * The react-scheduler API has been _inlined_ for UMD React bundle and re-exported via `React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED` so that renderers can safely use the new API without requiring any new `<script>` tags to be added. A UMD fork has been added to redirect react-scheduler imports to `React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED` instead.\r\n  * This react-scheduler API has been _re-exported_ from the shared NPM package for the CJS React bundle. I've added hard `dependencies` on react-scheduler to each reconciler renderer (e.g. react-dom, react-native, react-test-renderer) so that CJS updates will just work without requiring any additional `npm install` steps.\r\n* **Enable the new API to be accessed from UMD bundles** by adding a UMD bundle for the react-scheduler package that (lazily) forwards methods to the `React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED` export. Lazy forwards are important so that the `<script>` tags can be declared in the future-safe order (ie. react-scheduler before react). \r\n\r\nAll methods for the new react-scheduler package (including interaction tracking APIs) have been prefixed with \"unstable_\" since they're new and relatively unproven.\r\n\r\nAs part of this change, the react-scheduler code (which used to be inlined into individual renderers) has been moved to the react package. This makes it look like the react UMD bundle has grown more than it has (rather, there is a corresponding decrease in e.g. react-dom). [Here are some diffs](https://gist.github.com/bvaughn/d900b1b3cff04ca939bbefbf60702fc5) that show the various CJS and UMD changes (NOTE these diffs reflect suspense being enabled so they may be a bit larger than otherwise expected.)\r\n\r\nI've added a new Rollup plugin ([`scripts/rollup/plugins/strip-unused-imports.js`](https://github.com/bvaughn/react/blob/interaction-tracking-follow-up/scripts/rollup/plugins/strip-unused-imports.js)) to strip unused imports from production bundles so that production react-dom won't have any references to the tracking API.\r\n\r\nI've also added a new fixture ([`fixtures/tracking/index.html`](https://github.com/bvaughn/react/blob/interaction-tracking-follow-up/fixtures/tracking/index.html) and [`fixtures/tracking/script.js`](https://github.com/bvaughn/react/blob/interaction-tracking-follow-up/fixtures/tracking/script.js)) to ensure that the UMD bundles are wired up correctly.\r\n\r\n### Non-blocking follow up work\r\n- [ ] Decide on a name for the react-scheduler package.\r\n- [ ] Decide on the version of the initial react-scheduler release and update `package.json`s. (I assume 16.5 but for now I've left as 0.1).\r\n- [ ] Agree on the entry point names for tracking and tracking-subscription APIs. (Currently they're `react-scheduler/tracking` and `react-scheduler/tracking-subscriptions` but I'm not married to these.)",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

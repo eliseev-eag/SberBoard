@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10394",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10394/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10394/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10394/events",
+  "html_url": "https://github.com/facebook/react/pull/10394",
+  "id": 248207182,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTM0MzAzOTU1",
+  "number": 10394,
+  "title": "Cased data attributes should properly diff on server hydration",
+  "user": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2017-08-05T20:22:51Z",
+  "updated_at": "2017-10-06T21:57:45Z",
+  "closed_at": "2017-08-16T00:53:58Z",
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10394",
+    "html_url": "https://github.com/facebook/react/pull/10394",
+    "diff_url": "https://github.com/facebook/react/pull/10394.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10394.patch"
+  },
+  "body": "@gaearon noticed this in my custom attribute PR (https://github.com/facebook/react/pull/7311#issuecomment-320454976)\r\n\r\nAttribute names are reported back from the DOM as lower case. If a cased data attribute is given, the diffing process gets tripped up because a propKey of `data-myAttribute` reports back as `data-myattribute`. This results in an error along the lines of:\r\n\r\n```\r\nWe expected 0 warning(s), but saw 1 warning(s).\r\nWe saw these warnings:\r\nWarning: Extra attributes from the server: data-myattribute\r\n```\r\n\r\nThe diffing process compares the component props to [a list of attributes directly from the DOM element](https://github.com/facebook/react/blob/master/src/renderers/dom/fiber/ReactDOMFiberComponent.js#L929-L932). The DOM list always has lower case names. The React property object uses whatever was given to the component. So there's an inconsistency between the `data-myAttribute` React prop, and the `data-myattribute` from the DOM.\r\n\r\nThis isn't a problem for attributes in the whitelist. When properties are injected into `DOMProperties.properties`,  React adds an `attributeName` that is the lower case version of the React prop key name. This attribute name is what gets removed from the list of diffed props. \r\n\r\nAlso it looks like cased data attributes are technically supported in React 15.6.1:\r\nhttps://jsfiddle.net/84v837e9/185/\r\n\r\nThe casing goes away when the attribute is put into the DOM.",
+  "closed_by": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

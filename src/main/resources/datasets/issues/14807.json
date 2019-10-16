@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14807",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14807/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14807/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14807/events",
+  "html_url": "https://github.com/facebook/react/issues/14807",
+  "id": 408412362,
+  "node_id": "MDU6SXNzdWU0MDg0MTIzNjI=",
+  "number": 14807,
+  "title": "Shallow renderer does not support React.memo",
+  "user": {
+    "login": "ljharb",
+    "id": 45469,
+    "node_id": "MDQ6VXNlcjQ1NDY5",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/45469?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ljharb",
+    "html_url": "https://github.com/ljharb",
+    "followers_url": "https://api.github.com/users/ljharb/followers",
+    "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+    "organizations_url": "https://api.github.com/users/ljharb/orgs",
+    "repos_url": "https://api.github.com/users/ljharb/repos",
+    "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ljharb/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 204945357,
+      "node_id": "MDU6TGFiZWwyMDQ5NDUzNTc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Shallow%20Renderer",
+      "name": "Component: Shallow Renderer",
+      "color": "eb6420",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2019-02-09T08:44:57Z",
+  "updated_at": "2019-03-22T16:58:07Z",
+  "closed_at": "2019-03-15T22:17:09Z",
+  "author_association": "CONTRIBUTOR",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nbug\r\n\r\n**What is the current behavior?**\r\nIn normal rendering, you can memoize a class-based component: https://jsfiddle.net/586ea3cx/\r\n\r\nWith the shallow renderer, it seems like you can't: https://jsfiddle.net/odj217Lv/1/\r\n\r\nThis might be blocking https://github.com/airbnb/enzyme/pull/1914, in which tests are failing with `Cannot call a class as a function`. (it's tough to repro stuff with the shallow renderer)",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

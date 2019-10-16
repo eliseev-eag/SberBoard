@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15757",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15757/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15757/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15757/events",
+  "html_url": "https://github.com/facebook/react/pull/15757",
+  "id": 449518651,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjgzMDMwMDI3",
+  "number": 15757,
+  "title": "Lint rule for unminified errors",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-05-28T23:18:27Z",
+  "updated_at": "2019-05-29T18:29:05Z",
+  "closed_at": "2019-05-29T18:29:05Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15757",
+    "html_url": "https://github.com/facebook/react/pull/15757",
+    "diff_url": "https://github.com/facebook/react/pull/15757.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15757.patch"
+  },
+  "body": "Add a lint rule that fails if an invariant message is not part of the error code map.\r\n\r\nThe goal is to be more disciplined about adding and modifiying production error codes. Error codes should be consistent across releases even if their wording changes, for continuity in logs.\r\n\r\nCurrently, error codes are added to the error code map via an automated script that runs right before release. The problem with this approach is that if someone modifies an error message in the source, but neglects to modify the corresponding message in the error code map, then the message will be assigned a new error code, instead of reusing the existing one.\r\n\r\nBecause the error extraction script only runs before a release, people rarely modify the error code map in practice. By moving the extraction step to the PR stage, it forces the author to consider whether the message should be assigned a new error code. It also allows the reviewer to review the changes.\r\n\r\nThe trade off is that it requires more effort and context to land new error messages, or to modify existing ones, particular for new contributors who are not familiar with our processes.\r\n\r\nSince we already expect users to lint their code, I would argue the additional burden is marginal. Even if they forget to run the lint command locally, they will get quick feedback from the CI lint job, which typically finishes within 2-3 minutes.\r\n",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

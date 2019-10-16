@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6121",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6121/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6121/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6121/events",
+  "html_url": "https://github.com/facebook/react/pull/6121",
+  "id": 136482231,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjA3MzA5NDc=",
+  "number": 6121,
+  "title": "Fix #6114 - Calling setState inside getChildContext should warn",
+  "user": {
+    "login": "raineroviir",
+    "id": 10455065,
+    "node_id": "MDQ6VXNlcjEwNDU1MDY1",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/10455065?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/raineroviir",
+    "html_url": "https://github.com/raineroviir",
+    "followers_url": "https://api.github.com/users/raineroviir/followers",
+    "following_url": "https://api.github.com/users/raineroviir/following{/other_user}",
+    "gists_url": "https://api.github.com/users/raineroviir/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/raineroviir/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/raineroviir/subscriptions",
+    "organizations_url": "https://api.github.com/users/raineroviir/orgs",
+    "repos_url": "https://api.github.com/users/raineroviir/repos",
+    "events_url": "https://api.github.com/users/raineroviir/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/raineroviir/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 20,
+  "created_at": "2016-02-25T19:13:19Z",
+  "updated_at": "2016-03-05T16:24:39Z",
+  "closed_at": "2016-03-05T16:24:39Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6121",
+    "html_url": "https://github.com/facebook/react/pull/6121",
+    "diff_url": "https://github.com/facebook/react/pull/6121.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6121.patch"
+  },
+  "body": "It doesn't pass one of the tests, but I'm curious if this is the right direction or not.\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

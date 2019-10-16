@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13474",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13474/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13474/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13474/events",
+  "html_url": "https://github.com/facebook/react/pull/13474",
+  "id": 353717576,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjEwNjkyMjMy",
+  "number": 13474,
+  "title": "Correct syntax in CHANGELOG",
+  "user": {
+    "login": "rodrigobdz",
+    "id": 14152377,
+    "node_id": "MDQ6VXNlcjE0MTUyMzc3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/14152377?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rodrigobdz",
+    "html_url": "https://github.com/rodrigobdz",
+    "followers_url": "https://api.github.com/users/rodrigobdz/followers",
+    "following_url": "https://api.github.com/users/rodrigobdz/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rodrigobdz/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rodrigobdz/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rodrigobdz/subscriptions",
+    "organizations_url": "https://api.github.com/users/rodrigobdz/orgs",
+    "repos_url": "https://api.github.com/users/rodrigobdz/repos",
+    "events_url": "https://api.github.com/users/rodrigobdz/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rodrigobdz/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-08-24T09:50:17Z",
+  "updated_at": "2018-08-25T22:34:42Z",
+  "closed_at": "2018-08-25T18:08:21Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13474",
+    "html_url": "https://github.com/facebook/react/pull/13474",
+    "diff_url": "https://github.com/facebook/react/pull/13474.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13474.patch"
+  },
+  "body": "Non-breakable space replaced with whitespace.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

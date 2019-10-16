@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11331",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11331/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11331/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11331/events",
+  "html_url": "https://github.com/facebook/react/pull/11331",
+  "id": 267507762,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ4MDE4OTk0",
+  "number": 11331,
+  "title": "Drop .textContent IE8 polyfill and rewrite escaping tests against public API",
+  "user": {
+    "login": "jeremenichelli",
+    "id": 3856481,
+    "node_id": "MDQ6VXNlcjM4NTY0ODE=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3856481?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jeremenichelli",
+    "html_url": "https://github.com/jeremenichelli",
+    "followers_url": "https://api.github.com/users/jeremenichelli/followers",
+    "following_url": "https://api.github.com/users/jeremenichelli/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jeremenichelli/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jeremenichelli/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jeremenichelli/subscriptions",
+    "organizations_url": "https://api.github.com/users/jeremenichelli/orgs",
+    "repos_url": "https://api.github.com/users/jeremenichelli/repos",
+    "events_url": "https://api.github.com/users/jeremenichelli/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jeremenichelli/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 19,
+  "created_at": "2017-10-22T23:21:16Z",
+  "updated_at": "2017-11-25T15:59:47Z",
+  "closed_at": "2017-11-23T22:41:29Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11331",
+    "html_url": "https://github.com/facebook/react/pull/11331",
+    "diff_url": "https://github.com/facebook/react/pull/11331.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11331.patch"
+  },
+  "body": "I want to put some explanation about this test rewrite since I think the outcome might not be what was intended in https://github.com/facebook/react/issues/11299\r\n\r\n`escapeTextContentForBrowser` is used in `client/setTextContent.js` only when `textContent` is not supported for DOM elements, which only happens in IE8 (caniuse.com reference http://caniuse.com/#feat=textcontent) a browser version that is no longer supported (https://reactjs.org/blog/2016/01/12/discontinuing-ie8-support.html).\r\n\r\nTo actually move this test to run over `ReactDOM.render` and `React.createElement` it would be necessary to mock up the entire `global.document` object, assign `null` to `document.documentElement.textContent`, require React packages and then test this util through React element rendering. If authors and contributors think this should be the way to go I can start working again on this approach.\r\n\r\nConsidering that this part of the code might not be running anywhere today in React web applications, my suggestion would be to not add this heavy lifting on the tests, reconsider modifying these tests by merging the changes I've made and actually start thinking about removing `escapeTextContentForBrowser` from the codebase.\r\n\r\n_Since the support was dropped almost two years ago and we should start considering removing IE8 code._\r\n\r\nLooking forward to read others take on this :)\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

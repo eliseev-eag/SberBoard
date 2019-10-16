@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15557",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15557/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15557/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15557/events",
+  "html_url": "https://github.com/facebook/react/issues/15557",
+  "id": 439495497,
+  "node_id": "MDU6SXNzdWU0Mzk0OTU0OTc=",
+  "number": 15557,
+  "title": "Set a DOM property in JSX",
+  "user": {
+    "login": "kraftwer1",
+    "id": 2146436,
+    "node_id": "MDQ6VXNlcjIxNDY0MzY=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/2146436?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/kraftwer1",
+    "html_url": "https://github.com/kraftwer1",
+    "followers_url": "https://api.github.com/users/kraftwer1/followers",
+    "following_url": "https://api.github.com/users/kraftwer1/following{/other_user}",
+    "gists_url": "https://api.github.com/users/kraftwer1/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/kraftwer1/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/kraftwer1/subscriptions",
+    "organizations_url": "https://api.github.com/users/kraftwer1/orgs",
+    "repos_url": "https://api.github.com/users/kraftwer1/repos",
+    "events_url": "https://api.github.com/users/kraftwer1/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/kraftwer1/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-05-02T09:18:30Z",
+  "updated_at": "2019-05-06T12:53:32Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "This is a feature request:\r\n\r\nSometimes, it's necessary set a DOM property rather than an attribute. I have come across this more and more in the upcoming trend of Web Components / Custom Elements.\r\nRight now, this can only be done using a ref (e.g. `myRef.current.myProperty = \"foo\"`).\r\n\r\nIn Vue, this can be done using the [.prop modifier](https://vuejs.org/v2/api/#v-bind):\r\n\r\n    <my-custom-element :foo.prop=\"bar\" />",
+  "closed_by": null
+}

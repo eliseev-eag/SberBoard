@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15274",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15274/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15274/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15274/events",
+  "html_url": "https://github.com/facebook/react/pull/15274",
+  "id": 427337645,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjY1OTc0OTEx",
+  "number": 15274,
+  "title": "Remove Flow types from Scheduler and Tracing",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-03-30T23:07:00Z",
+  "updated_at": "2019-04-07T15:27:14Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15274",
+    "html_url": "https://github.com/facebook/react/pull/15274",
+    "diff_url": "https://github.com/facebook/react/pull/15274.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15274.patch"
+  },
+  "body": "The idea is to make the scheduler as unopinionated and uncontroversial as possible.\r\n\r\nCurrently it's a bit of a mix and match and also use our build tooling. This keeps spreading.\r\n\r\nLet's make a decision here either way and stick to it.\r\n\r\n",
+  "closed_by": null
+}

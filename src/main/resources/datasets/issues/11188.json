@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11188",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11188/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11188/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11188/events",
+  "html_url": "https://github.com/facebook/react/pull/11188",
+  "id": 264450928,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ1ODUyMDIx",
+  "number": 11188,
+  "title": "Add unregister feature to ReactNativePropRegistry",
+  "user": {
+    "login": "dantman",
+    "id": 53399,
+    "node_id": "MDQ6VXNlcjUzMzk5",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/53399?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dantman",
+    "html_url": "https://github.com/dantman",
+    "followers_url": "https://api.github.com/users/dantman/followers",
+    "following_url": "https://api.github.com/users/dantman/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dantman/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dantman/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dantman/subscriptions",
+    "organizations_url": "https://api.github.com/users/dantman/orgs",
+    "repos_url": "https://api.github.com/users/dantman/repos",
+    "events_url": "https://api.github.com/users/dantman/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dantman/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2017-10-11T04:04:28Z",
+  "updated_at": "2018-01-05T16:41:32Z",
+  "closed_at": "2018-01-05T16:41:32Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11188",
+    "html_url": "https://github.com/facebook/react/pull/11188",
+    "diff_url": "https://github.com/facebook/react/pull/11188.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11188.patch"
+  },
+  "body": "This allows objects registered with ReactNativePropRegistry to be later unregistered to free up memory, so StyleSheet can support \"semi-static\" styles that are mostly static but have situations they become known to be unused.\r\n\r\nIt is still possible for this to work should native code starts caching props from the registry. In that case ReactNativePropRegistry.unregister would just keep a temporary blacklist of unregistered ids that would be passed to native code and the blacklist would be cleared as native removes things from its cache.\r\n\r\nThe motivation for this and rationale for \"semi-static\" props is explained in facebook/react-native/issues/15899",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

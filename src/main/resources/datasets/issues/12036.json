@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12036",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12036/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12036/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12036/events",
+  "html_url": "https://github.com/facebook/react/pull/12036",
+  "id": 289440132,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTYzNTcyMzkw",
+  "number": 12036,
+  "title": "RFC 6: createReactClass updates",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2018-01-17T22:41:45Z",
+  "updated_at": "2018-01-19T23:16:57Z",
+  "closed_at": "2018-01-19T23:13:26Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12036",
+    "html_url": "https://github.com/facebook/react/pull/12036",
+    "diff_url": "https://github.com/facebook/react/pull/12036.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12036.patch"
+  },
+  "body": "This codemod corresponds with reactjs/rfcs/pull/6 and facebook/react/pull/12028\r\n\r\nMake `create-react-class` factory aware of the new \"UNSAFE_\" lifecycle names so that:\r\n* It warns about spelling error for `UNSAFE_componentWillRecieveProps`.\r\n* It doesn't [trigger an invariant](https://github.com/facebook/react/blob/571a9208d5133e8737f565fe60b762d201f0d37c/addons/create-react-class/factory.js#L389-L398) if one of the new lifecycle names are mixed in as overrides.\r\n\r\nI've built `addons/create-react-class` locally and compared it to the 15.6.2 release in NPM to verify that the only changes between the two are the additions I've made with this PR. This should make the release very low risk.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

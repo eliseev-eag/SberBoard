@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15982",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15982/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15982/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15982/events",
+  "html_url": "https://github.com/facebook/react/pull/15982",
+  "id": 460147296,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjkxMzM3NTY4",
+  "number": 15982,
+  "title": "Add check so script tags with uppercase letters are sanitized",
+  "user": {
+    "login": "svensprk",
+    "id": 52002625,
+    "node_id": "MDQ6VXNlcjUyMDAyNjI1",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/52002625?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/svensprk",
+    "html_url": "https://github.com/svensprk",
+    "followers_url": "https://api.github.com/users/svensprk/followers",
+    "following_url": "https://api.github.com/users/svensprk/following{/other_user}",
+    "gists_url": "https://api.github.com/users/svensprk/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/svensprk/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/svensprk/subscriptions",
+    "organizations_url": "https://api.github.com/users/svensprk/orgs",
+    "repos_url": "https://api.github.com/users/svensprk/repos",
+    "events_url": "https://api.github.com/users/svensprk/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/svensprk/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-06-25T00:04:07Z",
+  "updated_at": "2019-06-25T00:10:50Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15982",
+    "html_url": "https://github.com/facebook/react/pull/15982",
+    "diff_url": "https://github.com/facebook/react/pull/15982.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15982.patch"
+  },
+  "body": "I've added the additional checks and created a test case. I hope everything is in the right place and up to standard. ",
+  "closed_by": null
+}

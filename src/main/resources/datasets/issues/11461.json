@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11461",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11461/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11461/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11461/events",
+  "html_url": "https://github.com/facebook/react/issues/11461",
+  "id": 271271397,
+  "node_id": "MDU6SXNzdWUyNzEyNzEzOTc=",
+  "number": 11461,
+  "title": "[RN] Don't receive events on unknown tags",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-11-05T12:03:39Z",
+  "updated_at": "2017-11-05T12:03:43Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "body": "Flow uncovered this:\r\n\r\nhttps://github.com/facebook/react/blob/92b7b172cce9958b846844f0b46fd7bbd8c5140d/packages/react-native-renderer/src/ReactNativeEventEmitter.js#L174-L175\r\n\r\nNeed to verify if we can just return early and not process the events in this case.",
+  "closed_by": null
+}
