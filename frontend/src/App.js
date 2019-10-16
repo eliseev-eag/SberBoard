@@ -1,29 +1,13 @@
 import React from 'react';
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Fab,
-  Button,
-  Container,
-  Grid,
-  Paper,
-  Typography,
-  makeStyles,
-  CssBaseline,
-} from '@material-ui/core';
-import { Add, Menu } from '@material-ui/icons';
+import { AppBar, Toolbar, IconButton, Button, Container, Grid, makeStyles, CssBaseline } from '@material-ui/core';
+import { Menu } from '@material-ui/icons';
+import MainPage from './MainPage';
 
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
     height: '100vh',
-  },
-  fab: {
-    position: 'absolute',
-    bottom: theme.spacing(5),
-    right: theme.spacing(5),
   },
   grow: {
     flexGrow: 1,
@@ -41,12 +25,6 @@ const useStyles = makeStyles(theme => ({
   container: {
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
-  },
-  paper: {
-    padding: theme.spacing(2),
-    display: 'flex',
-    overflow: 'auto',
-    flexDirection: 'column',
   },
 }));
 
@@ -66,24 +44,10 @@ const App = () => {
             <Button color="inherit">Login</Button>
           </Toolbar>
         </AppBar>
-        <Fab color="primary" aria-label="add" className={classes.fab}>
-          <Add />
-        </Fab>
         <main className={classes.content}>
           <Container maxWidth="lg" className={classes.container}>
             <Grid container spacing={3}>
-              {Array(10)
-                .fill(0)
-                .map((_, index) => (
-                  <Grid item xs={12} key={index}>
-                    <Paper className={classes.paper}>
-                      <Typography color="primary" gutterBottom>
-                        Header
-                      </Typography>
-                      <div>Здесь мог быть ваш контент</div>
-                    </Paper>
-                  </Grid>
-                ))}
+              <MainPage />
             </Grid>
           </Container>
         </main>
