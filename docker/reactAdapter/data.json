@@ -1,0 +1,652 @@
+[
+    {
+        "blanks": 4836,
+        "code": 29423,
+        "comments": 9017,
+        "complexity": 4244.0,
+        "complexity / lines": 3168.08,
+        "date": "2013-06-01",
+        "files": 305,
+        "lines": 43276
+    },
+    {
+        "blanks": 5498,
+        "code": 32406,
+        "comments": 9935,
+        "complexity": 4366.0,
+        "complexity / lines": 3719.6,
+        "date": "2013-07-01",
+        "files": 345,
+        "lines": 47839
+    },
+    {
+        "blanks": 6114,
+        "code": 34497,
+        "comments": 10687,
+        "complexity": 4428.0,
+        "complexity / lines": 3830.21,
+        "date": "2013-08-01",
+        "files": 374,
+        "lines": 51298
+    },
+    {
+        "blanks": 6138,
+        "code": 34355,
+        "comments": 10519,
+        "complexity": 4379.0,
+        "complexity / lines": 3722.05,
+        "date": "2013-09-01",
+        "files": 371,
+        "lines": 51012
+    },
+    {
+        "blanks": 7129,
+        "code": 38029,
+        "comments": 11727,
+        "complexity": 4543.0,
+        "complexity / lines": 4162.88,
+        "date": "2013-10-01",
+        "files": 446,
+        "lines": 56885
+    },
+    {
+        "blanks": 7047,
+        "code": 37746,
+        "comments": 11719,
+        "complexity": 4537.0,
+        "complexity / lines": 4159.49,
+        "date": "2013-11-01",
+        "files": 431,
+        "lines": 56512
+    },
+    {
+        "blanks": 7482,
+        "code": 38966,
+        "comments": 11954,
+        "complexity": 4647.0,
+        "complexity / lines": 4354.56,
+        "date": "2013-12-01",
+        "files": 463,
+        "lines": 58402
+    },
+    {
+        "blanks": 8935,
+        "code": 41935,
+        "comments": 13391,
+        "complexity": 3019.0,
+        "complexity / lines": 4843.74,
+        "date": "2014-01-01",
+        "files": 579,
+        "lines": 64261
+    },
+    {
+        "blanks": 7952,
+        "code": 38036,
+        "comments": 12275,
+        "complexity": 2855.0,
+        "complexity / lines": 5202.56,
+        "date": "2014-02-01",
+        "files": 530,
+        "lines": 58263
+    },
+    {
+        "blanks": 8279,
+        "code": 38922,
+        "comments": 12237,
+        "complexity": 2914.0,
+        "complexity / lines": 4598.58,
+        "date": "2014-03-01",
+        "files": 529,
+        "lines": 59438
+    },
+    {
+        "blanks": 8628,
+        "code": 40021,
+        "comments": 12741,
+        "complexity": 2950.0,
+        "complexity / lines": 4696.99,
+        "date": "2014-04-01",
+        "files": 545,
+        "lines": 61390
+    },
+    {
+        "blanks": 9474,
+        "code": 44424,
+        "comments": 13569,
+        "complexity": 3079.0,
+        "complexity / lines": 5217.24,
+        "date": "2014-07-01",
+        "files": 598,
+        "lines": 67467
+    },
+    {
+        "blanks": 9804,
+        "code": 45086,
+        "comments": 13501,
+        "complexity": 3221.0,
+        "complexity / lines": 5457.17,
+        "date": "2014-09-01",
+        "files": 607,
+        "lines": 68391
+    },
+    {
+        "blanks": 10154,
+        "code": 45821,
+        "comments": 11494,
+        "complexity": 3208.0,
+        "complexity / lines": 5780.94,
+        "date": "2014-11-01",
+        "files": 627,
+        "lines": 67469
+    },
+    {
+        "blanks": 10388,
+        "code": 46825,
+        "comments": 11731,
+        "complexity": 3304.0,
+        "complexity / lines": 5846.82,
+        "date": "2014-12-01",
+        "files": 634,
+        "lines": 68944
+    },
+    {
+        "blanks": 10652,
+        "code": 47763,
+        "comments": 11920,
+        "complexity": 3361.0,
+        "complexity / lines": 5892.59,
+        "date": "2015-01-01",
+        "files": 648,
+        "lines": 70335
+    },
+    {
+        "blanks": 12417,
+        "code": 54396,
+        "comments": 11650,
+        "complexity": 3510.0,
+        "complexity / lines": 5917.99,
+        "date": "2015-02-01",
+        "files": 702,
+        "lines": 78463
+    },
+    {
+        "blanks": 13081,
+        "code": 56485,
+        "comments": 11650,
+        "complexity": 3510.0,
+        "complexity / lines": 5917.99,
+        "date": "2015-03-01",
+        "files": 727,
+        "lines": 81216
+    },
+    {
+        "blanks": 14010,
+        "code": 66061,
+        "comments": 11813,
+        "complexity": 4512.0,
+        "complexity / lines": 5823.15,
+        "date": "2015-04-01",
+        "files": 760,
+        "lines": 91884
+    },
+    {
+        "blanks": 14184,
+        "code": 66784,
+        "comments": 11942,
+        "complexity": 4505.0,
+        "complexity / lines": 5301.6,
+        "date": "2015-05-01",
+        "files": 776,
+        "lines": 92910
+    },
+    {
+        "blanks": 14113,
+        "code": 67448,
+        "comments": 11850,
+        "complexity": 4613.0,
+        "complexity / lines": 5314.54,
+        "date": "2015-06-01",
+        "files": 779,
+        "lines": 93411
+    },
+    {
+        "blanks": 14390,
+        "code": 68379,
+        "comments": 11885,
+        "complexity": 4623.0,
+        "complexity / lines": 5345.8,
+        "date": "2015-07-01",
+        "files": 789,
+        "lines": 94654
+    },
+    {
+        "blanks": 13761,
+        "code": 64898,
+        "comments": 9991,
+        "complexity": 3776.0,
+        "complexity / lines": 4317.4,
+        "date": "2015-08-01",
+        "files": 720,
+        "lines": 88650
+    },
+    {
+        "blanks": 14196,
+        "code": 67503,
+        "comments": 10099,
+        "complexity": 3926.0,
+        "complexity / lines": 4540.43,
+        "date": "2015-09-01",
+        "files": 743,
+        "lines": 91798
+    },
+    {
+        "blanks": 14836,
+        "code": 69200,
+        "comments": 10332,
+        "complexity": 4043.0,
+        "complexity / lines": 3349.68,
+        "date": "2015-10-01",
+        "files": 747,
+        "lines": 94368
+    },
+    {
+        "blanks": 18505,
+        "code": 87622,
+        "comments": 10160,
+        "complexity": 4050.0,
+        "complexity / lines": 3410.69,
+        "date": "2015-11-01",
+        "files": 784,
+        "lines": 116287
+    },
+    {
+        "blanks": 18665,
+        "code": 94663,
+        "comments": 10196,
+        "complexity": 5065.0,
+        "complexity / lines": 3487.45,
+        "date": "2015-12-01",
+        "files": 794,
+        "lines": 123524
+    },
+    {
+        "blanks": 18832,
+        "code": 95686,
+        "comments": 10271,
+        "complexity": 5105.0,
+        "complexity / lines": 3533.41,
+        "date": "2016-01-01",
+        "files": 806,
+        "lines": 124789
+    },
+    {
+        "blanks": 19173,
+        "code": 96604,
+        "comments": 10200,
+        "complexity": 5117.0,
+        "complexity / lines": 3506.56,
+        "date": "2016-02-01",
+        "files": 818,
+        "lines": 125977
+    },
+    {
+        "blanks": 19345,
+        "code": 97811,
+        "comments": 10339,
+        "complexity": 5266.0,
+        "complexity / lines": 3596.5,
+        "date": "2016-03-01",
+        "files": 829,
+        "lines": 127495
+    },
+    {
+        "blanks": 19690,
+        "code": 93157,
+        "comments": 10416,
+        "complexity": 4257.0,
+        "complexity / lines": 3545.38,
+        "date": "2016-04-01",
+        "files": 840,
+        "lines": 123263
+    },
+    {
+        "blanks": 20853,
+        "code": 100180,
+        "comments": 11213,
+        "complexity": 4692.0,
+        "complexity / lines": 3835.44,
+        "date": "2016-05-01",
+        "files": 894,
+        "lines": 132246
+    },
+    {
+        "blanks": 21495,
+        "code": 103265,
+        "comments": 11788,
+        "complexity": 4874.0,
+        "complexity / lines": 3980.63,
+        "date": "2016-06-01",
+        "files": 921,
+        "lines": 136548
+    },
+    {
+        "blanks": 21883,
+        "code": 105320,
+        "comments": 12252,
+        "complexity": 5058.0,
+        "complexity / lines": 4144.61,
+        "date": "2016-07-01",
+        "files": 938,
+        "lines": 139455
+    },
+    {
+        "blanks": 21545,
+        "code": 109847,
+        "comments": 12420,
+        "complexity": 7109.0,
+        "complexity / lines": 4231.31,
+        "date": "2016-08-01",
+        "files": 960,
+        "lines": 143812
+    },
+    {
+        "blanks": 21909,
+        "code": 111467,
+        "comments": 12411,
+        "complexity": 7152.0,
+        "complexity / lines": 4091.53,
+        "date": "2016-09-01",
+        "files": 965,
+        "lines": 145787
+    },
+    {
+        "blanks": 18556,
+        "code": 106739,
+        "comments": 13249,
+        "complexity": 7632.0,
+        "complexity / lines": 4285.69,
+        "date": "2016-11-01",
+        "files": 815,
+        "lines": 138544
+    },
+    {
+        "blanks": 19446,
+        "code": 112427,
+        "comments": 13756,
+        "complexity": 8198.0,
+        "complexity / lines": 4566.15,
+        "date": "2016-12-01",
+        "files": 841,
+        "lines": 145629
+    },
+    {
+        "blanks": 19871,
+        "code": 115906,
+        "comments": 14157,
+        "complexity": 8450.0,
+        "complexity / lines": 4645.99,
+        "date": "2017-01-01",
+        "files": 849,
+        "lines": 149934
+    },
+    {
+        "blanks": 20671,
+        "code": 120304,
+        "comments": 14502,
+        "complexity": 8692.0,
+        "complexity / lines": 4864.11,
+        "date": "2017-02-01",
+        "files": 922,
+        "lines": 155477
+    },
+    {
+        "blanks": 20834,
+        "code": 121788,
+        "comments": 14587,
+        "complexity": 8792.0,
+        "complexity / lines": 4853.93,
+        "date": "2017-03-01",
+        "files": 923,
+        "lines": 157209
+    },
+    {
+        "blanks": 20491,
+        "code": 124412,
+        "comments": 14472,
+        "complexity": 8735.0,
+        "complexity / lines": 4623.0,
+        "date": "2017-04-01",
+        "files": 913,
+        "lines": 159375
+    },
+    {
+        "blanks": 20761,
+        "code": 126274,
+        "comments": 14467,
+        "complexity": 8695.0,
+        "complexity / lines": 4903.52,
+        "date": "2017-05-01",
+        "files": 993,
+        "lines": 161502
+    },
+    {
+        "blanks": 20628,
+        "code": 123440,
+        "comments": 14785,
+        "complexity": 8398.0,
+        "complexity / lines": 5171.02,
+        "date": "2017-06-01",
+        "files": 1022,
+        "lines": 158853
+    },
+    {
+        "blanks": 20874,
+        "code": 126274,
+        "comments": 14610,
+        "complexity": 8595.0,
+        "complexity / lines": 5225.28,
+        "date": "2017-08-01",
+        "files": 1011,
+        "lines": 161758
+    },
+    {
+        "blanks": 20919,
+        "code": 129651,
+        "comments": 14305,
+        "complexity": 8707.0,
+        "complexity / lines": 5162.29,
+        "date": "2017-09-01",
+        "files": 1022,
+        "lines": 164875
+    },
+    {
+        "blanks": 21771,
+        "code": 141193,
+        "comments": 11938,
+        "complexity": 7823.0,
+        "complexity / lines": 4814.09,
+        "date": "2017-10-01",
+        "files": 1058,
+        "lines": 174902
+    },
+    {
+        "blanks": 12867,
+        "code": 104936,
+        "comments": 10875,
+        "complexity": 6311.0,
+        "complexity / lines": 3803.04,
+        "date": "2017-11-01",
+        "files": 682,
+        "lines": 128678
+    },
+    {
+        "blanks": 12853,
+        "code": 106734,
+        "comments": 11001,
+        "complexity": 6762.0,
+        "complexity / lines": 4160.48,
+        "date": "2017-12-01",
+        "files": 708,
+        "lines": 130588
+    },
+    {
+        "blanks": 13459,
+        "code": 114918,
+        "comments": 11335,
+        "complexity": 6674.0,
+        "complexity / lines": 4127.16,
+        "date": "2018-02-01",
+        "files": 721,
+        "lines": 139712
+    },
+    {
+        "blanks": 14089,
+        "code": 120479,
+        "comments": 11669,
+        "complexity": 6918.0,
+        "complexity / lines": 4375.01,
+        "date": "2018-04-01",
+        "files": 754,
+        "lines": 146237
+    },
+    {
+        "blanks": 14237,
+        "code": 121877,
+        "comments": 11761,
+        "complexity": 6994.0,
+        "complexity / lines": 4413.26,
+        "date": "2018-05-01",
+        "files": 756,
+        "lines": 147875
+    },
+    {
+        "blanks": 15625,
+        "code": 132367,
+        "comments": 13498,
+        "complexity": 7494.0,
+        "complexity / lines": 4833.33,
+        "date": "2018-08-01",
+        "files": 845,
+        "lines": 161490
+    },
+    {
+        "blanks": 16460,
+        "code": 138283,
+        "comments": 14013,
+        "complexity": 7773.0,
+        "complexity / lines": 5493.37,
+        "date": "2018-09-01",
+        "files": 877,
+        "lines": 168756
+    },
+    {
+        "blanks": 17148,
+        "code": 143969,
+        "comments": 14489,
+        "complexity": 8042.0,
+        "complexity / lines": 5600.63,
+        "date": "2018-10-01",
+        "files": 904,
+        "lines": 175606
+    },
+    {
+        "blanks": 18076,
+        "code": 151801,
+        "comments": 15401,
+        "complexity": 8561.0,
+        "complexity / lines": 5772.99,
+        "date": "2018-11-01",
+        "files": 929,
+        "lines": 185278
+    },
+    {
+        "blanks": 18797,
+        "code": 157366,
+        "comments": 16242,
+        "complexity": 8905.0,
+        "complexity / lines": 6330.81,
+        "date": "2018-12-01",
+        "files": 998,
+        "lines": 192405
+    },
+    {
+        "blanks": 19364,
+        "code": 161775,
+        "comments": 16494,
+        "complexity": 9224.0,
+        "complexity / lines": 6537.64,
+        "date": "2019-02-01",
+        "files": 1010,
+        "lines": 197633
+    },
+    {
+        "blanks": 19888,
+        "code": 168796,
+        "comments": 17103,
+        "complexity": 9529.0,
+        "complexity / lines": 6629.92,
+        "date": "2019-03-01",
+        "files": 1023,
+        "lines": 205787
+    },
+    {
+        "blanks": 1964,
+        "code": 12903,
+        "comments": 941,
+        "complexity": 967.0,
+        "complexity / lines": 623.63,
+        "date": "2019-04-01",
+        "files": 177,
+        "lines": 15808
+    },
+    {
+        "blanks": 3001,
+        "code": 21189,
+        "comments": 2507,
+        "complexity": 1549.0,
+        "complexity / lines": 769.72,
+        "date": "2019-05-01",
+        "files": 210,
+        "lines": 26697
+    },
+    {
+        "blanks": 3527,
+        "code": 23452,
+        "comments": 2443,
+        "complexity": 1685.0,
+        "complexity / lines": 901.18,
+        "date": "2019-06-01",
+        "files": 235,
+        "lines": 29422
+    },
+    {
+        "blanks": 23777,
+        "code": 198129,
+        "comments": 19616,
+        "complexity": 11381.0,
+        "complexity / lines": 7486.16,
+        "date": "2019-07-01",
+        "files": 1095,
+        "lines": 241522
+    },
+    {
+        "blanks": 24191,
+        "code": 200849,
+        "comments": 19955,
+        "complexity": 11496.0,
+        "complexity / lines": 7510.41,
+        "date": "2019-08-01",
+        "files": 1110,
+        "lines": 244995
+    },
+    {
+        "blanks": 30776,
+        "code": 244557,
+        "comments": 25454,
+        "complexity": 14756.0,
+        "complexity / lines": 9274.66,
+        "date": "2019-10-01",
+        "files": 1488,
+        "lines": 300787
+    }
+]
