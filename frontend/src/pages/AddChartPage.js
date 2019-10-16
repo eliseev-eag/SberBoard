@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, makeStyles, Paper, Typography } from '@material-ui/core';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 const data = [
   {
@@ -51,6 +51,10 @@ const useStyles = makeStyles(theme => ({
   chartPaper: {
     padding: theme.spacing(2),
   },
+  chartHeader: {
+    color: theme.palette.primary.main,
+    fontSize: 18,
+  },
 }));
 
 const AddChartPage = () => {
@@ -60,28 +64,28 @@ const AddChartPage = () => {
     <Grid container xs={12}>
       <Grid item xs={12} md={6}>
         <Paper className={styles.chartPaper}>
-          <Typography align="center" color="textPrimary" gutterBottom component="h5">
+          <Typography align="center" color="textPrimary" gutterBottom component="h5" className={styles.chartHeader}>
             Line chart
           </Typography>
-          <LineChart
-            width={500}
-            height={300}
-            data={data}
-            margin={{
-              top: 5,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-            <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-          </LineChart>
+          <ResponsiveContainer width="100%" height={300}>
+            <LineChart
+              data={data}
+              margin={{
+                top: 5,
+                right: 30,
+                left: 20,
+                bottom: 5,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
+              <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+            </LineChart>
+          </ResponsiveContainer>
         </Paper>
       </Grid>
     </Grid>
