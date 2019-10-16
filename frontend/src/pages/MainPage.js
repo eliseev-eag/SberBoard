@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import { Fab, Grid, Paper, Typography, makeStyles } from '@material-ui/core';
 import { Add } from '@material-ui/icons';
+import { addChartRoute } from '../routes';
 
 const useStyles = makeStyles(theme => ({
   fab: {
@@ -21,7 +23,7 @@ const MainPage = () => {
 
   return (
     <>
-      <Fab color="primary" aria-label="add" className={classes.fab}>
+      <Fab color="primary" aria-label="add" className={classes.fab} component={RouterLink} to={addChartRoute}>
         <Add />
       </Fab>
       {Array(10)

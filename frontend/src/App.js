@@ -1,7 +1,9 @@
 import React from 'react';
-import { AppBar, Toolbar, IconButton, Button, Container, Grid, makeStyles, CssBaseline } from '@material-ui/core';
+import { HashRouter, Switch, Route } from 'react-router-dom';
+import { AppBar, Toolbar, IconButton, Container, Grid, makeStyles, CssBaseline } from '@material-ui/core';
 import { Menu } from '@material-ui/icons';
-import MainPage from './MainPage';
+import { AddChartPage, MainPage } from './pages';
+import { addChartRoute } from './routes';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -32,7 +34,7 @@ const App = () => {
   const classes = useStyles();
 
   return (
-    <>
+    <HashRouter>
       <CssBaseline />
       <div className={classes.root}>
         <AppBar position="static">
@@ -40,19 +42,21 @@ const App = () => {
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
               <Menu />
             </IconButton>
-            <div className={classes.grow} />
-            <Button color="inherit">Login</Button>
+            <div className={classes.grow}></div>
           </Toolbar>
         </AppBar>
         <main className={classes.content}>
           <Container maxWidth="lg" className={classes.container}>
             <Grid container spacing={3}>
-              <MainPage />
+              <Switch>
+                <Route path={`/${addChartRoute}`} component={AddChartPage} />
+                <Route path="/" component={MainPage} />
+              </Switch>
             </Grid>
           </Container>
         </main>
       </div>
-    </>
+    </HashRouter>
   );
 };
 
