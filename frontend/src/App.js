@@ -1,8 +1,22 @@
-import React from 'react';
-import { Switch, Route, useLocation } from 'react-router-dom';
-import { AppBar, Toolbar, Typography, IconButton, Container, Grid, makeStyles } from '@material-ui/core';
-import { Menu } from '@material-ui/icons';
+import React, { useState } from 'react';
+import { Link as RouterLink, Switch, Route, useLocation } from 'react-router-dom';
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  IconButton,
+  Container,
+  Grid,
+  makeStyles,
+  Drawer,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+} from '@material-ui/core';
+import { Home, Menu } from '@material-ui/icons';
 import pages from './pagesMap';
+import { homeRoute } from './routes';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -13,6 +27,7 @@ const useStyles = makeStyles(theme => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
+  menu: { minWidth: 250 },
   title: {
     flexGrow: 1,
     textAlign: 'center',
@@ -28,15 +43,30 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const App = () => {
+  const [showMenu, setShowMenu] = useState(false);
   const classes = useStyles();
   const { pathname } = useLocation();
   const currentPage = pages.find(({ route }) => pathname.includes(route));
+
+  const closeDrawer = event => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setShowMenu(false);
+  };
 
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+          <IconButton
+            edge="start"
+            className={classes.menuButton}
+            color="inherit"
+            aria-label="menu"
+            onClick={() => setShowMenu(true)}
+          >
             <Menu />
           </IconButton>
           <Typography component="h1" className={classes.title}>
@@ -44,6 +74,16 @@ const App = () => {
           </Typography>
         </Toolbar>
       </AppBar>
+      <Drawer open={showMenu} onClose={() => setShowMenu(false)}>
+        <List className={classes.menu} onClick={closeDrawer} onKeyDown={closeDrawer}>
+          <ListItem button component={RouterLink} to={homeRoute}>
+            <ListItemIcon>
+              <Home />
+            </ListItemIcon>
+            <ListItemText primary="SberBoard" />
+          </ListItem>
+        </List>
+      </Drawer>
       <main className={classes.content}>
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
