@@ -12,9 +12,6 @@ const useStyles = makeStyles(theme => ({
   },
   paper: {
     padding: theme.spacing(2),
-    display: 'flex',
-    overflow: 'auto',
-    flexDirection: 'column',
   },
 }));
 
@@ -26,18 +23,11 @@ const MainPage = () => {
       <Fab color="primary" aria-label="add" className={classes.fab} component={RouterLink} to={addChartRoute}>
         <Add />
       </Fab>
-      {Array(10)
-        .fill(0)
-        .map((_, index) => (
-          <Grid item xs={12} key={index}>
-            <Paper className={classes.paper}>
-              <Typography color="primary" gutterBottom>
-                Header
-              </Typography>
-              <div>Здесь мог быть ваш контент</div>
-            </Paper>
-          </Grid>
-        ))}
+      <Grid item container xs={12} direction="column" justify="center" alignItems="center">
+        <Paper className={classes.paper}>
+          <Typography color="primary">Для начала работы добавьте новый график</Typography>
+        </Paper>
+      </Grid>
     </>
   );
 };
