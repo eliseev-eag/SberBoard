@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11655",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11655/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11655/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11655/events",
+  "html_url": "https://github.com/facebook/react/pull/11655",
+  "id": 276718512,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTU0NjIwMzMy",
+  "number": 11655,
+  "title": "Don't reset error codes on CI build",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-11-25T02:08:00Z",
+  "updated_at": "2017-11-25T02:23:18Z",
+  "closed_at": "2017-11-25T02:23:13Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11655",
+    "html_url": "https://github.com/facebook/react/pull/11655",
+    "diff_url": "https://github.com/facebook/react/pull/11655.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11655.patch"
+  },
+  "body": "I think this was added in #8486 but if I'm not mistaken it causes issues after my changes in #11633.\r\n\r\nSpecifically, prod tests *on bundles* now run after build and actually *depend* on the up-to-date error code file being available. Otherwise any newly added invariants can't be [\"decoded\"](https://github.com/facebook/react/blob/f0ba6bbf200e301e97c3170f42f12bd2d20fd967/scripts/jest/setupTests.js#L57-L75), as they're not in the committed error code file.\r\n\r\nI noticed this in https://github.com/facebook/react/pull/11652. Will see if the same fix there works. If it does, I'll merge this.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

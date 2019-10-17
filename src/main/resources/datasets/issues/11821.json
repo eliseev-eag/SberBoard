@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11821",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11821/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11821/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11821/events",
+  "html_url": "https://github.com/facebook/react/pull/11821",
+  "id": 280747753,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTU3NDAxMDg5",
+  "number": 11821,
+  "title": "Deduplication of warn when selected is set on <option>",
+  "user": {
+    "login": "watadarkstar",
+    "id": 3059371,
+    "node_id": "MDQ6VXNlcjMwNTkzNzE=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/3059371?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/watadarkstar",
+    "html_url": "https://github.com/watadarkstar",
+    "followers_url": "https://api.github.com/users/watadarkstar/followers",
+    "following_url": "https://api.github.com/users/watadarkstar/following{/other_user}",
+    "gists_url": "https://api.github.com/users/watadarkstar/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/watadarkstar/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/watadarkstar/subscriptions",
+    "organizations_url": "https://api.github.com/users/watadarkstar/orgs",
+    "repos_url": "https://api.github.com/users/watadarkstar/repos",
+    "events_url": "https://api.github.com/users/watadarkstar/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/watadarkstar/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2017-12-09T19:33:46Z",
+  "updated_at": "2017-12-10T15:01:36Z",
+  "closed_at": "2017-12-10T02:06:42Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11821",
+    "html_url": "https://github.com/facebook/react/pull/11821",
+    "diff_url": "https://github.com/facebook/react/pull/11821.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11821.patch"
+  },
+  "body": "Deduplication of warning when selected is set on `<option>` instead of `<select>`. Closes: #11795 \r\n\r\n**Test check list:**\r\n\r\n- [x] Ran `yarn`\r\n- [x] Wrote a failing test\r\n- [x] Fixed failing test\r\n- [x] Passed all tests with `yarn test`, `yarn test-prod`\r\n- [x] Ran `yarn prettier`\r\n- [x] Ran `yarn lint`\r\n- [x] Ran `yarn flow`\r\n- [x] Completed CLA",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

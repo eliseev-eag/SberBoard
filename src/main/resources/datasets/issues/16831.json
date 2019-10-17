@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16831",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16831/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16831/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16831/events",
+  "html_url": "https://github.com/facebook/react/issues/16831",
+  "id": 495643128,
+  "node_id": "MDU6SXNzdWU0OTU2NDMxMjg=",
+  "number": 16831,
+  "title": "Plans for handling `hidden` differently",
+  "user": {
+    "login": "eps1lon",
+    "id": 12292047,
+    "node_id": "MDQ6VXNlcjEyMjkyMDQ3",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/12292047?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/eps1lon",
+    "html_url": "https://github.com/eps1lon",
+    "followers_url": "https://api.github.com/users/eps1lon/followers",
+    "following_url": "https://api.github.com/users/eps1lon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/eps1lon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/eps1lon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/eps1lon/subscriptions",
+    "organizations_url": "https://api.github.com/users/eps1lon/orgs",
+    "repos_url": "https://api.github.com/users/eps1lon/repos",
+    "events_url": "https://api.github.com/users/eps1lon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/eps1lon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 1205087127,
+      "node_id": "MDU6TGFiZWwxMjA1MDg3MTI3",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Concurrent%20Mode",
+      "name": "Component: Concurrent Mode",
+      "color": "ffccd3",
+      "default": false
+    },
+    {
+      "id": 40929155,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1NQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Question",
+      "name": "Type: Question",
+      "color": "cc317c",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-09-19T08:14:31Z",
+  "updated_at": "2019-09-19T11:32:28Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "In one of talks about react Suspense [dan mentioned](https://youtu.be/6g3g0Q_XVb4?t=1650) that `<div hidden={true} />` would be deprioritized by react but still rendered if it has the time.\r\n\r\nIn his example he used it to prerender content that was seemingly part of another page. However in another talk by andrew it was used to [prerender tabs](https://youtu.be/ByBPyMBTzM0?t=1742). The second showcase is incorrect according to the [living standard for this attribute](https://html.spec.whatwg.org/multipage/interaction.html#the-hidden-attribute):\r\n\r\n> The hidden attribute must not be used to hide content that could legitimately be shown in another presentation. For example, it is incorrect to use hidden to hide panels in a tabbed dialog, because the tabbed interface is merely a kind of overflow presentation — one could equally well just show all the form controls in one big page with a scrollbar.\r\n\r\nI don't necessarily agree with the reasoning given in the spec but I'm more interested if the core team is aware of this conflict and if there are plans to resolve this somehow or simply ignore it.",
+  "closed_by": null
+}

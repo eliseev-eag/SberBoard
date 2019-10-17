@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8617",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8617/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8617/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8617/events",
+  "html_url": "https://github.com/facebook/react/pull/8617",
+  "id": 197004520,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTg5ODQwODc=",
+  "number": 8617,
+  "title": "NOT FOR MERGE: ./scripts/fiber/find-errors to make future Umbrella task easier",
+  "user": {
+    "login": "iamdustan",
+    "id": 227879,
+    "node_id": "MDQ6VXNlcjIyNzg3OQ==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/227879?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/iamdustan",
+    "html_url": "https://github.com/iamdustan",
+    "followers_url": "https://api.github.com/users/iamdustan/followers",
+    "following_url": "https://api.github.com/users/iamdustan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/iamdustan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/iamdustan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/iamdustan/subscriptions",
+    "organizations_url": "https://api.github.com/users/iamdustan/orgs",
+    "repos_url": "https://api.github.com/users/iamdustan/repos",
+    "events_url": "https://api.github.com/users/iamdustan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/iamdustan/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-12-21T18:43:15Z",
+  "updated_at": "2017-04-21T14:17:08Z",
+  "closed_at": "2017-04-21T14:17:08Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8617",
+    "html_url": "https://github.com/facebook/react/pull/8617",
+    "diff_url": "https://github.com/facebook/react/pull/8617.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8617.patch"
+  },
+  "body": "In #7925 there is a task to:\r\n\r\n> Ensure we replace errors with invariant calls and they have sensible\r\n> messages\r\n\r\nWhile it is likely a bit premature to begin that work, this script will\r\nmake it easier to find and replace the exact call sites to manage.\r\n\r\nAt the time of writing there are 42 `ThrowStatement`s. It looks like there are a few outliers in `src/test`, but most of those are from `src/renderers/shared/fiber/*.js`\r\n\r\nUsage:\r\n``` sh\r\n$ ./scripts/fiber/find-errors\r\n\r\n...lots of output...\r\n\r\nsrc/renderers/shared/fiber/ReactFiberScheduler.js#921:\r\n  throw new Error('No error for given unit of work.');\r\n\r\nsrc/renderers/shared/fiber/ReactFiberScheduler.js#940:\r\n  throw new Error('Invalid type of work.');\r\n\r\nsrc/renderers/shared/utils/ReactErrorUtils.js#55:\r\n  throw error;\r\n\r\nAll done.\r\nResults:\r\n6 errors\r\n0 unmodified\r\n380 skipped\r\n0 ok\r\nStats:\r\nerror: 42\r\nTime elapsed: 4.031seconds\r\n42 throw statements to to convert to `invariant`\r\n\r\n```\r\n\r\n``` sh\r\n$ ./scripts/fiber/find-errors --quiet\r\n\r\n...lots of output...\r\n\r\nsrc/renderers/shared/fiber/ReactFiberScheduler.js#780:\r\nsrc/renderers/shared/fiber/ReactFiberScheduler.js#785:\r\nsrc/renderers/shared/fiber/ReactFiberScheduler.js#921:\r\nsrc/renderers/shared/fiber/ReactFiberScheduler.js#940:\r\nsrc/renderers/shared/utils/ReactErrorUtils.js#55:\r\nAll done.\r\nResults:\r\n6 errors\r\n0 unmodified\r\n380 skipped\r\n0 ok\r\nStats:\r\nerror: 42\r\nTime elapsed: 3.728seconds\r\n42 throw statements to to convert to `invariant`\r\n```",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

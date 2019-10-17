@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3777",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3777/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3777/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3777/events",
+  "html_url": "https://github.com/facebook/react/pull/3777",
+  "id": 71745876,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzQzMjUzMzM=",
+  "number": 3777,
+  "title": "Deprecate react-tools",
+  "user": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 71502270,
+      "node_id": "MDU6TGFiZWw3MTUwMjI3MA==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Build%20Infrastructure",
+      "name": "Component: Build Infrastructure",
+      "color": "f9d0c4",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2015-04-29T00:37:27Z",
+  "updated_at": "2015-06-16T06:42:56Z",
+  "closed_at": "2015-05-05T18:06:15Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3777",
+    "html_url": "https://github.com/facebook/react/pull/3777",
+    "diff_url": "https://github.com/facebook/react/pull/3777.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3777.patch"
+  },
+  "body": "It's time to just use jstransform.\n\nStill a bit to do here (including testing it). I think it would be good to actually redo some of the build process around packaging things for npm.\n\ncf. #3743\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

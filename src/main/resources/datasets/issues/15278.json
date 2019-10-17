@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15278",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15278/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15278/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15278/events",
+  "html_url": "https://github.com/facebook/react/issues/15278",
+  "id": 427453460,
+  "node_id": "MDU6SXNzdWU0Mjc0NTM0NjA=",
+  "number": 15278,
+  "title": "useMemo / useCallback cache busting opt out",
+  "user": {
+    "login": "alexreardon",
+    "id": 2182637,
+    "node_id": "MDQ6VXNlcjIxODI2Mzc=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/2182637?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/alexreardon",
+    "html_url": "https://github.com/alexreardon",
+    "followers_url": "https://api.github.com/users/alexreardon/followers",
+    "following_url": "https://api.github.com/users/alexreardon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/alexreardon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/alexreardon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/alexreardon/subscriptions",
+    "organizations_url": "https://api.github.com/users/alexreardon/orgs",
+    "repos_url": "https://api.github.com/users/alexreardon/repos",
+    "events_url": "https://api.github.com/users/alexreardon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/alexreardon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 26,
+  "created_at": "2019-03-31T22:12:07Z",
+  "updated_at": "2019-09-10T06:28:34Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "According to the `React` docs, `useMemo` and `useCallback` are subject to cache purging:\r\n\r\n> You may rely on useMemo as a performance optimization, not as a semantic guarantee. In the future, React may choose to “forget” some previously memoized values and recalculate them on next render, e.g. to free memory for offscreen components. Write your code so that it still works without useMemo — and then add it to optimize performance. [source](https://reactjs.org/docs/hooks-reference.html#usememo)\r\n\r\nI am working on moving `react-beautiful-dnd` over to using hooks https://github.com/atlassian/react-beautiful-dnd/issues/871. I have the whole thing working and tested 👍 \r\n\r\nIt leans quite heavily on `useMemo` and `useCallback` right now. If the memoization cache for is cleared for a dragging item, the result will be a cancelled drag. This is not good. \r\n\r\nMy understanding is that `useMemo` and `useCallback` are currently *not* subject to cache purging based on this language:\r\n\r\n> In the **future**, React may choose to “forget”\r\n\r\n**Request 1**: Is it possible to opt-out of this cache purging? Perhaps a third `options` argument to `useMemo` and `useCallback`:\r\n\r\n```js\r\nconst value = useMemo(() => ({ hello: 'world' }), [], { usePersistantCache: true });\r\n```\r\n\r\n(Naming up for grabs, but this is just the big idea)\r\n\r\nA work around is to use a custom memoization toolset such as a `useMemoOne` which reimplements `useMemo` and `useCallback` just using `ref`s [see example](https://twitter.com/alexandereardon/status/1108488559881641986)\r\n\r\nI am keen to avoid the work around if possible.\r\n\r\n**Request 2**: While *request 1* is favourable, it would be good to know the exact conditions in which the memoization caches are purged",
+  "closed_by": null
+}

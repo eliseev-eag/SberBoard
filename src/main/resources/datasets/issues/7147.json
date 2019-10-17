@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7147",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7147/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7147/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7147/events",
+  "html_url": "https://github.com/facebook/react/pull/7147",
+  "id": 162981514,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzU2ODgxNDM=",
+  "number": 7147,
+  "title": "optimize update function efficiency",
+  "user": {
+    "login": "zwhitchcox",
+    "id": 4328800,
+    "node_id": "MDQ6VXNlcjQzMjg4MDA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/4328800?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zwhitchcox",
+    "html_url": "https://github.com/zwhitchcox",
+    "followers_url": "https://api.github.com/users/zwhitchcox/followers",
+    "following_url": "https://api.github.com/users/zwhitchcox/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zwhitchcox/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zwhitchcox/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zwhitchcox/subscriptions",
+    "organizations_url": "https://api.github.com/users/zwhitchcox/orgs",
+    "repos_url": "https://api.github.com/users/zwhitchcox/repos",
+    "events_url": "https://api.github.com/users/zwhitchcox/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zwhitchcox/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2016-06-29T17:25:05Z",
+  "updated_at": "2016-06-29T18:36:50Z",
+  "closed_at": "2016-06-29T18:36:50Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7147",
+    "html_url": "https://github.com/facebook/react/pull/7147",
+    "diff_url": "https://github.com/facebook/react/pull/7147.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7147.patch"
+  },
+  "body": "Similar to #7141 \n",
+  "closed_by": {
+    "login": "zwhitchcox",
+    "id": 4328800,
+    "node_id": "MDQ6VXNlcjQzMjg4MDA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/4328800?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zwhitchcox",
+    "html_url": "https://github.com/zwhitchcox",
+    "followers_url": "https://api.github.com/users/zwhitchcox/followers",
+    "following_url": "https://api.github.com/users/zwhitchcox/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zwhitchcox/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zwhitchcox/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zwhitchcox/subscriptions",
+    "organizations_url": "https://api.github.com/users/zwhitchcox/orgs",
+    "repos_url": "https://api.github.com/users/zwhitchcox/repos",
+    "events_url": "https://api.github.com/users/zwhitchcox/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zwhitchcox/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

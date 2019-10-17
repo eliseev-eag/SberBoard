@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16663",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16663/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16663/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16663/events",
+  "html_url": "https://github.com/facebook/react/pull/16663",
+  "id": 489495398,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzE0MzAwODcw",
+  "number": 16663,
+  "title": "Track \"pending\" and \"suspended\" ranges",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-09-05T02:36:43Z",
+  "updated_at": "2019-09-11T03:08:23Z",
+  "closed_at": "2019-09-11T03:08:23Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16663",
+    "html_url": "https://github.com/facebook/react/pull/16663",
+    "diff_url": "https://github.com/facebook/react/pull/16663.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16663.patch"
+  },
+  "body": "A FiberRoot can have pending work at many distinct priorities. (Note: we refer to these levels as \"expiration times\" to distinguish the concept from Scheduler's notion of priority levels, which represent broad categories of work. React expiration times are more granular. They're more like a concurrent thread ID, which also happens to correspond to a moment on a timeline. It's an overloaded concept and I'm handwaving over some of the details.)\r\n\r\nGiven a root, there's no convenient way to read all the pending levels in the entire tree, i.e. there's no single queue-like structure that tracks all the levels, because that granularity of information is not needed by our algorithms. Instead we track the subset of information that we actually need — most importantly, the highest priority level that exists in the entire tree.\r\n\r\nAside from that, the other information we track includes the range of pending levels that are known to be suspended, and therefore should not be worked on.\r\n\r\nThis is a refactor of how that information is tracked, and what each field represents:\r\n\r\n- A *pending* level is work that is unfinished, or not yet committed. This includes work that is suspended from committing. `firstPendingTime` and `lastPendingTime` represent the range of pending work. (Previously, \"pending\" was the same as \"not suspended.\")\r\n- A *suspended* level is work that did not complete because data was missing. `firstSuspendedTime` and `lastSuspendedTime` represent the range of suspended work. It is a subset of the pending range. (These fields are new to this commit.)\r\n- `nextAfterSuspendedTime` represents the next known level that comes after the suspended range.\r\n\r\nThis commit doesn't change much in terms of observable behavior. The one change is that, when a level is suspended, React will continue working on the next known level instead of jumping straight to the last pending level. Subsequent commits will use this new structure for a more substantial refactor for how tasks are scheduled per root.",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

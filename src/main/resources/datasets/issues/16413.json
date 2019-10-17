@@ -1,0 +1,91 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16413",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16413/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16413/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16413/events",
+  "html_url": "https://github.com/facebook/react/issues/16413",
+  "id": 481491183,
+  "node_id": "MDU6SXNzdWU0ODE0OTExODM=",
+  "number": 16413,
+  "title": "Dev tools does not respect zoom level on firefox OSX",
+  "user": {
+    "login": "andyhmltn",
+    "id": 933505,
+    "node_id": "MDQ6VXNlcjkzMzUwNQ==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/933505?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/andyhmltn",
+    "html_url": "https://github.com/andyhmltn",
+    "followers_url": "https://api.github.com/users/andyhmltn/followers",
+    "following_url": "https://api.github.com/users/andyhmltn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/andyhmltn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/andyhmltn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/andyhmltn/subscriptions",
+    "organizations_url": "https://api.github.com/users/andyhmltn/orgs",
+    "repos_url": "https://api.github.com/users/andyhmltn/repos",
+    "events_url": "https://api.github.com/users/andyhmltn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/andyhmltn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    },
+    {
+      "id": 717031390,
+      "node_id": "MDU6TGFiZWw3MTcwMzEzOTA=",
+      "url": "https://api.github.com/repos/facebook/react/labels/good%20first%20issue",
+      "name": "good first issue",
+      "color": "6ce26a",
+      "default": true
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 14,
+  "created_at": "2019-08-16T07:58:16Z",
+  "updated_at": "2019-09-03T12:38:04Z",
+  "closed_at": "2019-09-03T12:38:04Z",
+  "author_association": "NONE",
+  "body": "Currently when using the react dev tools on Firefox OSX, I am unable to change the current zoom level. The default zoom level is quite small so even with good eyesight, I struggle to read it on a high resolution display.\r\n\r\nIt is possible to adjust the zoom level of the Firefox dev tools as a whole, by focusing the panel and using CMD +/-. However the React dev tools does not respect this and has no option to switch the zoom level manually. As a result, the react dev tools extension is unusable on Firefox. I would imagine this is a bigger issue for anyone with poor eyesight.\r\n\r\nCan we please add some accessibility options or fix this behaviour?",
+  "closed_by": {
+    "login": "andyhmltn",
+    "id": 933505,
+    "node_id": "MDQ6VXNlcjkzMzUwNQ==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/933505?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/andyhmltn",
+    "html_url": "https://github.com/andyhmltn",
+    "followers_url": "https://api.github.com/users/andyhmltn/followers",
+    "following_url": "https://api.github.com/users/andyhmltn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/andyhmltn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/andyhmltn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/andyhmltn/subscriptions",
+    "organizations_url": "https://api.github.com/users/andyhmltn/orgs",
+    "repos_url": "https://api.github.com/users/andyhmltn/repos",
+    "events_url": "https://api.github.com/users/andyhmltn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/andyhmltn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15543",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15543/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15543/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15543/events",
+  "html_url": "https://github.com/facebook/react/issues/15543",
+  "id": 438812645,
+  "node_id": "MDU6SXNzdWU0Mzg4MTI2NDU=",
+  "number": 15543,
+  "title": "Understanding `act` behaviour",
+  "user": {
+    "login": "mhuebert",
+    "id": 165223,
+    "node_id": "MDQ6VXNlcjE2NTIyMw==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/165223?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mhuebert",
+    "html_url": "https://github.com/mhuebert",
+    "followers_url": "https://api.github.com/users/mhuebert/followers",
+    "following_url": "https://api.github.com/users/mhuebert/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mhuebert/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mhuebert/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mhuebert/subscriptions",
+    "organizations_url": "https://api.github.com/users/mhuebert/orgs",
+    "repos_url": "https://api.github.com/users/mhuebert/repos",
+    "events_url": "https://api.github.com/users/mhuebert/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mhuebert/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 139734344,
+      "node_id": "MDU6TGFiZWwxMzk3MzQzNDQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Test%20Utils",
+      "name": "Component: Test Utils",
+      "color": "eb6420",
+      "default": false
+    },
+    {
+      "id": 40929155,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1NQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Question",
+      "name": "Type: Question",
+      "color": "cc317c",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2019-04-30T14:36:46Z",
+  "updated_at": "2019-09-04T11:28:22Z",
+  "closed_at": "2019-09-04T11:28:22Z",
+  "author_association": "NONE",
+  "body": " I have been trying to use `act` for the first time, and having some issues, and so I'm wondering if my expectations are wrong about what it is supposed to do, or if I am \"doing it wrong\".\r\n\r\n**What is the current behavior?**\r\n\r\nThe only way I can observe the results of state changes I initiate is by using a timeout.\r\n\r\n**Paste the link to your JSFiddle or CodeSandbox example below:**\r\n\r\nhttps://codesandbox.io/s/k5zmln6w83?expanddevtools=1&fontsize=14&hidenavigation=1\r\n\r\n**What is the expected behavior?**\r\n\r\nWhat I expect is that by wrapping a state change or render operation in `act`, all of the resulting state changes / side-effects / re-renders will be complete by the time `act` returns, so that the operation appears (or is coerced to be) synchronous. \r\n\r\nI created an example (https://codesandbox.io/s/k5zmln6w83?expanddevtools=1&fontsize=14&hidenavigation=1) wherein I render a view via `unstable_ConcurrentMode`. In the view, I create a `useState` hook with a value of `0`. After the view is rendered, I use that hook's setter to change its state to `1`.\r\n\r\nBelow is a log of the [steps I take](https://codesandbox.io/s/k5zmln6w83?expanddevtools=1&fontsize=14&hidenavigation=1), showing three values at each time: `seenByRender`, the last state-value that appeared within the render body; `calculated`, the last value returned from my state-update function; and `seenByEffect`, the last value observed from a `useEffect` I create in the view. \r\n\r\n```\r\n1. before act/render:   seenByRender: null, calculated: null, seenByEffect: null\r\n2. after act/render:    seenByRender: 0,    calculated: null, seenByEffect: 0\r\n3. ---incrementing with act/setState---\r\n4. after act/increment: seenByRender: 0,    calculated: 1,    seenByEffect: 0\r\n5. after timeout:       seenByRender: 1,    calculated: 1,    seenByEffect: 1\r\n```\r\n\r\nWhat I am wanting/expecting is for step 4 to look like step 5, ie, I can somehow test the full consequences of my setState call.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\n16.8.6, using unstable_ConcurrentMode\r\n",
+  "closed_by": {
+    "login": "threepointone",
+    "id": 18808,
+    "node_id": "MDQ6VXNlcjE4ODA4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/18808?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/threepointone",
+    "html_url": "https://github.com/threepointone",
+    "followers_url": "https://api.github.com/users/threepointone/followers",
+    "following_url": "https://api.github.com/users/threepointone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/threepointone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/threepointone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/threepointone/subscriptions",
+    "organizations_url": "https://api.github.com/users/threepointone/orgs",
+    "repos_url": "https://api.github.com/users/threepointone/repos",
+    "events_url": "https://api.github.com/users/threepointone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/threepointone/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

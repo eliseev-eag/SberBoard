@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2577",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2577/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2577/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2577/events",
+  "html_url": "https://github.com/facebook/react/issues/2577",
+  "id": 49619915,
+  "node_id": "MDU6SXNzdWU0OTYxOTkxNQ==",
+  "number": 2577,
+  "title": "propTypes property (current) vs. getPropTypes function (proposed)",
+  "user": {
+    "login": "jordansexton",
+    "id": 1173161,
+    "node_id": "MDQ6VXNlcjExNzMxNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1173161?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jordansexton",
+    "html_url": "https://github.com/jordansexton",
+    "followers_url": "https://api.github.com/users/jordansexton/followers",
+    "following_url": "https://api.github.com/users/jordansexton/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jordansexton/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jordansexton/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jordansexton/subscriptions",
+    "organizations_url": "https://api.github.com/users/jordansexton/orgs",
+    "repos_url": "https://api.github.com/users/jordansexton/repos",
+    "events_url": "https://api.github.com/users/jordansexton/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jordansexton/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 139653724,
+      "node_id": "MDU6TGFiZWwxMzk2NTM3MjQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Core%20Utilities",
+      "name": "Component: Core Utilities",
+      "color": "c5def5",
+      "default": false
+    },
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2014-11-20T21:23:43Z",
+  "updated_at": "2015-02-27T00:57:29Z",
+  "closed_at": "2015-02-27T00:57:29Z",
+  "author_association": "NONE",
+  "body": "As `propTypes` are only used in development mode, it seems like it would be preferable to only evaluate them as the result of a method call returning the object instead of the current object literal declared on the class. I imagine this isn't a particularly expensive operation, but if you're using shapes, this results in a lot of type declaration evaluations that are never used outside of development.\n\nCurrent\n\n``` javascript\nReact.createClass({\n    propTypes: {\n        prop: React.PropTypes.shape({...}),\n        ...\n    },\n    ...\n});      \n```\n\nProposed\n\n``` javascript\nReact.createClass({\n    getPropTypes: function () {\n        return {\n            prop: React.PropTypes.shape({...}),\n            ...\n        };\n    },\n    ...\n});      \n```\n\nIs there a reason it's this way instead of the same functional convention as `getDefaultProps`, `getInitialState`, etc.?\n",
+  "closed_by": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

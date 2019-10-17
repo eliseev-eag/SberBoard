@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13596",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13596/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13596/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13596/events",
+  "html_url": "https://github.com/facebook/react/pull/13596",
+  "id": 358260159,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjE0MDc1MDUw",
+  "number": 13596,
+  "title": "Kepp calling peformWork consistent",
+  "user": {
+    "login": "NE-SmallTown",
+    "id": 18418010,
+    "node_id": "MDQ6VXNlcjE4NDE4MDEw",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/18418010?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/NE-SmallTown",
+    "html_url": "https://github.com/NE-SmallTown",
+    "followers_url": "https://api.github.com/users/NE-SmallTown/followers",
+    "following_url": "https://api.github.com/users/NE-SmallTown/following{/other_user}",
+    "gists_url": "https://api.github.com/users/NE-SmallTown/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/NE-SmallTown/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/NE-SmallTown/subscriptions",
+    "organizations_url": "https://api.github.com/users/NE-SmallTown/orgs",
+    "repos_url": "https://api.github.com/users/NE-SmallTown/repos",
+    "events_url": "https://api.github.com/users/NE-SmallTown/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/NE-SmallTown/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2018-09-08T03:30:15Z",
+  "updated_at": "2018-09-18T15:22:42Z",
+  "closed_at": "2018-09-18T14:48:19Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13596",
+    "html_url": "https://github.com/facebook/react/pull/13596",
+    "diff_url": "https://github.com/facebook/react/pull/13596.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13596.patch"
+  },
+  "body": "Because we use [performSyncWork](https://github.com/facebook/react/blob/4bcee56210bd3ab3f6440ff7313a255148e22107/packages/react-reconciler/src/ReactFiberScheduler.js#L2144) to process the Sync work, so we can just replace it here like others do",
+  "closed_by": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

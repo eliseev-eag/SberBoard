@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9954",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9954/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9954/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9954/events",
+  "html_url": "https://github.com/facebook/react/pull/9954",
+  "id": 235722894,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTI1NDg0MTM1",
+  "number": 9954,
+  "title": "Use public API in tests wherever possible",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2017-06-13T23:38:59Z",
+  "updated_at": "2017-06-14T15:03:41Z",
+  "closed_at": "2017-06-13T23:58:35Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9954",
+    "html_url": "https://github.com/facebook/react/pull/9954",
+    "diff_url": "https://github.com/facebook/react/pull/9954.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9954.patch"
+  },
+  "body": "This moves us closer to a world where we can test both DEV and PROD flat bundles (and thus more safely experiment with PROD mangling). We already have `expectDev()` which will be very handy for this.\r\n\r\nIt turned out we're already doing a good job in many places, the biggest violators are feature flags and event tests.\r\n\r\nFor now, I am changing to use public npm-like public API imports wherever possible. I left a few Stack files untouched as they'll go away. I also didn't touch feature flags which will fall away organically soon.\r\n\r\nIn places where it seems like we *might* want public API tests, I left comments instilling skepticism into the reader. The more tests we can run on bundles in the future, the better.\r\n\r\nI think that once Stack and feature flags are gone, we can start enforcing that some files \"opt into\" testing on bundles and can't introduce internal dependencies. This is future work and doesn't block this PR which just converts most cases.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

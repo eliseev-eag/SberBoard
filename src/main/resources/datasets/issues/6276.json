@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6276",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6276/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6276/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6276/events",
+  "html_url": "https://github.com/facebook/react/pull/6276",
+  "id": 141404841,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjMxMzcyNzU=",
+  "number": 6276,
+  "title": "Skip all special props when setting attributes on web components",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2016-03-16T21:16:12Z",
+  "updated_at": "2016-03-17T15:44:49Z",
+  "closed_at": "2016-03-17T15:44:40Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6276",
+    "html_url": "https://github.com/facebook/react/pull/6276",
+    "diff_url": "https://github.com/facebook/react/pull/6276.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6276.patch"
+  },
+  "body": "This was introduced as part of #6164 and approved by @spicyj but got reverted in #6243 by accident.\nI believe the web component part of it is still relevant (I should’ve split that PR to signal that):\n\n<img width=\"389\" alt=\"screen shot 2016-03-16 at 21 12 40\" src=\"https://cloud.githubusercontent.com/assets/810438/13828875/d82bb832-ebbb-11e5-9ee2-85d23fc1a347.png\">\n\nThis PR just applies the part of #6164 that is still relevant (for web components only).\n\nTest plan: when `dangerouslySetInnerHTML` is specified, it is no longer copied as an attribute.\n\n<img width=\"207\" alt=\"screen shot 2016-03-16 at 21 15 25\" src=\"https://cloud.githubusercontent.com/assets/810438/13828940/3a652178-ebbc-11e5-8eec-1bf0968acc49.png\">\n## Reviewers\n\n@sebmarkbage \n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

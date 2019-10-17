@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10096",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10096/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10096/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10096/events",
+  "html_url": "https://github.com/facebook/react/pull/10096",
+  "id": 240051800,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTI4NTQ0MDc0",
+  "number": 10096,
+  "title": "Remove functions marked as undocumented and unused",
+  "user": {
+    "login": "BenBrostoff",
+    "id": 6991348,
+    "node_id": "MDQ6VXNlcjY5OTEzNDg=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/6991348?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/BenBrostoff",
+    "html_url": "https://github.com/BenBrostoff",
+    "followers_url": "https://api.github.com/users/BenBrostoff/followers",
+    "following_url": "https://api.github.com/users/BenBrostoff/following{/other_user}",
+    "gists_url": "https://api.github.com/users/BenBrostoff/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/BenBrostoff/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/BenBrostoff/subscriptions",
+    "organizations_url": "https://api.github.com/users/BenBrostoff/orgs",
+    "repos_url": "https://api.github.com/users/BenBrostoff/repos",
+    "events_url": "https://api.github.com/users/BenBrostoff/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/BenBrostoff/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2017-07-03T02:09:42Z",
+  "updated_at": "2017-10-04T23:41:30Z",
+  "closed_at": "2017-10-04T23:41:30Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10096",
+    "html_url": "https://github.com/facebook/react/pull/10096",
+    "diff_url": "https://github.com/facebook/react/pull/10096.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10096.patch"
+  },
+  "body": "Hey @gaearon - saw you [added these TODOs in this commit](https://github.com/facebook/react/commit/3e2680411efa3b478afc1f26057f417c7aae7915) about 8 months ago. Figured I'd open a PR if this can now be completed.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

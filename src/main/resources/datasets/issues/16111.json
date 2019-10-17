@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16111",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16111/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16111/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16111/events",
+  "html_url": "https://github.com/facebook/react/pull/16111",
+  "id": 466879584,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjk2NjM5NTA3",
+  "number": 16111,
+  "title": "Fix/polish code",
+  "user": {
+    "login": "Soyn",
+    "id": 7734046,
+    "node_id": "MDQ6VXNlcjc3MzQwNDY=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/7734046?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Soyn",
+    "html_url": "https://github.com/Soyn",
+    "followers_url": "https://api.github.com/users/Soyn/followers",
+    "following_url": "https://api.github.com/users/Soyn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Soyn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Soyn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Soyn/subscriptions",
+    "organizations_url": "https://api.github.com/users/Soyn/orgs",
+    "repos_url": "https://api.github.com/users/Soyn/repos",
+    "events_url": "https://api.github.com/users/Soyn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Soyn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-07-11T13:02:53Z",
+  "updated_at": "2019-07-12T18:07:25Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16111",
+    "html_url": "https://github.com/facebook/react/pull/16111",
+    "diff_url": "https://github.com/facebook/react/pull/16111.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16111.patch"
+  },
+  "body": "Alternate node will always be update as the condition is satisfied. So it’s not necessary to write the same logic twice.\r\n",
+  "closed_by": null
+}

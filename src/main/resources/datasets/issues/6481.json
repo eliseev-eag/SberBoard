@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6481",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6481/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6481/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6481/events",
+  "html_url": "https://github.com/facebook/react/issues/6481",
+  "id": 147366151,
+  "node_id": "MDU6SXNzdWUxNDczNjYxNTE=",
+  "number": 6481,
+  "title": "Support for asynchronous values (like Promises and Observables)",
+  "user": {
+    "login": "joelrich",
+    "id": 4216919,
+    "node_id": "MDQ6VXNlcjQyMTY5MTk=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/4216919?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/joelrich",
+    "html_url": "https://github.com/joelrich",
+    "followers_url": "https://api.github.com/users/joelrich/followers",
+    "following_url": "https://api.github.com/users/joelrich/following{/other_user}",
+    "gists_url": "https://api.github.com/users/joelrich/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/joelrich/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/joelrich/subscriptions",
+    "organizations_url": "https://api.github.com/users/joelrich/orgs",
+    "repos_url": "https://api.github.com/users/joelrich/repos",
+    "events_url": "https://api.github.com/users/joelrich/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/joelrich/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 739777675,
+      "node_id": "MDU6TGFiZWw3Mzk3Nzc2NzU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Component%20API",
+      "name": "Component: Component API",
+      "color": "d4c5f9",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 13,
+  "created_at": "2016-04-11T09:22:06Z",
+  "updated_at": "2018-05-14T00:12:32Z",
+  "closed_at": "2018-05-14T00:12:32Z",
+  "author_association": "NONE",
+  "body": "At the moment, it is quite cumbersome to work with promises in React. Either you write a lot of code to update the state inside the `then()` callbacks or you use a library like [react-promise](https://www.npmjs.com/package/react-promise) which only works for children (not properties) because it is based on components.\n\nAnother option is to traverse the whole virtual dom and replace promises before they are passed to React. (I have read once a blog post about this but cannot find it any longer.) This is obviously not ideal for the rendering performance.\n\nSince promises are now a standard, I think there should be simpler way to use them directly in the view. One option would be to introduce an AsyncValue type with a Promise implementation. The AsyncValue type would then be supported for children as well as properties.\n\nPromises could then simply be used like this:\n\n``` javascript\n<div>{promise(this.state.myPromise)}</div>\n```\n\nOpposed to supporting promises everywhere (directly without the promise function), this should not have unexpected side effects. Moreover, other types of asynchronous values (for example Observables) could be added later easily just by creating another AsyncType implementation.\n\nAngular 2 takes a similar route with the [async pipe](https://angular.io/docs/ts/latest/guide/pipes.html#!#the-impure-asyncpipe-). There you can simply write \n\n``` javascript\n{{ myPromise | async }}\n```\n\nin attributes as well as normal content.\n\nThis feature would also be very convinient for libraries like Flux because it allows to fetch properties directly inside the view and avoids the reptition which you have with Relay:\n\n``` javascript\n<div>{promise(this.state.model.get('property'))}</div>\n```\n\nWhat do you think about this proposal?\nHas this been discussed before? I couldn't find a thread which covers this particular topic.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

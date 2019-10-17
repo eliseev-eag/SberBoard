@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14785",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14785/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14785/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14785/events",
+  "html_url": "https://github.com/facebook/react/issues/14785",
+  "id": 407597506,
+  "node_id": "MDU6SXNzdWU0MDc1OTc1MDY=",
+  "number": 14785,
+  "title": "defaultValue does not work with input when type is set to submit",
+  "user": {
+    "login": "jakubkosinski",
+    "id": 2722,
+    "node_id": "MDQ6VXNlcjI3MjI=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/2722?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jakubkosinski",
+    "html_url": "https://github.com/jakubkosinski",
+    "followers_url": "https://api.github.com/users/jakubkosinski/followers",
+    "following_url": "https://api.github.com/users/jakubkosinski/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jakubkosinski/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jakubkosinski/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jakubkosinski/subscriptions",
+    "organizations_url": "https://api.github.com/users/jakubkosinski/orgs",
+    "repos_url": "https://api.github.com/users/jakubkosinski/repos",
+    "events_url": "https://api.github.com/users/jakubkosinski/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jakubkosinski/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-02-07T09:01:40Z",
+  "updated_at": "2019-02-08T16:27:02Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n\r\nBug\r\n\r\n**What is the current behavior?**\r\n\r\nWhen you use uncontrolled `<input type=\"submit\" />` and set `defaultValue` attribute, it would be ignored in versions 1.5.0 or higher (there would be no `value` attribute in the HTML result). It was working correctly in older versions. Looks like only `type=\"submit\"` is affected, for other input types `defaultValue` behaves correctly.\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\n\r\nCorrect behaviour with react 16.4.2: https://codepen.io/anon/pen/zePmrZ\r\nIncorrect behaviour with react 16.8.1: https://codepen.io/anon/pen/PVOyqV\r\n\r\n**What is the expected behavior?**\r\n\r\nWhen `defaultValue=\"foo\"` is set on `<input type=\"submit\"/>` it should result in `<input type=\"submit\" value=\"foo\" />` in the HTML result.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nAll versions starting from 16.5.0\r\n",
+  "closed_by": null
+}

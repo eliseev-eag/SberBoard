@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15091",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15091/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15091/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15091/events",
+  "html_url": "https://github.com/facebook/react/pull/15091",
+  "id": 419954893,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjYwMzM4MDcz",
+  "number": 15091,
+  "title": " [ReactDOM] Add strict mode test for findDOMNode",
+  "user": {
+    "login": "eps1lon",
+    "id": 12292047,
+    "node_id": "MDQ6VXNlcjEyMjkyMDQ3",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/12292047?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/eps1lon",
+    "html_url": "https://github.com/eps1lon",
+    "followers_url": "https://api.github.com/users/eps1lon/followers",
+    "following_url": "https://api.github.com/users/eps1lon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/eps1lon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/eps1lon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/eps1lon/subscriptions",
+    "organizations_url": "https://api.github.com/users/eps1lon/orgs",
+    "repos_url": "https://api.github.com/users/eps1lon/repos",
+    "events_url": "https://api.github.com/users/eps1lon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/eps1lon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-03-12T12:17:50Z",
+  "updated_at": "2019-10-01T13:01:09Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15091",
+    "html_url": "https://github.com/facebook/react/pull/15091",
+    "diff_url": "https://github.com/facebook/react/pull/15091.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15091.patch"
+  },
+  "body": "#13841 deprecated presumably [\"all usage\"](https://github.com/facebook/react/pull/13841#issuecomment-429444800) of `findDOMNode`. This is not the case if passed a host component<sup>1</sup>. I wanted to verify if this is intended or not since we have a use case for not issuing a deprecation warning for host components:\r\n\r\nWe have a component library that lets the user pass a custom component that is rendered. It can be a different DOM node or an actual component:\r\n```js\r\nclass LibraryComponent() {\r\n  // this is incomplete. It's just one instance where we get it\r\n  componentDidMount() {\r\n    this.button = ReactDOM.findDOMNode(this);\r\n    listenForFocusKeys(ownerWindow(this.button));\r\n\r\n    if (this.props.action) {\r\n      this.props.action({\r\n        focusVisible: () => {\r\n          this.setState({ focusVisible: true });\r\n          this.button.focus();\r\n        },\r\n      });\r\n    }\r\n  }\r\n\r\n  render() {\r\n    const { as: Component } = this.props;\r\n\treturn <Component />\r\n  }\r\n}\r\n```\r\nHowever we required the DOM node of the rendered component for focus handling (essentially adding a focus-visible polyfill). Before deprecation we used `findDOMNode(this)`. Now that `findDOMNode` is deprecated we want to move away from that usage while enabling some backwards compatibility:\r\n```diff\r\nclass LibraryComponent() {\r\n+ buttonRef = React.createRef();\r\n  // this is incomplete. It's just one instance where we get it\r\n  componentDidMount() {\r\n-   this.button = ReactDOM.findDOMNode(this);\r\n-   listenForFocusKeys(ownerWindow(this.button));\r\n+   listenForFocusKeys(ownerWindow(this.getButtonNode()));\r\n\r\n    if (this.props.action) {\r\n      this.props.action({\r\n        focusVisible: () => {\r\n          this.setState({ focusVisible: true });\r\n-         this.button.focus();\r\n+         this.getButtonNode().focus();\r\n        },\r\n      });\r\n    }\r\n  }\r\n  \r\n+ getButtonNode() {\r\n+   return ReactDOM.findDOMNode(this.buttonRef.current);\r\n+ }\r\n\r\n  render() {\r\n    const { as: Component } = this.props;\r\n-\treturn <Component />\r\n+\treturn <Component ref={this.buttonRef} />\r\n  }\r\n}\r\n```\r\n\r\nThis change:\r\n1. is breaking usage with function components `<LibraryComponent as={SomeFunctionComponent} />`\r\n2. strict mode compatible with `<LibraryComponent as=\"div\" />` or any other host component or ref forwarding component\r\n3. not strict mode ready but also not breaking for `<LibraryComponent as={SomeClassComponent} />`\r\n\r\nThe test added with this PR is basically ensuring the third behavior.\r\n\r\nFollowup on https://github.com/facebook/react/pull/13841#issuecomment-433416333\r\n\r\n<sup>1</sup> Not sure if this is the correct term.",
+  "closed_by": null
+}

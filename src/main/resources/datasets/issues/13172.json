@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13172",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13172/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13172/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13172/events",
+  "html_url": "https://github.com/facebook/react/pull/13172",
+  "id": 339224270,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTk5OTQxMjAw",
+  "number": 13172,
+  "title": "fixed a typo in a comment out in ReactFiberUnwindWork.js",
+  "user": {
+    "login": "FumiyaShibusawa",
+    "id": 17764944,
+    "node_id": "MDQ6VXNlcjE3NzY0OTQ0",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/17764944?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/FumiyaShibusawa",
+    "html_url": "https://github.com/FumiyaShibusawa",
+    "followers_url": "https://api.github.com/users/FumiyaShibusawa/followers",
+    "following_url": "https://api.github.com/users/FumiyaShibusawa/following{/other_user}",
+    "gists_url": "https://api.github.com/users/FumiyaShibusawa/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/FumiyaShibusawa/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/FumiyaShibusawa/subscriptions",
+    "organizations_url": "https://api.github.com/users/FumiyaShibusawa/orgs",
+    "repos_url": "https://api.github.com/users/FumiyaShibusawa/repos",
+    "events_url": "https://api.github.com/users/FumiyaShibusawa/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/FumiyaShibusawa/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2018-07-08T13:03:17Z",
+  "updated_at": "2018-07-17T19:21:54Z",
+  "closed_at": "2018-07-17T19:21:54Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13172",
+    "html_url": "https://github.com/facebook/react/pull/13172",
+    "diff_url": "https://github.com/facebook/react/pull/13172.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13172.patch"
+  },
+  "body": "fixed a typo `bounary` -> `boundary` which was found in https://github.com/facebook/react/pull/13105",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

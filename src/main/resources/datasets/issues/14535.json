@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14535",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14535/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14535/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14535/events",
+  "html_url": "https://github.com/facebook/react/issues/14535",
+  "id": 396203469,
+  "node_id": "MDU6SXNzdWUzOTYyMDM0Njk=",
+  "number": 14535,
+  "title": "Concurrent mode iOS hover behaviour",
+  "user": {
+    "login": "subhero24",
+    "id": 1171150,
+    "node_id": "MDQ6VXNlcjExNzExNTA=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1171150?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/subhero24",
+    "html_url": "https://github.com/subhero24",
+    "followers_url": "https://api.github.com/users/subhero24/followers",
+    "following_url": "https://api.github.com/users/subhero24/following{/other_user}",
+    "gists_url": "https://api.github.com/users/subhero24/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/subhero24/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/subhero24/subscriptions",
+    "organizations_url": "https://api.github.com/users/subhero24/orgs",
+    "repos_url": "https://api.github.com/users/subhero24/repos",
+    "events_url": "https://api.github.com/users/subhero24/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/subhero24/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 1205087127,
+      "node_id": "MDU6TGFiZWwxMjA1MDg3MTI3",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Concurrent%20Mode",
+      "name": "Component: Concurrent Mode",
+      "color": "ffccd3",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-01-05T21:56:43Z",
+  "updated_at": "2019-01-23T14:39:26Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "I hope this is the place to submit issues regarding concurrent mode.\r\nI don't know if this is a bug or intended behaviour, but I have a situation where the my react app behaves differently depending on the use of concurrent mode.\r\n\r\nHere is a link to a codesandbox demo: https://codesandbox.io/s/5xl0vnx11p\r\n\r\nThe behaviour on mobile Safari on iOS (12.1.2) is different whether using ReactDOM.render vs ReactDOM.createRoot. When ReactDOM.render is used, a tap results in an alert and after the alert is dismissed, the hover styles are applied. When using ReactDOM.createRoot, a tap results in the hover styles being applied. A second tap is needed to invoke the click handler.\r\n\r\n(This double tap behaviour from iOS is described [here](https://css-tricks.com/annoying-mobile-double-tap-link-issue/))\r\n\r\nShouldn't the two render methods behave the same in this regard? or is this really intended behaviour?\r\n\r\nBTW: A setTimout arround the mouseEnter event handler body does make ReactDOM.createRoot behave the same way as ReactDOM.render\r\n\r\n\r\n\r\n",
+  "closed_by": null
+}

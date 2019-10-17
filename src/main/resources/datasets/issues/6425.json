@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6425",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6425/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6425/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6425/events",
+  "html_url": "https://github.com/facebook/react/pull/6425",
+  "id": 146404360,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjU1MTg4MzI=",
+  "number": 6425,
+  "title": "Add ReactIntrospection",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 139653724,
+      "node_id": "MDU6TGFiZWwxMzk2NTM3MjQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Core%20Utilities",
+      "name": "Component: Core Utilities",
+      "color": "c5def5",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2016-04-06T19:03:28Z",
+  "updated_at": "2016-04-08T20:42:53Z",
+  "closed_at": "2016-04-08T20:42:53Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6425",
+    "html_url": "https://github.com/facebook/react/pull/6425",
+    "diff_url": "https://github.com/facebook/react/pull/6425.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6425.patch"
+  },
+  "body": "This is another change extracted from #6046 and covered by tests.\n\nHere, we add `ReactIntrospection` which will be used by the new ReactPerf, as well as (eventually) by React DevTools and third-party React tooling. It abstracts away the implementation details of internal instances so those tools won't rely on these details.\n\nFunctions in this module take and return internal instances directly for the ease of testing. We will add a separate `ReactDebugInstrumentation` facade later that takes and returns IDs introduced in #6389. The plan is to not expose the internal instances to React DevTools and ReactPerf, but to only expose IDs.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

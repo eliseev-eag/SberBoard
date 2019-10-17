@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10771",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10771/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10771/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10771/events",
+  "html_url": "https://github.com/facebook/react/pull/10771",
+  "id": 259544867,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQyMzgwNDcw",
+  "number": 10771,
+  "title": "Fixed blog.html redirect",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-09-21T15:51:11Z",
+  "updated_at": "2017-09-21T17:58:37Z",
+  "closed_at": "2017-09-21T17:58:34Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10771",
+    "html_url": "https://github.com/facebook/react/pull/10771",
+    "diff_url": "https://github.com/facebook/react/pull/10771.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10771.patch"
+  },
+  "body": "Corresponds to gatsbyjs/gatsby/pull/2185\r\n\r\nIn development, Gatsby honors these redirects by just loading the `toPath` page. In production, the new `gatsby-plugin-netlify` plugin writes a `_redirects` file that looks like this:\r\n```\r\n/blog.html  /blog/2017/09/08/dom-attributes-in-react-16.html  302\r\n```\r\nBased on [these Netlify docs](https://www.netlify.com/docs/redirects/) and [this online validator](https://play.netlify.com/redirects) I expect that to work.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

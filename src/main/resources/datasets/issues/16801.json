@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16801",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16801/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16801/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16801/events",
+  "html_url": "https://github.com/facebook/react/pull/16801",
+  "id": 494348811,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzE4MTE5NzAy",
+  "number": 16801,
+  "title": "[suspense][error handling] Inline renderRoot and fix error handling bug",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-09-17T01:08:04Z",
+  "updated_at": "2019-09-23T18:23:30Z",
+  "closed_at": "2019-09-23T18:23:29Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16801",
+    "html_url": "https://github.com/facebook/react/pull/16801",
+    "diff_url": "https://github.com/facebook/react/pull/16801.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16801.patch"
+  },
+  "body": "Follow-up to work loop refactor in #16743.\r\n\r\nAfter the recent changes, the `isSync` argument to `renderRoot` is only used in a single place, to determine whether to call `workLoop` or `workLoopSync`. All other forked behavior was lifted into `performConcurrentWorkOnRoot` and `performSyncWorkOnRoot`. So, this goes one step further and inlines `renderRoot` into its callers.\r\n\r\nMost of the changes here are copy-pasting and moving stuff around. The high level flow is essentially the same. I split the work into small commits to help with reviewing.\r\n\r\nThe final commit is unrelated, but I've included it because it fixes the test I added in #16800. The fix relies on the `handleError` function I extracted as part of this refactor PR. I could also submit a separate fix that's independent of this PR; however, since it's not a super urgent bug, and I was planning to do these refactors regardless, I think it's fine to group these.\r\n\r\nFixes #16800",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

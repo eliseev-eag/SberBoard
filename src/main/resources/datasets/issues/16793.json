@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16793",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16793/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16793/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16793/events",
+  "html_url": "https://github.com/facebook/react/issues/16793",
+  "id": 494057997,
+  "node_id": "MDU6SXNzdWU0OTQwNTc5OTc=",
+  "number": 16793,
+  "title": "bug | useReducer changing payload of action",
+  "user": {
+    "login": "BreadAndRoses95",
+    "id": 25157915,
+    "node_id": "MDQ6VXNlcjI1MTU3OTE1",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/25157915?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/BreadAndRoses95",
+    "html_url": "https://github.com/BreadAndRoses95",
+    "followers_url": "https://api.github.com/users/BreadAndRoses95/followers",
+    "following_url": "https://api.github.com/users/BreadAndRoses95/following{/other_user}",
+    "gists_url": "https://api.github.com/users/BreadAndRoses95/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/BreadAndRoses95/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/BreadAndRoses95/subscriptions",
+    "organizations_url": "https://api.github.com/users/BreadAndRoses95/orgs",
+    "repos_url": "https://api.github.com/users/BreadAndRoses95/repos",
+    "events_url": "https://api.github.com/users/BreadAndRoses95/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/BreadAndRoses95/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-09-16T13:42:32Z",
+  "updated_at": "2019-09-17T08:05:34Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "I ran into a strange behavior of useReducer. I tried implemeting my own redux and redux thunk for a small project. Here is a small replication of what I try to achieve. https://codesandbox.io/s/delicate-microservice-5qlt5 I do not have the bug here, but on my production build only. When I dispatch this action once, it get triggered three times. The third time, the payload becomes null instead of [] (empty array). \r\nI tried to find where the action/payload was changed and this is in the updateReducer. \r\n![image](https://user-images.githubusercontent.com/25157915/64962655-14f8f780-d898-11e9-8f3c-bed07e0166de.png)\r\n\r\n![image](https://user-images.githubusercontent.com/25157915/64962685-2510d700-d898-11e9-9fa1-3eaa9bdf3051.png)\r\n\r\nI don't have any clue of how this could happen since we juste get the action from the firstRenderPhaseUpdate object. \r\n\r\nTelle me if I missed something, I can give you more information.",
+  "closed_by": null
+}

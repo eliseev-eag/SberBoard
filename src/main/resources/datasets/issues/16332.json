@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16332",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16332/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16332/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16332/events",
+  "html_url": "https://github.com/facebook/react/pull/16332",
+  "id": 478928485,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzA1OTQyMDQy",
+  "number": 16332,
+  "title": "chore: add eslint-plugin-jest's valid-expect rule",
+  "user": {
+    "login": "SimenB",
+    "id": 1404810,
+    "node_id": "MDQ6VXNlcjE0MDQ4MTA=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1404810?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/SimenB",
+    "html_url": "https://github.com/SimenB",
+    "followers_url": "https://api.github.com/users/SimenB/followers",
+    "following_url": "https://api.github.com/users/SimenB/following{/other_user}",
+    "gists_url": "https://api.github.com/users/SimenB/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/SimenB/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/SimenB/subscriptions",
+    "organizations_url": "https://api.github.com/users/SimenB/orgs",
+    "repos_url": "https://api.github.com/users/SimenB/repos",
+    "events_url": "https://api.github.com/users/SimenB/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/SimenB/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2019-08-09T10:59:34Z",
+  "updated_at": "2019-08-14T11:01:29Z",
+  "closed_at": "2019-08-14T10:51:02Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16332",
+    "html_url": "https://github.com/facebook/react/pull/16332",
+    "diff_url": "https://github.com/facebook/react/pull/16332.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16332.patch"
+  },
+  "body": "~There are some assertions here which just do `expect(thing)` without a matcher, meaning it's not actually asserting anything (it does not work like `assert`). I added `.toBe(true)` to them, and 2 of the tests are failing, meaning they are either wrong, or false negatives on master.~\r\n\r\nThe above is dated now that #16336 was merged, but it _did_ uncover them 🙂 ",
+  "closed_by": {
+    "login": "threepointone",
+    "id": 18808,
+    "node_id": "MDQ6VXNlcjE4ODA4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/18808?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/threepointone",
+    "html_url": "https://github.com/threepointone",
+    "followers_url": "https://api.github.com/users/threepointone/followers",
+    "following_url": "https://api.github.com/users/threepointone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/threepointone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/threepointone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/threepointone/subscriptions",
+    "organizations_url": "https://api.github.com/users/threepointone/orgs",
+    "repos_url": "https://api.github.com/users/threepointone/repos",
+    "events_url": "https://api.github.com/users/threepointone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/threepointone/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

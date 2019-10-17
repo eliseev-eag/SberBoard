@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3604",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3604/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3604/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3604/events",
+  "html_url": "https://github.com/facebook/react/pull/3604",
+  "id": 66775588,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzI3MzM2NjY=",
+  "number": 3604,
+  "title": "Fixes for several failing tests in Firefox and Safari",
+  "user": {
+    "login": "Charca",
+    "id": 44473,
+    "node_id": "MDQ6VXNlcjQ0NDcz",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/44473?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Charca",
+    "html_url": "https://github.com/Charca",
+    "followers_url": "https://api.github.com/users/Charca/followers",
+    "following_url": "https://api.github.com/users/Charca/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Charca/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Charca/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Charca/subscriptions",
+    "organizations_url": "https://api.github.com/users/Charca/orgs",
+    "repos_url": "https://api.github.com/users/Charca/repos",
+    "events_url": "https://api.github.com/users/Charca/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Charca/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2015-04-07T04:59:55Z",
+  "updated_at": "2015-04-08T17:34:57Z",
+  "closed_at": "2015-04-08T17:34:57Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3604",
+    "html_url": "https://github.com/facebook/react/pull/3604",
+    "diff_url": "https://github.com/facebook/react/pull/3604.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3604.patch"
+  },
+  "body": "This fixes 644 out of the 678 tests failing in Firefox and Safari when running them manually (with `grunt test --debug`), although they pass in Chrome and PhantomJS. See #3598 \n\n![Tests Failing in Firefox](http://i.imgur.com/LnUBDSU.png)\n\nThere're 34 tests still failing for some other reason.\n\nApparently, trying to append a container directly to the HTML element is breaking all the tests moving forward. Also, using to document.body is more consistent with the rest of the tests.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

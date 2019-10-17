@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11888",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11888/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11888/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11888/events",
+  "html_url": "https://github.com/facebook/react/issues/11888",
+  "id": 283283848,
+  "node_id": "MDU6SXNzdWUyODMyODM4NDg=",
+  "number": 11888,
+  "title": "React.children do not take Functions as Children under consideration",
+  "user": {
+    "login": "michal-lipski",
+    "id": 758497,
+    "node_id": "MDQ6VXNlcjc1ODQ5Nw==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/758497?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/michal-lipski",
+    "html_url": "https://github.com/michal-lipski",
+    "followers_url": "https://api.github.com/users/michal-lipski/followers",
+    "following_url": "https://api.github.com/users/michal-lipski/following{/other_user}",
+    "gists_url": "https://api.github.com/users/michal-lipski/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/michal-lipski/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/michal-lipski/subscriptions",
+    "organizations_url": "https://api.github.com/users/michal-lipski/orgs",
+    "repos_url": "https://api.github.com/users/michal-lipski/repos",
+    "events_url": "https://api.github.com/users/michal-lipski/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/michal-lipski/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 139653724,
+      "node_id": "MDU6TGFiZWwxMzk2NTM3MjQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Core%20Utilities",
+      "name": "Component: Core Utilities",
+      "color": "c5def5",
+      "default": false
+    },
+    {
+      "id": 620368407,
+      "node_id": "MDU6TGFiZWw2MjAzNjg0MDc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Needs%20More%20Information",
+      "name": "Resolution: Needs More Information",
+      "color": "fffde7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2017-12-19T16:06:42Z",
+  "updated_at": "2018-01-06T01:18:23Z",
+  "closed_at": "2018-01-06T01:18:23Z",
+  "author_association": "NONE",
+  "body": "My component can have multiple children components. They can be of different types: Strings, JSX Components and functions. \r\n`````\r\n<ChildrenCounter>\r\n  First\r\n  {() => <div>Second</div>}\r\n</ChildrenCounter>\r\n`````\r\n\r\nI wanted to render them using React.children.map helper function that unwraps the children opaque data structure. The problem is that children defined as functions seem to be ignored by React.children.map, React.children.count and other helper functions. See the example:\r\n\r\n[https://jsfiddle.net/bpdsraah/2/](https://jsfiddle.net/bpdsraah/2/)\r\n\r\nI can access them and render directly from props.children wrapper but it is not a convenient way as one can never know for sure what type it will be.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

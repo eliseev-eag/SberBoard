@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10642",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10642/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10642/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10642/events",
+  "html_url": "https://github.com/facebook/react/pull/10642",
+  "id": 256093512,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTM5OTIyMjY5",
+  "number": 10642,
+  "title": "[Gatsby docs update] minor fixes",
+  "user": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2017-09-07T22:54:23Z",
+  "updated_at": "2018-05-25T17:51:43Z",
+  "closed_at": "2017-09-11T16:20:27Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10642",
+    "html_url": "https://github.com/facebook/react/pull/10642",
+    "diff_url": "https://github.com/facebook/react/pull/10642.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10642.patch"
+  },
+  "body": "Fixes a couple of minor things:\r\n - a copy correction on the home page\r\n - removes/guards uses of 'window' in the hacky JS for the 'installation' docs page\r\n\r\nSee individual commit messages for more info/context.",
+  "closed_by": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

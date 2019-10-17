@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6140",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6140/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6140/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6140/events",
+  "html_url": "https://github.com/facebook/react/pull/6140",
+  "id": 137114260,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjEwMTM4MzI=",
+  "number": 6140,
+  "title": "[Docs] Remove babel-browser link",
+  "user": {
+    "login": "NogsMPLS",
+    "id": 6899011,
+    "node_id": "MDQ6VXNlcjY4OTkwMTE=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/6899011?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/NogsMPLS",
+    "html_url": "https://github.com/NogsMPLS",
+    "followers_url": "https://api.github.com/users/NogsMPLS/followers",
+    "following_url": "https://api.github.com/users/NogsMPLS/following{/other_user}",
+    "gists_url": "https://api.github.com/users/NogsMPLS/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/NogsMPLS/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/NogsMPLS/subscriptions",
+    "organizations_url": "https://api.github.com/users/NogsMPLS/orgs",
+    "repos_url": "https://api.github.com/users/NogsMPLS/repos",
+    "events_url": "https://api.github.com/users/NogsMPLS/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/NogsMPLS/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-02-29T00:06:20Z",
+  "updated_at": "2016-03-07T19:47:57Z",
+  "closed_at": "2016-02-29T18:03:21Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6140",
+    "html_url": "https://github.com/facebook/react/pull/6140",
+    "diff_url": "https://github.com/facebook/react/pull/6140.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6140.patch"
+  },
+  "body": "babel-browser is deprecated and no longer available on the babel website: http://babeljs.io/docs/usage/browser/\n\nThis PR keeps the CDNJS link to browser.js but specifies 5.8.34 as it is still technically the best solution out right now since JSXTransformer was deprecated from facebook as well.\n\nOther options may soon be available such as [babel-standalone](https://github.com/Daniel15/babel-standalone) or [react-towel](https://github.com/danmartinez101/react-towel), but are not quite there yet. See #5497 for details\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

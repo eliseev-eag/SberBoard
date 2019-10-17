@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15724",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15724/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15724/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15724/events",
+  "html_url": "https://github.com/facebook/react/pull/15724",
+  "id": 447798835,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjgxNzIzMTQ4",
+  "number": 15724,
+  "title": "[Fresh] Babel plugin now handles HOCs + add integration tests",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-05-23T18:00:45Z",
+  "updated_at": "2019-05-24T20:49:26Z",
+  "closed_at": "2019-05-24T20:45:08Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15724",
+    "html_url": "https://github.com/facebook/react/pull/15724",
+    "diff_url": "https://github.com/facebook/react/pull/15724.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15724.patch"
+  },
+  "body": "This is a follow-up to https://github.com/facebook/react/pull/15711 that teaches the Babel plugin to handle more cases including common patterns for higher-order components like `memo()`, `styled`, or chains of them. Concretely, we:\r\n\r\n* Consider `A` declaration a likely component if it was used in `<A />` JSX call or `createElement(A)`\r\n* Recognize patterns like `hoc1(hoc2(hoc3(() => { })))` and register each of them, as long as the outer definition is PascalCase.\r\n\r\nKeep in mind registering is a no-op if something never gets rendered so false positives are acceptable. We might want to reconsider that later when we use the information about registrations to decide whether hot reload should propagate or stop at a module boundary (because all exports were registered). In that case false positives are not ideal. We can add smarter heuristics later, such as bailing out for functions that obviously aren't components. (E.g. when `prototype` is accessed or there's unexpected arguments or return value.)\r\n\r\nI'm also adding a first integration test file. This one is different because it tests _both_ React, the runtime, and the Babel plugin together. It's as close as we have to an end-to-end test now. It's a bit harder to debug when it breaks (more moving pieces) but it also gives us more confidence that complex patterns actually work, and a way to reliably track regressions.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

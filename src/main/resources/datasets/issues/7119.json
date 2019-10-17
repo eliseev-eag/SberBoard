@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7119",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7119/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7119/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7119/events",
+  "html_url": "https://github.com/facebook/react/pull/7119",
+  "id": 162237803,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzUxNzkwMDU=",
+  "number": 7119,
+  "title": "Added elementOf checker to ReactPropTypes.",
+  "user": {
+    "login": "alansouzati",
+    "id": 1207250,
+    "node_id": "MDQ6VXNlcjEyMDcyNTA=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1207250?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/alansouzati",
+    "html_url": "https://github.com/alansouzati",
+    "followers_url": "https://api.github.com/users/alansouzati/followers",
+    "following_url": "https://api.github.com/users/alansouzati/following{/other_user}",
+    "gists_url": "https://api.github.com/users/alansouzati/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/alansouzati/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/alansouzati/subscriptions",
+    "organizations_url": "https://api.github.com/users/alansouzati/orgs",
+    "repos_url": "https://api.github.com/users/alansouzati/repos",
+    "events_url": "https://api.github.com/users/alansouzati/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/alansouzati/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2016-06-24T21:53:41Z",
+  "updated_at": "2016-06-27T17:34:50Z",
+  "closed_at": "2016-06-26T18:35:50Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7119",
+    "html_url": "https://github.com/facebook/react/pull/7119",
+    "diff_url": "https://github.com/facebook/react/pull/7119.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7119.patch"
+  },
+  "body": "In short, this PR aims to provide support for Single Child of a given type.\n\nFrom the official [ReactJS docs page](https://facebook.github.io/react/docs/reusable-components.html#single-child) we can use `React.PropTypes.element` to validate a single child.\n\n> With React.PropTypes.element you can specify that only a single child can be passed to a component as children.\n\nI tried to find something that would validate the type of the given element, but it seems that it is not possible as of today.\n\nWith this PR you can do:\n\n```\nComponent.propTypes = {\n  testProp: React.PropTypes.elementOfType('svg').isRequired\n};\n```\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

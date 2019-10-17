@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11881",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11881/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11881/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11881/events",
+  "html_url": "https://github.com/facebook/react/issues/11881",
+  "id": 282975575,
+  "node_id": "MDU6SXNzdWUyODI5NzU1NzU=",
+  "number": 11881,
+  "title": "backspace fails to clear values on input type='email'",
+  "user": {
+    "login": "codeangler",
+    "id": 1369197,
+    "node_id": "MDQ6VXNlcjEzNjkxOTc=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1369197?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/codeangler",
+    "html_url": "https://github.com/codeangler",
+    "followers_url": "https://api.github.com/users/codeangler/followers",
+    "following_url": "https://api.github.com/users/codeangler/following{/other_user}",
+    "gists_url": "https://api.github.com/users/codeangler/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/codeangler/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/codeangler/subscriptions",
+    "organizations_url": "https://api.github.com/users/codeangler/orgs",
+    "repos_url": "https://api.github.com/users/codeangler/repos",
+    "events_url": "https://api.github.com/users/codeangler/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/codeangler/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2017-12-18T18:21:42Z",
+  "updated_at": "2019-10-03T01:16:07Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\nbug \r\n\r\n**What is the current behavior?**\r\nemail input doesn't control for whitespace // possible variation on [Issue 6368](https://github.com/facebook/react/issues/6368); however, 6368 shows up at 15.0.0 this bug shows up at 15.2\r\n\r\n**If the current behavior is a bug, demo**\r\n\r\nno bug in React 15.0.0\r\nno bug in React 15.1.0\r\nbug on React 15.2\r\n[React~15 fiddle](https://jsfiddle.net/cburnett/79z43qxn/9/)\r\n\r\nbug on React 16 \r\n[React~16 fiddle](https://jsfiddle.net/cburnett/q1297t5w/2/)\r\n\r\n**What is the expected behavior?**\r\n\r\nWhen a user presses down the backspace key and holds it, all values in the input are removed, including the whitespaces  \r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nWorks on 15.1.0\r\nbug at >= 15.2.0 \r\ntesting on Chrome 63\r\nMacOs Sierra 10.12\r\n",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7682",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7682/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7682/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7682/events",
+  "html_url": "https://github.com/facebook/react/pull/7682",
+  "id": 175812389,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODQ1MTg4Mjc=",
+  "number": 7682,
+  "title": "[docs] Link to mixins considered harmful",
+  "user": {
+    "login": "tomkel",
+    "id": 520225,
+    "node_id": "MDQ6VXNlcjUyMDIyNQ==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/520225?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/tomkel",
+    "html_url": "https://github.com/tomkel",
+    "followers_url": "https://api.github.com/users/tomkel/followers",
+    "following_url": "https://api.github.com/users/tomkel/following{/other_user}",
+    "gists_url": "https://api.github.com/users/tomkel/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/tomkel/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/tomkel/subscriptions",
+    "organizations_url": "https://api.github.com/users/tomkel/orgs",
+    "repos_url": "https://api.github.com/users/tomkel/repos",
+    "events_url": "https://api.github.com/users/tomkel/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/tomkel/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2016-09-08T17:23:35Z",
+  "updated_at": "2017-01-26T17:59:22Z",
+  "closed_at": "2017-01-26T17:59:22Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7682",
+    "html_url": "https://github.com/facebook/react/pull/7682",
+    "diff_url": "https://github.com/facebook/react/pull/7682.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7682.patch"
+  },
+  "body": "Extend the knowledge about mixins contained in [reusable components](https://facebook.github.io/react/docs/reusable-components.html) to include [mixins considered harmful](https://facebook.github.io/react/blog/2016/07/13/mixins-considered-harmful.html).\n",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

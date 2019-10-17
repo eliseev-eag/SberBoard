@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13361",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13361/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13361/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13361/events",
+  "html_url": "https://github.com/facebook/react/pull/13361",
+  "id": 349478137,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjA3NTgyNTY1",
+  "number": 13361,
+  "title": "Provide component reference in ReactDOMFiberTextarea warnings",
+  "user": {
+    "login": "raunofreiberg",
+    "id": 23662329,
+    "node_id": "MDQ6VXNlcjIzNjYyMzI5",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/23662329?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/raunofreiberg",
+    "html_url": "https://github.com/raunofreiberg",
+    "followers_url": "https://api.github.com/users/raunofreiberg/followers",
+    "following_url": "https://api.github.com/users/raunofreiberg/following{/other_user}",
+    "gists_url": "https://api.github.com/users/raunofreiberg/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/raunofreiberg/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/raunofreiberg/subscriptions",
+    "organizations_url": "https://api.github.com/users/raunofreiberg/orgs",
+    "repos_url": "https://api.github.com/users/raunofreiberg/repos",
+    "events_url": "https://api.github.com/users/raunofreiberg/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/raunofreiberg/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-08-10T11:20:42Z",
+  "updated_at": "2018-08-14T08:07:35Z",
+  "closed_at": "2018-08-13T14:55:57Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13361",
+    "html_url": "https://github.com/facebook/react/pull/13361",
+    "diff_url": "https://github.com/facebook/react/pull/13361.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13361.patch"
+  },
+  "body": "I noticed that `ReactDOMFiberInput.js` provides a reference to the component, if possible. Why not do the same for `ReactDOMFiberTextarea.js` as well :-)?",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

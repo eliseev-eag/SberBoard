@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12760",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12760/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12760/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12760/events",
+  "html_url": "https://github.com/facebook/react/pull/12760",
+  "id": 320927997,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTg2NDQyNjY4",
+  "number": 12760,
+  "title": "Warning message no longer recommends using deprecated lifecycle method.",
+  "user": {
+    "login": "iliran11",
+    "id": 24987188,
+    "node_id": "MDQ6VXNlcjI0OTg3MTg4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/24987188?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/iliran11",
+    "html_url": "https://github.com/iliran11",
+    "followers_url": "https://api.github.com/users/iliran11/followers",
+    "following_url": "https://api.github.com/users/iliran11/following{/other_user}",
+    "gists_url": "https://api.github.com/users/iliran11/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/iliran11/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/iliran11/subscriptions",
+    "organizations_url": "https://api.github.com/users/iliran11/orgs",
+    "repos_url": "https://api.github.com/users/iliran11/repos",
+    "events_url": "https://api.github.com/users/iliran11/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/iliran11/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2018-05-07T19:34:17Z",
+  "updated_at": "2018-08-02T01:12:17Z",
+  "closed_at": "2018-08-02T01:12:17Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12760",
+    "html_url": "https://github.com/facebook/react/pull/12760",
+    "diff_url": "https://github.com/facebook/react/pull/12760.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12760.patch"
+  },
+  "body": "Fixing the folllwing issue:  https://github.com/facebook/react/issues/12748;\r\n\r\n1. `componentWillMount` is soon to be deprecated method, so recommending to use it, is not a viable options.\r\n\r\n1.  Author of the warning message has warned against constructor side-effects. as per the [official react docs,](https://reactjs.org/docs/react-component.html#constructor) the right way to do it, is placing those side effects in `componentDidMount`.\r\n\r\n> Avoid introducing any side-effects or subscriptions in the constructor. For those use cases, use componentDidMount() instead.\r\n\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

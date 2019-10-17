@@ -1,0 +1,91 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7678",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7678/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7678/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7678/events",
+  "html_url": "https://github.com/facebook/react/issues/7678",
+  "id": 175631601,
+  "node_id": "MDU6SXNzdWUxNzU2MzE2MDE=",
+  "number": 7678,
+  "title": "Umbrella: New Life-Cycles Ideas",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 739777675,
+      "node_id": "MDU6TGFiZWw3Mzk3Nzc2NzU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Component%20API",
+      "name": "Component: Component API",
+      "color": "d4c5f9",
+      "default": false
+    },
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 710615342,
+      "node_id": "MDU6TGFiZWw3MTA2MTUzNDI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Umbrella",
+      "name": "Type: Umbrella",
+      "color": "5319e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 25,
+  "created_at": "2016-09-07T23:36:49Z",
+  "updated_at": "2018-08-16T05:22:34Z",
+  "closed_at": "2018-08-16T05:22:33Z",
+  "author_association": "MEMBER",
+  "body": "I'll use this gather a few ideas of new life-cycle methods that help avoid existing problematic cases when using Fiber or other async rendering solutions.\n- `componentDidServerRender`: Gets called after the entire tree has rendered on the server. Useful for aborting buffered renders, or logging. Got the idea from #7671. This could possibly replace `componentWillMount`.\n- `componentWasMounted` and `componentWasUpdated`: Similar to `componentDidMount` and `componentDidUpdate` but happens asynchronously in spare cycles after a component has already appeared on the screen. That way triggering things like I/O doesn't have to block the component from rendering on the screen and dropping frames since `componentDidMount` have to be synchronous. This is not appropriate to use for Flux store subscriptions since you may be missing events that way. However, we can use \"lazy subscriptions\" as an alternative solution. #5053.\n- `componentWasUnmounted`: Similar to the above, this would happen in spare cycles for clean up purposes where clean up is not synchronously needed. This may not be needed as a separate life-cycles since we can possibly just make `componentWillUnmount` async. #6003.\n- `componentWillMountNow` and `componentWillUpdateNow`: This would be a fiber specific thing. Unlike the current `componentWillMount` / `componentWillUpdate` it actually happens _after_ `render` and _after_ all the children's `render` have been called, but right _before_ any side-effects are committed to the DOM. The use case of reading the current scroll position in `componentWillUpdate` only to reset it later doesn't work with async rendering because you can scroll between `componentWillUpdate` and `componentDidUpdate`. This could possibly replace `componentWillUpdate`.\n",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

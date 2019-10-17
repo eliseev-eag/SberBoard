@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14604",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14604/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14604/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14604/events",
+  "html_url": "https://github.com/facebook/react/pull/14604",
+  "id": 399621194,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjQ1MDAzNTcy",
+  "number": 14604,
+  "title": "[WIP] Allow for named imports in React.lazy",
+  "user": {
+    "login": "gnestor",
+    "id": 512354,
+    "node_id": "MDQ6VXNlcjUxMjM1NA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/512354?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gnestor",
+    "html_url": "https://github.com/gnestor",
+    "followers_url": "https://api.github.com/users/gnestor/followers",
+    "following_url": "https://api.github.com/users/gnestor/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gnestor/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gnestor/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gnestor/subscriptions",
+    "organizations_url": "https://api.github.com/users/gnestor/orgs",
+    "repos_url": "https://api.github.com/users/gnestor/repos",
+    "events_url": "https://api.github.com/users/gnestor/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gnestor/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-01-16T02:32:12Z",
+  "updated_at": "2019-01-16T16:49:36Z",
+  "closed_at": "2019-01-16T16:49:36Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14604",
+    "html_url": "https://github.com/facebook/react/pull/14604",
+    "diff_url": "https://github.com/facebook/react/pull/14604.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14604.patch"
+  },
+  "body": "- [x] Fix tests\r\n- [ ] Update docs: https://github.com/reactjs/reactjs.org/blob/5284091bdd21e393fb1ddbee7ebe98a3ad560356/content/docs/code-splitting.md\r\n\r\n\r\nCloses https://github.com/facebook/react/issues/14603",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

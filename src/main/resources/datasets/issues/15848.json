@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15848",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15848/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15848/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15848/events",
+  "html_url": "https://github.com/facebook/react/pull/15848",
+  "id": 453948486,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjg2NTA0NTc4",
+  "number": 15848,
+  "title": "[Flare] Add Focus within support",
+  "user": {
+    "login": "devongovett",
+    "id": 19409,
+    "node_id": "MDQ6VXNlcjE5NDA5",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/19409?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/devongovett",
+    "html_url": "https://github.com/devongovett",
+    "followers_url": "https://api.github.com/users/devongovett/followers",
+    "following_url": "https://api.github.com/users/devongovett/following{/other_user}",
+    "gists_url": "https://api.github.com/users/devongovett/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/devongovett/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/devongovett/subscriptions",
+    "organizations_url": "https://api.github.com/users/devongovett/orgs",
+    "repos_url": "https://api.github.com/users/devongovett/repos",
+    "events_url": "https://api.github.com/users/devongovett/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/devongovett/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 1296748300,
+      "node_id": "MDU6TGFiZWwxMjk2NzQ4MzAw",
+      "url": "https://api.github.com/repos/facebook/react/labels/React%20Flare",
+      "name": "React Flare",
+      "color": "63f2ff",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 22,
+  "created_at": "2019-06-09T22:49:38Z",
+  "updated_at": "2019-07-17T21:45:42Z",
+  "closed_at": "2019-07-17T21:45:42Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15848",
+    "html_url": "https://github.com/facebook/react/pull/15848",
+    "diff_url": "https://github.com/facebook/react/pull/15848.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15848.patch"
+  },
+  "body": "This adds a `within` prop to the `Focus` event component, which makes events fire when descendants are focused and blurred in addition to the immediate child. This allows additional flexibility when building more complex components. The `within` name aligns with the CSS [:focus-within](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within) pseudo class.\r\n\r\nFor example, in a Date Picker component I'm working on, the focus ring CSS class is added to an outer element when one of the descendent elements is selected. Doing it with one `Focus` component wrapper is easier than wrapping each individual focusable element, propagating the focus state (and focus visible state) upwards and maintaining state manually on the common parent.\r\n\r\n<img width=\"210\" alt=\"Screen Shot 2019-06-09 at 3 42 42 PM\" src=\"https://user-images.githubusercontent.com/19409/59165208-4447dd80-8acd-11e9-96bc-2e4835f61363.png\">\r\n\r\n<img width=\"957\" alt=\"Screen Shot 2019-06-09 at 3 43 52 PM\" src=\"https://user-images.githubusercontent.com/19409/59165217-6c374100-8acd-11e9-8683-9261bb12c486.png\">\r\n\r\nAs you can see in the DOM structure above, the div with `role=\"combobox\"` gets the focus ring class applied to it, but the individual divs with `role=\"spinbutton\"` are actually focusable. This PR allows me to wrap the entire combobox in a `Focus` component with the `within` prop set in order to apply the focus ring class rather than each individual spinbutton.",
+  "closed_by": {
+    "login": "necolas",
+    "id": 239676,
+    "node_id": "MDQ6VXNlcjIzOTY3Ng==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/239676?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/necolas",
+    "html_url": "https://github.com/necolas",
+    "followers_url": "https://api.github.com/users/necolas/followers",
+    "following_url": "https://api.github.com/users/necolas/following{/other_user}",
+    "gists_url": "https://api.github.com/users/necolas/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/necolas/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/necolas/subscriptions",
+    "organizations_url": "https://api.github.com/users/necolas/orgs",
+    "repos_url": "https://api.github.com/users/necolas/repos",
+    "events_url": "https://api.github.com/users/necolas/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/necolas/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

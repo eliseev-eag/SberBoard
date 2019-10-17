@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12852",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12852/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12852/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12852/events",
+  "html_url": "https://github.com/facebook/react/pull/12852",
+  "id": 324234057,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTg4ODk2NzA4",
+  "number": 12852,
+  "title": "Pass \"start time\" and \"commit time\" to Profiler callback",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2018-05-18T00:52:35Z",
+  "updated_at": "2018-05-21T16:49:26Z",
+  "closed_at": "2018-05-21T16:49:23Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12852",
+    "html_url": "https://github.com/facebook/react/pull/12852",
+    "diff_url": "https://github.com/facebook/react/pull/12852.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12852.patch"
+  },
+  "body": "`Profiler` component passes additional \"start time\" and \"commit time\" parameters to `onRender` callback.\r\n\r\nAfter discussing this new component type with some teams at FB that might use it, it's become apparent that the addition of these time values would be helpful.\r\n* Start time provides a method of determining whether a given commit had already begun when an event took place (e.g. user interaction, Flux action).\r\n* Commit time could be roughly determined using e.g. `performance.now()` within the `onRender` callback, but multiple `Profiler` components would end up with slightly different times for a single commit. This explicit time value ensures consistency.\r\n\r\nTests have been updated to cover both new parameters.\r\n\r\n### Caveats\r\n\r\nStart time _is not the time_ when the event that triggered a render occurred (e.g. mouse click, Flux update). It is the time when the `Profiler` in question started rendering as a result. (This might be significantly later than the event that originated the update. State updates can be async. Other code may execute in between. etc.)\r\n\r\nCommit time is not necessarily the exact time a user sees e.g. the updated DOM. It is the time when React commits the mutations to the DOM- but other scripts may run before the browser repaints.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

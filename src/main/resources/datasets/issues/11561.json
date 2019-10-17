@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11561",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11561/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11561/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11561/events",
+  "html_url": "https://github.com/facebook/react/pull/11561",
+  "id": 274006896,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTUyNjY1Njk3",
+  "number": 11561,
+  "title": "Add key validation to React.Children.toArray",
+  "user": {
+    "login": "clemmy",
+    "id": 3696934,
+    "node_id": "MDQ6VXNlcjM2OTY5MzQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3696934?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/clemmy",
+    "html_url": "https://github.com/clemmy",
+    "followers_url": "https://api.github.com/users/clemmy/followers",
+    "following_url": "https://api.github.com/users/clemmy/following{/other_user}",
+    "gists_url": "https://api.github.com/users/clemmy/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/clemmy/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/clemmy/subscriptions",
+    "organizations_url": "https://api.github.com/users/clemmy/orgs",
+    "repos_url": "https://api.github.com/users/clemmy/repos",
+    "events_url": "https://api.github.com/users/clemmy/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/clemmy/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2017-11-15T01:52:06Z",
+  "updated_at": "2018-01-05T17:07:06Z",
+  "closed_at": "2018-01-05T17:07:05Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11561",
+    "html_url": "https://github.com/facebook/react/pull/11561",
+    "diff_url": "https://github.com/facebook/react/pull/11561.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11561.patch"
+  },
+  "body": "Addresses https://github.com/facebook/react/issues/11549\r\n\r\nThis warns only on React.Children.toArray. I don't think the other children helper methods (`forEach`, `map`, and `count`) are dangerous.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

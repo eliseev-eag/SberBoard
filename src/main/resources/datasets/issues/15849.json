@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15849",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15849/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15849/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15849/events",
+  "html_url": "https://github.com/facebook/react/pull/15849",
+  "id": 453983331,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjg2NTI5NDY2",
+  "number": 15849,
+  "title": "[Flare] First pass at an implementation of experimental FocusManager API",
+  "user": {
+    "login": "devongovett",
+    "id": 19409,
+    "node_id": "MDQ6VXNlcjE5NDA5",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/19409?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/devongovett",
+    "html_url": "https://github.com/devongovett",
+    "followers_url": "https://api.github.com/users/devongovett/followers",
+    "following_url": "https://api.github.com/users/devongovett/following{/other_user}",
+    "gists_url": "https://api.github.com/users/devongovett/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/devongovett/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/devongovett/subscriptions",
+    "organizations_url": "https://api.github.com/users/devongovett/orgs",
+    "repos_url": "https://api.github.com/users/devongovett/repos",
+    "events_url": "https://api.github.com/users/devongovett/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/devongovett/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 46,
+  "created_at": "2019-06-10T03:30:16Z",
+  "updated_at": "2019-06-27T03:40:33Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15849",
+    "html_url": "https://github.com/facebook/react/pull/15849",
+    "diff_url": "https://github.com/facebook/react/pull/15849.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15849.patch"
+  },
+  "body": "This is a first pass at implementing the `FocusManager` API specified in https://github.com/reactjs/rfcs/pull/109. It goes along with the already implemented `FocusScope` in react-events.\r\n\r\nI adjusted the API slightly, and will be updating the RFC to match. In particular, the `focusNext` and `focusNextTabStop` methods have been merged, along with the corresponding previous methods. There is now an options object that can be passed to specify whether the element must be tabbable or only focusable. In addition, there are options to enable wrapping behavior at the ends of a scope, along with starting the search from a particular element rather than only `document.activeElement`. The methods also return the element they focused if any, which allows the calling code to do something with that information.\r\n\r\nThe API is now:\r\n\r\n```javascript\r\ntype FocusManagerOptions = {\r\n  from?: HTMLElement,\r\n  tabbable?: boolean,\r\n  wrap?: boolean,\r\n};\r\n\r\ninterface FocusManager {\r\n  focusNext(opts: FocusManagerOptions): HTMLElement,\r\n  focusPrevious(opts: FocusManagerOptions): HTMLElement\r\n}\r\n```\r\n\r\nPerhaps we will also want `focusFirst` and `focusLast` methods at some point as well. Happy to hear whatever feedback you have on the API.\r\n\r\nMost of the implementation is moved from the existing code for `FocusScope`. There were a few things I wasn't sure about though:\r\n\r\n* How it should be exposed. For now, it is available as `ReactDOM.unstable_FocusManager` if the event API feature flag is enabled. Perhaps it should be exposed as part of `react-events` instead of `react-dom`, but I didn't see a good way of exposing the necessary internals.\r\n* How to detect `FocusScope` event components in the tree. For now, I added an `isFocusScope` option to the event responder, but this is kind of a hack. I didn't want react-dom to have a dependency on react-events, so I wasn't sure how else to do it.\r\n* What should happen if you call `focusNext({from: node})`, where node contains focusable children? Should it focus the first item within that node, or go to the next focusable element within a sibling?\r\n\r\nThanks in advance for your feedback! 🙏",
+  "closed_by": null
+}

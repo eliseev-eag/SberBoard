@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/17012",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/17012/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/17012/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/17012/events",
+  "html_url": "https://github.com/facebook/react/pull/17012",
+  "id": 502482877,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzI0NTU0NTQ2",
+  "number": 17012,
+  "title": "chore: upgrade jsdom",
+  "user": {
+    "login": "SimenB",
+    "id": 1404810,
+    "node_id": "MDQ6VXNlcjE0MDQ4MTA=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1404810?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/SimenB",
+    "html_url": "https://github.com/SimenB",
+    "followers_url": "https://api.github.com/users/SimenB/followers",
+    "following_url": "https://api.github.com/users/SimenB/following{/other_user}",
+    "gists_url": "https://api.github.com/users/SimenB/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/SimenB/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/SimenB/subscriptions",
+    "organizations_url": "https://api.github.com/users/SimenB/orgs",
+    "repos_url": "https://api.github.com/users/SimenB/repos",
+    "events_url": "https://api.github.com/users/SimenB/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/SimenB/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-10-04T07:44:24Z",
+  "updated_at": "2019-10-04T07:53:02Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/17012",
+    "html_url": "https://github.com/facebook/react/pull/17012",
+    "diff_url": "https://github.com/facebook/react/pull/17012.diff",
+    "patch_url": "https://github.com/facebook/react/pull/17012.patch"
+  },
+  "body": "Following up on #15778, this is needed before being able to upgrade to Jest 25, which will have some significant performance improvements. Some tests for `style` properties are failing though, and I have no idea if it's due to jsdom or the tests themselves. I have some hope you'll know what's up yourselves 🤞  \r\n\r\nI tried upgrading to the Jest 25 alpha btw, and it fails in the same way, so if it's an issue with jsdom itself, it has not been fixed for jsdom@15 and it'd be great to report it to them.\r\n\r\n/cc @threepointone ",
+  "closed_by": null
+}

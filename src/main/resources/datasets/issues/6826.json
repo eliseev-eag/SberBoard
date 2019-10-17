@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6826",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6826/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6826/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6826/events",
+  "html_url": "https://github.com/facebook/react/issues/6826",
+  "id": 156082300,
+  "node_id": "MDU6SXNzdWUxNTYwODIzMDA=",
+  "number": 6826,
+  "title": "Unable to Use TestUtils.Simulate.change() Consecutively",
+  "user": {
+    "login": "lo-tp",
+    "id": 6308071,
+    "node_id": "MDQ6VXNlcjYzMDgwNzE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6308071?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lo-tp",
+    "html_url": "https://github.com/lo-tp",
+    "followers_url": "https://api.github.com/users/lo-tp/followers",
+    "following_url": "https://api.github.com/users/lo-tp/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lo-tp/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lo-tp/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lo-tp/subscriptions",
+    "organizations_url": "https://api.github.com/users/lo-tp/orgs",
+    "repos_url": "https://api.github.com/users/lo-tp/repos",
+    "events_url": "https://api.github.com/users/lo-tp/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lo-tp/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 139734344,
+      "node_id": "MDU6TGFiZWwxMzk3MzQzNDQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Test%20Utils",
+      "name": "Component: Test Utils",
+      "color": "eb6420",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2016-05-21T04:02:49Z",
+  "updated_at": "2016-05-21T05:57:52Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "I'm using `jest` coupled with `Testutils` to test my `react` code.\nJust check the following code.\n\n``` js\n//All the variables surfix with Node are DOMElement\n nameFieldNode.value='tmp';    //initial value is not 'tmp'\n indexFieldNode.value='indext';    //initial value is not 'indext'\n TestUtils.Simulate.change(nameFieldNode);  \n TestUtils.Simulate.change(indexFieldNode);\n expect(nameFieldNode.value).toBe('tmp');\n expect(indexFieldNode.value).toBe('indext');\n```\n\nWith the above snippet, The second expect would fail and you can see that the value of indexFieldNode is not updated at all.\n\nSo I change the code to make it like this.\n\n``` js\n//All the variables surfix with Node are DOMElement\n nameFieldNode.value='tmp';    //initial value is not 'tmp'\n TestUtils.Simulate.change(nameFieldNode);  \n indexFieldNode.value='indext';    //initial value is not 'indext'\n TestUtils.Simulate.change(indexFieldNode);\n expect(nameFieldNode.value).toBe('tmp');\n expect(indexFieldNode.value).toBe('indext');\n```\n\nThis time, everything works properly.\n",
+  "closed_by": null
+}

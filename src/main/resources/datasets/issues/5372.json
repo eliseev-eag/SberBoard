@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5372",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5372/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5372/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5372/events",
+  "html_url": "https://github.com/facebook/react/pull/5372",
+  "id": 114719769,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDk1MDgwMzg=",
+  "number": 5372,
+  "title": "Update getting-started.ko-KR.md",
+  "user": {
+    "login": "csbok",
+    "id": 3767680,
+    "node_id": "MDQ6VXNlcjM3Njc2ODA=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/3767680?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/csbok",
+    "html_url": "https://github.com/csbok",
+    "followers_url": "https://api.github.com/users/csbok/followers",
+    "following_url": "https://api.github.com/users/csbok/following{/other_user}",
+    "gists_url": "https://api.github.com/users/csbok/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/csbok/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/csbok/subscriptions",
+    "organizations_url": "https://api.github.com/users/csbok/orgs",
+    "repos_url": "https://api.github.com/users/csbok/repos",
+    "events_url": "https://api.github.com/users/csbok/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/csbok/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2015-11-03T00:57:02Z",
+  "updated_at": "2015-11-10T18:56:02Z",
+  "closed_at": "2015-11-03T11:44:31Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5372",
+    "html_url": "https://github.com/facebook/react/pull/5372",
+    "diff_url": "https://github.com/facebook/react/pull/5372.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5372.patch"
+  },
+  "body": "correcting misspelled words\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

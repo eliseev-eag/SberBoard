@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16869",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16869/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16869/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16869/events",
+  "html_url": "https://github.com/facebook/react/pull/16869",
+  "id": 497299620,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzIwNDU3NTg5",
+  "number": 16869,
+  "title": "DevTools FB feature flag system",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-09-23T20:02:46Z",
+  "updated_at": "2019-09-25T21:43:18Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16869",
+    "html_url": "https://github.com/facebook/react/pull/16869",
+    "diff_url": "https://github.com/facebook/react/pull/16869.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16869.patch"
+  },
+  "body": "Adds a basic feature flag system to DevTools extension builds, supporting `stable` and `prerelease` builds. This will enable early testing of prerelease features within the smaller pool of Facebook engineers using DevTools.",
+  "closed_by": null
+}

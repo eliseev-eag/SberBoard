@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3101",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3101/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3101/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3101/events",
+  "html_url": "https://github.com/facebook/react/pull/3101",
+  "id": 57110139,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjg5NjkxMTI=",
+  "number": 3101,
+  "title": "Added support for shared mixins",
+  "user": {
+    "login": "syrusakbary",
+    "id": 188257,
+    "node_id": "MDQ6VXNlcjE4ODI1Nw==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/188257?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/syrusakbary",
+    "html_url": "https://github.com/syrusakbary",
+    "followers_url": "https://api.github.com/users/syrusakbary/followers",
+    "following_url": "https://api.github.com/users/syrusakbary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/syrusakbary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/syrusakbary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/syrusakbary/subscriptions",
+    "organizations_url": "https://api.github.com/users/syrusakbary/orgs",
+    "repos_url": "https://api.github.com/users/syrusakbary/repos",
+    "events_url": "https://api.github.com/users/syrusakbary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/syrusakbary/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 139653724,
+      "node_id": "MDU6TGFiZWwxMzk2NTM3MjQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Core%20Utilities",
+      "name": "Component: Core Utilities",
+      "color": "c5def5",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2015-02-10T00:02:44Z",
+  "updated_at": "2015-11-13T07:13:03Z",
+  "closed_at": "2015-11-10T00:44:01Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3101",
+    "html_url": "https://github.com/facebook/react/pull/3101",
+    "diff_url": "https://github.com/facebook/react/pull/3101.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3101.patch"
+  },
+  "body": "There is a case scenario where two or more _mixins_ (**A**, **B**) share a common _mixin_ (**C**).\n\nRight now is impossible to use the _mixins_ **A** and **B** at the same time in a _React Class_ (as will try to override the method, and triggers the invariant exception automatically).\n\nThis pull request add the ability to do it in a very simple and effective way.\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

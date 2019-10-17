@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10648",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10648/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10648/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10648/events",
+  "html_url": "https://github.com/facebook/react/pull/10648",
+  "id": 256335410,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQwMDk4NDQz",
+  "number": 10648,
+  "title": "Continue render on null reference error in IE",
+  "user": {
+    "login": "wesrobinson12",
+    "id": 19273224,
+    "node_id": "MDQ6VXNlcjE5MjczMjI0",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/19273224?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/wesrobinson12",
+    "html_url": "https://github.com/wesrobinson12",
+    "followers_url": "https://api.github.com/users/wesrobinson12/followers",
+    "following_url": "https://api.github.com/users/wesrobinson12/following{/other_user}",
+    "gists_url": "https://api.github.com/users/wesrobinson12/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/wesrobinson12/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/wesrobinson12/subscriptions",
+    "organizations_url": "https://api.github.com/users/wesrobinson12/orgs",
+    "repos_url": "https://api.github.com/users/wesrobinson12/repos",
+    "events_url": "https://api.github.com/users/wesrobinson12/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/wesrobinson12/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2017-09-08T18:28:01Z",
+  "updated_at": "2017-10-04T23:44:17Z",
+  "closed_at": "2017-10-04T23:44:17Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10648",
+    "html_url": "https://github.com/facebook/react/pull/10648",
+    "diff_url": "https://github.com/facebook/react/pull/10648.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10648.patch"
+  },
+  "body": "In IE11, my application is receiving the `Unable to get property '__reactInternalInstance$nn565zf8wm9c' of undefined or null reference` error.  The findParent function is passing a null container which is being used as an object with a key of reactInternalInstance in the ReactDOMComponentTree file\r\n\r\n**Before submitting a pull request,** please make sure the following is done:\r\n\r\n1. Fork [the repository](https://github.com/facebook/react) and create your branch from `master`.\r\n2. If you've added code that should be tested, add tests!\r\n3. If you've changed APIs, update the documentation.\r\n4. Ensure the test suite passes (`npm test`).\r\n5. Format your code with [prettier](https://github.com/prettier/prettier) (`npm run prettier`).\r\n6. Make sure your code lints (`npm run lint`).\r\n7. Run the [Flow](https://flowtype.org/) typechecks (`npm run flow`).\r\n8. If you haven't already, complete the CLA.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

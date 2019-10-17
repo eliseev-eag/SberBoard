@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7122",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7122/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7122/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7122/events",
+  "html_url": "https://github.com/facebook/react/issues/7122",
+  "id": 162309671,
+  "node_id": "MDU6SXNzdWUxNjIzMDk2NzE=",
+  "number": 7122,
+  "title": "Polyfill MouseEvent.buttons for Safari",
+  "user": {
+    "login": "sagendejonge",
+    "id": 2280035,
+    "node_id": "MDQ6VXNlcjIyODAwMzU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/2280035?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sagendejonge",
+    "html_url": "https://github.com/sagendejonge",
+    "followers_url": "https://api.github.com/users/sagendejonge/followers",
+    "following_url": "https://api.github.com/users/sagendejonge/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sagendejonge/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sagendejonge/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sagendejonge/subscriptions",
+    "organizations_url": "https://api.github.com/users/sagendejonge/orgs",
+    "repos_url": "https://api.github.com/users/sagendejonge/repos",
+    "events_url": "https://api.github.com/users/sagendejonge/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sagendejonge/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2016-06-26T02:51:13Z",
+  "updated_at": "2018-03-09T16:19:57Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "During mouse move event, 'e.buttons' returns 'undefined' in Safari.  Behaving correctly in Chrome.  While pressing the left mouse button and moving the mouse expect 'e.buttons' to return 1.  'e.nativeEvent.which' returns the correct result on Safari.\n\nSample Code:\n\n``` javascript\nimport React from 'react';\n\nexport default class Canvas extends React.Component {\n  constructor(props) {\n    super(props);\n  }\n\n  mouseDown(e) {\n    console.log(\"mouse down\", e.buttons, e.nativeEvent.which);\n  }\n\n  mouseMove(e) {\n    console.log(\"mouse move\", e.buttons, e.nativeEvent.which);\n  }\n\n  mouseUp(e) {\n    console.log(\"mouse up\", e.buttons, e.nativeEvent.which);\n  }\n\n  render() {\n    var canvasStyle = {\n      backgroundColor: 'rgba(0, 0, 255, 0.5)',\n      position: 'absolute',\n      top: '0px',\n      left: '0px',\n      width: '100%',\n      height: '100%'\n    }\n\n    return (\n      <div>\n        <canvas id=\"canvas\" style={canvasStyle}\n          onMouseDown={this.mouseDown.bind(this)}\n          onMouseMove={this.mouseMove.bind(this)}\n          onMouseUp={this.mouseUp.bind(this)}>\n        </canvas>\n      </div>\n    );\n  }\n}\n```\n\n**Versions**\nReact: 15.1.0\nSafari: 9.1.1 (11601.6.17)\n\n**OS**\nOS X El Capitan Version 10.11.5\n\n**Computer**\nModel Name: MacBook Air\nModel Identifier:   MacBookAir6,2\nProcessor Name: Intel Core i7\nProcessor Speed:    1.7 GHz\nNumber of Processors:   1\nTotal Number of Cores:  2\nL2 Cache (per Core):    256 KB\nL3 Cache:   4 MB\nMemory: 8 GB\n",
+  "closed_by": null
+}

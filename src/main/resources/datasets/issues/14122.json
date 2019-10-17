@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14122",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14122/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14122/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14122/events",
+  "html_url": "https://github.com/facebook/react/pull/14122",
+  "id": 377831716,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjI4Njc5ODI3",
+  "number": 14122,
+  "title": "\"functional component\" -> \"function component\"",
+  "user": {
+    "login": "locknono",
+    "id": 39038992,
+    "node_id": "MDQ6VXNlcjM5MDM4OTky",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/39038992?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/locknono",
+    "html_url": "https://github.com/locknono",
+    "followers_url": "https://api.github.com/users/locknono/followers",
+    "following_url": "https://api.github.com/users/locknono/following{/other_user}",
+    "gists_url": "https://api.github.com/users/locknono/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/locknono/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/locknono/subscriptions",
+    "organizations_url": "https://api.github.com/users/locknono/orgs",
+    "repos_url": "https://api.github.com/users/locknono/repos",
+    "events_url": "https://api.github.com/users/locknono/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/locknono/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-11-06T12:47:57Z",
+  "updated_at": "2018-11-06T14:26:29Z",
+  "closed_at": "2018-11-06T14:26:29Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14122",
+    "html_url": "https://github.com/facebook/react/pull/14122",
+    "diff_url": "https://github.com/facebook/react/pull/14122.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14122.patch"
+  },
+  "body": "Just correspond to [https://github.com/facebook/react/pull/13968/commits/b772e0e26bd8f3062e23e9d831045a39072d0372](url)",
+  "closed_by": {
+    "login": "locknono",
+    "id": 39038992,
+    "node_id": "MDQ6VXNlcjM5MDM4OTky",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/39038992?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/locknono",
+    "html_url": "https://github.com/locknono",
+    "followers_url": "https://api.github.com/users/locknono/followers",
+    "following_url": "https://api.github.com/users/locknono/following{/other_user}",
+    "gists_url": "https://api.github.com/users/locknono/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/locknono/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/locknono/subscriptions",
+    "organizations_url": "https://api.github.com/users/locknono/orgs",
+    "repos_url": "https://api.github.com/users/locknono/repos",
+    "events_url": "https://api.github.com/users/locknono/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/locknono/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

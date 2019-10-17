@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14939",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14939/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14939/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14939/events",
+  "html_url": "https://github.com/facebook/react/pull/14939",
+  "id": 413753764,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjU1NjQ2NDQ1",
+  "number": 14939,
+  "title": "Refactor createElement to use slice instead of for loop",
+  "user": {
+    "login": "Eddie-CooRo",
+    "id": 20463083,
+    "node_id": "MDQ6VXNlcjIwNDYzMDgz",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/20463083?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Eddie-CooRo",
+    "html_url": "https://github.com/Eddie-CooRo",
+    "followers_url": "https://api.github.com/users/Eddie-CooRo/followers",
+    "following_url": "https://api.github.com/users/Eddie-CooRo/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Eddie-CooRo/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Eddie-CooRo/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Eddie-CooRo/subscriptions",
+    "organizations_url": "https://api.github.com/users/Eddie-CooRo/orgs",
+    "repos_url": "https://api.github.com/users/Eddie-CooRo/repos",
+    "events_url": "https://api.github.com/users/Eddie-CooRo/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Eddie-CooRo/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-02-23T23:08:23Z",
+  "updated_at": "2019-02-23T23:18:49Z",
+  "closed_at": "2019-02-23T23:12:10Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14939",
+    "html_url": "https://github.com/facebook/react/pull/14939",
+    "diff_url": "https://github.com/facebook/react/pull/14939.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14939.patch"
+  },
+  "body": "Refactor createElement function to use slice due to being more performant over for loop as benchmarked here: https://jsperf.com/duplicate-array-using-slice-vs-for",
+  "closed_by": {
+    "login": "Eddie-CooRo",
+    "id": 20463083,
+    "node_id": "MDQ6VXNlcjIwNDYzMDgz",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/20463083?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Eddie-CooRo",
+    "html_url": "https://github.com/Eddie-CooRo",
+    "followers_url": "https://api.github.com/users/Eddie-CooRo/followers",
+    "following_url": "https://api.github.com/users/Eddie-CooRo/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Eddie-CooRo/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Eddie-CooRo/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Eddie-CooRo/subscriptions",
+    "organizations_url": "https://api.github.com/users/Eddie-CooRo/orgs",
+    "repos_url": "https://api.github.com/users/Eddie-CooRo/repos",
+    "events_url": "https://api.github.com/users/Eddie-CooRo/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Eddie-CooRo/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

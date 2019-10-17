@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8781",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8781/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8781/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8781/events",
+  "html_url": "https://github.com/facebook/react/pull/8781",
+  "id": 200745598,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTAxNTI3NDI0",
+  "number": 8781,
+  "title": "Remove error reference to the 'render' function",
+  "user": {
+    "login": "Volga",
+    "id": 10119487,
+    "node_id": "MDQ6VXNlcjEwMTE5NDg3",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/10119487?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Volga",
+    "html_url": "https://github.com/Volga",
+    "followers_url": "https://api.github.com/users/Volga/followers",
+    "following_url": "https://api.github.com/users/Volga/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Volga/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Volga/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Volga/subscriptions",
+    "organizations_url": "https://api.github.com/users/Volga/orgs",
+    "repos_url": "https://api.github.com/users/Volga/repos",
+    "events_url": "https://api.github.com/users/Volga/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Volga/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2017-01-13T22:20:40Z",
+  "updated_at": "2017-01-18T18:29:08Z",
+  "closed_at": "2017-01-14T19:36:56Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8781",
+    "html_url": "https://github.com/facebook/react/pull/8781",
+    "diff_url": "https://github.com/facebook/react/pull/8781.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8781.patch"
+  },
+  "body": "What is the `render` function of a functional component?\r\n",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

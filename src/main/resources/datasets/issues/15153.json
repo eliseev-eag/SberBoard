@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15153",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15153/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15153/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15153/events",
+  "html_url": "https://github.com/facebook/react/issues/15153",
+  "id": 422872651,
+  "node_id": "MDU6SXNzdWU0MjI4NzI2NTE=",
+  "number": 15153,
+  "title": "eslint-plugin-react-hooks - autofix useCallback/useMemo behaviour",
+  "user": {
+    "login": "RedTn",
+    "id": 3923164,
+    "node_id": "MDQ6VXNlcjM5MjMxNjQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3923164?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/RedTn",
+    "html_url": "https://github.com/RedTn",
+    "followers_url": "https://api.github.com/users/RedTn/followers",
+    "following_url": "https://api.github.com/users/RedTn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/RedTn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/RedTn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/RedTn/subscriptions",
+    "organizations_url": "https://api.github.com/users/RedTn/orgs",
+    "repos_url": "https://api.github.com/users/RedTn/repos",
+    "events_url": "https://api.github.com/users/RedTn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/RedTn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 1249821345,
+      "node_id": "MDU6TGFiZWwxMjQ5ODIxMzQ1",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20ESLint%20Rules",
+      "name": "Component: ESLint Rules",
+      "color": "f7afdb",
+      "default": false
+    },
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-03-19T17:54:16Z",
+  "updated_at": "2019-03-19T18:21:32Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\nDiscussion for new feature\r\n\r\n**What is the current behavior?**\r\n\r\nuseCallback/useMemo hook's do nothing when there is no second argument provided for deps. The eslint plugin reports this but does not autofix\r\n\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\n16.8.4\r\n\r\n**PR to implement:** \r\n\r\nhttps://github.com/facebook/react/pull/15146\r\n\r\n&nbsp;\r\n\r\nCurrently, the eslint plugin does not autofix useCallback/useMemo to infer deps if there isn't a second argument provided to the hook. We can autofix it to infer deps if needed, or autofix to remove the hook altogether if there no deps needed (according to https://reactjs.org/docs/hooks-reference.html#usememo, if no second argument is provided it behaves as if the hook doesn't exist anyways).\r\n\r\nWhat would be the best way to implement this autofix? In my opinion, linting shouldn't be breaking functionality on an autofix, so autofixing to remove the hook is the safest to implement. Autofixing to infer deps will change behavior in code so I was thinking of having a config option the dev needs to specify so that linting changes that is affecting behavior is explicit.\r\n",
+  "closed_by": null
+}

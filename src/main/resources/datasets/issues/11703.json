@@ -1,0 +1,91 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11703",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11703/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11703/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11703/events",
+  "html_url": "https://github.com/facebook/react/issues/11703",
+  "id": 277778436,
+  "node_id": "MDU6SXNzdWUyNzc3Nzg0MzY=",
+  "number": 11703,
+  "title": "Investigate why Flow fails on Windows",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 71502270,
+      "node_id": "MDU6TGFiZWw3MTUwMjI3MA==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Build%20Infrastructure",
+      "name": "Component: Build Infrastructure",
+      "color": "f9d0c4",
+      "default": false
+    },
+    {
+      "id": 588833528,
+      "node_id": "MDU6TGFiZWw1ODg4MzM1Mjg=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Difficulty:%20medium",
+      "name": "Difficulty: medium",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 725156255,
+      "node_id": "MDU6TGFiZWw3MjUxNTYyNTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/good%20first%20issue%20(taken)",
+      "name": "good first issue (taken)",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-11-29T14:40:08Z",
+  "updated_at": "2017-12-18T12:26:45Z",
+  "closed_at": "2017-12-18T12:26:45Z",
+  "author_association": "MEMBER",
+  "body": "I couldn't enable it on Windows CI: https://ci.appveyor.com/project/Facebook/react/build/1.0.10\r\n\r\nI also remember seeing this locally on a Windows machine. Need to investigate why `yarn flow` fails on Windows but works on macOS.\r\n\r\n```\r\nyarn run v1.3.2\r\n$ node ./scripts/tasks/flow.js\r\nError: packages/react-reconciler/src/ReactFiberHostContext.js:87\r\n 87:     const nextContext = getChildHostContext(context, fiber.type, rootInstance);\r\n                                                 ^^^^^^^ NoContextT. This type is incompatible with the expected param type of\r\n                    v--------------------------------------------\r\n 31: export default function<T, P, I, TI, HI, PI, C, CC, CX, PL>(\r\n 32:   config: HostConfig<T, P, I, TI, HI, PI, C, CC, CX, PL>,\r\n 33: ): HostContext<C, CX> {\r\n     --------------------^ some incompatible instantiation of `CX`\r\nError: packages/react-reconciler/src/ReactFiberHostContext.js:87\r\n 87:     const nextContext = getChildHostContext(context, fiber.type, rootInstance);\r\n                                                                      ^^^^^^^^^^^^ NoContextT. This type is incompatible with the expected param type of\r\n                    v--------------------------------------------\r\n 31: export default function<T, P, I, TI, HI, PI, C, CC, CX, PL>(\r\n 32:   config: HostConfig<T, P, I, TI, HI, PI, C, CC, CX, PL>,\r\n 33: ): HostContext<C, CX> {\r\n     --------------------^ some incompatible instantiation of `C`\r\nFound 2 errors\r\nFlow failed\r\nerror Command failed with exit code 2.\r\n```",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

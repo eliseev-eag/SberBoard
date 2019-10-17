@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13507",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13507/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13507/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13507/events",
+  "html_url": "https://github.com/facebook/react/pull/13507",
+  "id": 355149700,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjExNzQ0OTY0",
+  "number": 13507,
+  "title": "Don't flush interactive updates to uncontrolled components early",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2018-08-29T13:02:14Z",
+  "updated_at": "2018-08-29T20:55:03Z",
+  "closed_at": "2018-08-29T20:55:03Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13507",
+    "html_url": "https://github.com/facebook/react/pull/13507",
+    "diff_url": "https://github.com/facebook/react/pull/13507.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13507.patch"
+  },
+  "body": "This is related to what @NE-SmallTown noticed in https://github.com/facebook/react/pull/13488#issuecomment-416805935.\r\n\r\nIn the first commit, I amend my test to check for more things. Specifically, it seems weird that `setState` inside an `onChange` handler in async mode was flushed synchronously upon exiting an event — even though there was just one event. So I assert that it shouldn’t do that.\r\n\r\nThe cause turns out related to this:\r\n\r\nhttps://github.com/facebook/react/blob/1c0ba70b4b753178d1bb9d9d8e32b90c50ec7e2c/packages/events/ReactGenericBatching.js#L44-L51\r\n\r\nWe need to flush restore for controlled inputs at the end of the interactive event. But we currently do this regardless of whether an input is controlled or not:\r\n\r\nhttps://github.com/facebook/react/blob/1c0ba70b4b753178d1bb9d9d8e32b90c50ec7e2c/packages/react-dom/src/events/ChangeEventPlugin.js#L59-L60\r\n\r\nIn the second commit, I change it so that we don't flush interactive updates early for cases where the inputs aren't controlled (or affect other controlled inputs).\r\n\r\nI'm not very familiar with this code and not entirely sure this is right. For example, an input might flip from uncontrolled to controlled, and we kinda support that (with a warning)? Then I think this detection would fail.\r\n\r\nAlso not sure it's worth the added complexity in practice. If you think it's valuable I can add more test coverage.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

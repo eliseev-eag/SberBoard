@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10644",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10644/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10644/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10644/events",
+  "html_url": "https://github.com/facebook/react/pull/10644",
+  "id": 256159997,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTM5OTY4NDYw",
+  "number": 10644,
+  "title": "[deleted]",
+  "user": {
+    "login": "bjornars",
+    "id": 689179,
+    "node_id": "MDQ6VXNlcjY4OTE3OQ==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/689179?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bjornars",
+    "html_url": "https://github.com/bjornars",
+    "followers_url": "https://api.github.com/users/bjornars/followers",
+    "following_url": "https://api.github.com/users/bjornars/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bjornars/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bjornars/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bjornars/subscriptions",
+    "organizations_url": "https://api.github.com/users/bjornars/orgs",
+    "repos_url": "https://api.github.com/users/bjornars/repos",
+    "events_url": "https://api.github.com/users/bjornars/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bjornars/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-09-08T07:05:43Z",
+  "updated_at": "2017-09-08T07:08:15Z",
+  "closed_at": "2017-09-08T07:06:42Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10644",
+    "html_url": "https://github.com/facebook/react/pull/10644",
+    "diff_url": "https://github.com/facebook/react/pull/10644.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10644.patch"
+  },
+  "body": "\r\n",
+  "closed_by": {
+    "login": "bjornars",
+    "id": 689179,
+    "node_id": "MDQ6VXNlcjY4OTE3OQ==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/689179?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bjornars",
+    "html_url": "https://github.com/bjornars",
+    "followers_url": "https://api.github.com/users/bjornars/followers",
+    "following_url": "https://api.github.com/users/bjornars/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bjornars/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bjornars/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bjornars/subscriptions",
+    "organizations_url": "https://api.github.com/users/bjornars/orgs",
+    "repos_url": "https://api.github.com/users/bjornars/repos",
+    "events_url": "https://api.github.com/users/bjornars/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bjornars/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

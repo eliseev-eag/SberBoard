@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5732",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5732/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5732/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5732/events",
+  "html_url": "https://github.com/facebook/react/pull/5732",
+  "id": 123767928,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTQ1MzE0MjU=",
+  "number": 5732,
+  "title": "[docs] deleting some unecessary newline",
+  "user": {
+    "login": "iamchenxin",
+    "id": 8873545,
+    "node_id": "MDQ6VXNlcjg4NzM1NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8873545?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/iamchenxin",
+    "html_url": "https://github.com/iamchenxin",
+    "followers_url": "https://api.github.com/users/iamchenxin/followers",
+    "following_url": "https://api.github.com/users/iamchenxin/following{/other_user}",
+    "gists_url": "https://api.github.com/users/iamchenxin/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/iamchenxin/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/iamchenxin/subscriptions",
+    "organizations_url": "https://api.github.com/users/iamchenxin/orgs",
+    "repos_url": "https://api.github.com/users/iamchenxin/repos",
+    "events_url": "https://api.github.com/users/iamchenxin/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/iamchenxin/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2015-12-24T06:58:52Z",
+  "updated_at": "2016-01-28T18:20:52Z",
+  "closed_at": "2016-01-12T17:57:32Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5732",
+    "html_url": "https://github.com/facebook/react/pull/5732",
+    "diff_url": "https://github.com/facebook/react/pull/5732.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5732.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

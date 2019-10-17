@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5026",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5026/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5026/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5026/events",
+  "html_url": "https://github.com/facebook/react/pull/5026",
+  "id": 109278044,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDY1MTAyNzQ=",
+  "number": 5026,
+  "title": "clarify that events work for elements not for components",
+  "user": {
+    "login": "chicoxyzzy",
+    "id": 1507086,
+    "node_id": "MDQ6VXNlcjE1MDcwODY=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1507086?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/chicoxyzzy",
+    "html_url": "https://github.com/chicoxyzzy",
+    "followers_url": "https://api.github.com/users/chicoxyzzy/followers",
+    "following_url": "https://api.github.com/users/chicoxyzzy/following{/other_user}",
+    "gists_url": "https://api.github.com/users/chicoxyzzy/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/chicoxyzzy/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/chicoxyzzy/subscriptions",
+    "organizations_url": "https://api.github.com/users/chicoxyzzy/orgs",
+    "repos_url": "https://api.github.com/users/chicoxyzzy/repos",
+    "events_url": "https://api.github.com/users/chicoxyzzy/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/chicoxyzzy/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2015-10-01T11:03:53Z",
+  "updated_at": "2015-10-02T00:50:18Z",
+  "closed_at": "2015-10-01T17:49:25Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5026",
+    "html_url": "https://github.com/facebook/react/pull/5026",
+    "diff_url": "https://github.com/facebook/react/pull/5026.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5026.patch"
+  },
+  "body": "now it looks like component may have `onMouseEnter` and `onMouseLeave` but in fact this is true only for elements\n",
+  "closed_by": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

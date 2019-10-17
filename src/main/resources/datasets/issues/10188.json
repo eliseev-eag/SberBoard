@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10188",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10188/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10188/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10188/events",
+  "html_url": "https://github.com/facebook/react/issues/10188",
+  "id": 243145870,
+  "node_id": "MDU6SXNzdWUyNDMxNDU4NzA=",
+  "number": 10188,
+  "title": "Make Uses of ReactDebugCurrentFrame.getCurrentStack Reentrant",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 139653724,
+      "node_id": "MDU6TGFiZWwxMzk2NTM3MjQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Core%20Utilities",
+      "name": "Component: Core Utilities",
+      "color": "c5def5",
+      "default": false
+    },
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-07-15T01:52:38Z",
+  "updated_at": "2018-07-11T19:00:32Z",
+  "closed_at": "2018-07-11T18:43:55Z",
+  "author_association": "MEMBER",
+  "body": "I realized that the refactor to use ReactDebugCurrentFrame as a decoupled stack frame for error messages is not reentrant: https://github.com/facebook/react/pull/10105/files#r127573520\r\n\r\nFiber is not reentrant but other renderers might be. The synchronous server renderer is atm.\r\n\r\nWe should add tests for warnings between renderers, such as calling a server-render from within a client render, and update the set/reset callsites to use push/pop instead to account for that.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

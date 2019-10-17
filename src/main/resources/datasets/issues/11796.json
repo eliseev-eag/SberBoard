@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11796",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11796/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11796/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11796/events",
+  "html_url": "https://github.com/facebook/react/pull/11796",
+  "id": 280247183,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTU3MDc5NTIz",
+  "number": 11796,
+  "title": "[Discussion] Added legacy_Component/legacy_PureComponent",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-12-07T19:20:29Z",
+  "updated_at": "2017-12-11T17:51:18Z",
+  "closed_at": "2017-12-11T17:51:17Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11796",
+    "html_url": "https://github.com/facebook/react/pull/11796",
+    "diff_url": "https://github.com/facebook/react/pull/11796.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11796.patch"
+  },
+  "body": "Proof of concept to more incrementally introduce the `debugRenderPhaseSideEffects` GK. The idea behind this PR is to first code-mod a codebase to extend `legacy_` components, and then gradually migrate them back to `Component` once they had been deemed side-effect free.\r\n\r\nI'm not thrilled about this approach. 😄 \r\n\r\nThis would cause a small regression in bundle size:\r\n![screen shot 2017-12-07 at 7 12 12 am](https://user-images.githubusercontent.com/29597/33734000-5f537c58-db40-11e7-972d-fb39c4219da9.png)",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

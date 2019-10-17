@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11463",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11463/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11463/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11463/events",
+  "html_url": "https://github.com/facebook/react/pull/11463",
+  "id": 271324551,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTUwNzQ4NzE3",
+  "number": 11463,
+  "title": "Expose injectIntoDevTools() to renderers",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2017-11-05T23:22:29Z",
+  "updated_at": "2017-11-06T16:07:45Z",
+  "closed_at": "2017-11-06T13:09:03Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11463",
+    "html_url": "https://github.com/facebook/react/pull/11463",
+    "diff_url": "https://github.com/facebook/react/pull/11463.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11463.patch"
+  },
+  "body": "An alternative to https://github.com/facebook/react/pull/11445.\r\nThis lets third party renderers inject themselves into the devtools.\r\n\r\nPreviously, renderers had to reach into reconciler directly to do this.\r\nHowever, this wouldn't work for third party renderers.\r\n\r\nInstead, I put `injectIntoDevTools()` directly on the `ReactFiberReconciler()` return value.\r\nThis way any renderer can choose to call it (or not call it).\r\n\r\nAlso moves us closer to not using cross-package `/src/` imports.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

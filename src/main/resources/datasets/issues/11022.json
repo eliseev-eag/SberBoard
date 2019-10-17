@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11022",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11022/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11022/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11022/events",
+  "html_url": "https://github.com/facebook/react/issues/11022",
+  "id": 262025600,
+  "node_id": "MDU6SXNzdWUyNjIwMjU2MDA=",
+  "number": 11022,
+  "title": "Error and error info logged in wrong order in Firefox",
+  "user": {
+    "login": "xMartin",
+    "id": 112532,
+    "node_id": "MDQ6VXNlcjExMjUzMg==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/112532?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/xMartin",
+    "html_url": "https://github.com/xMartin",
+    "followers_url": "https://api.github.com/users/xMartin/followers",
+    "following_url": "https://api.github.com/users/xMartin/following{/other_user}",
+    "gists_url": "https://api.github.com/users/xMartin/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/xMartin/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/xMartin/subscriptions",
+    "organizations_url": "https://api.github.com/users/xMartin/orgs",
+    "repos_url": "https://api.github.com/users/xMartin/repos",
+    "events_url": "https://api.github.com/users/xMartin/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/xMartin/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-10-02T09:19:21Z",
+  "updated_at": "2018-08-15T19:29:03Z",
+  "closed_at": "2018-08-15T19:29:03Z",
+  "author_association": "NONE",
+  "body": "In React 16 when a component throws an error in development mode the error itself (\"ReferenceError: x is not defined\") and additional info (\"The above error occurred in the <HelloWorld> component: ...\") is logged.\r\n\r\nIn Firefox this happens in the wrong order so that \"the above error\" is actually below:\r\n![bildschirmfoto 2017-10-02 um 11 08 08](https://user-images.githubusercontent.com/112532/31070963-a4147534-a762-11e7-88cd-5c15f263f219.png)\r\n\r\nWorks fine in Google Chrome.\r\n\r\nFirefox version: macOS 56.0 and 57.0b4\r\nReact v16.0.0\r\n\r\nHow to reproduce:\r\nOpen browser console and have a component throw an error like:\r\n```javascript\r\nconst HelloWorld = () => (\r\n  <h1>Hello, world {x}!</h1>\r\n);\r\n\r\nReactDOM.render(\r\n  <HelloWorld />,\r\n  document.getElementById('root')\r\n);\r\n```\r\nhttps://codepen.io/anon/pen/mBMGyV",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9236",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9236/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9236/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9236/events",
+  "html_url": "https://github.com/facebook/react/pull/9236",
+  "id": 216176858,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTEyMDg3ODk2",
+  "number": 9236,
+  "title": "Add warning about overwriting React component's instance property `updater`",
+  "user": {
+    "login": "rogeliog",
+    "id": 574806,
+    "node_id": "MDQ6VXNlcjU3NDgwNg==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/574806?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rogeliog",
+    "html_url": "https://github.com/rogeliog",
+    "followers_url": "https://api.github.com/users/rogeliog/followers",
+    "following_url": "https://api.github.com/users/rogeliog/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rogeliog/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rogeliog/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rogeliog/subscriptions",
+    "organizations_url": "https://api.github.com/users/rogeliog/orgs",
+    "repos_url": "https://api.github.com/users/rogeliog/repos",
+    "events_url": "https://api.github.com/users/rogeliog/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rogeliog/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-03-22T19:09:04Z",
+  "updated_at": "2018-01-05T15:13:21Z",
+  "closed_at": "2018-01-05T15:13:21Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9236",
+    "html_url": "https://github.com/facebook/react/pull/9236",
+    "diff_url": "https://github.com/facebook/react/pull/9236.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9236.patch"
+  },
+  "body": "This should fix #9164 , but I have the slight feeling that given my poor understanding of the project I might be tackling this in a really incorrect way 😊 so I have a couple of questions... Also please let me know if any of my assumptions are totally wrong!\r\n\r\n* It seems that React is mutating the updater right? Which is guess this are \"valid\" mutations. Considering that my assumption is correct, what does a \"valid updater\" is? I currently check for it being either `ReactServerUpdateQueue` or a `ReactNoopUpdateQueue` but I'm not sure if this is correct.\r\n* @acdlite https://github.com/facebook/react/pull/9188#discussion_r106303781 I'm having some trouble getting the component name. I tried `getComponentName(instance)` but I'm sure I'm doing something wrong here\r\n* I'm getting an error when running `yarn build` which I guess it has to do with the bundle that gets created for browserify\r\n```\r\nRunning \"browserify:basic\" (browserify) task\r\n>> Error: Cannot find module './ReactServerUpdateQueue' from '/Users/rogelioguzman/dev/react/build/node_modules/react/lib'\r\n\r\nRunning \"browserify:min\" (browserify) task\r\n>> Error: Cannot find module './ReactServerUpdateQueue' from '/Users/rogelioguzman/dev/react/build/node_modules/react/lib'\r\n```",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

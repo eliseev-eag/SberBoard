@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5861",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5861/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5861/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5861/events",
+  "html_url": "https://github.com/facebook/react/pull/5861",
+  "id": 126997365,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTYyNDQ0ODE=",
+  "number": 5861,
+  "title": "Issue #5839. Added onError event to the <source>",
+  "user": {
+    "login": "alunyov",
+    "id": 102968,
+    "node_id": "MDQ6VXNlcjEwMjk2OA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/102968?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/alunyov",
+    "html_url": "https://github.com/alunyov",
+    "followers_url": "https://api.github.com/users/alunyov/followers",
+    "following_url": "https://api.github.com/users/alunyov/following{/other_user}",
+    "gists_url": "https://api.github.com/users/alunyov/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/alunyov/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/alunyov/subscriptions",
+    "organizations_url": "https://api.github.com/users/alunyov/orgs",
+    "repos_url": "https://api.github.com/users/alunyov/repos",
+    "events_url": "https://api.github.com/users/alunyov/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/alunyov/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 12,
+  "created_at": "2016-01-16T03:25:19Z",
+  "updated_at": "2016-06-14T22:29:26Z",
+  "closed_at": "2016-06-09T12:28:30Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5861",
+    "html_url": "https://github.com/facebook/react/pull/5861",
+    "diff_url": "https://github.com/facebook/react/pull/5861.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5861.patch"
+  },
+  "body": "This should fix onError event for the `<source>` element.\n\nAccording to this article: http://www.w3schools.com/tags/tag_source.asp `<source>` tag supports the events attributes in HTML. It's pretty close to an `<img>` tag.\n",
+  "closed_by": {
+    "login": "alunyov",
+    "id": 102968,
+    "node_id": "MDQ6VXNlcjEwMjk2OA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/102968?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/alunyov",
+    "html_url": "https://github.com/alunyov",
+    "followers_url": "https://api.github.com/users/alunyov/followers",
+    "following_url": "https://api.github.com/users/alunyov/following{/other_user}",
+    "gists_url": "https://api.github.com/users/alunyov/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/alunyov/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/alunyov/subscriptions",
+    "organizations_url": "https://api.github.com/users/alunyov/orgs",
+    "repos_url": "https://api.github.com/users/alunyov/repos",
+    "events_url": "https://api.github.com/users/alunyov/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/alunyov/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

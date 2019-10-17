@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5715",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5715/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5715/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5715/events",
+  "html_url": "https://github.com/facebook/react/pull/5715",
+  "id": 123551109,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTQ0MTE2MjI=",
+  "number": 5715,
+  "title": "Fix typo in post",
+  "user": {
+    "login": "jwworth",
+    "id": 2782858,
+    "node_id": "MDQ6VXNlcjI3ODI4NTg=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/2782858?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jwworth",
+    "html_url": "https://github.com/jwworth",
+    "followers_url": "https://api.github.com/users/jwworth/followers",
+    "following_url": "https://api.github.com/users/jwworth/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jwworth/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jwworth/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jwworth/subscriptions",
+    "organizations_url": "https://api.github.com/users/jwworth/orgs",
+    "repos_url": "https://api.github.com/users/jwworth/repos",
+    "events_url": "https://api.github.com/users/jwworth/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jwworth/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-12-22T20:30:08Z",
+  "updated_at": "2015-12-23T12:48:54Z",
+  "closed_at": "2015-12-23T12:48:54Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5715",
+    "html_url": "https://github.com/facebook/react/pull/5715",
+    "diff_url": "https://github.com/facebook/react/pull/5715.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5715.patch"
+  },
+  "body": "This fixes a typo, 'was'.\n",
+  "closed_by": {
+    "login": "jwworth",
+    "id": 2782858,
+    "node_id": "MDQ6VXNlcjI3ODI4NTg=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/2782858?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jwworth",
+    "html_url": "https://github.com/jwworth",
+    "followers_url": "https://api.github.com/users/jwworth/followers",
+    "following_url": "https://api.github.com/users/jwworth/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jwworth/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jwworth/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jwworth/subscriptions",
+    "organizations_url": "https://api.github.com/users/jwworth/orgs",
+    "repos_url": "https://api.github.com/users/jwworth/repos",
+    "events_url": "https://api.github.com/users/jwworth/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jwworth/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

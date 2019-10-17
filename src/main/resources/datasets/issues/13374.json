@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13374",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13374/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13374/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13374/events",
+  "html_url": "https://github.com/facebook/react/pull/13374",
+  "id": 349802638,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjA3ODE1MzI0",
+  "number": 13374,
+  "title": "Support tangentialPressure and twist fields of pointer events",
+  "user": {
+    "login": "motiz88",
+    "id": 2246565,
+    "node_id": "MDQ6VXNlcjIyNDY1NjU=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/2246565?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/motiz88",
+    "html_url": "https://github.com/motiz88",
+    "followers_url": "https://api.github.com/users/motiz88/followers",
+    "following_url": "https://api.github.com/users/motiz88/following{/other_user}",
+    "gists_url": "https://api.github.com/users/motiz88/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/motiz88/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/motiz88/subscriptions",
+    "organizations_url": "https://api.github.com/users/motiz88/orgs",
+    "repos_url": "https://api.github.com/users/motiz88/repos",
+    "events_url": "https://api.github.com/users/motiz88/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/motiz88/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2018-08-12T10:47:55Z",
+  "updated_at": "2018-08-12T13:24:52Z",
+  "closed_at": "2018-08-12T13:16:24Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13374",
+    "html_url": "https://github.com/facebook/react/pull/13374",
+    "diff_url": "https://github.com/facebook/react/pull/13374.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13374.patch"
+  },
+  "body": "While working on https://github.com/facebook/flow/pull/6728 I noticed React's recently-added `SyntheticPointerEvent` was missing the [`tangentialPressure`](https://www.w3.org/TR/pointerevents/#dom-pointerevent-tangentialpressure) and [`twist`](https://www.w3.org/TR/pointerevents/#dom-pointerevent-twist) fields. I couldn't find any reason for their omission in https://github.com/facebook/react/pull/12507 (nor in the spec) so I assume they were meant to be included, like the rest of `PointerEvent`. This PR adds these two fields to `SyntheticPointerEvent`.",
+  "closed_by": {
+    "login": "philipp-spiess",
+    "id": 458591,
+    "node_id": "MDQ6VXNlcjQ1ODU5MQ==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/458591?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/philipp-spiess",
+    "html_url": "https://github.com/philipp-spiess",
+    "followers_url": "https://api.github.com/users/philipp-spiess/followers",
+    "following_url": "https://api.github.com/users/philipp-spiess/following{/other_user}",
+    "gists_url": "https://api.github.com/users/philipp-spiess/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/philipp-spiess/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/philipp-spiess/subscriptions",
+    "organizations_url": "https://api.github.com/users/philipp-spiess/orgs",
+    "repos_url": "https://api.github.com/users/philipp-spiess/repos",
+    "events_url": "https://api.github.com/users/philipp-spiess/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/philipp-spiess/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13832",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13832/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13832/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13832/events",
+  "html_url": "https://github.com/facebook/react/pull/13832",
+  "id": 369335880,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjIyMzAyNjYy",
+  "number": 13832,
+  "title": "Add failing test for Suspense bug",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2018-10-11T22:51:30Z",
+  "updated_at": "2018-11-09T17:38:17Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13832",
+    "html_url": "https://github.com/facebook/react/pull/13832",
+    "diff_url": "https://github.com/facebook/react/pull/13832.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13832.patch"
+  },
+  "body": "I expect that `maxDuration` that is larger than both the actual waiting time *and* the current expiration context timeout should be equivalent to not specifying `maxDuration` at all. But that doesn't seem like what happens. \r\n\r\nA more concrete example:\r\n\r\n```js\r\nimport React, { lazy, unstable_Suspense as Suspense } from \"react\";\r\nimport { unstable_createRoot as createRoot } from \"react-dom\";\r\n\r\nlet done = false;\r\nlet promise;\r\nfunction Delay({ ms, children }) {\r\n  if (done) {\r\n    return children;\r\n  }\r\n  if (!promise) {\r\n    promise = new Promise(resolve => {\r\n      setTimeout(() => {\r\n        done = true;\r\n        resolve();\r\n      }, ms);\r\n    });\r\n  }\r\n  throw promise;\r\n}\r\n\r\nclass Spinner extends React.Component {\r\n  componentDidMount() {\r\n    alert(\"spin\");\r\n  }\r\n  render() {\r\n    console.log(\"spinner\");\r\n    return <h1>🌀 'Loading....'</h1>;\r\n  }\r\n}\r\n\r\nclass App extends React.Component {\r\n  state = {};\r\n  render() {\r\n    return (\r\n      <>\r\n        <h1 onClick={() => this.setState({ showStuff: true })}>Suspense</h1>\r\n        {this.state.showStuff && (\r\n          <Suspense maxDuration={2000} fallback={<Spinner />}>\r\n            <Delay ms={10}>Ready</Delay>\r\n          </Suspense>\r\n        )}\r\n      </>\r\n    );\r\n  }\r\n}\r\n\r\ncreateRoot(document.getElementById(\"root\")).render(<App />);\r\n```\r\n\r\nI'd expect `Spinner` to never be shown — or at least the behavior to be consistent between `maxDuration={2000}` and missing `maxDuration`.",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12265",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12265/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12265/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12265/events",
+  "html_url": "https://github.com/facebook/react/pull/12265",
+  "id": 299165685,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTcwNjE1ODY4",
+  "number": 12265,
+  "title": "[fabric] Forked ReactNativeInjection and skip RCTEventEmitter for Fabric",
+  "user": {
+    "login": "fkgozali",
+    "id": 1095866,
+    "node_id": "MDQ6VXNlcjEwOTU4NjY=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1095866?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/fkgozali",
+    "html_url": "https://github.com/fkgozali",
+    "followers_url": "https://api.github.com/users/fkgozali/followers",
+    "following_url": "https://api.github.com/users/fkgozali/following{/other_user}",
+    "gists_url": "https://api.github.com/users/fkgozali/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/fkgozali/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/fkgozali/subscriptions",
+    "organizations_url": "https://api.github.com/users/fkgozali/orgs",
+    "repos_url": "https://api.github.com/users/fkgozali/repos",
+    "events_url": "https://api.github.com/users/fkgozali/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/fkgozali/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2018-02-21T23:16:43Z",
+  "updated_at": "2018-02-21T23:40:48Z",
+  "closed_at": "2018-02-21T23:40:48Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12265",
+    "html_url": "https://github.com/facebook/react/pull/12265",
+    "diff_url": "https://github.com/facebook/react/pull/12265.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12265.patch"
+  },
+  "body": "\r\n**Before submitting a pull request,** please make sure the following is done:\r\n\r\n1. Fork [the repository](https://github.com/facebook/react) and create your branch from `master`.\r\n2. Run `yarn` in the repository root.\r\n3. If you've fixed a bug or added code that should be tested, add tests!\r\n4. Ensure the test suite passes (`yarn test`). Tip: `yarn test --watch TestName` is helpful in development.\r\n5. Run `yarn test-prod` to test in the production environment. It supports the same options as `yarn test`.\r\n6. If you need a debugger, run `yarn debug-test --watch TestName`, open `chrome://inspect`, and press \"Inspect\".\r\n7. Format your code with [prettier](https://github.com/prettier/prettier) (`yarn prettier`).\r\n8. Make sure your code lints (`yarn lint`). Tip: `yarn linc` to only check changed files.\r\n9. Run the [Flow](https://flowtype.org/) typechecks (`yarn flow`).\r\n10. If you haven't already, complete the CLA.\r\n\r\n**Learn more about contributing:** https://reactjs.org/docs/how-to-contribute.html\r\n\r\n```\r\nyarn test\r\n...\r\nTest Suites: 138 passed, 138 total\r\nTests:       26 skipped, 2837 passed, 2863 total\r\nSnapshots:   29 passed, 29 total\r\nTime:        57.346s\r\nRan all test suites.\r\n✨  Done in 59.82s.\r\n```\r\n```\r\nyarn linc\r\nUsing globally installed version of Yarn\r\nyarn run v1.2.0\r\n$ node ./scripts/tasks/linc.js\r\nLinting changed files...\r\n> git merge-base HEAD master\r\n> git diff --name-only --diff-filter=ACMRTUB b17e4c204e05de5ee360910626b0ccc938f37c06\r\n> git ls-files --others --exclude-standard\r\n\r\nLint passed for changed files.\r\n✨  Done in 1.80s.\r\n```\r\n```\r\nyarn flow\r\nUsing globally installed version of Yarn\r\nyarn run v1.2.0\r\n$ node ./scripts/tasks/flow.js\r\nFound 0 errors\r\nFlow passed\r\n✨  Done in 7.27s.\r\n```\r\n\r\nAdditional tests:\r\n* `yarn build` then copied `build/react-native/ReactNativeRenderer-dev.js` to ReactNative local copy\r\n* verified that RN test app loaded and didn't redbox",
+  "closed_by": {
+    "login": "fkgozali",
+    "id": 1095866,
+    "node_id": "MDQ6VXNlcjEwOTU4NjY=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1095866?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/fkgozali",
+    "html_url": "https://github.com/fkgozali",
+    "followers_url": "https://api.github.com/users/fkgozali/followers",
+    "following_url": "https://api.github.com/users/fkgozali/following{/other_user}",
+    "gists_url": "https://api.github.com/users/fkgozali/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/fkgozali/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/fkgozali/subscriptions",
+    "organizations_url": "https://api.github.com/users/fkgozali/orgs",
+    "repos_url": "https://api.github.com/users/fkgozali/repos",
+    "events_url": "https://api.github.com/users/fkgozali/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/fkgozali/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6940",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6940/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6940/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6940/events",
+  "html_url": "https://github.com/facebook/react/pull/6940",
+  "id": 157885520,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzIxNjU0NTI=",
+  "number": 6940,
+  "title": "Improve proptypes oneof warnings  - Fixes #1919",
+  "user": {
+    "login": "philipshurpik",
+    "id": 6635302,
+    "node_id": "MDQ6VXNlcjY2MzUzMDI=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/6635302?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/philipshurpik",
+    "html_url": "https://github.com/philipshurpik",
+    "followers_url": "https://api.github.com/users/philipshurpik/followers",
+    "following_url": "https://api.github.com/users/philipshurpik/following{/other_user}",
+    "gists_url": "https://api.github.com/users/philipshurpik/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/philipshurpik/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/philipshurpik/subscriptions",
+    "organizations_url": "https://api.github.com/users/philipshurpik/orgs",
+    "repos_url": "https://api.github.com/users/philipshurpik/repos",
+    "events_url": "https://api.github.com/users/philipshurpik/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/philipshurpik/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2016-06-01T11:37:50Z",
+  "updated_at": "2016-10-23T19:41:25Z",
+  "closed_at": "2016-10-23T19:41:25Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6940",
+    "html_url": "https://github.com/facebook/react/pull/6940",
+    "diff_url": "https://github.com/facebook/react/pull/6940.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6940.patch"
+  },
+  "body": "Fixes issue #1919 \n\nAs I see there is two problems:\n1) If oneOf uses function in array - so they will be stringified as null - so I add functionPrettifier method as argument to JSON.stringify\n2) Possibly mismatch oneOf and oneOfType - if checks do not pass and one of the function is one of React.PropTypes - proper warning will be shown\n\nWelcome to your suggestions\n# reactEurope-hackathon\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

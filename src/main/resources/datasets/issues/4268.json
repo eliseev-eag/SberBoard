@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4268",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4268/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4268/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4268/events",
+  "html_url": "https://github.com/facebook/react/pull/4268",
+  "id": 92609362,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzkwNzA1MjI=",
+  "number": 4268,
+  "title": "Removed setProps and replaceProps (both previously deprecated)\n",
+  "user": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-07-02T10:56:26Z",
+  "updated_at": "2015-07-04T16:35:40Z",
+  "closed_at": "2015-07-02T11:47:18Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4268",
+    "html_url": "https://github.com/facebook/react/pull/4268",
+    "diff_url": "https://github.com/facebook/react/pull/4268.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4268.patch"
+  },
+  "body": "Removed setProps and replaceProps (both previously deprecated)\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

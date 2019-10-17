@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11927",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11927/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11927/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11927/events",
+  "html_url": "https://github.com/facebook/react/pull/11927",
+  "id": 284812429,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTYwMzE0MzM4",
+  "number": 11927,
+  "title": "Trap click events for portal root",
+  "user": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2017-12-27T23:21:23Z",
+  "updated_at": "2018-08-18T01:15:55Z",
+  "closed_at": "2018-08-18T01:10:20Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11927",
+    "html_url": "https://github.com/facebook/react/pull/11927",
+    "diff_url": "https://github.com/facebook/react/pull/11927.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11927.patch"
+  },
+  "body": "Should resolve #11918 \r\n\r\nStill need to run the build in iOS Safari to verify, but I'm 90% sure it will since an empty click handler fixed it in the JSFiddle provided for the issue.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

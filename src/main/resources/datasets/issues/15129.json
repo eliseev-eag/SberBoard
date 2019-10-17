@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15129",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15129/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15129/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15129/events",
+  "html_url": "https://github.com/facebook/react/issues/15129",
+  "id": 421845605,
+  "node_id": "MDU6SXNzdWU0MjE4NDU2MDU=",
+  "number": 15129,
+  "title": "Hooks - unmount and didUpdate",
+  "user": {
+    "login": "lichstam",
+    "id": 34944192,
+    "node_id": "MDQ6VXNlcjM0OTQ0MTky",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/34944192?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lichstam",
+    "html_url": "https://github.com/lichstam",
+    "followers_url": "https://api.github.com/users/lichstam/followers",
+    "following_url": "https://api.github.com/users/lichstam/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lichstam/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lichstam/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lichstam/subscriptions",
+    "organizations_url": "https://api.github.com/users/lichstam/orgs",
+    "repos_url": "https://api.github.com/users/lichstam/repos",
+    "events_url": "https://api.github.com/users/lichstam/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lichstam/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-03-16T19:50:01Z",
+  "updated_at": "2019-03-18T14:33:18Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "I'm opening this up at Dan's request from a twitter discussion:\r\nhttps://twitter.com/lichstam/status/1106995545938247682\r\n\r\nFrom Twitter:\r\n\r\nI can fill in on this. The first example I would like to point to is a debouncing hook I've created that looks something like this:\r\n  \r\n```javascript\r\nuseEffect(() => {\r\n  const debounced = setTimeout(() => setDebounced(steps), 500);\r\n  return () => clearTimeout(debounced);\r\n}, [steps])\r\n```\r\n\r\nand then I have another one, that actually performs the request:\r\n\r\n```javascript\r\nuseEffect(request, [debounced])\r\n```\r\n\r\nAnd it all works fine, apart from when the component is mounted and unmounted.\r\nIn the class model I was able to make sure it never runs the first time and on unmounting I could clear the timeout and, if the state value differs from prop (yes I know, you shouldn't mirror your props but I have to debounce somewhere), I could just perform a last request before I unmount. \r\nFurthermore, `componentDidUpdate` really made it easy preventing this from running the first time. I'm not quite sure how to approach this with hooks.\r\nPerhaps I'm doing it all wrong but to Patrick's point, the class way was more straight forward.\r\n\r\nAnother example: I code in RN and use the Animated API a lot. I have cases that translates into something like this:\r\n\r\n```javascript\r\nuseEffect(() => {\r\n  if (inAddStage) moveAndShowStep(); // Animate with Animated API\r\n}, [inAddStage]);\r\n```\r\n\r\nThis works well but it does perform an unnecessary initial run which makes me wonder if I've missed the point with hooks (again, to Patrick's point, it seems a bit more complex sometimes). Why isn't there a hook that **doesn't** run the first time btw? Again, with the old lifecycles it was much clearer how to prevent this from happening (using `componentDidUpdate`).\r\n\r\nOn a last note, I just want to say that I'm very fond of the idea and wholeheartedly support the functional approach and I really like the concept of hooks being \"state observers\", that react only when the specified attributes change - which basically makes the whole code more declarative.\r\nI've just started using them so I'll probably figure things out along the way but I thought I could give you something since you didn't get any answer :)",
+  "closed_by": null
+}

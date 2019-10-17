@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2203",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2203/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2203/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2203/events",
+  "html_url": "https://github.com/facebook/react/issues/2203",
+  "id": 43023228,
+  "node_id": "MDU6SXNzdWU0MzAyMzIyOA==",
+  "number": 2203,
+  "title": "html5 input type=number doesn't work with empty value",
+  "user": {
+    "login": "wheercool",
+    "id": 3875313,
+    "node_id": "MDQ6VXNlcjM4NzUzMTM=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/3875313?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/wheercool",
+    "html_url": "https://github.com/wheercool",
+    "followers_url": "https://api.github.com/users/wheercool/followers",
+    "following_url": "https://api.github.com/users/wheercool/following{/other_user}",
+    "gists_url": "https://api.github.com/users/wheercool/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/wheercool/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/wheercool/subscriptions",
+    "organizations_url": "https://api.github.com/users/wheercool/orgs",
+    "repos_url": "https://api.github.com/users/wheercool/repos",
+    "events_url": "https://api.github.com/users/wheercool/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/wheercool/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 40929156,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Ng==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Wontfix",
+      "name": "Resolution: Wontfix",
+      "color": "ffffff",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2014-09-17T15:09:31Z",
+  "updated_at": "2014-09-29T22:51:07Z",
+  "closed_at": "2014-09-29T22:51:07Z",
+  "author_association": "NONE",
+  "body": "Here the sample http://jsfiddle.net/wheercool/jwvLt99p/1/\n\nThe value of the input should be always empty, but it only works for number values. If I type not numeric values, they appear.\n",
+  "closed_by": {
+    "login": "syranide",
+    "id": 1714255,
+    "node_id": "MDQ6VXNlcjE3MTQyNTU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1714255?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/syranide",
+    "html_url": "https://github.com/syranide",
+    "followers_url": "https://api.github.com/users/syranide/followers",
+    "following_url": "https://api.github.com/users/syranide/following{/other_user}",
+    "gists_url": "https://api.github.com/users/syranide/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/syranide/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/syranide/subscriptions",
+    "organizations_url": "https://api.github.com/users/syranide/orgs",
+    "repos_url": "https://api.github.com/users/syranide/repos",
+    "events_url": "https://api.github.com/users/syranide/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/syranide/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

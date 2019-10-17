@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15688",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15688/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15688/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15688/events",
+  "html_url": "https://github.com/facebook/react/pull/15688",
+  "id": 446275221,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjgwNTE1Mjk2",
+  "number": 15688,
+  "title": "[React Fresh] Return host nodes for visual feedback",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-05-20T19:34:36Z",
+  "updated_at": "2019-05-22T02:13:39Z",
+  "closed_at": "2019-05-22T02:13:35Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15688",
+    "html_url": "https://github.com/facebook/react/pull/15688",
+    "diff_url": "https://github.com/facebook/react/pull/15688.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15688.patch"
+  },
+  "body": "This PR adds a return value to `scheduleHotUpdate`:\r\n\r\n```js\r\n{|\r\n  hostNodesForVisualFeedback: Array<Instance>\r\n|}\r\n```\r\n\r\nThis is an array of host nodes which can be used by the hot reloading runtime to show visual feedback related to the edited UI. Here's a gif to give you an idea of a possible way to use this. Note how the updated components are briefly highlighted in the browser right after edit:\r\n\r\n![Screen Recording 2019-05-20 at 08 25 PM](https://user-images.githubusercontent.com/810438/58046570-9ab0a480-7b3d-11e9-8a28-4d975ab9c7fb.gif)\r\n\r\n(Don't pay too much attention to the concrete visual feedback here; this is something we'll play more with. If this contextual feedback ends up being too much, we can always remove it and use a simple indicator, but I want to experiment more with it.)\r\n\r\nThe implementation goes as follows:\r\n\r\n* We mark \"affected fibers\" as we traverse the tree to schedule hot updates.\r\n  * We only mark them one level deep. If `Parent` and `Child` were edited in the same file, we'll only mark the `Parent`. This is because in the visual indication we'll likely want to coalesce children with parents anyway.\r\n* During the hot update, we keep track of unmounted fibers, and their return references.\r\n  * This will let us walk the parent path for disconnected fibers if necessary (see below why).\r\n* After the hot update batch is flushed, we determine the host nodes:\r\n  * If a fiber has host nodes below it, we add them to the set.\r\n  * If a fiber has no host nodes below it, we add its closest parent host node to the set.\r\n  * If a fiber has been unmounted, we perform this procedure for its closest still mounted parent instead.\r\n  * If a fiber's parent is root, we use the root host node.\r\n\r\n## Alternatives\r\n\r\n### No Component-Specific Visual Feedback\r\n\r\nMaybe this is overkill and we just want an indicator in the screen corner or something. Then we can delete this code. I'm not sure and I wanted to play more with this.\r\n\r\n### Move It Into Consuming Runtime\r\n\r\nWe could just return `affectedFibers` and call it a day. Then the consuming code could find the host nodes by copy pasting a similar implementation. That's actually how I started this. However, it's annoying to keep in sync with work tags. And the implementation is a bit tricky (e.g. tracking deletions). So if this is the workflow we want, we'd probably need to centralize it. Why not put it with the rest of the logic we're already testing then? So I put it here.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

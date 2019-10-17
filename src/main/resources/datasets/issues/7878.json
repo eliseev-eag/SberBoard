@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7878",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7878/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7878/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7878/events",
+  "html_url": "https://github.com/facebook/react/pull/7878",
+  "id": 181063082,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODgwMTUwMDA=",
+  "number": 7878,
+  "title": "JSX Docs: JSX In Depth and React Without JSX",
+  "user": {
+    "login": "lacker",
+    "id": 106475,
+    "node_id": "MDQ6VXNlcjEwNjQ3NQ==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/106475?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lacker",
+    "html_url": "https://github.com/lacker",
+    "followers_url": "https://api.github.com/users/lacker/followers",
+    "following_url": "https://api.github.com/users/lacker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lacker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lacker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lacker/subscriptions",
+    "organizations_url": "https://api.github.com/users/lacker/orgs",
+    "repos_url": "https://api.github.com/users/lacker/repos",
+    "events_url": "https://api.github.com/users/lacker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lacker/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2016-10-05T04:34:23Z",
+  "updated_at": "2016-10-05T21:41:31Z",
+  "closed_at": "2016-10-05T21:39:38Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7878",
+    "html_url": "https://github.com/facebook/react/pull/7878",
+    "diff_url": "https://github.com/facebook/react/pull/7878.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7878.patch"
+  },
+  "body": "This creates two new documents. \"JSX In Depth\" attempts to describe all of JSX, covering the occasionally-relevant edge cases and weird bits. It should be a document you can go to, to get your weird JSX questions answered. \"React Without JSX\" just explains how to use React without JSX.\n\nSome docs in the old site are now obsoleted. \"JSX Spread Attributes\" and \"JSX Gotchas\" along with a number of the JSX-specific tips are just part of \"JSX In Depth\" now.\n\nI just removed the translations of the no-longer-there docs. Dunno what else to do with them.\n\nThanks @spicyj for answering a zillion of my JSX questions in person this afternoon ;-) But still I'm sure I am mis-explaining some things here, so I'd appreciate a sharp-eyed review of this content.\n",
+  "closed_by": {
+    "login": "lacker",
+    "id": 106475,
+    "node_id": "MDQ6VXNlcjEwNjQ3NQ==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/106475?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lacker",
+    "html_url": "https://github.com/lacker",
+    "followers_url": "https://api.github.com/users/lacker/followers",
+    "following_url": "https://api.github.com/users/lacker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lacker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lacker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lacker/subscriptions",
+    "organizations_url": "https://api.github.com/users/lacker/orgs",
+    "repos_url": "https://api.github.com/users/lacker/repos",
+    "events_url": "https://api.github.com/users/lacker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lacker/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

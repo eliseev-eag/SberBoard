@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5178",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5178/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5178/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5178/events",
+  "html_url": "https://github.com/facebook/react/pull/5178",
+  "id": 111522013,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDc3MzI2NDQ=",
+  "number": 5178,
+  "title": "Fix blog post authors",
+  "user": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2015-10-15T00:39:10Z",
+  "updated_at": "2015-10-19T17:32:15Z",
+  "closed_at": "2015-10-15T19:04:56Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5178",
+    "html_url": "https://github.com/facebook/react/pull/5178",
+    "diff_url": "https://github.com/facebook/react/pull/5178.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5178.patch"
+  },
+  "body": "Fixed issue where a blog post ([\"Flux: An Application Architecture for React\"](http://facebook.github.io/react/blog/2014/05/06/flux.html)) was listed as having no author in the byline.  Added support for multiple authors for blog posts.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

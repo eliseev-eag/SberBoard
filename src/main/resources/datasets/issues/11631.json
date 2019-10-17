@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11631",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11631/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11631/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11631/events",
+  "html_url": "https://github.com/facebook/react/pull/11631",
+  "id": 276165547,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTU0MjI2NDU5",
+  "number": 11631,
+  "title": "Refactor SyntheticKeyboardEvent tests to only use the public API ",
+  "user": {
+    "login": "aarboleda1",
+    "id": 19655649,
+    "node_id": "MDQ6VXNlcjE5NjU1NjQ5",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/19655649?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aarboleda1",
+    "html_url": "https://github.com/aarboleda1",
+    "followers_url": "https://api.github.com/users/aarboleda1/followers",
+    "following_url": "https://api.github.com/users/aarboleda1/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aarboleda1/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aarboleda1/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aarboleda1/subscriptions",
+    "organizations_url": "https://api.github.com/users/aarboleda1/orgs",
+    "repos_url": "https://api.github.com/users/aarboleda1/repos",
+    "events_url": "https://api.github.com/users/aarboleda1/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aarboleda1/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-11-22T18:25:49Z",
+  "updated_at": "2017-11-26T02:23:52Z",
+  "closed_at": "2017-11-25T15:47:06Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11631",
+    "html_url": "https://github.com/facebook/react/pull/11631",
+    "diff_url": "https://github.com/facebook/react/pull/11631.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11631.patch"
+  },
+  "body": "I've been working on SyntheticKeyboardEvent test and have gotten a significant amount of tests to pass but wanted to see if the community had feedback on my work so far and advice on how to complete the few remaining tests where I am stuck. \r\n\r\n**Problem**: I am unable to fire events and pass tests that require a 'keypress' event. I've looked thru other examples, specifically [mdn docs](https://developer.mozilla.org/en-US/docs/Web/Events/keypress) and PR [#11365](https://github.com/facebook/react/pull/11365) to fire the keypress event, specifically on line 41.\r\n\r\nVia MDN and other PR's, I've found no significant difference on why a 'keypress' event and and the 'keydown'/'keyup' which fire as expected. @gaearon any feedback or tips would be on my approach/code appreciated 😃     ",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

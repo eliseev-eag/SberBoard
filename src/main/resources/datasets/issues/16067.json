@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16067",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16067/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16067/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16067/events",
+  "html_url": "https://github.com/facebook/react/pull/16067",
+  "id": 464471676,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjk0NzQyMjY5",
+  "number": 16067,
+  "title": "[Flare] Clear pressStart timeout on pointercancel",
+  "user": {
+    "login": "vincentriemer",
+    "id": 1398555,
+    "node_id": "MDQ6VXNlcjEzOTg1NTU=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1398555?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/vincentriemer",
+    "html_url": "https://github.com/vincentriemer",
+    "followers_url": "https://api.github.com/users/vincentriemer/followers",
+    "following_url": "https://api.github.com/users/vincentriemer/following{/other_user}",
+    "gists_url": "https://api.github.com/users/vincentriemer/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/vincentriemer/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/vincentriemer/subscriptions",
+    "organizations_url": "https://api.github.com/users/vincentriemer/orgs",
+    "repos_url": "https://api.github.com/users/vincentriemer/repos",
+    "events_url": "https://api.github.com/users/vincentriemer/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/vincentriemer/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-07-05T05:47:44Z",
+  "updated_at": "2019-07-05T10:45:34Z",
+  "closed_at": "2019-07-05T10:45:34Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16067",
+    "html_url": "https://github.com/facebook/react/pull/16067",
+    "diff_url": "https://github.com/facebook/react/pull/16067.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16067.patch"
+  },
+  "body": "While using the Press component on a touchscreen device, if you started a press and subsequently used that press to scroll, any press feedback triggered by pressStart/pressChange still fires which causes some confusing UX. This diff prevents that by clearing the `pressStartTimeout` on `pointercancel`.",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

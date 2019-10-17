@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15247",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15247/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15247/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15247/events",
+  "html_url": "https://github.com/facebook/react/pull/15247",
+  "id": 426740854,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjY1NTMwMTM0",
+  "number": 15247,
+  "title": "Allow for null targetFiber for root event handling",
+  "user": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 1296748300,
+      "node_id": "MDU6TGFiZWwxMjk2NzQ4MzAw",
+      "url": "https://api.github.com/repos/facebook/react/labels/React%20Flare",
+      "name": "React Flare",
+      "color": "63f2ff",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-03-28T22:50:45Z",
+  "updated_at": "2019-04-26T07:32:49Z",
+  "closed_at": "2019-03-29T04:43:20Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15247",
+    "html_url": "https://github.com/facebook/react/pull/15247",
+    "diff_url": "https://github.com/facebook/react/pull/15247.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15247.patch"
+  },
+  "body": "When dealing with the experimental event API, the target fiber might be null when the event is triggered on the document. This code path is a valid one and get's handled by the root events that are attached on demand from an event responder.",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

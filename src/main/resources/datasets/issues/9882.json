@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9882",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9882/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9882/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9882/events",
+  "html_url": "https://github.com/facebook/react/pull/9882",
+  "id": 234199772,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTI0NDEzMTc5",
+  "number": 9882,
+  "title": "[WIP] Convert isomorphic React to ES2015 modules",
+  "user": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-06-07T12:55:41Z",
+  "updated_at": "2017-10-04T23:39:41Z",
+  "closed_at": "2017-10-04T23:39:37Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9882",
+    "html_url": "https://github.com/facebook/react/pull/9882",
+    "diff_url": "https://github.com/facebook/react/pull/9882.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9882.patch"
+  },
+  "body": "Still very much a work in progress...\r\n\r\nTODO:\r\n\r\n- [x] Get tests passing\r\n- [x] Get build working\r\n- [ ] Get rid of default/named duplication\r\n- [ ] Can we avoid forking shared modules?\r\n- [ ] Add tests for imports to `dev-expression-with-codes` and `object-assign` transforms\r\n- [ ] Vendor PooledClass into RN\r\n- [ ] Use public API [in tests](https://github.com/facebook/react/pull/9882/files#diff-15dbb53e64453779f0339384282c7bbeR31)",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8768",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8768/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8768/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8768/events",
+  "html_url": "https://github.com/facebook/react/pull/8768",
+  "id": 200539365,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTAxMzgzNTAx",
+  "number": 8768,
+  "title": "Deep Object Merge",
+  "user": {
+    "login": "Superpencil",
+    "id": 3094044,
+    "node_id": "MDQ6VXNlcjMwOTQwNDQ=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/3094044?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Superpencil",
+    "html_url": "https://github.com/Superpencil",
+    "followers_url": "https://api.github.com/users/Superpencil/followers",
+    "following_url": "https://api.github.com/users/Superpencil/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Superpencil/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Superpencil/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Superpencil/subscriptions",
+    "organizations_url": "https://api.github.com/users/Superpencil/orgs",
+    "repos_url": "https://api.github.com/users/Superpencil/repos",
+    "events_url": "https://api.github.com/users/Superpencil/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Superpencil/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2017-01-13T03:26:10Z",
+  "updated_at": "2017-01-13T13:44:02Z",
+  "closed_at": "2017-01-13T13:44:02Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8768",
+    "html_url": "https://github.com/facebook/react/pull/8768",
+    "diff_url": "https://github.com/facebook/react/pull/8768.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8768.patch"
+  },
+  "body": "Infinite loops! Straight from SO! http://stackoverflow.com/posts/34749873/revisions\r\n\r\nBut seriously I need to change some things in the overriding 'mock' object for the `mousemove` event. \r\nThat's fine and dandy, but if I want to override something in a deeper object like `target`, it gets replaced entirely, not merged.\r\nIs something like this change possible, perhaps only for one level deep?",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

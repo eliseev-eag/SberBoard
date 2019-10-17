@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14221",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14221/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14221/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14221/events",
+  "html_url": "https://github.com/facebook/react/issues/14221",
+  "id": 380352023,
+  "node_id": "MDU6SXNzdWUzODAzNTIwMjM=",
+  "number": 14221,
+  "title": "setState/dispatch 2nd arg callback or emitEffect() use case",
+  "user": {
+    "login": "jaredpalmer",
+    "id": 4060187,
+    "node_id": "MDQ6VXNlcjQwNjAxODc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/4060187?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jaredpalmer",
+    "html_url": "https://github.com/jaredpalmer",
+    "followers_url": "https://api.github.com/users/jaredpalmer/followers",
+    "following_url": "https://api.github.com/users/jaredpalmer/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jaredpalmer/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jaredpalmer/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jaredpalmer/subscriptions",
+    "organizations_url": "https://api.github.com/users/jaredpalmer/orgs",
+    "repos_url": "https://api.github.com/users/jaredpalmer/repos",
+    "events_url": "https://api.github.com/users/jaredpalmer/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jaredpalmer/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 1109410193,
+      "node_id": "MDU6TGFiZWwxMTA5NDEwMTkz",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Hooks",
+      "name": "Component: Hooks",
+      "color": "c2f27b",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2018-11-13T17:57:45Z",
+  "updated_at": "2018-11-14T14:59:23Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "# Feature Request\r\n\r\n## Current Behavior\r\n\r\nuseState/useReducers Hook's updater/dispatch functions do not expose a way to execute code _after_ the update has been made.\r\n\r\n## Expected Behavior\r\n\r\nuseState or useReducer Hooks expose some way to locally execute the equivalent of inline useEffect/didUpdate etc. (to allow for overriding default side effect behavior) (e.g. emitEffect(() => ...)).\r\n\r\n## Use Case\r\n\r\nFormik exposes 2 props which control when form validation occurs: `validateOnChange` and `validateOnBlur`. When `validateOnChange` set to `true`, form validation will run whenever `handleChange`, `setFieldValue`, or `setValues` are called (these fns all update form `values`). Similarly, when `validateOnBlur` is `true`, validation will also run whenever `handleBlur`, `setFieldTouched`, and `setTouched` are called (these fns all update the `touched` state of the form). The reason that Formik doesn't centralize orchestrating validation logic into `componentDidUpdate` (i.e. run validation whenever either `this.state.values` or `this.state.touched` changes) is to allow for local overrides in custom input components.\r\n\r\nFor example, often times in a 3rd party input component (e.g. like Airbnb's Rheostat (https://github.com/airbnb/rheostat)) the value and touched state need to update together because there isn't a real \"blur\" event for the component or there isn't a prop for it. With Formik, you get around this by updating the field's value and touched state imperatively but override the validation behavior to only run once. To do this, Formik's current non-hooks API exposes an extra parameter to the `setFieldValue` and `setFieldTouched` methods which allow you to opt out of running validation after the update is made. Internally this looks like:\r\n\r\n```js\r\nsetFieldValue(name, value, shouldValidate = true) {\r\n   this.setState(prevState => setIn(prevState.values, name, value), () => {\r\n      if (this.props.validateOnChange && shouldValidate) {\r\n        this.validateForm(this.state.values)\r\n      }\r\n    })\r\n  }\r\n\r\nsetFieldTouched(name, touch = true, shouldValidate = true) {\r\n   this.setState(prevState => setIn(prevState.touched, name, touch), () => {\r\n      if (this.props.validateOnBlur && shouldValidate) {\r\n        this.validateForm(this.state.values)\r\n      }\r\n    })\r\n  }\r\n```\r\n\r\nIf a callback was supported by either `useReducer`'s `dispatch` or `useState` update fn, Formik could maintain its current API footprint and allow for the following code to work as expected:\r\n\r\n```js\r\nconst CustomRangedInput = (props) => {\r\n  const formik = useFormikContext();\r\n  function handleChangeValue(value) {\r\n    // Set the value\r\n    formik.setFieldValue(props.name, value, false /* avoid normal validation logic */)\r\n    // Mark the field as touched\r\n    formik.setFieldTouched(props.name, true)\r\n  }\r\n\r\n   return <Rheostat\r\n     onValueChange={handleChangeValue}\r\n      min={1}\r\n      max={100}\r\n      values={[1, 100]}\r\n   />;\r\n}\r\n``` \r\n\r\nHowever, with the current hooks API's there is not a way for me to expose this to users, since I have to lift update the validateOnChange/validateOnBlur validation logic to `useEffect`. In my current Formik x Hooks PR, this looks like\r\n\r\n```js\r\n React.useEffect(\r\n    () => {\r\n      if (!!didMount.current && !!validateOnChange && !state.isSubmitting) {\r\n          validateForm(state.values);\r\n      }\r\n    },\r\n    [state.values, validateOnChange, state.isSubmitting]\r\n  );\r\n\r\n React.useEffect(\r\n    () => {\r\n      if (!!didMount.current && !!validateOnBlur && !state.isSubmitting) {\r\n          validateForm(state.values);\r\n      }\r\n    },\r\n    [state.touched, validateOnBlur, state.isSubmitting]\r\n  );\r\n\r\n```\r\n\r\nThis will execute whenever `state.values` or `state.touched` change, which is usually what people want 98% of the time. However, I don't know/see a way to make this compatible with the old API (where you can locally override validation).\r\n\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\n16.7.0-alpha\r\n",
+  "closed_by": null
+}

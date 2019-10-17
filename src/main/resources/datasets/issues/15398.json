@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15398",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15398/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15398/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15398/events",
+  "html_url": "https://github.com/facebook/react/pull/15398",
+  "id": 432597012,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjcwMDM2MjQ2",
+  "number": 15398,
+  "title": "using the wrong renderer's act() should warn",
+  "user": {
+    "login": "threepointone",
+    "id": 18808,
+    "node_id": "MDQ6VXNlcjE4ODA4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/18808?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/threepointone",
+    "html_url": "https://github.com/threepointone",
+    "followers_url": "https://api.github.com/users/threepointone/followers",
+    "following_url": "https://api.github.com/users/threepointone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/threepointone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/threepointone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/threepointone/subscriptions",
+    "organizations_url": "https://api.github.com/users/threepointone/orgs",
+    "repos_url": "https://api.github.com/users/threepointone/repos",
+    "events_url": "https://api.github.com/users/threepointone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/threepointone/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-04-12T14:33:26Z",
+  "updated_at": "2019-04-12T15:10:03Z",
+  "closed_at": "2019-04-12T15:02:41Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15398",
+    "html_url": "https://github.com/facebook/react/pull/15398",
+    "diff_url": "https://github.com/facebook/react/pull/15398.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15398.patch"
+  },
+  "body": "closed this in favour of https://github.com/facebook/react/pull/15399\r\n\r\n------\r\n\r\nvia #15319\r\nThis solves 2 specific problems -\r\n\r\n- using the 'wrong' `act()` shouldn't silence the warning:\r\n  We do this by using a new empty object on the reconciler (called `ReactActingUpdatesSigil`, but I should rename that). `act()` sets this object before the callback, and unsets it when it's over. Then `warnIfNotCurrentActingUpdates()` not only checks whether `ReactShouldWarnActingUpdates.current` is set, but also whether it matches the expected sigil. \r\n\r\n- using the wrong `act()` logs a warning\r\n  Using the same above method, we can check whether you're using the right version of act() for your code. \r\n\r\nNow, I first added this check only for state hook updates, but it didn't reliably catch the common failure case. Consider the following component - \r\n```jsx\r\n      function App() {\r\n        let [state, setState] = React.useState(0);\r\n        async function ticker() {\r\n          await null;\r\n          setState(x => x + 1);\r\n        }\r\n        React.useEffect(() => {\r\n          ticker();\r\n        }, [Math.min(state, 4)]);\r\n        return state;\r\n      }\r\n```\r\n\r\nLet's write a test for it using the shiny new async `act()`\r\n```jsx\r\n        const el = document.createElement(\"div\");\r\n        await ReactTestUtils.act(async () => {\r\n          ReactDOM.render(React.createElement(App), el);\r\n        });\r\n        // all 5 ticks present and accounted for\r\n        console.log(el.innerHTML); // 5!\r\n```\r\n\r\nThis is the golden path - use the correct act with the matching renderer, and you'll get expected behaviour. Here's a quick diagram of the timeline it goes through \r\n![image](https://user-images.githubusercontent.com/18808/56043174-a508a300-5d34-11e9-98c5-31f2f943de01.png)\r\nOf note, because we can check everytime after calling `flushPassiveEffects()`, we can guarantee that we the `act()` 'scope' will stay open until the effects queue is drained. GOod. \r\n\r\nNow, let's use a mismatching `act()`- \r\n```jsx\r\n       await ReactTestUtils.act(async () => {\r\n          ReactTestRenderer.create(React.createElement(App));\r\n        });\r\n```\r\n\r\nNow, let's say we'd added our sigil check _only for updates_, you'd think it would still trigger the warning. However, the timing of things has changed. There are 2 scenarios of how these will be sequenced out. The first, which is the 'good' version - \r\n\r\n![image](https://user-images.githubusercontent.com/18808/56043697-ab4b4f00-5d35-11e9-950a-6c6998729ed2.png)\r\n\r\nBecause we can't use `flushPassiveEffects()` as expected (ie - it's just a no op for other renderer instances), we have to rely on the browser/jest environment to flush to the 'screen', and then the effects/updates fire. In this 'good' case, at least one set state call happens inside the act scope, so we can do the sigil check and warn that they aren't using the right act version. \r\n\r\nHowever, the bad news is that this happens super rarely (in my rough estimation, only 1 in 20 'successes'). In reality, it usually happens outside the scope of the act scope. \r\n\r\n![image](https://user-images.githubusercontent.com/18808/56044067-54924500-5d36-11e9-8b64-34f619c5fc53.png)\r\n\r\nHere, you'll see that the effects fire after the act scope has closed, so when we do the sigil check, we can only warn that the dev hasn't wrapped their code with `act()` (which will confuse them, since they think they already have)\r\n\r\nSo how do we fix this? Well, I noticed that most of these failures happen at the very start, when they initialise (`TestRenderer.create()`, `ReactDOM.render()`, etc). I believe that if we also add just the sigil identity check in the reconciler's `.createContainer()`, we should be able to warn *for most cases* asap that they're using the wrong version (and ofc, `createContainer` is synchronous and won't escape the `act()` scope). \r\n\r\n\r\nThis PR does the above. I'm opening this PR as a draft just to make sure my approach is right. I haven't written jest tests yet, and was using my act-dom.html fixture for testing this. I'm adding jest tests asap. *Maybe* the problem I described above won't be as big problem in jest. Or maybe it will! It's an adventure to find out. \r\n\r\nAlso I don't like the variable name `ReactActingUpdatesSigil`. It's cool, but I'll save it for when I want to feel clever later.",
+  "closed_by": {
+    "login": "threepointone",
+    "id": 18808,
+    "node_id": "MDQ6VXNlcjE4ODA4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/18808?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/threepointone",
+    "html_url": "https://github.com/threepointone",
+    "followers_url": "https://api.github.com/users/threepointone/followers",
+    "following_url": "https://api.github.com/users/threepointone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/threepointone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/threepointone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/threepointone/subscriptions",
+    "organizations_url": "https://api.github.com/users/threepointone/orgs",
+    "repos_url": "https://api.github.com/users/threepointone/repos",
+    "events_url": "https://api.github.com/users/threepointone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/threepointone/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

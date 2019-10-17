@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13169",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13169/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13169/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13169/events",
+  "html_url": "https://github.com/facebook/react/pull/13169",
+  "id": 339168053,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTk5OTA5OTA3",
+  "number": 13169,
+  "title": "Remove irrelevant suggestion of a legacy method from a warning",
+  "user": {
+    "login": "zx6658",
+    "id": 26598542,
+    "node_id": "MDQ6VXNlcjI2NTk4NTQy",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/26598542?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zx6658",
+    "html_url": "https://github.com/zx6658",
+    "followers_url": "https://api.github.com/users/zx6658/followers",
+    "following_url": "https://api.github.com/users/zx6658/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zx6658/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zx6658/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zx6658/subscriptions",
+    "organizations_url": "https://api.github.com/users/zx6658/orgs",
+    "repos_url": "https://api.github.com/users/zx6658/repos",
+    "events_url": "https://api.github.com/users/zx6658/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zx6658/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-07-07T19:10:12Z",
+  "updated_at": "2018-08-02T01:11:18Z",
+  "closed_at": "2018-08-02T01:11:17Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13169",
+    "html_url": "https://github.com/facebook/react/pull/13169",
+    "diff_url": "https://github.com/facebook/react/pull/13169.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13169.patch"
+  },
+  "body": "As react version is updated and some lifecycle is deprecated, warn message should be changed like in my pr :)\r\n\r\n**Warning Content:**\r\nCannot update during an existing state transition (such as withinrenderor another component's constructor). Render methods should be a pure function of props and state; constructor side-effects are an anti-pattern, but can be moved to **componentWillMount.**\r\n\r\n**What is the expected behavior?**\r\nI thought, warning messages what use deprecated lifecycle method should be changed!! :)",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

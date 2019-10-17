@@ -1,0 +1,91 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16950",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16950/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16950/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16950/events",
+  "html_url": "https://github.com/facebook/react/issues/16950",
+  "id": 499881427,
+  "node_id": "MDU6SXNzdWU0OTk4ODE0Mjc=",
+  "number": 16950,
+  "title": "Error: \"Maximum call stack size exceeded\"",
+  "user": {
+    "login": "loverdeveloper",
+    "id": 33053881,
+    "node_id": "MDQ6VXNlcjMzMDUzODgx",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/33053881?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/loverdeveloper",
+    "html_url": "https://github.com/loverdeveloper",
+    "followers_url": "https://api.github.com/users/loverdeveloper/followers",
+    "following_url": "https://api.github.com/users/loverdeveloper/following{/other_user}",
+    "gists_url": "https://api.github.com/users/loverdeveloper/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/loverdeveloper/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/loverdeveloper/subscriptions",
+    "organizations_url": "https://api.github.com/users/loverdeveloper/orgs",
+    "repos_url": "https://api.github.com/users/loverdeveloper/repos",
+    "events_url": "https://api.github.com/users/loverdeveloper/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/loverdeveloper/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 40929152,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mg==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Duplicate",
+      "name": "Resolution: Duplicate",
+      "color": "cccccc",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-09-29T08:46:37Z",
+  "updated_at": "2019-09-29T16:30:25Z",
+  "closed_at": "2019-09-29T16:30:17Z",
+  "author_association": "NONE",
+  "body": "Describe what you were doing when the bug occurred:\r\n1. Profiling my react web page\r\n2. \r\n3. \r\n\r\n---------------------------------------------\r\nPlease do not remove the text below this line\r\n---------------------------------------------\r\n\r\nDevTools version: 4.1.2-5184346da\r\n\r\nCall stack: at Map.has (<anonymous>)\r\n    at I (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:40:150140)\r\n    at I (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:40:150791)\r\n    at I (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:40:150791)\r\n    at I (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:40:150791)\r\n    at I (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:40:150791)\r\n    at I (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:40:150791)\r\n    at I (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:40:150791)\r\n    at I (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:40:150791)\r\n    at I (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:40:150791)\r\n\r\nComponent stack: in dl\r\n    in div\r\n    in div\r\n    in div\r\n    in _o\r\n    in Unknown\r\n    in n\r\n    in Unknown\r\n    in div\r\n    in div\r\n    in zi\r\n    in Ge\r\n    in un\r\n    in ba\r\n    in Rc",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

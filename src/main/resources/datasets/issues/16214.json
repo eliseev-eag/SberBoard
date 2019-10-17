@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16214",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16214/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16214/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16214/events",
+  "html_url": "https://github.com/facebook/react/pull/16214",
+  "id": 473116800,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzAxMzQ4OTQ5",
+  "number": 16214,
+  "title": "[scheduler] Yield many times per frame, no rAF",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-07-25T23:54:22Z",
+  "updated_at": "2019-10-04T16:58:25Z",
+  "closed_at": "2019-07-26T22:43:58Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16214",
+    "html_url": "https://github.com/facebook/react/pull/16214",
+    "diff_url": "https://github.com/facebook/react/pull/16214.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16214.patch"
+  },
+  "body": "Adds experimental flag to yield many times per frame using a message event loop, instead of the current approach of guessing the next vsync and yielding at the end of the frame.\r\n\r\nThis new approach forgoes a `requestAnimationFrame` entirely. It posts a message event and performs a small amount of work (5ms) before yielding to the browser, regardless of where it might be in the vsync cycle. At the end of the event, if there's work left over, it posts another message event.\r\n\r\nThis should keep the main thread responsive even for really high frame rates. It also shouldn't matter if the hardware frame rate changes after page load (our current heuristic only detects if the frame rate increases, not decreases).\r\n\r\nThe main risk is that yielding more often will exacerbate main thread contention with other browser tasks.\r\n\r\nI'm also not sure to what extent message events are throttled when the tab is backgrounded, relative to `requestAnimationFrame` or `setTimeout`. I'm starting with the assumption that `message` events fire with at least the same priority as timers, but I'll need to confirm.\r\n\r\nLet's try it and see.",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

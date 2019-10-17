@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11013",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11013/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11013/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11013/events",
+  "html_url": "https://github.com/facebook/react/issues/11013",
+  "id": 261937204,
+  "node_id": "MDU6SXNzdWUyNjE5MzcyMDQ=",
+  "number": 11013,
+  "title": "Warn about unexpected HTML inside SVG",
+  "user": {
+    "login": "caub",
+    "id": 3134574,
+    "node_id": "MDQ6VXNlcjMxMzQ1NzQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3134574?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/caub",
+    "html_url": "https://github.com/caub",
+    "followers_url": "https://api.github.com/users/caub/followers",
+    "following_url": "https://api.github.com/users/caub/following{/other_user}",
+    "gists_url": "https://api.github.com/users/caub/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/caub/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/caub/subscriptions",
+    "organizations_url": "https://api.github.com/users/caub/orgs",
+    "repos_url": "https://api.github.com/users/caub/repos",
+    "events_url": "https://api.github.com/users/caub/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/caub/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2017-10-01T18:51:32Z",
+  "updated_at": "2019-01-11T17:09:37Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "react and react-dom versions: 16.0.0\r\n\r\n```js\r\nconst { createElement: h } = require('react');\r\nconst { renderToStaticMarkup } = require('react-dom-server');\r\n\r\nrenderToStaticMarkup(h('div', null, h('svg', null, h('span')))) \r\n// '<div><svg><span></span></svg></div>'\r\n```\r\n\r\nBut they shouldn't be mixed:\r\n\r\nin browser console:\r\n\r\n```js\r\nnew Range().createContextualFragment('<div><svg><span></span></svg></div>')\r\n// \"<div><svg></svg><span></span></div>\"\r\n```\r\nI guess it's programmer responsibility to avoid that case? I understand that for performance you don't check this",
+  "closed_by": null
+}

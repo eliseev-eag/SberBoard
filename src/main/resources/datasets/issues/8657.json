@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8657",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8657/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8657/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8657/events",
+  "html_url": "https://github.com/facebook/react/pull/8657",
+  "id": 198114057,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTk3MjgzOTQ=",
+  "number": 8657,
+  "title": "Resolve #8656 WebComponent 1.0 support.",
+  "user": {
+    "login": "rektide",
+    "id": 53243,
+    "node_id": "MDQ6VXNlcjUzMjQz",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/53243?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rektide",
+    "html_url": "https://github.com/rektide",
+    "followers_url": "https://api.github.com/users/rektide/followers",
+    "following_url": "https://api.github.com/users/rektide/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rektide/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rektide/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rektide/subscriptions",
+    "organizations_url": "https://api.github.com/users/rektide/orgs",
+    "repos_url": "https://api.github.com/users/rektide/repos",
+    "events_url": "https://api.github.com/users/rektide/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rektide/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-12-30T07:28:26Z",
+  "updated_at": "2017-11-21T14:02:35Z",
+  "closed_at": "2017-11-21T14:02:35Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8657",
+    "html_url": "https://github.com/facebook/react/pull/8657",
+    "diff_url": "https://github.com/facebook/react/pull/8657.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8657.patch"
+  },
+  "body": "This is a straightforward update of the WebComponent example to match the final WebComponent 1.0 specification, which mandates ES6 Class syntax.\r\n\r\nI'm unsure of any paths forward to maintaining support for old browsers while also supporting new ones, short of feature detection & having two separate codepaths. The situation in the aftermath of #8656 is un-ideal.\r\n\r\nThis PR depends on cdnjs adding the custom-element polyfill. Those changes are tracked in cdnjs/cdnjs#10108",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

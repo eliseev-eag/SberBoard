@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11512",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11512/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11512/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11512/events",
+  "html_url": "https://github.com/facebook/react/pull/11512",
+  "id": 272896011,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTUxODgwMjE1",
+  "number": 11512,
+  "title": "Add `CODE_OF_CONDUCT.md`",
+  "user": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-11-10T11:01:30Z",
+  "updated_at": "2017-11-10T12:17:37Z",
+  "closed_at": "2017-11-10T12:17:37Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11512",
+    "html_url": "https://github.com/facebook/react/pull/11512",
+    "diff_url": "https://github.com/facebook/react/pull/11512.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11512.patch"
+  },
+  "body": "**what is the change?:**\r\nAdding a document linking to the Facebook Open Source Code of Conduct,\r\nfor visibility and to meet Github community standards.\r\n\r\n**why make this change?:**\r\nFacebook Open Source provides a Code of Conduct statement for all\r\nprojects to follow.\r\n\r\nReact already links to this Code of Conduct in the README, which is\r\ngreat!\r\n\r\nExposing the COC via a separate markdown file is a standard being\r\npromoted by Github via the Community Profile in order to meet their Open\r\nSource Guide's recommended community standards.\r\n\r\nAs you can see, adding this file will complete [React's Community Profile](https://github.com/facebook/react/community)\r\nchecklist and increase the visibility of our COC.\r\n\r\n**test plan:**\r\nViewing it on my branch -\r\n<img width=\"1321\" alt=\"screen shot 2017-11-10 at 11 00 20 am\" src=\"https://user-images.githubusercontent.com/1114467/32655646-6355cb8e-c606-11e7-8206-eb0624740f39.png\">\r\n\r\n**issue:**\r\ninternal task t23481323",
+  "closed_by": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10941",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10941/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10941/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10941/events",
+  "html_url": "https://github.com/facebook/react/pull/10941",
+  "id": 261475807,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQzNzY3MTMy",
+  "number": 10941,
+  "title": "Redirect users from the old gh-pages (Jekyll website) to reactjs.org",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 15,
+  "created_at": "2017-09-28T22:06:50Z",
+  "updated_at": "2017-09-29T15:26:50Z",
+  "closed_at": "2017-09-29T15:26:48Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10941",
+    "html_url": "https://github.com/facebook/react/pull/10941",
+    "diff_url": "https://github.com/facebook/react/pull/10941.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10941.patch"
+  },
+  "body": "Proposed alternative to #10856; continuation of #10936.\r\n\r\n### Goals\r\n\r\n* Redirect people visiting existing links to the new website. These links are scattered throughout documentation, other websites, DevTools, etc.\r\n* Redirect search engine crawlers from the old gh-pages site to reactjs.org without harming our ranking.\r\n* Preserve functionality of tools that depend on query params (like the error decoder).\r\n* Preserve anchor tags if possible.\r\n\r\n### Testing\r\n\r\nSpot checking a few of the generated pages seems to work. For example I tried the following URL patterns:\r\n\r\ncategory | type\r\n:---|:---\r\nroot url | https://bvaughn.github.io/react/\r\nno .html | https://bvaughn.github.io/react/docs/installation\r\nnested url | https://bvaughn.github.io/react/blog/2017/05/18/whats-new-in-create-react-app.html\r\nnon-markdown | https://bvaughn.github.io/react/blog/all.html\r\nquery params | https://bvaughn.github.io/react/docs/error-decoder.html?invariant=109&args[]=Foo\r\nanchors | https://bvaughn.github.io/react/tutorial/tutorial.html#lifting-state-up\r\n\r\n### New Approach\r\n\r\nAdd a `CNAME` pointer to redirect to custom domain.\r\n\r\n### Old Approach\r\n\r\nFirst I deleted the old Jekyll website.\r\n\r\nThen I generated a list of all unique URLs used in the website by logging them in `gatsby-node.js`. Then I ran those URLs through the following script:\r\n\r\n```js\r\nconst {existsSync, mkdirSync, writeFileSync} = require('fs');\r\nconst {join} = require('path');\r\n\r\nconst urls = `...`; // From gatsby-node.js\r\n\r\nconst createPage = path => `\r\n<html>\r\n  <head>\r\n    <meta http-equiv=\"refresh\" content=\"0; url=https://reactjs.org/${path}\">\r\n    <link rel=\"canonical\" href=\"https://reactjs.org/${path}\">\r\n  </head>\r\n  <body>\r\n    Redirecting to <a href=\"https://reactjs.org/${path}\">https://reactjs.org/${path}</a>...\r\n  </body>\r\n</html>\r\n`;\r\n\r\nurls.trim().split('\\n').forEach(path => {\r\n  let bound = 0;\r\n  while (true) {\r\n    const index = path.indexOf('/', bound);\r\n\r\n    if (index >= 0) {\r\n      let subpath = path.substr(0, index);\r\n      subpath = join(__dirname, subpath);\r\n\r\n      if (!existsSync(subpath)) {\r\n        mkdirSync(subpath);\r\n      }\r\n\r\n      bound = index + 1;\r\n    } else {\r\n      break;\r\n    }\r\n  }\r\n\r\n  writeFileSync(\r\n    join(__dirname, path),\r\n    createPage(path)\r\n  );\r\n});\r\n```",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

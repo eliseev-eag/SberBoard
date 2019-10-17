@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4504",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4504/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4504/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4504/events",
+  "html_url": "https://github.com/facebook/react/pull/4504",
+  "id": 97624722,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDA5NzgyNjI=",
+  "number": 4504,
+  "title": "RFC: React JSX component declaration syntax",
+  "user": {
+    "login": "thr0w",
+    "id": 376148,
+    "node_id": "MDQ6VXNlcjM3NjE0OA==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/376148?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/thr0w",
+    "html_url": "https://github.com/thr0w",
+    "followers_url": "https://api.github.com/users/thr0w/followers",
+    "following_url": "https://api.github.com/users/thr0w/following{/other_user}",
+    "gists_url": "https://api.github.com/users/thr0w/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/thr0w/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/thr0w/subscriptions",
+    "organizations_url": "https://api.github.com/users/thr0w/orgs",
+    "repos_url": "https://api.github.com/users/thr0w/repos",
+    "events_url": "https://api.github.com/users/thr0w/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/thr0w/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2015-07-28T06:11:32Z",
+  "updated_at": "2015-07-28T19:29:28Z",
+  "closed_at": "2015-07-28T18:47:09Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4504",
+    "html_url": "https://github.com/facebook/react/pull/4504",
+    "diff_url": "https://github.com/facebook/react/pull/4504.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4504.patch"
+  },
+  "body": "``` html\n<!DOCTYPE JSX>\n\n<ReactClass name=\"Timer\">\n  <div>Seconds Elapsed: {secondsElapsed}</div>\n\n  <script>\n    function getInitialState() {\n      return { secondsElapsed = 0 };\n    }\n    function tick(){\n      this.setState({secondsElapsed: secondsElapsed + 1});\n    }\n    function componentDidMount() {\n      this.interval = setInterval(this.tick, 1000);\n    }\n    function componentWillUnmount() {\n      clearInterval(this.interval);\n    }\n  </script>\n</ReactClass>\n\nReact.render(<Timer />, mountNode);\n```\n# \n\nWhy\n- Better look and feel (I think so)\n- Better compatibility with IDE's, linters...\n- 100% compatible with React legacy code\n# \n\nDone\n- Enabling tag `<!DOCTYPE JSX>`. I don't like it, and maybe it's not necessary because JSXModule just works when JSX is as statement (not expression), but i'm worry with legacy code.\n- Parser for script, link and style tags.\n- visitors for jstransform\n- visitors for react\n- the code above works well\n# \n\nTodo\n- avoid this from all know (class internals) identifiers\n  > how detect setState when invoking methods? (like push, shift, splice...)\n- Transform css script into javascript objects.\n  > Rename css classes to allow local scope\n  > autoprex vendor tags\n  *\\* I18N\n  *\\* Docs\n# \n\nRepositories:\nhttps://github.com/thr0w/esprima\nhttps://github.com/thr0w/jstransform\nhttps://github.com/thr0w/react\n# \n\nReferences:\n- https://muut.com/riotjs/\n- https://github.com/undoZen/htmlxify\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

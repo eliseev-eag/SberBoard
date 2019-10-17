@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15619",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15619/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15619/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15619/events",
+  "html_url": "https://github.com/facebook/react/pull/15619",
+  "id": 442945235,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjc3OTQ5Nzgx",
+  "number": 15619,
+  "title": "[Fresh] Set up initial scaffolding",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2019-05-11T02:35:43Z",
+  "updated_at": "2019-05-18T00:47:42Z",
+  "closed_at": "2019-05-18T00:38:14Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15619",
+    "html_url": "https://github.com/facebook/react/pull/15619",
+    "diff_url": "https://github.com/facebook/react/pull/15619.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15619.patch"
+  },
+  "body": "This sets up some scaffolding for Fresh.\r\n\r\nIn particular:\r\n\r\n* A DevTools Hook handler that lets you schedule hot updates by providing a \"type to family\" map.\r\n* A test suite that verifies we can make a hot update while preserving state.\r\n* We only add overhead (and fork the behavior) if the \"type to family\" map was injected.\r\n\r\nThe latest version of a component is resolved through a pointer in the family map. More detailed design I'm aiming for: https://gist.github.com/gaearon/a4d9fb3e6ea487a9296a8d2d9a6e3bf2.\r\n\r\nThere's a bunch of other TODOs in the code. I've addressed some of them in the subsequent pushed commits. However even outstanding TODOs don't necessarily need to block landing the initial scaffold.\r\n\r\nYou might want to read individual commits.\r\n\r\n### In this PR\r\n\r\n- [x] Test fixture setup\r\n- [x] Render latest resolved type\r\n- [x] Consider family when reconciling\r\n- [x] Support forwardRef and memo\r\n- [x] Ignore bailouts for edited components\r\n- [x] Add a way to force remount of arbitrary fiber\r\n- [x] Skip bailouts for any parent fibers when forcing child remount\r\n- [x] Reset effects, callbacks, and memo for edited components\r\n- [x] Use a first-class mechanism for remounting a fiber\r\n- [x] Remount currently failed boundaries during hot reload\r\n\r\n### Follow-ups\r\n\r\n- [ ] Deal with classes\r\n- [ ] Deal with lazy components, Suspense, and context consumers (?)\r\n- [ ] Handle edge case type switches (e.g. simple memo -> non-simple memo)\r\n- [ ] Ensure DevTools inspection sees latest versions\r\n- [ ] Report which host nodes have been affected for visual feedback\r\n- [ ] Babel plugin to generate registration calls which are manual in tests\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

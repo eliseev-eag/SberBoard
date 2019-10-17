@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7471",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7471/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7471/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7471/events",
+  "html_url": "https://github.com/facebook/react/pull/7471",
+  "id": 170675983,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODA5Nzk0MDg=",
+  "number": 7471,
+  "title": "autofocus should warn with autoFocus as alternate name",
+  "user": {
+    "login": "gor181",
+    "id": 8964589,
+    "node_id": "MDQ6VXNlcjg5NjQ1ODk=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/8964589?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gor181",
+    "html_url": "https://github.com/gor181",
+    "followers_url": "https://api.github.com/users/gor181/followers",
+    "following_url": "https://api.github.com/users/gor181/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gor181/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gor181/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gor181/subscriptions",
+    "organizations_url": "https://api.github.com/users/gor181/orgs",
+    "repos_url": "https://api.github.com/users/gor181/repos",
+    "events_url": "https://api.github.com/users/gor181/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gor181/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-08-11T15:34:02Z",
+  "updated_at": "2016-09-03T23:48:56Z",
+  "closed_at": "2016-09-03T23:48:56Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7471",
+    "html_url": "https://github.com/facebook/react/pull/7471",
+    "diff_url": "https://github.com/facebook/react/pull/7471.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7471.patch"
+  },
+  "body": "#3248\n",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15519",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15519/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15519/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15519/events",
+  "html_url": "https://github.com/facebook/react/pull/15519",
+  "id": 437932429,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjc0MDk5NDk4",
+  "number": 15519,
+  "title": "Flush act() only on exiting outermost call",
+  "user": {
+    "login": "threepointone",
+    "id": 18808,
+    "node_id": "MDQ6VXNlcjE4ODA4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/18808?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/threepointone",
+    "html_url": "https://github.com/threepointone",
+    "followers_url": "https://api.github.com/users/threepointone/followers",
+    "following_url": "https://api.github.com/users/threepointone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/threepointone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/threepointone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/threepointone/subscriptions",
+    "organizations_url": "https://api.github.com/users/threepointone/orgs",
+    "repos_url": "https://api.github.com/users/threepointone/repos",
+    "events_url": "https://api.github.com/users/threepointone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/threepointone/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 139734344,
+      "node_id": "MDU6TGFiZWwxMzk3MzQzNDQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Test%20Utils",
+      "name": "Component: Test Utils",
+      "color": "eb6420",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-04-27T11:04:26Z",
+  "updated_at": "2019-05-20T11:52:09Z",
+  "closed_at": "2019-05-20T11:52:04Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15519",
+    "html_url": "https://github.com/facebook/react/pull/15519",
+    "diff_url": "https://github.com/facebook/react/pull/15519.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15519.patch"
+  },
+  "body": "Just starting this PR up to discuss the changes. The actual code changes aren't major. The big (breaking?) change is that nested acts won't work anymore. ",
+  "closed_by": {
+    "login": "threepointone",
+    "id": 18808,
+    "node_id": "MDQ6VXNlcjE4ODA4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/18808?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/threepointone",
+    "html_url": "https://github.com/threepointone",
+    "followers_url": "https://api.github.com/users/threepointone/followers",
+    "following_url": "https://api.github.com/users/threepointone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/threepointone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/threepointone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/threepointone/subscriptions",
+    "organizations_url": "https://api.github.com/users/threepointone/orgs",
+    "repos_url": "https://api.github.com/users/threepointone/repos",
+    "events_url": "https://api.github.com/users/threepointone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/threepointone/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

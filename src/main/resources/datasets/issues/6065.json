@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6065",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6065/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6065/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6065/events",
+  "html_url": "https://github.com/facebook/react/pull/6065",
+  "id": 134508555,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTk3NjM1NzA=",
+  "number": 6065,
+  "title": "Update comments for EventPluginHub.js",
+  "user": {
+    "login": "benjycui",
+    "id": 3580607,
+    "node_id": "MDQ6VXNlcjM1ODA2MDc=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3580607?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/benjycui",
+    "html_url": "https://github.com/benjycui",
+    "followers_url": "https://api.github.com/users/benjycui/followers",
+    "following_url": "https://api.github.com/users/benjycui/following{/other_user}",
+    "gists_url": "https://api.github.com/users/benjycui/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/benjycui/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/benjycui/subscriptions",
+    "organizations_url": "https://api.github.com/users/benjycui/orgs",
+    "repos_url": "https://api.github.com/users/benjycui/repos",
+    "events_url": "https://api.github.com/users/benjycui/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/benjycui/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2016-02-18T08:07:30Z",
+  "updated_at": "2016-02-18T08:44:04Z",
+  "closed_at": "2016-02-18T08:31:50Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6065",
+    "html_url": "https://github.com/facebook/react/pull/6065",
+    "diff_url": "https://github.com/facebook/react/pull/6065.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6065.patch"
+  },
+  "body": "It seems that someone forgot to update comments after he/she modified codes :b \n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

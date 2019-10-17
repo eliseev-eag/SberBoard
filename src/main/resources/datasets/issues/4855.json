@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4855",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4855/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4855/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4855/events",
+  "html_url": "https://github.com/facebook/react/pull/4855",
+  "id": 106141372,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDQ4NDk2ODQ=",
+  "number": 4855,
+  "title": "Maintain why-react-zh-CN sync to the current why-react",
+  "user": {
+    "login": "iamchenxin",
+    "id": 8873545,
+    "node_id": "MDQ6VXNlcjg4NzM1NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8873545?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/iamchenxin",
+    "html_url": "https://github.com/iamchenxin",
+    "followers_url": "https://api.github.com/users/iamchenxin/followers",
+    "following_url": "https://api.github.com/users/iamchenxin/following{/other_user}",
+    "gists_url": "https://api.github.com/users/iamchenxin/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/iamchenxin/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/iamchenxin/subscriptions",
+    "organizations_url": "https://api.github.com/users/iamchenxin/orgs",
+    "repos_url": "https://api.github.com/users/iamchenxin/repos",
+    "events_url": "https://api.github.com/users/iamchenxin/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/iamchenxin/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2015-09-12T08:34:15Z",
+  "updated_at": "2015-09-15T02:47:39Z",
+  "closed_at": "2015-09-12T15:57:31Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4855",
+    "html_url": "https://github.com/facebook/react/pull/4855",
+    "diff_url": "https://github.com/facebook/react/pull/4855.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4855.patch"
+  },
+  "body": "Update zh-cn translation for why-react-zh-cn\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

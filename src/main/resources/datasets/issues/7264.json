@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7264",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7264/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7264/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7264/events",
+  "html_url": "https://github.com/facebook/react/pull/7264",
+  "id": 165276057,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzcyNTY0NDc=",
+  "number": 7264,
+  "title": "ReactTransitionGroup: Refactor Code",
+  "user": {
+    "login": "mertkahyaoglu",
+    "id": 7414026,
+    "node_id": "MDQ6VXNlcjc0MTQwMjY=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/7414026?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mertkahyaoglu",
+    "html_url": "https://github.com/mertkahyaoglu",
+    "followers_url": "https://api.github.com/users/mertkahyaoglu/followers",
+    "following_url": "https://api.github.com/users/mertkahyaoglu/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mertkahyaoglu/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mertkahyaoglu/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mertkahyaoglu/subscriptions",
+    "organizations_url": "https://api.github.com/users/mertkahyaoglu/orgs",
+    "repos_url": "https://api.github.com/users/mertkahyaoglu/repos",
+    "events_url": "https://api.github.com/users/mertkahyaoglu/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mertkahyaoglu/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2016-07-13T09:25:33Z",
+  "updated_at": "2016-12-20T21:10:40Z",
+  "closed_at": "2016-12-20T21:10:40Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7264",
+    "html_url": "https://github.com/facebook/react/pull/7264",
+    "diff_url": "https://github.com/facebook/react/pull/7264.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7264.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "mertkahyaoglu",
+    "id": 7414026,
+    "node_id": "MDQ6VXNlcjc0MTQwMjY=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/7414026?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mertkahyaoglu",
+    "html_url": "https://github.com/mertkahyaoglu",
+    "followers_url": "https://api.github.com/users/mertkahyaoglu/followers",
+    "following_url": "https://api.github.com/users/mertkahyaoglu/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mertkahyaoglu/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mertkahyaoglu/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mertkahyaoglu/subscriptions",
+    "organizations_url": "https://api.github.com/users/mertkahyaoglu/orgs",
+    "repos_url": "https://api.github.com/users/mertkahyaoglu/repos",
+    "events_url": "https://api.github.com/users/mertkahyaoglu/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mertkahyaoglu/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

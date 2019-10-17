@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11993",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11993/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11993/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11993/events",
+  "html_url": "https://github.com/facebook/react/pull/11993",
+  "id": 286821886,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTYxNjgzMDE4",
+  "number": 11993,
+  "title": "Add warning in server renderer if class doesn't extend React.Component",
+  "user": {
+    "login": "wyze",
+    "id": 186971,
+    "node_id": "MDQ6VXNlcjE4Njk3MQ==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/186971?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/wyze",
+    "html_url": "https://github.com/wyze",
+    "followers_url": "https://api.github.com/users/wyze/followers",
+    "following_url": "https://api.github.com/users/wyze/following{/other_user}",
+    "gists_url": "https://api.github.com/users/wyze/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/wyze/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/wyze/subscriptions",
+    "organizations_url": "https://api.github.com/users/wyze/orgs",
+    "repos_url": "https://api.github.com/users/wyze/repos",
+    "events_url": "https://api.github.com/users/wyze/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/wyze/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2018-01-08T17:31:11Z",
+  "updated_at": "2018-01-09T16:48:05Z",
+  "closed_at": "2018-01-09T16:24:50Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11993",
+    "html_url": "https://github.com/facebook/react/pull/11993",
+    "diff_url": "https://github.com/facebook/react/pull/11993.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11993.patch"
+  },
+  "body": "Let me know if the check is done in the wrong spot or if my test is invalid or need more tests somewhere. \r\n\r\nIn dev mode, while server rendering, a warning will be thrown if there is a class that doesn't extend React.Component.\r\n\r\nClose #11991 ",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7287",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7287/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7287/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7287/events",
+  "html_url": "https://github.com/facebook/react/issues/7287",
+  "id": 165836052,
+  "node_id": "MDU6SXNzdWUxNjU4MzYwNTI=",
+  "number": 7287,
+  "title": "Discussion: should state be immutable by default?",
+  "user": {
+    "login": "kevinSuttle",
+    "id": 95672,
+    "node_id": "MDQ6VXNlcjk1Njcy",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/95672?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/kevinSuttle",
+    "html_url": "https://github.com/kevinSuttle",
+    "followers_url": "https://api.github.com/users/kevinSuttle/followers",
+    "following_url": "https://api.github.com/users/kevinSuttle/following{/other_user}",
+    "gists_url": "https://api.github.com/users/kevinSuttle/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/kevinSuttle/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/kevinSuttle/subscriptions",
+    "organizations_url": "https://api.github.com/users/kevinSuttle/orgs",
+    "repos_url": "https://api.github.com/users/kevinSuttle/repos",
+    "events_url": "https://api.github.com/users/kevinSuttle/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/kevinSuttle/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 739777675,
+      "node_id": "MDU6TGFiZWw3Mzk3Nzc2NzU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Component%20API",
+      "name": "Component: Component API",
+      "color": "d4c5f9",
+      "default": false
+    },
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2016-07-15T17:15:49Z",
+  "updated_at": "2017-11-03T15:54:44Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "Taking some hard perspective from Redux, should a component's state be immutable by default, or would that be too much overhead for React? \n\nSide note, and possibly previously addressed topic: Shouldn't `setState()` be immutable by default? I realize there are [immutability helpers](https://facebook.github.io/react/docs/update.html), but _man_ that syntax is hard on the eyes. \n\nNot so much \"sugar\" as \"vinegar\". :) I also know there is a [section on Immutability.js](https://facebook.github.io/react/docs/advanced-performance.html#immutable-js-to-the-rescue) on the Advanced Performance page, but it doesn't address `setState()` directly.\n\nIt's not clear (at least to me) from [the setState() docs](https://facebook.github.io/react/docs/component-api.html#setstate) whether React already handles this. \n\n> returns an object\n> 👍 \n> \n> containing keys to update.\n> ❓ \n\nSorry for the sidebar. Just wanting to get a confirmation either way. \nhttps://github.com/facebook/immutable-js/wiki/Immutable-as-React-state\n",
+  "closed_by": null
+}

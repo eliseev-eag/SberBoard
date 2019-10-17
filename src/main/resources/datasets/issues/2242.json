@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2242",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2242/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2242/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2242/events",
+  "html_url": "https://github.com/facebook/react/pull/2242",
+  "id": 43913078,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjE3Nzg5OTI=",
+  "number": 2242,
+  "title": "Remount ReactDOMInput when changing type",
+  "user": {
+    "login": "syranide",
+    "id": 1714255,
+    "node_id": "MDQ6VXNlcjE3MTQyNTU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1714255?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/syranide",
+    "html_url": "https://github.com/syranide",
+    "followers_url": "https://api.github.com/users/syranide/followers",
+    "following_url": "https://api.github.com/users/syranide/following{/other_user}",
+    "gists_url": "https://api.github.com/users/syranide/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/syranide/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/syranide/subscriptions",
+    "organizations_url": "https://api.github.com/users/syranide/orgs",
+    "repos_url": "https://api.github.com/users/syranide/repos",
+    "events_url": "https://api.github.com/users/syranide/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/syranide/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2014-09-25T12:25:49Z",
+  "updated_at": "2016-03-26T18:56:21Z",
+  "closed_at": "2016-03-26T18:56:20Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/2242",
+    "html_url": "https://github.com/facebook/react/pull/2242",
+    "diff_url": "https://github.com/facebook/react/pull/2242.diff",
+    "patch_url": "https://github.com/facebook/react/pull/2242.patch"
+  },
+  "body": "IE8 throws if you change input `type`, It applies to all values of `type` (even unsupported ones).\n\n``` JS\nReact.renderComponent(<input type=\"radio\" />, document.body);\nReact.renderComponent(<input type=\"checkbox\" />, document.body);\n[ERROR for attribute]  Could not get the type property. This command is not supported.\n[ERROR for property]  \"This command is not supported.\"\n```\n\nAdditionally, all other versions of IE does not respect `checked` unless `type=\"checkbox\"` or `type=\"radio\"`. So changing from `type=\"textfield\"` to `type=\"checkbox\"` while `checked` causes it to be unchecked. Which **should** be an issue for React, except that `ReactDOMInput` explicitly calls `DOMPropertyOperations.setValueForProperty` for every `componentDidUpdate` ([source link](https://github.com/facebook/react/blob/master/src/browser/ui/dom/components/ReactDOMInput.js#L107)). Why? Seems wasteful.\n\nIt seems to me that the correct solution (to all of this) is to consider a different `type` as a different component. `type` is a really weird HTML feature, which to me is akin to transforming `span` into `div` rather than remounting... which we don't.\n\ncc @zpao @spicyj \n\n(PS. PR just because, not saying we should take it as-is)\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

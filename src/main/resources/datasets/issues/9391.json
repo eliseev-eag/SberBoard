@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9391",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9391/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9391/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9391/events",
+  "html_url": "https://github.com/facebook/react/pull/9391",
+  "id": 220628969,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTE1MDg5NjQy",
+  "number": 9391,
+  "title": "Update proptypes doc",
+  "user": {
+    "login": "jackmarchant",
+    "id": 7701695,
+    "node_id": "MDQ6VXNlcjc3MDE2OTU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/7701695?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jackmarchant",
+    "html_url": "https://github.com/jackmarchant",
+    "followers_url": "https://api.github.com/users/jackmarchant/followers",
+    "following_url": "https://api.github.com/users/jackmarchant/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jackmarchant/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jackmarchant/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jackmarchant/subscriptions",
+    "organizations_url": "https://api.github.com/users/jackmarchant/orgs",
+    "repos_url": "https://api.github.com/users/jackmarchant/repos",
+    "events_url": "https://api.github.com/users/jackmarchant/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jackmarchant/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2017-04-10T12:29:28Z",
+  "updated_at": "2017-04-15T12:33:18Z",
+  "closed_at": "2017-04-13T17:11:23Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9391",
+    "html_url": "https://github.com/facebook/react/pull/9391",
+    "diff_url": "https://github.com/facebook/react/pull/9391.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9391.patch"
+  },
+  "body": "Not sure where else this might be but just noticed it while I was reading.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

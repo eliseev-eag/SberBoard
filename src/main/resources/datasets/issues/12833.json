@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12833",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12833/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12833/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12833/events",
+  "html_url": "https://github.com/facebook/react/pull/12833",
+  "id": 323780302,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTg4NTU1MTE3",
+  "number": 12833,
+  "title": "Remove Timeout export on React object unless enableSuspense flag",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-05-16T20:46:13Z",
+  "updated_at": "2018-05-16T21:02:38Z",
+  "closed_at": "2018-05-16T21:02:35Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12833",
+    "html_url": "https://github.com/facebook/react/pull/12833",
+    "diff_url": "https://github.com/facebook/react/pull/12833.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12833.patch"
+  },
+  "body": "`React` includes the `Timeout` component type if the `enableSuspense` feature flag is on:\r\n```js\r\nif (enableSuspense) {\r\n  React.Timeout = REACT_TIMEOUT_TYPE;\r\n}\r\n```\r\n\r\nBut it also unconditionally includes it a few lines above:\r\n```js\r\n{\r\n  // ...\r\n  Timeout: REACT_TIMEOUT_TYPE,\r\n  // ...\r\n}\r\n```\r\n\r\nOne of these is a mistake? I'm guessing it's the one I deleted.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

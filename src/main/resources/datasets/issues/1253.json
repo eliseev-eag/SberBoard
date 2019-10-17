@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/1253",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/1253/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/1253/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/1253/events",
+  "html_url": "https://github.com/facebook/react/issues/1253",
+  "id": 29305204,
+  "node_id": "MDU6SXNzdWUyOTMwNTIwNA==",
+  "number": 1253,
+  "title": "iframe contents cause invariant violation",
+  "user": {
+    "login": "matthewwithanm",
+    "id": 126263,
+    "node_id": "MDQ6VXNlcjEyNjI2Mw==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/126263?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/matthewwithanm",
+    "html_url": "https://github.com/matthewwithanm",
+    "followers_url": "https://api.github.com/users/matthewwithanm/followers",
+    "following_url": "https://api.github.com/users/matthewwithanm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/matthewwithanm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/matthewwithanm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/matthewwithanm/subscriptions",
+    "organizations_url": "https://api.github.com/users/matthewwithanm/orgs",
+    "repos_url": "https://api.github.com/users/matthewwithanm/repos",
+    "events_url": "https://api.github.com/users/matthewwithanm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/matthewwithanm/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2014-03-12T21:35:00Z",
+  "updated_at": "2017-10-01T22:40:24Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "body": "When using server rendering, putting an `<img>` in an `<iframe>` seems to invariably cause an invariant violation (it can't find the image).\n\nThis is related to #1252, but not identical. In both cases, the browser isn't aware of the inner elements however, in this case, it's because browsers that support iframes are actually mutating the DOM (by replacing the contents with the document specified in the `src` attribute).\n",
+  "closed_by": null
+}

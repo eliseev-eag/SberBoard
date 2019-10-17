@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6692",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6692/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6692/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6692/events",
+  "html_url": "https://github.com/facebook/react/pull/6692",
+  "id": 152881675,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Njg3ODAzNjU=",
+  "number": 6692,
+  "title": "Make it clearer that string refs are considered legacy",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-05-03T21:44:11Z",
+  "updated_at": "2016-05-31T19:16:51Z",
+  "closed_at": "2016-05-25T21:47:34Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6692",
+    "html_url": "https://github.com/facebook/react/pull/6692",
+    "diff_url": "https://github.com/facebook/react/pull/6692.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6692.patch"
+  },
+  "body": "Anecdotally, it's my impression that most people aren't aware that string refs are considered legacy. The docs mention it, but it's easy to miss. As an example, I brought this up on Twitter and @ryanflorence (whom no one can accuse of being a React newbie) noted that he [hadn't bothered to look into callback refs yet](https://twitter.com/ryanflorence/status/727252198678110208).\n\nThis PR places the legacy warning in a stylized \"Note\" box, like similar warnings throughout the docs.\n\n<img width=\"670\" alt=\"screen shot 2016-05-03 at 2 42 21 pm\" src=\"https://cloud.githubusercontent.com/assets/3624098/14999315/5041e124-113d-11e6-8276-e7eddcffd25e.png\">\n\nIt might also be nice to link to a resource (perhaps a blog post?) that explains the disadvantages of string refs, but the only one I'm aware of is [this old GitHub issue](https://github.com/facebook/react/issues/1373).\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

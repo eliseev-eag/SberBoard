@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5333",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5333/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5333/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5333/events",
+  "html_url": "https://github.com/facebook/react/pull/5333",
+  "id": 114200290,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDkyMzE5Mzk=",
+  "number": 5333,
+  "title": "add a note about this.props and getDefaultProps()",
+  "user": {
+    "login": "koulmomo",
+    "id": 983861,
+    "node_id": "MDQ6VXNlcjk4Mzg2MQ==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/983861?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/koulmomo",
+    "html_url": "https://github.com/koulmomo",
+    "followers_url": "https://api.github.com/users/koulmomo/followers",
+    "following_url": "https://api.github.com/users/koulmomo/following{/other_user}",
+    "gists_url": "https://api.github.com/users/koulmomo/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/koulmomo/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/koulmomo/subscriptions",
+    "organizations_url": "https://api.github.com/users/koulmomo/orgs",
+    "repos_url": "https://api.github.com/users/koulmomo/repos",
+    "events_url": "https://api.github.com/users/koulmomo/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/koulmomo/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2015-10-30T05:06:07Z",
+  "updated_at": "2015-10-30T05:46:26Z",
+  "closed_at": "2015-10-30T05:46:26Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5333",
+    "html_url": "https://github.com/facebook/react/pull/5333",
+    "diff_url": "https://github.com/facebook/react/pull/5333.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5333.patch"
+  },
+  "body": "see: https://github.com/facebook/react/issues/2166#issuecomment-152413124\n",
+  "closed_by": {
+    "login": "koulmomo",
+    "id": 983861,
+    "node_id": "MDQ6VXNlcjk4Mzg2MQ==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/983861?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/koulmomo",
+    "html_url": "https://github.com/koulmomo",
+    "followers_url": "https://api.github.com/users/koulmomo/followers",
+    "following_url": "https://api.github.com/users/koulmomo/following{/other_user}",
+    "gists_url": "https://api.github.com/users/koulmomo/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/koulmomo/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/koulmomo/subscriptions",
+    "organizations_url": "https://api.github.com/users/koulmomo/orgs",
+    "repos_url": "https://api.github.com/users/koulmomo/repos",
+    "events_url": "https://api.github.com/users/koulmomo/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/koulmomo/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

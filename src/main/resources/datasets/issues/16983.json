@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16983",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16983/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16983/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16983/events",
+  "html_url": "https://github.com/facebook/react/pull/16983",
+  "id": 501343582,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzIzNjM1NDUw",
+  "number": 16983,
+  "title": "remove unused code in commitBeforeMutationLifeCycles",
+  "user": {
+    "login": "NE-SmallTown",
+    "id": 18418010,
+    "node_id": "MDQ6VXNlcjE4NDE4MDEw",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/18418010?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/NE-SmallTown",
+    "html_url": "https://github.com/NE-SmallTown",
+    "followers_url": "https://api.github.com/users/NE-SmallTown/followers",
+    "following_url": "https://api.github.com/users/NE-SmallTown/following{/other_user}",
+    "gists_url": "https://api.github.com/users/NE-SmallTown/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/NE-SmallTown/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/NE-SmallTown/subscriptions",
+    "organizations_url": "https://api.github.com/users/NE-SmallTown/orgs",
+    "repos_url": "https://api.github.com/users/NE-SmallTown/repos",
+    "events_url": "https://api.github.com/users/NE-SmallTown/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/NE-SmallTown/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-10-02T08:16:21Z",
+  "updated_at": "2019-10-02T08:25:31Z",
+  "closed_at": "2019-10-02T08:25:31Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16983",
+    "html_url": "https://github.com/facebook/react/pull/16983",
+    "diff_url": "https://github.com/facebook/react/pull/16983.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16983.patch"
+  },
+  "body": "Since `Snapshot` is **only for class component**, and now we only call `commitBeforeMutationLifeCycles` when `(nextEffect.effectTag & Snapshot) !== NoEffect`, that means  we only call `commitBeforeMutationLifeCycles` **for class component**.\r\n\r\nSo, I think we can remove other fiber tag logic in `commitBeforeMutationLifeCycles`",
+  "closed_by": {
+    "login": "NE-SmallTown",
+    "id": 18418010,
+    "node_id": "MDQ6VXNlcjE4NDE4MDEw",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/18418010?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/NE-SmallTown",
+    "html_url": "https://github.com/NE-SmallTown",
+    "followers_url": "https://api.github.com/users/NE-SmallTown/followers",
+    "following_url": "https://api.github.com/users/NE-SmallTown/following{/other_user}",
+    "gists_url": "https://api.github.com/users/NE-SmallTown/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/NE-SmallTown/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/NE-SmallTown/subscriptions",
+    "organizations_url": "https://api.github.com/users/NE-SmallTown/orgs",
+    "repos_url": "https://api.github.com/users/NE-SmallTown/repos",
+    "events_url": "https://api.github.com/users/NE-SmallTown/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/NE-SmallTown/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

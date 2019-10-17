@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15498",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15498/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15498/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15498/events",
+  "html_url": "https://github.com/facebook/react/pull/15498",
+  "id": 437271938,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjczNTgyNzkw",
+  "number": 15498,
+  "title": "upgrade prettier to 1.17.0",
+  "user": {
+    "login": "threepointone",
+    "id": 18808,
+    "node_id": "MDQ6VXNlcjE4ODA4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/18808?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/threepointone",
+    "html_url": "https://github.com/threepointone",
+    "followers_url": "https://api.github.com/users/threepointone/followers",
+    "following_url": "https://api.github.com/users/threepointone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/threepointone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/threepointone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/threepointone/subscriptions",
+    "organizations_url": "https://api.github.com/users/threepointone/orgs",
+    "repos_url": "https://api.github.com/users/threepointone/repos",
+    "events_url": "https://api.github.com/users/threepointone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/threepointone/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-04-25T15:47:25Z",
+  "updated_at": "2019-06-11T11:02:04Z",
+  "closed_at": "2019-06-11T11:02:04Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15498",
+    "html_url": "https://github.com/facebook/react/pull/15498",
+    "diff_url": "https://github.com/facebook/react/pull/15498.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15498.patch"
+  },
+  "body": "prettier started failing with my sublime text plugin; noted a fix was available. updated prettier, and ran it on all files. also updates .prettierrc.js's to use 'babel' as a parser as per it's new config.",
+  "closed_by": {
+    "login": "threepointone",
+    "id": 18808,
+    "node_id": "MDQ6VXNlcjE4ODA4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/18808?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/threepointone",
+    "html_url": "https://github.com/threepointone",
+    "followers_url": "https://api.github.com/users/threepointone/followers",
+    "following_url": "https://api.github.com/users/threepointone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/threepointone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/threepointone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/threepointone/subscriptions",
+    "organizations_url": "https://api.github.com/users/threepointone/orgs",
+    "repos_url": "https://api.github.com/users/threepointone/repos",
+    "events_url": "https://api.github.com/users/threepointone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/threepointone/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

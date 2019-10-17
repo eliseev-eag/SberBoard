@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5403",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5403/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5403/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5403/events",
+  "html_url": "https://github.com/facebook/react/pull/5403",
+  "id": 115285471,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDk4MjQ2NTU=",
+  "number": 5403,
+  "title": "Clarify note about stable keys",
+  "user": {
+    "login": "yuyokk",
+    "id": 1225343,
+    "node_id": "MDQ6VXNlcjEyMjUzNDM=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1225343?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/yuyokk",
+    "html_url": "https://github.com/yuyokk",
+    "followers_url": "https://api.github.com/users/yuyokk/followers",
+    "following_url": "https://api.github.com/users/yuyokk/following{/other_user}",
+    "gists_url": "https://api.github.com/users/yuyokk/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/yuyokk/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/yuyokk/subscriptions",
+    "organizations_url": "https://api.github.com/users/yuyokk/orgs",
+    "repos_url": "https://api.github.com/users/yuyokk/repos",
+    "events_url": "https://api.github.com/users/yuyokk/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/yuyokk/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 24,
+  "created_at": "2015-11-05T13:40:16Z",
+  "updated_at": "2015-11-10T18:56:02Z",
+  "closed_at": "2015-11-10T18:28:49Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5403",
+    "html_url": "https://github.com/facebook/react/pull/5403",
+    "diff_url": "https://github.com/facebook/react/pull/5403.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5403.patch"
+  },
+  "body": "Hello,\n\nI've been reading [docs](https://facebook.github.io/react/docs/reconciliation.html) that say\n\n> If you don't provide stable keys (by using Math.random() for example), all the sub-trees are going to be re-rendered every single time. By giving the users the choice to choose the key, they have the ability to shoot themselves in the foot.\n\nand then I see this [comment](https://github.com/facebook/react/issues/1342#issuecomment-39230939) on some issue that says\n\n> We made this mistake in one of our examples for a while and it's just really bad. By doing this, you'll actually end up recreating all of your nodes on every render because the key will be different.\n\nPlease let me know if it makes sense to remove this piece of doc from the site.\n\nThank you\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

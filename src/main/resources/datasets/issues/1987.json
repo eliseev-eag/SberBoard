@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/1987",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/1987/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/1987/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/1987/events",
+  "html_url": "https://github.com/facebook/react/pull/1987",
+  "id": 39367764,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTkyNTQ1MTA=",
+  "number": 1987,
+  "title": "Provide a friendly path for reactID errors in ReactMount",
+  "user": {
+    "login": "syranide",
+    "id": 1714255,
+    "node_id": "MDQ6VXNlcjE3MTQyNTU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1714255?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/syranide",
+    "html_url": "https://github.com/syranide",
+    "followers_url": "https://api.github.com/users/syranide/followers",
+    "following_url": "https://api.github.com/users/syranide/following{/other_user}",
+    "gists_url": "https://api.github.com/users/syranide/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/syranide/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/syranide/subscriptions",
+    "organizations_url": "https://api.github.com/users/syranide/orgs",
+    "repos_url": "https://api.github.com/users/syranide/repos",
+    "events_url": "https://api.github.com/users/syranide/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/syranide/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2014-08-03T10:28:47Z",
+  "updated_at": "2015-08-20T18:34:35Z",
+  "closed_at": "2015-08-20T00:35:21Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/1987",
+    "html_url": "https://github.com/facebook/react/pull/1987",
+    "diff_url": "https://github.com/facebook/react/pull/1987.diff",
+    "patch_url": "https://github.com/facebook/react/pull/1987.patch"
+  },
+  "body": "Dissected from my #1570\n\nProvides a human friendly path instead of just a rather opaque reactID. Chrome still has intermittent issues with long error messages being truncated, but this is supposedly fixed (again) in Chrome 37. No other browsers should have issues displaying the full error message.\n\nNow that we have friendlier error messages, how far do we want go to \"resolve\" implicitly added DOM? Personally I feel like we should get rid of the \"blind jumps\" we do now (primarily missing `thead`), it seems like unsafe behavior and it would be preferable for users to just be notified of the issue instead (technically, they provided _invalid_ markup).\n\n```\nInvariant Violation: findComponentRoot(..., .0.1.0:0:0.0.0.0.0): Unable to find element.\nThis probably means the DOM was unexpectedly mutated (e.g., by the browser), usually due to\nforgetting a <tbody> when using tables, nesting tags like <form>, <p>, or <a>, or using\nnon-SVG elements in an <svg> parent. Inspect: Root > DIV.0 > SPAN.1 > Children1 > Children2\n> Children3 > FORM.0:0:0 > TABLE.0 > TR.0 > TD.0 > FORM.0\n```\n\n(That error message is for nested `form`, which is invalid)\n\n```\n +3123   +798 build/react-with-addons.js\n    +7     -1 build/react-with-addons.min.js\n +3123   +809 build/react.js\n    +7      = build/react.min.js\n```\n",
+  "closed_by": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

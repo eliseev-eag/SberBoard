@@ -1,0 +1,91 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14002",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14002/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14002/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14002/events",
+  "html_url": "https://github.com/facebook/react/issues/14002",
+  "id": 374678323,
+  "node_id": "MDU6SXNzdWUzNzQ2NzgzMjM=",
+  "number": 14002,
+  "title": "Safari Devtools flooded with security errors on react-dom selection work with iframes with diff origins",
+  "user": {
+    "login": "asci",
+    "id": 778908,
+    "node_id": "MDQ6VXNlcjc3ODkwOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/778908?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/asci",
+    "html_url": "https://github.com/asci",
+    "followers_url": "https://api.github.com/users/asci/followers",
+    "following_url": "https://api.github.com/users/asci/following{/other_user}",
+    "gists_url": "https://api.github.com/users/asci/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/asci/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/asci/subscriptions",
+    "organizations_url": "https://api.github.com/users/asci/orgs",
+    "repos_url": "https://api.github.com/users/asci/repos",
+    "events_url": "https://api.github.com/users/asci/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/asci/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 69105358,
+      "node_id": "MDU6TGFiZWw2OTEwNTM1OA==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Browser:%20Safari",
+      "name": "Browser: Safari",
+      "color": "c7def8",
+      "default": false
+    },
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2018-10-27T19:09:31Z",
+  "updated_at": "2019-03-28T07:18:26Z",
+  "closed_at": "2019-03-20T13:11:54Z",
+  "author_association": "NONE",
+  "body": "hey folks, looks like [this code](https://github.com/facebook/react/commit/b565f495319750d98628425d120312997bee410b) added small issue with safari and it could flood devtools console output with messages like this:\r\n<img width=\"875\" alt=\"screenshot 2018-10-26 at 15 25 33\" src=\"https://user-images.githubusercontent.com/778908/47569863-0e3a5c80-d935-11e8-8e59-8d95d35ba131.png\"> \r\nAs I understand it happens [here](https://github.com/facebook/react/commit/b565f495319750d98628425d120312997bee410b#diff-a654f37b01573fc8006b426d56ad53ceR50) and I see you catch the error, but safari still adds the error message if you have iframes with different origin",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

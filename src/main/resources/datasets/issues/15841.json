@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15841",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15841/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15841/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15841/events",
+  "html_url": "https://github.com/facebook/react/issues/15841",
+  "id": 453708593,
+  "node_id": "MDU6SXNzdWU0NTM3MDg1OTM=",
+  "number": 15841,
+  "title": "Using ref value in useEffect cleanup function",
+  "user": {
+    "login": "WilsonCWong",
+    "id": 7454084,
+    "node_id": "MDQ6VXNlcjc0NTQwODQ=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/7454084?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/WilsonCWong",
+    "html_url": "https://github.com/WilsonCWong",
+    "followers_url": "https://api.github.com/users/WilsonCWong/followers",
+    "following_url": "https://api.github.com/users/WilsonCWong/following{/other_user}",
+    "gists_url": "https://api.github.com/users/WilsonCWong/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/WilsonCWong/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/WilsonCWong/subscriptions",
+    "organizations_url": "https://api.github.com/users/WilsonCWong/orgs",
+    "repos_url": "https://api.github.com/users/WilsonCWong/repos",
+    "events_url": "https://api.github.com/users/WilsonCWong/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/WilsonCWong/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-06-07T21:56:56Z",
+  "updated_at": "2019-06-14T11:18:21Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "I'm currently trying to use the cleanup function of useEffect to remove any setTimeouts remaining to ensure it doesn't run when the component unmounts.\r\n```\r\n  const timers = useRef([]);\r\n\r\n  useEffect(() => {\r\n    return () => {\r\n      for (let i = 0; i < timers.current.length; i++) {\r\n        clearTimeout(timers.current[i]);\r\n      }\r\n    }\r\n  }, [])\r\n```\r\n\r\nIt works, but I get a warning that says\r\n```\r\nThe ref value 'timers.current' will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy 'timers.current' to a variable inside the effect, and use that variable in the cleanup function.\r\n```\r\n\r\nI'm wondering, is this something I should be concerned about? The ref value is only used during cleanup and it's not linked to any rendering. \r\n\r\nAlso, out of curiosity, what is this warning for exactly? I'm not quite sure I get it. Is it because if the ref is referring to a component, that component could be changed by the time the effect cleanup function runs?",
+  "closed_by": null
+}

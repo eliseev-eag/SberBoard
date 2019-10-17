@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16675",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16675/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16675/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16675/events",
+  "html_url": "https://github.com/facebook/react/issues/16675",
+  "id": 489953634,
+  "node_id": "MDU6SXNzdWU0ODk5NTM2MzQ=",
+  "number": 16675,
+  "title": "React DevTools 4+ is breaking for react 0.14",
+  "user": {
+    "login": "woodenconsulting",
+    "id": 4163029,
+    "node_id": "MDQ6VXNlcjQxNjMwMjk=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/4163029?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/woodenconsulting",
+    "html_url": "https://github.com/woodenconsulting",
+    "followers_url": "https://api.github.com/users/woodenconsulting/followers",
+    "following_url": "https://api.github.com/users/woodenconsulting/following{/other_user}",
+    "gists_url": "https://api.github.com/users/woodenconsulting/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/woodenconsulting/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/woodenconsulting/subscriptions",
+    "organizations_url": "https://api.github.com/users/woodenconsulting/orgs",
+    "repos_url": "https://api.github.com/users/woodenconsulting/repos",
+    "events_url": "https://api.github.com/users/woodenconsulting/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/woodenconsulting/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 40929152,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mg==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Duplicate",
+      "name": "Resolution: Duplicate",
+      "color": "cccccc",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-09-05T19:23:09Z",
+  "updated_at": "2019-09-06T15:13:21Z",
+  "closed_at": "2019-09-05T23:14:10Z",
+  "author_association": "NONE",
+  "body": "There was already an issue open for this, however, it has been locked: https://github.com/facebook/react/issues/16500\r\n\r\nI'm only opening a new issue to add some additional information as the current outcome isn't ideal. I work for a very large sports apparel company out of Baltimore with various applications of varying age.\r\n\r\nSome of our newer applications are running react@latest, however, we still have many legacy applications on 0.14.7. While we're working to replace these, the EOL for many is still at least a year out.\r\n\r\nAccording to the [last post](https://github.com/facebook/react/issues/16500#issuecomment-525022121) by @gaearon, the solution is to install the 3.x version. This is not ideal since we're still also working on react@latest - switching between extension versions is not manageable. \r\n\r\nIdeally, instead of a better error message, React Dev Tools 4.x just wouldn't [throw](https://github.com/facebook/react/blob/b438699d3620bff236282b049204e1221b3689e9/packages/react-devtools-shared/src/backend/legacy/renderer.js#L264) at all for 0.14.x. Currently it breaks the application when Dev Tools is open (I use Chrome); I'd rather at least have console and Redux dev tools when I have to work on our legacy apps than nothing at all!\r\n\r\nIt's perfectly understandable that support for 0.14.x was nixed, but should the latest version break legacy React applications? Just because I have Chrome Dev Tools open doesn't mean I intend to use React Dev Tools, but with the latest extension I can't use Chrome Dev Tools at all, so perhaps it makes more sense just to display the error in the React Dev Tools tab?",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

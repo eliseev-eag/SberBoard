@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8618",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8618/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8618/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8618/events",
+  "html_url": "https://github.com/facebook/react/pull/8618",
+  "id": 197017174,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTg5OTMyOTI=",
+  "number": 8618,
+  "title": "typo, closing button tag.",
+  "user": {
+    "login": "tam-borine",
+    "id": 13587601,
+    "node_id": "MDQ6VXNlcjEzNTg3NjAx",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/13587601?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/tam-borine",
+    "html_url": "https://github.com/tam-borine",
+    "followers_url": "https://api.github.com/users/tam-borine/followers",
+    "following_url": "https://api.github.com/users/tam-borine/following{/other_user}",
+    "gists_url": "https://api.github.com/users/tam-borine/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/tam-borine/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/tam-borine/subscriptions",
+    "organizations_url": "https://api.github.com/users/tam-borine/orgs",
+    "repos_url": "https://api.github.com/users/tam-borine/repos",
+    "events_url": "https://api.github.com/users/tam-borine/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/tam-borine/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-12-21T19:46:18Z",
+  "updated_at": "2016-12-21T19:50:34Z",
+  "closed_at": "2016-12-21T19:50:21Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8618",
+    "html_url": "https://github.com/facebook/react/pull/8618",
+    "diff_url": "https://github.com/facebook/react/pull/8618.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8618.patch"
+  },
+  "body": "*Before* submitting a pull request, please make sure the following is done...\r\n\r\n1. Fork the repo and create your branch from `master`.\r\n2. If you've added code that should be tested, add tests!\r\n3. If you've changed APIs, update the documentation.\r\n4. Ensure the test suite passes (`npm test`).\r\n5. Make sure your code lints (`npm run lint`) - we've done our best to make sure these rules match our internal linting guidelines.\r\n6. If you haven't already, complete the [CLA](https://code.facebook.com/cla).\r\n",
+  "closed_by": {
+    "login": "tam-borine",
+    "id": 13587601,
+    "node_id": "MDQ6VXNlcjEzNTg3NjAx",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/13587601?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/tam-borine",
+    "html_url": "https://github.com/tam-borine",
+    "followers_url": "https://api.github.com/users/tam-borine/followers",
+    "following_url": "https://api.github.com/users/tam-borine/following{/other_user}",
+    "gists_url": "https://api.github.com/users/tam-borine/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/tam-borine/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/tam-borine/subscriptions",
+    "organizations_url": "https://api.github.com/users/tam-borine/orgs",
+    "repos_url": "https://api.github.com/users/tam-borine/repos",
+    "events_url": "https://api.github.com/users/tam-borine/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/tam-borine/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

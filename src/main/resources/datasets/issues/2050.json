@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2050",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2050/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2050/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2050/events",
+  "html_url": "https://github.com/facebook/react/pull/2050",
+  "id": 40378451,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTk4NjM2MTk=",
+  "number": 2050,
+  "title": "[RFC] Per React container event listening/dispatching",
+  "user": {
+    "login": "chenglou",
+    "id": 1909539,
+    "node_id": "MDQ6VXNlcjE5MDk1Mzk=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1909539?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/chenglou",
+    "html_url": "https://github.com/chenglou",
+    "followers_url": "https://api.github.com/users/chenglou/followers",
+    "following_url": "https://api.github.com/users/chenglou/following{/other_user}",
+    "gists_url": "https://api.github.com/users/chenglou/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/chenglou/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/chenglou/subscriptions",
+    "organizations_url": "https://api.github.com/users/chenglou/orgs",
+    "repos_url": "https://api.github.com/users/chenglou/repos",
+    "events_url": "https://api.github.com/users/chenglou/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/chenglou/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2014-08-15T19:49:21Z",
+  "updated_at": "2016-06-20T16:10:02Z",
+  "closed_at": "2015-07-28T21:16:28Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/2050",
+    "html_url": "https://github.com/facebook/react/pull/2050",
+    "diff_url": "https://github.com/facebook/react/pull/2050.diff",
+    "patch_url": "https://github.com/facebook/react/pull/2050.patch"
+  },
+  "body": "Work in progress. `enterleave` plugin (and maybe `analyticsPlugin`) is broken because it relied on the old behavior. But wanted to put this out here for suggestions. There are also some comments that need to be changed, I'll do it when the code is finalized.\n\nIf we attach the event listening/dispatching at container level, it'll benefit the case of `<Editor/><Plugin1/>` (both are container roots), since `Plugin1` won't disturb `Editor`.\n\nWe also detach those listeners now. There wasn't really a need in the past.\n\n@spicyj @zpao @nathansobo\n\nFixes #2043\nShould help with #1964\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

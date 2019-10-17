@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5230",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5230/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5230/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5230/events",
+  "html_url": "https://github.com/facebook/react/pull/5230",
+  "id": 112552611,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDgzMTAxMzA=",
+  "number": 5230,
+  "title": "Fix tutorial.ja-JP.md",
+  "user": {
+    "login": "kohashi",
+    "id": 903493,
+    "node_id": "MDQ6VXNlcjkwMzQ5Mw==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/903493?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/kohashi",
+    "html_url": "https://github.com/kohashi",
+    "followers_url": "https://api.github.com/users/kohashi/followers",
+    "following_url": "https://api.github.com/users/kohashi/following{/other_user}",
+    "gists_url": "https://api.github.com/users/kohashi/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/kohashi/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/kohashi/subscriptions",
+    "organizations_url": "https://api.github.com/users/kohashi/orgs",
+    "repos_url": "https://api.github.com/users/kohashi/repos",
+    "events_url": "https://api.github.com/users/kohashi/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/kohashi/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2015-10-21T09:57:29Z",
+  "updated_at": "2015-10-27T22:46:20Z",
+  "closed_at": "2015-10-21T17:46:17Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5230",
+    "html_url": "https://github.com/facebook/react/pull/5230",
+    "diff_url": "https://github.com/facebook/react/pull/5230.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5230.patch"
+  },
+  "body": "日本語版のチュートリアルの記事が古く、動かなかったので修正しました。\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

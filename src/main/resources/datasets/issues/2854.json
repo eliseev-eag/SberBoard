@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2854",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2854/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2854/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2854/events",
+  "html_url": "https://github.com/facebook/react/pull/2854",
+  "id": 54264702,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjczMTUzNDk=",
+  "number": 2854,
+  "title": "Adds a composite component for an iframe to handle load events",
+  "user": {
+    "login": "cedrics",
+    "id": 651816,
+    "node_id": "MDQ6VXNlcjY1MTgxNg==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/651816?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/cedrics",
+    "html_url": "https://github.com/cedrics",
+    "followers_url": "https://api.github.com/users/cedrics/followers",
+    "following_url": "https://api.github.com/users/cedrics/following{/other_user}",
+    "gists_url": "https://api.github.com/users/cedrics/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/cedrics/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/cedrics/subscriptions",
+    "organizations_url": "https://api.github.com/users/cedrics/orgs",
+    "repos_url": "https://api.github.com/users/cedrics/repos",
+    "events_url": "https://api.github.com/users/cedrics/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/cedrics/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2015-01-13T23:37:23Z",
+  "updated_at": "2015-03-25T06:31:03Z",
+  "closed_at": "2015-02-09T17:59:01Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/2854",
+    "html_url": "https://github.com/facebook/react/pull/2854",
+    "diff_url": "https://github.com/facebook/react/pull/2854.diff",
+    "patch_url": "https://github.com/facebook/react/pull/2854.patch"
+  },
+  "body": "I stumbled upon #1718 because I had the same issue in my application and tried to fix it by copying the code from the `ReactDOMImg` component as suggest by @syranide in a [comment](https://github.com/facebook/react/issues/1718#issuecomment-57080315).\n\nI removed the `error` event because as far as I am aware an `iframe` will never trigger it ([Source](https://code.google.com/p/chromium/issues/detail?id=365457)).\n\nThe test code is pretty ugly but I tried using `ReactTestUtils.SimulateNative.load` and when using it the tests passed with or without my changes. May be someone has a suggestion on how to make a prettier :smile: \nI also tested it in the different browser I have available (Chrome, Safari, Firefox and IE10).\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

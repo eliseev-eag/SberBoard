@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13727",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13727/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13727/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13727/events",
+  "html_url": "https://github.com/facebook/react/pull/13727",
+  "id": 363745274,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjE4MTAyODk4",
+  "number": 13727,
+  "title": "Bump babel-eslint and remove flow supressions",
+  "user": {
+    "login": "existentialism",
+    "id": 56288,
+    "node_id": "MDQ6VXNlcjU2Mjg4",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/56288?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/existentialism",
+    "html_url": "https://github.com/existentialism",
+    "followers_url": "https://api.github.com/users/existentialism/followers",
+    "following_url": "https://api.github.com/users/existentialism/following{/other_user}",
+    "gists_url": "https://api.github.com/users/existentialism/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/existentialism/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/existentialism/subscriptions",
+    "organizations_url": "https://api.github.com/users/existentialism/orgs",
+    "repos_url": "https://api.github.com/users/existentialism/repos",
+    "events_url": "https://api.github.com/users/existentialism/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/existentialism/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2018-09-25T20:07:02Z",
+  "updated_at": "2018-09-25T21:56:30Z",
+  "closed_at": "2018-09-25T21:48:31Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13727",
+    "html_url": "https://github.com/facebook/react/pull/13727",
+    "diff_url": "https://github.com/facebook/react/pull/13727.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13727.patch"
+  },
+  "body": "Follow up to https://github.com/facebook/react/pull/13606!",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

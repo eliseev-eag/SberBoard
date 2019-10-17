@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6576",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6576/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6576/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6576/events",
+  "html_url": "https://github.com/facebook/react/pull/6576",
+  "id": 150266084,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Njc0NTkwNzY=",
+  "number": 6576,
+  "title": "Changed example json value.",
+  "user": {
+    "login": "yuji0602",
+    "id": 1221951,
+    "node_id": "MDQ6VXNlcjEyMjE5NTE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1221951?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/yuji0602",
+    "html_url": "https://github.com/yuji0602",
+    "followers_url": "https://api.github.com/users/yuji0602/followers",
+    "following_url": "https://api.github.com/users/yuji0602/following{/other_user}",
+    "gists_url": "https://api.github.com/users/yuji0602/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/yuji0602/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/yuji0602/subscriptions",
+    "organizations_url": "https://api.github.com/users/yuji0602/orgs",
+    "repos_url": "https://api.github.com/users/yuji0602/repos",
+    "events_url": "https://api.github.com/users/yuji0602/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/yuji0602/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2016-04-22T04:48:57Z",
+  "updated_at": "2016-04-22T20:28:16Z",
+  "closed_at": "2016-04-22T17:40:18Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6576",
+    "html_url": "https://github.com/facebook/react/pull/6576",
+    "diff_url": "https://github.com/facebook/react/pull/6576.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6576.patch"
+  },
+  "body": "Hi.\n\nWhen I had to try the [tutorial](https://facebook.github.io/react/docs/tutorial.html#updating-state), I get an error at the Chrome console.\n\n```\nreact.js:19287 Warning: flattenChildren(...): Encountered two children with the same key, `.$undefined`. Child keys must be unique; when two children share a key, only the first child will be used.\n```\n\nFixed value of json.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

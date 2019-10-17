@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9547",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9547/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9547/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9547/events",
+  "html_url": "https://github.com/facebook/react/pull/9547",
+  "id": 224972242,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTE4MDc0OTUy",
+  "number": 9547,
+  "title": "SSR fixture",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-04-28T03:44:05Z",
+  "updated_at": "2017-04-28T04:03:32Z",
+  "closed_at": "2017-04-28T04:03:32Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9547",
+    "html_url": "https://github.com/facebook/react/pull/9547",
+    "diff_url": "https://github.com/facebook/react/pull/9547.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9547.patch"
+  },
+  "body": "Adds a server-rendering fixture based on create-react-app without ejecting.\r\n\r\nThis is using the full-page strategy because I wanted to flush out any issues with it. Turns out there's a lot of little things that are fixable and some non-fixable. This actually surfaced some differences between the current strategy and the one I had in mind.\r\n\r\nThis uses the asset manifest from webpack to pass the final URLs to the client. This ensures that we can render the same exact mark up on the client - including the URL to our own script that we're running in.\r\n\r\nDoing full document renders work with 15.x as long as the checksum matches. However, with the patch up reviving strategy I had in mind it would end up removing the CSS tags that webpack injects before running our `render` call. This is a behavior change.\r\n\r\nIn dev mode the server runs a proxy __in front__ of the normal CRA webpack server so that we can replace the HTML request for the root page.\r\n\r\nI don't know what the best way to link in the react and react-dom packages. Each fixture has a different strategy so here's another one. Just add `NODE_PATH=../../build/packages` in front of all commands.",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

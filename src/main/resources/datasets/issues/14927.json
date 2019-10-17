@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14927",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14927/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14927/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14927/events",
+  "html_url": "https://github.com/facebook/react/issues/14927",
+  "id": 413349220,
+  "node_id": "MDU6SXNzdWU0MTMzNDkyMjA=",
+  "number": 14927,
+  "title": "useLayoutEffect in ssr",
+  "user": {
+    "login": "dimensi",
+    "id": 11390039,
+    "node_id": "MDQ6VXNlcjExMzkwMDM5",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/11390039?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dimensi",
+    "html_url": "https://github.com/dimensi",
+    "followers_url": "https://api.github.com/users/dimensi/followers",
+    "following_url": "https://api.github.com/users/dimensi/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dimensi/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dimensi/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dimensi/subscriptions",
+    "organizations_url": "https://api.github.com/users/dimensi/orgs",
+    "repos_url": "https://api.github.com/users/dimensi/repos",
+    "events_url": "https://api.github.com/users/dimensi/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dimensi/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 40929155,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1NQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Question",
+      "name": "Type: Question",
+      "color": "cc317c",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 51,
+  "created_at": "2019-02-22T10:52:29Z",
+  "updated_at": "2019-10-13T08:27:05Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "Hi, I do not understand the situation with this hook a bit. I use this hook to perform the animation synchronously with the state update, if I use useEffect, then I have jumps in the animation, because the animation library does not have time to start. Also, the documentation states that useLayoutEffect runs on the same phase as componentDidMount (that is, on the client side), and here my server issues complaints to me about my code. Why is that?\r\n\r\nhttps://codesandbox.io/s/oo47nj9mk9\r\n\r\n_Originally posted by @dimensi in https://github.com/facebook/react/pull/14596#issuecomment-466023638_",
+  "closed_by": null
+}

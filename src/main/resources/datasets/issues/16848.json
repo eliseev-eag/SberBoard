@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16848",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16848/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16848/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16848/events",
+  "html_url": "https://github.com/facebook/react/issues/16848",
+  "id": 496648692,
+  "node_id": "MDU6SXNzdWU0OTY2NDg2OTI=",
+  "number": 16848,
+  "title": "React DOM SSR crashes since React-Dom 16.6.2",
+  "user": {
+    "login": "ernestognw",
+    "id": 33379285,
+    "node_id": "MDQ6VXNlcjMzMzc5Mjg1",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/33379285?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ernestognw",
+    "html_url": "https://github.com/ernestognw",
+    "followers_url": "https://api.github.com/users/ernestognw/followers",
+    "following_url": "https://api.github.com/users/ernestognw/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ernestognw/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ernestognw/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ernestognw/subscriptions",
+    "organizations_url": "https://api.github.com/users/ernestognw/orgs",
+    "repos_url": "https://api.github.com/users/ernestognw/repos",
+    "events_url": "https://api.github.com/users/ernestognw/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ernestognw/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-09-21T12:03:22Z",
+  "updated_at": "2019-09-26T17:50:26Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\nBug\r\n\r\n**What is the current behavior?**\r\nI've setup an SSR configuration using ReactDOM.renderToString() method with react-apollo, and it throws an Invariant violation as the following, with no more information about:\r\n\r\n<img width=\"297\" alt=\"Captura de pantalla 2019-09-21 a la(s) 6 29 37\" src=\"https://user-images.githubusercontent.com/33379285/65372722-36136c80-dc39-11e9-8342-90369c2055e5.png\">\r\n\r\nEverything returns to normal when downgrading to react-dom@16.6.1\r\n\r\n*My SSR App component*\r\n\r\n<img width=\"600\" alt=\"Captura de pantalla 2019-09-21 a la(s) 6 33 24\" src=\"https://user-images.githubusercontent.com/33379285/65372762-b9cd5900-dc39-11e9-9045-143146e0baf9.png\">\r\n\r\n*Things I've tried*\r\n\r\n- I have changed the react-dom package to serve the development version (./cjs/react-dom-server.node.development.js), just for debugging, and when importing that version, everything works fine, but when I return to the production version (./cjs/react-dom-server.node.production.min.js) the same error appears.\r\n\r\n- I removed one by one, every component wrapping my `<App/>`, and the one that seems to be causing the error is the `<AuthProvider>`, which is a context implementation of mine. By removing some things on that component, i figured out that is a problem within a HOC provided by react-apollo, but I don't know exactly what it is because it doesn't show me any information.\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\n\r\nI actually do not have any way to reproduce it quickly.\r\n\r\n**What is the expected behavior?**\r\nRender correctly the website.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nReact - 16.9.0\r\nReact-DOM - 16.9.0\r\nBrowsers - Safari and Chrome (tested)\r\n\r\nWorking if downgrading to React-DOM 16.6.1\r\n",
+  "closed_by": null
+}

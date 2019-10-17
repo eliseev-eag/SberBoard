@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9219",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9219/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9219/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9219/events",
+  "html_url": "https://github.com/facebook/react/pull/9219",
+  "id": 215290842,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTExNDY1NDk3",
+  "number": 9219,
+  "title": "Removed optimization for events without target in ReactNativeEventEmitter",
+  "user": {
+    "login": "shergin",
+    "id": 22032,
+    "node_id": "MDQ6VXNlcjIyMDMy",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/22032?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/shergin",
+    "html_url": "https://github.com/shergin",
+    "followers_url": "https://api.github.com/users/shergin/followers",
+    "following_url": "https://api.github.com/users/shergin/following{/other_user}",
+    "gists_url": "https://api.github.com/users/shergin/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/shergin/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/shergin/subscriptions",
+    "organizations_url": "https://api.github.com/users/shergin/orgs",
+    "repos_url": "https://api.github.com/users/shergin/repos",
+    "events_url": "https://api.github.com/users/shergin/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/shergin/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-03-19T20:08:59Z",
+  "updated_at": "2017-03-21T00:07:39Z",
+  "closed_at": "2017-03-21T00:07:29Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9219",
+    "html_url": "https://github.com/facebook/react/pull/9219",
+    "diff_url": "https://github.com/facebook/react/pull/9219.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9219.patch"
+  },
+  "body": "This PR fixes the problem originally introduced in https://github.com/facebook/react/pull/6590\r\nThe problem is that `ResponderEventPlugin` (and `ResponderTouchHistoryStore`) relies on that fact that touch events are balanced.\r\nSo if one `startish` event happened, should be coming `endish` event. Otherwise there is no way to maintain internal `trackedTouchCount` counter. So, if we drop some events, we break this logic.\r\n\r\nMoreover, that optimization clearly contradict with this statement from `ResponderEventPlugin`:\r\n```\r\nWe must be resilient to `targetInst` being `null` on `touchMove` or\r\n`touchEnd`. On certain platforms, this means that a native scroll has\r\nassumed control and the original touch targets are destroyed.\r\n```\r\n\r\nThis issue causes several major problems in React Native, and one of them (finally!) is easy to reproduce: https://github.com/facebook/react-native/issues/12976 .\r\n\r\nThe test also illustrates this problem.\r\n\r\n@spicyj, please review. 😄 ",
+  "closed_by": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3315",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3315/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3315/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3315/events",
+  "html_url": "https://github.com/facebook/react/issues/3315",
+  "id": 59900063,
+  "node_id": "MDU6SXNzdWU1OTkwMDA2Mw==",
+  "number": 3315,
+  "title": "Detect IE8 Compatibility Mode",
+  "user": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 52079258,
+      "node_id": "MDU6TGFiZWw1MjA3OTI1OA==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Difficulty:%20starter",
+      "name": "Difficulty: starter",
+      "color": "94ce52",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2015-03-05T03:31:22Z",
+  "updated_at": "2015-03-10T22:35:09Z",
+  "closed_at": "2015-03-10T22:35:09Z",
+  "author_association": "CONTRIBUTOR",
+  "body": "If we claim to support IE8, and users are testing their code **locally** in IE8, they might get thrown into compatibility mode by default.  This will cause their webapp to blow up, and they will be confused because IE8 is a supported browser.  For background, check out this thread: https://github.com/facebook/react/issues/3301\n\nUsers can get out of compatibility mode by adding this tag:\n`<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />` \n\nSince the current failure is cryptic, and it's easy to detect when IE8 is in compatibility mode (http://stackoverflow.com/questions/1208837/how-can-i-detect-if-ie8-is-running-in-compatibility-view), we should probably add a warning to give a hint to the user that even though they're using IE8, they're actually in compatibility mode (effectively IE7) and should add the meta tag or use one of the other various workarounds.\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

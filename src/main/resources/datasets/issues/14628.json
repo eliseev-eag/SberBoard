@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14628",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14628/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14628/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14628/events",
+  "html_url": "https://github.com/facebook/react/pull/14628",
+  "id": 400694332,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjQ1ODIxNDE5",
+  "number": 14628,
+  "title": "Add directory details to the package.json of all packages",
+  "user": {
+    "login": "greysteil",
+    "id": 1144873,
+    "node_id": "MDQ6VXNlcjExNDQ4NzM=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1144873?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/greysteil",
+    "html_url": "https://github.com/greysteil",
+    "followers_url": "https://api.github.com/users/greysteil/followers",
+    "following_url": "https://api.github.com/users/greysteil/following{/other_user}",
+    "gists_url": "https://api.github.com/users/greysteil/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/greysteil/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/greysteil/subscriptions",
+    "organizations_url": "https://api.github.com/users/greysteil/orgs",
+    "repos_url": "https://api.github.com/users/greysteil/repos",
+    "events_url": "https://api.github.com/users/greysteil/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/greysteil/received_events",
+    "type": "User",
+    "site_admin": true
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-01-18T11:55:38Z",
+  "updated_at": "2019-01-18T20:21:15Z",
+  "closed_at": "2019-01-18T20:21:13Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14628",
+    "html_url": "https://github.com/facebook/react/pull/14628",
+    "diff_url": "https://github.com/facebook/react/pull/14628.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14628.patch"
+  },
+  "body": "Specifying the directory as part of the `repository` field in a `package.json` allows third party tools to provide better support when working with monorepos. For example, it allows them to correctly construct a commit diff for a specific package.\r\n\r\nThis format was accepted by npm in https://github.com/npm/rfcs/pull/19.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9419",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9419/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9419/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9419/events",
+  "html_url": "https://github.com/facebook/react/pull/9419",
+  "id": 221566591,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTE1NzU5MDgy",
+  "number": 9419,
+  "title": "Fix the proptypes deprecation warning url on the \"Don't Call PropTypes Warning\" doc page",
+  "user": {
+    "login": "gabriellett",
+    "id": 3681373,
+    "node_id": "MDQ6VXNlcjM2ODEzNzM=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/3681373?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gabriellett",
+    "html_url": "https://github.com/gabriellett",
+    "followers_url": "https://api.github.com/users/gabriellett/followers",
+    "following_url": "https://api.github.com/users/gabriellett/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gabriellett/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gabriellett/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gabriellett/subscriptions",
+    "organizations_url": "https://api.github.com/users/gabriellett/orgs",
+    "repos_url": "https://api.github.com/users/gabriellett/repos",
+    "events_url": "https://api.github.com/users/gabriellett/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gabriellett/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-04-13T13:41:01Z",
+  "updated_at": "2017-04-13T19:56:49Z",
+  "closed_at": "2017-04-13T14:15:34Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9419",
+    "html_url": "https://github.com/facebook/react/pull/9419",
+    "diff_url": "https://github.com/facebook/react/pull/9419.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9419.patch"
+  },
+  "body": "The [Don't Call PropTypes Warning doc page](https://facebook.github.io/react/warnings/dont-call-proptypes.html ) has a warning about the 15.5 deprecation pointing to an old proptypes repository.\r\n\r\nThis PR updates the link to the same link on the main [PropTypes doc page](https://facebook.github.io/react/docs/typechecking-with-proptypes.html).",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

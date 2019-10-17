@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9080",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9080/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9080/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9080/events",
+  "html_url": "https://github.com/facebook/react/pull/9080",
+  "id": 210813620,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTA4MzQ5MTg1",
+  "number": 9080,
+  "title": "[Fiber] Remove stack dependencies from tests",
+  "user": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-02-28T15:09:03Z",
+  "updated_at": "2017-03-01T18:24:11Z",
+  "closed_at": "2017-03-01T18:24:11Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9080",
+    "html_url": "https://github.com/facebook/react/pull/9080",
+    "diff_url": "https://github.com/facebook/react/pull/9080.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9080.patch"
+  },
+  "body": "This PR addresses points outlined in #9069, specifically:\r\n\r\n- the Stack dependent test in `src/renderers/__tests__/ReactUpdates-test.js` has been removed\r\n- the Stack dependent test in `src/renderers/dom/shared/__tests__/ReactMount-test.js` has been removed\r\n- the Stack tests in `src/renderers/dom/shared/__tests__/ReactDOMComponent-test.js` have been refactored to use the public API rather than internal Stack modules\r\n- the test in `src/renderers/dom/shared/__tests__/ReactDOMIDOperations-test.js` has been refactored to use the public API and moved into `src/renderers/dom/shared/__tests__/ReactDOMComponent-test.js`",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

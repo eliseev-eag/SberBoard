@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11272",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11272/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11272/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11272/events",
+  "html_url": "https://github.com/facebook/react/pull/11272",
+  "id": 266647048,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ3NDE0Mjgx",
+  "number": 11272,
+  "title": "Render phase setState bugfix",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-10-18T21:24:50Z",
+  "updated_at": "2017-10-18T21:32:32Z",
+  "closed_at": "2017-10-18T21:32:32Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11272",
+    "html_url": "https://github.com/facebook/react/pull/11272",
+    "diff_url": "https://github.com/facebook/react/pull/11272.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11272.patch"
+  },
+  "body": "Fixes a bug surfaced by www unit test.\r\n\r\nI'm not yet sure the best way to test this; in the interest of landing this fix quickly, I'll save the test for a follow-up.",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9518",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9518/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9518/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9518/events",
+  "html_url": "https://github.com/facebook/react/pull/9518",
+  "id": 224051895,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTE3NDIzNTYy",
+  "number": 9518,
+  "title": "Prevent process polyfill to be included in builds because of process …",
+  "user": {
+    "login": "Andarist",
+    "id": 9800850,
+    "node_id": "MDQ6VXNlcjk4MDA4NTA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/9800850?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Andarist",
+    "html_url": "https://github.com/Andarist",
+    "followers_url": "https://api.github.com/users/Andarist/followers",
+    "following_url": "https://api.github.com/users/Andarist/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Andarist/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Andarist/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Andarist/subscriptions",
+    "organizations_url": "https://api.github.com/users/Andarist/orgs",
+    "repos_url": "https://api.github.com/users/Andarist/repos",
+    "events_url": "https://api.github.com/users/Andarist/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Andarist/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2017-04-25T07:53:51Z",
+  "updated_at": "2017-04-29T10:35:55Z",
+  "closed_at": "2017-04-26T12:47:35Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9518",
+    "html_url": "https://github.com/facebook/react/pull/9518",
+    "diff_url": "https://github.com/facebook/react/pull/9518.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9518.patch"
+  },
+  "body": "Related - https://github.com/reactjs/redux/issues/2244\r\n\r\nBy guarding `process` like this its polyfill is included by default when bundled with webpack. It should be highly desirable to avoid such side effect. \r\n\r\nI understand that this PR is not complete, but as your build setup is way more complex than what is used in most projects I would need some guidelines how this should be proceeded further. Maybe introducing `__TEST__` in similar manner how u introduce `__DEV__`?\r\n\r\nAlso this should land in `15.x` branch too and aint sure how this should be tackled here.\r\n\r\ncc @gaearon \r\n\r\nAlso maybe that could have been tackled on webpack's side as most of the people dont realise this is a problem and guarding against `process` seems like a right way to do things in the code. Dunno if we can safely predict what was the user intention though. cc @TheLarkInn @sokra",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

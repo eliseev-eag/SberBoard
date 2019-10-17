@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4660",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4660/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4660/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4660/events",
+  "html_url": "https://github.com/facebook/react/pull/4660",
+  "id": 101947410,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDI4Mzg5OTM=",
+  "number": 4660,
+  "title": "Clarify invocation order of componentDidMount",
+  "user": {
+    "login": "TylerBrock",
+    "id": 280807,
+    "node_id": "MDQ6VXNlcjI4MDgwNw==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/280807?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/TylerBrock",
+    "html_url": "https://github.com/TylerBrock",
+    "followers_url": "https://api.github.com/users/TylerBrock/followers",
+    "following_url": "https://api.github.com/users/TylerBrock/following{/other_user}",
+    "gists_url": "https://api.github.com/users/TylerBrock/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/TylerBrock/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/TylerBrock/subscriptions",
+    "organizations_url": "https://api.github.com/users/TylerBrock/orgs",
+    "repos_url": "https://api.github.com/users/TylerBrock/repos",
+    "events_url": "https://api.github.com/users/TylerBrock/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/TylerBrock/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2015-08-19T17:04:48Z",
+  "updated_at": "2015-08-19T23:36:12Z",
+  "closed_at": "2015-08-19T18:13:24Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4660",
+    "html_url": "https://github.com/facebook/react/pull/4660",
+    "diff_url": "https://github.com/facebook/react/pull/4660.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4660.patch"
+  },
+  "body": "OP is delivering on promise made here: https://discuss.reactjs.org/t/how-do-you-invoke-the-render-callback-in-jsx/1744\n",
+  "closed_by": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

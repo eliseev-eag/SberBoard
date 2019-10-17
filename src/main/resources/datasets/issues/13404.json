@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13404",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13404/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13404/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13404/events",
+  "html_url": "https://github.com/facebook/react/pull/13404",
+  "id": 350760970,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjA4NTI3MDY1",
+  "number": 13404,
+  "title": "Warn when an empty string is passed to a DOM boolean prop",
+  "user": {
+    "login": "motiz88",
+    "id": 2246565,
+    "node_id": "MDQ6VXNlcjIyNDY1NjU=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/2246565?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/motiz88",
+    "html_url": "https://github.com/motiz88",
+    "followers_url": "https://api.github.com/users/motiz88/followers",
+    "following_url": "https://api.github.com/users/motiz88/following{/other_user}",
+    "gists_url": "https://api.github.com/users/motiz88/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/motiz88/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/motiz88/subscriptions",
+    "organizations_url": "https://api.github.com/users/motiz88/orgs",
+    "repos_url": "https://api.github.com/users/motiz88/repos",
+    "events_url": "https://api.github.com/users/motiz88/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/motiz88/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-08-15T10:30:30Z",
+  "updated_at": "2019-05-24T11:46:26Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13404",
+    "html_url": "https://github.com/facebook/react/pull/13404",
+    "diff_url": "https://github.com/facebook/react/pull/13404.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13404.patch"
+  },
+  "body": "This is the more targeted of two possible approaches to resolve #13400, the other being @gaearon's [suggestion](https://github.com/facebook/react/issues/13400#issuecomment-413048688) of warning on _any_ string value passed to a boolean prop (also subsuming #13372).\r\n\r\nApart from my [other reservation](https://github.com/facebook/react/issues/13400#issuecomment-413056690) regarding a blanket warning on string values, the present approach has the advantage of being applicable to `BOOLEAN`, `BOOLEANISH_STRING` _and_ `OVERLOADED_BOOLEAN` props (see [`DOMProperty.js`](https://github.com/facebook/react/blob/master/packages/react-dom/src/shared/DOMProperty.js) for definitions). The latter do legitimately need to accept arbitrary string values alongside booleans; if we did go with a blanket warning, it would only make sense for the first two types, so we'd potentially still want a separate check for `\"\"` to accommodate `OVERLOADED_BOOLEAN`.\r\n\r\nThe one wrinkle here (that would also affect the other approach) is that I had to special-case `value` and exclude it from the warning, since it's somewhat oddly modelled as a `BOOLEANISH_STRING`, making legitimate uses of `value=\"\"` warn under my initial implementation. This raises a separate question, though: when is `value` ever legitimately a _boolean_? (`<param>`? That's a bit tenuous; `value` is certainly not [specced](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-param-value) as a boolean there.) However, we can't just remove it from the whitelist, as that would break current behaviour.",
+  "closed_by": null
+}

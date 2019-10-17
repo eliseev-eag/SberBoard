@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5828",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5828/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5828/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5828/events",
+  "html_url": "https://github.com/facebook/react/issues/5828",
+  "id": 126063776,
+  "node_id": "MDU6SXNzdWUxMjYwNjM3NzY=",
+  "number": 5828,
+  "title": "componentDidMount is called before render is completly done",
+  "user": {
+    "login": "allochi",
+    "id": 126279,
+    "node_id": "MDQ6VXNlcjEyNjI3OQ==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/126279?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/allochi",
+    "html_url": "https://github.com/allochi",
+    "followers_url": "https://api.github.com/users/allochi/followers",
+    "following_url": "https://api.github.com/users/allochi/following{/other_user}",
+    "gists_url": "https://api.github.com/users/allochi/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/allochi/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/allochi/subscriptions",
+    "organizations_url": "https://api.github.com/users/allochi/orgs",
+    "repos_url": "https://api.github.com/users/allochi/repos",
+    "events_url": "https://api.github.com/users/allochi/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/allochi/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 155984160,
+      "node_id": "MDU6TGFiZWwxNTU5ODQxNjA=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Status:%20Unconfirmed",
+      "name": "Status: Unconfirmed",
+      "color": "d4c5f9",
+      "default": false
+    },
+    {
+      "id": 40929155,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1NQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Question",
+      "name": "Type: Question",
+      "color": "cc317c",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2016-01-11T23:39:45Z",
+  "updated_at": "2019-04-17T15:21:19Z",
+  "closed_at": "2016-01-12T02:49:34Z",
+  "author_association": "NONE",
+  "body": "Hi,\n\nAs much as I understand React component lifecycle, `componentDidMount()` should fire after `render()` is done, but I just found out today that this is not the case, and I'm not sure if this is a bug or lack of understanding from my side.\n\nIf I call a function that return some `jsx` inside `render()`, it always run after `componentDidMount()`, so if I have this setup, `componentDidMount()` always finish before `_renderTable()` or `_renderMessage()`\n\n``` jsx\nexport default class Table extends React.Component {\ncomponentDidMount() {\n...\n}\n\nrender() {\n  const content = this.props.valid ? this._renderTable() : this._renderMessage()\n  return (\n    {content}\n  )\n}\n_renderTable() {...}\n_renderMessage() {...}\n}\n```\n\nAm I missing something? or is it some bug? Thanks!\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

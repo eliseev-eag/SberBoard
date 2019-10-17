@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9465",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9465/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9465/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9465/events",
+  "html_url": "https://github.com/facebook/react/pull/9465",
+  "id": 223080488,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTE2NzgwMzgz",
+  "number": 9465,
+  "title": "Add React benchmarking infrastructure",
+  "user": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 14,
+  "created_at": "2017-04-20T14:10:10Z",
+  "updated_at": "2017-05-09T16:39:03Z",
+  "closed_at": "2017-05-09T16:13:55Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9465",
+    "html_url": "https://github.com/facebook/react/pull/9465",
+    "diff_url": "https://github.com/facebook/react/pull/9465.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9465.patch"
+  },
+  "body": "This is currently a WIP and is not yet complete.\r\n\r\nThe aim of this PR is to give us better tracking of performance and bundle sizes as we make changes to the React codebase. \r\n\r\nTo do this, new infrastructure is needed to validate our code changes against pre-defined benchmarks. We can do this using Google's Lighthouse tool, performance markers in the benchmarks, an automated build process. For now the benchmarking script does a build and benchmark run comparing the `local` React repo and a `remote merge base` React repo.\r\n\r\nThe end goal is to have this process run on a CI pipeline which can provide us feedback in builds/PRs so we have constant feedback in regards to performance improvements and regressions.\r\n\r\nTo test how this works, run:\r\n\r\n`yarn bench`\r\n\r\nFrom the branch on this PR. It should take a few minutes to run and report back the performance metrics of `local` and `remote merge base`.\r\n\r\nThere are still things that need to be finished:\r\n\r\n- [x] Provide a better visual output of results when `yarn bench` is run\r\n- [x] Add bundle size comparison checks and remove the existing code for showing branches from the Rollup build process (it will become redundant with this feature)\r\n- [x] Add more benchmarks other than the `functional-components` benchmark\r\n- [x] Add bootstrapped sampled data over results to help show confidence in figures\r\n- [x] Add additional CLI options to better refine bench runs",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

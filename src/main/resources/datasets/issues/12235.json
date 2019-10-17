@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12235",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12235/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12235/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12235/events",
+  "html_url": "https://github.com/facebook/react/issues/12235",
+  "id": 297641027,
+  "node_id": "MDU6SXNzdWUyOTc2NDEwMjc=",
+  "number": 12235,
+  "title": "Extracting a Context Stack",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 739761016,
+      "node_id": "MDU6TGFiZWw3Mzk3NjEwMTY=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Reconciler",
+      "name": "Component: Reconciler",
+      "color": "f9a798",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2018-02-16T00:04:58Z",
+  "updated_at": "2018-08-08T23:41:17Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "body": "A useful feature of context is creating a custom stack of things to see what your component is embedded in side.\r\n\r\nI think the primary use case is logging explicitly.\r\n\r\nCurrently that is pretty expensive to maintain just *in case* you need it. See #12234 as an example.\r\n\r\nWe could provide an API that lazily extracts a whole path of contexts from the tree.\r\n\r\n```js\r\n<FooContext.Provider value={\"foo\"}>\r\n  <FooContext.Provider value={\"bar\"}>\r\n    <FooContext.Provider value={\"baz\"}>\r\n      <App />\r\n    </FooContext.Provider>\r\n  </FooContext.Provider>\r\n</FooContext.Provider>\r\n```\r\n\r\n```js\r\nclass App extends React.Component {\r\n  log() {\r\n    var stack = this.getContextStack(FooContext);\r\n    logToServer(stack); // [\"foo\", \"bar\", \"baz\"]\r\n  }\r\n  render() {\r\n    return <div onClick={this.log} />;\r\n  }\r\n}\r\n```\r\n\r\nIt would basically synchronously rerender the shortest path to recreate the context at the time of the call to create the stack lazily.\r\n\r\ncc @acdlite ",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10361",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10361/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10361/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10361/events",
+  "html_url": "https://github.com/facebook/react/pull/10361",
+  "id": 247516700,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTMzODA0NDc2",
+  "number": 10361,
+  "title": "Wrap contents of if-DEV condition in an IIFE",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-08-02T20:45:29Z",
+  "updated_at": "2017-08-02T21:24:46Z",
+  "closed_at": "2017-08-02T21:24:44Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10361",
+    "html_url": "https://github.com/facebook/react/pull/10361",
+    "diff_url": "https://github.com/facebook/react/pull/10361.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10361.patch"
+  },
+  "body": "This avoids strict mode conflicts for certain browsers wrt functions being defined within an if-block. Also re-added the if-DEV condition for the ReactNative renderer since it was removed for this reason.\r\n\r\nRelates to [this comment](https://github.com/facebook/react/issues/10294#issuecomment-319759692) on issue #10294.\r\n\r\ncc @hallaathrad\r\n\r\n# Bundle impact\r\n\r\n### build/dist\r\nNo impact\r\n\r\n### build/facebook-www/*-dev.js\r\n```diff\r\n17a18\r\n> (function() {\r\n1679a1681\r\n> })();\r\n```\r\n\r\n### build/packages/\\*/cjs/\\*-dev.js\r\n```diff\r\n17a18\r\n> (function() {\r\n1679a1681\r\n> })();\r\n```\r\n\r\n### build/react-native\r\n```js\r\n__DEV__ && function() { // New line\r\n  // Indented contents of previous bundle\r\n}(); // New line\r\n```",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

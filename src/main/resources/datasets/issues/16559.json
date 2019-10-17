@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16559",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16559/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16559/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16559/events",
+  "html_url": "https://github.com/facebook/react/pull/16559",
+  "id": 484599404,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzEwNDQzMzU2",
+  "number": 16559,
+  "title": "chore(ReactThreadIdAllocator): rephrase comment",
+  "user": {
+    "login": "jamesgeorge007",
+    "id": 25279263,
+    "node_id": "MDQ6VXNlcjI1Mjc5MjYz",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/25279263?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jamesgeorge007",
+    "html_url": "https://github.com/jamesgeorge007",
+    "followers_url": "https://api.github.com/users/jamesgeorge007/followers",
+    "following_url": "https://api.github.com/users/jamesgeorge007/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jamesgeorge007/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jamesgeorge007/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jamesgeorge007/subscriptions",
+    "organizations_url": "https://api.github.com/users/jamesgeorge007/orgs",
+    "repos_url": "https://api.github.com/users/jamesgeorge007/repos",
+    "events_url": "https://api.github.com/users/jamesgeorge007/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jamesgeorge007/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-08-23T15:52:14Z",
+  "updated_at": "2019-08-29T14:40:10Z",
+  "closed_at": "2019-08-29T13:51:08Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16559",
+    "html_url": "https://github.com/facebook/react/pull/16559",
+    "diff_url": "https://github.com/facebook/react/pull/16559.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16559.patch"
+  },
+  "body": "`tightly packed array` sounds much better :smile: \r\n\r\n> sidenote: Google search would suggest the respective phrase instead",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

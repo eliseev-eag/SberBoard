@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13200",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13200/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13200/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13200/events",
+  "html_url": "https://github.com/facebook/react/pull/13200",
+  "id": 340725366,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjAxMDY5MDQ5",
+  "number": 13200,
+  "title": "Suspending inside a constructor outside of strict mode",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-07-12T17:13:58Z",
+  "updated_at": "2018-07-13T18:24:04Z",
+  "closed_at": "2018-07-13T18:24:03Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13200",
+    "html_url": "https://github.com/facebook/react/pull/13200",
+    "diff_url": "https://github.com/facebook/react/pull/13200.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13200.patch"
+  },
+  "body": "Outside of strict mode, suspended components commit in an incomplete state, then are synchronously deleted in a subsequent commit. If a component suspends inside the constructor, it mounts without an instance.\r\n\r\nThis breaks at least one invariant: during deletion, we assume that every mounted component has an instance, and check the instance for the existence of `componentWillUnmount`.\r\n\r\nRather than add a redundant check to the deletion of every class component, components that suspend inside their constructor and outside of strict mode are turned into empty functional components before they are mounted. This is a bit weird, but it's an edge case, and the empty component will be synchronously unmounted regardless.",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

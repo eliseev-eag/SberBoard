@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15809",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15809/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15809/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15809/events",
+  "html_url": "https://github.com/facebook/react/pull/15809",
+  "id": 451684890,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjg0NzI2OTg1",
+  "number": 15809,
+  "title": "Updated release script to be Workflow aware",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-06-03T20:54:02Z",
+  "updated_at": "2019-06-04T00:29:11Z",
+  "closed_at": "2019-06-04T00:29:07Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15809",
+    "html_url": "https://github.com/facebook/react/pull/15809",
+    "diff_url": "https://github.com/facebook/react/pull/15809.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15809.patch"
+  },
+  "body": "Looks like the API is missing some workflow features for now (see [this thread](https://twitter.com/drazisil/status/1135647277647892480)).\r\n\r\nSo I've updated the build script as best I can to find the correct build number. If you specify the incorrect one, it prints instructions on how to get the right one using the UI:\r\n\r\n![Screen Shot 2019-06-03 at 1 50 54 PM](https://user-images.githubusercontent.com/29597/58833907-f03d8480-8606-11e9-8b01-22b646d3daeb.png)\r\n\r\nI was able to publish a new canary (0.0.0-[fa1e8df11](https://github.com/facebook/react/commit/fa1e8df11)) after making these changes.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14574",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14574/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14574/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14574/events",
+  "html_url": "https://github.com/facebook/react/issues/14574",
+  "id": 398455403,
+  "node_id": "MDU6SXNzdWUzOTg0NTU0MDM=",
+  "number": 14574,
+  "title": "React Devtools perf issue with 16.7.0",
+  "user": {
+    "login": "ValentinH",
+    "id": 2678610,
+    "node_id": "MDQ6VXNlcjI2Nzg2MTA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/2678610?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ValentinH",
+    "html_url": "https://github.com/ValentinH",
+    "followers_url": "https://api.github.com/users/ValentinH/followers",
+    "following_url": "https://api.github.com/users/ValentinH/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ValentinH/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ValentinH/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ValentinH/subscriptions",
+    "organizations_url": "https://api.github.com/users/ValentinH/orgs",
+    "repos_url": "https://api.github.com/users/ValentinH/repos",
+    "events_url": "https://api.github.com/users/ValentinH/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ValentinH/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 16,
+  "created_at": "2019-01-11T21:18:55Z",
+  "updated_at": "2019-02-09T17:56:54Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nBug\r\n\r\n**What is the current behavior?**\r\nWhen using a component that creates new Date objects inside an interval while having the Devtools extension open, the performance are really slow. \r\n\r\nWith React 16.4.1, I don't have the same issue so it might be related to the Profiler tab (even if it also happen when being on the Elements tab).\r\n\r\n**Reproduction:**\r\n16.7.0 version with performance issues: https://codesandbox.io/s/w6zrvx1y98\r\n16.4.1 version without perf issues: https://codesandbox.io/s/4x4jmx8zx4\r\n\r\nOpen the devtools on the standalone page (https://w6zrvx1y98.codesandbox.io)  while watching the Chrome task manager and you will see the memory go up quickly and the CPU be higher than 100%.\r\n\r\nYou might want to adjust the `ARRAY_SIZE` and `INTERVAL` constants based on your computer performance.\r\n\r\n**What is the expected behavior?**\r\nThe page should not slow down that much. In my app, I display a list of 30 lines where each of them contains this component and the refresh rate is one second (the time change there). There was no issue at all with React 16.4.1 (I actually didn't know that this component existed 😄).\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n16.7.0 is affected while 16.4.1. I also had the same issue with 16.6.0 and I thought it was related to #14365 but it is actually a different one.\r\n\r\n[EDIT]: it's not a Chrome issue because I could reproduce the same issue on Firefox.\r\n\r\nBy the way, I'd be happy to make a PR for this if this makes sense. 🙂 ",
+  "closed_by": null
+}

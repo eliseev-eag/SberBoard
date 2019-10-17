@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6935",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6935/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6935/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6935/events",
+  "html_url": "https://github.com/facebook/react/pull/6935",
+  "id": 157856180,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzIxNDQ1NjM=",
+  "number": 6935,
+  "title": "Fix #6153: Warning for PropTypes with the wrong case.",
+  "user": {
+    "login": "wali-s",
+    "id": 4505767,
+    "node_id": "MDQ6VXNlcjQ1MDU3Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/4505767?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/wali-s",
+    "html_url": "https://github.com/wali-s",
+    "followers_url": "https://api.github.com/users/wali-s/followers",
+    "following_url": "https://api.github.com/users/wali-s/following{/other_user}",
+    "gists_url": "https://api.github.com/users/wali-s/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/wali-s/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/wali-s/subscriptions",
+    "organizations_url": "https://api.github.com/users/wali-s/orgs",
+    "repos_url": "https://api.github.com/users/wali-s/repos",
+    "events_url": "https://api.github.com/users/wali-s/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/wali-s/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2016-06-01T08:59:40Z",
+  "updated_at": "2016-06-26T22:06:49Z",
+  "closed_at": "2016-06-26T22:06:49Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6935",
+    "html_url": "https://github.com/facebook/react/pull/6935",
+    "diff_url": "https://github.com/facebook/react/pull/6935.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6935.patch"
+  },
+  "body": "Re-based code from #6255\n\nThe warning outputting twice issue in that PR has since been fixed in react itself.\n\nThe cache that he added has been removed as it would hit a lot of false positives (multiple components using the same proptypes).\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12240",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12240/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12240/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12240/events",
+  "html_url": "https://github.com/facebook/react/pull/12240",
+  "id": 298019277,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTY5NzkxNDk2",
+  "number": 12240,
+  "title": "Fix/12200 regresssion select multiple",
+  "user": {
+    "login": "GarethSmall",
+    "id": 32682373,
+    "node_id": "MDQ6VXNlcjMyNjgyMzcz",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/32682373?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/GarethSmall",
+    "html_url": "https://github.com/GarethSmall",
+    "followers_url": "https://api.github.com/users/GarethSmall/followers",
+    "following_url": "https://api.github.com/users/GarethSmall/following{/other_user}",
+    "gists_url": "https://api.github.com/users/GarethSmall/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/GarethSmall/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/GarethSmall/subscriptions",
+    "organizations_url": "https://api.github.com/users/GarethSmall/orgs",
+    "repos_url": "https://api.github.com/users/GarethSmall/repos",
+    "events_url": "https://api.github.com/users/GarethSmall/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/GarethSmall/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2018-02-17T17:01:49Z",
+  "updated_at": "2018-08-03T17:11:33Z",
+  "closed_at": "2018-02-17T18:19:25Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12240",
+    "html_url": "https://github.com/facebook/react/pull/12240",
+    "diff_url": "https://github.com/facebook/react/pull/12240.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12240.patch"
+  },
+  "body": "## Problem\r\n\r\nWhen creating a select element and setting multiple the first element would be selected. This was due to the multiple prop being set after the children we're appended.\r\n\r\nAn non-react example  case created by @aweary can been seen here - https://jsfiddle.net/dm6vkq9q/\r\n\r\n## Solution\r\n\r\nHave a special case where if the element type were of select set the properties before the children are appended.\r\n\r\n## Issue\r\nhttps://github.com/facebook/react/issues/12200",
+  "closed_by": {
+    "login": "GarethSmall",
+    "id": 32682373,
+    "node_id": "MDQ6VXNlcjMyNjgyMzcz",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/32682373?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/GarethSmall",
+    "html_url": "https://github.com/GarethSmall",
+    "followers_url": "https://api.github.com/users/GarethSmall/followers",
+    "following_url": "https://api.github.com/users/GarethSmall/following{/other_user}",
+    "gists_url": "https://api.github.com/users/GarethSmall/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/GarethSmall/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/GarethSmall/subscriptions",
+    "organizations_url": "https://api.github.com/users/GarethSmall/orgs",
+    "repos_url": "https://api.github.com/users/GarethSmall/repos",
+    "events_url": "https://api.github.com/users/GarethSmall/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/GarethSmall/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

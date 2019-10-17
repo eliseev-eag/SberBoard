@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15324",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15324/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15324/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15324/events",
+  "html_url": "https://github.com/facebook/react/pull/15324",
+  "id": 429431614,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjY3NTcwNzEx",
+  "number": 15324,
+  "title": "[React Native] measure calls will now call FabricUIManager",
+  "user": {
+    "login": "TheSavior",
+    "id": 249164,
+    "node_id": "MDQ6VXNlcjI0OTE2NA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/249164?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/TheSavior",
+    "html_url": "https://github.com/TheSavior",
+    "followers_url": "https://api.github.com/users/TheSavior/followers",
+    "following_url": "https://api.github.com/users/TheSavior/following{/other_user}",
+    "gists_url": "https://api.github.com/users/TheSavior/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/TheSavior/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/TheSavior/subscriptions",
+    "organizations_url": "https://api.github.com/users/TheSavior/orgs",
+    "repos_url": "https://api.github.com/users/TheSavior/repos",
+    "events_url": "https://api.github.com/users/TheSavior/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/TheSavior/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-04-04T18:53:43Z",
+  "updated_at": "2019-04-09T22:10:18Z",
+  "closed_at": "2019-04-09T22:10:15Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15324",
+    "html_url": "https://github.com/facebook/react/pull/15324",
+    "diff_url": "https://github.com/facebook/react/pull/15324.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15324.patch"
+  },
+  "body": "This PR is based on https://github.com/facebook/react/pull/15323, split for review.\r\n\r\nThe Fabric renderer was previously calling the paper UIManager's measure calls and passing the react tag. This PR changes the renderer to now call FabricUIManager passing the node instead.\r\n\r\nIn #15126 Seb and I were thinking that we shouldn't support components created with NativeMethodsMixin and ReactNative.NativeComponent to be able to take a ref in measureLayout.\r\n\r\nWhile that is still ideal, we can't reasonably make that change because the signatures of FabricHostComponent, FiberHostComponent, NativeMethodsMixin, and ReactNativeNativeComponent all have identical type signatures as enforced in each file with this:\r\n\r\n```\r\n(ReactFabricHostComponent.prototype: NativeMethodsMixinType);\r\n```\r\n\r\nIdeally we'd type host components differently than the other methods so that we can use flow to enforce that an argument is a ref to a host component and not one of the others. Unfortunately, we are pretty far from being able to do that today because all the core components in React Native are typed like this:\r\n\r\n```\r\n(requireNativeComponent('AndroidSwitch'): Class<ReactNative.NativeComponent<Props>>)\r\n```\r\n\r\nWe will need to fix this and update all the ref types throughout the codebase to be more strict in order to properly type the argument to measureLayout as a ref to a host component. This is a much bigger project and out of scope of this PR. We should make that change at some point.\r\n\r\nIn order to keep all the types consistent in this PR measureLayout is taking a reactTag or object and the checks are done at runtime.\r\n\r\n---------------\r\n\r\nThe additions to the FabricUIManager types are consistent with D14732142.",
+  "closed_by": {
+    "login": "TheSavior",
+    "id": 249164,
+    "node_id": "MDQ6VXNlcjI0OTE2NA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/249164?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/TheSavior",
+    "html_url": "https://github.com/TheSavior",
+    "followers_url": "https://api.github.com/users/TheSavior/followers",
+    "following_url": "https://api.github.com/users/TheSavior/following{/other_user}",
+    "gists_url": "https://api.github.com/users/TheSavior/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/TheSavior/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/TheSavior/subscriptions",
+    "organizations_url": "https://api.github.com/users/TheSavior/orgs",
+    "repos_url": "https://api.github.com/users/TheSavior/repos",
+    "events_url": "https://api.github.com/users/TheSavior/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/TheSavior/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16591",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16591/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16591/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16591/events",
+  "html_url": "https://github.com/facebook/react/pull/16591",
+  "id": 486105676,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzExNjI2ODYx",
+  "number": 16591,
+  "title": "[Partial Hydration] Don't invoke listeners on parent of dehydrated event target",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2019-08-28T00:57:03Z",
+  "updated_at": "2019-09-05T16:00:29Z",
+  "closed_at": "2019-09-05T15:51:32Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16591",
+    "html_url": "https://github.com/facebook/react/pull/16591",
+    "diff_url": "https://github.com/facebook/react/pull/16591.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16591.patch"
+  },
+  "body": "If an event gets invoked on a child of a suspense boundary we haven't hydrated yet, that's an opportunity where we might want to consider replaying it instead. In the existing semantics there exist no replaying, instead things are ignored (see #16532). So this PR makes sure we don't dispatch these events to React's event system. They may still have been invoked on non-React nodes.\r\n\r\nHowever the tricky part is that we don't readily know if a node is a non-React DOM node or if it's just a node we haven't gotten to yet. We can't just mark the node as dehydrated since the server streaming can update the content of dehydrated boundaries as they go and that would lose the markers.\r\n\r\nHowever, typically there will at least be some React DOM node that is a parent of the Suspense boundary so that will normally become the target today. We also need to deal with the same case when there is a Suspense boundary at the root and while the root most level is concurrently hydrating.\r\n\r\nIn the case where there is a parent React DOM node, we don't know if the target node was a non-React DOM node that someone manually inserted or if it is a child of a dehydrated boundary.\r\n\r\nThe common case is that if it's a DOM node that someone messes with, it won't have any children so we can use that as a quick bailout to assume it's not a React node.\r\n\r\nIf it does have children, I backtrack on the previous siblings to see if we're nested inside a Suspense boundary (i.e. if we're inside two comment nodes). This could potentially be expensive if there are many previous siblings but most of the time there's only one direct DOM node inside a Suspense boundary, and it's unusual that it wouldn't be a Suspense boundary in this case. The worst case is that this is happening on a non-React node and that the React parent happens to have a child that renders null or something in it, and also that this has many children in it.",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

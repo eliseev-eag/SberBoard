@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15526",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15526/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15526/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15526/events",
+  "html_url": "https://github.com/facebook/react/pull/15526",
+  "id": 438309662,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjc0MzY4MDY4",
+  "number": 15526,
+  "title": "Event API: use `capture` for all event listeners using experimental responder system",
+  "user": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 1296748300,
+      "node_id": "MDU6TGFiZWwxMjk2NzQ4MzAw",
+      "url": "https://api.github.com/repos/facebook/react/labels/React%20Flare",
+      "name": "React Flare",
+      "color": "63f2ff",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-04-29T13:14:59Z",
+  "updated_at": "2019-04-30T10:40:50Z",
+  "closed_at": "2019-04-30T10:40:46Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15526",
+    "html_url": "https://github.com/facebook/react/pull/15526",
+    "diff_url": "https://github.com/facebook/react/pull/15526.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15526.patch"
+  },
+  "body": "This PR makes all experimental event API listeners use the `capture` phase of event listening. Given that the experimental event API is fully virtualized, we can dispatch `capture` and `bubble` events using the event system, rather than using the DOM propagation system. Not only does this give us much greater control over what gets dispatched and how it gets dispatched, it also allows us to traverse through portals and other abstract concepts. Furthermore, by being in the capture phase, we are sure to get the event before other event listeners – meaning they are unlikely to `stopImmediatePropgation` on React. Note: event components are not affected by this change – they can still dispatch capture and bubble events back to the user.\r\n\r\nThis remove a whole lot of code. I'll add follow up tests in the comings days, unless @necolas has bandwidth to do that earlier.",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

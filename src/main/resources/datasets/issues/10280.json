@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10280",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10280/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10280/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10280/events",
+  "html_url": "https://github.com/facebook/react/pull/10280",
+  "id": 245696663,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTMyNDk2MjM0",
+  "number": 10280,
+  "title": "Remove object-assign polyfill",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 15,
+  "created_at": "2017-07-26T11:53:30Z",
+  "updated_at": "2017-08-01T23:54:35Z",
+  "closed_at": "2017-08-01T23:54:35Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10280",
+    "html_url": "https://github.com/facebook/react/pull/10280",
+    "diff_url": "https://github.com/facebook/react/pull/10280.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10280.patch"
+  },
+  "body": "Since we already depend on `Map` and `Set` I figured we might as well ask users to polyfill `Object.assign` if they need to.\r\n\r\nIn browsers, it's still not supported everywhere (e.g. IE 11 doesn’t but Edge does). There is a precedent: Relay Modern, Preact, Inferno don’t ship with it. Many Redux apps use `Object.assign` so users resort to polyfilling it anyway.\r\n\r\nIn Node, there was an issue with bad `Object.assign` implementation in some Node version that caused different attribute order. But Fiber is resilient to that so it wouldn’t be a problem anyway.\r\n\r\n<img width=\"1551\" alt=\"screen shot 2017-07-26 at 12 53 07 pm\" src=\"https://user-images.githubusercontent.com/810438/28619670-698f13ba-7201-11e7-9878-65f83e04751f.png\">\r\n\r\nTest plan: packaging fixtures work. For internal FB bundles, we didn’t use it in the first place (because we had our own polyfill).\r\n\r\n<img width=\"1381\" alt=\"screen shot 2017-07-26 at 12 54 49 pm\" src=\"https://user-images.githubusercontent.com/810438/28619715-a4a1da1e-7201-11e7-903f-bcf6a96fe519.png\">\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

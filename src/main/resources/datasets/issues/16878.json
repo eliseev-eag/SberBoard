@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16878",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16878/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16878/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16878/events",
+  "html_url": "https://github.com/facebook/react/pull/16878",
+  "id": 497903514,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzIwOTQ2MDMy",
+  "number": 16878,
+  "title": "Update useEditableValue hook to sync external value changes",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-09-24T20:19:40Z",
+  "updated_at": "2019-09-30T16:29:50Z",
+  "closed_at": "2019-09-25T17:46:28Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16878",
+    "html_url": "https://github.com/facebook/react/pull/16878",
+    "diff_url": "https://github.com/facebook/react/pull/16878.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16878.patch"
+  },
+  "body": "This PR changes the `useEditableValue` to more intelligently reset the local/editable state value when external value changes.\r\n\r\nPreviously, the hook initialized local state (in `useState`) to mirror the prop/state value. Updates to the value were ignored though. (Once the state was initialized, it was never updated.) The new hook updates the local/editable state to mirror the external value *unless* there are already pending, local edits being made.\r\n\r\nNote that this particular change very closely resembles [one of the derived state anti-patterns](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html#anti-pattern-erasing-state-when-props-change) outlined in a previous blog post. I think it might still be an acceptable approach for this specific scenario though.\r\n\r\n### Here is a demo of the (broken) behavior before:\r\n![useEditableValue broken before behavior](https://user-images.githubusercontent.com/29597/65546741-f49aef80-decc-11e9-9d21-550c715daf51.gif)\r\n\r\n### And here is the behavior after this change:\r\n![useEditableValue fixed after behavior](https://user-images.githubusercontent.com/29597/65546673-d503c700-decc-11e9-9bbe-258a97c59f53.gif)\r\n\r\n### Edge case\r\nBecause of the way the new hook works, there is a potentially odd edge case, but I think it's acceptable given the way the \"reset\" button works:\r\n![useEditableValue remaining weird edge case](https://user-images.githubusercontent.com/29597/65546490-7a6a6b00-decc-11e9-8def-83560e5ef566.gif)\r\n\r\nPosting this PR for discussion purposes. Let's talk!\r\n\r\nResolves #16843\r\n\r\ncc @hristo-kanchev\r\n\r\n---\r\n\r\nThis was also broken for other use cases before. The example above was just one of the most awkward cases, but here is another:\r\n\r\n### Before\r\n![useEditableValue before bug](https://user-images.githubusercontent.com/29597/65550502-8fe39300-ded4-11e9-8da3-213a87985f43.gif)\r\n\r\n### After\r\n![useEditableValue after](https://user-images.githubusercontent.com/29597/65550513-9540dd80-ded4-11e9-84c8-389a6fa83c70.gif)",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

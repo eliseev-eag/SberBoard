@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13176",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13176/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13176/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13176/events",
+  "html_url": "https://github.com/facebook/react/pull/13176",
+  "id": 339265284,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTk5OTY1MjM4",
+  "number": 13176,
+  "title": "Remove event simulation of onChange events in tests",
+  "user": {
+    "login": "philipp-spiess",
+    "id": 458591,
+    "node_id": "MDQ6VXNlcjQ1ODU5MQ==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/458591?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/philipp-spiess",
+    "html_url": "https://github.com/philipp-spiess",
+    "followers_url": "https://api.github.com/users/philipp-spiess/followers",
+    "following_url": "https://api.github.com/users/philipp-spiess/following{/other_user}",
+    "gists_url": "https://api.github.com/users/philipp-spiess/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/philipp-spiess/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/philipp-spiess/subscriptions",
+    "organizations_url": "https://api.github.com/users/philipp-spiess/orgs",
+    "repos_url": "https://api.github.com/users/philipp-spiess/repos",
+    "events_url": "https://api.github.com/users/philipp-spiess/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/philipp-spiess/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2018-07-08T22:52:19Z",
+  "updated_at": "2018-07-12T12:03:38Z",
+  "closed_at": "2018-07-12T11:11:35Z",
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13176",
+    "html_url": "https://github.com/facebook/react/pull/13176",
+    "diff_url": "https://github.com/facebook/react/pull/13176.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13176.patch"
+  },
+  "body": "It’s time to get rid of even more `ReactTestUtils.Simulate`s. In this PR we remove the event simulation from all onChange tests. To do this, we have to get a setter to the untracked value/checked props.\r\n\r\nAll remaining `ReactTestUtils.Simulate` calls are either testing ReactTestUtils or assert that they do/don't throw.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

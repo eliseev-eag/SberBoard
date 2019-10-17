@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7412",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7412/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7412/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7412/events",
+  "html_url": "https://github.com/facebook/react/issues/7412",
+  "id": 169116087,
+  "node_id": "MDU6SXNzdWUxNjkxMTYwODc=",
+  "number": 7412,
+  "title": "shouldComponentUpdate doesn't work well if component accepts children",
+  "user": {
+    "login": "dantman",
+    "id": 53399,
+    "node_id": "MDQ6VXNlcjUzMzk5",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/53399?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dantman",
+    "html_url": "https://github.com/dantman",
+    "followers_url": "https://api.github.com/users/dantman/followers",
+    "following_url": "https://api.github.com/users/dantman/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dantman/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dantman/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dantman/subscriptions",
+    "organizations_url": "https://api.github.com/users/dantman/orgs",
+    "repos_url": "https://api.github.com/users/dantman/repos",
+    "events_url": "https://api.github.com/users/dantman/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dantman/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 739777675,
+      "node_id": "MDU6TGFiZWw3Mzk3Nzc2NzU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Component%20API",
+      "name": "Component: Component API",
+      "color": "d4c5f9",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2016-08-03T12:08:31Z",
+  "updated_at": "2018-09-25T16:18:49Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "React's shouldComponentUpdate based performance improvements work great for improving the performance of medium-weight components with large numbers of instances. They even work well with event handlers, as you can ignore event handler changes and instead pass a locally bound method that'll access `this.props.on*` on demand. However this all fails apart you start passing react elements to pure components.\n\n``` js\n'use strict';\nimport React, {Component, PropTypes} from 'react';\nimport ReactDOM from 'react-dom';\nimport shallowEqual from 'recompose/shallowEqual';\n// shallowEqualExcluding: Fictional function that works like shallowEqual, but ignores changes to a list of props passed as the third argument\n\nclass Button extends Component {\n    static propTypes = {\n        icon: PropTypes.node.isRequired,\n        onClick: PropTypes.func\n    };\n\n    onClick = (e) => {\n        this.props.onClick(e);\n    };\n\n    shouldComponentUpdate(nextProps) {\n        // @note Doesn't actually work\n        return shallowEqualExcluding(this.props, nextProps, ['onClick']);\n    }\n\n    render() {\n        const {icon} = this.props;\n\n        return (\n            <button onClick={this.onClick}>\n                {icon}\n                {/*React.cloneElement(icon, {ref: (icon) => this.iconRef = icon})*/}\n            </button>\n        );\n    }\n}\n\nclass Icon extends Component {\n    static propTypes = {\n        name: PropTypes.string.isRequired,\n        color: PropTypes.string\n    };\n\n    shouldComponentUpdate(nextProps) {\n        return shallowEqual(this.props, nextProps);\n    }\n\n    render() {\n        const {name, color} = this.props;\n        return getSvgIcon(name, color);\n    }\n}\n\nconst nilClick = () => {};\nReactDOM.render(<Button onClick={() => alert('Clicked!')} icon={<Icon name='done'} />, document.querySelector('#container'));\nReactDOM.render(<Button onClick={nilClick} icon={<Icon name='done'} />, document.querySelector('#container')); // 2nd invovation\nReactDOM.render(<Button onClick={nilClick} icon={<Icon name='cancel'} />, document.querySelector('#container')); // 3rd invovation\n```\n\nGiven this sample; A `<Button />` component that expects an icon to be passed as an `icon` prop and a simple `<Icon />`. Both are pure components and Button is also coded to not re-render when`onClick` is changed. Pretend that Button actually has a heavy `render()` but its props and state don't change frequently.\n\nOn the second invocation, Icon should not require any prop change or render and Button should have its `onClick` prop changed but not require a render.\nOn the third invocation, Icon should require a render while Button itself does not need to render except for the change to Icon.\n\nHowever in practice Button will always re-render, including during the second invocation when nothing changes.\n\nThis is because `<Icon />` will always result in a new instance and will never be the same.\n\nNormally you could work around this within the component itself, without telling users they have to store `<Icon />` in a variable until they think they need to change its props; for functions you could pass a function that will use `this.props.*` itself and for objects you can do a deep comparison if you know the structure of the object. But for react elements, even though `shouldComponentUpdate` allows React to know if the current component has a render dependency on a sub-component, you do not have access to this information so Button cannot tell if Icon requires a render.\n\nIn practice this can turn out to be a problem when you're writing some libraries rather than an application. Notably [Material UI](http://www.material-ui.com/) suffers from this problem in production. `EnhancedSwitch`'s `render()` is not light; `EnhancedSwitch` is used by `RadioButton` and `Checkbox`; both use a `checkedIcon` and `uncheckedIcon` React element prop; you can reasonably have 100 checkboxes on one page; even if they were pure, they cannot identify whether an icon requires an update; as a result, a render of the component containing the checkboxes to check a single checkbox will result in the `render()` of all 100 `EnhancedSwitch` instances.\n\nI can think of a few ideas on what type of API could be added to React to solve this issue.\n## shouldComponentUpdate helper\n\nThe most obvious API would be a top-level React function that given the instance context, old ReactElement, and new ReactElement would return the result of a Component's `shouldComponentUpdate`. Then heavy parent components can use that to implement a `shouldComponentUpdate` that is aware of render dependencies in its children.\n(As a bonus, theoretically you could temporarily remember this while you're walking the current tree; then instead of calling `shouldComponentUpdate` multiple times for every (potentially nested) component the result is simply that `shouldComponentUpdate` calls are raised up to the highest level where a component is render-dependent on them)\n\n`React.shouldComponentUpdate(this, this.props.icon, nextProps.icon)`\n\nHowever I expect the problem we have with this is that `shouldComponentUpdate` is also responsible for state dependent updates and `this` is supposed to be a rendered instance, not a ReactElement instance. While you know `context` from passing the current instance, you do not have a reference to the state from either of the props.\n## ref based shouldComponentUpdate helper\n\nThe second most obvious API would be a `shouldComponentUpdate` helper that instead uses a ref.\n\n`React.shouldComponentUpdate(this.iconRef, nextProps.icon)`\n\nThe downside to this is that to get a ref for a component you didn't create, you inevitably have to use `React.cloneElement`.\n## render passthrough\n\nThe next idea I had was a render passthrough. A way during the render process for a component to say \"I do not need a render()/update, but these children of mine may\" which would tell React to skip render() and then run `shouldComponentUpdate` on the instances deeper in the tree.\n\nHowever those components only know if they need updates if you pass them the new props; so a passthrough won't work. We'd instead need a way to tell react that it should not run `render()` but do pass on an update to a specific component instance\n\n`this.renderRef(this.iconRef, nextProps.icon);`\n\nThe advantage of this over using `shouldComponentUpdate` is that instead of only allowing medium components wrapping light components to only `render()` when a child requires it; we also allow heavy components to never `render()` unless they themselves require it, while still allowing them to permit their light children to update.\n# partial renders\n\nThat `shouldComponentUpdate` based `renderRef` only applying updates to a component child feels somewhat awkward and forced though. So a more robust idea might be a partial render lifecycle that optionally runs when `shouldComponentUpdate => false` and can call for the render of a sub-tree that belongs to the current component.\n\n``` js\nclass HeavyComponent extends Component {\n    shouldComponentUpdate(nextProps) {\n        // Ignore icon and children\n        return nextProps.text !== this.props.text;\n    }\n\n    render() {\n        const {text, icon, children} = this.props;\n\n        text = doSomethingAbsurdlyCpuIntensiveAndHardToFactorOutOfThisComponent(text);\n\n        return (\n            <div>\n                <h2>\n                    {React.cloneElement(icon, {ref: (icon) => this.iconRef = icon})}\n                    {text}\n                </h2>\n                <Wrapper ref='subtree'>\n                    {children}\n                </Wrapper>\n        );\n    }\n\n    componentSkippedRender(nextProps/*, nextState*/) {\n        this.subRender(this.iconRef, React.cloneElement(icon, {ref: (icon) => this.iconRef = icon}));\n\n        this.subRender(\n            this.refs.subtree,\n            <Wrapper ref='subtree'>\n                {children}\n            </Wrapper>\n        );\n    }\n}\n```\n\nThough `this.subRender` probably has potential for conflicts, so I expect the most react-line way to name that would be something like `React.renderSubtreeIntoComponent(parentComponent, nextElement, component)` which would be invoked using `React.renderSubtreeIntoComponent(this, /* subtree */, this.refs.subtree);`.\n\nThe `<Wrapper>` I used would be a really light component that probably would just render its children. It's there because `React.renderSubtreeIntoComponent` should probably not accept dom refs; this should be part of React lifecycle/walker, not part of client side browser only react-dom like `ReactDOM.unstable_renderSubtreeIntoContainer`.\n",
+  "closed_by": null
+}

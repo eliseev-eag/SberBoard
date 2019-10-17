@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2092",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2092/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2092/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2092/events",
+  "html_url": "https://github.com/facebook/react/pull/2092",
+  "id": 41194765,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjAzMjIwOTQ=",
+  "number": 2092,
+  "title": "Added PropType validator for componentClass to ensure the prop satisfies React.isValidClass",
+  "user": {
+    "login": "mtscout6",
+    "id": 736870,
+    "node_id": "MDQ6VXNlcjczNjg3MA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/736870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mtscout6",
+    "html_url": "https://github.com/mtscout6",
+    "followers_url": "https://api.github.com/users/mtscout6/followers",
+    "following_url": "https://api.github.com/users/mtscout6/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mtscout6/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mtscout6/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mtscout6/subscriptions",
+    "organizations_url": "https://api.github.com/users/mtscout6/orgs",
+    "repos_url": "https://api.github.com/users/mtscout6/repos",
+    "events_url": "https://api.github.com/users/mtscout6/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mtscout6/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2014-08-26T16:55:17Z",
+  "updated_at": "2015-07-29T02:06:15Z",
+  "closed_at": "2015-07-28T21:58:01Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/2092",
+    "html_url": "https://github.com/facebook/react/pull/2092",
+    "diff_url": "https://github.com/facebook/react/pull/2092.diff",
+    "patch_url": "https://github.com/facebook/react/pull/2092.patch"
+  },
+  "body": "[react-bootstrap](https://github.com/react-bootstrap/react-bootstrap) is currently using a [custom](https://github.com/react-bootstrap/react-bootstrap/blob/master/src/utils/CustomPropTypes.js) prop validator that ensures the prop satisfies `React.isValidClass`. I am finding that I will need the same functionality in another project without a dependency on react-bootstrap. This would be a nice validator to have in core. I'm open to renaming it to whatever sounds better to you, just let me know.\n\n@pieterv\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

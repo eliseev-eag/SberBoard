@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4857",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4857/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4857/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4857/events",
+  "html_url": "https://github.com/facebook/react/pull/4857",
+  "id": 106170643,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDQ4NTYyOTc=",
+  "number": 4857,
+  "title": "Improve warning when rendering objects (see #4840)",
+  "user": {
+    "login": "glenjamin",
+    "id": 151272,
+    "node_id": "MDQ6VXNlcjE1MTI3Mg==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/151272?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/glenjamin",
+    "html_url": "https://github.com/glenjamin",
+    "followers_url": "https://api.github.com/users/glenjamin/followers",
+    "following_url": "https://api.github.com/users/glenjamin/following{/other_user}",
+    "gists_url": "https://api.github.com/users/glenjamin/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/glenjamin/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/glenjamin/subscriptions",
+    "organizations_url": "https://api.github.com/users/glenjamin/orgs",
+    "repos_url": "https://api.github.com/users/glenjamin/repos",
+    "events_url": "https://api.github.com/users/glenjamin/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/glenjamin/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2015-09-12T16:32:08Z",
+  "updated_at": "2015-09-24T23:59:35Z",
+  "closed_at": "2015-09-23T19:44:53Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4857",
+    "html_url": "https://github.com/facebook/react/pull/4857",
+    "diff_url": "https://github.com/facebook/react/pull/4857.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4857.patch"
+  },
+  "body": "I'm wondering whether it might be better to just use `JSON.stringify` on the object causing the warning?\n",
+  "closed_by": {
+    "login": "glenjamin",
+    "id": 151272,
+    "node_id": "MDQ6VXNlcjE1MTI3Mg==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/151272?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/glenjamin",
+    "html_url": "https://github.com/glenjamin",
+    "followers_url": "https://api.github.com/users/glenjamin/followers",
+    "following_url": "https://api.github.com/users/glenjamin/following{/other_user}",
+    "gists_url": "https://api.github.com/users/glenjamin/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/glenjamin/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/glenjamin/subscriptions",
+    "organizations_url": "https://api.github.com/users/glenjamin/orgs",
+    "repos_url": "https://api.github.com/users/glenjamin/repos",
+    "events_url": "https://api.github.com/users/glenjamin/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/glenjamin/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

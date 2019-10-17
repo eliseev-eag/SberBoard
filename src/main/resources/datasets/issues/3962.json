@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3962",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3962/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3962/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3962/events",
+  "html_url": "https://github.com/facebook/react/pull/3962",
+  "id": 81098362,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzYyMzU5Mzc=",
+  "number": 3962,
+  "title": "Remove class name manipulation docs entirely",
+  "user": {
+    "login": "arasmussen",
+    "id": 969540,
+    "node_id": "MDQ6VXNlcjk2OTU0MA==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/969540?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/arasmussen",
+    "html_url": "https://github.com/arasmussen",
+    "followers_url": "https://api.github.com/users/arasmussen/followers",
+    "following_url": "https://api.github.com/users/arasmussen/following{/other_user}",
+    "gists_url": "https://api.github.com/users/arasmussen/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/arasmussen/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/arasmussen/subscriptions",
+    "organizations_url": "https://api.github.com/users/arasmussen/orgs",
+    "repos_url": "https://api.github.com/users/arasmussen/repos",
+    "events_url": "https://api.github.com/users/arasmussen/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/arasmussen/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2015-05-26T19:19:01Z",
+  "updated_at": "2015-10-06T22:07:38Z",
+  "closed_at": "2015-10-06T22:07:38Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3962",
+    "html_url": "https://github.com/facebook/react/pull/3962",
+    "diff_url": "https://github.com/facebook/react/pull/3962.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3962.patch"
+  },
+  "body": "Looks like they were already removed from the sidebar previously.\n\nTechnically now we're skipping 10.3 in the addons section (going straight from 10.2 to 10.4) but it doesn't look like these numbers show up on the site anywhere and next/prev still works fine. Let me know if I should update these.\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

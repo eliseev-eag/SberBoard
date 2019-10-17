@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15446",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15446/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15446/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15446/events",
+  "html_url": "https://github.com/facebook/react/issues/15446",
+  "id": 434847956,
+  "node_id": "MDU6SXNzdWU0MzQ4NDc5NTY=",
+  "number": 15446,
+  "title": "Events before Client Side Hydration",
+  "user": {
+    "login": "aralroca",
+    "id": 13313058,
+    "node_id": "MDQ6VXNlcjEzMzEzMDU4",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/13313058?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aralroca",
+    "html_url": "https://github.com/aralroca",
+    "followers_url": "https://api.github.com/users/aralroca/followers",
+    "following_url": "https://api.github.com/users/aralroca/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aralroca/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aralroca/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aralroca/subscriptions",
+    "organizations_url": "https://api.github.com/users/aralroca/orgs",
+    "repos_url": "https://api.github.com/users/aralroca/repos",
+    "events_url": "https://api.github.com/users/aralroca/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aralroca/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2019-04-18T16:09:41Z",
+  "updated_at": "2019-10-08T10:46:07Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "Recently I detected a problem using React in SSR. Maybe is quite obvious, but all the JavaScript events that are fired before the JavaScript is loaded, are lost...\r\n\r\nThis is something normal. The JS is not there yet... Ok. However, I expect to have some utility to do some exceptions.\r\n\r\nI'm going to try to explain my case:\r\n\r\nI'm using an image, and in the event `onError`, I want to change the src to render a fallback image.\r\n\r\n```jsx\r\nfunction Img(props) {\r\n  return (\r\n    <img {...props} onError={e => { e.target.src = fallbackSrc } } />\r\n  )\r\n}\r\n```\r\n\r\nNevertheless, this code loaded from SSR, is working \"sometimes\"... I guess that this \"sometimes\" is because if the event is fired before the client side hydration. Is not catched by my JS. And the `e => e.target.src = fallbackSrc` is never executed. However, if the JS is loaded faster than the onError event, is catched, and is rendering the fallback image as I expected.\r\n\r\nI want to propose some utility to do sometimes some exceptions, and render the JS inline on the first render. Perhaps, adding some extra config in `ReactDOM.hydrate`? I dunno... \r\n\r\nOr maybe someone can help me providing any tip in order to fix this?\r\n\r\n",
+  "closed_by": null
+}

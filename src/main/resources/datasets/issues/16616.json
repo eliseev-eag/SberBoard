@@ -1,0 +1,91 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16616",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16616/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16616/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16616/events",
+  "html_url": "https://github.com/facebook/react/issues/16616",
+  "id": 487321053,
+  "node_id": "MDU6SXNzdWU0ODczMjEwNTM=",
+  "number": 16616,
+  "title": "Error: \"Cannot modify filter preferences while profiling\"",
+  "user": {
+    "login": "Sargis0101",
+    "id": 35394296,
+    "node_id": "MDQ6VXNlcjM1Mzk0Mjk2",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/35394296?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Sargis0101",
+    "html_url": "https://github.com/Sargis0101",
+    "followers_url": "https://api.github.com/users/Sargis0101/followers",
+    "following_url": "https://api.github.com/users/Sargis0101/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Sargis0101/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Sargis0101/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Sargis0101/subscriptions",
+    "organizations_url": "https://api.github.com/users/Sargis0101/orgs",
+    "repos_url": "https://api.github.com/users/Sargis0101/repos",
+    "events_url": "https://api.github.com/users/Sargis0101/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Sargis0101/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 620368407,
+      "node_id": "MDU6TGFiZWw2MjAzNjg0MDc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Needs%20More%20Information",
+      "name": "Resolution: Needs More Information",
+      "color": "fffde7",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-08-30T06:58:11Z",
+  "updated_at": "2019-08-30T15:23:31Z",
+  "closed_at": "2019-08-30T15:23:31Z",
+  "author_association": "NONE",
+  "body": "Describe what you were doing when the bug occurred:\r\n1. \r\n2. \r\n3. \r\n\r\n---------------------------------------------\r\nPlease do not remove the text below this line\r\n---------------------------------------------\r\n\r\nDevTools version: 4.0.6-a39d9c3\r\n\r\nCall stack: at n.set (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:1:34098)\r\n    at chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:56:261228\r\n    at Fi (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:43:72851)\r\n    at Vi (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:43:74577)\r\n    at chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:43:93355\r\n    at n.unstable_runWithPriority (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:56:4368)\r\n    at kt (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:43:25093)\r\n    at Wl (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:43:91165)\r\n    at jl (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:43:79859)\r\n    at M (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:56:2839)\r\n\r\nComponent stack: in Ma\r\n    in div\r\n    in div\r\n    in div\r\n    in Ga\r\n    in Xa\r\n    in div\r\n    in lo\r\n    in ir\r\n    in Ir\r\n    in Unknown\r\n    in n\r\n    in Unknown\r\n    in div\r\n    in div\r\n    in Wa\r\n    in ce\r\n    in be\r\n    in So\r\n    in Vl",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

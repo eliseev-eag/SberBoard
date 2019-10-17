@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13428",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13428/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13428/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13428/events",
+  "html_url": "https://github.com/facebook/react/pull/13428",
+  "id": 351739036,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjA5MjU4MDU4",
+  "number": 13428,
+  "title": "Do not toLowerCase lists of lowercase words",
+  "user": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2018-08-17T21:08:13Z",
+  "updated_at": "2018-08-18T02:52:31Z",
+  "closed_at": "2018-08-18T02:52:31Z",
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13428",
+    "html_url": "https://github.com/facebook/react/pull/13428",
+    "diff_url": "https://github.com/facebook/react/pull/13428.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13428.patch"
+  },
+  "body": "Probably not what I should be looking into right now, but it was bugging me.",
+  "closed_by": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

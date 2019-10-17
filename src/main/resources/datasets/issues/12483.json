@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12483",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12483/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12483/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12483/events",
+  "html_url": "https://github.com/facebook/react/pull/12483",
+  "id": 309840445,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTc4MzkzMDk2",
+  "number": 12483,
+  "title": "Add ReactIs.isValidElementType()",
+  "user": {
+    "login": "jamesreggio",
+    "id": 822205,
+    "node_id": "MDQ6VXNlcjgyMjIwNQ==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/822205?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jamesreggio",
+    "html_url": "https://github.com/jamesreggio",
+    "followers_url": "https://api.github.com/users/jamesreggio/followers",
+    "following_url": "https://api.github.com/users/jamesreggio/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jamesreggio/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jamesreggio/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jamesreggio/subscriptions",
+    "organizations_url": "https://api.github.com/users/jamesreggio/orgs",
+    "repos_url": "https://api.github.com/users/jamesreggio/repos",
+    "events_url": "https://api.github.com/users/jamesreggio/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jamesreggio/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-03-29T17:31:22Z",
+  "updated_at": "2018-03-29T19:36:27Z",
+  "closed_at": "2018-03-29T18:45:42Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12483",
+    "html_url": "https://github.com/facebook/react/pull/12483",
+    "diff_url": "https://github.com/facebook/react/pull/12483.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12483.patch"
+  },
+  "body": "Per the conversation on #12453, there are a number of third-party libraries (particularly those that generate higher-order components) that are performing suboptimal validation of element types.\r\n\r\nThis commit exposes a function that can perform the desired check without depending upon React internals.\r\n\r\nIn #12453, we discussed exposing this check within the new `react-is` package, but as I dug in, I lost confidence that that was indeed the right course of action.\r\n\r\nToday, element type validation occurs within `ReactElementValidator`. `ReactElementValidator` has a dependency upon `ReactElement`, but lacks a dependency upon `react-is`. (In fact, the nothing within the core `react` package takes a dependency upon `react-is`.)\r\n\r\nIt felt wrong to duplicate the [existing type validation code](https://github.com/facebook/react/pull/12483/files#diff-e1ed11a9f728e656700a09c5e5b8421aL291) in a separate package, and it also felt wrong to factor it into `react-is` and introduce a new dependency from `react` to `react-is`. As such, I placed the type validation logic alongside `React.isValidElement` within `ReactElement`.\r\n\r\nI realize that expanding the surface area of React's top-level API is a dicey prospect, but I wanted to explain my reasoning and propose it in code. If you think an alternative implementation would be more ideal, please just let me know and I'll revise.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

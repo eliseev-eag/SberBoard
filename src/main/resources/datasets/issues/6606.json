@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6606",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6606/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6606/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6606/events",
+  "html_url": "https://github.com/facebook/react/pull/6606",
+  "id": 150728216,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Njc2NTkxNTU=",
+  "number": 6606,
+  "title": "Upgrade to Jekyll 3",
+  "user": {
+    "login": "Daniel15",
+    "id": 91933,
+    "node_id": "MDQ6VXNlcjkxOTMz",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/91933?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Daniel15",
+    "html_url": "https://github.com/Daniel15",
+    "followers_url": "https://api.github.com/users/Daniel15/followers",
+    "following_url": "https://api.github.com/users/Daniel15/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Daniel15/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Daniel15/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Daniel15/subscriptions",
+    "organizations_url": "https://api.github.com/users/Daniel15/orgs",
+    "repos_url": "https://api.github.com/users/Daniel15/repos",
+    "events_url": "https://api.github.com/users/Daniel15/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Daniel15/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2016-04-25T02:20:17Z",
+  "updated_at": "2016-07-19T22:53:54Z",
+  "closed_at": "2016-07-19T22:16:25Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6606",
+    "html_url": "https://github.com/facebook/react/pull/6606",
+    "diff_url": "https://github.com/facebook/react/pull/6606.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6606.patch"
+  },
+  "body": "Full list of changes is at https://jekyllrb.com/docs/upgrading/2-to-3/. The tl;dr of it is:\n- Relative permalinks are no longer supported, so all the files in the `docs` and `tips` subdirectories need their permalink to be prefixed with `docs/` and `tips/` respectively\n- `post` and `page` types were renamed to `posts` and `pages` respectively\n- `jekyll-paginate`, `pygments` and `redcarpet` are all now optional, so I needed to explicitly add it to the Gemfile. By default, Jekyll now uses `rouge` rather than `pygments` for syntax highlighting, but rouge does not support highlighting individual lines (`hl_lines`) so we need to continue using Pygments.\n- Layout metadata (eg. `sectionid`) is now on a `layout` variable rather than `page`\n\nTested the following pages and confirmed that they all work:\n- \"Docs\" link (getting started page): http://127.0.0.1:4000/react/docs/getting-started.html\n- Downloads: http://127.0.0.1:4000/react/downloads.html\n- Tutorial: http://127.0.0.1:4000/react/docs/tutorial.html\n- A few pages under the \"docs\" subdirectory, to confirm they're working properly:\n  - http://127.0.0.1:4000/react/docs/addons.html\n  - http://127.0.0.1:4000/react/docs/why-react.html\n  - http://127.0.0.1:4000/react/docs/create-fragment.html\n- A few tips:\n  - http://127.0.0.1:4000/react/tips/false-in-jsx.html\n  - http://127.0.0.1:4000/react/tips/style-props-value-px.html\n- Non-English versions of the page:\n  - http://127.0.0.1:4000/react/docs/getting-started-it-IT.html\n  - http://127.0.0.1:4000/react/docs/getting-started-ja-JP.html\n\nPlease let me know if you'd like me to add anything else to the test plan. I can push the site onto my test server if you like. :)\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

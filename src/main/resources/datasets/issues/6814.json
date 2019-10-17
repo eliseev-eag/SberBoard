@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6814",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6814/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6814/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6814/events",
+  "html_url": "https://github.com/facebook/react/pull/6814",
+  "id": 155896292,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzA4MDczOTA=",
+  "number": 6814,
+  "title": "Update 03-interactivity-and-dynamic-uis.zh-CN.md",
+  "user": {
+    "login": "Ivanwangcy",
+    "id": 6278969,
+    "node_id": "MDQ6VXNlcjYyNzg5Njk=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6278969?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Ivanwangcy",
+    "html_url": "https://github.com/Ivanwangcy",
+    "followers_url": "https://api.github.com/users/Ivanwangcy/followers",
+    "following_url": "https://api.github.com/users/Ivanwangcy/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Ivanwangcy/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Ivanwangcy/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Ivanwangcy/subscriptions",
+    "organizations_url": "https://api.github.com/users/Ivanwangcy/orgs",
+    "repos_url": "https://api.github.com/users/Ivanwangcy/repos",
+    "events_url": "https://api.github.com/users/Ivanwangcy/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Ivanwangcy/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-05-20T06:32:38Z",
+  "updated_at": "2016-05-31T19:16:51Z",
+  "closed_at": "2016-05-20T07:26:54Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6814",
+    "html_url": "https://github.com/facebook/react/pull/6814",
+    "diff_url": "https://github.com/facebook/react/pull/6814.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6814.patch"
+  },
+  "body": "Correct words.\n",
+  "closed_by": {
+    "login": "keyz",
+    "id": 2268452,
+    "node_id": "MDQ6VXNlcjIyNjg0NTI=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2268452?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/keyz",
+    "html_url": "https://github.com/keyz",
+    "followers_url": "https://api.github.com/users/keyz/followers",
+    "following_url": "https://api.github.com/users/keyz/following{/other_user}",
+    "gists_url": "https://api.github.com/users/keyz/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/keyz/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/keyz/subscriptions",
+    "organizations_url": "https://api.github.com/users/keyz/orgs",
+    "repos_url": "https://api.github.com/users/keyz/repos",
+    "events_url": "https://api.github.com/users/keyz/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/keyz/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

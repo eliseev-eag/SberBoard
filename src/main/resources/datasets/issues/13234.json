@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13234",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13234/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13234/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13234/events",
+  "html_url": "https://github.com/facebook/react/pull/13234",
+  "id": 342514422,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjAyMzk3OTgx",
+  "number": 13234,
+  "title": "interaction-tracking package",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 13,
+  "created_at": "2018-07-18T22:30:04Z",
+  "updated_at": "2018-08-17T16:16:12Z",
+  "closed_at": "2018-08-17T16:16:06Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13234",
+    "html_url": "https://github.com/facebook/react/pull/13234",
+    "diff_url": "https://github.com/facebook/react/pull/13234.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13234.patch"
+  },
+  "body": "# Backstory\r\n\r\nWe've recently introduced an [experimental profiler API](https://github.com/reactjs/rfcs/pull/51) along with a prototype [DevTools integration](https://www.youtube.com/watch?v=-Ud_265QAwM). After discussing this API with a few teams at Facebook, one common piece of feedback is that the timing information is useful, but would be _more useful_ if it could be associated with \"events\" (e.g. button click, XHR response).\r\n\r\nEvent tracking would enable more powerful tooling to be built around the timing information, capable of answering questions like \"_What caused this really slow commit?_\" or \"_What's the wall time for this interaction?_\". It would also enable the DevTools Profiler plug-in to show a more meaningful, event-based timeline view.\r\n\r\nThis PR introduces a new API for tracking interactions. PR #13253 integrates this package with React and the experimental profiler API.\r\n\r\n# High level goals\r\n\r\n* User-facing API should be simple. (It should be easy to record an event.)\r\n* It should be possible to instrument (e.g. listen to all DOM Events on a page and track them) in a lightweight way.\r\n* Event information should be accessible to the [DevTools profiler plug-in](https://github.com/bvaughn/react-devtools/tree/profiler-poc).\r\n* Tagged events should have **minimal impact** on the performance of profiling bundles and **no impact** on the production bundle.\r\n* External code should be able to subscribe to interactions in order to be notified when one \"begins\" (is first tracked) and \"ends\" (has no more pending async work).\r\n* It should be possible to attribute time spent working on interactions to specific workers (referred to as \"threads\" in the code). More on this below...\r\n\r\n# Tracking interactions\r\n\r\nThe tracking API is conceptually similar to [zones](https://github.com/domenic/zones). `track` is called to register a new event, and work is done in a callback. React automatically associates the work done in the callback with the current event(s) and passes them to the profiler's `onRender` callback when the work is eventually committed.\r\n\r\nFor example, you might track an event for (re)rendering your application:\r\n```js\r\nimport { render } from 'react-dom';\r\nimport { track } from \"interaction-tracking\";\r\n\r\ntrack('rendering application', () => {\r\n  // Both this render,\r\n  // And any cascading update caused by cDM/cDU lifecycles,\r\n  // Will be associated with the \"rendering application\" event.\r\n  render(<MyApp />, container);\r\n});\r\n```\r\n\r\nOr you might track a user interaction that triggers a state-update:\r\n```js\r\nimport React, { Component } from \"react\";\r\nimport { track } from \"interaction-tracking\";\r\n\r\nclass LoginForm extends Component {\r\n  render() {\r\n    // ...\r\n  }\r\n\r\n  handleLoginButtonClick = event => {\r\n    track(\"login button clicked\", () => {\r\n      // Both the update caused by this initial setState,\r\n      // And any cascading update caused by the login callback,\r\n      // Will be associated with the \"login button clicked\" event.\r\n      this.setState(\r\n        {\r\n          isLoggingIn: true\r\n        },\r\n        () => this.props.logInUser(this.state.user, this.state.password)\r\n      );\r\n    });\r\n  };\r\n}\r\n```\r\n\r\nIf your application tree has a profiler component (`React.unstable_Profiler`) then the tracked information will be passed to its [`onRender` callback](https://github.com/bvaughn/rfcs/blob/profiler/text/0000-profiler.md#detailed-design) as an additional array param. That information might look something like this:\r\n\r\n```js\r\n[{id: 123, name: 'login button clicked', timestamp: 1234}]\r\n```\r\n\r\n# Basic API\r\n\r\n#### `clear(callback: Function) => any`\r\nResets the interaction stack temporarily, allowing new work to be tracked without appending to previous interactions. The callback function will be executed and its return value will be returned to the caller.\r\n\r\n#### `getCurrent() => Set<Interaction>`\r\nReturns the current set of interactions.\r\n\r\n#### `track(name: string, callback: Function, threadID: number = 0) => any`\r\nTracks a new interaction (by appending to the existing set of interactions). The callback function will be executed and its return value will be returned to the caller. Any code run within that callback will be within that interaction \"zone\". Calls to `wrap()` will schedule async work within the same zone.\r\n\r\nA `threadID` can be passed to specify who is performing the current work. This value defaults to 0 which can be thought of as the global \"thread\".\r\n\r\n#### `wrap(callback: Function, threadID: number = 0) => Function`\r\nWrap a function for later execution within the current interaction \"zone\". When this function is later run, interactions that were active when it was \"wrapped\" will be reactivated.\r\n\r\nThe wrapped function returned also defines a `cancel()` property which can be used to notify any tracked interactions that the async work has been cancelled.\r\n\r\nA `threadID` can be passed to specify who is performing the current work. This value defaults to 0 which can be thought of as the global \"thread\".\r\n\r\n# Advanced API\r\n\r\nBy default, the interaction-tracking package only manages interaction \"zones\". In order to build more complex logic on top of this package, it also supports an subscrible API. Subscribers can be added or removed using `subscribe()` and `unsubscribe()` methods. A subscriber should implement the following API:\r\n\r\n#### `onInteractionTracked(interaction: Interaction) => void`\r\nA new interaction has been created via the track() method.\r\n\r\n#### `onInteractionScheduledWorkCompleted(interaction: Interaction) => void`\r\nAll scheduled async work for an interaction has finished.\r\n\r\n#### `onWorkScheduled(interactions: Set<Interaction>, threadID: number) => void`\r\nNew async work has been scheduled for a set of interactions. When this work is later run, onWorkStarted/onWorkStopped will be called.\r\n\r\nA batch of async/yieldy work may be scheduled multiple times before completing. In that case, onWorkScheduled may be called more than once before onWorkStopped.\r\n\r\nWork is scheduled by a \"thread\" which is identified by a unique ID.\r\n\r\n#### `onWorkStarted(interactions: Set<Interaction>, threadID: number) => void`\r\nA batch of work has started for a set of interactions. When this work is complete, onWorkStopped will be called. Work is not always completed synchronously; yielding may occur in between.\r\n\r\nA batch of async/yieldy work may also be re-started before completing. In that case, onWorkStarted may be called more than once before onWorkStopped.\r\n\r\nWork is done by a \"thread\" which is identified by a unique ID.\r\n\r\n#### `onWorkCancelled(interactions: Set<Interaction>, threadID: number) => void`\r\nA batch of scheduled work has been cancelled.\r\n\r\nWork is done by a \"thread\" which is identified by a unique ID.\r\n\r\n#### `onWorkStopped(interactions: Set<Interaction>, threadID: number) => void`\r\nA batch of work has completed for a set of interactions.\r\n\r\nWork is done by a \"thread\" which is identified by a unique ID.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

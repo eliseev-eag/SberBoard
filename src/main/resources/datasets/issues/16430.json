@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16430",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16430/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16430/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16430/events",
+  "html_url": "https://github.com/facebook/react/issues/16430",
+  "id": 481763401,
+  "node_id": "MDU6SXNzdWU0ODE3NjM0MDE=",
+  "number": 16430,
+  "title": "New Devtools Cannot Expand Obervables",
+  "user": {
+    "login": "robskidmore",
+    "id": 3083189,
+    "node_id": "MDQ6VXNlcjMwODMxODk=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/3083189?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/robskidmore",
+    "html_url": "https://github.com/robskidmore",
+    "followers_url": "https://api.github.com/users/robskidmore/followers",
+    "following_url": "https://api.github.com/users/robskidmore/following{/other_user}",
+    "gists_url": "https://api.github.com/users/robskidmore/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/robskidmore/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/robskidmore/subscriptions",
+    "organizations_url": "https://api.github.com/users/robskidmore/orgs",
+    "repos_url": "https://api.github.com/users/robskidmore/repos",
+    "events_url": "https://api.github.com/users/robskidmore/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/robskidmore/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-08-16T19:59:04Z",
+  "updated_at": "2019-08-17T18:54:17Z",
+  "closed_at": "2019-08-16T20:17:07Z",
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nBug\r\n\r\n**What is the current behavior?**\r\nDevtools used to be able to expand observables created by Mobx. With the new update that is no longer possible.\r\n![image](https://user-images.githubusercontent.com/3083189/63194767-18495b00-c02e-11e9-95d2-1c83edbf2f26.png)\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\nhttps://codesandbox.io/embed/clever-blackwell-h0nzb\r\n\r\nCheck the props of the wrappedComponent in devtools. store.things does not expand.\r\n\r\n**What is the expected behavior?**\r\nDevtools should expand Observables as it does any other object.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nThis only seems to be an issue with Observables created by Mob v4. v5 works as expected.\r\n",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

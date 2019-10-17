@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4153",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4153/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4153/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4153/events",
+  "html_url": "https://github.com/facebook/react/issues/4153",
+  "id": 88921752,
+  "node_id": "MDU6SXNzdWU4ODkyMTc1Mg==",
+  "number": 4153,
+  "title": "Support Stateful Test Renderer",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 270986513,
+      "node_id": "MDU6TGFiZWwyNzA5ODY1MTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Big%20Picture",
+      "name": "Type: Big Picture",
+      "color": "61dafb",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2015-06-17T06:03:11Z",
+  "updated_at": "2015-10-09T18:13:39Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "body": "The plan is to move unnecessary state out of the production renderer. Therefore there will be no public API to introspect the current state of the tree. I.e. no `_renderedChildren`, props inspection etc.\n\nThe React DevTools will maintain its own shadow tree for introspection / reflection purposes.\n\nHowever, this also means that if you use `React.render` to run deeply rendered unit tests, you will no longer be able to use various reflective APIs to inspect the state of the current React tree. Such as `ReactTestUtils.findAllInRenderedTree`, the legacy `reactComponentExpect` utils etc.\n\nOur recommended unit testing solution is shallow testing.\n\nHowever, it would be possible to create a new renderer that keeps track of the whole React tree, including props, and therefore reenables stateful unit testing. That might be a helpful upgrade path. E.g. something like `ReactTestUtils.render` which would have a forked version of the primary renderer.\n\nSee #4151\n\ncc @spicyj , @dataminr\n",
+  "closed_by": null
+}

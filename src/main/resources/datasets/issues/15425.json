@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15425",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15425/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15425/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15425/events",
+  "html_url": "https://github.com/facebook/react/pull/15425",
+  "id": 433845762,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjcwOTYyMjY1",
+  "number": 15425,
+  "title": "Fix: fixed cursor jumping for multiple email input",
+  "user": {
+    "login": "Nizarius",
+    "id": 20745917,
+    "node_id": "MDQ6VXNlcjIwNzQ1OTE3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/20745917?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Nizarius",
+    "html_url": "https://github.com/Nizarius",
+    "followers_url": "https://api.github.com/users/Nizarius/followers",
+    "following_url": "https://api.github.com/users/Nizarius/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Nizarius/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Nizarius/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Nizarius/subscriptions",
+    "organizations_url": "https://api.github.com/users/Nizarius/orgs",
+    "repos_url": "https://api.github.com/users/Nizarius/repos",
+    "events_url": "https://api.github.com/users/Nizarius/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Nizarius/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-04-16T15:29:44Z",
+  "updated_at": "2019-07-26T15:35:41Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15425",
+    "html_url": "https://github.com/facebook/react/pull/15425",
+    "diff_url": "https://github.com/facebook/react/pull/15425.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15425.patch"
+  },
+  "body": "Fixed: #15418\r\n\r\nI should mention that it is not the perfect solution because the bug itself is created by specific browsers (chrome, safari, opera):\r\n\r\nIf input's type is \"email\" and it contains comma and whitespace, the browsers give the wrong input's value: `a, b` =>  `a,b`, although the specification shows that multiple email input can contain whitespace between comma and the next email: https://html.spec.whatwg.org/multipage/input.html#the-multiple-attribute. And even if we try to set the right value programmatically  it won't.\r\n\r\nSo when React tries to set defaultValue on input while user's typing, it breaks browser's understanding of where caret should be. \r\n\r\nConsidering React already contains the similar handling for number input, I suggest to make it for multiple email inputs too. Of course, on input blur input all spaces after commas will be removed, but at least it doesn't interrupt user's typing and provides much better UX experience. \r\n\r\nP.S. Is it such necessary to set defaultValue for input on blur? Maybe we can turn it off for this case until browsers don't fix this bug? ",
+  "closed_by": null
+}

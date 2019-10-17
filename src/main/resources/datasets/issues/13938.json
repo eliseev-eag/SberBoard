@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13938",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13938/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13938/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13938/events",
+  "html_url": "https://github.com/facebook/react/issues/13938",
+  "id": 373306184,
+  "node_id": "MDU6SXNzdWUzNzMzMDYxODQ=",
+  "number": 13938,
+  "title": "Error line number in Error Boundary",
+  "user": {
+    "login": "dehghani-mehdi",
+    "id": 9152330,
+    "node_id": "MDQ6VXNlcjkxNTIzMzA=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/9152330?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dehghani-mehdi",
+    "html_url": "https://github.com/dehghani-mehdi",
+    "followers_url": "https://api.github.com/users/dehghani-mehdi/followers",
+    "following_url": "https://api.github.com/users/dehghani-mehdi/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dehghani-mehdi/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dehghani-mehdi/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dehghani-mehdi/subscriptions",
+    "organizations_url": "https://api.github.com/users/dehghani-mehdi/orgs",
+    "repos_url": "https://api.github.com/users/dehghani-mehdi/repos",
+    "events_url": "https://api.github.com/users/dehghani-mehdi/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dehghani-mehdi/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 620368407,
+      "node_id": "MDU6TGFiZWw2MjAzNjg0MDc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Needs%20More%20Information",
+      "name": "Resolution: Needs More Information",
+      "color": "fffde7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2018-10-24T05:03:58Z",
+  "updated_at": "2019-06-20T14:47:56Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "Hey,\r\n\r\nAs I can not reopen issue #13790, I opened this.\r\n\r\nIf you don't like to fix/add my request, simply say `won't fox`, but don't close the issue with simple/not related answer, as @aweary did. React is pro library, you are pro, so act like pros.\r\n\r\nThanks.",
+  "closed_by": null
+}

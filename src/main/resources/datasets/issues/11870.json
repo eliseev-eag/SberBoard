@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11870",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11870/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11870/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11870/events",
+  "html_url": "https://github.com/facebook/react/pull/11870",
+  "id": 282652811,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTU4NzYxNTk5",
+  "number": 11870,
+  "title": "Work around IE/Edge bug when rendering inputs in separate windows via portals",
+  "user": {
+    "login": "M-ZubairAhmed",
+    "id": 17708702,
+    "node_id": "MDQ6VXNlcjE3NzA4NzAy",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/17708702?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/M-ZubairAhmed",
+    "html_url": "https://github.com/M-ZubairAhmed",
+    "followers_url": "https://api.github.com/users/M-ZubairAhmed/followers",
+    "following_url": "https://api.github.com/users/M-ZubairAhmed/following{/other_user}",
+    "gists_url": "https://api.github.com/users/M-ZubairAhmed/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/M-ZubairAhmed/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/M-ZubairAhmed/subscriptions",
+    "organizations_url": "https://api.github.com/users/M-ZubairAhmed/orgs",
+    "repos_url": "https://api.github.com/users/M-ZubairAhmed/repos",
+    "events_url": "https://api.github.com/users/M-ZubairAhmed/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/M-ZubairAhmed/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2017-12-16T21:45:38Z",
+  "updated_at": "2018-04-02T15:05:53Z",
+  "closed_at": "2018-01-05T18:32:44Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11870",
+    "html_url": "https://github.com/facebook/react/pull/11870",
+    "diff_url": "https://github.com/facebook/react/pull/11870.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11870.patch"
+  },
+  "body": "**Contributing checklist**\r\n- [X] Fork [the repository](https://github.com/facebook/react) and create your branch from `master`.\r\n- [X] Run `yarn` in the repository root.\r\n- [ ] If you've fixed a bug or added code that should be tested, add tests!\r\n- [X] Ensure the test suite passes (`yarn test`). Tip: `yarn test --watch TestName` is helpful in development.\r\n- [X] Run `yarn test-prod` to test in the production environment. It supports the same options as `yarn test`.\r\n- [X] If you need a debugger, run `yarn debug-test --watch TestName`, open `chrome://inspect`, and press \"Inspect\".\r\n- [X] Format your code with [prettier](https://github.com/prettier/prettier) (`yarn prettier`).\r\n- [X] Make sure your code lints (`yarn lint`). Tip: `yarn linc` to only check changed files.\r\n- [X] Run the [Flow](https://flowtype.org/) typechecks (`yarn flow`).\r\n- [X] If you haven't already, complete the CLA.\r\n\r\n### Problem : \r\n- Issue https://github.com/facebook/react/issues/11768\r\n- Input element in a portal was throwing error only when tested on\r\n  - IE 11\r\n  - Edge 15\r\n  - Edge 14\r\n- Sample jsfiddle https://github.com/kgorgi/react-popout-bug\r\n\r\n### Solution:\r\n- Moved `enumerable` descriptor to another `defineProperty` of same `node` object.\r\n- there are no side effects to this as \r\n> The Object.defineProperty() method defines a new property directly on an object, or modifies an existing property on an object, and returns the object. \r\n- This seems to solve the problem for the browsers mentioned above.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

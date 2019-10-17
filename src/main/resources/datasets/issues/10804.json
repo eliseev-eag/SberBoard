@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10804",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10804/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10804/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10804/events",
+  "html_url": "https://github.com/facebook/react/pull/10804",
+  "id": 260115104,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQyNzcwNDcz",
+  "number": 10804,
+  "title": "Change license and remove references to PATENTS",
+  "user": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-09-24T20:51:29Z",
+  "updated_at": "2017-09-26T07:54:23Z",
+  "closed_at": "2017-09-26T01:18:27Z",
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10804",
+    "html_url": "https://github.com/facebook/react/pull/10804",
+    "diff_url": "https://github.com/facebook/react/pull/10804.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10804.patch"
+  },
+  "body": "Only remaining references:\n\n```\ndocs/_posts/2014-10-28-react-v0.12.md\n51:You can read the full text of the [LICENSE](https://github.com/facebook/react/blob/master/LICENSE) and [`PATENTS`](https://github.com/facebook/react/blob/master/PATENTS) files on GitHub.\n\ndocs/_posts/2015-04-17-react-native-v0.4.md\n20:* **Patent Grant**: Many of you had concerns and questions around the PATENTS file. We pushed [a new version of the grant](https://code.facebook.com/posts/1639473982937255/updating-our-open-source-patent-grant/).\n\nsrc/__mocks__/vendor/third_party/WebComponents.js\n8: * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt\n```",
+  "closed_by": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

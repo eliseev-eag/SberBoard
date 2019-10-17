@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7054",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7054/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7054/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7054/events",
+  "html_url": "https://github.com/facebook/react/pull/7054",
+  "id": 160716909,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzQxMjA3NDE=",
+  "number": 7054,
+  "title": "Select element update",
+  "user": {
+    "login": "git-richard",
+    "id": 894686,
+    "node_id": "MDQ6VXNlcjg5NDY4Ng==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/894686?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/git-richard",
+    "html_url": "https://github.com/git-richard",
+    "followers_url": "https://api.github.com/users/git-richard/followers",
+    "following_url": "https://api.github.com/users/git-richard/following{/other_user}",
+    "gists_url": "https://api.github.com/users/git-richard/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/git-richard/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/git-richard/subscriptions",
+    "organizations_url": "https://api.github.com/users/git-richard/orgs",
+    "repos_url": "https://api.github.com/users/git-richard/repos",
+    "events_url": "https://api.github.com/users/git-richard/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/git-richard/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2016-06-16T17:30:41Z",
+  "updated_at": "2017-09-25T19:42:02Z",
+  "closed_at": "2017-09-25T18:25:45Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7054",
+    "html_url": "https://github.com/facebook/react/pull/7054",
+    "diff_url": "https://github.com/facebook/react/pull/7054.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7054.patch"
+  },
+  "body": "I saw some others might be working on this issue but I'm submitting a PR to get some practice. Don't mean to step on any toes.\n\nThe code loops through the options in a select element and displays a warning if there are duplicate option values. There are more efficient array comparison algorithms but this works well. It shows all duplicate values rather than exiting the evaluation loops on the first dupe it finds.\n\nAppreciate any feedback.\n",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

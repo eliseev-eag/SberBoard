@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11885",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11885/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11885/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11885/events",
+  "html_url": "https://github.com/facebook/react/pull/11885",
+  "id": 283090813,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTU5MDY5MDgz",
+  "number": 11885,
+  "title": "Enhance `React.Children.only` to specify number of children > 1",
+  "user": {
+    "login": "mfix22",
+    "id": 8397708,
+    "node_id": "MDQ6VXNlcjgzOTc3MDg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/8397708?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mfix22",
+    "html_url": "https://github.com/mfix22",
+    "followers_url": "https://api.github.com/users/mfix22/followers",
+    "following_url": "https://api.github.com/users/mfix22/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mfix22/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mfix22/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mfix22/subscriptions",
+    "organizations_url": "https://api.github.com/users/mfix22/orgs",
+    "repos_url": "https://api.github.com/users/mfix22/repos",
+    "events_url": "https://api.github.com/users/mfix22/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mfix22/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-12-19T03:08:38Z",
+  "updated_at": "2018-01-05T23:03:52Z",
+  "closed_at": "2018-01-05T18:34:14Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11885",
+    "html_url": "https://github.com/facebook/react/pull/11885",
+    "diff_url": "https://github.com/facebook/react/pull/11885.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11885.patch"
+  },
+  "body": "Hey all,\r\nFirst time touching this repo, so sorry if this is a duplicate PR or anything is out of place (please close if so 😄)\r\nI have completed all the steps listed in the PR notes.\r\n\r\nThis PR simply adds a second optional param to `React.Children.only` to check for children of a specified length. \r\n\r\nNote:\r\n1. Let me know you want me to verify that the `count` param is `> 1` explicitly\r\n2. I would like to add more helpful error messages (with parameter info included) but the linter fails due to: `\"The second argument to invariant must be a string literal\"`\r\n\r\nUse Case(s):\r\n- [`eitherx`](https://github.com/mfix22/eitherx/blob/master/src/eitherx.js#L17)",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

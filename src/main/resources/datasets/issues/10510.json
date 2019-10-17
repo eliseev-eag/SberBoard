@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10510",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10510/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10510/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10510/events",
+  "html_url": "https://github.com/facebook/react/pull/10510",
+  "id": 252085188,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTM3MDc2NDU5",
+  "number": 10510,
+  "title": "Upgrade flow-bin to 0.53.1",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2017-08-22T20:50:03Z",
+  "updated_at": "2017-10-31T18:19:42Z",
+  "closed_at": "2017-08-28T21:39:59Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10510",
+    "html_url": "https://github.com/facebook/react/pull/10510",
+    "diff_url": "https://github.com/facebook/react/pull/10510.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10510.patch"
+  },
+  "body": "This keeps Flow versions in-sync between GitHub and fbsource. I noticed a Flow incompatibility between these 2 versions when syncing React Native this morning.\r\n\r\nCommits are atomic to simplify the review process.\r\n\r\nResources:\r\n* [Flow 53 release blog](https://medium.com/flow-type/even-better-support-for-react-in-flow-25b0a3485627)\r\n* [Flow React type definitions](https://github.com/facebook/flow/blob/v0.53.1/lib/react.js)\r\n* [`flow-upgrade` utility](https://yarnpkg.com/en/package/flow-upgrade)\r\n* [Flow React type reference](https://flow.org/en/docs/react/types/)",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

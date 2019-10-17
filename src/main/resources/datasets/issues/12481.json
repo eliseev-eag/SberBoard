@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12481",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12481/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12481/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12481/events",
+  "html_url": "https://github.com/facebook/react/issues/12481",
+  "id": 309665864,
+  "node_id": "MDU6SXNzdWUzMDk2NjU4NjQ=",
+  "number": 12481,
+  "title": "[SVG] Enable focusable to accept boolean values",
+  "user": {
+    "login": "HugoGiraudel",
+    "id": 1889710,
+    "node_id": "MDQ6VXNlcjE4ODk3MTA=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1889710?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/HugoGiraudel",
+    "html_url": "https://github.com/HugoGiraudel",
+    "followers_url": "https://api.github.com/users/HugoGiraudel/followers",
+    "following_url": "https://api.github.com/users/HugoGiraudel/following{/other_user}",
+    "gists_url": "https://api.github.com/users/HugoGiraudel/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/HugoGiraudel/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/HugoGiraudel/subscriptions",
+    "organizations_url": "https://api.github.com/users/HugoGiraudel/orgs",
+    "repos_url": "https://api.github.com/users/HugoGiraudel/repos",
+    "events_url": "https://api.github.com/users/HugoGiraudel/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/HugoGiraudel/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-03-29T08:35:33Z",
+  "updated_at": "2018-08-07T18:39:57Z",
+  "closed_at": "2018-08-07T18:39:57Z",
+  "author_association": "NONE",
+  "body": "Moved discussion from https://github.com/facebook/react/issues/6212.\r\n\r\n## Situation\r\n\r\nThe [`focusable` attribute](https://www.w3.org/TR/SVGTiny12/interact.html#focusable-attr) from the SVG specifications is an [enumerated attribute](https://html.spec.whatwg.org/#keywords-and-enumerated-attributes) accepting values `\"true\"`, `\"false\"` and `\"auto\"`. Because it is technically not a boolean attribute (although it certainly somehow looks like it), React expects the value to be passed as a string. See the following example:\r\n\r\n```diff\r\n-<svg focusable>I should be focusable</svg>\r\n-<svg focusable={true}>I should be focusable</svg>\r\n+<svg focusable='true'>I should be focusable</svg>\r\n```\r\n\r\nThe thing is, the `focusable` attribute is often used in conjunction with elements from the ARIA specification, in which attributes are booleans and not enumerated attributes with `\"true\"` and `\"false\"` values. The [`aria-hidden` attribute](https://www.w3.org/TR/wai-aria-1.1/#aria-hidden) is a good example of that.\r\n\r\nFor instance, [following a good practice for icon-buttons](https://fvsch.com/code/svg-icons/#section-html):\r\n\r\n```html\r\n<button type=\"button\">\r\n  <svg aria-hidden=\"true\" focusable=\"false\">\r\n    <use xlink:href=\"#icon-play\"></use>\r\n  </svg>\r\n  <span class=\"access-label\">Start playback</span>\r\n</button>\r\n```\r\n\r\nFrom an authoring perspective, the above snippet would likely be written like this in JSX:\r\n\r\n```jsx\r\n<button type='button'>\r\n  <Icon icon='play' aria-hidden={true} focusable={false} />\r\n  <span class='access-label'>Start playback</span>\r\n</button>\r\n```\r\n\r\nThe problem is that `focusable` **cannot** be authored as a boolean, otherwise it will **not** be printed out in the DOM. On the other hand, `aria-hidden` is perfectly fine being written as a boolean at it gets coerced by React.\r\n\r\n## Proposal\r\n\r\nGiven the default value for the `focusable` attribute is `\"auto\"`, this is very likely this attribute gets authored to change its value to `true` or `false`. In that regard, it is confusing that it has to be specified as a string, when other attributes accepting booleans can be authored as such.\r\n\r\nThe suggestion would be to make it possible for `focusable` to be specified as either a boolean or a string, like other similar attributes. In other words, all the following should work:\r\n\r\n```jsx\r\n<svg focusable>I should be focusable</svg>\r\n<svg focusable={true}>I should be focusable</svg>\r\n<svg focusable='true'>I should be focusable</svg>\r\n<svg focusable={false}>I should not be focusable</svg>\r\n<svg focusable='false'>I should not be focusable</svg>\r\n<svg focusable='auto'>I should be focusable</svg>\r\n```\r\n\r\nFrom an authoring perspective, I believe this would be the most straightforward and less confusing.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7759",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7759/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7759/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7759/events",
+  "html_url": "https://github.com/facebook/react/issues/7759",
+  "id": 177539255,
+  "node_id": "MDU6SXNzdWUxNzc1MzkyNTU=",
+  "number": 7759,
+  "title": "[RFC] Idea: forceDeepUpdate() and forceDeepUpdateWithScope(scope)",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 739777675,
+      "node_id": "MDU6TGFiZWw3Mzk3Nzc2NzU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Component%20API",
+      "name": "Component: Component API",
+      "color": "d4c5f9",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2016-09-16T23:21:25Z",
+  "updated_at": "2018-01-02T14:52:05Z",
+  "closed_at": "2018-01-02T14:52:05Z",
+  "author_association": "MEMBER",
+  "body": "_Just going to put it out there for feedback..._\n## Motivation\n\nSubscription management comes with a cost and that eats into the wins of async rendering since it needs to be managed synchronously. Not just managing the direct subscriptions themselves but managing the dynamic dependency graph so that it can be invalidated.\n\nMeanwhile, most of what subscriptions are used for is data that will never update. At least in our apps. It is a pure loss.\n\nThe use case is when you're connecting to third party systems that aren't as easily connected to the top level data tree.\n## Proposal\n\n``` js\nthis.forceDeepUpdate();\n```\n\nSame use case as `forceUpdate`, if you are reading from global mutable state for some reason, you can use this to by-pass `shouldComponentUpdate` in an entire subtree. Basically rerender everything. When combined with Fiber this can be a low-priority update so it's not so bad for things that change a lot of things.\n\nA good example would be changing the locale. Regardless if you read a global mutable locale (like AirBnB does) or a context locale (like Yahoo) does, this lets you change it when you need to. Without needing to manage subscriptions for all those cases when you don't need it.\n\n``` js\nthis.forceDeepUpdateWithScope(scope);\n```\n\n``` js\nclass Foo extends React.Component {\n  shouldComponentUpdateForScope(scope) {\n    return scope.store === UserStore && scope.id === this.props.userID;\n  }\n  render() {\n    ...\n  }\n}\n```\n\n`forceDeepUpdateWithScope` would traverse the subtree and only start rendering if `shouldComponentUpdateForScope` returns `true` for the arbitrary `scope` argument. This allows for a bit more of a targeted update with some convenience overhead.\n\nAdditionally, React would cache the pair of `scope` and `components` that responded. For some number of scopes back. If a new component gets mounted with a `shouldComponentUpdateForScope` we might check it against the cache to see if we need to add it to the cache.\n\nEffectively this creates **lazy subscriptions**.\n\nThe use case is something like typing into an input field that then updates some global store which immediately displays in a completely different place on the page. The first character might be a bit slower but still with responsive levels and the subsequent characters are fast to update.\n## Caveat\n\nThe major downside of this proposal is that it relies on mutation. As we know, React doesn't really like mutation for many more reasons than just `shouldComponentUpdate`.\n\nThe effect in Fiber for example, is that any component that gets a higher priority update will start using the new value. Components that rely on mutable state effectively become up-prioritized which is not good. 1) It can temporarily show inconsistent data. 2) The point of making this kind of update lower priority is because it is likely to be large. Larger updates will stall the page if they take the same priority as higher priority updates. Thereby defeating the benefits of Fiber anyway.\n\nI'd like to try to come up with a variant of this API that doesn't rely on mutation.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

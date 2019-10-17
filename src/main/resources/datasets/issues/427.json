@@ -1,0 +1,91 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/427",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/427/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/427/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/427/events",
+  "html_url": "https://github.com/facebook/react/issues/427",
+  "id": 21044241,
+  "node_id": "MDU6SXNzdWUyMTA0NDI0MQ==",
+  "number": 427,
+  "title": "Use the right document in iframe selection events",
+  "user": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 332720629,
+      "node_id": "MDU6TGFiZWwzMzI3MjA2Mjk=",
+      "url": "https://api.github.com/repos/facebook/react/labels/HTML",
+      "name": "HTML",
+      "color": "f7c6c7",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2013-10-15T21:01:09Z",
+  "updated_at": "2018-08-04T00:07:24Z",
+  "closed_at": "2018-08-04T00:07:23Z",
+  "author_association": "MEMBER",
+  "body": "We use `document` directly a bunch where that might not be the right thing if the event is occurring in an `iframe`. We should do it right. (split from #373)\n",
+  "closed_by": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

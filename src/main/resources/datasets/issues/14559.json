@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14559",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14559/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14559/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14559/events",
+  "html_url": "https://github.com/facebook/react/pull/14559",
+  "id": 397682123,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjQzNTcxNzQx",
+  "number": 14559,
+  "title": "Support configurable labels for custom hooks",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2019-01-10T05:50:19Z",
+  "updated_at": "2019-01-15T16:50:55Z",
+  "closed_at": "2019-01-14T22:53:22Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14559",
+    "html_url": "https://github.com/facebook/react/pull/14559",
+    "diff_url": "https://github.com/facebook/react/pull/14559.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14559.patch"
+  },
+  "body": "Builds on top of PR #14556 to add support for configurable labels for custom hooks (for DevTools) by way of a new, debug-only hook named `useDebugValue`.\r\n\r\nUsing the debounce hook from [usehooks.com](https://usehooks.com/) as an example:\r\n```js\r\nfunction useDebounce(value, delay) {\r\n  const [debouncedValue, setDebouncedValue] = useState(value);\r\n\r\n  // Show the debounced value inside of DevTools beside this hook:\r\n  useDebugValue(debouncedValue);\r\n\r\n  useEffect(\r\n    () => {\r\n      const handler = setTimeout(() => setDebouncedValue(value), delay);\r\n      return () => clearTimeout(handler);\r\n    },\r\n    [value, delay]\r\n  );\r\n\r\n  return debouncedValue;\r\n}\r\n```\r\n\r\nThis would render like so:\r\n<img width=\"121\" alt=\"screen shot 2019-01-09 at 9 51 25 pm\" src=\"https://user-images.githubusercontent.com/29597/50948804-bf429480-1458-11e9-9aa6-1507c02e4dae.png\">\r\n",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

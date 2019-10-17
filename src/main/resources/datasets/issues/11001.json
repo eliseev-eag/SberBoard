@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11001",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11001/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11001/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11001/events",
+  "html_url": "https://github.com/facebook/react/pull/11001",
+  "id": 261888492,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ0MDU0MDgz",
+  "number": 11001,
+  "title": "[website] Add FAQ pages to docs",
+  "user": {
+    "login": "alexkrolick",
+    "id": 1571667,
+    "node_id": "MDQ6VXNlcjE1NzE2Njc=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1571667?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/alexkrolick",
+    "html_url": "https://github.com/alexkrolick",
+    "followers_url": "https://api.github.com/users/alexkrolick/followers",
+    "following_url": "https://api.github.com/users/alexkrolick/following{/other_user}",
+    "gists_url": "https://api.github.com/users/alexkrolick/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/alexkrolick/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/alexkrolick/subscriptions",
+    "organizations_url": "https://api.github.com/users/alexkrolick/orgs",
+    "repos_url": "https://api.github.com/users/alexkrolick/repos",
+    "events_url": "https://api.github.com/users/alexkrolick/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/alexkrolick/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-10-01T03:16:35Z",
+  "updated_at": "2017-10-06T17:19:39Z",
+  "closed_at": "2017-10-06T17:19:38Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11001",
+    "html_url": "https://github.com/facebook/react/pull/11001",
+    "diff_url": "https://github.com/facebook/react/pull/11001.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11001.patch"
+  },
+  "body": "Based on #10740, this adds an FAQ page to the docs.\r\n\r\nThe contents are based on conversations in the Reactiflux community and discussions on Github.\r\n\r\nComments welcome!\r\n\r\n<img width=\"321\" alt=\"screen shot 2017-09-30 at 10 23 24 pm\" src=\"https://user-images.githubusercontent.com/1571667/31052041-05a28a6a-a62e-11e7-93f8-af53f05eb7ca.png\">\r\n\r\n\r\n----\r\n\r\nCloses #10740",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

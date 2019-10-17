@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5508",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5508/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5508/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5508/events",
+  "html_url": "https://github.com/facebook/react/pull/5508",
+  "id": 117857277,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTEyNDk3MDc=",
+  "number": 5508,
+  "title": "Add in missing closing </li> for docs template",
+  "user": {
+    "login": "yangshun",
+    "id": 1315101,
+    "node_id": "MDQ6VXNlcjEzMTUxMDE=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1315101?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/yangshun",
+    "html_url": "https://github.com/yangshun",
+    "followers_url": "https://api.github.com/users/yangshun/followers",
+    "following_url": "https://api.github.com/users/yangshun/following{/other_user}",
+    "gists_url": "https://api.github.com/users/yangshun/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/yangshun/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/yangshun/subscriptions",
+    "organizations_url": "https://api.github.com/users/yangshun/orgs",
+    "repos_url": "https://api.github.com/users/yangshun/repos",
+    "events_url": "https://api.github.com/users/yangshun/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/yangshun/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2015-11-19T16:56:31Z",
+  "updated_at": "2015-12-01T19:56:18Z",
+  "closed_at": "2015-11-19T21:57:37Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5508",
+    "html_url": "https://github.com/facebook/react/pull/5508",
+    "diff_url": "https://github.com/facebook/react/pull/5508.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5508.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

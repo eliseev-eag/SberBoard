@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11079",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11079/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11079/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11079/events",
+  "html_url": "https://github.com/facebook/react/issues/11079",
+  "id": 262647846,
+  "node_id": "MDU6SXNzdWUyNjI2NDc4NDY=",
+  "number": 11079,
+  "title": "Improving Browser QA",
+  "user": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 71502270,
+      "node_id": "MDU6TGFiZWw3MTUwMjI3MA==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Build%20Infrastructure",
+      "name": "Component: Build Infrastructure",
+      "color": "f9d0c4",
+      "default": false
+    },
+    {
+      "id": 710615342,
+      "node_id": "MDU6TGFiZWw3MTA2MTUzNDI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Umbrella",
+      "name": "Type: Umbrella",
+      "color": "5319e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 13,
+  "created_at": "2017-10-04T02:31:39Z",
+  "updated_at": "2018-09-10T20:51:55Z",
+  "closed_at": null,
+  "author_association": "COLLABORATOR",
+  "body": "We manually test a lot of behavior that can not be captured by JSDOM. Change events, number input quirks, event pooling, error handling, etc.\r\n\r\nDespite this test suite, comprehensive unit tests, alpha, beta, and release candidates, a number of bugs have slipped through. Particularly around change events.\r\n\r\nI want to explore what it would look like to reduce the burden of manual browser QA when possible. Particularly around things like change events, which hook into JavaScript DOM APIs and should be automatable.\r\n\r\nI've filed this issue for myself to explore the following areas (though I'd be happy for others to pitch in 😄):\r\n\r\n- [ ] Deploying the [DOM Test Fixtures](https://github.com/facebook/react/tree/master/fixtures/dom) to a public URL to distribute manual QA and run automated tests against it\r\n- [ ] Investigate [BrowserStack](https://browserstack.com) or [Sauce Labs](https://saucelabs.com) as possible browser automation options\r\n- [ ] Deploy a nightly or edge build of React with an accompanying JSFiddle to make it easier to determine if a fix works on master without needing to know how to setup React locally.\r\n- [ ] With automation in place, what extremely laborious (but comprehensive) tests could we run to help fight regressions?\r\n\r\n---\r\n\r\nI'm probably missing something, but this is where I'm going to start. I'll post follow-up comments as I learn stuff.",
+  "closed_by": null
+}

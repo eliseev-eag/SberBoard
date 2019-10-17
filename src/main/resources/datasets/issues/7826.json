@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7826",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7826/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7826/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7826/events",
+  "html_url": "https://github.com/facebook/react/pull/7826",
+  "id": 179911016,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODcyMTY0MzU=",
+  "number": 7826,
+  "title": "Fixed bug with updating TextNode in IE8 (#7824)",
+  "user": {
+    "login": "mnpenner",
+    "id": 1112998,
+    "node_id": "MDQ6VXNlcjExMTI5OTg=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1112998?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mnpenner",
+    "html_url": "https://github.com/mnpenner",
+    "followers_url": "https://api.github.com/users/mnpenner/followers",
+    "following_url": "https://api.github.com/users/mnpenner/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mnpenner/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mnpenner/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mnpenner/subscriptions",
+    "organizations_url": "https://api.github.com/users/mnpenner/orgs",
+    "repos_url": "https://api.github.com/users/mnpenner/repos",
+    "events_url": "https://api.github.com/users/mnpenner/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mnpenner/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 13,
+  "created_at": "2016-09-28T22:49:21Z",
+  "updated_at": "2016-09-29T17:49:58Z",
+  "closed_at": "2016-09-29T17:49:58Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7826",
+    "html_url": "https://github.com/facebook/react/pull/7826",
+    "diff_url": "https://github.com/facebook/react/pull/7826.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7826.patch"
+  },
+  "body": "Fixes #7824 \n",
+  "closed_by": {
+    "login": "mnpenner",
+    "id": 1112998,
+    "node_id": "MDQ6VXNlcjExMTI5OTg=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1112998?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mnpenner",
+    "html_url": "https://github.com/mnpenner",
+    "followers_url": "https://api.github.com/users/mnpenner/followers",
+    "following_url": "https://api.github.com/users/mnpenner/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mnpenner/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mnpenner/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mnpenner/subscriptions",
+    "organizations_url": "https://api.github.com/users/mnpenner/orgs",
+    "repos_url": "https://api.github.com/users/mnpenner/repos",
+    "events_url": "https://api.github.com/users/mnpenner/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mnpenner/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

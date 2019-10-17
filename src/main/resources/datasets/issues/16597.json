@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16597",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16597/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16597/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16597/events",
+  "html_url": "https://github.com/facebook/react/issues/16597",
+  "id": 486360343,
+  "node_id": "MDU6SXNzdWU0ODYzNjAzNDM=",
+  "number": 16597,
+  "title": "Devtools doesn't properly loads components content",
+  "user": {
+    "login": "chrisands",
+    "id": 12214583,
+    "node_id": "MDQ6VXNlcjEyMjE0NTgz",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/12214583?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/chrisands",
+    "html_url": "https://github.com/chrisands",
+    "followers_url": "https://api.github.com/users/chrisands/followers",
+    "following_url": "https://api.github.com/users/chrisands/following{/other_user}",
+    "gists_url": "https://api.github.com/users/chrisands/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/chrisands/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/chrisands/subscriptions",
+    "organizations_url": "https://api.github.com/users/chrisands/orgs",
+    "repos_url": "https://api.github.com/users/chrisands/repos",
+    "events_url": "https://api.github.com/users/chrisands/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/chrisands/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 620368407,
+      "node_id": "MDU6TGFiZWw2MjAzNjg0MDc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Needs%20More%20Information",
+      "name": "Resolution: Needs More Information",
+      "color": "fffde7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-08-28T12:46:22Z",
+  "updated_at": "2019-08-28T15:27:42Z",
+  "closed_at": "2019-08-28T15:19:28Z",
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nBug\r\n\r\n**What is the current behavior?**\r\nWhen I open two instances of devtools (browser extension and standalone) is doesn't load components content (props, state etc.)\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\n- open project with <script src=\"http://localhost:8097\"></script>\r\n- run it\r\n- open chrome browser with react-devtools\r\n- chrome devtools\r\n- open standalone via console `react-devtools &`\r\n- try to select any component\r\n- ...\r\n- infinite `loading...`\r\n\r\n**What is the expected behavior?**\r\ndevtools loads components content even if opened two instances (maybe more?)\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nreact: `16.9`\r\nreact-devtools (chrome): `4.0.6 (8/26/2019)`\r\nreact-devtools (standalone): `4.0.6-a39d9c3`",
+  "closed_by": {
+    "login": "chrisands",
+    "id": 12214583,
+    "node_id": "MDQ6VXNlcjEyMjE0NTgz",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/12214583?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/chrisands",
+    "html_url": "https://github.com/chrisands",
+    "followers_url": "https://api.github.com/users/chrisands/followers",
+    "following_url": "https://api.github.com/users/chrisands/following{/other_user}",
+    "gists_url": "https://api.github.com/users/chrisands/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/chrisands/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/chrisands/subscriptions",
+    "organizations_url": "https://api.github.com/users/chrisands/orgs",
+    "repos_url": "https://api.github.com/users/chrisands/repos",
+    "events_url": "https://api.github.com/users/chrisands/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/chrisands/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

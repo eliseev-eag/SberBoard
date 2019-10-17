@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8829",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8829/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8829/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8829/events",
+  "html_url": "https://github.com/facebook/react/pull/8829",
+  "id": 201937891,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTAyMzIxNDMw",
+  "number": 8829,
+  "title": "Implement mutation observer in DOMChildrenOperations",
+  "user": {
+    "login": "j0lv3r4",
+    "id": 1130549,
+    "node_id": "MDQ6VXNlcjExMzA1NDk=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1130549?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/j0lv3r4",
+    "html_url": "https://github.com/j0lv3r4",
+    "followers_url": "https://api.github.com/users/j0lv3r4/followers",
+    "following_url": "https://api.github.com/users/j0lv3r4/following{/other_user}",
+    "gists_url": "https://api.github.com/users/j0lv3r4/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/j0lv3r4/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/j0lv3r4/subscriptions",
+    "organizations_url": "https://api.github.com/users/j0lv3r4/orgs",
+    "repos_url": "https://api.github.com/users/j0lv3r4/repos",
+    "events_url": "https://api.github.com/users/j0lv3r4/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/j0lv3r4/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2017-01-19T18:24:18Z",
+  "updated_at": "2018-01-05T13:55:17Z",
+  "closed_at": "2018-01-05T13:55:17Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8829",
+    "html_url": "https://github.com/facebook/react/pull/8829",
+    "diff_url": "https://github.com/facebook/react/pull/8829.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8829.patch"
+  },
+  "body": "This pull request (WIP) tries to resolve https://github.com/facebook/react/issues/3218\r\n\r\nI have done some basic implementation and tried to add a devtool hook, but have some questions:\r\n\r\n* What's the goal of the hooks in `ReactDebugTool.js`, how can I trigger an existing hook to see how it works?\r\n* I'm not sure I'd add tests to this implementation, any suggestion is welcome\r\n* Also, I'd like suggestion on where to add the `.disconnect();` function",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

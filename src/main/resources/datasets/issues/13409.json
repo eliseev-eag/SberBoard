@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13409",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13409/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13409/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13409/events",
+  "html_url": "https://github.com/facebook/react/pull/13409",
+  "id": 350924364,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjA4NjQ5MTc4",
+  "number": 13409,
+  "title": "Demonstrate 16.x regression in legacy context",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-08-15T18:55:12Z",
+  "updated_at": "2018-09-03T23:11:32Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13409",
+    "html_url": "https://github.com/facebook/react/pull/13409",
+    "diff_url": "https://github.com/facebook/react/pull/13409.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13409.patch"
+  },
+  "body": "This is a failing test from https://github.com/facebook/react/issues/11508.\r\n\r\nIt seems that 16.x unintentionally introduced over-rendering for legacy context in case where\r\n\r\n* a grandparent and a deep child are updated within the same batch\r\n* the grandparent is a legacy context provider\r\n* a component in the middle bails out in sCU\r\n\r\nIn React 15, children of the bailed out component wouldn't re-render in this case (except the grandchild that was actually updated).\r\n\r\nSince React 16, in this particular case **components that didn't bail out with sCU get re-rendered even if their parents _did_ bail out with sCU — as long as there's something yet deeper that was updated**.\r\n\r\n```\r\n<GrandChildThatWasUpdated> // <--- setState()\r\n  <SCUFalse>\r\n    <ThisRendersMoreOftenIn16> <--- this wouldn't re-render in 15\r\n      <ChildThatWasUpdated>  // <--- setState() in the same batch\r\n\r\n```\r\n\r\nThe problem occurs because we [disable sCU checks](https://github.com/facebook/react/blob/5816829170662eed09e9681ce387d5672fc3da31/packages/react-reconciler/src/ReactFiberBeginWork.js#L982) when a legacy context has changed above. We thought that we wouldn't recurse into children anyway (since sCU bailed out). But we forgot that we *could* recurse into children if they were independently scheduled for the same update.\r\n\r\nAt this point I feel like fixing it might break some cases that accidentally relied on over-rendering. I'm also not sure what the fix would be like. I suppose we'd need to [push `false` to this cursor](https://github.com/facebook/react/blob/5816829170662eed09e9681ce387d5672fc3da31/packages/react-reconciler/src/ReactFiberContext.js#L38) when we descend down a component with bailed-out sCU that still has some children scheduled, and pop it when we go up. Not sure it's worth the added complexity.\r\n\r\nOn the other hand, if this is keeping people from updating to 16, that puts them in a situation where they can't upgrade to a version with *new* context because the *old* context became too slow.",
+  "closed_by": null
+}

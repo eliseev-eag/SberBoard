@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8581",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8581/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8581/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8581/events",
+  "html_url": "https://github.com/facebook/react/pull/8581",
+  "id": 195786538,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTgxMzYzMTk=",
+  "number": 8581,
+  "title": "[Docs] Add link to catalog of components",
+  "user": {
+    "login": "brillout",
+    "id": 1005638,
+    "node_id": "MDQ6VXNlcjEwMDU2Mzg=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1005638?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/brillout",
+    "html_url": "https://github.com/brillout",
+    "followers_url": "https://api.github.com/users/brillout/followers",
+    "following_url": "https://api.github.com/users/brillout/following{/other_user}",
+    "gists_url": "https://api.github.com/users/brillout/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/brillout/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/brillout/subscriptions",
+    "organizations_url": "https://api.github.com/users/brillout/orgs",
+    "repos_url": "https://api.github.com/users/brillout/repos",
+    "events_url": "https://api.github.com/users/brillout/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/brillout/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-12-15T11:51:48Z",
+  "updated_at": "2017-10-08T20:51:10Z",
+  "closed_at": "2017-10-08T20:51:10Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8581",
+    "html_url": "https://github.com/facebook/react/pull/8581",
+    "diff_url": "https://github.com/facebook/react/pull/8581.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8581.patch"
+  },
+  "body": "The catalog: http://devarchy.com/react-components.\r\n\r\nNot sure if you guys are up for linking to such unofficial list, if not just close this PR.\r\n\r\nI think this is important for the ecosystem because it allows new components to get sustainable exposure to users.\r\n\r\nThanks for React btw, it has improved my Front-end life so much.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

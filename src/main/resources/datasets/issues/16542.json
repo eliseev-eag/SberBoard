@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16542",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16542/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16542/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16542/events",
+  "html_url": "https://github.com/facebook/react/pull/16542",
+  "id": 483983229,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzA5OTUxNjYw",
+  "number": 16542,
+  "title": "[Scheduler] Profiler Features (second try)",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-08-22T13:05:49Z",
+  "updated_at": "2019-08-22T21:53:23Z",
+  "closed_at": "2019-08-22T20:58:13Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16542",
+    "html_url": "https://github.com/facebook/react/pull/16542",
+    "diff_url": "https://github.com/facebook/react/pull/16542.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16542.patch"
+  },
+  "body": "This is a revert of a revert of #16145 + my attempts to fix its issues.\r\nYou need to read individual commits.\r\n\r\nThe main fix has already landed independently in https://github.com/facebook/react/pull/16407.\r\n\r\nHowever, there were a few more issues in #16145 that I'm fixing in this PR:\r\n\r\n* Bad copy paste for re-exports (fixed in https://github.com/facebook/react/commit/935526e121add025ff74df8f7dde06de27bf7c2e)\r\n* Init time dependency on ArrayBuffer which would break IE9 (fixed in ee548c3cc17dc58c000cf6b13278c4b08642050f)\r\n* Potential deopt for tasks due to adding a field later (fixed in 9c30b0b695d81e9c43b296ab93d895e4416ef713)\r\n\r\nThere is a bigger conceptual issue though that I'm struggling with.\r\n\r\n(Feel free to skip these details)\r\n\r\n<details>\r\n\r\n#16145 added a bunch of `pop()` calls — for example, when a task errors or get cancelled. My understanding is that this was done as an optimization. I.e. we don't need to schedule another loop if there's no actual tasks in the loop left.\r\n\r\nThat optimization doesn't seem like it would cover all cases. For example, if we have tasks [A, B, C], and then cancel C, B, and A in sequence, only A would be popped (because it's the first item). So this optimization seems \"optional\" and not something we can rely on.\r\n\r\nHowever, the tests *do* rely on this optimization being present.\r\nWithout it, the \"main thread\" bar never stops:\r\n\r\n```\r\n Scheduler › marks when a task is canceled\r\n\r\n   !!! Main thread              │      ██\r\n    Task 1 [Normal]              │██████░░🡐 canceled\r\n    \"\r\n    Received:\r\n      \"\r\n    !!! Main thread              │      ██████████████████████\r\n    Task 1 [Normal]              │██████░░🡐 canceled\r\n\r\n\r\nScheduler › marks when a task errors\r\n\r\n    Expected value to equal:\r\n      \"\r\n    !!! Main thread              │\r\n    Task 1 [Normal]              │██████🡐 errored\r\n    \"\r\n    Received:\r\n      \"\r\n    !!! Main thread              │        ████████████████████\r\n    Task 1 [Normal]              │██████🡐 errored\r\n    \"\r\n\r\nScheduler › marks when multiple tasks are canceled\r\n\r\n    Expected value to equal:\r\n      \"\r\n    !!! Main thread              │      ██\r\n    Task 1 [Normal]              │██████░░🡐 canceled\r\n    Task 2 [Normal]              │░░░░░░░░🡐 canceled\r\n    \"\r\n    Received:\r\n      \"\r\n    !!! Main thread              │      ██████████████████████\r\n    Task 1 [Normal]              │██████░░🡐 canceled\r\n    Task 2 [Normal]              │░░░░░░░░🡐 canceled\r\n    \"\r\n```\r\n\r\nI don't know how to interpret this.\r\n\r\nIs this optimization essential for profiler's _correctness_? In that case it seems dodgy that depending on the order in which you cancel callbacks, it would either work or not.\r\n\r\nOr is this optimization purely an optimization? Are the test asserting on implementation details too aggressive? Why does the \"Main Thread\" bar never stop? Or are we missing a \"suspended\" event that should have happened in that case?\r\n\r\nFinally, the logic to determine whether we \"suspended\" or \"resumed\" seems fragile to me. I don't know for sure what those terms are supposed to mean. For example, if a callback errors, did we \"suspend\"? It seems like no from the code, but I don't know why. Conceptually, I'd think of an \"error\" as \"suspending\" the scheduler loop. Unless \"suspend\" means something else here.\r\n\r\nMy last commit just removes the \"optimization\" (9a6440440ef9b0100579d70abfb1c51592922bfb). **It breaks some tests but I can't move further without understanding their intent.** Is it the code, the assertions, or the test setup that needs to change?\r\n\r\nWas this more than an optimization? I'll leave it at that so someone else can pick it up. :-)\r\n\r\n</details>\r\n\r\nI chatted to Boone, and arrived at a solution that satisfies both of us. Basically, I wasn't sure what Suspended and Resumed events mean. Boone told me it's okay to treat them as \"exit the loop\" and \"enter the loop\".\r\n\r\nSo in the next commits I did the following:\r\n\r\n* Removed the `pop()` optimization that affected non-profiling paths to reduce the risk. (9a6440440ef9b0100579d70abfb1c51592922bfb)\r\n  - This broke tests because they seemed to assert on implementation details\r\n* Strengthened tests to explicitly treat Suspend and Resumed as \"exit\" and \"enter\", and added assertions for that (8482f5de03f1621d6025bc0cf87da3d565c2f979)\r\n  - This further broke tests because we didn't always emit these events in pairs\r\n- Finally, made Suspended and Resumed match 1:1 to \"exiting\" and \"entering\" the flush (1f5f7df068a52aeb180797aa21dea1aef0329781)\r\n  - I had to amend tests to match this new behavior. These changes make sense to me. We now flag \"main thread\" time as anything not spent in the Scheduler.\r\n\r\n",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9494",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9494/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9494/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9494/events",
+  "html_url": "https://github.com/facebook/react/pull/9494",
+  "id": 223549265,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTE3MTAwNzc0",
+  "number": 9494,
+  "title": "npm run prettier changed files",
+  "user": {
+    "login": "abhaynikam",
+    "id": 7736232,
+    "node_id": "MDQ6VXNlcjc3MzYyMzI=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/7736232?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/abhaynikam",
+    "html_url": "https://github.com/abhaynikam",
+    "followers_url": "https://api.github.com/users/abhaynikam/followers",
+    "following_url": "https://api.github.com/users/abhaynikam/following{/other_user}",
+    "gists_url": "https://api.github.com/users/abhaynikam/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/abhaynikam/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/abhaynikam/subscriptions",
+    "organizations_url": "https://api.github.com/users/abhaynikam/orgs",
+    "repos_url": "https://api.github.com/users/abhaynikam/repos",
+    "events_url": "https://api.github.com/users/abhaynikam/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/abhaynikam/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-04-22T08:17:58Z",
+  "updated_at": "2017-04-22T09:17:47Z",
+  "closed_at": "2017-04-22T09:17:39Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9494",
+    "html_url": "https://github.com/facebook/react/pull/9494",
+    "diff_url": "https://github.com/facebook/react/pull/9494.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9494.patch"
+  },
+  "body": "- Running `npm run prettier` changed files pushed.\r\n- cc: @gaearon and @aweary not sure here. Let me know if this is not required.",
+  "closed_by": {
+    "login": "abhaynikam",
+    "id": 7736232,
+    "node_id": "MDQ6VXNlcjc3MzYyMzI=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/7736232?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/abhaynikam",
+    "html_url": "https://github.com/abhaynikam",
+    "followers_url": "https://api.github.com/users/abhaynikam/followers",
+    "following_url": "https://api.github.com/users/abhaynikam/following{/other_user}",
+    "gists_url": "https://api.github.com/users/abhaynikam/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/abhaynikam/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/abhaynikam/subscriptions",
+    "organizations_url": "https://api.github.com/users/abhaynikam/orgs",
+    "repos_url": "https://api.github.com/users/abhaynikam/repos",
+    "events_url": "https://api.github.com/users/abhaynikam/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/abhaynikam/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

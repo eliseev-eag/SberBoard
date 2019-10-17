@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12350",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12350/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12350/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12350/events",
+  "html_url": "https://github.com/facebook/react/pull/12350",
+  "id": 303969443,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTc0MTAwMzQ4",
+  "number": 12350,
+  "title": "Add Netlify integration for DOM Fixtures folder",
+  "user": {
+    "login": "klamping",
+    "id": 706039,
+    "node_id": "MDQ6VXNlcjcwNjAzOQ==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/706039?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/klamping",
+    "html_url": "https://github.com/klamping",
+    "followers_url": "https://api.github.com/users/klamping/followers",
+    "following_url": "https://api.github.com/users/klamping/following{/other_user}",
+    "gists_url": "https://api.github.com/users/klamping/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/klamping/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/klamping/subscriptions",
+    "organizations_url": "https://api.github.com/users/klamping/orgs",
+    "repos_url": "https://api.github.com/users/klamping/repos",
+    "events_url": "https://api.github.com/users/klamping/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/klamping/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2018-03-09T20:25:17Z",
+  "updated_at": "2018-05-20T20:03:52Z",
+  "closed_at": "2018-05-20T20:03:52Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12350",
+    "html_url": "https://github.com/facebook/react/pull/12350",
+    "diff_url": "https://github.com/facebook/react/pull/12350.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12350.patch"
+  },
+  "body": "In issue #11079, @nhunzaker mentions that it would be nice to have an automatic deployment of [the DOM Fixtures folder](https://github.com/facebook/react/tree/master/fixtures/dom) for manual and automated testing purposes.\r\n\r\nSince [Netlify offers their services for free to open source projects](https://www.netlify.com/open-source/) (an account for this will need to be set up), I thought it would be a great fit. \r\n\r\nThis commit adds a `netlify.toml` file to the repo, allowing easier deployment out to the service.\r\n\r\nThis file will do two things:\r\n1. On master branch update, it deploys the latest code to the main linked netlify site. For example: https://musing-lewin-a6efa4.netlify.com/\r\n2. For every PR opened, creates a 'Deploy Preview' site for validating that PR's changes. For example: https://deploy-preview-1--musing-lewin-a6efa4.netlify.com/\r\nThe preview site is linked via GitHub in the PR. \r\n![image](https://user-images.githubusercontent.com/706039/37229973-7bf92c78-23ab-11e8-8ca1-aa1c63ccd2b1.png)\r\n\r\n\r\n**Test Plan:**\r\nCreate a Netlify account and [connect the github repo you're testing to it](https://app.netlify.com/start).\r\nAfter connection, Netlify should deploy the DOM fixtures build folder to a live site for you to use.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

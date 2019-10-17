@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11235",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11235/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11235/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11235/events",
+  "html_url": "https://github.com/facebook/react/pull/11235",
+  "id": 265801321,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ2ODA3Nzk4",
+  "number": 11235,
+  "title": "maybe proactively redirect some doc site issues",
+  "user": {
+    "login": "iamdustan",
+    "id": 227879,
+    "node_id": "MDQ6VXNlcjIyNzg3OQ==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/227879?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/iamdustan",
+    "html_url": "https://github.com/iamdustan",
+    "followers_url": "https://api.github.com/users/iamdustan/followers",
+    "following_url": "https://api.github.com/users/iamdustan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/iamdustan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/iamdustan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/iamdustan/subscriptions",
+    "organizations_url": "https://api.github.com/users/iamdustan/orgs",
+    "repos_url": "https://api.github.com/users/iamdustan/repos",
+    "events_url": "https://api.github.com/users/iamdustan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/iamdustan/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-10-16T14:59:39Z",
+  "updated_at": "2017-10-26T14:27:16Z",
+  "closed_at": "2017-10-26T14:27:16Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11235",
+    "html_url": "https://github.com/facebook/react/pull/11235",
+    "diff_url": "https://github.com/facebook/react/pull/11235.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11235.patch"
+  },
+  "body": "Not sure how often new issue creators read this, but this may help proactively guide the handful of docs issues that have been coming through over to the docs site.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

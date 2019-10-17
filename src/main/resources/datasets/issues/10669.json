@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10669",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10669/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10669/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10669/events",
+  "html_url": "https://github.com/facebook/react/pull/10669",
+  "id": 256717213,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQwMzQ1MDM4",
+  "number": 10669,
+  "title": "[Docs] Fix onClick button handler",
+  "user": {
+    "login": "spiderpoul",
+    "id": 23116531,
+    "node_id": "MDQ6VXNlcjIzMTE2NTMx",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/23116531?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/spiderpoul",
+    "html_url": "https://github.com/spiderpoul",
+    "followers_url": "https://api.github.com/users/spiderpoul/followers",
+    "following_url": "https://api.github.com/users/spiderpoul/following{/other_user}",
+    "gists_url": "https://api.github.com/users/spiderpoul/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/spiderpoul/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/spiderpoul/subscriptions",
+    "organizations_url": "https://api.github.com/users/spiderpoul/orgs",
+    "repos_url": "https://api.github.com/users/spiderpoul/repos",
+    "events_url": "https://api.github.com/users/spiderpoul/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/spiderpoul/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2017-09-11T14:12:35Z",
+  "updated_at": "2017-11-21T14:27:40Z",
+  "closed_at": "2017-11-21T14:27:40Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10669",
+    "html_url": "https://github.com/facebook/react/pull/10669",
+    "diff_url": "https://github.com/facebook/react/pull/10669.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10669.patch"
+  },
+  "body": "I found a little typo in the doc, button onClick handler should be \"focusTextInput\" not \"focus\".\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

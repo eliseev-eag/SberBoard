@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15923",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15923/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15923/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15923/events",
+  "html_url": "https://github.com/facebook/react/pull/15923",
+  "id": 457931166,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjg5NjM4MjA3",
+  "number": 15923,
+  "title": "Remote hard code like hasSymbol ? Symbol.for('react.element') : 0xeac7",
+  "user": {
+    "login": "narutowyh",
+    "id": 8438481,
+    "node_id": "MDQ6VXNlcjg0Mzg0ODE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/8438481?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/narutowyh",
+    "html_url": "https://github.com/narutowyh",
+    "followers_url": "https://api.github.com/users/narutowyh/followers",
+    "following_url": "https://api.github.com/users/narutowyh/following{/other_user}",
+    "gists_url": "https://api.github.com/users/narutowyh/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/narutowyh/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/narutowyh/subscriptions",
+    "organizations_url": "https://api.github.com/users/narutowyh/orgs",
+    "repos_url": "https://api.github.com/users/narutowyh/repos",
+    "events_url": "https://api.github.com/users/narutowyh/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/narutowyh/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-06-19T10:25:39Z",
+  "updated_at": "2019-06-19T10:46:21Z",
+  "closed_at": "2019-06-19T10:46:21Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15923",
+    "html_url": "https://github.com/facebook/react/pull/15923",
+    "diff_url": "https://github.com/facebook/react/pull/15923.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15923.patch"
+  },
+  "body": "**Before submitting a pull request,** please make sure the following is done:\r\n\r\n1. Fork [the repository](https://github.com/facebook/react) and create your branch from `master`.\r\n2. Run `yarn` in the repository root.\r\n3. If you've fixed a bug or added code that should be tested, add tests!\r\n4. Ensure the test suite passes (`yarn test`). Tip: `yarn test --watch TestName` is helpful in development.\r\n5. Run `yarn test-prod` to test in the production environment. It supports the same options as `yarn test`.\r\n6. If you need a debugger, run `yarn debug-test --watch TestName`, open `chrome://inspect`, and press \"Inspect\".\r\n7. Format your code with [prettier](https://github.com/prettier/prettier) (`yarn prettier`).\r\n8. Make sure your code lints (`yarn lint`). Tip: `yarn linc` to only check changed files.\r\n9. Run the [Flow](https://flowtype.org/) typechecks (`yarn flow`).\r\n10. If you haven't already, complete the CLA.\r\n\r\n**Learn more about contributing:** https://reactjs.org/docs/how-to-contribute.html\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

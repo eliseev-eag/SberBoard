@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14429",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14429/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14429/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14429/events",
+  "html_url": "https://github.com/facebook/react/pull/14429",
+  "id": 390506216,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjM4MjU2MjM1",
+  "number": 14429,
+  "title": "Memoize promise listeners to prevent exponential growth",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2018-12-13T03:47:05Z",
+  "updated_at": "2019-01-15T13:44:38Z",
+  "closed_at": "2018-12-14T19:03:24Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14429",
+    "html_url": "https://github.com/facebook/react/pull/14429",
+    "diff_url": "https://github.com/facebook/react/pull/14429.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14429.patch"
+  },
+  "body": "Previously, React would attach a new listener every time a promise is thrown, regardless of whether the same listener was already attached during a previous render. Because React attempts to render every time a promise resolves, the number of listeners grows quickly.\r\n\r\nThis was especially bad in synchronous mode because the renders that happen when the promise pings are not batched together. So if a single promise has multiple listeners for the same root, there will be multiple renders, which in turn results in more listeners being added to the remaining unresolved promises. This results in exponential growth in the number of listeners with respect to the number of IO-bound components in a single render.\r\n\r\nFixes #14220",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

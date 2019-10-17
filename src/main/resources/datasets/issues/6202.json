@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6202",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6202/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6202/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6202/events",
+  "html_url": "https://github.com/facebook/react/pull/6202",
+  "id": 139076349,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjE5NzAzMTI=",
+  "number": 6202,
+  "title": "Introduce search",
+  "user": {
+    "login": "vjeux",
+    "id": 197597,
+    "node_id": "MDQ6VXNlcjE5NzU5Nw==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/197597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/vjeux",
+    "html_url": "https://github.com/vjeux",
+    "followers_url": "https://api.github.com/users/vjeux/followers",
+    "following_url": "https://api.github.com/users/vjeux/following{/other_user}",
+    "gists_url": "https://api.github.com/users/vjeux/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/vjeux/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/vjeux/subscriptions",
+    "organizations_url": "https://api.github.com/users/vjeux/orgs",
+    "repos_url": "https://api.github.com/users/vjeux/repos",
+    "events_url": "https://api.github.com/users/vjeux/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/vjeux/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2016-03-07T19:53:02Z",
+  "updated_at": "2016-03-21T18:30:03Z",
+  "closed_at": "2016-03-11T23:55:55Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6202",
+    "html_url": "https://github.com/facebook/react/pull/6202",
+    "diff_url": "https://github.com/facebook/react/pull/6202.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6202.patch"
+  },
+  "body": "Powered by the awesome Algolia :)\n\n![](http://g.recordit.co/0K7lyNgmFz.gif)\n",
+  "closed_by": {
+    "login": "vjeux",
+    "id": 197597,
+    "node_id": "MDQ6VXNlcjE5NzU5Nw==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/197597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/vjeux",
+    "html_url": "https://github.com/vjeux",
+    "followers_url": "https://api.github.com/users/vjeux/followers",
+    "following_url": "https://api.github.com/users/vjeux/following{/other_user}",
+    "gists_url": "https://api.github.com/users/vjeux/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/vjeux/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/vjeux/subscriptions",
+    "organizations_url": "https://api.github.com/users/vjeux/orgs",
+    "repos_url": "https://api.github.com/users/vjeux/repos",
+    "events_url": "https://api.github.com/users/vjeux/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/vjeux/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

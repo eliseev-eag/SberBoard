@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13317",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13317/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13317/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13317/events",
+  "html_url": "https://github.com/facebook/react/pull/13317",
+  "id": 347377825,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjA2MDE2MDg3",
+  "number": 13317,
+  "title": "Enhance get derived state from props state warning - #12670",
+  "user": {
+    "login": "flxwu",
+    "id": 16862997,
+    "node_id": "MDQ6VXNlcjE2ODYyOTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/16862997?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flxwu",
+    "html_url": "https://github.com/flxwu",
+    "followers_url": "https://api.github.com/users/flxwu/followers",
+    "following_url": "https://api.github.com/users/flxwu/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flxwu/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flxwu/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flxwu/subscriptions",
+    "organizations_url": "https://api.github.com/users/flxwu/orgs",
+    "repos_url": "https://api.github.com/users/flxwu/repos",
+    "events_url": "https://api.github.com/users/flxwu/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flxwu/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-08-03T12:30:17Z",
+  "updated_at": "2018-08-03T15:55:25Z",
+  "closed_at": "2018-08-03T15:09:58Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13317",
+    "html_url": "https://github.com/facebook/react/pull/13317",
+    "diff_url": "https://github.com/facebook/react/pull/13317.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13317.patch"
+  },
+  "body": "The current warning that `getDerivedStateFromProps` produces when called with `state == null` (intentional null or undefined/not declared) is a bit unclear, so this PR adapts this message for the developer to directly recognize that he didn't declare the Component's state before `getDerivedStateFromProps`.\r\n\r\nResolves: #12670.\r\n\r\nThe updated message is now:\r\n```\r\nComponent state must be properly initialized when using getDerivedStateFromProps.\r\n```",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

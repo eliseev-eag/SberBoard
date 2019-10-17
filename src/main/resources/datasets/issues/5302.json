@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5302",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5302/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5302/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5302/events",
+  "html_url": "https://github.com/facebook/react/issues/5302",
+  "id": 113848829,
+  "node_id": "MDU6SXNzdWUxMTM4NDg4Mjk=",
+  "number": 5302,
+  "title": "Prevent a function to be called from within render",
+  "user": {
+    "login": "joIivier",
+    "id": 6048710,
+    "node_id": "MDQ6VXNlcjYwNDg3MTA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6048710?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/joIivier",
+    "html_url": "https://github.com/joIivier",
+    "followers_url": "https://api.github.com/users/joIivier/followers",
+    "following_url": "https://api.github.com/users/joIivier/following{/other_user}",
+    "gists_url": "https://api.github.com/users/joIivier/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/joIivier/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/joIivier/subscriptions",
+    "organizations_url": "https://api.github.com/users/joIivier/orgs",
+    "repos_url": "https://api.github.com/users/joIivier/repos",
+    "events_url": "https://api.github.com/users/joIivier/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/joIivier/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-10-28T15:32:12Z",
+  "updated_at": "2017-10-03T22:42:43Z",
+  "closed_at": "2017-10-03T22:42:43Z",
+  "author_association": "NONE",
+  "body": "You have a warning in React if you call setState() from within a render method, with the check `ReactCurrentOwner.current == null`. I would like to add this check to other methods of my project because they also trigger rerender or are too expensive.\nThe issue I have is that ReactCurrentOwner is not exposed by React, so how can I achieve that? The current solution I have in mind is to check from the stack trace but that's a lot more expensive than your check so I would prefer if there was something equivalent to your code but from outside React.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

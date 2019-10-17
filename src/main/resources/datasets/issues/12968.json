@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12968",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12968/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12968/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12968/events",
+  "html_url": "https://github.com/facebook/react/issues/12968",
+  "id": 328735100,
+  "node_id": "MDU6SXNzdWUzMjg3MzUxMDA=",
+  "number": 12968,
+  "title": "React Context issue",
+  "user": {
+    "login": "zenios",
+    "id": 89569,
+    "node_id": "MDQ6VXNlcjg5NTY5",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/89569?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zenios",
+    "html_url": "https://github.com/zenios",
+    "followers_url": "https://api.github.com/users/zenios/followers",
+    "following_url": "https://api.github.com/users/zenios/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zenios/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zenios/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zenios/subscriptions",
+    "organizations_url": "https://api.github.com/users/zenios/orgs",
+    "repos_url": "https://api.github.com/users/zenios/repos",
+    "events_url": "https://api.github.com/users/zenios/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zenios/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710332294,
+      "node_id": "MDU6TGFiZWw3MTAzMzIyOTQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Server%20Rendering",
+      "name": "Component: Server Rendering",
+      "color": "d4c5f9",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-06-02T11:04:11Z",
+  "updated_at": "2018-06-13T16:56:04Z",
+  "closed_at": "2018-06-13T16:56:04Z",
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nBug\r\n\r\n**What is the current behavior?**\r\nOne context consumer has a value of another contexts provider.\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem:**\r\n\r\nExample \r\n```js\r\nconst React = require(\"react\");\r\nconst { renderToString } = require(\"react-dom/server\");\r\n\r\nconst {\r\n  Provider: LocationContextProvider,\r\n  Consumer: LocationContextConsumer\r\n} = React.createContext(\"location\");\r\nconst {\r\n  Provider: BaseContextProvider,\r\n  Consumer: BaseContextConsumer\r\n} = React.createContext(\"base\");\r\n\r\nconst e = React.createElement;\r\nconst html = () =>\r\n  renderToString(\r\n    e(\r\n      LocationContextProvider,\r\n      { value: \"location\" },\r\n      e(BaseContextConsumer, null, baseContextValue =>\r\n        e(LocationContextConsumer, null, locationContextValue =>\r\n          e(\r\n            BaseContextProvider,\r\n            { value: \"base\" },\r\n            e(\"span\", null, `${locationContextValue} - ${baseContextValue}`)\r\n          )\r\n        )\r\n      )\r\n    )\r\n  );\r\n\r\nconsole.log(\"1st attempt\", html());\r\nconsole.log(\"2nd attempt\", html());\r\n\r\n```\r\n\r\nOutput\r\n```\r\n1st attempt <span>location - base</span>\r\n2nd attempt <span>location - location</span>\r\n```\r\n\r\n**What is the expected behavior?**\r\n1st attempt and 2nd attempt to produce the same result\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nReact 16.3 - 16.4\r\nAll OS\r\nThe issue does not appear on version prior react 16.3 using the create-react-context polyfill\r\n\r\n**Notes**\r\nThis issue was found while trying to use Ryan's new [reach/router](https://github.com/reach/router) and SSR which does something like the example above.\r\n\r\nAfter communicating with him, Ryan opened the following [issue](https://github.com/reach/router/issues/27) on his repository.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

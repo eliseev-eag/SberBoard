@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3344",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3344/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3344/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3344/events",
+  "html_url": "https://github.com/facebook/react/issues/3344",
+  "id": 60269689,
+  "node_id": "MDU6SXNzdWU2MDI2OTY4OQ==",
+  "number": 3344,
+  "title": "Invoking renderToStaticMarkup in render() causes refs to break",
+  "user": {
+    "login": "masonicboom",
+    "id": 86958,
+    "node_id": "MDQ6VXNlcjg2OTU4",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/86958?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/masonicboom",
+    "html_url": "https://github.com/masonicboom",
+    "followers_url": "https://api.github.com/users/masonicboom/followers",
+    "following_url": "https://api.github.com/users/masonicboom/following{/other_user}",
+    "gists_url": "https://api.github.com/users/masonicboom/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/masonicboom/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/masonicboom/subscriptions",
+    "organizations_url": "https://api.github.com/users/masonicboom/orgs",
+    "repos_url": "https://api.github.com/users/masonicboom/repos",
+    "events_url": "https://api.github.com/users/masonicboom/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/masonicboom/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 139653724,
+      "node_id": "MDU6TGFiZWwxMzk2NTM3MjQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Core%20Utilities",
+      "name": "Component: Core Utilities",
+      "color": "c5def5",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 21,
+  "created_at": "2015-03-08T18:33:55Z",
+  "updated_at": "2018-05-28T16:32:12Z",
+  "closed_at": "2018-05-28T16:32:12Z",
+  "author_association": "NONE",
+  "body": "Demonstrated at http://jsfiddle.net/xnhzvdoa/1/; open the error console and you should see this:\n\n```\nUncaught Error: Invariant Violation: addComponentAsRefTo(...): Only a ReactOwner can have refs. This usually means that you're trying to add a ref to a component that doesn't have an owner (that is, was not created inside of another component's `render` method). Try rendering this component inside of a new top-level component which will hold the ref.\n```\n\n---\n\n``` js\nvar Bug = React.createClass({\n    render: function() {\n        var html = React.renderToStaticMarkup(React.DOM.img());\n        return React.DOM.div({ ref: 'ref' }, html);\n    }\n});\nBug = React.createFactory(Bug);\n\nReact.render(Bug(), document.body);\n```\n",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

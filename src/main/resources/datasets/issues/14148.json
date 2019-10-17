@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14148",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14148/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14148/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14148/events",
+  "html_url": "https://github.com/facebook/react/pull/14148",
+  "id": 378569216,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjI5MjQzMTMz",
+  "number": 14148,
+  "title": "Use Entry in `yarn build ...` Instead of Label",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-11-08T03:57:12Z",
+  "updated_at": "2018-11-08T04:46:41Z",
+  "closed_at": "2018-11-08T04:46:41Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14148",
+    "html_url": "https://github.com/facebook/react/pull/14148",
+    "diff_url": "https://github.com/facebook/react/pull/14148.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14148.patch"
+  },
+  "body": "`yarn build core,dom` -> `yarn build react/index react-dom`\r\n\r\nor\r\n\r\n`yarn build core,dom-client` -> `yarn build react/,dom/index`\r\n\r\nI've been frustrated that I can never guess what arguments `yarn build` expects so always end up building everything.\r\n\r\nFirst, I improved the argument parsing a bit so that you don't have to separate the bundle names by commas. But commas still work. This ensures that `yarn build core dom` includes DOM.\r\n\r\nIt also ensures that spaces like `yarn build core, dom` doesn't build EVERYTHING by becoming an empty entry which matches everything.\r\n\r\nI also got rid of label in bundles config. These follow a fairly arbitrary naming convention so I can never guess.\r\n\r\nInstead I just use the name from npm entry name using fuzzy search.\r\n\r\nThere are some cases where this is weird. E.g. `yarn build react` builds everything since everything is called something with `react` in it.\r\n\r\nThere is one special case. The entry gets appended with `/index.js` at the end.\r\n\r\nThat allows to build things like `yarn build react/` to only build isomorphic. Or `yarn build react-dom/index` to exclude the server renderers where as `yarn build react-dom` includes server renderers.\r\n",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

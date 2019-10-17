@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12030",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12030/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12030/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12030/events",
+  "html_url": "https://github.com/facebook/react/pull/12030",
+  "id": 289120043,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTYzMzM1MTk3",
+  "number": 12030,
+  "title": "Upgrade Jest to 22.1 and dedupe packages",
+  "user": {
+    "login": "rickhanlonii",
+    "id": 2440089,
+    "node_id": "MDQ6VXNlcjI0NDAwODk=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2440089?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rickhanlonii",
+    "html_url": "https://github.com/rickhanlonii",
+    "followers_url": "https://api.github.com/users/rickhanlonii/followers",
+    "following_url": "https://api.github.com/users/rickhanlonii/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rickhanlonii/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rickhanlonii/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rickhanlonii/subscriptions",
+    "organizations_url": "https://api.github.com/users/rickhanlonii/orgs",
+    "repos_url": "https://api.github.com/users/rickhanlonii/repos",
+    "events_url": "https://api.github.com/users/rickhanlonii/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rickhanlonii/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2018-01-17T02:13:32Z",
+  "updated_at": "2018-04-01T23:47:09Z",
+  "closed_at": "2018-01-21T16:07:45Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12030",
+    "html_url": "https://github.com/facebook/react/pull/12030",
+    "diff_url": "https://github.com/facebook/react/pull/12030.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12030.patch"
+  },
+  "body": "## Overview\r\n\r\nThis PR updates to Jest 22.1 which give our tests better memory usage and adds interactive snapshots. Link to full changelog [here](https://github.com/facebook/jest/blob/master/CHANGELOG.md#jest-2210)\r\n\r\n**Update** this PR also dedupes packages using [yarn-tools](https://www.npmjs.com/package/yarn-tools)",
+  "closed_by": {
+    "login": "rickhanlonii",
+    "id": 2440089,
+    "node_id": "MDQ6VXNlcjI0NDAwODk=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2440089?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rickhanlonii",
+    "html_url": "https://github.com/rickhanlonii",
+    "followers_url": "https://api.github.com/users/rickhanlonii/followers",
+    "following_url": "https://api.github.com/users/rickhanlonii/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rickhanlonii/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rickhanlonii/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rickhanlonii/subscriptions",
+    "organizations_url": "https://api.github.com/users/rickhanlonii/orgs",
+    "repos_url": "https://api.github.com/users/rickhanlonii/repos",
+    "events_url": "https://api.github.com/users/rickhanlonii/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rickhanlonii/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

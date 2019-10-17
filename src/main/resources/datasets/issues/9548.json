@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9548",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9548/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9548/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9548/events",
+  "html_url": "https://github.com/facebook/react/pull/9548",
+  "id": 224975161,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTE4MDc2OTk1",
+  "number": 9548,
+  "title": "Update error codes and rollup.json",
+  "user": {
+    "login": "tomocchino",
+    "id": 13947,
+    "node_id": "MDQ6VXNlcjEzOTQ3",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/13947?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/tomocchino",
+    "html_url": "https://github.com/tomocchino",
+    "followers_url": "https://api.github.com/users/tomocchino/followers",
+    "following_url": "https://api.github.com/users/tomocchino/following{/other_user}",
+    "gists_url": "https://api.github.com/users/tomocchino/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/tomocchino/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/tomocchino/subscriptions",
+    "organizations_url": "https://api.github.com/users/tomocchino/orgs",
+    "repos_url": "https://api.github.com/users/tomocchino/repos",
+    "events_url": "https://api.github.com/users/tomocchino/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/tomocchino/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2017-04-28T04:10:47Z",
+  "updated_at": "2017-04-28T13:31:32Z",
+  "closed_at": "2017-04-28T05:01:49Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9548",
+    "html_url": "https://github.com/facebook/react/pull/9548",
+    "diff_url": "https://github.com/facebook/react/pull/9548.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9548.patch"
+  },
+  "body": "Is there any reason not to update these, so we can stop getting all the warnings when we build locally?",
+  "closed_by": {
+    "login": "tomocchino",
+    "id": 13947,
+    "node_id": "MDQ6VXNlcjEzOTQ3",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/13947?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/tomocchino",
+    "html_url": "https://github.com/tomocchino",
+    "followers_url": "https://api.github.com/users/tomocchino/followers",
+    "following_url": "https://api.github.com/users/tomocchino/following{/other_user}",
+    "gists_url": "https://api.github.com/users/tomocchino/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/tomocchino/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/tomocchino/subscriptions",
+    "organizations_url": "https://api.github.com/users/tomocchino/orgs",
+    "repos_url": "https://api.github.com/users/tomocchino/repos",
+    "events_url": "https://api.github.com/users/tomocchino/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/tomocchino/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

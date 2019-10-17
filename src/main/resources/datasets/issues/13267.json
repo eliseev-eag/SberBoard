@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13267",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13267/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13267/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13267/events",
+  "html_url": "https://github.com/facebook/react/pull/13267",
+  "id": 344382426,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjAzNzg5MDQ1",
+  "number": 13267,
+  "title": "[react-dom] Allow additional text inside of a comment node container",
+  "user": {
+    "login": "r0b1n",
+    "id": 548774,
+    "node_id": "MDQ6VXNlcjU0ODc3NA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/548774?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/r0b1n",
+    "html_url": "https://github.com/r0b1n",
+    "followers_url": "https://api.github.com/users/r0b1n/followers",
+    "following_url": "https://api.github.com/users/r0b1n/following{/other_user}",
+    "gists_url": "https://api.github.com/users/r0b1n/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/r0b1n/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/r0b1n/subscriptions",
+    "organizations_url": "https://api.github.com/users/r0b1n/orgs",
+    "repos_url": "https://api.github.com/users/r0b1n/repos",
+    "events_url": "https://api.github.com/users/r0b1n/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/r0b1n/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2018-07-25T10:17:50Z",
+  "updated_at": "2019-01-08T22:25:27Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13267",
+    "html_url": "https://github.com/facebook/react/pull/13267",
+    "diff_url": "https://github.com/facebook/react/pull/13267.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13267.patch"
+  },
+  "body": "### Problem\r\nWhile using `ReactDOM.render` with a comment node as a container it is not possible to have the comment node different then `<!-- react-mount-point-unstable -->`. This makes it hard to identify multiple comment node containers on the page.\r\n\r\n### Solution\r\nMake the container check more relaxed, allow an arbitrary string in a comment node container but still require the string to contain ` react-mount-point-unstable ` marker text inside.",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5868",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5868/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5868/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5868/events",
+  "html_url": "https://github.com/facebook/react/pull/5868",
+  "id": 127055623,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTYyNjQwMjc=",
+  "number": 5868,
+  "title": "Adds new prop type validator for functions with a specific arity",
+  "user": {
+    "login": "benmills",
+    "id": 55991,
+    "node_id": "MDQ6VXNlcjU1OTkx",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/55991?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/benmills",
+    "html_url": "https://github.com/benmills",
+    "followers_url": "https://api.github.com/users/benmills/followers",
+    "following_url": "https://api.github.com/users/benmills/following{/other_user}",
+    "gists_url": "https://api.github.com/users/benmills/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/benmills/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/benmills/subscriptions",
+    "organizations_url": "https://api.github.com/users/benmills/orgs",
+    "repos_url": "https://api.github.com/users/benmills/repos",
+    "events_url": "https://api.github.com/users/benmills/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/benmills/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-01-16T21:52:38Z",
+  "updated_at": "2016-01-19T14:53:48Z",
+  "closed_at": "2016-01-18T03:40:59Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5868",
+    "html_url": "https://github.com/facebook/react/pull/5868",
+    "diff_url": "https://github.com/facebook/react/pull/5868.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5868.patch"
+  },
+  "body": "I use prop type validation frequently while writing react components. Recently I wished I had a way to ensure a function passed in as a prop had a specific arity. \n\nI wasn't sure if this was worth the effort, but the code to add it was fairly trivial so it seemed worthy of a pull request.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

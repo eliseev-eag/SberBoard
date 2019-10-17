@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16305",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16305/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16305/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16305/events",
+  "html_url": "https://github.com/facebook/react/issues/16305",
+  "id": 477669061,
+  "node_id": "MDU6SXNzdWU0Nzc2NjkwNjE=",
+  "number": 16305,
+  "title": "Different Suspense Behavior in ReactDOM.render vs React.createRoot().render",
+  "user": {
+    "login": "bijection",
+    "id": 8824442,
+    "node_id": "MDQ6VXNlcjg4MjQ0NDI=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/8824442?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bijection",
+    "html_url": "https://github.com/bijection",
+    "followers_url": "https://api.github.com/users/bijection/followers",
+    "following_url": "https://api.github.com/users/bijection/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bijection/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bijection/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bijection/subscriptions",
+    "organizations_url": "https://api.github.com/users/bijection/orgs",
+    "repos_url": "https://api.github.com/users/bijection/repos",
+    "events_url": "https://api.github.com/users/bijection/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bijection/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-08-07T02:02:12Z",
+  "updated_at": "2019-08-15T12:30:34Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n\r\nbug\r\n\r\n**What is the current behavior?**\r\n\r\nThrowing a resolved promise inside an app mounted with `React.unstable_createRoot().render()` triggers the suspense fallback render, defocusing inputs in the app.\r\n\r\nIn contrast, throwing an immediately resolved promise inside the same app rendered with  `ReactDOM.render()` does not trigger the suspense fallback render.\r\n\r\nHere's a small reproduction showing the different behaviors: \r\n```javascript\r\nimport React from \"react\";\r\nimport ReactDOM from \"react-dom\";\r\n\r\nlet cache = {};\r\n\r\nfunction MyApp() {\r\n  let [text, setText] = React.useState(\"edit this\");\r\n\r\n  if (!cache[text]) {\r\n    cache[text] = true;\r\n    throw Promise.resolve();\r\n  }\r\n\r\n  return <input value={text} onChange={e => setText(e.target.value)} />;\r\n}\r\n\r\nlet fallback = <div style={{ background: \"red\" }}>fallback</div>;\r\nlet dom = (\r\n  <React.Suspense fallback={fallback}>\r\n    <MyApp />\r\n  </React.Suspense>\r\n);\r\n\r\n// Switch out the following two lines and type in the input\r\n// to see the difference in behavior\r\n\r\nReactDOM.unstable_createRoot(document.getElementById(\"root\")).render(dom);\r\n// ReactDOM.render(dom, document.getElementById(\"root\"));\r\n\r\n```\r\n\r\nHere's a CodeSandbox with the code above: https://codesandbox.io/s/stupefied-cookies-qh8sy\r\n\r\n\r\n\r\n**What is the expected behavior?**\r\n\r\nThrowing an immediately resolved promise inside an app mounted with `React.unstable_createRoot().render()` should not trigger the suspense fallback render. Instead, it should behave identically to the app mounted with `ReactDOM.render()`.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nI'm using Chrome 75.0.3770.142, macOS 10.14.3, and react 16.9.0-alpha-0\r\n\r\nN.B. This issue is pretty much the same as #15900, though that one seemed to have more moving parts. Please merge these if appropriate.",
+  "closed_by": null
+}

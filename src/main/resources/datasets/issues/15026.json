@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15026",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15026/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15026/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15026/events",
+  "html_url": "https://github.com/facebook/react/pull/15026",
+  "id": 417558120,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjU4NTI5OTQ0",
+  "number": 15026,
+  "title": "[ESLint] Suggest moving inside a Hook or useCallback when bare function is a dependency",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-03-05T23:57:32Z",
+  "updated_at": "2019-03-06T23:50:17Z",
+  "closed_at": "2019-03-06T23:50:03Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15026",
+    "html_url": "https://github.com/facebook/react/pull/15026",
+    "diff_url": "https://github.com/facebook/react/pull/15026.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15026.patch"
+  },
+  "body": "This adds a new warning when a bare function is added as a dependency. It's always useless to do it because you might as well omit the deps array completely.\r\n\r\n```js\r\nfunction handleChange(value) { // Needed as a dep, but it's a bare function so always invalidates\r\n  setState(value);\r\n}\r\n\r\nuseEffect(() => {\r\n  return Store.subscribe(handleChange)\r\n}, [handleChange]);\r\n```\r\n\r\nIf the function is only used inside the Hook, it nudges you to move it inside it. That's usually an intuitive fix because then you can start fixing *its* deps.\r\n\r\nIf the function is used outside the Hook too, it suggests wrapping in `useCallback`. That lets you do \"whack-a-mole\" fixing up a chain of callbacks until you see what's causing things to change. There is an autofix for a simple case (variable declaration) where we know we wouldn't mess up hoisting.\r\n\r\nThis may be a good way to learn the dependencies mental model. However, there may be situations where just following suggestions gets you in a suggestion loop (e.g. circular function deps). I'm not sure I understand the limitations of this model well. However, even if you can't just follow autofixes, it would highlight the problem you'd have to discover on your own anyway. So at least this helps you see it. We may add more nudges (e.g. to use reducer) on top of this later to help you find the right fix.\r\n\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

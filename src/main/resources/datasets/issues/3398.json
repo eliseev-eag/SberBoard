@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3398",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3398/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3398/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3398/events",
+  "html_url": "https://github.com/facebook/react/issues/3398",
+  "id": 60965610,
+  "node_id": "MDU6SXNzdWU2MDk2NTYxMA==",
+  "number": 3398,
+  "title": "Implement Sideways Data Loading",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 739777675,
+      "node_id": "MDU6TGFiZWw3Mzk3Nzc2NzU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Component%20API",
+      "name": "Component: Component API",
+      "color": "d4c5f9",
+      "default": false
+    },
+    {
+      "id": 270986513,
+      "node_id": "MDU6TGFiZWwyNzA5ODY1MTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Big%20Picture",
+      "name": "Type: Big Picture",
+      "color": "61dafb",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 136,
+  "created_at": "2015-03-13T02:37:05Z",
+  "updated_at": "2018-08-15T20:02:00Z",
+  "closed_at": "2018-08-15T20:02:00Z",
+  "author_association": "MEMBER",
+  "body": "This is a first-class API for sideways data loading of stateless (although potentially memoized) data from a global store/network/resource, potentially using props/state as input.\n\n``` js\ntype RecordOfObservables = { [key:string]: Observable<mixed> };\n\nclass Foo {\n\n  observe(): RecordOfObservables {\n    return {\n      myContent: xhr(this.props.url)\n    };\n  }\n\n  render() {\n    var myContent : ?string = this.data.myContent;\n    return <div>{myContent}</div>;\n  }\n\n}\n```\n\nobserve() executes after componentWillMount/componentWillUpdate but before render.\n\nFor each key/value in the record. Subscribe to the Observable in the value.\n\n``` js\nsubscription = observable.subscribe({ onNext: handleNext });\n```\n\nWe allow onNext to be synchronously invoked from subscribe. If it is, we set:\n\n``` js\nthis.data[key] = nextValue;\n```\n\nOtherwise we leave it as undefined for the initial render. (Maybe we set it to null?)\n\nThen render proceeds as usual.\n\nEvery time onNext gets invoked, we schedule a new \"this.data[key]\" which effectively triggers a forcedUpdate on this component. If this is the only change, then observe is not reexecuted (componentWillUpdate -> render -> componentDidUpdate).\n\nIf props / state changed (i.e. an update from recieveProps or setState), then observe() is reexecuted (during reconciliation).\n\nAt this point we loop over the new record, and subscribe to all the new Observables.\n\nAfter that, unsubscribe to the previous Observables.\n\n``` js\nsubscription.dispose();\n```\n\nThis ordering is important since it allows the provider of data to do reference counting of their cache. I.e. I can cache data for as long as nobody listens to it. If I unsubscribed immediately, then the reference count would go down to zero before I subscribe to the same data again.\n\nWhen a component is unmounted, we automatically unsubscribe from all the active subscriptions.\n\nIf the new subscription didn't immediately call onNext, then we will keep using the previous value.\n\nSo if my `this.props.url` from my example changes, and I'm subscribing to a new URL, myContent will keep showing the content of the previous url until the next url has fully loaded.\n\nThis has the same semantics as the `<img />` tag. We've seen that, while this can be confusing and lead to inconsistencies it is a fairly sane default, and it is easier to make it show a spinner than it would be to have the opposite default.\n\nBest practice might be to immediately send a \"null\" value if you don't have the data cached. Another alternative is for an Observable to provide both the URL (or ID) and the content in the result.\n\n``` js\nclass Foo {\n\n  observe() {\n    return {\n      user: loadUser(this.props.userID)\n    };\n  }\n\n  render() {\n    if (this.data.user.id !== this.props.userID) {\n      // Ensure that we never show inconsistent userID / user.name combinations.\n      return <Spinner />;\n    }\n    return <div>Hello, {this.data.user.name} [{this.props.userID}]!</div>;\n  }\n\n}\n```\n\nWe should use the RxJS contract of Observable since that is more in common use and allows synchronous execution, but once @jhusain's proposal is in more common use, we'll switch to that contract instead.\n\n``` js\nvar subscription = observable.subscribe({ onNext, onError, onCompleted });\nsubscription.dispose();\n```\n\nWe can add more life-cycle hooks that respond to these events if necessary.\n\nNote: This concept allows sideways data to behave like \"behaviors\" - just like props. This means that we don't have to overload the notion state for these things. It allows for optimizations such as throwing away the data only to resubscribe later. It is restorable.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

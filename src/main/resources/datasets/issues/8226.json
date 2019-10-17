@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8226",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8226/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8226/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8226/events",
+  "html_url": "https://github.com/facebook/react/pull/8226",
+  "id": 187841604,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTI2NzMyNjQ=",
+  "number": 8226,
+  "title": "Fix typos in Shallow Rendering Documentation",
+  "user": {
+    "login": "natec8",
+    "id": 757931,
+    "node_id": "MDQ6VXNlcjc1NzkzMQ==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/757931?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/natec8",
+    "html_url": "https://github.com/natec8",
+    "followers_url": "https://api.github.com/users/natec8/followers",
+    "following_url": "https://api.github.com/users/natec8/following{/other_user}",
+    "gists_url": "https://api.github.com/users/natec8/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/natec8/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/natec8/subscriptions",
+    "organizations_url": "https://api.github.com/users/natec8/orgs",
+    "repos_url": "https://api.github.com/users/natec8/repos",
+    "events_url": "https://api.github.com/users/natec8/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/natec8/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2016-11-07T22:00:43Z",
+  "updated_at": "2016-11-16T15:22:43Z",
+  "closed_at": "2016-11-08T20:29:27Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8226",
+    "html_url": "https://github.com/facebook/react/pull/8226",
+    "diff_url": "https://github.com/facebook/react/pull/8226.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8226.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

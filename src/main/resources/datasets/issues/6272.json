@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6272",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6272/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6272/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6272/events",
+  "html_url": "https://github.com/facebook/react/pull/6272",
+  "id": 141351203,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjMxMDc0ODE=",
+  "number": 6272,
+  "title": "Fix typo",
+  "user": {
+    "login": "oafridi",
+    "id": 2799848,
+    "node_id": "MDQ6VXNlcjI3OTk4NDg=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/2799848?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/oafridi",
+    "html_url": "https://github.com/oafridi",
+    "followers_url": "https://api.github.com/users/oafridi/followers",
+    "following_url": "https://api.github.com/users/oafridi/following{/other_user}",
+    "gists_url": "https://api.github.com/users/oafridi/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/oafridi/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/oafridi/subscriptions",
+    "organizations_url": "https://api.github.com/users/oafridi/orgs",
+    "repos_url": "https://api.github.com/users/oafridi/repos",
+    "events_url": "https://api.github.com/users/oafridi/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/oafridi/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-03-16T17:49:39Z",
+  "updated_at": "2016-03-16T18:15:22Z",
+  "closed_at": "2016-03-16T18:15:22Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6272",
+    "html_url": "https://github.com/facebook/react/pull/6272",
+    "diff_url": "https://github.com/facebook/react/pull/6272.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6272.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

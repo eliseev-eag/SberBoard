@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6541",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6541/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6541/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6541/events",
+  "html_url": "https://github.com/facebook/react/issues/6541",
+  "id": 149168960,
+  "node_id": "MDU6SXNzdWUxNDkxNjg5NjA=",
+  "number": 6541,
+  "title": "Iframe load event not firing in Chrome and Safari when src is 'about:blank'",
+  "user": {
+    "login": "pirelenito",
+    "id": 6001,
+    "node_id": "MDQ6VXNlcjYwMDE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6001?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/pirelenito",
+    "html_url": "https://github.com/pirelenito",
+    "followers_url": "https://api.github.com/users/pirelenito/followers",
+    "following_url": "https://api.github.com/users/pirelenito/following{/other_user}",
+    "gists_url": "https://api.github.com/users/pirelenito/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/pirelenito/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/pirelenito/subscriptions",
+    "organizations_url": "https://api.github.com/users/pirelenito/orgs",
+    "repos_url": "https://api.github.com/users/pirelenito/repos",
+    "events_url": "https://api.github.com/users/pirelenito/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/pirelenito/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2016-04-18T14:35:13Z",
+  "updated_at": "2018-01-29T18:59:51Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "See: https://jsfiddle.net/pnct6b7r/\n\nIt will not trigger the alert in Chrome and Safari, but it will work in Firefox and even IE8.\n\nIs this a React issue or Webkit issue? If it is a Webkit issue, should we \"fix it\" in React given that we want [consistent events across browsers](http://facebook.github.io/react/docs/events.html)?\n\nps: The JSFiddle was based on the isuse #5332.\n",
+  "closed_by": null
+}

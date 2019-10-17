@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5235",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5235/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5235/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5235/events",
+  "html_url": "https://github.com/facebook/react/pull/5235",
+  "id": 112655867,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDgzNzI0MDY=",
+  "number": 5235,
+  "title": "Update syntax in older Relay blog post that may be causing confusion",
+  "user": {
+    "login": "wincent",
+    "id": 7074,
+    "node_id": "MDQ6VXNlcjcwNzQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/7074?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/wincent",
+    "html_url": "https://github.com/wincent",
+    "followers_url": "https://api.github.com/users/wincent/followers",
+    "following_url": "https://api.github.com/users/wincent/following{/other_user}",
+    "gists_url": "https://api.github.com/users/wincent/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/wincent/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/wincent/subscriptions",
+    "organizations_url": "https://api.github.com/users/wincent/orgs",
+    "repos_url": "https://api.github.com/users/wincent/repos",
+    "events_url": "https://api.github.com/users/wincent/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/wincent/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2015-10-21T18:55:14Z",
+  "updated_at": "2015-10-31T19:22:23Z",
+  "closed_at": "2015-10-30T06:14:19Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5235",
+    "html_url": "https://github.com/facebook/react/pull/5235",
+    "diff_url": "https://github.com/facebook/react/pull/5235.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5235.patch"
+  },
+  "body": "Just seen on Stack Overflow [a question](http://stackoverflow.com/questions/33261751/why-does-relay-ql-result-in-unterminated-string-constant-error) that suggests people may be confused if they run across some of the old syntax in one of our old blog posts.\n\nIdeally people would consult the (up-to-date) documentation instead, and we don't want to have to maintain old blog posts, but in this case the cost of updating the syntax was low so I just went ahead and did it.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8250",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8250/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8250/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8250/events",
+  "html_url": "https://github.com/facebook/react/pull/8250",
+  "id": 188366189,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTMwNDkwMjE=",
+  "number": 8250,
+  "title": "Update refs-and-the-dom.md",
+  "user": {
+    "login": "arnif",
+    "id": 1312916,
+    "node_id": "MDQ6VXNlcjEzMTI5MTY=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1312916?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/arnif",
+    "html_url": "https://github.com/arnif",
+    "followers_url": "https://api.github.com/users/arnif/followers",
+    "following_url": "https://api.github.com/users/arnif/following{/other_user}",
+    "gists_url": "https://api.github.com/users/arnif/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/arnif/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/arnif/subscriptions",
+    "organizations_url": "https://api.github.com/users/arnif/orgs",
+    "repos_url": "https://api.github.com/users/arnif/repos",
+    "events_url": "https://api.github.com/users/arnif/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/arnif/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2016-11-09T22:13:26Z",
+  "updated_at": "2016-11-16T15:22:43Z",
+  "closed_at": "2016-11-09T22:45:21Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8250",
+    "html_url": "https://github.com/facebook/react/pull/8250",
+    "diff_url": "https://github.com/facebook/react/pull/8250.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8250.patch"
+  },
+  "body": "Since a lot of projects use [airbnb eslint config](https://www.npmjs.com/package/eslint-config-airbnb) where [this rule](http://eslint.org/docs/rules/no-return-assign) is enabled (and its a good rule) some people might get confused when they are trying this out in their project.",
+  "closed_by": {
+    "login": "lacker",
+    "id": 106475,
+    "node_id": "MDQ6VXNlcjEwNjQ3NQ==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/106475?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lacker",
+    "html_url": "https://github.com/lacker",
+    "followers_url": "https://api.github.com/users/lacker/followers",
+    "following_url": "https://api.github.com/users/lacker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lacker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lacker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lacker/subscriptions",
+    "organizations_url": "https://api.github.com/users/lacker/orgs",
+    "repos_url": "https://api.github.com/users/lacker/repos",
+    "events_url": "https://api.github.com/users/lacker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lacker/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

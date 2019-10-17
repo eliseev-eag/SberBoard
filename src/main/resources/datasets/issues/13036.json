@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13036",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13036/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13036/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13036/events",
+  "html_url": "https://github.com/facebook/react/issues/13036",
+  "id": 331902776,
+  "node_id": "MDU6SXNzdWUzMzE5MDI3NzY=",
+  "number": 13036,
+  "title": "Add a way to compare relative positions of deep children",
+  "user": {
+    "login": "mshoho",
+    "id": 28045781,
+    "node_id": "MDQ6VXNlcjI4MDQ1Nzgx",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/28045781?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mshoho",
+    "html_url": "https://github.com/mshoho",
+    "followers_url": "https://api.github.com/users/mshoho/followers",
+    "following_url": "https://api.github.com/users/mshoho/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mshoho/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mshoho/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mshoho/subscriptions",
+    "organizations_url": "https://api.github.com/users/mshoho/orgs",
+    "repos_url": "https://api.github.com/users/mshoho/repos",
+    "events_url": "https://api.github.com/users/mshoho/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mshoho/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2018-06-13T08:58:57Z",
+  "updated_at": "2018-08-02T17:14:26Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "Hey,\r\n\r\nIt seems like there is currently no way to take two mounted component instances and tell which one of them is coming earlier in the application structure (they could have been mounted asynchronously, and tracking the instantiation/render/mount time is not enough). Ideologically I cannot traverse the application tree, that is understandable.\r\n\r\nThough, the relative positions are needed sometimes. My use case — I track focusable elements in the application using context (each focusable element reports of its existence to a focus manager which is provided by the context). This is needed to be able to limit the focusablility/accessibility of all elements which are outside of the currently shown modal dialog/popup so that the focus is trapped inside. For the sake of better accessibility, I need to automatically focus first focusable in the modal dialog when I'm in the keyboard navigation mode. So, I have the references to all focusable elements inside the dialog, but I cannot tell which one comes first using public React API. For web there is a workaround to findDOMNode and compareDocumentPosition(), but that doesn't work with React Native.\r\n\r\nCan we have something similar to compareDocumentPosition() but for React component instances?\r\n\r\nThanks!\r\n",
+  "closed_by": null
+}

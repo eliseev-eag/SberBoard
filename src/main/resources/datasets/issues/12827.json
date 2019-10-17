@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12827",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12827/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12827/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12827/events",
+  "html_url": "https://github.com/facebook/react/issues/12827",
+  "id": 323459897,
+  "node_id": "MDU6SXNzdWUzMjM0NTk4OTc=",
+  "number": 12827,
+  "title": "Callback in react-test-renderer for component changes",
+  "user": {
+    "login": "StevePotter",
+    "id": 271103,
+    "node_id": "MDQ6VXNlcjI3MTEwMw==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/271103?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/StevePotter",
+    "html_url": "https://github.com/StevePotter",
+    "followers_url": "https://api.github.com/users/StevePotter/followers",
+    "following_url": "https://api.github.com/users/StevePotter/following{/other_user}",
+    "gists_url": "https://api.github.com/users/StevePotter/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/StevePotter/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/StevePotter/subscriptions",
+    "organizations_url": "https://api.github.com/users/StevePotter/orgs",
+    "repos_url": "https://api.github.com/users/StevePotter/repos",
+    "events_url": "https://api.github.com/users/StevePotter/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/StevePotter/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710400704,
+      "node_id": "MDU6TGFiZWw3MTA0MDA3MDQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Test%20Renderer",
+      "name": "Component: Test Renderer",
+      "color": "006b75",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2018-05-16T03:52:24Z",
+  "updated_at": "2018-08-02T19:15:24Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\nfeature\r\n\r\n**What is the current behavior?**\r\nMany react components render multiple times automatically.  Take a graphql component.  First it will render a loading spinner, then the data after it has been fetched.  In react-test-renderer, it's difficult to get a snapshot to consistently render for these types of components.\r\n\r\nCurrently, we set an interval timer and check the component tree to see if the data has loaded and thus rendered.  This approach results in a bunch of unnecessary checks and slows down tests because the interval timer will run after the component has been rendered.\r\n\r\n**What is the expected behavior?**\r\nI would expect react-test-render to allow a callback that will be invoked each time any component in the component tree changes, basically after any component's `componentDidUpdate` ran.  I would expect an API like:\r\n```\r\nimport TestRenderer from 'react-test-renderer';\r\nconst testRenderer = TestRenderer.create(\r\n  <Todos />\r\n);\r\ntestRenderer.onChange(() => {\r\n// check TODOS for whether the data has loaded and do the snapshot\r\n})\r\n```\r\n\r\nThis would be useful in react-dom and react-native.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nIt's a proposal for a new feature, doesn't affect any existing React versions\r\n\r\n",
+  "closed_by": null
+}

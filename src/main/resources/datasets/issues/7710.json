@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7710",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7710/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7710/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7710/events",
+  "html_url": "https://github.com/facebook/react/pull/7710",
+  "id": 176564779,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODQ5OTQ2NTQ=",
+  "number": 7710,
+  "title": "Update OWASP link in docs for dangerous innerHTML",
+  "user": {
+    "login": "amanvir",
+    "id": 1644832,
+    "node_id": "MDQ6VXNlcjE2NDQ4MzI=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1644832?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/amanvir",
+    "html_url": "https://github.com/amanvir",
+    "followers_url": "https://api.github.com/users/amanvir/followers",
+    "following_url": "https://api.github.com/users/amanvir/following{/other_user}",
+    "gists_url": "https://api.github.com/users/amanvir/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/amanvir/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/amanvir/subscriptions",
+    "organizations_url": "https://api.github.com/users/amanvir/orgs",
+    "repos_url": "https://api.github.com/users/amanvir/repos",
+    "events_url": "https://api.github.com/users/amanvir/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/amanvir/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-09-13T06:59:33Z",
+  "updated_at": "2016-09-19T21:27:10Z",
+  "closed_at": "2016-09-13T12:29:09Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7710",
+    "html_url": "https://github.com/facebook/react/pull/7710",
+    "diff_url": "https://github.com/facebook/react/pull/7710.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7710.patch"
+  },
+  "body": "Fixes the 404 in the docs to the OWASP pdf. I've added the 2013 edition since the 2016 version is not out yet. \n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

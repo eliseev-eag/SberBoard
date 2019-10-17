@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7931",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7931/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7931/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7931/events",
+  "html_url": "https://github.com/facebook/react/pull/7931",
+  "id": 182131025,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODg3NDIwNzc=",
+  "number": 7931,
+  "title": "[Website] [API Reference] React, ReactDOM, ReactDOMServer Reference Guides",
+  "user": {
+    "login": "hramos",
+    "id": 165856,
+    "node_id": "MDQ6VXNlcjE2NTg1Ng==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/165856?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/hramos",
+    "html_url": "https://github.com/hramos",
+    "followers_url": "https://api.github.com/users/hramos/followers",
+    "following_url": "https://api.github.com/users/hramos/following{/other_user}",
+    "gists_url": "https://api.github.com/users/hramos/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/hramos/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/hramos/subscriptions",
+    "organizations_url": "https://api.github.com/users/hramos/orgs",
+    "repos_url": "https://api.github.com/users/hramos/repos",
+    "events_url": "https://api.github.com/users/hramos/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/hramos/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-10-10T22:31:20Z",
+  "updated_at": "2016-10-11T13:52:55Z",
+  "closed_at": "2016-10-11T13:52:55Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7931",
+    "html_url": "https://github.com/facebook/react/pull/7931",
+    "diff_url": "https://github.com/facebook/react/pull/7931.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7931.patch"
+  },
+  "body": "Based on the [Top-Level API Reference](https://facebook.github.io/react/docs/top-level-api.html).\n\nThis is now split into three reference docs:\n- React\n- ReactDOM\n- ReactDOMServer\n\nThe last two used to be bundled together with the React top-level API reference, and I think the intro paragraphs for these two new documents can be expanded. Looking for feedback on what information is missing from these guides and what is no longer relevant (e.g. React.DOM is less prominent in the new reference, as is React.createElement).\n## React\n\n![screencapture-localhost-4000-react-docs-reference-react-html-1476138699370](https://cloud.githubusercontent.com/assets/165856/19253259/b6bbfd24-8efe-11e6-9b28-b404f5b42e7e.png)\n## ReactDOM\n\n![screencapture-localhost-4000-react-docs-reference-react-dom-html-1476138707064](https://cloud.githubusercontent.com/assets/165856/19253262/bcd9970c-8efe-11e6-93da-c43353e53e0b.png)\n## ReactDOMServer\n\n![screencapture-localhost-4000-react-docs-reference-react-dom-server-html-1476138714162](https://cloud.githubusercontent.com/assets/165856/19253267/c3083e76-8efe-11e6-91fb-889462e727cb.png)\n",
+  "closed_by": {
+    "login": "hramos",
+    "id": 165856,
+    "node_id": "MDQ6VXNlcjE2NTg1Ng==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/165856?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/hramos",
+    "html_url": "https://github.com/hramos",
+    "followers_url": "https://api.github.com/users/hramos/followers",
+    "following_url": "https://api.github.com/users/hramos/following{/other_user}",
+    "gists_url": "https://api.github.com/users/hramos/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/hramos/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/hramos/subscriptions",
+    "organizations_url": "https://api.github.com/users/hramos/orgs",
+    "repos_url": "https://api.github.com/users/hramos/repos",
+    "events_url": "https://api.github.com/users/hramos/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/hramos/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

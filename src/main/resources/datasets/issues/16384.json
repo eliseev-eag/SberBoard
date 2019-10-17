@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16384",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16384/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16384/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16384/events",
+  "html_url": "https://github.com/facebook/react/pull/16384",
+  "id": 480388436,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzA3MDk1MjMy",
+  "number": 16384,
+  "title": "Make component stack last argument for deprecation warnings",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-08-13T21:57:18Z",
+  "updated_at": "2019-08-13T22:25:07Z",
+  "closed_at": "2019-08-13T22:25:04Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16384",
+    "html_url": "https://github.com/facebook/react/pull/16384",
+    "diff_url": "https://github.com/facebook/react/pull/16384.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16384.patch"
+  },
+  "body": "Component stack is the last argument when we use `warning()`.\r\n\r\nThere are a few cases where we append stack manually. (Maybe some of them don't need to.) Those were originally written to be more readable. However, increasingly we're using tooling that treats last argument specially if it looks like a component stack. Both in RN and in FB5. We'll likely do the same in CRA/Next/etc.\r\n\r\nSo let's always put component stack last consistently. This makes it easier to build richer UIs and looks decent in console anyway.\r\n\r\n<img width=\"1062\" alt=\"Screen Shot 2019-08-13 at 10 57 24 PM\" src=\"https://user-images.githubusercontent.com/810438/62980187-bc0fec80-be1d-11e9-9196-616fbc0273f7.png\">\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

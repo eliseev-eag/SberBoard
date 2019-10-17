@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15313",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15313/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15313/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15313/events",
+  "html_url": "https://github.com/facebook/react/pull/15313",
+  "id": 428999797,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjY3MjMxNjMx",
+  "number": 15313,
+  "title": "Match react-devtools display name behavior for React.memo",
+  "user": {
+    "login": "eps1lon",
+    "id": 12292047,
+    "node_id": "MDQ6VXNlcjEyMjkyMDQ3",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/12292047?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/eps1lon",
+    "html_url": "https://github.com/eps1lon",
+    "followers_url": "https://api.github.com/users/eps1lon/followers",
+    "following_url": "https://api.github.com/users/eps1lon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/eps1lon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/eps1lon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/eps1lon/subscriptions",
+    "organizations_url": "https://api.github.com/users/eps1lon/orgs",
+    "repos_url": "https://api.github.com/users/eps1lon/repos",
+    "events_url": "https://api.github.com/users/eps1lon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/eps1lon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2019-04-03T22:19:57Z",
+  "updated_at": "2019-09-12T05:16:51Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15313",
+    "html_url": "https://github.com/facebook/react/pull/15313",
+    "diff_url": "https://github.com/facebook/react/pull/15313.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15313.patch"
+  },
+  "body": "```diff\r\n// anonymous render\r\nReact.memo(() => null)\r\n- Component\r\n+ Memo\r\n// named render\r\nReact.memo(function Inner() { return null })\r\n- Inner\r\n+ Memo(Inner)\r\n// displayName\r\nconst Unknown = React.memo(() => null);\r\nUnknown.displayName = 'FancyName';\r\n- Component\r\n+ FancyName\r\n```\r\n\r\nShowcase to verify matching behavior with react-devtools: https://codesandbox.io/s/lpx7k7wv4z",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9724",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9724/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9724/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9724/events",
+  "html_url": "https://github.com/facebook/react/pull/9724",
+  "id": 229977972,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTIxNTAyNjM1",
+  "number": 9724,
+  "title": "Add React Brazil Conf",
+  "user": {
+    "login": "rodrigooler",
+    "id": 5496931,
+    "node_id": "MDQ6VXNlcjU0OTY5MzE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/5496931?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rodrigooler",
+    "html_url": "https://github.com/rodrigooler",
+    "followers_url": "https://api.github.com/users/rodrigooler/followers",
+    "following_url": "https://api.github.com/users/rodrigooler/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rodrigooler/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rodrigooler/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rodrigooler/subscriptions",
+    "organizations_url": "https://api.github.com/users/rodrigooler/orgs",
+    "repos_url": "https://api.github.com/users/rodrigooler/repos",
+    "events_url": "https://api.github.com/users/rodrigooler/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rodrigooler/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2017-05-19T13:38:55Z",
+  "updated_at": "2017-05-19T13:52:37Z",
+  "closed_at": "2017-05-19T13:52:14Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9724",
+    "html_url": "https://github.com/facebook/react/pull/9724",
+    "diff_url": "https://github.com/facebook/react/pull/9724.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9724.patch"
+  },
+  "body": "Adding the React Brazil Conf\r\n\r\n```\r\n### React Brazil 2017\r\nOctober 10 in São Paulo\r\n\r\n[Website](http://reactconfbr.com.br/) - [Facebook](https://www.facebook.com/reactconf/) - [Slack](https://react-brasil.slack.com)\r\n```",
+  "closed_by": {
+    "login": "rodrigooler",
+    "id": 5496931,
+    "node_id": "MDQ6VXNlcjU0OTY5MzE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/5496931?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rodrigooler",
+    "html_url": "https://github.com/rodrigooler",
+    "followers_url": "https://api.github.com/users/rodrigooler/followers",
+    "following_url": "https://api.github.com/users/rodrigooler/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rodrigooler/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rodrigooler/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rodrigooler/subscriptions",
+    "organizations_url": "https://api.github.com/users/rodrigooler/orgs",
+    "repos_url": "https://api.github.com/users/rodrigooler/repos",
+    "events_url": "https://api.github.com/users/rodrigooler/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rodrigooler/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

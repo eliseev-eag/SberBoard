@@ -1,0 +1,99 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11526",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11526/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11526/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11526/events",
+  "html_url": "https://github.com/facebook/react/issues/11526",
+  "id": 273116828,
+  "node_id": "MDU6SXNzdWUyNzMxMTY4Mjg=",
+  "number": 11526,
+  "title": "Transpilation in v16.1.0 freezes the react-dom/server interface",
+  "user": {
+    "login": "travi",
+    "id": 126441,
+    "node_id": "MDQ6VXNlcjEyNjQ0MQ==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/126441?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/travi",
+    "html_url": "https://github.com/travi",
+    "followers_url": "https://api.github.com/users/travi/followers",
+    "following_url": "https://api.github.com/users/travi/following{/other_user}",
+    "gists_url": "https://api.github.com/users/travi/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/travi/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/travi/subscriptions",
+    "organizations_url": "https://api.github.com/users/travi/orgs",
+    "repos_url": "https://api.github.com/users/travi/repos",
+    "events_url": "https://api.github.com/users/travi/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/travi/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 71502270,
+      "node_id": "MDU6TGFiZWw3MTUwMjI3MA==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Build%20Infrastructure",
+      "name": "Component: Build Infrastructure",
+      "color": "f9d0c4",
+      "default": false
+    },
+    {
+      "id": 588833528,
+      "node_id": "MDU6TGFiZWw1ODg4MzM1Mjg=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Difficulty:%20medium",
+      "name": "Difficulty: medium",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 178761159,
+      "node_id": "MDU6TGFiZWwxNzg3NjExNTk=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Regression",
+      "name": "Type: Regression",
+      "color": "e11d21",
+      "default": false
+    },
+    {
+      "id": 725156255,
+      "node_id": "MDU6TGFiZWw3MjUxNTYyNTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/good%20first%20issue%20(taken)",
+      "name": "good first issue (taken)",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2017-11-11T04:00:34Z",
+  "updated_at": "2017-11-13T16:26:27Z",
+  "closed_at": "2017-11-13T13:52:59Z",
+  "author_association": "CONTRIBUTOR",
+  "body": "As initially reported in https://github.com/facebook/react/issues/11520#issuecomment-343593640, attempting to upgrade from v16.0 to v16.1 caused a test that was previously working to fail. The test was using [sinon](http://sinonjs.org/) to stub `renderToStaticMarkup` on `react-dom/server` and v16.1 results in the following error: \r\n\r\n```\r\nTypeError: Cannot redefine property: renderToStaticMarkup\r\n    at Function.defineProperty (<anonymous>)\r\n    at wrapMethod (node_modules/sinon/lib/sinon/util/core/wrap-method.js:92:16)\r\n    at stub (node_modules/sinon/lib/sinon/stub.js:60:44)\r\n    at Object.stub (node_modules/sinon/lib/sinon/collection.js:102:33)\r\n    at Context.setup (test/unit/....)\r\n```\r\n\r\nthe export from `react-dom/cjs/react-dom-server.node.development` is frozen as:\r\n\r\n```js\r\nObject.freeze({\r\n  renderToString: renderToString,\r\n  renderToStaticMarkup: renderToStaticMarkup,\r\n  renderToNodeStream: renderToNodeStream,\r\n  renderToStaticNodeStream: renderToStaticNodeStream,\r\n  version: version\r\n});\r\n```\r\n\r\n[the source](https://github.com/facebook/react/blob/13c491a8282cb102c40d4ed74738ebebe7901a5f/packages/react-dom/src/server/ReactDOMServerNode.js#L17-L22) is not frozen, and https://github.com/facebook/react/issues/11520#issuecomment-343604002 further confirms that the `Object.freeze()` is a result of the transpilation.\r\n\r\nfor now, i am simply splitting this report into a separate issue from https://github.com/facebook/react/issues/11520, but i will add a reproduction soon and plan to submit a PR as a follow up.\r\n\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/17022",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/17022/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/17022/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/17022/events",
+  "html_url": "https://github.com/facebook/react/issues/17022",
+  "id": 502938535,
+  "node_id": "MDU6SXNzdWU1MDI5Mzg1MzU=",
+  "number": 17022,
+  "title": "Firefox: Autocomplete/Autofill not working",
+  "user": {
+    "login": "Hadsch",
+    "id": 6314282,
+    "node_id": "MDQ6VXNlcjYzMTQyODI=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6314282?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Hadsch",
+    "html_url": "https://github.com/Hadsch",
+    "followers_url": "https://api.github.com/users/Hadsch/followers",
+    "following_url": "https://api.github.com/users/Hadsch/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Hadsch/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Hadsch/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Hadsch/subscriptions",
+    "organizations_url": "https://api.github.com/users/Hadsch/orgs",
+    "repos_url": "https://api.github.com/users/Hadsch/repos",
+    "events_url": "https://api.github.com/users/Hadsch/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Hadsch/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-10-05T09:13:12Z",
+  "updated_at": "2019-10-14T16:51:26Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nBug\r\n\r\n**What is the current behavior?**\r\nFirefox doesn’t show any autofill suggestions on an input  field with type \"text\" as soon as you connect the state with the  attribute \"value\"\r\n\r\n**Reproduce**\r\nhttps://codesandbox.io/embed/material-demo-y5mlt \r\n\r\n* Open the provided sandbox example\r\n* Write test in both input fields\r\n* Press button\r\n* Write t in both text fields\r\n\r\n_Important:_ This works corretly in Chrome but not in Firefox!\r\n\r\n**What is the expected behavior?**\r\nAutofill suggestions should be visible in Firefox too!\r\n\r\nAutofill is working (FF + Chrome) if value is handled by the browser\r\n\r\n      <input\r\n            id=\"component-simple1\"\r\n            autoComplete=\"on\"\r\n            onChange={handleChange}\r\n          />\r\n\r\nAutofill is NOT working (FF) if value is handled by React(!)\r\n\r\n        <input\r\n            id=\"component-simple1\"\r\n            autoComplete=\"on\"\r\n            onChange={handleChange}\r\n            value={name}\r\n          />\r\n\r\n**Some pictues which show the wrong behavior**\r\nIt is working as long as React does not handle the value with the state of the component (upper input field):\r\n![step01](https://user-images.githubusercontent.com/6314282/66252840-9d184180-e760-11e9-9801-46724c049d74.png)\r\n\r\nThe input field where React handles the value (`value={name}`) doesn't show autofill suggestions\r\n![step02](https://user-images.githubusercontent.com/6314282/66252884-f7b19d80-e760-11e9-969d-413c1aba6948.png)\r\n\r\n\r\n**Version**\r\n\r\nTech | Version\r\n-- | --\r\nReact | latest (see Sandbox)\r\nBrowser | Firefox 68.0.1(latest)\r\nOS | tested on Windows\r\n\r\n",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15141",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15141/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15141/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15141/events",
+  "html_url": "https://github.com/facebook/react/pull/15141",
+  "id": 422369535,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjYyMTc1MjE5",
+  "number": 15141,
+  "title": "Provide new jsx transform target for reactjs/rfcs#107",
+  "user": {
+    "login": "rickyvetter",
+    "id": 4370652,
+    "node_id": "MDQ6VXNlcjQzNzA2NTI=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/4370652?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rickyvetter",
+    "html_url": "https://github.com/rickyvetter",
+    "followers_url": "https://api.github.com/users/rickyvetter/followers",
+    "following_url": "https://api.github.com/users/rickyvetter/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rickyvetter/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rickyvetter/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rickyvetter/subscriptions",
+    "organizations_url": "https://api.github.com/users/rickyvetter/orgs",
+    "repos_url": "https://api.github.com/users/rickyvetter/repos",
+    "events_url": "https://api.github.com/users/rickyvetter/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rickyvetter/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2019-03-18T18:27:12Z",
+  "updated_at": "2019-04-07T19:02:40Z",
+  "closed_at": "2019-04-07T19:02:34Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15141",
+    "html_url": "https://github.com/facebook/react/pull/15141",
+    "diff_url": "https://github.com/facebook/react/pull/15141.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15141.patch"
+  },
+  "body": "This exposes two new top-level functions on `React` - `jsx`, and `jsxs`. These are targets for JSX transformers which open up many simplifications to element creation described in https://github.com/reactjs/rfcs/pull/107.\r\n\r\nThe intent is to be backwards-compatible with the existing `createElement` call and to migrate transformers over so that most people are using this new transform. Once there are actual transforms written against this api, the more substantive changes can be tested.",
+  "closed_by": {
+    "login": "rickyvetter",
+    "id": 4370652,
+    "node_id": "MDQ6VXNlcjQzNzA2NTI=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/4370652?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rickyvetter",
+    "html_url": "https://github.com/rickyvetter",
+    "followers_url": "https://api.github.com/users/rickyvetter/followers",
+    "following_url": "https://api.github.com/users/rickyvetter/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rickyvetter/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rickyvetter/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rickyvetter/subscriptions",
+    "organizations_url": "https://api.github.com/users/rickyvetter/orgs",
+    "repos_url": "https://api.github.com/users/rickyvetter/repos",
+    "events_url": "https://api.github.com/users/rickyvetter/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rickyvetter/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5641",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5641/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5641/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5641/events",
+  "html_url": "https://github.com/facebook/react/issues/5641",
+  "id": 121565168,
+  "node_id": "MDU6SXNzdWUxMjE1NjUxNjg=",
+  "number": 5641,
+  "title": "`e.target.value` reflects <select value={}> not <option value={}> in Chrome on Windows 10",
+  "user": {
+    "login": "xenophilicibex",
+    "id": 1843672,
+    "node_id": "MDQ6VXNlcjE4NDM2NzI=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1843672?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/xenophilicibex",
+    "html_url": "https://github.com/xenophilicibex",
+    "followers_url": "https://api.github.com/users/xenophilicibex/followers",
+    "following_url": "https://api.github.com/users/xenophilicibex/following{/other_user}",
+    "gists_url": "https://api.github.com/users/xenophilicibex/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/xenophilicibex/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/xenophilicibex/subscriptions",
+    "organizations_url": "https://api.github.com/users/xenophilicibex/orgs",
+    "repos_url": "https://api.github.com/users/xenophilicibex/repos",
+    "events_url": "https://api.github.com/users/xenophilicibex/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/xenophilicibex/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 155984160,
+      "node_id": "MDU6TGFiZWwxNTU5ODQxNjA=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Status:%20Unconfirmed",
+      "name": "Status: Unconfirmed",
+      "color": "d4c5f9",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2015-12-10T19:57:59Z",
+  "updated_at": "2019-07-17T07:32:01Z",
+  "closed_at": "2017-10-04T11:43:12Z",
+  "author_association": "NONE",
+  "body": "Just a note, it works perfectly fine on earlier versions of Windows and Mac OS X\n\ncode:\n\n``` js\nvar Test = React.createClass({\n  getInitialState: function() {\n    return { value: '1' };\n  },\n\n  onChange: function(e) {\n    this.setState({value: e.target.value})\n    console.log(e.target.value)\n  },\n\n  render: function() {\n    return (\n      <div>\n        <select value={this.state.value} onChange={this.onChange}>\n          <option value=\"1\">1</option>\n          <option value=\"2\">2</option>\n          <option value=\"3\">3</option>\n          <option value=\"4\">4</option>\n        </select>\n      </div>\n    );\n  }\n});\n```\n\nWhenever the onChange is triggered, the `e.target.value` is 1. I'm assuming this is because that is the value <select> starts with. And any changes do not correctly change the value.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

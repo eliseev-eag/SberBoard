@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15978",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15978/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15978/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15978/events",
+  "html_url": "https://github.com/facebook/react/issues/15978",
+  "id": 460067586,
+  "node_id": "MDU6SXNzdWU0NjAwNjc1ODY=",
+  "number": 15978,
+  "title": "Using 'scRipt' in React.createElement's type parameter allows you to execute JavaScript code in the child parameter",
+  "user": {
+    "login": "svensprk",
+    "id": 52002625,
+    "node_id": "MDQ6VXNlcjUyMDAyNjI1",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/52002625?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/svensprk",
+    "html_url": "https://github.com/svensprk",
+    "followers_url": "https://api.github.com/users/svensprk/followers",
+    "following_url": "https://api.github.com/users/svensprk/following{/other_user}",
+    "gists_url": "https://api.github.com/users/svensprk/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/svensprk/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/svensprk/subscriptions",
+    "organizations_url": "https://api.github.com/users/svensprk/orgs",
+    "repos_url": "https://api.github.com/users/svensprk/repos",
+    "events_url": "https://api.github.com/users/svensprk/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/svensprk/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-06-24T19:56:15Z",
+  "updated_at": "2019-06-25T00:06:47Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a feature or report a bug?**\r\nReport a bug\r\n\r\n**What is the current behavior?**\r\nIt's possible to execute JavaScript code written in the child parameter of the `React.createElement` function, if the type parameter consists of a string with mixed casing, like so:\r\n\r\n```javascript\r\nReact.createElement('scRipt', null, 'alert(1)');\r\n```\r\nhttps://codesandbox.io/s/sleepy-hodgkin-twxqe\r\n\r\n**What is the expected behavior?**\r\nIt should not execute the code, but behave exactly like if you typed in 'script' in lowercase.\r\n\r\nI would argue that this is unexpected behavior. Judging from the docs ([\"JSX Prevents Injection Attacks\"](https://reactjs.org/docs/introducing-jsx.html#jsx-prevents-injection-attacks)) developers might get the impression, that it is generally safe to embed any user input using JSX. Additionally, if you try to execute JavaScript using script tags, it won't work. \r\n\r\nI _think_ developers might get the idea to give users the ability to write their own \"safe\" HTML code in comments and the like by parsing their input and converting it to React elements. JSX also allows you to use dynamic input as tag types.\r\n\r\nApart from the mentioned behavior, I'm not aware of any other `type` / `children` combination that would result in JavaScript code execution without a controllable props parameter. So a scenario where a user can control both of these parameters is most likely the only one where this leads to issues.\r\n\r\nSo I think the code below is likely the culprit (line 423). Please correct me if I'm wrong.\r\n\r\nhttps://github.com/facebook/react/blob/fce15f14d38d680f3bdee3a124e9e94e91520e16/packages/react-dom/src/client/ReactDOMComponent.js#L423-L430\r\n\r\nImo it would make sense to convert the `type` variable to lowercase before comparing it to the 'script' string, so it works as anticipated, even if the casing of the input is user-controllable. Unfortunately I'm not familiar enough with the inner workings of React to submit a pull request of which I'm confident, that it doesn't break anything. This would be my naive solution for this issue:\r\n\r\n```javascript\r\nif (typeof type === 'string' && type.toLowerCase() === 'script') { /* ... */ }\r\n```\r\n\r\nI'd love to hear your thoughts on this. Is this behavior actually unexpected and if so, should it be fixed?",
+  "closed_by": null
+}

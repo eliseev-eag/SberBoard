@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7702",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7702/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7702/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7702/events",
+  "html_url": "https://github.com/facebook/react/pull/7702",
+  "id": 176406873,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODQ4OTI2MjQ=",
+  "number": 7702,
+  "title": "(WIP) Separate internal class for functional components",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2016-09-12T15:31:13Z",
+  "updated_at": "2016-10-23T19:57:55Z",
+  "closed_at": "2016-10-23T19:57:55Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7702",
+    "html_url": "https://github.com/facebook/react/pull/7702",
+    "diff_url": "https://github.com/facebook/react/pull/7702.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7702.patch"
+  },
+  "body": "For fun, I tried to make a separate internal class for functional components.\nPreviously this was attempted in #3995.\n\nThis is work in progress. I’d like to measure perf implications of this but haven’t had the time yet.\nThe one feature that I don’t support here is factory components:\n\n``` js\nfunction Foo(props) {\n  return {\n    render() { return <div />\n  }\n}\n```\n\nThey are very inconvenient with our OOP internal hierarchy because we don’t know whether we’re dealing with a functional or a factory component until we call the function at least once.\n\nI assume this is the same reason #3995 got shoot down. However I don’t think I’ve ever seen a “factory component” in the wild and I’m not convinced in the utility of supporting them. Who are their users?\n\nShallow rendering is also broken in this PR, but I think it’s fixable.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

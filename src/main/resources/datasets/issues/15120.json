@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15120",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15120/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15120/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15120/events",
+  "html_url": "https://github.com/facebook/react/pull/15120",
+  "id": 421706423,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjYxNzAwNTU0",
+  "number": 15120,
+  "title": "[Shallow] Implement setState for Hooks and remount on type change",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-03-15T21:13:03Z",
+  "updated_at": "2019-03-26T19:37:14Z",
+  "closed_at": "2019-03-15T22:30:33Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15120",
+    "html_url": "https://github.com/facebook/react/pull/15120",
+    "diff_url": "https://github.com/facebook/react/pull/15120.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15120.patch"
+  },
+  "body": "Fixes #14840.\r\n\r\nAlternative to https://github.com/facebook/react/pull/14841. While reviewing it, I realized some of the complexity in how we implemented it is relates to an existing bug in the shallow renderer. In particularly, rendering twice with different element type kept reusing the old class instance. I fixed this in 50f22627ef91772456b36f52786c7cf2f1774db5. (Now it behaves consistently on unmount/mount and on rendering a different element type.) While this has been broken for a long while, the old behavior of ignoring the type change plainly doesn't make sense — so if it breaks any tests, it means those tests were testing the wrong thing.\r\n\r\nThis allowed me to remove a bunch of fields and simplify the logic to match shallow renderer assumptions. In the last commit (4972adbc71bfc6c8bbe05c3b6da1a09fda4043b5), I'm adding support for state updates to shallow renderer. I think it's a bit simpler than what we tried in #14841.\r\n\r\nI checked these changes don't break Enzyme test suite.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

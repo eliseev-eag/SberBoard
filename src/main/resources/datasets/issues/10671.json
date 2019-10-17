@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10671",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10671/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10671/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10671/events",
+  "html_url": "https://github.com/facebook/react/pull/10671",
+  "id": 256759096,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQwMzc1MDQ5",
+  "number": 10671,
+  "title": "Share Object.assign polyfill between UMD builds",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-09-11T16:12:50Z",
+  "updated_at": "2017-09-16T07:11:50Z",
+  "closed_at": "2017-09-11T18:23:00Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10671",
+    "html_url": "https://github.com/facebook/react/pull/10671",
+    "diff_url": "https://github.com/facebook/react/pull/10671.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10671.patch"
+  },
+  "body": "This wins back 0.3k post min/gzip which we lost due to adding license headers 😛 We can later share more utilities like this, since currently it's suboptimal that some `fbjs` things are duplicated. This only affects UMD builds.\r\n\r\nHow I verified it works:\r\n\r\n* Fixtures work (but they were broken between changing the bundling logic and adding an export)\r\n* The combined size has decreased\r\n* The diff makes sense (https://gist.github.com/gaearon/75431ad02d69a08e95aef6fba2645244), most of it is renaming `index` to `assign` though (since Rollup gives it a different name now)\r\n\r\nIt only affects UMD builds and doesn’t affect any other builds.\r\nThis is not global shared state, it's just manual deduplication.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

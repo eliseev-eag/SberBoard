@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11555",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11555/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11555/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11555/events",
+  "html_url": "https://github.com/facebook/react/pull/11555",
+  "id": 273874840,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTUyNTY2NzQ4",
+  "number": 11555,
+  "title": "[RFC] Add a new React.createRef() API for ref objects",
+  "user": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2017-11-14T17:20:13Z",
+  "updated_at": "2018-01-25T12:34:12Z",
+  "closed_at": "2018-01-05T17:05:31Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11555",
+    "html_url": "https://github.com/facebook/react/pull/11555",
+    "diff_url": "https://github.com/facebook/react/pull/11555.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11555.patch"
+  },
+  "body": "This PR adds a new API into the `react` package and the relevant logic to support this in `react-dom` along with tests. The ideas behind this stem from this issue from @sebmarkbage: https://github.com/facebook/react/issues/10581.\r\n\r\nCurrently, we offer two ways of using refs in React – string refs and callback refs. In the future, we'd like to deprecate and remove string refs from React. \r\n\r\nI'm proposing this PR as replacement for string refs that provide similar functionality to how they currently work but without many of the issues that string refs currently have (a list of them can be found at #1373).\r\n\r\nThe `React.createRef()` API will create an immutable object ref (where it's value is a mutable object referencing the actual ref). Accessing the ref value can be done via `ref.value`. An example of how this works is below:\r\n\r\n```jsx\r\nclass MyComponent extends React.Component {\r\n  constructor() {\r\n    super();\r\n    this.divRef = React.createRef();\r\n  }\r\n\r\n  render() {\r\n    return <div><input type=\"text\" ref={this.divRef} /></div>;\r\n  }\r\n\r\n  componentDidMount() {\r\n    this.divRef.value.focus();\r\n  }\r\n}\r\n```\r\n\r\nThis alternative API shouldn't provide any big real wins over callback refs – other than being a nice convenience feature. There might be some small wins in performance – as a common pattern is to assign a ref value in a closure created in the render phase of a component – this avoids that (even more so when a ref property is assigned to a non-existent component instance property).",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

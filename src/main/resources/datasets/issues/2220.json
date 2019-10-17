@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2220",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2220/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2220/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2220/events",
+  "html_url": "https://github.com/facebook/react/pull/2220",
+  "id": 43303922,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjE1MzQ3Mzk=",
+  "number": 2220,
+  "title": "Fixes chekedLink inconsistency (controlled inputs)",
+  "user": {
+    "login": "cirocosta",
+    "id": 3574444,
+    "node_id": "MDQ6VXNlcjM1NzQ0NDQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3574444?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/cirocosta",
+    "html_url": "https://github.com/cirocosta",
+    "followers_url": "https://api.github.com/users/cirocosta/followers",
+    "following_url": "https://api.github.com/users/cirocosta/following{/other_user}",
+    "gists_url": "https://api.github.com/users/cirocosta/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/cirocosta/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/cirocosta/subscriptions",
+    "organizations_url": "https://api.github.com/users/cirocosta/orgs",
+    "repos_url": "https://api.github.com/users/cirocosta/repos",
+    "events_url": "https://api.github.com/users/cirocosta/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/cirocosta/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2014-09-20T07:32:54Z",
+  "updated_at": "2015-11-09T23:53:09Z",
+  "closed_at": "2015-11-09T23:53:09Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/2220",
+    "html_url": "https://github.com/facebook/react/pull/2220",
+    "diff_url": "https://github.com/facebook/react/pull/2220.diff",
+    "patch_url": "https://github.com/facebook/react/pull/2220.patch"
+  },
+  "body": "As stated on a [thread in ReactJS mailing list](https://groups.google.com/forum/#!topic/reactjs/rAOwWRpYI1M), there is an inconsistency when using `checkedLink` and `valueLink`. With the second are totally able to create a controlled component, whilst with the first, we aren't.\n\nThis PR fixes it by getting the value from the `LinkedValueUtils` just like how it is done for `valueLink`, making it consistent. \n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

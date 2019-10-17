@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/1940",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/1940/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/1940/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/1940/events",
+  "html_url": "https://github.com/facebook/react/issues/1940",
+  "id": 38827558,
+  "node_id": "MDU6SXNzdWUzODgyNzU1OA==",
+  "number": 1940,
+  "title": "Unnecessary reflow due to setState in componentWillReceiveProps",
+  "user": {
+    "login": "univerio",
+    "id": 1037172,
+    "node_id": "MDQ6VXNlcjEwMzcxNzI=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1037172?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/univerio",
+    "html_url": "https://github.com/univerio",
+    "followers_url": "https://api.github.com/users/univerio/followers",
+    "following_url": "https://api.github.com/users/univerio/following{/other_user}",
+    "gists_url": "https://api.github.com/users/univerio/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/univerio/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/univerio/subscriptions",
+    "organizations_url": "https://api.github.com/users/univerio/orgs",
+    "repos_url": "https://api.github.com/users/univerio/repos",
+    "events_url": "https://api.github.com/users/univerio/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/univerio/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2014-07-26T22:24:07Z",
+  "updated_at": "2018-06-25T18:35:51Z",
+  "closed_at": "2018-06-25T18:35:51Z",
+  "author_association": "NONE",
+  "body": "See [mailing list post](https://groups.google.com/d/msg/reactjs/pKxD3JY_Y84/zc59P2T5IP4J), reproduced below for convenience:\n\nThe following reduced test case ([jsfiddle](http://jsfiddle.net/Tn83a/)) has an unnecessary reflow:\n\n``` javascript\nvar Input = React.createClass({\n    getInitialState: function () {\n        return {\n            text: this.props.text + \"...\"\n        };\n    },\n    componentWillReceiveProps: function (nextProps) {\n        this.setState({\n            text: nextProps.text + \"...\"\n        });\n    },\n    render: function () {\n        return React.DOM.div(null, this.state.text);\n    }\n});\n\nvar App = React.createClass({\n    getInitialState: function () {\n        return {\n            value: \"foo\"\n        };\n    },\n    render: function () {\n        var that = this;\n        return React.DOM.div(null,\n            React.DOM.input({\n                value: this.state.value,\n                onChange: function (e) {\n                    that.setState({\n                        value: e.target.value\n                    });\n                }\n            }),\n            Input({\n                text: this.state.value\n            }));\n    }\n});\n\nReact.renderComponent(App(null), document.body);\n```\n\nAnd a screenshot from the Timeline tab in Chrome Dev Tools showing the reflow:\n\n![reflow](https://cloud.githubusercontent.com/assets/1037172/3712415/33574b9e-1513-11e4-9dca-cecc3233353a.png)\n\nAn equivalent implementation ([jsfiddle](http://jsfiddle.net/EG7hL/)) not using `setState` in `componentWillReceiveProps` does not have the same reflow:\n\n``` javascript\nvar Input = React.createClass({\n    render: function () {\n        return React.DOM.div(null, this.props.text + \"...\");\n    }\n});\n\nvar App = React.createClass({\n    getInitialState: function () {\n        return {\n            value: \"foo\"\n        };\n    },\n    render: function () {\n        var that = this;\n        return React.DOM.div(null,\n            React.DOM.input({\n                value: this.state.value,\n                onChange: function (e) {\n                    that.setState({\n                        value: e.target.value\n                    });\n                }\n            }),\n            Input({\n                text: this.state.value\n            }));\n    }\n});\n\nReact.renderComponent(App(null), document.body);\n```\n",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

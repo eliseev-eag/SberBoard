@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15739",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15739/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15739/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15739/events",
+  "html_url": "https://github.com/facebook/react/issues/15739",
+  "id": 448459468,
+  "node_id": "MDU6SXNzdWU0NDg0NTk0Njg=",
+  "number": 15739,
+  "title": "Controlled input makes browser not saving submitted value (for autocomplete)",
+  "user": {
+    "login": "bootleq",
+    "id": 156608,
+    "node_id": "MDQ6VXNlcjE1NjYwOA==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/156608?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bootleq",
+    "html_url": "https://github.com/bootleq",
+    "followers_url": "https://api.github.com/users/bootleq/followers",
+    "following_url": "https://api.github.com/users/bootleq/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bootleq/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bootleq/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bootleq/subscriptions",
+    "organizations_url": "https://api.github.com/users/bootleq/orgs",
+    "repos_url": "https://api.github.com/users/bootleq/repos",
+    "events_url": "https://api.github.com/users/bootleq/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bootleq/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-05-25T12:18:13Z",
+  "updated_at": "2019-06-04T10:27:15Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Bug** (behaves different per browser, but generally inconsistent to uncontrolled inputs)\r\n\r\n**Current behavior**\r\nReproduce with https://jsfiddle.net/bootleq/hos4r6qd/\r\n1. Type `a` in *name* field, and `b` in *uncontrolled* field.\r\n2. Submit.\r\n3. Re-run the fiddle.\r\n4. Focus input fields to see if browser \"saves\" previous input.\r\n\r\n**Expected behavior**\r\nBrowser provides `a` suggestion for *name* and `b` for *uncontrolled* field.\r\nControlled and uncontrolled elements should behave the same.\r\n\r\n**Actual result**\r\nUncontrolled input has `b` suggestion, but controlled input (*name*) has **no** suggestion.\r\nTested on Windows 7, Google Chrome 74.0.3729.169.\r\nAnd on Firefox 68.0b4, we can click the *workaround* button before submit, by reset the `value` DOM attribute it behaves as expected.",
+  "closed_by": null
+}

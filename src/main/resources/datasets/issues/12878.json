@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12878",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12878/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12878/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12878/events",
+  "html_url": "https://github.com/facebook/react/pull/12878",
+  "id": 325322653,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTg5Njg0NzU3",
+  "number": 12878,
+  "title": "Fix a regression that caused us to listen to extra events at the top",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-05-22T14:34:09Z",
+  "updated_at": "2018-05-22T18:50:41Z",
+  "closed_at": "2018-05-22T18:50:37Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12878",
+    "html_url": "https://github.com/facebook/react/pull/12878",
+    "diff_url": "https://github.com/facebook/react/pull/12878.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12878.patch"
+  },
+  "body": "I think this should fix the regression introduced in https://github.com/facebook/react/pull/12629 and that @sophiebits has patched over in https://github.com/facebook/react/pull/12877.\r\n\r\nThe first three commits are small refactors (I can remove them but I found the final form easier to read with these changes). The last one fixes the logic.\r\n\r\nI'll need to work on some way to test this and verify it’s correct. Here’s the methodology with which I arrived at this solution:\r\n\r\n1. Take a list of [all DOM event types in master](https://github.com/facebook/react/blob/master/packages/react-dom/src/events/DOMTopLevelEventTypes.js)\r\n\r\n2. For each type, record whether it exists [in either of two mappings that were deleted in #12629](https://github.com/facebook/react/blob/1047980dca0830cd55e1622f3fbefc38aeaadb91/packages/react-dom/src/events/BrowserEventConstants.js): `topLevelTypes` or `mediaEventTypes`. Some types were new in master (pointer events) which I treat as if they were in `topLevelTypes`.\r\n\r\nAfter doing this categorization, I ended up with four lists:\r\n\r\n### NOT top AND NOT media\r\n\r\n* `TOP_INVALID`\r\n* `TOP_RESET`\r\n* `TOP_SUBMIT`\r\n\r\n### NOT top AND media\r\n\r\n* `TOP_ABORT`\r\n* `TOP_CAN_PLAY`\r\n* `TOP_CAN_PLAY_THROUGH`\r\n* `TOP_DURATION_CHANGE`\r\n* `TOP_EMPTIED`\r\n* `TOP_ENCRYPTED`\r\n* `TOP_ENDED`\r\n* `TOP_ERROR`\r\n* `TOP_LOADED_DATA`\r\n* `TOP_LOADED_METADATA`\r\n* `TOP_PAUSE`\r\n* `TOP_PLAY`\r\n* `TOP_PLAYING`\r\n* `TOP_PROGRESS`\r\n* `TOP_RATE_CHANGE`\r\n* `TOP_SEEKED`\r\n* `TOP_SEEKING`\r\n* `TOP_STALLED`\r\n* `TOP_SUSPEND`\r\n* `TOP_TIME_UPDATE`\r\n* `TOP_VOLUME_CHANGE`\r\n* `TOP_WAITING`\r\n\r\n### top AND media\r\n\r\n* `TOP_LOAD_START`\r\n\r\n### top AND NOT media\r\n\r\n* `TOP_ANIMATION_END`\r\n* `TOP_ANIMATION_ITERATION`\r\n* `TOP_ANIMATION_START`\r\n* `TOP_BLUR`\r\n* `TOP_CANCEL`\r\n* `TOP_CHANGE`\r\n* `TOP_CLICK`\r\n* `TOP_CLOSE`\r\n* `TOP_COMPOSITION_END`\r\n* `TOP_COMPOSITION_START`\r\n* `TOP_COMPOSITION_UPDATE`\r\n* `TOP_CONTEXT_MENU`\r\n* `TOP_COPY`\r\n* `TOP_CUT`\r\n* `TOP_DOUBLE_CLICK`\r\n* `TOP_DRAG`\r\n* `TOP_DRAG_END`\r\n* `TOP_DRAG_ENTER`\r\n* `TOP_DRAG_EXIT`\r\n* `TOP_DRAG_LEAVE`\r\n* `TOP_DRAG_OVER`\r\n* `TOP_DRAG_START`\r\n* `TOP_DROP`\r\n* `TOP_FOCUS`\r\n* `TOP_GOT_POINTER_CAPTURE`\r\n* `TOP_INPUT`\r\n* `TOP_KEY_DOWN`\r\n* `TOP_KEY_PRESS`\r\n* `TOP_KEY_UP`\r\n* `TOP_LOAD`\r\n* `TOP_LOST_POINTER_CAPTURE`\r\n* `TOP_MOUSE_DOWN`\r\n* `TOP_MOUSE_MOVE`\r\n* `TOP_MOUSE_OUT`\r\n* `TOP_MOUSE_OVER`\r\n* `TOP_MOUSE_UP`\r\n* `TOP_PASTE`\r\n* `TOP_POINTER_CANCEL`\r\n* `TOP_POINTER_DOWN`\r\n* `TOP_POINTER_ENTER`\r\n* `TOP_POINTER_LEAVE`\r\n* `TOP_POINTER_MOVE`\r\n* `TOP_POINTER_OUT`\r\n* `TOP_POINTER_OVER`\r\n* `TOP_POINTER_UP`\r\n* `TOP_SCROLL`\r\n* `TOP_SELECTION_CHANGE`\r\n* `TOP_TEXT_INPUT`\r\n* `TOP_TOGGLE`\r\n* `TOP_TOUCH_CANCEL`\r\n* `TOP_TOUCH_END`\r\n* `TOP_TOUCH_MOVE`\r\n* `TOP_TOUCH_START`\r\n* `TOP_TRANSITION_END`\r\n* `TOP_WHEEL`\r\n\r\nFrom these lists, it follows that:\r\n\r\n* “Media events should not be listened to on top level” is generally true.\r\n* `TOP_LOAD_START` is an exception to the previous rule: even though it’s a media event, we listen to it on the top level.\r\n* There are three additional events (`TOP_INVALID`, `TOP_RESET`, and `TOP_SUBMIT`) that are *neither* in the media nor the top whitelist. So we should exclude them *too*.\r\n\r\nThat’s reflected in my switch structure:\r\n\r\n```js\r\n      switch (dependency) {\r\n        // ... other special cases ...\r\n        case TOP_INVALID:\r\n        case TOP_SUBMIT:\r\n        case TOP_RESET:\r\n          // We listen to them on the target DOM elements.\r\n          // Some of them bubble so we don't want them to fire twice.\r\n          break;\r\n        case TOP_LOAD_START:\r\n          // Even though it's a media event, it also exists on <img>.\r\n          // So we need to listen at top level, unlike other media events.\r\n          trapBubbledEvent(dependency, mountAt);\r\n          break;\r\n        default:\r\n          // By default, listen on the top level to all non-media events.\r\n          const isMediaEvent = mediaEventTypes.indexOf(dependency) !== -1;\r\n          if (!isMediaEvent) {\r\n            trapBubbledEvent(dependency, mountAt);\r\n          }\r\n          break;\r\n      }\r\n```\r\n\r\nNote that I’m introducing an `indexOf` lookup there. I think it’s fine because this code only runs once per event, and `indexOf` is very fast on small arrays (`mediaEventTypes` has 23 elements). So I wouldn’t expect this to regress anything. But I can turn it into an object lookup if needed.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

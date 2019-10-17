@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9606",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9606/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9606/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9606/events",
+  "html_url": "https://github.com/facebook/react/pull/9606",
+  "id": 226402926,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTE5MDYyNTI1",
+  "number": 9606,
+  "title": "Update prettier to 1.3.1",
+  "user": {
+    "login": "ergenekonyigit",
+    "id": 7110136,
+    "node_id": "MDQ6VXNlcjcxMTAxMzY=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/7110136?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ergenekonyigit",
+    "html_url": "https://github.com/ergenekonyigit",
+    "followers_url": "https://api.github.com/users/ergenekonyigit/followers",
+    "following_url": "https://api.github.com/users/ergenekonyigit/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ergenekonyigit/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ergenekonyigit/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ergenekonyigit/subscriptions",
+    "organizations_url": "https://api.github.com/users/ergenekonyigit/orgs",
+    "repos_url": "https://api.github.com/users/ergenekonyigit/repos",
+    "events_url": "https://api.github.com/users/ergenekonyigit/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ergenekonyigit/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-05-04T20:43:38Z",
+  "updated_at": "2017-06-03T21:12:21Z",
+  "closed_at": "2017-06-03T21:12:21Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9606",
+    "html_url": "https://github.com/facebook/react/pull/9606",
+    "diff_url": "https://github.com/facebook/react/pull/9606.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9606.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "ergenekonyigit",
+    "id": 7110136,
+    "node_id": "MDQ6VXNlcjcxMTAxMzY=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/7110136?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ergenekonyigit",
+    "html_url": "https://github.com/ergenekonyigit",
+    "followers_url": "https://api.github.com/users/ergenekonyigit/followers",
+    "following_url": "https://api.github.com/users/ergenekonyigit/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ergenekonyigit/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ergenekonyigit/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ergenekonyigit/subscriptions",
+    "organizations_url": "https://api.github.com/users/ergenekonyigit/orgs",
+    "repos_url": "https://api.github.com/users/ergenekonyigit/repos",
+    "events_url": "https://api.github.com/users/ergenekonyigit/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ergenekonyigit/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

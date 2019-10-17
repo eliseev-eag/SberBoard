@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11445",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11445/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11445/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11445/events",
+  "html_url": "https://github.com/facebook/react/pull/11445",
+  "id": 271111975,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTUwNjIzNTcz",
+  "number": 11445,
+  "title": "expose devtools hook with react-reconciler package",
+  "user": {
+    "login": "iamdustan",
+    "id": 227879,
+    "node_id": "MDQ6VXNlcjIyNzg3OQ==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/227879?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/iamdustan",
+    "html_url": "https://github.com/iamdustan",
+    "followers_url": "https://api.github.com/users/iamdustan/followers",
+    "following_url": "https://api.github.com/users/iamdustan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/iamdustan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/iamdustan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/iamdustan/subscriptions",
+    "organizations_url": "https://api.github.com/users/iamdustan/orgs",
+    "repos_url": "https://api.github.com/users/iamdustan/repos",
+    "events_url": "https://api.github.com/users/iamdustan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/iamdustan/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2017-11-03T20:37:46Z",
+  "updated_at": "2017-11-05T23:22:40Z",
+  "closed_at": "2017-11-05T23:20:48Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11445",
+    "html_url": "https://github.com/facebook/react/pull/11445",
+    "diff_url": "https://github.com/facebook/react/pull/11445.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11445.patch"
+  },
+  "body": "```\r\n[react] yarn build react-reconciler\r\nyarn run v1.2.1\r\n$ npm run version-check && node scripts/rollup/build.js react-reconciler\r\n\r\n> @16.1.0-beta version-check /Users/iamdustan/projects/react/react\r\n> node ./scripts/tasks/version-check.js\r\n\r\n BUILDING  react-reconciler.development.js (node_dev)\r\n COMPLETE  react-reconciler.development.js (node_dev)\r\n\r\n BUILDING  react-reconciler.production.min.js (node_prod)\r\n COMPLETE  react-reconciler.production.min.js (node_prod)\r\n\r\n BUILDING  react-reconciler-devtools.development.js (node_dev)\r\n COMPLETE  react-reconciler-devtools.development.js (node_dev)\r\n\r\n BUILDING  react-reconciler-devtools.production.min.js (node_prod)\r\n COMPLETE  react-reconciler-devtools.production.min.js (node_prod)\r\n\r\n┌─────────────────────────────────────────────────────────┬───────────┬──────────────┬─────────────┬───────────┬──────────────┬─────────────┐\r\n│ Bundle                                                  │ Prev Size │ Current Size │ Diff        │ Prev Gzip │ Current Gzip │ Diff        │\r\n├─────────────────────────────────────────────────────────┼───────────┼──────────────┼─────────────┼───────────┼──────────────┼─────────────┤\r\n│ react-reconciler.development.js (NODE_DEV)              │ 258.73 KB │ 258.73 KB    │ 0 %         │ 53.2 KB   │ 53.2 KB      │ 0 %         │\r\n├─────────────────────────────────────────────────────────┼───────────┼──────────────┼─────────────┼───────────┼──────────────┼─────────────┤\r\n│ react-reconciler.production.min.js (NODE_PROD)          │ 39.63 KB  │ 39.63 KB     │ 0 %         │ 12.32 KB  │ 12.32 KB     │ 0 %         │\r\n├─────────────────────────────────────────────────────────┼───────────┼──────────────┼─────────────┼───────────┼──────────────┼─────────────┤\r\n│ react-reconciler-devtools.development.js (NODE_DEV)     │ 0 B       │ 2.83 KB      │ +Infinity % │ 0 B       │ 1.05 KB      │ +Infinity % │\r\n├─────────────────────────────────────────────────────────┼───────────┼──────────────┼─────────────┼───────────┼──────────────┼─────────────┤\r\n│ react-reconciler-devtools.production.min.js (NODE_PROD) │ 0 B       │ 831 B        │ +Infinity % │ 0 B       │ 485 B        │ +Infinity % │\r\n└─────────────────────────────────────────────────────────┴───────────┴──────────────┴─────────────┴───────────┴──────────────┴─────────────┘\r\n```\r\n\r\nwas working on updating a renderer to the official API and realized I had lost access to this. I _think_ should be relatively noncontroversial and safe. The `ReactDevtoolsHook` file has only one real import from `fbjs/lib/warning` and hten the type imports from `ReactFiber` and `ReactFiberRoot`.\r\n\r\ncc @gaearon @bvaughn ",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

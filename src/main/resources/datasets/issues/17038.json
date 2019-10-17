@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/17038",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/17038/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/17038/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/17038/events",
+  "html_url": "https://github.com/facebook/react/issues/17038",
+  "id": 503892165,
+  "node_id": "MDU6SXNzdWU1MDM4OTIxNjU=",
+  "number": 17038,
+  "title": "Components not correctly displayed",
+  "user": {
+    "login": "lbottoni",
+    "id": 13313,
+    "node_id": "MDQ6VXNlcjEzMzEz",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/13313?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lbottoni",
+    "html_url": "https://github.com/lbottoni",
+    "followers_url": "https://api.github.com/users/lbottoni/followers",
+    "following_url": "https://api.github.com/users/lbottoni/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lbottoni/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lbottoni/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lbottoni/subscriptions",
+    "organizations_url": "https://api.github.com/users/lbottoni/orgs",
+    "repos_url": "https://api.github.com/users/lbottoni/repos",
+    "events_url": "https://api.github.com/users/lbottoni/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lbottoni/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 40929155,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1NQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Question",
+      "name": "Type: Question",
+      "color": "cc317c",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-10-08T08:07:27Z",
+  "updated_at": "2019-10-10T14:53:35Z",
+  "closed_at": "2019-10-09T17:44:43Z",
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\nbug\r\n\r\n**What is the current behavior?**\r\n\r\nelements not reconized\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\n\r\nonly use components tab in console of chrome.\r\n\r\n**What is the expected behavior?**\r\n\r\nsee any elements react\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nWindow 10 64bit\r\nreact ^16.8.1\r\n\r\n\r\n![image](https://user-images.githubusercontent.com/13313/66378070-068f8e80-e9b3-11e9-9956-cd8b98525efb.png)\r\n\r\nThis is my console component visualizzation, the same page visualizated with linux&chrome not have any issue",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

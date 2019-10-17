@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9798",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9798/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9798/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9798/events",
+  "html_url": "https://github.com/facebook/react/pull/9798",
+  "id": 231836827,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTIyNzc4OTA5",
+  "number": 9798,
+  "title": "Insert final new line",
+  "user": {
+    "login": "lipis",
+    "id": 125676,
+    "node_id": "MDQ6VXNlcjEyNTY3Ng==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/125676?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lipis",
+    "html_url": "https://github.com/lipis",
+    "followers_url": "https://api.github.com/users/lipis/followers",
+    "following_url": "https://api.github.com/users/lipis/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lipis/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lipis/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lipis/subscriptions",
+    "organizations_url": "https://api.github.com/users/lipis/orgs",
+    "repos_url": "https://api.github.com/users/lipis/repos",
+    "events_url": "https://api.github.com/users/lipis/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lipis/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-05-28T00:19:57Z",
+  "updated_at": "2017-11-21T13:59:30Z",
+  "closed_at": "2017-11-21T13:59:30Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9798",
+    "html_url": "https://github.com/facebook/react/pull/9798",
+    "diff_url": "https://github.com/facebook/react/pull/9798.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9798.patch"
+  },
+  "body": "According to https://github.com/facebook/react/blob/master/.editorconfig#L9",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

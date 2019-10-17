@@ -1,0 +1,99 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16510",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16510/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16510/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16510/events",
+  "html_url": "https://github.com/facebook/react/issues/16510",
+  "id": 482823011,
+  "node_id": "MDU6SXNzdWU0ODI4MjMwMTE=",
+  "number": 16510,
+  "title": "Error: \"Could not find commit data for root \"26047\" and commit 5\"",
+  "user": {
+    "login": "nassif7",
+    "id": 15526830,
+    "node_id": "MDQ6VXNlcjE1NTI2ODMw",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/15526830?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nassif7",
+    "html_url": "https://github.com/nassif7",
+    "followers_url": "https://api.github.com/users/nassif7/followers",
+    "following_url": "https://api.github.com/users/nassif7/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nassif7/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nassif7/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nassif7/subscriptions",
+    "organizations_url": "https://api.github.com/users/nassif7/orgs",
+    "repos_url": "https://api.github.com/users/nassif7/repos",
+    "events_url": "https://api.github.com/users/nassif7/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nassif7/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 71502270,
+      "node_id": "MDU6TGFiZWw3MTUwMjI3MA==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Build%20Infrastructure",
+      "name": "Component: Build Infrastructure",
+      "color": "f9d0c4",
+      "default": false
+    },
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 40929152,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mg==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Duplicate",
+      "name": "Resolution: Duplicate",
+      "color": "cccccc",
+      "default": false
+    },
+    {
+      "id": 620368407,
+      "node_id": "MDU6TGFiZWw2MjAzNjg0MDc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Needs%20More%20Information",
+      "name": "Resolution: Needs More Information",
+      "color": "fffde7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-08-20T12:12:15Z",
+  "updated_at": "2019-09-03T17:47:18Z",
+  "closed_at": "2019-08-20T15:56:01Z",
+  "author_association": "NONE",
+  "body": "PLEASE INCLUDE REPRO INSTRUCTIONS AND EXAMPLE CODE\r\n\r\n---------------------------------------------\r\nPlease do not remove the text below this line\r\n---------------------------------------------\r\n\r\nDevTools version: 4.0.5-5441b09\r\n\r\nCall stack: at n.value (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:11:16721)\r\n    at m (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:51:293849)\r\n    at Al (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:51:294084)\r\n    at Ha (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:43:55890)\r\n    at bi (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:43:62939)\r\n    at Xl (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:43:99535)\r\n    at Hl (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:43:84255)\r\n    at Fl (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:43:81285)\r\n    at chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:43:25363\r\n    at n.unstable_runWithPriority (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js:51:4368)\r\n\r\nComponent stack: in Al\r\n    in div\r\n    in div\r\n    in Ir\r\n    in Unknown\r\n    in n\r\n    in Unknown\r\n    in div\r\n    in div\r\n    in Wa\r\n    in ce\r\n    in be\r\n    in So\r\n    in Vl",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8982",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8982/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8982/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8982/events",
+  "html_url": "https://github.com/facebook/react/pull/8982",
+  "id": 207088752,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTA1ODEwNjA3",
+  "number": 8982,
+  "title": "Add createComponentMock option to test renderer",
+  "user": {
+    "login": "lelandrichardson",
+    "id": 1885623,
+    "node_id": "MDQ6VXNlcjE4ODU2MjM=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1885623?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lelandrichardson",
+    "html_url": "https://github.com/lelandrichardson",
+    "followers_url": "https://api.github.com/users/lelandrichardson/followers",
+    "following_url": "https://api.github.com/users/lelandrichardson/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lelandrichardson/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lelandrichardson/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lelandrichardson/subscriptions",
+    "organizations_url": "https://api.github.com/users/lelandrichardson/orgs",
+    "repos_url": "https://api.github.com/users/lelandrichardson/repos",
+    "events_url": "https://api.github.com/users/lelandrichardson/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lelandrichardson/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 17,
+  "created_at": "2017-02-12T22:52:43Z",
+  "updated_at": "2017-10-04T23:32:00Z",
+  "closed_at": "2017-10-04T23:32:00Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8982",
+    "html_url": "https://github.com/facebook/react/pull/8982",
+    "diff_url": "https://github.com/facebook/react/pull/8982.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8982.patch"
+  },
+  "body": "This PR is a followup to #8931, and adds a `createComponentMock` option to the test renderer when using fiber. The function is expected to return the correct type (mocked or not) for the provided fiber. This gets called on functional components and class components, but not hosts.\r\n\r\nI've added corresponding tests that show how one could use this property to emulate shallow rendering, as well as what I believe is an even more practical usage, simple mocking of components that have implementations difficult to test.\r\n\r\nThe implementation of this uses an additional optional `mockComponent` function that is added to the `HostConfig` when creating the reconciler.  This required that we pass the host config into a couple of additional places in the fiber codebase.\r\n\r\nThere are still some outstanding questions:\r\n\r\n1. Do we want to allow `createComponentMock` to return `null` in the case of not mocking, or keep it as is where it just returns `type`?\r\n2. Is `mockComponent` the right name to use?\r\n3. `createComponentMock` gets called with a `Fiber`. Do we instead want to only pass it `type` and `tag`, or some transformation of `tag`? Right now user land code will have to know if the mock should be a functional component or a class component.  Alternatively, we could have two methods, one for functional component mocking, and another for class component mocking.\r\n\r\ncc @gaearon @sebmarkbage @aweary @iamdustan \r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

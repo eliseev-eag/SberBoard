@@ -1,0 +1,91 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11508",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11508/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11508/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11508/events",
+  "html_url": "https://github.com/facebook/react/issues/11508",
+  "id": 272756997,
+  "node_id": "MDU6SXNzdWUyNzI3NTY5OTc=",
+  "number": 11508,
+  "title": "Unnecessary re-rendering under bailed-out components when a legacy context provider and a deep child are updated in the same batch",
+  "user": {
+    "login": "iamdustan",
+    "id": 227879,
+    "node_id": "MDQ6VXNlcjIyNzg3OQ==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/227879?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/iamdustan",
+    "html_url": "https://github.com/iamdustan",
+    "followers_url": "https://api.github.com/users/iamdustan/followers",
+    "following_url": "https://api.github.com/users/iamdustan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/iamdustan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/iamdustan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/iamdustan/subscriptions",
+    "organizations_url": "https://api.github.com/users/iamdustan/orgs",
+    "repos_url": "https://api.github.com/users/iamdustan/repos",
+    "events_url": "https://api.github.com/users/iamdustan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/iamdustan/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 739761016,
+      "node_id": "MDU6TGFiZWw3Mzk3NjEwMTY=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Reconciler",
+      "name": "Component: Reconciler",
+      "color": "f9a798",
+      "default": false
+    },
+    {
+      "id": 40929156,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Ng==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Wontfix",
+      "name": "Resolution: Wontfix",
+      "color": "ffffff",
+      "default": false
+    },
+    {
+      "id": 178761159,
+      "node_id": "MDU6TGFiZWwxNzg3NjExNTk=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Regression",
+      "name": "Type: Regression",
+      "color": "e11d21",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 23,
+  "created_at": "2017-11-09T22:53:30Z",
+  "updated_at": "2019-04-21T19:23:27Z",
+  "closed_at": "2019-04-21T19:22:57Z",
+  "author_association": "CONTRIBUTOR",
+  "body": "This issue is going to start off mostly theoretical as I’m still working to make a minimal repro case.\r\n\r\nWe have a scenario where one component is having `shouldComponentUpdate()` return false to bail out, but a child component is still having its `render` method called.\r\n\r\nAvoiding many details this is roughly what we have:\r\n\r\n```jsx\r\nimport React, { Component } from 'react';\r\n\r\nclass A extends Component {\r\n  shouldComponentUpdate(nextProps) {\r\n    const result = Boolean(nextProps.item);\r\n    console.log('A#shouldComponentUpdate?', result);\r\n    return result;\r\n  }\r\n\r\n  render() {\r\n    console.log('A#render', this.props.item);\r\n    return <B item={this.props.item} />;\r\n  }\r\n}\r\n\r\nclass B extends Component {\r\n  state = { seconds: 0 };\r\n  componentDidMount() {\r\n    this._interval = setInterval(\r\n      () => this.setState({ seconds: this.state.seconds + 1 }),\r\n      1000\r\n    );\r\n  }\r\n\r\n  componentWillUnMount() {\r\n    clearInterval(this._interval);\r\n  }\r\n\r\n  render() {\r\n    console.log('B#render', this.props.item);\r\n    return (\r\n      <div>\r\n        <strong>{this.props.item.name}</strong>\r\n        <span>{this.state.seconds} seconds</span>\r\n      </div>\r\n    );\r\n  }\r\n}\r\n\r\nexport default A;\r\n```\r\n\r\nWhile this case does work as expected it seems to be in the direction of the\r\nerrors we’re seeing.\r\n\r\nThere is something taking place in our render cycle where B is being rendered\r\n_without_ reusing the `item` prop from the previous reconcile.\r\n\r\nMy first question is are there any theories on why this may be happening that I\r\ncan explore? We _are_ using `context` as the parent of `A` and as`B` and these\r\nare reading from a `flux`-thing (I think a fork of the original OSS Flux), they\r\nthey these are both passing all props through and not having any naming\r\ncollisions. I’m fairly certain we are not performing any mutations on our end.\r\n\r\n(If I do manage to pull off a repro case I will immediately post it here with\r\nutter joy in my heart)\r\n\r\ncc @acdlite @gaearon (this is the issue I was asking about in Messenger recently)",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

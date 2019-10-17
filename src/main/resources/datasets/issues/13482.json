@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13482",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13482/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13482/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13482/events",
+  "html_url": "https://github.com/facebook/react/pull/13482",
+  "id": 354028697,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjEwOTEyNDAy",
+  "number": 13482,
+  "title": "Use destructures",
+  "user": {
+    "login": "prashant-andani",
+    "id": 829627,
+    "node_id": "MDQ6VXNlcjgyOTYyNw==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/829627?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/prashant-andani",
+    "html_url": "https://github.com/prashant-andani",
+    "followers_url": "https://api.github.com/users/prashant-andani/followers",
+    "following_url": "https://api.github.com/users/prashant-andani/following{/other_user}",
+    "gists_url": "https://api.github.com/users/prashant-andani/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/prashant-andani/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/prashant-andani/subscriptions",
+    "organizations_url": "https://api.github.com/users/prashant-andani/orgs",
+    "repos_url": "https://api.github.com/users/prashant-andani/repos",
+    "events_url": "https://api.github.com/users/prashant-andani/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/prashant-andani/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2018-08-25T17:15:44Z",
+  "updated_at": "2018-08-26T12:50:51Z",
+  "closed_at": "2018-08-25T18:04:47Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13482",
+    "html_url": "https://github.com/facebook/react/pull/13482",
+    "diff_url": "https://github.com/facebook/react/pull/13482.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13482.patch"
+  },
+  "body": "making use of destructures for maintainability",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

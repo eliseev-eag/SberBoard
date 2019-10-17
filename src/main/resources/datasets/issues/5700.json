@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5700",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5700/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5700/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5700/events",
+  "html_url": "https://github.com/facebook/react/issues/5700",
+  "id": 123311150,
+  "node_id": "MDU6SXNzdWUxMjMzMTExNTA=",
+  "number": 5700,
+  "title": "DataTransfer's dropEffect not working on IE/Edge with not minified version react.js",
+  "user": {
+    "login": "srayuws",
+    "id": 1182836,
+    "node_id": "MDQ6VXNlcjExODI4MzY=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1182836?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/srayuws",
+    "html_url": "https://github.com/srayuws",
+    "followers_url": "https://api.github.com/users/srayuws/followers",
+    "following_url": "https://api.github.com/users/srayuws/following{/other_user}",
+    "gists_url": "https://api.github.com/users/srayuws/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/srayuws/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/srayuws/subscriptions",
+    "organizations_url": "https://api.github.com/users/srayuws/orgs",
+    "repos_url": "https://api.github.com/users/srayuws/repos",
+    "events_url": "https://api.github.com/users/srayuws/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/srayuws/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 69105383,
+      "node_id": "MDU6TGFiZWw2OTEwNTM4Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Browser:%20IE",
+      "name": "Browser: IE",
+      "color": "c7def8",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2015-12-21T16:28:31Z",
+  "updated_at": "2016-07-05T10:05:11Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "code exmaple: [Non-minified version](https://jsfiddle.net/sy7eja68/) and [Minified version](https://jsfiddle.net/sy7eja68/1/)\n\nBoth have the same code, html and js, the only difference is referenced to different version of react.js files.\n\nThere are three boxes.  Dragging the \"**drag me**\" box will show a \"**start**\" at the top, then show a \"**over**\" if it is dragged over either \"**normal drop**\" or \"**drop react**\" box, and show a \"**end**\" with a drop to the two drop boxes.\n\nEverything works fine on my Firefox(43.0.1), and the the [Minified version](https://jsfiddle.net/sy7eja68/1/) works fine on my IE 11, and Edge(13).\n\nThe only thing dose not work is the  [Non-minified version](https://jsfiddle.net/sy7eja68/) on IE/Edge.\n\nWhen dragging over the  \"**drop react**\" box, there shows **NO** \"over\".  In the F12 console, I can see lines of \"`SCRIPT16389: Unspecified error.`\". And with `console.log(ev.dataTransfer)`, I get this result: \n\n```\n[object DataTransfer] {\n   dropEffect: <Permission denied>,\n   effectAllowed: \"all\",\n   files: FileList {...}, \n   items: DataTransferItemList {...}, \n   types: DOMStringList {...}\n}\n```\n\nI thought the `dropEffect` should also be accessible on IE/Edge with non-minified version react.js files?\n",
+  "closed_by": null
+}

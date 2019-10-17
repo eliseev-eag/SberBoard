@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11560",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11560/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11560/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11560/events",
+  "html_url": "https://github.com/facebook/react/issues/11560",
+  "id": 273996912,
+  "node_id": "MDU6SXNzdWUyNzM5OTY5MTI=",
+  "number": 11560,
+  "title": "Clicking radios fires a change event unconditionally in older browsers",
+  "user": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-11-15T00:54:06Z",
+  "updated_at": "2017-12-24T03:00:15Z",
+  "closed_at": null,
+  "author_association": "COLLABORATOR",
+  "body": "This may be a change we agreed to that I missed, but the \"Radio input clicks\" test fixtures fails in:\r\n\r\nSafari 7.1, 8, 9\r\niOS Safari 8.4\r\nChrome 42\r\n\r\nThe test fixture is here:\r\nhttp://react-dom-test-fixtures.surge.sh/input-change-events\r\n\r\nDo we care about this? If not, we should figure out a way to document this.",
+  "closed_by": null
+}

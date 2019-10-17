@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15326",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15326/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15326/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15326/events",
+  "html_url": "https://github.com/facebook/react/pull/15326",
+  "id": 429503651,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjY3NjI4ODQ5",
+  "number": 15326,
+  "title": "[New Scheduler] Fix: Suspending an expired update",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-04-04T22:06:48Z",
+  "updated_at": "2019-04-04T23:31:23Z",
+  "closed_at": "2019-04-04T23:31:23Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15326",
+    "html_url": "https://github.com/facebook/react/pull/15326",
+    "diff_url": "https://github.com/facebook/react/pull/15326.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15326.patch"
+  },
+  "body": "When an async update expires, React renders at the expiration time that corresponds to the current time, not at the original update's expiration time. That way, all the expired work in the tree is flushed in a single batch.\r\n\r\nThis is implemented inside `renderRoot` by comparing the next render expiration time to the current time. If the current time is later, `renderRoot` will restart at the later time.\r\n\r\nBecause of poor factoring, the check is currently performed right before entering the work loop. But the work loop is usually entered multiple times in a single callback: each time a component throws or suspends. This led to an infinite loop where React would detect that an update expired, restart at the current time, make a bit of progress, suspend, check for expired work again, and start the loop again.\r\n\r\nI fixed this by moving the expired work check to the beginning of `renderRoot`, so that it is not performed every time something suspends. This isn't ideal, because you could technically still fall into a loop if more than 10ms lapse in between exiting `renderRoot` and entering it again. The proper fix is to lift the check outside of `renderRoot` entirely so that the function can restart without checking for expired work again. Since this is exceedingly unlikely (and this whole thing is still behind a flag), I'll do the better fix in an already-planned follow up to fork `renderRoot` into separate functions for sync and async work.",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

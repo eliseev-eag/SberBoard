@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9751",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9751/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9751/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9751/events",
+  "html_url": "https://github.com/facebook/react/pull/9751",
+  "id": 230673185,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTIxOTczMzQ1",
+  "number": 9751,
+  "title": "Add Videos link to React Europe 2017",
+  "user": {
+    "login": "ehellman",
+    "id": 586152,
+    "node_id": "MDQ6VXNlcjU4NjE1Mg==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/586152?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ehellman",
+    "html_url": "https://github.com/ehellman",
+    "followers_url": "https://api.github.com/users/ehellman/followers",
+    "following_url": "https://api.github.com/users/ehellman/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ehellman/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ehellman/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ehellman/subscriptions",
+    "organizations_url": "https://api.github.com/users/ehellman/orgs",
+    "repos_url": "https://api.github.com/users/ehellman/repos",
+    "events_url": "https://api.github.com/users/ehellman/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ehellman/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-05-23T11:21:21Z",
+  "updated_at": "2017-06-09T22:06:05Z",
+  "closed_at": "2017-05-26T22:06:28Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9751",
+    "html_url": "https://github.com/facebook/react/pull/9751",
+    "diff_url": "https://github.com/facebook/react/pull/9751.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9751.patch"
+  },
+  "body": "Videos have now started appearing on React Europe's YouTube channel, added the link in the docs.",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13189",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13189/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13189/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13189/events",
+  "html_url": "https://github.com/facebook/react/pull/13189",
+  "id": 340072698,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjAwNTczMzkz",
+  "number": 13189,
+  "title": "Turn on enableSuspense in fbsource and test-renderer.fb",
+  "user": {
+    "login": "cyan33",
+    "id": 13282699,
+    "node_id": "MDQ6VXNlcjEzMjgyNjk5",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/13282699?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/cyan33",
+    "html_url": "https://github.com/cyan33",
+    "followers_url": "https://api.github.com/users/cyan33/followers",
+    "following_url": "https://api.github.com/users/cyan33/following{/other_user}",
+    "gists_url": "https://api.github.com/users/cyan33/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/cyan33/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/cyan33/subscriptions",
+    "organizations_url": "https://api.github.com/users/cyan33/orgs",
+    "repos_url": "https://api.github.com/users/cyan33/repos",
+    "events_url": "https://api.github.com/users/cyan33/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/cyan33/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2018-07-11T02:50:43Z",
+  "updated_at": "2018-07-12T20:52:18Z",
+  "closed_at": "2018-07-12T20:52:17Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13189",
+    "html_url": "https://github.com/facebook/react/pull/13189",
+    "diff_url": "https://github.com/facebook/react/pull/13189.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13189.patch"
+  },
+  "body": "To move forward with the suspense code splitting in fbsource, we need to turn on the `enableSuspense` feature flag, also that in test-renderer in fbsource.\r\n\r\nI've checked the bundle in the `build` folder. Now it's on in:\r\n\r\n- `ReactFabric-dev.js`\r\n- `ReactFabric-prod.js`\r\n- `ReactNativeRenderer-dev.js`\r\n- `ReactNativeRenderer-prod.js`\r\n\r\nBut there is no corresponding bundle for test-renderer, like we have `ReactTestRenderer-dev.js` in `build/facebook-www`. I'm wondering if I did it wrong. Can someone help double check on this?",
+  "closed_by": {
+    "login": "cyan33",
+    "id": 13282699,
+    "node_id": "MDQ6VXNlcjEzMjgyNjk5",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/13282699?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/cyan33",
+    "html_url": "https://github.com/cyan33",
+    "followers_url": "https://api.github.com/users/cyan33/followers",
+    "following_url": "https://api.github.com/users/cyan33/following{/other_user}",
+    "gists_url": "https://api.github.com/users/cyan33/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/cyan33/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/cyan33/subscriptions",
+    "organizations_url": "https://api.github.com/users/cyan33/orgs",
+    "repos_url": "https://api.github.com/users/cyan33/repos",
+    "events_url": "https://api.github.com/users/cyan33/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/cyan33/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

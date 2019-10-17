@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3528",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3528/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3528/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3528/events",
+  "html_url": "https://github.com/facebook/react/issues/3528",
+  "id": 64611390,
+  "node_id": "MDU6SXNzdWU2NDYxMTM5MA==",
+  "number": 3528,
+  "title": "Add ability to find dom component by prop value in the ReactTestUtils?",
+  "user": {
+    "login": "ryanzec",
+    "id": 444206,
+    "node_id": "MDQ6VXNlcjQ0NDIwNg==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/444206?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ryanzec",
+    "html_url": "https://github.com/ryanzec",
+    "followers_url": "https://api.github.com/users/ryanzec/followers",
+    "following_url": "https://api.github.com/users/ryanzec/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ryanzec/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ryanzec/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ryanzec/subscriptions",
+    "organizations_url": "https://api.github.com/users/ryanzec/orgs",
+    "repos_url": "https://api.github.com/users/ryanzec/repos",
+    "events_url": "https://api.github.com/users/ryanzec/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ryanzec/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 139734344,
+      "node_id": "MDU6TGFiZWwxMzk3MzQzNDQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Test%20Utils",
+      "name": "Component: Test Utils",
+      "color": "eb6420",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2015-03-26T19:16:38Z",
+  "updated_at": "2018-01-02T13:16:54Z",
+  "closed_at": "2018-01-02T13:16:54Z",
+  "author_association": "NONE",
+  "body": "In order to make selectors more durable within selenium tests, I will generally add in `data-qa` attributes to any element that needs to be selected.  Developers are free to change classes and IDs as needed but know not to touch or move when refactoring `data-qa` attributes.  It would be nice to allow my unit tests to use the same `data-qa` attribute to select elements as my integration/selenium tests use.  The issue is that currently there is no way to do that with the ReactTestUtils.\n\nI have a test helper object that contains a bunch of things to help with testing my react code.  Two of the methods are as follows:\n\n``` javascript\nscryRenderedDOMComponentsWithProp: function scryRenderedDOMComponentsWithProp(root, propName, propValue) {\n    return reactTestUtils.findAllInRenderedTree(root, function(inst) {\n        var instancePropValue = inst.props[propName];\n\n        return (\n            reactTestUtils.isDOMComponent(inst)\n            && instancePropValue\n            && (' ' + instancePropValue + ' ').indexOf(' ' + propValue + ' ') !== -1\n        );\n    });\n},\n\nfindRenderedDOMComponentWithProp: function findRenderedDOMComponentWithProp(root, propName, propValue) {\n    var all = this.scryRenderedDOMComponentsWithProp(root, propName, propValue);\n\n    if (all.length !== 1) {\n      throw new Error('Did not find exactly one match (found: ' + all.length + ') for prop  ' + propName + ' : ' + propValue);\n    }\n\n    return all[0];\n}\n```\n\nThis seems like a useful feature to me and was wondering if there is enough interest into this type of functionality to create a PR to add it directly into the ReactTestUtils?\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

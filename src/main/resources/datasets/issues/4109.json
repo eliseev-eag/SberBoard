@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4109",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4109/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4109/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4109/events",
+  "html_url": "https://github.com/facebook/react/pull/4109",
+  "id": 87693252,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mzc1NTIyMzA=",
+  "number": 4109,
+  "title": "Add failing test about module component",
+  "user": {
+    "login": "vslinko",
+    "id": 205823,
+    "node_id": "MDQ6VXNlcjIwNTgyMw==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/205823?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/vslinko",
+    "html_url": "https://github.com/vslinko",
+    "followers_url": "https://api.github.com/users/vslinko/followers",
+    "following_url": "https://api.github.com/users/vslinko/following{/other_user}",
+    "gists_url": "https://api.github.com/users/vslinko/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/vslinko/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/vslinko/subscriptions",
+    "organizations_url": "https://api.github.com/users/vslinko/orgs",
+    "repos_url": "https://api.github.com/users/vslinko/repos",
+    "events_url": "https://api.github.com/users/vslinko/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/vslinko/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2015-06-12T11:02:30Z",
+  "updated_at": "2015-10-06T04:53:26Z",
+  "closed_at": "2015-10-06T04:53:26Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4109",
+    "html_url": "https://github.com/facebook/react/pull/4109",
+    "diff_url": "https://github.com/facebook/react/pull/4109.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4109.patch"
+  },
+  "body": "Module pattern components like\n`function Component(props) { return { render() { return <div /> } } }`\ndoesn't update when props changed.\n\nThis behaviour looks like a buggy. Am I right?\n",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

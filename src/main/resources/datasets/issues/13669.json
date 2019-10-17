@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13669",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13669/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13669/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13669/events",
+  "html_url": "https://github.com/facebook/react/pull/13669",
+  "id": 360644245,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjE1ODI2MDMw",
+  "number": 13669,
+  "title": "Add flow types in ReactControlledComponent",
+  "user": {
+    "login": "armujahid",
+    "id": 3725386,
+    "node_id": "MDQ6VXNlcjM3MjUzODY=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/3725386?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/armujahid",
+    "html_url": "https://github.com/armujahid",
+    "followers_url": "https://api.github.com/users/armujahid/followers",
+    "following_url": "https://api.github.com/users/armujahid/following{/other_user}",
+    "gists_url": "https://api.github.com/users/armujahid/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/armujahid/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/armujahid/subscriptions",
+    "organizations_url": "https://api.github.com/users/armujahid/orgs",
+    "repos_url": "https://api.github.com/users/armujahid/repos",
+    "events_url": "https://api.github.com/users/armujahid/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/armujahid/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2018-09-16T14:25:36Z",
+  "updated_at": "2018-10-22T04:44:32Z",
+  "closed_at": "2018-10-21T19:35:36Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13669",
+    "html_url": "https://github.com/facebook/react/pull/13669",
+    "diff_url": "https://github.com/facebook/react/pull/13669.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13669.patch"
+  },
+  "body": "1. `setRestoreImplementation` is only used in `ReactDOM.js` and takes `restoreControlledState` as input which is of type `(Element, string, Object) => void` (see `ReactDOMComponent.js`)\r\n\r\n2. `enqueueStateRestore` takes `DOMEventTarget` as input that's why type `EventTarget` is used",
+  "closed_by": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12083",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12083/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12083/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12083/events",
+  "html_url": "https://github.com/facebook/react/pull/12083",
+  "id": 290997589,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTY0NjkzMjUz",
+  "number": 12083,
+  "title": "Opt into unsafe lifecycle warnings without async tree",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 14,
+  "created_at": "2018-01-23T21:22:55Z",
+  "updated_at": "2018-01-25T01:49:46Z",
+  "closed_at": "2018-01-25T01:49:43Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12083",
+    "html_url": "https://github.com/facebook/react/pull/12083",
+    "diff_url": "https://github.com/facebook/react/pull/12083.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12083.patch"
+  },
+  "body": "Opts a subtree into the same warnings as `AsyncComponent` does, but does not actually enable async rendering. This same mechanism could be extended for similar warnings in the future (eg compiler, React Fabric).\r\n\r\nFollowing precedent, this component is exposed via `React.StrictMode`. It is used like a `Fragment` to wrap an element:\r\n\r\n```js\r\nconst {StrictMode} = React;\r\n\r\n<StrictMode>\r\n  {/* Subtree here */}\r\n</StrictMode>\r\n```\r\n\r\nThis branch builds on top of #12060.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

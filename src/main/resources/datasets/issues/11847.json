@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11847",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11847/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11847/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11847/events",
+  "html_url": "https://github.com/facebook/react/issues/11847",
+  "id": 281901860,
+  "node_id": "MDU6SXNzdWUyODE5MDE4NjA=",
+  "number": 11847,
+  "title": "Lifecycle method to build initial state for classes",
+  "user": {
+    "login": "dryganets",
+    "id": 54233,
+    "node_id": "MDQ6VXNlcjU0MjMz",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/54233?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dryganets",
+    "html_url": "https://github.com/dryganets",
+    "followers_url": "https://api.github.com/users/dryganets/followers",
+    "following_url": "https://api.github.com/users/dryganets/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dryganets/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dryganets/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dryganets/subscriptions",
+    "organizations_url": "https://api.github.com/users/dryganets/orgs",
+    "repos_url": "https://api.github.com/users/dryganets/repos",
+    "events_url": "https://api.github.com/users/dryganets/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dryganets/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 620368407,
+      "node_id": "MDU6TGFiZWw2MjAzNjg0MDc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Needs%20More%20Information",
+      "name": "Resolution: Needs More Information",
+      "color": "fffde7",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 14,
+  "created_at": "2017-12-13T21:24:31Z",
+  "updated_at": "2018-01-06T01:27:03Z",
+  "closed_at": "2018-01-06T01:27:02Z",
+  "author_association": "NONE",
+  "body": "**Feature request**\r\nWe need to have a way to build the initial state of ReactComponent in case of usage of classes.\r\n\r\n**What is the current behavior?**\r\nWarning in case this.state modified in willComponentMount.\r\n\r\nAccess to partially constructed object in case of somewhat complex state building logic in the constructor.\r\n\r\nFor example, if we have a hierarchy of classes with the _buildState method called in the constructor to generate an initial state.\r\nDerived class overrides the _buildState method to have a richer state. In result, part of the object related to the derived class won't be constructed yet and can't be accessed in the _buildState.\r\n\r\nThe buildState approach is currently used in ReSub framework:\r\nhttps://github.com/Microsoft/ReSub\r\n\r\n**What is the expected behavior?**\r\nRather no warning in case of this.state modification or new Lifecycle method which is called right after constructor call which returns the state.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nReact 16+ is affected.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

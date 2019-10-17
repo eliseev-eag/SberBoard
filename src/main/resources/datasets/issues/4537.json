@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4537",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4537/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4537/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4537/events",
+  "html_url": "https://github.com/facebook/react/pull/4537",
+  "id": 98427227,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDEzNTc5MDU=",
+  "number": 4537,
+  "title": "Update 02.1-jsx-in-depth.md",
+  "user": {
+    "login": "afhole",
+    "id": 1911055,
+    "node_id": "MDQ6VXNlcjE5MTEwNTU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1911055?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/afhole",
+    "html_url": "https://github.com/afhole",
+    "followers_url": "https://api.github.com/users/afhole/followers",
+    "following_url": "https://api.github.com/users/afhole/following{/other_user}",
+    "gists_url": "https://api.github.com/users/afhole/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/afhole/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/afhole/subscriptions",
+    "organizations_url": "https://api.github.com/users/afhole/orgs",
+    "repos_url": "https://api.github.com/users/afhole/repos",
+    "events_url": "https://api.github.com/users/afhole/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/afhole/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2015-07-31T16:41:48Z",
+  "updated_at": "2015-08-12T19:11:30Z",
+  "closed_at": "2015-07-31T17:13:58Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4537",
+    "html_url": "https://github.com/facebook/react/pull/4537",
+    "diff_url": "https://github.com/facebook/react/pull/4537.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4537.patch"
+  },
+  "body": "Minor grammar correction - 'setup' is a noun, not a verb\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

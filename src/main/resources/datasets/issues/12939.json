@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12939",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12939/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12939/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12939/events",
+  "html_url": "https://github.com/facebook/react/pull/12939",
+  "id": 327818994,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTkxNTIwNTgy",
+  "number": 12939,
+  "title": "Set the correct initial value on input range",
+  "user": {
+    "login": "Illu",
+    "id": 7047255,
+    "node_id": "MDQ6VXNlcjcwNDcyNTU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/7047255?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Illu",
+    "html_url": "https://github.com/Illu",
+    "followers_url": "https://api.github.com/users/Illu/followers",
+    "following_url": "https://api.github.com/users/Illu/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Illu/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Illu/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Illu/subscriptions",
+    "organizations_url": "https://api.github.com/users/Illu/orgs",
+    "repos_url": "https://api.github.com/users/Illu/repos",
+    "events_url": "https://api.github.com/users/Illu/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Illu/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 19,
+  "created_at": "2018-05-30T17:05:29Z",
+  "updated_at": "2018-05-31T21:23:30Z",
+  "closed_at": "2018-05-31T21:23:27Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12939",
+    "html_url": "https://github.com/facebook/react/pull/12939",
+    "diff_url": "https://github.com/facebook/react/pull/12939.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12939.patch"
+  },
+  "body": "Resolves #12926 \r\n\r\nSets the value of the input range to empty, instead of the default value from the input component.\r\nThis prevents the input from not updating when first switching to the default value (or `max` value in case of `max` being inferior to this default value (50))",
+  "closed_by": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

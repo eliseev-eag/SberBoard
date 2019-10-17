@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/17069",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/17069/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/17069/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/17069/events",
+  "html_url": "https://github.com/facebook/react/issues/17069",
+  "id": 506037125,
+  "node_id": "MDU6SXNzdWU1MDYwMzcxMjU=",
+  "number": 17069,
+  "title": "The warning for uncontrolled -> controlled inputs is confusing",
+  "user": {
+    "login": "vcarl",
+    "id": 1551487,
+    "node_id": "MDQ6VXNlcjE1NTE0ODc=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1551487?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/vcarl",
+    "html_url": "https://github.com/vcarl",
+    "followers_url": "https://api.github.com/users/vcarl/followers",
+    "following_url": "https://api.github.com/users/vcarl/following{/other_user}",
+    "gists_url": "https://api.github.com/users/vcarl/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/vcarl/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/vcarl/subscriptions",
+    "organizations_url": "https://api.github.com/users/vcarl/orgs",
+    "repos_url": "https://api.github.com/users/vcarl/repos",
+    "events_url": "https://api.github.com/users/vcarl/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/vcarl/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-10-11T20:10:26Z",
+  "updated_at": "2019-10-16T02:34:13Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n\r\nBug? Mild DX improvement.\r\n\r\n**What is the current behavior?**\r\n\r\nCreating an input with an undefined or null value, then later passing a string value, triggers a warning about controlled inputs.\r\n\r\n> A component is changing an uncontrolled input of type undefined to be controlled. Input elements should not switch from uncontrolled to controlled (or vice versa)\r\n\r\nIt's my experience in Reactiflux that this warning is unclear to developers with less familiarity with React, or at least with the \"controlled\" and \"uncontrolled\" terms.\r\n",
+  "closed_by": null
+}

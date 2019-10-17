@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10791",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10791/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10791/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10791/events",
+  "html_url": "https://github.com/facebook/react/pull/10791",
+  "id": 260031416,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQyNzI1NjI4",
+  "number": 10791,
+  "title": "[Gatsby Docs Update] Horizontal overflow on mobile",
+  "user": {
+    "login": "joecritch",
+    "id": 24449,
+    "node_id": "MDQ6VXNlcjI0NDQ5",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/24449?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/joecritch",
+    "html_url": "https://github.com/joecritch",
+    "followers_url": "https://api.github.com/users/joecritch/followers",
+    "following_url": "https://api.github.com/users/joecritch/following{/other_user}",
+    "gists_url": "https://api.github.com/users/joecritch/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/joecritch/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/joecritch/subscriptions",
+    "organizations_url": "https://api.github.com/users/joecritch/orgs",
+    "repos_url": "https://api.github.com/users/joecritch/repos",
+    "events_url": "https://api.github.com/users/joecritch/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/joecritch/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-09-23T19:05:42Z",
+  "updated_at": "2017-09-25T18:06:46Z",
+  "closed_at": "2017-09-25T18:06:46Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10791",
+    "html_url": "https://github.com/facebook/react/pull/10791",
+    "diff_url": "https://github.com/facebook/react/pull/10791.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10791.patch"
+  },
+  "body": "**issue**\r\n\r\n- mobile devices (both iOS and Android) would overflow horizontally on any docs pages where a code block or note was present.\r\n\r\n**what's included?**\r\n\r\n- a fix for the above issue, by reducing the negative margin on code blocks and notes\r\n- removed code blocks border radius, to improve the appearance\r\n- _tested on iOS 11 and Android 8_\r\n\r\n**note**\r\n\r\n- a previous PR had a \"fix\" for this using `overflowX: hidden`, which caused an awful scrolling regression. this is much cleaner anyway!\r\n\r\n_before_ (this whilst the page has been horizontally scrolled to reveal the right-hand side)\r\n\r\n<img width=\"622\" alt=\"before\" src=\"https://user-images.githubusercontent.com/24449/30776209-648e3752-a09a-11e7-8743-7c191bb2fd55.png\">\r\n\r\n_after_\r\n\r\n<img width=\"556\" alt=\"after\" src=\"https://user-images.githubusercontent.com/24449/30776208-648df21a-a09a-11e7-99ce-50ba54283321.png\">\r\n\r\n\r\ncc @bvaughn @flarnie ",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

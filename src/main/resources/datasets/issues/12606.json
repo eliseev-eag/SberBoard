@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12606",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12606/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12606/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12606/events",
+  "html_url": "https://github.com/facebook/react/pull/12606",
+  "id": 313417135,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTgwOTc0MjQw",
+  "number": 12606,
+  "title": "[Danger] Minor fixes",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2018-04-11T17:24:39Z",
+  "updated_at": "2018-04-12T04:15:55Z",
+  "closed_at": "2018-04-11T17:46:03Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12606",
+    "html_url": "https://github.com/facebook/react/pull/12606",
+    "diff_url": "https://github.com/facebook/react/pull/12606.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12606.patch"
+  },
+  "body": "The first commit removes the step that downloads fresh stats on CI. It should be unnecessary now because Dangerfile already does it more accurately—by [downloading the stats for merge base](https://github.com/facebook/react/blob/915bb5321a8db3435eb36ef1cf9414c15333b447/dangerfile.js#L108-L110).\r\n\r\nThis should fix the issue that caused newly added bundles to show up in recent unrelated PRs [like here](https://github.com/facebook/react/pull/12600#issuecomment-380247620). It was happening because stats from master already included this bundle, but stats from the mergebase didn't. During the first build, the stats from master were \"amended\" with new data, but Danger's comparison thought those new rows were added by the build (whereas they were added by the first step that downloads stats from master). By removing the first step we shouldn't get false positives for recently added bundles (except the rarer case where a PR's merge base is older than the most recent release that updates the sizes on master). TLDR: there should be less noise in Danger's comments.\r\n\r\nIn the second commit, I changed the threshold to be absolute (100 bytes after gzip, or 300 bytes before gzip). This is because \"1%\" means wildly different things for, for example, ReactDOM and React. So it felt a bit unpredictable when the package would show up. Should be more consistent now.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

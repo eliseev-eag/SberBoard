@@ -1,0 +1,72 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12615",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12615/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12615/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12615/events",
+  "html_url": "https://github.com/facebook/react/issues/12615",
+  "id": 314394404,
+  "node_id": "MDU6SXNzdWUzMTQzOTQ0MDQ=",
+  "number": 12615,
+  "title": "Unexpected warning when hydrating with portal and SSR",
+  "user": {
+    "login": "majelbstoat",
+    "id": 425787,
+    "node_id": "MDQ6VXNlcjQyNTc4Nw==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/425787?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/majelbstoat",
+    "html_url": "https://github.com/majelbstoat",
+    "followers_url": "https://api.github.com/users/majelbstoat/followers",
+    "following_url": "https://api.github.com/users/majelbstoat/following{/other_user}",
+    "gists_url": "https://api.github.com/users/majelbstoat/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/majelbstoat/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/majelbstoat/subscriptions",
+    "organizations_url": "https://api.github.com/users/majelbstoat/orgs",
+    "repos_url": "https://api.github.com/users/majelbstoat/repos",
+    "events_url": "https://api.github.com/users/majelbstoat/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/majelbstoat/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 588833528,
+      "node_id": "MDU6TGFiZWw1ODg4MzM1Mjg=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Difficulty:%20medium",
+      "name": "Difficulty: medium",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    },
+    {
+      "id": 717031390,
+      "node_id": "MDU6TGFiZWw3MTcwMzEzOTA=",
+      "url": "https://api.github.com/repos/facebook/react/labels/good%20first%20issue",
+      "name": "good first issue",
+      "color": "6ce26a",
+      "default": true
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 18,
+  "created_at": "2018-04-15T07:50:53Z",
+  "updated_at": "2019-06-15T23:54:34Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\n*bug*\r\n\r\n**What is the current behavior?**\r\n\r\nGiven the following (simplified) snippet:\r\n\r\n```jsx\r\nclass HoverMenu extends React.Component {\r\n  render() {\r\n    if (typeof document === 'undefined') return null\r\n    const root = document.getElementById('root')\r\n    return ReactDOM.createPortal(<div>Hello World</div>, root)\r\n  }\r\n}\r\n\r\nclass Para extends React.Component {\r\n  render() {\r\n    return (\r\n      <span>\r\n        Some Text\r\n        <HoverMenu />\r\n      </span>\r\n    )\r\n  }\r\n} \r\n```\r\n\r\nwhere `div#root` is a valid `div` that exists, the following error is shown when hydrating after SSR:\r\n\r\n`Warning: Expected server HTML to contain a matching <div> in <span>`\r\n\r\nThe warning goes away if I update the definition of `HoverMenu` to:\r\n\r\n```jsx\r\nclass HoverMenu extends React.Component {\r\n  componentDidMount() {\r\n    this.setState({ isActive: true })\r\n  }\r\n  render() {\r\n    const { isActive} = this.state\r\n    if (!isActive) return null\r\n    const root = document.getElementById('root')\r\n    return ReactDOM.createPortal(<div>Hello World</div>, root)\r\n  }\r\n}\r\n```\r\n\r\nI'd prefer not to do that because of the double rendering caused by `setState` in `componentDidMount`.\r\n\r\nI don't quite understand what that error is telling me. No `<div />` is rendered server-side in either case. The error is particularly confusing, as the `HoverMenu` DOM `div` is not even rendered inside a DOM `span`. (I wonder if this is happening because `HoverMenu` is nested inside a React `span`.)\r\n\r\n**What is the expected behavior?**\r\n\r\nNo error is thrown. Or, at least that the error message is clearer.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nChrome 65\r\nReact 16.2\r\n(SSR through Next 5.1)\r\n",
+  "closed_by": null
+}

@@ -1,0 +1,91 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14848",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14848/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14848/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14848/events",
+  "html_url": "https://github.com/facebook/react/issues/14848",
+  "id": 410231903,
+  "node_id": "MDU6SXNzdWU0MTAyMzE5MDM=",
+  "number": 14848,
+  "title": "Trigger suspense from hooks",
+  "user": {
+    "login": "NeoLegends",
+    "id": 1683034,
+    "node_id": "MDQ6VXNlcjE2ODMwMzQ=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1683034?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/NeoLegends",
+    "html_url": "https://github.com/NeoLegends",
+    "followers_url": "https://api.github.com/users/NeoLegends/followers",
+    "following_url": "https://api.github.com/users/NeoLegends/following{/other_user}",
+    "gists_url": "https://api.github.com/users/NeoLegends/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/NeoLegends/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/NeoLegends/subscriptions",
+    "organizations_url": "https://api.github.com/users/NeoLegends/orgs",
+    "repos_url": "https://api.github.com/users/NeoLegends/repos",
+    "events_url": "https://api.github.com/users/NeoLegends/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/NeoLegends/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 1109410193,
+      "node_id": "MDU6TGFiZWwxMTA5NDEwMTkz",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Hooks",
+      "name": "Component: Hooks",
+      "color": "c2f27b",
+      "default": false
+    },
+    {
+      "id": 1109407645,
+      "node_id": "MDU6TGFiZWwxMTA5NDA3NjQ1",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Suspense",
+      "name": "Component: Suspense",
+      "color": "8ffcd6",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-02-14T10:31:20Z",
+  "updated_at": "2019-02-14T20:10:13Z",
+  "closed_at": "2019-02-14T20:10:12Z",
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\nQuestion. This may also be related to #14563.\r\n\r\nHow do we trigger suspense from a hook?\r\n\r\n**Why did the question come up?**\r\n\r\nThis question came up during our usage of `react-i18next`. A recent update of `react-i18next` provided the `useTranslation`-hook which allows obtaining the current translations and will also trigger loading of not-yet-loaded translation namespaces (kinda like code splitting).\r\n\r\nTo handle the case where the translations aren't loaded yet, the `useTranslation`-hook throws a promise to trigger `Suspense`, which is actually really neat because it cleanly integrates with the existing react features!\r\n\r\nHowever, if you are using more hooks after calling the `useTranslation`-hook, these other hooks won't be rendered if `useTranslation` throws the promise. Once the translations have loaded the hook won't throw anymore and react will award you with a big red warning that the amount of hooks has changed.\r\n\r\n**Example**\r\n\r\n```js\r\nconst Component = () => {\r\n  const [t] = useTranslation('translationnamespace');\r\n  const [count, setCount] = useState(0);\r\n\r\n  return (\r\n    <div onClick={() => setCount(count + 1)}>\r\n      {t('The count is:')} {count}\r\n    </div>\r\n  );\r\n};\r\n```\r\n\r\nIf `translationnamespace` isn't loaded yet, `useTranslation` will throw, causing `useState` to not be rendered. Once `translationnamespace` is loaded, `useTranslation` won't throw anymore, which causes `useState` to be rendered causing the warning.\r\n\r\n**The General Case**\r\n\r\nSo this question doesn't apply to react-i18next only, but instead applies to all hooks that wish to trigger suspense. How would we go about doing this, and how would this integrate with the current \"Rules of Hooks\" that state that hooks mustn't be rendered conditionally?",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

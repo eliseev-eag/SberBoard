@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15881",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15881/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15881/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15881/events",
+  "html_url": "https://github.com/facebook/react/issues/15881",
+  "id": 455948285,
+  "node_id": "MDU6SXNzdWU0NTU5NDgyODU=",
+  "number": 15881,
+  "title": "Erroneous useEffect conditional call error",
+  "user": {
+    "login": "synzen",
+    "id": 18688793,
+    "node_id": "MDQ6VXNlcjE4Njg4Nzkz",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/18688793?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/synzen",
+    "html_url": "https://github.com/synzen",
+    "followers_url": "https://api.github.com/users/synzen/followers",
+    "following_url": "https://api.github.com/users/synzen/following{/other_user}",
+    "gists_url": "https://api.github.com/users/synzen/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/synzen/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/synzen/subscriptions",
+    "organizations_url": "https://api.github.com/users/synzen/orgs",
+    "repos_url": "https://api.github.com/users/synzen/repos",
+    "events_url": "https://api.github.com/users/synzen/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/synzen/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 1249821345,
+      "node_id": "MDU6TGFiZWwxMjQ5ODIxMzQ1",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20ESLint%20Rules",
+      "name": "Component: ESLint Rules",
+      "color": "f7afdb",
+      "default": false
+    },
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-06-13T20:54:31Z",
+  "updated_at": "2019-09-03T12:20:18Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\nbug\r\n\r\n**What is the current behavior?**\r\nReact gives an error about `useEffect` being called conditionally when it actually isn't. ~~Modifying a local object variable within a loop seems to be triggering it.~~\r\n```\r\nReact Hook \"useEffect\" is called conditionally. React Hooks must be called in the exact same order in every component render. Did you accidentally call a React Hook after an early return? react-hooks/rules-of-hooks\r\n```\r\n**Demo**\r\n\r\nhttps://codesandbox.io/s/epic-meadow-eji2l\r\n\r\n\r\n**What is the expected behavior?**\r\nIt should not give any errors about conditional calls of `useEffect` since it's not being called conditionally\r\n\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nv16.8.6 / Chrome / Windows, unknown",
+  "closed_by": null
+}

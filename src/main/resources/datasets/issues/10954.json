@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10954",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10954/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10954/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10954/events",
+  "html_url": "https://github.com/facebook/react/pull/10954",
+  "id": 261528457,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQzODA1MzIx",
+  "number": 10954,
+  "title": "Added unstable_batchedUpdates as breaking change to v16 post",
+  "user": {
+    "login": "watadarkstar",
+    "id": 3059371,
+    "node_id": "MDQ6VXNlcjMwNTkzNzE=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/3059371?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/watadarkstar",
+    "html_url": "https://github.com/watadarkstar",
+    "followers_url": "https://api.github.com/users/watadarkstar/followers",
+    "following_url": "https://api.github.com/users/watadarkstar/following{/other_user}",
+    "gists_url": "https://api.github.com/users/watadarkstar/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/watadarkstar/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/watadarkstar/subscriptions",
+    "organizations_url": "https://api.github.com/users/watadarkstar/orgs",
+    "repos_url": "https://api.github.com/users/watadarkstar/repos",
+    "events_url": "https://api.github.com/users/watadarkstar/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/watadarkstar/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-09-29T04:23:57Z",
+  "updated_at": "2017-09-29T12:17:13Z",
+  "closed_at": "2017-09-29T12:08:20Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10954",
+    "html_url": "https://github.com/facebook/react/pull/10954",
+    "diff_url": "https://github.com/facebook/react/pull/10954.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10954.patch"
+  },
+  "body": "`ReactDOM.unstable_batchedUpdates` now only takes one argument (see issue: #10866). Added a note in breaking changes v16 post.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

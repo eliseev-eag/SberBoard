@@ -1,0 +1,99 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12749",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12749/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12749/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12749/events",
+  "html_url": "https://github.com/facebook/react/issues/12749",
+  "id": 320516537,
+  "node_id": "MDU6SXNzdWUzMjA1MTY1Mzc=",
+  "number": 12749,
+  "title": "IE 11 \"prompt to remember password\" regression bug since 15.2.0",
+  "user": {
+    "login": "luisrudge",
+    "id": 941075,
+    "node_id": "MDQ6VXNlcjk0MTA3NQ==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/941075?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/luisrudge",
+    "html_url": "https://github.com/luisrudge",
+    "followers_url": "https://api.github.com/users/luisrudge/followers",
+    "following_url": "https://api.github.com/users/luisrudge/following{/other_user}",
+    "gists_url": "https://api.github.com/users/luisrudge/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/luisrudge/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/luisrudge/subscriptions",
+    "organizations_url": "https://api.github.com/users/luisrudge/orgs",
+    "repos_url": "https://api.github.com/users/luisrudge/repos",
+    "events_url": "https://api.github.com/users/luisrudge/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/luisrudge/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 69105383,
+      "node_id": "MDU6TGFiZWw2OTEwNTM4Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Browser:%20IE",
+      "name": "Browser: IE",
+      "color": "c7def8",
+      "default": false
+    },
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 178761159,
+      "node_id": "MDU6TGFiZWwxNzg3NjExNTk=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Regression",
+      "name": "Type: Regression",
+      "color": "e11d21",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 16,
+  "created_at": "2018-05-05T15:09:17Z",
+  "updated_at": "2019-03-04T12:21:15Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "\r\n## Note: this issue seems solved for Edge but not for IE 11, see https://github.com/facebook/react/issues/12749#issuecomment-412671171\r\n\r\n\r\n\r\nThis issue was [already raised](https://github.com/facebook/react/issues/7328), but since it was closed, I'm opening a new one so we can get more traction on this.\r\n\r\nI'm still having this issue with both IE and Edge:\r\n\r\nWorks with 15.1.0: https://codesandbox.io/s/lpvz0zy9wq\r\nDoesn't work with 15.2.0: https://codesandbox.io/s/o9kl2jzo1q\r\nDoesn't work with 15.6.2: https://codesandbox.io/s/38kp95wl96\r\nDoesn't work with 16.3.1: https://codesandbox.io/s/xjpk3wr55p\r\n\r\nIn order to test this effectively, you have to follow a few steps:\r\n\r\n### Using Edge, go to **Settings** >> **View Advanced Settings**, under **Privacy and Services**\r\n\r\n- make sure you have **Offer to save passwords** enabled:\r\n![image](https://user-images.githubusercontent.com/941075/38700796-9c04a542-3e72-11e8-9aa5-b7e068c300b3.png)\r\n\r\n- make sure you don't have any passwords saved in the codesandbox.io domain:\r\n![image](https://user-images.githubusercontent.com/941075/38700921-ee497666-3e72-11e8-8b27-8e64fb6a4e2e.png)\r\n\r\n\r\n## Steps to reproduce when IT WORKS (15.1.0)\r\n\r\n- go to the [15.1.0](https://codesandbox.io/s/lpvz0zy9wq) sandbox\r\n- type a username and a password and hit submit\r\n- you'll see a confirmation panel about saving passwords:\r\n![image](https://user-images.githubusercontent.com/941075/38701037-409fdc70-3e73-11e8-8997-ec8ecc082163.png)\r\n- refresh the page\r\n- type another username and a password and hit submit\r\n- you'll see another confirmation panel about saving passwords:\r\n![image](https://user-images.githubusercontent.com/941075/38701037-409fdc70-3e73-11e8-8997-ec8ecc082163.png)\r\n- refresh the page\r\n- click on the first input\r\n- you'll see a list of the previously used usernames: ![image](https://user-images.githubusercontent.com/941075/38701545-8b5e1e2e-3e74-11e8-932a-ccf18b6a07fc.png)\r\n\r\n## Steps to reproduce when IT DOESN'T WORK (15.2.0, 15.6.2, 16.3.1)\r\n\r\n- remove previously saved passwords from the codesandbox.io domain:\r\n![image](https://user-images.githubusercontent.com/941075/38700921-ee497666-3e72-11e8-8b27-8e64fb6a4e2e.png) \r\n- go to any of the non-working sandboxes ([15.2.0](https://codesandbox.io/s/o9kl2jzo1q), [15.6.2](https://codesandbox.io/s/38kp95wl96), [16.3.1](https://codesandbox.io/s/xjpk3wr55p)\r\n- type a username and a password and hit submit\r\n- there will be no password confirmation panel\r\n- refresh the page\r\n- click on the first input\r\n- there will be no list of previously used usernames",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

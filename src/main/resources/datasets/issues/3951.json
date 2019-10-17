@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3951",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3951/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3951/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3951/events",
+  "html_url": "https://github.com/facebook/react/issues/3951",
+  "id": 80383680,
+  "node_id": "MDU6SXNzdWU4MDM4MzY4MA==",
+  "number": 3951,
+  "title": "ReactTestUtils: rename find*/scry* pairs to findOne*/findAll* or similar?",
+  "user": {
+    "login": "jamesmanning",
+    "id": 225626,
+    "node_id": "MDQ6VXNlcjIyNTYyNg==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/225626?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jamesmanning",
+    "html_url": "https://github.com/jamesmanning",
+    "followers_url": "https://api.github.com/users/jamesmanning/followers",
+    "following_url": "https://api.github.com/users/jamesmanning/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jamesmanning/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jamesmanning/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jamesmanning/subscriptions",
+    "organizations_url": "https://api.github.com/users/jamesmanning/orgs",
+    "repos_url": "https://api.github.com/users/jamesmanning/repos",
+    "events_url": "https://api.github.com/users/jamesmanning/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jamesmanning/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 139734344,
+      "node_id": "MDU6TGFiZWwxMzk3MzQzNDQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Test%20Utils",
+      "name": "Component: Test Utils",
+      "color": "eb6420",
+      "default": false
+    },
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2015-05-25T04:30:56Z",
+  "updated_at": "2017-10-04T11:24:58Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "Outside of the [relatively unknown word \"scry\"](https://twitter.com/angustweets/status/590659867926462465) being used, it's difficult for someone to tell just by name how these differ.  \n\nThe current names seem to be based on the original JX.DOM.scry api usage based on #3278 so likely made more sense internally, but as with the person that filed #2301 it would be much more discoverable and easier to use with names that were more obvious for what they do.\n\nFor back compat reasons, renaming them and then adding the existing names as pointers with comments/jsdoc saying they're deprecated probably makes more sense, IMHO.\n\nThanks!\n",
+  "closed_by": null
+}

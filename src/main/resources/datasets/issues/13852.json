@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13852",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13852/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13852/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13852/events",
+  "html_url": "https://github.com/facebook/react/pull/13852",
+  "id": 370004842,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjIyNzg1NjYw",
+  "number": 13852,
+  "title": "[schedule] Call ensureHostCallbackIsScheduled without args",
+  "user": {
+    "login": "trivikr",
+    "id": 16024985,
+    "node_id": "MDQ6VXNlcjE2MDI0OTg1",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/16024985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trivikr",
+    "html_url": "https://github.com/trivikr",
+    "followers_url": "https://api.github.com/users/trivikr/followers",
+    "following_url": "https://api.github.com/users/trivikr/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trivikr/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trivikr/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trivikr/subscriptions",
+    "organizations_url": "https://api.github.com/users/trivikr/orgs",
+    "repos_url": "https://api.github.com/users/trivikr/repos",
+    "events_url": "https://api.github.com/users/trivikr/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trivikr/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-10-15T05:32:58Z",
+  "updated_at": "2018-10-16T16:05:22Z",
+  "closed_at": "2018-10-15T17:26:41Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13852",
+    "html_url": "https://github.com/facebook/react/pull/13852",
+    "diff_url": "https://github.com/facebook/react/pull/13852.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13852.patch"
+  },
+  "body": "ensureHostCallbackIsScheduled reads firstCallbackNode from global scope\r\nand need not be passed in function call",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

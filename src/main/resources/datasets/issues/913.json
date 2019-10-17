@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/913",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/913/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/913/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/913/events",
+  "html_url": "https://github.com/facebook/react/pull/913",
+  "id": 25753598,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTE1OTIwMjk=",
+  "number": 913,
+  "title": "add \"align\" and \"bgColor\" attributes",
+  "user": {
+    "login": "jhiswin",
+    "id": 120998,
+    "node_id": "MDQ6VXNlcjEyMDk5OA==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/120998?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jhiswin",
+    "html_url": "https://github.com/jhiswin",
+    "followers_url": "https://api.github.com/users/jhiswin/followers",
+    "following_url": "https://api.github.com/users/jhiswin/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jhiswin/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jhiswin/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jhiswin/subscriptions",
+    "organizations_url": "https://api.github.com/users/jhiswin/orgs",
+    "repos_url": "https://api.github.com/users/jhiswin/repos",
+    "events_url": "https://api.github.com/users/jhiswin/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jhiswin/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 40929156,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Ng==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Wontfix",
+      "name": "Resolution: Wontfix",
+      "color": "ffffff",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2014-01-16T19:15:15Z",
+  "updated_at": "2014-06-14T12:27:53Z",
+  "closed_at": "2014-04-11T18:41:48Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/913",
+    "html_url": "https://github.com/facebook/react/pull/913",
+    "diff_url": "https://github.com/facebook/react/pull/913.diff",
+    "patch_url": "https://github.com/facebook/react/pull/913.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

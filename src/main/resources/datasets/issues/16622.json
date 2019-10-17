@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16622",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16622/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16622/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16622/events",
+  "html_url": "https://github.com/facebook/react/issues/16622",
+  "id": 487545630,
+  "node_id": "MDU6SXNzdWU0ODc1NDU2MzA=",
+  "number": 16622,
+  "title": "Enhance React DevTools \"Why did this render?\" for values nested in prop objects",
+  "user": {
+    "login": "evbo",
+    "id": 6313004,
+    "node_id": "MDQ6VXNlcjYzMTMwMDQ=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/6313004?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/evbo",
+    "html_url": "https://github.com/evbo",
+    "followers_url": "https://api.github.com/users/evbo/followers",
+    "following_url": "https://api.github.com/users/evbo/following{/other_user}",
+    "gists_url": "https://api.github.com/users/evbo/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/evbo/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/evbo/subscriptions",
+    "organizations_url": "https://api.github.com/users/evbo/orgs",
+    "repos_url": "https://api.github.com/users/evbo/repos",
+    "events_url": "https://api.github.com/users/evbo/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/evbo/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-08-30T15:30:57Z",
+  "updated_at": "2019-08-30T16:53:24Z",
+  "closed_at": "2019-08-30T16:06:34Z",
+  "author_association": "NONE",
+  "body": "\r\n**Do you want to request a *feature* or report a *bug*?**\r\n*feature*\r\n\r\n**What is the current behavior?**\r\n[as demonstrated here, \"Why did this render?\"](https://github.com/facebook/react/issues/16437#issuecomment-524892514) does a great job reporting what prop changed, but it does not yet report which _nested_ value changed for props that are comprised of nested objects.\r\n\r\n**What is the expected behavior?**\r\nThe \"why did this render?\" shows a collapsible tree with the \"leaf\" value that changed inside the prop object displayed.\r\n\r\nA couple use cases this would benefit:\r\nIn some cases, it is most convenient creating props that are nested objects. For instance, maybe you need to pass an object to a library, and you'd like to avoid storing the individual object items as separate prop variables such that you don't need to redefine them together as a dict later on, but changes are due to a single element in the dict that you'd like visibility on in react devTools.\r\n\r\nIn rarer cases, it is unavoidable having props that aren't nested objects. For instance, how could I preserve the `.prototype` key of my `props` object without react stripping it? If I wrap my props inside an object, that key can be preserved. But now *all* my props are considered 1 prop to the profiler and I have no visibility on which prop changed. With this change, I could expand the tree and drill down to which individual values changed.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nNew feature never before released in React DevTools. I am using `16.8.6`\r\n",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15907",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15907/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15907/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15907/events",
+  "html_url": "https://github.com/facebook/react/pull/15907",
+  "id": 456969958,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjg4ODc0OTkw",
+  "number": 15907,
+  "title": "[Fresh] Fall back to Map/Set if Weak equivalents are not available",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-06-17T14:32:05Z",
+  "updated_at": "2019-06-17T15:00:36Z",
+  "closed_at": "2019-06-17T15:00:30Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15907",
+    "html_url": "https://github.com/facebook/react/pull/15907",
+    "diff_url": "https://github.com/facebook/react/pull/15907.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15907.patch"
+  },
+  "body": "I'm running into this in an older RN environment. Modern ones look fine (including the today's RN open source). So this is a temporary solution until everything is modern internally.\r\n\r\nWe rely on `WeakMap` and `WeakSet` to avoid holding onto previous versions of any type after a hot reload edit. So this change makes us leak some memory in old environments. I think it's fine because it only affects really old environments (e.g. IE) and the cost is DEV-only (and only comes into play if you actually do a hot reload).\r\n\r\nThe Flow issues are the same we've ran into before. It's a Flow bug but I don't know if it'll get fixed.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

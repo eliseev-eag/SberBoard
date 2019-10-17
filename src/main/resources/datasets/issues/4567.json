@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4567",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4567/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4567/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4567/events",
+  "html_url": "https://github.com/facebook/react/pull/4567",
+  "id": 99240964,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDE2OTY3MzM=",
+  "number": 4567,
+  "title": "Fixed consistency of behavior boolean properties",
+  "user": {
+    "login": "koba04",
+    "id": 250407,
+    "node_id": "MDQ6VXNlcjI1MDQwNw==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/250407?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/koba04",
+    "html_url": "https://github.com/koba04",
+    "followers_url": "https://api.github.com/users/koba04/followers",
+    "following_url": "https://api.github.com/users/koba04/following{/other_user}",
+    "gists_url": "https://api.github.com/users/koba04/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/koba04/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/koba04/subscriptions",
+    "organizations_url": "https://api.github.com/users/koba04/orgs",
+    "repos_url": "https://api.github.com/users/koba04/repos",
+    "events_url": "https://api.github.com/users/koba04/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/koba04/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2015-08-05T16:11:34Z",
+  "updated_at": "2016-08-03T00:43:18Z",
+  "closed_at": "2015-08-19T17:20:50Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4567",
+    "html_url": "https://github.com/facebook/react/pull/4567",
+    "diff_url": "https://github.com/facebook/react/pull/4567.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4567.patch"
+  },
+  "body": "The behavior of DOM Component boolean property is different by the component lifecycle (create or update).\n\n``` js\nvar Button = React.createClass({\n    getInitialState: function() {\n        return {\n            disabled: true\n        };\n    },\n    render: function() {\n        return <div><button disabled={this.state.disabled}>click</button></div>;\n    }\n});\n\nvar component = React.render(<Button />, document.getElementById('container'));\nconsole.log(React.findDOMNode(component).innerHTML);\n// <button disabled=\"\" data-reactid=\".0.0\">click</button>\n\ncomponent.setState({disabled: false});\nconsole.log(React.findDOMNode(component).innerHTML);\n\ncomponent.setState({disabled: true});\nconsole.log(React.findDOMNode(component).innerHTML);\n// <button data-reactid=\".0.0\" disabled=\"true\">click</button>\n```\n\nhttps://jsfiddle.net/koba04/arehgdsq/\n\nI think it should be the same behavior regardless of the component lifecycle.\nThis PR applies the DOM operation in the creating component process to the updating process.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

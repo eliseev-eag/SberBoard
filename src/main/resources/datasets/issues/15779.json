@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15779",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15779/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15779/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15779/events",
+  "html_url": "https://github.com/facebook/react/pull/15779",
+  "id": 450293128,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjgzNjQyOTE5",
+  "number": 15779,
+  "title": "chore: make tests compatible with Jest 24",
+  "user": {
+    "login": "SimenB",
+    "id": 1404810,
+    "node_id": "MDQ6VXNlcjE0MDQ4MTA=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1404810?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/SimenB",
+    "html_url": "https://github.com/SimenB",
+    "followers_url": "https://api.github.com/users/SimenB/followers",
+    "following_url": "https://api.github.com/users/SimenB/following{/other_user}",
+    "gists_url": "https://api.github.com/users/SimenB/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/SimenB/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/SimenB/subscriptions",
+    "organizations_url": "https://api.github.com/users/SimenB/orgs",
+    "repos_url": "https://api.github.com/users/SimenB/repos",
+    "events_url": "https://api.github.com/users/SimenB/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/SimenB/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2019-05-30T12:53:39Z",
+  "updated_at": "2019-08-14T11:49:04Z",
+  "closed_at": "2019-08-14T11:32:26Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15779",
+    "html_url": "https://github.com/facebook/react/pull/15779",
+    "diff_url": "https://github.com/facebook/react/pull/15779.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15779.patch"
+  },
+  "body": "This is #15778 without the actual upgrade to Jest 24 (as that breaks CI). I'm hopeful this will pass so it can land, then the diff for Jest 24 is just config changes.\r\n\r\nNote that this does upgrade jest to the latest 23 release, which is why the lockfile has so many changes",
+  "closed_by": {
+    "login": "threepointone",
+    "id": 18808,
+    "node_id": "MDQ6VXNlcjE4ODA4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/18808?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/threepointone",
+    "html_url": "https://github.com/threepointone",
+    "followers_url": "https://api.github.com/users/threepointone/followers",
+    "following_url": "https://api.github.com/users/threepointone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/threepointone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/threepointone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/threepointone/subscriptions",
+    "organizations_url": "https://api.github.com/users/threepointone/orgs",
+    "repos_url": "https://api.github.com/users/threepointone/repos",
+    "events_url": "https://api.github.com/users/threepointone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/threepointone/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

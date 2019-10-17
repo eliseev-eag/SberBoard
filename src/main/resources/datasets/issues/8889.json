@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8889",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8889/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8889/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8889/events",
+  "html_url": "https://github.com/facebook/react/pull/8889",
+  "id": 204072311,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTAzNzc5ODg3",
+  "number": 8889,
+  "title": "Update context example for react-router v4 beta",
+  "user": {
+    "login": "mjackson",
+    "id": 92839,
+    "node_id": "MDQ6VXNlcjkyODM5",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/92839?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mjackson",
+    "html_url": "https://github.com/mjackson",
+    "followers_url": "https://api.github.com/users/mjackson/followers",
+    "following_url": "https://api.github.com/users/mjackson/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mjackson/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mjackson/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mjackson/subscriptions",
+    "organizations_url": "https://api.github.com/users/mjackson/orgs",
+    "repos_url": "https://api.github.com/users/mjackson/repos",
+    "events_url": "https://api.github.com/users/mjackson/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mjackson/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-01-30T17:15:13Z",
+  "updated_at": "2017-02-02T13:25:29Z",
+  "closed_at": "2017-01-30T17:36:47Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8889",
+    "html_url": "https://github.com/facebook/react/pull/8889",
+    "diff_url": "https://github.com/facebook/react/pull/8889.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8889.patch"
+  },
+  "body": "Just a small update for our beta release this morning :)",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

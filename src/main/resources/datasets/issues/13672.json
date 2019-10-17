@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13672",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13672/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13672/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13672/events",
+  "html_url": "https://github.com/facebook/react/pull/13672",
+  "id": 360895957,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjE2MDAxNzQx",
+  "number": 13672,
+  "title": "[ReactFiberScheduler.js] Remove redundant code",
+  "user": {
+    "login": "NE-SmallTown",
+    "id": 18418010,
+    "node_id": "MDQ6VXNlcjE4NDE4MDEw",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/18418010?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/NE-SmallTown",
+    "html_url": "https://github.com/NE-SmallTown",
+    "followers_url": "https://api.github.com/users/NE-SmallTown/followers",
+    "following_url": "https://api.github.com/users/NE-SmallTown/following{/other_user}",
+    "gists_url": "https://api.github.com/users/NE-SmallTown/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/NE-SmallTown/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/NE-SmallTown/subscriptions",
+    "organizations_url": "https://api.github.com/users/NE-SmallTown/orgs",
+    "repos_url": "https://api.github.com/users/NE-SmallTown/repos",
+    "events_url": "https://api.github.com/users/NE-SmallTown/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/NE-SmallTown/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2018-09-17T14:28:42Z",
+  "updated_at": "2018-10-31T15:10:57Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13672",
+    "html_url": "https://github.com/facebook/react/pull/13672",
+    "diff_url": "https://github.com/facebook/react/pull/13672.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13672.patch"
+  },
+  "body": "Because only when `root.finishedWork === null` we enter the `else` branch, and in the branch we won't change `root.finishedWork` before we do `root.finishedWork = null`, so we don't need to set it to `null` again.",
+  "closed_by": null
+}

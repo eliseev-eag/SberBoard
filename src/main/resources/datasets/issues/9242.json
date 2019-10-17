@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9242",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9242/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9242/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9242/events",
+  "html_url": "https://github.com/facebook/react/issues/9242",
+  "id": 216416941,
+  "node_id": "MDU6SXNzdWUyMTY0MTY5NDE=",
+  "number": 9242,
+  "title": "Event Handler on React Component not invoked when React Component is rendered inside a Web Component",
+  "user": {
+    "login": "nilshartmann",
+    "id": 435073,
+    "node_id": "MDQ6VXNlcjQzNTA3Mw==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/435073?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nilshartmann",
+    "html_url": "https://github.com/nilshartmann",
+    "followers_url": "https://api.github.com/users/nilshartmann/followers",
+    "following_url": "https://api.github.com/users/nilshartmann/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nilshartmann/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nilshartmann/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nilshartmann/subscriptions",
+    "organizations_url": "https://api.github.com/users/nilshartmann/orgs",
+    "repos_url": "https://api.github.com/users/nilshartmann/repos",
+    "events_url": "https://api.github.com/users/nilshartmann/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nilshartmann/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 15,
+  "created_at": "2017-03-23T12:51:10Z",
+  "updated_at": "2019-10-08T08:36:10Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nBug\r\n\r\n**What is the current behavior?**\r\nA React Component with an Event Handler (for example onClick) is rendered inside a Web Component. When the Component is clicked the Event does not receive the React Component (specified callback is not invoked)\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem via https://jsfiddle.net or similar (template: https://jsfiddle.net/reactjs/69z2wepo/).**\r\n\r\nYou can reproduce it with Web Component example contained in the react repository (https://github.com/facebook/react/blob/master/examples/webcomponents/index.html): Replace the 'a' element with a button and add for example an onClick event handler. \r\n\r\nYou can find a modified version of the Web Component example (based on the 15.4.2 codebase - https://github.com/facebook/react/blob/v15.4.2/examples/webcomponents/index.html) here:\r\nhttps://gist.github.com/nilshartmann/3a520920e5fc920bfde49e077ad3beab#file-index-html-L50 \r\n\r\n**What is the expected behavior?**\r\nThe event handler should be called.\r\n\r\nFor testing I have modified `getEventTarget.js` to return the target from the `path` property of the `nativeEvent` (instead of the \"original\" `target` from the `nativeEvent`). With this addition it works - \r\nthe Event Handler is called.\r\n\r\nYou can find the modified version also in the gist: https://gist.github.com/nilshartmann/3a520920e5fc920bfde49e077ad3beab#file-geteventtarget-js-L6\r\n\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n15.4.x and 16.x\r\nI've tested in Chrome, Firefox and Safari. I don't know if it works in previous versions of React (don't think so)",
+  "closed_by": null
+}

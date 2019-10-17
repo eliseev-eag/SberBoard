@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9998",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9998/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9998/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9998/events",
+  "html_url": "https://github.com/facebook/react/pull/9998",
+  "id": 236743376,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTI2MjAxMjM4",
+  "number": 9998,
+  "title": "Fixed typo in Implementation notes",
+  "user": {
+    "login": "vritant24",
+    "id": 13074644,
+    "node_id": "MDQ6VXNlcjEzMDc0NjQ0",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/13074644?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/vritant24",
+    "html_url": "https://github.com/vritant24",
+    "followers_url": "https://api.github.com/users/vritant24/followers",
+    "following_url": "https://api.github.com/users/vritant24/following{/other_user}",
+    "gists_url": "https://api.github.com/users/vritant24/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/vritant24/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/vritant24/subscriptions",
+    "organizations_url": "https://api.github.com/users/vritant24/orgs",
+    "repos_url": "https://api.github.com/users/vritant24/repos",
+    "events_url": "https://api.github.com/users/vritant24/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/vritant24/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-06-18T20:24:50Z",
+  "updated_at": "2017-07-05T23:58:18Z",
+  "closed_at": "2017-07-05T23:58:10Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9998",
+    "html_url": "https://github.com/facebook/react/pull/9998",
+    "diff_url": "https://github.com/facebook/react/pull/9998.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9998.patch"
+  },
+  "body": "changed \"`node`s\" to \"`nodes`\"",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

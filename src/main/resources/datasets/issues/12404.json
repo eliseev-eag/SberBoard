@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12404",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12404/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12404/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12404/events",
+  "html_url": "https://github.com/facebook/react/pull/12404",
+  "id": 306639363,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTc2MDI4MjI4",
+  "number": 12404,
+  "title": "New commit phase lifecycle: getSnapshotBeforeUpdate",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2018-03-19T21:17:46Z",
+  "updated_at": "2018-04-04T12:21:22Z",
+  "closed_at": "2018-03-26T20:28:11Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12404",
+    "html_url": "https://github.com/facebook/react/pull/12404",
+    "diff_url": "https://github.com/facebook/react/pull/12404.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12404.patch"
+  },
+  "body": "Add new \"commit\" phase lifecycle, `getSnapshotBeforeUpdate`, that gets called _before_ mutations are made. Any value returned by this lifecycle will be passed as the third parameter to `componentDidUpdate`.\r\n\r\nThis lifecycle is important for [async rendering](https://reactjs.org/blog/2018/03/01/sneak-peek-beyond-react-16.html), where there may be delays between \"render\" phase lifecycles (e.g. `componentWillUpdate` and `render`) and \"commit\" phase lifecycles (e.g. `componentDidUpdate`).\r\n\r\n---\r\n\r\nThis PR follows the precedent set by `getDerivedStateFromProps` and _does not call_ unsafe legacy lifecycles `componentWillMount`, `componentWillReceiveProps`, or `componentWillUpdate` for any component that defines the new `getSnapshotBeforeUpdate` method. This is not strictly necessary, unless we decide to polyfill the new method (see reactjs/react-lifecycles-compat/pull/1) but I think it may still be a good thing to do, for consistency.\r\n\r\nLikewise, it does not log warnings for `componentWillUpdate` if a `__suppressDeprecationWarning` flag is present.\r\n\r\nIf others disagree, I can remove this specific part of the PR (aka revert 55e75da and 2428604).\r\n\r\n---\r\n\r\nRelates to reactjs/rfcs/pull/33 ([view formatted](https://github.com/bvaughn/rfcs/blob/new-commit-phase-lifecycles/text/0000-new-commit-phase-lifecycles.md)).",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

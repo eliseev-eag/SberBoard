@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3596",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3596/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3596/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3596/events",
+  "html_url": "https://github.com/facebook/react/issues/3596",
+  "id": 66538149,
+  "node_id": "MDU6SXNzdWU2NjUzODE0OQ==",
+  "number": 3596,
+  "title": "Warn if the rendered DOM node is HTMLUnknownElement",
+  "user": {
+    "login": "radubrehar",
+    "id": 196656,
+    "node_id": "MDQ6VXNlcjE5NjY1Ng==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/196656?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/radubrehar",
+    "html_url": "https://github.com/radubrehar",
+    "followers_url": "https://api.github.com/users/radubrehar/followers",
+    "following_url": "https://api.github.com/users/radubrehar/following{/other_user}",
+    "gists_url": "https://api.github.com/users/radubrehar/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/radubrehar/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/radubrehar/subscriptions",
+    "organizations_url": "https://api.github.com/users/radubrehar/orgs",
+    "repos_url": "https://api.github.com/users/radubrehar/repos",
+    "events_url": "https://api.github.com/users/radubrehar/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/radubrehar/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 52079258,
+      "node_id": "MDU6TGFiZWw1MjA3OTI1OA==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Difficulty:%20starter",
+      "name": "Difficulty: starter",
+      "color": "94ce52",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 15,
+  "created_at": "2015-04-06T06:15:27Z",
+  "updated_at": "2017-10-02T00:45:05Z",
+  "closed_at": "2017-10-02T00:45:05Z",
+  "author_association": "NONE",
+  "body": "I've just been bit by\n\n> React's JSX uses the upper vs. lower case convention to distinguish between local component classes and HTML tags.\n\nand as an after-thought I remembered something about lower-case/upper-case jsx tags. As a good React citizen, I've searched for it on the React site and found it documented here: https://facebook.github.io/react/docs/jsx-in-depth.html\n\nI'm not new to React, but this took me around 10 minutes to trace down. I generally follow the convention, but I just developed a simple `centered` component for a mostly static site, that simply clones it's children and adds \n`margin: 0 auto; max-width: 900` to each of them. So I thought of this as a simple utility and therefore I lower-cased it.\n\nI understand this might not change, but it's worth at least adding a warning on uncommon html tag names, or better yet, on lowercase jsx tags that are also local variables.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

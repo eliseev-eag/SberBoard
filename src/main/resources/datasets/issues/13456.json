@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13456",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13456/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13456/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13456/events",
+  "html_url": "https://github.com/facebook/react/issues/13456",
+  "id": 352775249,
+  "node_id": "MDU6SXNzdWUzNTI3NzUyNDk=",
+  "number": 13456,
+  "title": "Potential performance issues with using forwardRef",
+  "user": {
+    "login": "markerikson",
+    "id": 1128784,
+    "node_id": "MDQ6VXNlcjExMjg3ODQ=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1128784?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/markerikson",
+    "html_url": "https://github.com/markerikson",
+    "followers_url": "https://api.github.com/users/markerikson/followers",
+    "following_url": "https://api.github.com/users/markerikson/following{/other_user}",
+    "gists_url": "https://api.github.com/users/markerikson/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/markerikson/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/markerikson/subscriptions",
+    "organizations_url": "https://api.github.com/users/markerikson/orgs",
+    "repos_url": "https://api.github.com/users/markerikson/repos",
+    "events_url": "https://api.github.com/users/markerikson/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/markerikson/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 29,
+  "created_at": "2018-08-22T02:12:09Z",
+  "updated_at": "2019-05-03T19:57:24Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\nBug (assuming that a potential drop in perf counts as a \"bug\")\r\n\r\n**What is the current behavior?**\r\n\r\nI've been setting up a rudimentary perf benchmark harness for React-Redux over in https://github.com/reduxjs/react-redux/issues/983 , so that we can compare performance between builds of React-Redux as we work on version 6.  The harness runs one or more benchmark apps in headless Puppeteer, running them once to capture FPS values and a second time to capture Chrome trace reports automatically.\r\n\r\nCurrently, there's only one benchmark app: a \"stock ticker\"-type stress test that measures FPS by using the `fps-emitter` package (which relies on `requestAnimationFrame`).  It's rough, but it does show meaningful differences in FPS values as we swap between different React-Redux builds and change the number of connected components in the benchmark.\r\n\r\nWe have two WIP candidate PRs for React-Redux v6: https://github.com/reduxjs/react-redux/pull/995 and https://github.com/reduxjs/react-redux/pull/1000 .  Initial testing showed that PR 995 was almost as fast as our existing 5.0.7 version, while PR 995 was slower in some runs.  However, my initial push of the 995 branch did not include use of `React.forwardRef`, while the 1000 branch already had that added.\r\n\r\nI spent Saturday adding `forwardRef` and a couple other pieces of functionality to the 995 branch, then re-ran the benchmarks.  Per ourcomments in the 983 issue, we saw that the 995 branch had suddenly gotten slower, and that removing `forwardRef` from the 1000 branch sped things up by a few FPS.\r\n\r\nThis is admittedly a very artificial stress test scenario, but it's also likely that React-Redux apps can have hundreds or thousands of connected components at once, so the potential slowdown seems concerning.\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\n\r\nThe current perf benchmark repo is at https://github.com/markerikson/benchmark-react-redux-perf .  It uses UMD builds of React-Redux so that it can easily switch which build is being used.  Several UMD builds are already committed there in the root of the repo.  `6.0-mark` is the 995 branch, and `6.0-greg` is the 1000 branch.  They can be reproduced by building their respective branches from the PRs.  I've been hand-copying the UMD build artifact from my React-Redux clone over to this benchmark folder and renaming it to whatever seems appropriate.\r\n\r\nClone the repo, `yarn` to install, `yarn perf` to build and run the benchmark.  Number of connected components can be modified in `src/constants.js` (requires rebuilding).  The harness determines which UMD build versions to run based on an array in `perfBenchmark.js`, around line 11 (`const VERSIONS = [\"5.0.7\", \"6.0-mark\"]`).\r\n\r\n\r\n**What is the expected behavior?**\r\n\r\nThat there would be minimal to no impact in perf when `forwardRef` is used to wrap a component such as a HOC, and that HOC is used widely in an application.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nI've been testing this with Puppeteer 1.6.2, on Windows 10.  It looks like the locally installed version of Chromium is 69.0.3494.0 .\r\n\r\nCurrent version of React is 16.4.2, UMD build (as React-Redux UMD expects that both React and Redux are also global variables).  I have not tested against a prior version of React, as we are specifically targeting 16.4+ with this next version of React-Redux.",
+  "closed_by": null
+}

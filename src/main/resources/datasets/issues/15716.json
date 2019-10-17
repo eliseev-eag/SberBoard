@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15716",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15716/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15716/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15716/events",
+  "html_url": "https://github.com/facebook/react/pull/15716",
+  "id": 447391003,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjgxMzk4NDg5",
+  "number": 15716,
+  "title": "Parallelizes the build script across multiple processes",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-05-22T23:55:39Z",
+  "updated_at": "2019-05-29T21:34:51Z",
+  "closed_at": "2019-05-29T21:34:51Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15716",
+    "html_url": "https://github.com/facebook/react/pull/15716",
+    "diff_url": "https://github.com/facebook/react/pull/15716.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15716.patch"
+  },
+  "body": "## Based on #15757  and #15758 \r\n\r\nParallelizes the build script across multiple processes.\r\n\r\n<img width=\"813\" alt=\"Screen Shot 2019-05-28 at 6 45 26 PM\" src=\"https://user-images.githubusercontent.com/3624098/58523805-a3772b00-817a-11e9-9682-a5ddb317b598.png\">\r\n\r\n(Our CircleCI plan supports up to 300 parallel processes (!!!) per job, but there's no point making the build job faster than the test job, so I capped it at 20.)\r\n\r\nTo do this, I needed to change how we generate the bundle size JSON file. I changed the build script to generate a separate size file per build. A downstream CI job consolidates them into a single `bundle-sizes.json` that contains the combined size information for every build.",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

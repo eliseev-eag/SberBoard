@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8627",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8627/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8627/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8627/events",
+  "html_url": "https://github.com/facebook/react/pull/8627",
+  "id": 197194842,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTkxMTkwNDA=",
+  "number": 8627,
+  "title": "[Fiber] Push class context providers even if they crash",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 25,
+  "created_at": "2016-12-22T15:09:38Z",
+  "updated_at": "2016-12-22T18:36:43Z",
+  "closed_at": "2016-12-22T18:36:43Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8627",
+    "html_url": "https://github.com/facebook/react/pull/8627",
+    "diff_url": "https://github.com/facebook/react/pull/8627.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8627.patch"
+  },
+  "body": "Previously we used to push them only after the instance was available. This caused issues in cases an error is thrown during `componentWillMount()`.\r\n\r\nIn that case we never got to pushing the provider in the begin phase, but in complete phase the provider check returned `true` since the instance existed by that point. As a result we got mismatching context pops.\r\n\r\nWe solve the issue by making the context check independent of whether the instance actually exists. Instead we're checking the type itself.\r\n\r\nThis lets us push class context early. However there's another problem: we might not know the context value. If the instance is not yet created, we can't call `getChildContext` on it.\r\n\r\nTo fix this, we are introducing a way to replace current value on the stack, and a way to read the previous value. This also helps remove some branching and split the memoized from invalidated code paths.\r\n\r\nI also added a test from #8604 to verify this also solves the problem described in that PR.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

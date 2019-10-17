@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16654",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16654/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16654/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16654/events",
+  "html_url": "https://github.com/facebook/react/pull/16654",
+  "id": 489148586,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzE0MDI2MDA1",
+  "number": 16654,
+  "title": "[react-events] Various core tweaks for event responder system",
+  "user": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 1296748300,
+      "node_id": "MDU6TGFiZWwxMjk2NzQ4MzAw",
+      "url": "https://api.github.com/repos/facebook/react/labels/React%20Flare",
+      "name": "React Flare",
+      "color": "63f2ff",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-09-04T13:05:25Z",
+  "updated_at": "2019-09-04T17:05:59Z",
+  "closed_at": "2019-09-04T17:05:56Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16654",
+    "html_url": "https://github.com/facebook/react/pull/16654",
+    "diff_url": "https://github.com/facebook/react/pull/16654.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16654.patch"
+  },
+  "body": "This PR introduces a few fixes and core changes that are required for having event listeners/responders on scope components:\r\n\r\n- Removes `responderTarget` from the responder event object. Instead `context.getCurrentTarget()` has been introduced that achieves the same purpose, without needing to mutate the event object. Furthermore, this works with scopes, which do not have a direct DOM node (instead the nearest current DOM from the target is picked up).\r\n\r\n- Fixes a bug @necolas found and fixed in another PR, which also came up in this with the responder target changes above, so they were needed here too.\r\n\r\n- Scope components via `React.unstable_createScope` now accept event responders via the `listeners` prop, like host components can. This makes it easier to compose scopes that need to tight control over handling things like keyboard/focus interactions.",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

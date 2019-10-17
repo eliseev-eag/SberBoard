@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16767",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16767/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16767/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16767/events",
+  "html_url": "https://github.com/facebook/react/pull/16767",
+  "id": 492973223,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzE3MDQyNjQx",
+  "number": 16767,
+  "title": "[react-devtools] Enable to display Long interaction names(#16736)",
+  "user": {
+    "login": "toshi1127",
+    "id": 32378535,
+    "node_id": "MDQ6VXNlcjMyMzc4NTM1",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/32378535?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/toshi1127",
+    "html_url": "https://github.com/toshi1127",
+    "followers_url": "https://api.github.com/users/toshi1127/followers",
+    "following_url": "https://api.github.com/users/toshi1127/following{/other_user}",
+    "gists_url": "https://api.github.com/users/toshi1127/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/toshi1127/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/toshi1127/subscriptions",
+    "organizations_url": "https://api.github.com/users/toshi1127/orgs",
+    "repos_url": "https://api.github.com/users/toshi1127/repos",
+    "events_url": "https://api.github.com/users/toshi1127/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/toshi1127/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-09-12T18:56:00Z",
+  "updated_at": "2019-10-06T20:45:47Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16767",
+    "html_url": "https://github.com/facebook/react/pull/16767",
+    "diff_url": "https://github.com/facebook/react/pull/16767.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16767.patch"
+  },
+  "body": "issues: #16736 \r\n\r\nfixed long interaction names displayable.\r\n<img width=\"747\" alt=\"スクリーンショット 2019-09-13 3 44 22\" src=\"https://user-images.githubusercontent.com/32378535/64811789-ebf70f00-d5d8-11e9-9f92-9e276b18f28a.png\">",
+  "closed_by": null
+}

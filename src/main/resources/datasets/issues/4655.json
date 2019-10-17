@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4655",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4655/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4655/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4655/events",
+  "html_url": "https://github.com/facebook/react/pull/4655",
+  "id": 101801732,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDI3NzQ0ODE=",
+  "number": 4655,
+  "title": "Update Advanced Performance code examples so they would output values",
+  "user": {
+    "login": "levibuzolic",
+    "id": 721323,
+    "node_id": "MDQ6VXNlcjcyMTMyMw==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/721323?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/levibuzolic",
+    "html_url": "https://github.com/levibuzolic",
+    "followers_url": "https://api.github.com/users/levibuzolic/followers",
+    "following_url": "https://api.github.com/users/levibuzolic/following{/other_user}",
+    "gists_url": "https://api.github.com/users/levibuzolic/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/levibuzolic/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/levibuzolic/subscriptions",
+    "organizations_url": "https://api.github.com/users/levibuzolic/orgs",
+    "repos_url": "https://api.github.com/users/levibuzolic/repos",
+    "events_url": "https://api.github.com/users/levibuzolic/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/levibuzolic/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2015-08-19T03:51:54Z",
+  "updated_at": "2015-08-19T23:36:11Z",
+  "closed_at": "2015-08-19T03:57:34Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4655",
+    "html_url": "https://github.com/facebook/react/pull/4655",
+    "diff_url": "https://github.com/facebook/react/pull/4655.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4655.patch"
+  },
+  "body": "Noticed the code examples in [Advanced Performance - shouldComponentUpdate in action](https://facebook.github.io/react/docs/advanced-performance.html#shouldcomponentupdate-in-action) wouldn't be rendering the example props, this could lead to some minor confusion for new users.\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

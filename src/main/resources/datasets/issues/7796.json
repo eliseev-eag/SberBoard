@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7796",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7796/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7796/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7796/events",
+  "html_url": "https://github.com/facebook/react/pull/7796",
+  "id": 178752264,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODY0MzU4NzY=",
+  "number": 7796,
+  "title": "Update tutorial.md",
+  "user": {
+    "login": "clarkt3",
+    "id": 14867615,
+    "node_id": "MDQ6VXNlcjE0ODY3NjE1",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/14867615?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/clarkt3",
+    "html_url": "https://github.com/clarkt3",
+    "followers_url": "https://api.github.com/users/clarkt3/followers",
+    "following_url": "https://api.github.com/users/clarkt3/following{/other_user}",
+    "gists_url": "https://api.github.com/users/clarkt3/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/clarkt3/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/clarkt3/subscriptions",
+    "organizations_url": "https://api.github.com/users/clarkt3/orgs",
+    "repos_url": "https://api.github.com/users/clarkt3/repos",
+    "events_url": "https://api.github.com/users/clarkt3/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/clarkt3/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-09-23T00:12:15Z",
+  "updated_at": "2016-09-23T01:26:12Z",
+  "closed_at": "2016-09-23T01:26:12Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7796",
+    "html_url": "https://github.com/facebook/react/pull/7796",
+    "diff_url": "https://github.com/facebook/react/pull/7796.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7796.patch"
+  },
+  "body": "_Before_ submitting a pull request, please make sure the following is done...\n1. Fork the repo and create your branch from `master`.\n2. If you've added code that should be tested, add tests!\n3. If you've changed APIs, update the documentation.\n4. Ensure the test suite passes (`grunt test`).\n5. Make sure your code lints (`grunt lint`) - we've done our best to make sure these rules match our internal linting guidelines.\n6. If you haven't already, complete the [CLA](https://code.facebook.com/cla).\n",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

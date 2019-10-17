@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13425",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13425/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13425/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13425/events",
+  "html_url": "https://github.com/facebook/react/issues/13425",
+  "id": 351665046,
+  "node_id": "MDU6SXNzdWUzNTE2NjUwNDY=",
+  "number": 13425,
+  "title": "Host components outside the setState path are sometimes unnecessarily diffed and updated",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 739761016,
+      "node_id": "MDU6TGFiZWw3Mzk3NjEwMTY=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Reconciler",
+      "name": "Component: Reconciler",
+      "color": "f9a798",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2018-08-17T16:48:43Z",
+  "updated_at": "2018-08-17T17:13:47Z",
+  "closed_at": "2018-08-17T17:13:47Z",
+  "author_association": "MEMBER",
+  "body": "Extracted from https://github.com/facebook/react/issues/12643.\r\n\r\nWe're currently diff a host node in the complete phase even if it has bailed out in the begin phase. By itself, this just means we're doing a little bit more work than necessary. But it also has some observable effects. In particular, https://github.com/facebook/react/issues/13424 (which by itself would be very rare and probably not worth fixing) is made worse because we end up committing update to inputs from another component.\r\n\r\nI have a fix for this in https://github.com/facebook/react/pull/13423. Filing this for posterity.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

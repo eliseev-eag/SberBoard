@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9157",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9157/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9157/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9157/events",
+  "html_url": "https://github.com/facebook/react/pull/9157",
+  "id": 213507903,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTEwMjQ4MjE5",
+  "number": 9157,
+  "title": "Add DEV mode note to installation doc (#8784)",
+  "user": {
+    "login": "addyosmani",
+    "id": 110953,
+    "node_id": "MDQ6VXNlcjExMDk1Mw==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/110953?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/addyosmani",
+    "html_url": "https://github.com/addyosmani",
+    "followers_url": "https://api.github.com/users/addyosmani/followers",
+    "following_url": "https://api.github.com/users/addyosmani/following{/other_user}",
+    "gists_url": "https://api.github.com/users/addyosmani/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/addyosmani/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/addyosmani/subscriptions",
+    "organizations_url": "https://api.github.com/users/addyosmani/orgs",
+    "repos_url": "https://api.github.com/users/addyosmani/repos",
+    "events_url": "https://api.github.com/users/addyosmani/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/addyosmani/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2017-03-11T05:48:02Z",
+  "updated_at": "2017-05-03T14:35:39Z",
+  "closed_at": "2017-05-03T10:03:05Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9157",
+    "html_url": "https://github.com/facebook/react/pull/9157",
+    "diff_url": "https://github.com/facebook/react/pull/9157.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9157.patch"
+  },
+  "body": "@gaearon First pass at adding a note to the installation guide reminding folks to use production mode flags. I've initially placed this before the install steps as it's a pretty prominent place. Any feedback welcome.\r\n\r\n![image](https://cloud.githubusercontent.com/assets/110953/23820994/2ab46cf4-05db-11e7-9b94-da68a6ec4ff9.png)\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

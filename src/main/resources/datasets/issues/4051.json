@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4051",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4051/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4051/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4051/events",
+  "html_url": "https://github.com/facebook/react/pull/4051",
+  "id": 85927111,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzcxMTEwNzE=",
+  "number": 4051,
+  "title": "opt out of input events for ie 10 and 11",
+  "user": {
+    "login": "jquense",
+    "id": 339286,
+    "node_id": "MDQ6VXNlcjMzOTI4Ng==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/339286?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jquense",
+    "html_url": "https://github.com/jquense",
+    "followers_url": "https://api.github.com/users/jquense/followers",
+    "following_url": "https://api.github.com/users/jquense/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jquense/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jquense/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jquense/subscriptions",
+    "organizations_url": "https://api.github.com/users/jquense/orgs",
+    "repos_url": "https://api.github.com/users/jquense/repos",
+    "events_url": "https://api.github.com/users/jquense/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jquense/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2015-06-07T18:37:36Z",
+  "updated_at": "2016-08-03T00:47:44Z",
+  "closed_at": "2015-10-18T16:26:52Z",
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4051",
+    "html_url": "https://github.com/facebook/react/pull/4051",
+    "diff_url": "https://github.com/facebook/react/pull/4051.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4051.patch"
+  },
+  "body": "while supported, the \"input\" event is too noisy in IE. It Fires on\nplaceholder sets, and when an input is focused with a placeholder.\n\nThis is an potential alternative fix to #3826 \n\ncc @syranide\n\nfixes #3377 and fixes #3484\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

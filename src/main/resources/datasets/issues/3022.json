@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3022",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3022/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3022/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3022/events",
+  "html_url": "https://github.com/facebook/react/pull/3022",
+  "id": 56320758,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjg1MTkzMTI=",
+  "number": 3022,
+  "title": "Added itemRef and itemId for complete microdata support.",
+  "user": {
+    "login": "btholt",
+    "id": 999523,
+    "node_id": "MDQ6VXNlcjk5OTUyMw==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/999523?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/btholt",
+    "html_url": "https://github.com/btholt",
+    "followers_url": "https://api.github.com/users/btholt/followers",
+    "following_url": "https://api.github.com/users/btholt/following{/other_user}",
+    "gists_url": "https://api.github.com/users/btholt/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/btholt/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/btholt/subscriptions",
+    "organizations_url": "https://api.github.com/users/btholt/orgs",
+    "repos_url": "https://api.github.com/users/btholt/repos",
+    "events_url": "https://api.github.com/users/btholt/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/btholt/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2015-02-03T01:30:05Z",
+  "updated_at": "2015-02-05T00:57:03Z",
+  "closed_at": "2015-02-05T00:57:03Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3022",
+    "html_url": "https://github.com/facebook/react/pull/3022",
+    "diff_url": "https://github.com/facebook/react/pull/3022.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3022.patch"
+  },
+  "body": "This is specifically addressing #2831. There are two properties for the microdata that the [WHATWG group](https://html.spec.whatwg.org/multipage/microdata.html#microdata-dom-api) identifies that the the [Schema.org](http://schema.org/docs/gs.html) doesn't identify: `itemRef` and `itemId`.\n\nI struggled with how to case `itemId`: `itemId` (which is how the WHATWG cases it) or `itemID` (which is would be consistent with the internal casing to that JS file, as evidenced by `classID`. I opted for consistency with the WHATWG spec but I'm happy to change it if consistency inside the JS file is preferred.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

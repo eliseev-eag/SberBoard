@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/17059",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/17059/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/17059/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/17059/events",
+  "html_url": "https://github.com/facebook/react/issues/17059",
+  "id": 505037687,
+  "node_id": "MDU6SXNzdWU1MDUwMzc2ODc=",
+  "number": 17059,
+  "title": "Make it easier to debug (undefined components) in production",
+  "user": {
+    "login": "natew",
+    "id": 12100,
+    "node_id": "MDQ6VXNlcjEyMTAw",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/12100?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/natew",
+    "html_url": "https://github.com/natew",
+    "followers_url": "https://api.github.com/users/natew/followers",
+    "following_url": "https://api.github.com/users/natew/following{/other_user}",
+    "gists_url": "https://api.github.com/users/natew/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/natew/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/natew/subscriptions",
+    "organizations_url": "https://api.github.com/users/natew/orgs",
+    "repos_url": "https://api.github.com/users/natew/repos",
+    "events_url": "https://api.github.com/users/natew/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/natew/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-10-10T05:08:30Z",
+  "updated_at": "2019-10-10T05:11:08Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?** Feature\r\n\r\n**What is the current behavior?**\r\n\r\nSo for whatever reason, terser/minification causes a bug where one of my components is undefined during render. What I get is the standard production mode minified error.\r\n\r\nFor some reason this time, I can't seem to do *any* of the following:\r\n\r\n1. See any stack information for the component (React just says \"something somewhere is undefined\")\r\n2. Set a breakpoint on the error point (for some reason with webpack + devtool sourcemap, chrome isn't letting me do a mid-line breakpoint at any place above the error)\r\n3. Disable Reacts error catching temporarily so I can pause on the actual error\r\n4. Use a development version of React with any ease but with the prod settings (I tried turning off both process.env.NODE_ENV checks but then you get an error `It is not supported to run the profiling version of a renderer (for example, react-dom/profiling) without also replacing the scheduler/tracing)`\r\n\r\nA big upgrade here would be to fix all of these (except 2, which is either a Webpack or Chrome bug). Can we get better stacks in production mode? That's the ideal. That with number 3 would be the most helpful: a query like `?disableNiceErrors=true` that prevents React from catching/re-throwing the error later would make it so much easier.\r\n\r\nAs it is now, it's incredibly painful to debug (already an hour into it and without the breakpoints working on minified React it's hard to really even figure out where besides manual code commenting).\r\n\r\nEdit: A fifth would be source maps for react itself in production bundles which may work.",
+  "closed_by": null
+}

@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10109",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10109/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10109/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10109/events",
+  "html_url": "https://github.com/facebook/react/issues/10109",
+  "id": 240614711,
+  "node_id": "MDU6SXNzdWUyNDA2MTQ3MTE=",
+  "number": 10109,
+  "title": "Mouseenter event not triggered when cursor moves from disabled button",
+  "user": {
+    "login": "stepancar",
+    "id": 2854910,
+    "node_id": "MDQ6VXNlcjI4NTQ5MTA=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/2854910?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/stepancar",
+    "html_url": "https://github.com/stepancar",
+    "followers_url": "https://api.github.com/users/stepancar/followers",
+    "following_url": "https://api.github.com/users/stepancar/following{/other_user}",
+    "gists_url": "https://api.github.com/users/stepancar/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/stepancar/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/stepancar/subscriptions",
+    "organizations_url": "https://api.github.com/users/stepancar/orgs",
+    "repos_url": "https://api.github.com/users/stepancar/repos",
+    "events_url": "https://api.github.com/users/stepancar/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/stepancar/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2017-07-05T11:01:18Z",
+  "updated_at": "2019-04-06T13:45:34Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "BUG.\r\n\r\nMouseenter event not triggered when cursor moves from disabled button\r\nsee [example](https://alfa-laboratory.github.io/arui-feather/styleguide/#playground/code=%3Cdiv%3E%0A%20%0A%20%20%20%20%3Cdiv%20className='row'%3E%0A%20%20%20%20%20%20%20%20Hover%20on%20%20right%20button%20and%20then%20move%20cursor%20to%20left%20button%0A%20%20%20%20%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cbutton%20onMouseEnter=%7B()=%3E%7Balert('Hey!');%7D%7D%20%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Not%20Disabled%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/button%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cbutton%20disabled=%7B%20true%20%7D%3EDisabled%3C/button%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%3Cdiv%20className='row'%3E%0A%20%20%20%20%20%20%20%20Hover%20on%20%20right%20button%20and%20then%20move%20cursor%20to%20left%20button%0A%20%20%20%20%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cbutton%20onMouseEnter=%7B()=%3E%7Balert('Hey!');%7D%7D%20%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Not%20Disabled%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/button%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cbutton%3ENot%20Disabled%3C/button%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%20%0A%3C/div%3E)\r\n\r\n\r\n**What is the expected behavior?**\r\nShould trigger Mouseenter event\r\n\r\nReact 15.5.3\r\nLatest Chrome\r\nMacOs 10.12.5",
+  "closed_by": null
+}

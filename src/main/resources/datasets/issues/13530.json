@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13530",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13530/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13530/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13530/events",
+  "html_url": "https://github.com/facebook/react/pull/13530",
+  "id": 356198437,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjEyNTQ0NDM5",
+  "number": 13530,
+  "title": "rollup v3.3.0",
+  "user": {
+    "login": "juggernaut451",
+    "id": 5015212,
+    "node_id": "MDQ6VXNlcjUwMTUyMTI=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/5015212?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/juggernaut451",
+    "html_url": "https://github.com/juggernaut451",
+    "followers_url": "https://api.github.com/users/juggernaut451/followers",
+    "following_url": "https://api.github.com/users/juggernaut451/following{/other_user}",
+    "gists_url": "https://api.github.com/users/juggernaut451/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/juggernaut451/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/juggernaut451/subscriptions",
+    "organizations_url": "https://api.github.com/users/juggernaut451/orgs",
+    "repos_url": "https://api.github.com/users/juggernaut451/repos",
+    "events_url": "https://api.github.com/users/juggernaut451/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/juggernaut451/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-09-01T12:21:36Z",
+  "updated_at": "2018-09-01T12:34:00Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13530",
+    "html_url": "https://github.com/facebook/react/pull/13530",
+    "diff_url": "https://github.com/facebook/react/pull/13530.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13530.patch"
+  },
+  "body": "rollup-plugin-node-resolve upgrade to 3.3.0\r\n\r\nfix #12076 ",
+  "closed_by": null
+}

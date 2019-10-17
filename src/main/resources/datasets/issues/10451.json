@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10451",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10451/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10451/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10451/events",
+  "html_url": "https://github.com/facebook/react/pull/10451",
+  "id": 249847422,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTM1NDc5NDEx",
+  "number": 10451,
+  "title": "Improve displayName documentation",
+  "user": {
+    "login": "hnordt",
+    "id": 1625399,
+    "node_id": "MDQ6VXNlcjE2MjUzOTk=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1625399?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/hnordt",
+    "html_url": "https://github.com/hnordt",
+    "followers_url": "https://api.github.com/users/hnordt/followers",
+    "following_url": "https://api.github.com/users/hnordt/following{/other_user}",
+    "gists_url": "https://api.github.com/users/hnordt/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/hnordt/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/hnordt/subscriptions",
+    "organizations_url": "https://api.github.com/users/hnordt/orgs",
+    "repos_url": "https://api.github.com/users/hnordt/repos",
+    "events_url": "https://api.github.com/users/hnordt/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/hnordt/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-08-13T02:21:54Z",
+  "updated_at": "2017-09-08T23:45:30Z",
+  "closed_at": "2017-09-08T23:45:25Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10451",
+    "html_url": "https://github.com/facebook/react/pull/10451",
+    "diff_url": "https://github.com/facebook/react/pull/10451.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10451.patch"
+  },
+  "body": "Closes #10438",
+  "closed_by": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

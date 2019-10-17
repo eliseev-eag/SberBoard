@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11877",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11877/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11877/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11877/events",
+  "html_url": "https://github.com/facebook/react/issues/11877",
+  "id": 282847262,
+  "node_id": "MDU6SXNzdWUyODI4NDcyNjI=",
+  "number": 11877,
+  "title": "Number input gets cleared when typing period as decimal mark",
+  "user": {
+    "login": "Hilzu",
+    "id": 969840,
+    "node_id": "MDQ6VXNlcjk2OTg0MA==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/969840?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Hilzu",
+    "html_url": "https://github.com/Hilzu",
+    "followers_url": "https://api.github.com/users/Hilzu/followers",
+    "following_url": "https://api.github.com/users/Hilzu/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Hilzu/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Hilzu/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Hilzu/subscriptions",
+    "organizations_url": "https://api.github.com/users/Hilzu/orgs",
+    "repos_url": "https://api.github.com/users/Hilzu/repos",
+    "events_url": "https://api.github.com/users/Hilzu/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Hilzu/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 13,
+  "created_at": "2017-12-18T11:29:42Z",
+  "updated_at": "2019-03-25T23:38:32Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n\r\nBug\r\n\r\n**What is the current behavior?**\r\n\r\nMy OS and browser are configured to a locale that uses comma as the decimal mark (Finland for those interested). In the codepen below when I accidentally type a period after some number the whole input gets cleared. This is somehow related to the parent component's state being updated because if the `defaultValue` prop is removed from the `<Input>` component the input doesn't get cleared.\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem via https://jsfiddle.net or similar (template for React 16: https://jsfiddle.net/Luktwrdm/, template for React 15: https://jsfiddle.net/hmbg7e9w/).**\r\n\r\nhttps://codepen.io/anon/pen/aEOgNL?editors=0010\r\n\r\n**What is the expected behavior?**\r\n\r\nThe input should retain its visible value even if it would be invalid (can't be converted to a number).\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nReact 16.2.0 and Chrome 63 on macOS 10.12.6.\r\n\r\nTested in Safari 11.0.2 and typing a period kinda works. After typing the first number after the period it gets converted to a comma but the cursor jumps to the beginning.\r\n\r\nAlso tested in Firefox 57.0.1 but it seems to think that period is the correct decimal mark.",
+  "closed_by": null
+}

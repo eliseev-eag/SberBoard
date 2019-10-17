@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5774",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5774/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5774/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5774/events",
+  "html_url": "https://github.com/facebook/react/pull/5774",
+  "id": 124824368,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTUwMTM0OTA=",
+  "number": 5774,
+  "title": "Update 07-forms.md",
+  "user": {
+    "login": "atilacamurca",
+    "id": 508624,
+    "node_id": "MDQ6VXNlcjUwODYyNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/508624?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/atilacamurca",
+    "html_url": "https://github.com/atilacamurca",
+    "followers_url": "https://api.github.com/users/atilacamurca/followers",
+    "following_url": "https://api.github.com/users/atilacamurca/following{/other_user}",
+    "gists_url": "https://api.github.com/users/atilacamurca/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/atilacamurca/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/atilacamurca/subscriptions",
+    "organizations_url": "https://api.github.com/users/atilacamurca/orgs",
+    "repos_url": "https://api.github.com/users/atilacamurca/repos",
+    "events_url": "https://api.github.com/users/atilacamurca/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/atilacamurca/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2016-01-04T19:43:22Z",
+  "updated_at": "2016-01-04T21:35:37Z",
+  "closed_at": "2016-01-04T20:54:11Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5774",
+    "html_url": "https://github.com/facebook/react/pull/5774",
+    "diff_url": "https://github.com/facebook/react/pull/5774.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5774.patch"
+  },
+  "body": "The `props` are switched, `defaultValue` is for `<input>` and `defaultChecked` is for `<select>`.\n",
+  "closed_by": {
+    "login": "atilacamurca",
+    "id": 508624,
+    "node_id": "MDQ6VXNlcjUwODYyNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/508624?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/atilacamurca",
+    "html_url": "https://github.com/atilacamurca",
+    "followers_url": "https://api.github.com/users/atilacamurca/followers",
+    "following_url": "https://api.github.com/users/atilacamurca/following{/other_user}",
+    "gists_url": "https://api.github.com/users/atilacamurca/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/atilacamurca/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/atilacamurca/subscriptions",
+    "organizations_url": "https://api.github.com/users/atilacamurca/orgs",
+    "repos_url": "https://api.github.com/users/atilacamurca/repos",
+    "events_url": "https://api.github.com/users/atilacamurca/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/atilacamurca/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

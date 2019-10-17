@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13003",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13003/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13003/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13003/events",
+  "html_url": "https://github.com/facebook/react/pull/13003",
+  "id": 330783192,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTkzNzA4NDYx",
+  "number": 13003,
+  "title": "delete a couple of redundant lines",
+  "user": {
+    "login": "nateq314",
+    "id": 1175921,
+    "node_id": "MDQ6VXNlcjExNzU5MjE=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1175921?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nateq314",
+    "html_url": "https://github.com/nateq314",
+    "followers_url": "https://api.github.com/users/nateq314/followers",
+    "following_url": "https://api.github.com/users/nateq314/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nateq314/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nateq314/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nateq314/subscriptions",
+    "organizations_url": "https://api.github.com/users/nateq314/orgs",
+    "repos_url": "https://api.github.com/users/nateq314/repos",
+    "events_url": "https://api.github.com/users/nateq314/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nateq314/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-06-08T19:52:53Z",
+  "updated_at": "2018-06-09T22:04:33Z",
+  "closed_at": "2018-06-09T21:56:22Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13003",
+    "html_url": "https://github.com/facebook/react/pull/13003",
+    "diff_url": "https://github.com/facebook/react/pull/13003.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13003.patch"
+  },
+  "body": "By definition `root.finishedWork` must already be null at the point that either of these lines are executed. The immediately preceding `if` blocks ensure it. So no need to set to null.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

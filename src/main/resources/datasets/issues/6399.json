@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6399",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6399/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6399/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6399/events",
+  "html_url": "https://github.com/facebook/react/pull/6399",
+  "id": 145312220,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjUwMTk5NjE=",
+  "number": 6399,
+  "title": "Flip __DEV__ assignments in ReactDOMProduction-test",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-04-01T23:56:12Z",
+  "updated_at": "2016-04-02T00:25:11Z",
+  "closed_at": "2016-04-02T00:25:11Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6399",
+    "html_url": "https://github.com/facebook/react/pull/6399",
+    "diff_url": "https://github.com/facebook/react/pull/6399.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6399.patch"
+  },
+  "body": "I think these two appear assignments need to be flipped around.\n\nThis test works correctly because today it only relies on fbjs `warning`s which are not affected by `__DEV__` global and read from `process.env.NODE_ENV` which is set [a few lines below](https://github.com/facebook/react/blob/a5c164dacad2597a1685a3ab401b1a3b7ff1f3eb/src/renderers/dom/__tests__/ReactDOMProduction-test.js#L23).\n\nIn my testing, adding another test that actually relies on `__DEV__` shows that the current behavior is incorrect.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

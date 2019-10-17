@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/17064",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/17064/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/17064/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/17064/events",
+  "html_url": "https://github.com/facebook/react/issues/17064",
+  "id": 505686267,
+  "node_id": "MDU6SXNzdWU1MDU2ODYyNjc=",
+  "number": 17064,
+  "title": "mouseEnter behaves like mouseOver when using ReactDOM.render() to mount a child element",
+  "user": {
+    "login": "sen14251",
+    "id": 27114212,
+    "node_id": "MDQ6VXNlcjI3MTE0MjEy",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/27114212?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sen14251",
+    "html_url": "https://github.com/sen14251",
+    "followers_url": "https://api.github.com/users/sen14251/followers",
+    "following_url": "https://api.github.com/users/sen14251/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sen14251/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sen14251/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sen14251/subscriptions",
+    "organizations_url": "https://api.github.com/users/sen14251/orgs",
+    "repos_url": "https://api.github.com/users/sen14251/repos",
+    "events_url": "https://api.github.com/users/sen14251/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sen14251/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-10-11T07:28:30Z",
+  "updated_at": "2019-10-14T15:14:42Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\nBug\r\n\r\n**What is the current behavior?**\r\nWhen using `ReactDOM.render()` to mount a child element, `mouseEnter` behaves like `mouseOver` (`mouseLeave` behaves like `mouseOut`).  you can see the demo, and when my cursor moves between the red and blue blocks, it will repeatedly trigger mouseEnter and mouseLeave.\r\nhttps://codepen.io/sen-dream/pen/VwwvGbm\r\n\r\n**What is the expected behavior?**\r\nhttps://codepen.io/sen-dream/pen/WNNQgoy\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nTestes with React 16.8 on Chrome/macOS. It didn't work in previous versions.\r\n",
+  "closed_by": null
+}

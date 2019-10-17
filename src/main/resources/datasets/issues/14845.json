@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14845",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14845/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14845/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14845/events",
+  "html_url": "https://github.com/facebook/react/pull/14845",
+  "id": 410181447,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjUyOTc4OTA2",
+  "number": 14845,
+  "title": "children can be a element",
+  "user": {
+    "login": "xp44mm",
+    "id": 10087796,
+    "node_id": "MDQ6VXNlcjEwMDg3Nzk2",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/10087796?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/xp44mm",
+    "html_url": "https://github.com/xp44mm",
+    "followers_url": "https://api.github.com/users/xp44mm/followers",
+    "following_url": "https://api.github.com/users/xp44mm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/xp44mm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/xp44mm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/xp44mm/subscriptions",
+    "organizations_url": "https://api.github.com/users/xp44mm/orgs",
+    "repos_url": "https://api.github.com/users/xp44mm/repos",
+    "events_url": "https://api.github.com/users/xp44mm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/xp44mm/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 620368407,
+      "node_id": "MDU6TGFiZWw2MjAzNjg0MDc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Needs%20More%20Information",
+      "name": "Resolution: Needs More Information",
+      "color": "fffde7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-02-14T08:23:55Z",
+  "updated_at": "2019-02-16T01:45:14Z",
+  "closed_at": "2019-02-16T01:44:51Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14845",
+    "html_url": "https://github.com/facebook/react/pull/14845",
+    "diff_url": "https://github.com/facebook/react/pull/14845.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14845.patch"
+  },
+  "body": "children can be a element, so uniform it to array that contains single element.\r\n",
+  "closed_by": {
+    "login": "xp44mm",
+    "id": 10087796,
+    "node_id": "MDQ6VXNlcjEwMDg3Nzk2",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/10087796?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/xp44mm",
+    "html_url": "https://github.com/xp44mm",
+    "followers_url": "https://api.github.com/users/xp44mm/followers",
+    "following_url": "https://api.github.com/users/xp44mm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/xp44mm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/xp44mm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/xp44mm/subscriptions",
+    "organizations_url": "https://api.github.com/users/xp44mm/orgs",
+    "repos_url": "https://api.github.com/users/xp44mm/repos",
+    "events_url": "https://api.github.com/users/xp44mm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/xp44mm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

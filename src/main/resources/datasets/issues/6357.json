@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6357",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6357/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6357/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6357/events",
+  "html_url": "https://github.com/facebook/react/pull/6357",
+  "id": 143801468,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjQyNjM2MTU=",
+  "number": 6357,
+  "title": "Proposal: isDeprecated option for PropTypes",
+  "user": {
+    "login": "pavelkornev",
+    "id": 748043,
+    "node_id": "MDQ6VXNlcjc0ODA0Mw==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/748043?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/pavelkornev",
+    "html_url": "https://github.com/pavelkornev",
+    "followers_url": "https://api.github.com/users/pavelkornev/followers",
+    "following_url": "https://api.github.com/users/pavelkornev/following{/other_user}",
+    "gists_url": "https://api.github.com/users/pavelkornev/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/pavelkornev/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/pavelkornev/subscriptions",
+    "organizations_url": "https://api.github.com/users/pavelkornev/orgs",
+    "repos_url": "https://api.github.com/users/pavelkornev/repos",
+    "events_url": "https://api.github.com/users/pavelkornev/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/pavelkornev/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2016-03-27T11:44:31Z",
+  "updated_at": "2016-03-28T21:30:44Z",
+  "closed_at": "2016-03-28T20:58:46Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6357",
+    "html_url": "https://github.com/facebook/react/pull/6357",
+    "diff_url": "https://github.com/facebook/react/pull/6357.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6357.patch"
+  },
+  "body": "During lifetime some of the components props became deprecated. It would be nice to have a way to indicate these props in declarative way.\n1. It has no conflicts with `isRequired` flag and can not be combined together since it makes no sense to require deprecated props.\n2. It has full backward compatibility and will not break all existed components.\n\nExamples of usage:\n\n```\npropTypes: {\n  primitive: PropTypes.string.isDeprecated\n  array: PropTypes.arrayOf(PropTypes.number).isDeprecated\n  complex: PropTypes.oneOfType([PropTypes.string.isDeprecated, PropTypes.number]),\n  shape: PropTypes.shape({\n    key: PropTypes.oneOfType([PropTypes.string.isDeprecated, PropTypes.number])\n  }).isDeprecated\n}\n```\n\nAs a result it will warn in console with the following message:\n\n```\nDeprecated prop `primitive` was specified in `MyComponent`.\n```\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

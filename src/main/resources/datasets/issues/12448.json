@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12448",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12448/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12448/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12448/events",
+  "html_url": "https://github.com/facebook/react/pull/12448",
+  "id": 308279354,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTc3MjQ2ODAz",
+  "number": 12448,
+  "title": "Remove dependency on React",
+  "user": {
+    "login": "jquense",
+    "id": 339286,
+    "node_id": "MDQ6VXNlcjMzOTI4Ng==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/339286?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jquense",
+    "html_url": "https://github.com/jquense",
+    "followers_url": "https://api.github.com/users/jquense/followers",
+    "following_url": "https://api.github.com/users/jquense/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jquense/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jquense/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jquense/subscriptions",
+    "organizations_url": "https://api.github.com/users/jquense/orgs",
+    "repos_url": "https://api.github.com/users/jquense/repos",
+    "events_url": "https://api.github.com/users/jquense/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jquense/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-03-24T16:52:31Z",
+  "updated_at": "2018-03-24T17:43:25Z",
+  "closed_at": "2018-03-24T16:59:37Z",
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12448",
+    "html_url": "https://github.com/facebook/react/pull/12448",
+    "diff_url": "https://github.com/facebook/react/pull/12448.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12448.patch"
+  },
+  "body": "Is this necessary? I'd like to use the package in enzyme to avoid having to recopy/paste the symbols for better debugging names, but a hard dep in enzyme proper on a version of react isn't gonna work. This seems safe since nothing explicitly depends on React in here?\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8979",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8979/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8979/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8979/events",
+  "html_url": "https://github.com/facebook/react/pull/8979",
+  "id": 207013740,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTA1NzcwODA1",
+  "number": 8979,
+  "title": "grammar",
+  "user": {
+    "login": "antics",
+    "id": 63874,
+    "node_id": "MDQ6VXNlcjYzODc0",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/63874?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/antics",
+    "html_url": "https://github.com/antics",
+    "followers_url": "https://api.github.com/users/antics/followers",
+    "following_url": "https://api.github.com/users/antics/following{/other_user}",
+    "gists_url": "https://api.github.com/users/antics/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/antics/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/antics/subscriptions",
+    "organizations_url": "https://api.github.com/users/antics/orgs",
+    "repos_url": "https://api.github.com/users/antics/repos",
+    "events_url": "https://api.github.com/users/antics/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/antics/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-02-11T22:45:06Z",
+  "updated_at": "2017-02-11T23:40:43Z",
+  "closed_at": "2017-02-11T23:40:43Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8979",
+    "html_url": "https://github.com/facebook/react/pull/8979",
+    "diff_url": "https://github.com/facebook/react/pull/8979.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8979.patch"
+  },
+  "body": "**Before submitting a pull request,** please make sure the following is done:\r\n\r\n1. Fork [the repository](https://github.com/facebook/react) and create your branch from `master`.\r\n2. If you've added code that should be tested, add tests!\r\n3. If you've changed APIs, update the documentation.\r\n4. Ensure the test suite passes (`npm test`).\r\n5. Make sure your code lints (`npm run lint`).\r\n6. Run the [Flow](https://flowtype.org/) typechecks (`npm run flow`).\r\n7. If you added or removed any tests, run `./scripts/fiber/record-tests` before submitting the pull request, and commit the resulting changes.\r\n8. If you haven't already, complete the [CLA](https://code.facebook.com/cla).\r\n",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

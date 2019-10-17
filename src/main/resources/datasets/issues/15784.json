@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15784",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15784/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15784/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15784/events",
+  "html_url": "https://github.com/facebook/react/pull/15784",
+  "id": 450538141,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjgzODM4NTQ3",
+  "number": 15784,
+  "title": "Create SECURITY.md",
+  "user": {
+    "login": "AlicanC",
+    "id": 412180,
+    "node_id": "MDQ6VXNlcjQxMjE4MA==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/412180?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/AlicanC",
+    "html_url": "https://github.com/AlicanC",
+    "followers_url": "https://api.github.com/users/AlicanC/followers",
+    "following_url": "https://api.github.com/users/AlicanC/following{/other_user}",
+    "gists_url": "https://api.github.com/users/AlicanC/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/AlicanC/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/AlicanC/subscriptions",
+    "organizations_url": "https://api.github.com/users/AlicanC/orgs",
+    "repos_url": "https://api.github.com/users/AlicanC/repos",
+    "events_url": "https://api.github.com/users/AlicanC/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/AlicanC/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-05-30T22:43:12Z",
+  "updated_at": "2019-10-07T13:21:13Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15784",
+    "html_url": "https://github.com/facebook/react/pull/15784",
+    "diff_url": "https://github.com/facebook/react/pull/15784.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15784.patch"
+  },
+  "body": "Adds SECURITY.md as mentioned in #15722.",
+  "closed_by": null
+}

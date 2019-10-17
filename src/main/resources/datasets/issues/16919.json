@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16919",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16919/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16919/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16919/events",
+  "html_url": "https://github.com/facebook/react/issues/16919",
+  "id": 499307947,
+  "node_id": "MDU6SXNzdWU0OTkzMDc5NDc=",
+  "number": 16919,
+  "title": "[Feature request] export shallowEqual from shared",
+  "user": {
+    "login": "RichieAHB",
+    "id": 1652187,
+    "node_id": "MDQ6VXNlcjE2NTIxODc=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1652187?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/RichieAHB",
+    "html_url": "https://github.com/RichieAHB",
+    "followers_url": "https://api.github.com/users/RichieAHB/followers",
+    "following_url": "https://api.github.com/users/RichieAHB/following{/other_user}",
+    "gists_url": "https://api.github.com/users/RichieAHB/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/RichieAHB/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/RichieAHB/subscriptions",
+    "organizations_url": "https://api.github.com/users/RichieAHB/orgs",
+    "repos_url": "https://api.github.com/users/RichieAHB/repos",
+    "events_url": "https://api.github.com/users/RichieAHB/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/RichieAHB/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 620368407,
+      "node_id": "MDU6TGFiZWw2MjAzNjg0MDc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Needs%20More%20Information",
+      "name": "Resolution: Needs More Information",
+      "color": "fffde7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-09-27T08:24:28Z",
+  "updated_at": "2019-09-27T13:09:56Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "In order to determine whether the default use or `React.memo` will pass / fail it'd be useful to have React export `shallowEqual` from shared in order that this can be inspected / tested. Is there any chance of adding this to the API given the implementation here is important.",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13882",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13882/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13882/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13882/events",
+  "html_url": "https://github.com/facebook/react/pull/13882",
+  "id": 371658204,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjI0MDU3MDg3",
+  "number": 13882,
+  "title": "Strict mode and default mode should have same Suspense semantics",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-10-18T18:37:27Z",
+  "updated_at": "2018-10-18T22:48:36Z",
+  "closed_at": "2018-10-18T22:42:41Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13882",
+    "html_url": "https://github.com/facebook/react/pull/13882",
+    "diff_url": "https://github.com/facebook/react/pull/13882.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13882.patch"
+  },
+  "body": "In the default mode, Suspense has special semantics where, in addition to timing out immediately, we don't unwind the stack before rendering the fallback. Instead, we commit the tree in an inconsistent state, then synchronous render *again* to switch to the fallback. This is slower but is less likely to cause issues with older components that perform side effects in the render phase (e.g. componentWillMount, componentWillUpdate, and componentWillReceiveProps).\r\n\r\nWe should do this in strict mode, too, so that there are no semantic differences (in prod, at least) between default mode and strict mode. The rationale is that it makes it easier to wrap a tree in strict mode and start migrating components incrementally without worrying about new bugs in production.",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

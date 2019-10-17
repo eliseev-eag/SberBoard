@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14404",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14404/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14404/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14404/events",
+  "html_url": "https://github.com/facebook/react/issues/14404",
+  "id": 388884277,
+  "node_id": "MDU6SXNzdWUzODg4ODQyNzc=",
+  "number": 14404,
+  "title": "eslint-plugin-react-hooks should report errors inside unnamed functions",
+  "user": {
+    "login": "paboulos",
+    "id": 5624815,
+    "node_id": "MDQ6VXNlcjU2MjQ4MTU=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/5624815?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/paboulos",
+    "html_url": "https://github.com/paboulos",
+    "followers_url": "https://api.github.com/users/paboulos/followers",
+    "following_url": "https://api.github.com/users/paboulos/following{/other_user}",
+    "gists_url": "https://api.github.com/users/paboulos/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/paboulos/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/paboulos/subscriptions",
+    "organizations_url": "https://api.github.com/users/paboulos/orgs",
+    "repos_url": "https://api.github.com/users/paboulos/repos",
+    "events_url": "https://api.github.com/users/paboulos/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/paboulos/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 1109410193,
+      "node_id": "MDU6TGFiZWwxMTA5NDEwMTkz",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Hooks",
+      "name": "Component: Hooks",
+      "color": "c2f27b",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 14,
+  "created_at": "2018-12-08T04:31:01Z",
+  "updated_at": "2019-06-14T21:57:35Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "I want to report a bug for the hooks plugin.\r\n\r\n**What is the current behavior?**\r\nThere was no error report after running eslint, but the component failed when running in the browser.\r\nFrom the chrome dev console it reported \"Uncaught Error: Rendered fewer hooks than expected. This may be caused by an accidental early return statement.\" \r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React.\r\nHere is a link to the github repo:\r\nhttps://github.com/paboulos/react-hooks-eslint\r\n\r\n**What is the expected behavior?**\r\nFollowed The Hooks API guide which says React hooks provides a linter plugin to enforce these rules automatically.Therefore it should have reported a usage violation when the eslint hooks plugin is specified. \r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nUsing window 10 OS and Chrome browser.\r\n1. First ran npx create-react-app Hooks\r\n2. Installed react 16.7.0-alpha.2 and react-dom 16.7.0-alpha.2\r\n3. Installed eslint dev dependencies:\r\n \"babel-eslint\": \"9.0.0\",\r\n    \"babel-loader\": \"8.0.4\",\r\n    \"eslint\": \"5.9.0\",\r\n    \"eslint-config-airbnb\": \"17.1.0\",\r\n    \"eslint-loader\": \"2.1.1\",\r\n    \"eslint-plugin-import\": \"2.14.0\",\r\n    \"eslint-plugin-jsx-a11y\": \"6.1.2\",\r\n    \"eslint-plugin-react\": \"7.11.1\",\r\n    \"eslint-plugin-react-hooks\": \"0.0.0\"\r\n4. Created the .eslintrc.json following the instructions from the Hooks API Doc\r\nThen ran package script lint as follows: \"npm run lint\"\r\nno errors reported.\r\nThen ran package script start as follows: \"npm start\"\r\nThe React component CountHooks calls useState incorrectly and reports error in the browser dev console.",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12507",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12507/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12507/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12507/events",
+  "html_url": "https://github.com/facebook/react/pull/12507",
+  "id": 310250142,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTc4Njg4MDA1",
+  "number": 12507,
+  "title": "Support Pointer Events",
+  "user": {
+    "login": "philipp-spiess",
+    "id": 458591,
+    "node_id": "MDQ6VXNlcjQ1ODU5MQ==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/458591?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/philipp-spiess",
+    "html_url": "https://github.com/philipp-spiess",
+    "followers_url": "https://api.github.com/users/philipp-spiess/followers",
+    "following_url": "https://api.github.com/users/philipp-spiess/following{/other_user}",
+    "gists_url": "https://api.github.com/users/philipp-spiess/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/philipp-spiess/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/philipp-spiess/subscriptions",
+    "organizations_url": "https://api.github.com/users/philipp-spiess/orgs",
+    "repos_url": "https://api.github.com/users/philipp-spiess/repos",
+    "events_url": "https://api.github.com/users/philipp-spiess/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/philipp-spiess/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 23,
+  "created_at": "2018-03-31T15:48:03Z",
+  "updated_at": "2018-05-25T20:48:40Z",
+  "closed_at": "2018-05-16T13:34:34Z",
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12507",
+    "html_url": "https://github.com/facebook/react/pull/12507",
+    "diff_url": "https://github.com/facebook/react/pull/12507.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12507.patch"
+  },
+  "body": "Closes #499\r\n\r\nThis PR adds support for Pointer Events as discussed in #499. It is heavily based on previous work in #1389 and will add most pointer events to the `SimpleEventPlugin` and enter/leave events to `EnterLeaveEventPlugin`.\r\n\r\nI added a new DOM fixture to test all pointer events and make sure my implementation does indeed work. I tested on Chrome 65 and Firefox 59 without seeing any issues. If you think the fixtures is not necessary for future changes, I'm happy to remove them as well.\r\n\r\nThe only open question is if we want to add a polyfill. For the sake of simplicity, I opted against a polyfill for this PR. However, this work is compatible with [PEP][] (I've verified this behavior in Safari 11 by loading PEP in `fixtures/dom/public/index.html`).\r\n\r\n[PEP]: https://github.com/jquery/PEP",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

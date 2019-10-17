@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6960",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6960/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6960/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6960/events",
+  "html_url": "https://github.com/facebook/react/pull/6960",
+  "id": 158454711,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzI1NzAwNDI=",
+  "number": 6960,
+  "title": "[Docs] Add instruction for downloading babel-browser",
+  "user": {
+    "login": "keyz",
+    "id": 2268452,
+    "node_id": "MDQ6VXNlcjIyNjg0NTI=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2268452?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/keyz",
+    "html_url": "https://github.com/keyz",
+    "followers_url": "https://api.github.com/users/keyz/followers",
+    "following_url": "https://api.github.com/users/keyz/following{/other_user}",
+    "gists_url": "https://api.github.com/users/keyz/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/keyz/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/keyz/subscriptions",
+    "organizations_url": "https://api.github.com/users/keyz/orgs",
+    "repos_url": "https://api.github.com/users/keyz/repos",
+    "events_url": "https://api.github.com/users/keyz/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/keyz/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-06-03T21:06:10Z",
+  "updated_at": "2016-06-03T22:43:32Z",
+  "closed_at": "2016-06-03T22:43:32Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6960",
+    "html_url": "https://github.com/facebook/react/pull/6960",
+    "diff_url": "https://github.com/facebook/react/pull/6960.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6960.patch"
+  },
+  "body": "We could also consider switching from `babel-browser (5.8)` to [babel-standalone](https://github.com/Daniel15/babel-standalone) since the former has been deprecated.\n",
+  "closed_by": {
+    "login": "keyz",
+    "id": 2268452,
+    "node_id": "MDQ6VXNlcjIyNjg0NTI=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2268452?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/keyz",
+    "html_url": "https://github.com/keyz",
+    "followers_url": "https://api.github.com/users/keyz/followers",
+    "following_url": "https://api.github.com/users/keyz/following{/other_user}",
+    "gists_url": "https://api.github.com/users/keyz/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/keyz/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/keyz/subscriptions",
+    "organizations_url": "https://api.github.com/users/keyz/orgs",
+    "repos_url": "https://api.github.com/users/keyz/repos",
+    "events_url": "https://api.github.com/users/keyz/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/keyz/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13488",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13488/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13488/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13488/events",
+  "html_url": "https://github.com/facebook/react/pull/13488",
+  "id": 354109392,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjEwOTYwMTcz",
+  "number": 13488,
+  "title": "Remove buggy unstable_deferredUpdates()",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2018-08-26T16:48:34Z",
+  "updated_at": "2018-08-29T12:36:15Z",
+  "closed_at": "2018-08-28T17:12:52Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13488",
+    "html_url": "https://github.com/facebook/react/pull/13488",
+    "diff_url": "https://github.com/facebook/react/pull/13488.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13488.patch"
+  },
+  "body": "This fixes the issue I was seeing in my JSConf demo, and that currently exists in the fixture:\r\n\r\nhttps://github.com/facebook/react/blob/53ddcec4f18f38e4f89a14b406d852e7a8945592/fixtures/unstable-async/time-slicing/src/index.js#L67-L68\r\n\r\nhttps://github.com/facebook/react/blob/53ddcec4f18f38e4f89a14b406d852e7a8945592/fixtures/unstable-async/time-slicing/src/index.js#L110-L111\r\n\r\n<s>When we enter `deferredUpdates`, we should treat them as deferred — regardless of whether we're in an interactive handler.</s>\r\n\r\nAs per discussion below, we decided `unstable_deferredUpdates` is unnecessary since any update outside of event handlers in async mode is already treated as low priority. In userland code, the suggested solution for explicitly scheduling them will be `scheduleWork` (from the unreleased scheduler package). Until that package is published, `requestIdleCallback` or `requestAnimationFrame` work as alternatives.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

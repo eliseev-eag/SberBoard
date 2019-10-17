@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15433",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15433/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15433/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15433/events",
+  "html_url": "https://github.com/facebook/react/pull/15433",
+  "id": 434422613,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjcxNDE4NzM4",
+  "number": 15433,
+  "title": "Include rootEventTypes in DOMEventResponderSystem stopPropagation tests",
+  "user": {
+    "login": "necolas",
+    "id": 239676,
+    "node_id": "MDQ6VXNlcjIzOTY3Ng==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/239676?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/necolas",
+    "html_url": "https://github.com/necolas",
+    "followers_url": "https://api.github.com/users/necolas/followers",
+    "following_url": "https://api.github.com/users/necolas/following{/other_user}",
+    "gists_url": "https://api.github.com/users/necolas/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/necolas/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/necolas/subscriptions",
+    "organizations_url": "https://api.github.com/users/necolas/orgs",
+    "repos_url": "https://api.github.com/users/necolas/repos",
+    "events_url": "https://api.github.com/users/necolas/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/necolas/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 1296748300,
+      "node_id": "MDU6TGFiZWwxMjk2NzQ4MzAw",
+      "url": "https://api.github.com/repos/facebook/react/labels/React%20Flare",
+      "name": "React Flare",
+      "color": "63f2ff",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-04-17T18:23:47Z",
+  "updated_at": "2019-04-19T17:06:11Z",
+  "closed_at": "2019-04-17T20:08:37Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15433",
+    "html_url": "https://github.com/facebook/react/pull/15433",
+    "diff_url": "https://github.com/facebook/react/pull/15433.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15433.patch"
+  },
+  "body": "Confirms that current logic correctly stops propagation of event type to the root.\r\n\r\nWe probably need to consider an alternative mechanism if we don't want event components to be able to influence the events received by event components of different types.",
+  "closed_by": {
+    "login": "necolas",
+    "id": 239676,
+    "node_id": "MDQ6VXNlcjIzOTY3Ng==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/239676?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/necolas",
+    "html_url": "https://github.com/necolas",
+    "followers_url": "https://api.github.com/users/necolas/followers",
+    "following_url": "https://api.github.com/users/necolas/following{/other_user}",
+    "gists_url": "https://api.github.com/users/necolas/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/necolas/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/necolas/subscriptions",
+    "organizations_url": "https://api.github.com/users/necolas/orgs",
+    "repos_url": "https://api.github.com/users/necolas/repos",
+    "events_url": "https://api.github.com/users/necolas/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/necolas/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

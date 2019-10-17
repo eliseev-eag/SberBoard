@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15081",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15081/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15081/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15081/events",
+  "html_url": "https://github.com/facebook/react/issues/15081",
+  "id": 419269091,
+  "node_id": "MDU6SXNzdWU0MTkyNjkwOTE=",
+  "number": 15081,
+  "title": "eslint-react-hooks: should we enforce to use React.useMemo if there is no state hooks?",
+  "user": {
+    "login": "BigYu",
+    "id": 5934735,
+    "node_id": "MDQ6VXNlcjU5MzQ3MzU=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/5934735?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/BigYu",
+    "html_url": "https://github.com/BigYu",
+    "followers_url": "https://api.github.com/users/BigYu/followers",
+    "following_url": "https://api.github.com/users/BigYu/following{/other_user}",
+    "gists_url": "https://api.github.com/users/BigYu/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/BigYu/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/BigYu/subscriptions",
+    "organizations_url": "https://api.github.com/users/BigYu/orgs",
+    "repos_url": "https://api.github.com/users/BigYu/repos",
+    "events_url": "https://api.github.com/users/BigYu/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/BigYu/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 620368407,
+      "node_id": "MDU6TGFiZWw2MjAzNjg0MDc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Needs%20More%20Information",
+      "name": "Resolution: Needs More Information",
+      "color": "fffde7",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-03-11T02:26:13Z",
+  "updated_at": "2019-09-04T09:50:08Z",
+  "closed_at": "2019-09-04T09:50:07Z",
+  "author_association": "NONE",
+  "body": "1. Regarding the performance optimization, should we always use React.useMemo in case there is no state hooks inside a function component?\r\n2. If the answer is yes, can we use some eslint rules to make sure everyone do it?",
+  "closed_by": {
+    "login": "threepointone",
+    "id": 18808,
+    "node_id": "MDQ6VXNlcjE4ODA4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/18808?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/threepointone",
+    "html_url": "https://github.com/threepointone",
+    "followers_url": "https://api.github.com/users/threepointone/followers",
+    "following_url": "https://api.github.com/users/threepointone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/threepointone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/threepointone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/threepointone/subscriptions",
+    "organizations_url": "https://api.github.com/users/threepointone/orgs",
+    "repos_url": "https://api.github.com/users/threepointone/repos",
+    "events_url": "https://api.github.com/users/threepointone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/threepointone/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

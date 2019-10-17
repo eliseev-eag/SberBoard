@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15742",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15742/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15742/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15742/events",
+  "html_url": "https://github.com/facebook/react/issues/15742",
+  "id": 448696507,
+  "node_id": "MDU6SXNzdWU0NDg2OTY1MDc=",
+  "number": 15742,
+  "title": "Invariant Violation: Invalid hook call. Hooks can only be called inside of the body of a function component.",
+  "user": {
+    "login": "ir-fuel",
+    "id": 1573715,
+    "node_id": "MDQ6VXNlcjE1NzM3MTU=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1573715?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ir-fuel",
+    "html_url": "https://github.com/ir-fuel",
+    "followers_url": "https://api.github.com/users/ir-fuel/followers",
+    "following_url": "https://api.github.com/users/ir-fuel/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ir-fuel/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ir-fuel/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ir-fuel/subscriptions",
+    "organizations_url": "https://api.github.com/users/ir-fuel/orgs",
+    "repos_url": "https://api.github.com/users/ir-fuel/repos",
+    "events_url": "https://api.github.com/users/ir-fuel/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ir-fuel/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2019-05-27T06:59:35Z",
+  "updated_at": "2019-09-04T11:17:49Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nBug\r\n\r\n**What is the current behavior?**\r\n\r\nI am getting this error:\r\n\r\n```\r\nInvariant Violation: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons: 1. You might have mismatching versions of React and the renderer (such as React DOM) 2. You might be breaking the Rules of Hooks 3. You might have more than one copy of React in the same app See https://fb.me/react-invalid-hook-call for tips about how to debug and fix this problem. at invariant (webpack:///./node_modules/react/cjs/react.development.js?:88:15) at resolveDispatcher (webpack:///./node_modules/react/cjs/react.development.js?:1436:28) at Object.useRef (webpack:///./node_modules/react/cjs/react.development.js?:1471:20) at Toolbar (webpack:///./client/index.jsx?:10:48) at renderWithHooks (webpack:///./node_modules/react-dom/cjs/react-dom.development.js?:12938:18) at mountIndeterminateComponent (webpack:///./node_modules/react-dom/cjs/react-dom.development.js?:15020:13) at beginWork (webpack:///./node_modules/react-dom/cjs/react-dom.development.js?:15625:16) at performUnitOfWork (webpack:///./node_modules/react-dom/cjs/react-dom.development.js?:19312:12) at workLoop (webpack:///./node_modules/react-dom/cjs/react-dom.development.js?:19352:24) at HTMLUnknownElement.callCallback (webpack:///./node_modules/react-dom/cjs/react-dom.development.js?:149:14)\r\n```\r\n\r\nHere is an example project that shows the problem:\r\n\r\nhttps://github.com/ir-fuel/material-test\r\n\r\n\r\n```\r\nimport ReactDOM from 'react-dom'\r\nimport React from 'react'\r\n\r\nfunction Toolbar() {\r\n  React.useRef()\r\n  return <span>Test</span>\r\n}\r\n\r\nReactDOM.render(\r\n  <Toolbar/>,\r\n  document.querySelector(\".application\")\r\n);\r\n```\r\n\r\n\r\n\r\n**What is the expected behavior?**\r\n\r\nIt should not give an error\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nReact 16.8.6\r\nChrome Version 74.0.3729.157 (Official Build) (64-bit)\r\n",
+  "closed_by": null
+}

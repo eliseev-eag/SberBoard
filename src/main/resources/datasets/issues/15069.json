@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15069",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15069/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15069/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15069/events",
+  "html_url": "https://github.com/facebook/react/issues/15069",
+  "id": 418939990,
+  "node_id": "MDU6SXNzdWU0MTg5Mzk5OTA=",
+  "number": 15069,
+  "title": "Can an error boundary prevent React's error logging?",
+  "user": {
+    "login": "silverwind",
+    "id": 115237,
+    "node_id": "MDQ6VXNlcjExNTIzNw==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/115237?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/silverwind",
+    "html_url": "https://github.com/silverwind",
+    "followers_url": "https://api.github.com/users/silverwind/followers",
+    "following_url": "https://api.github.com/users/silverwind/following{/other_user}",
+    "gists_url": "https://api.github.com/users/silverwind/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/silverwind/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/silverwind/subscriptions",
+    "organizations_url": "https://api.github.com/users/silverwind/orgs",
+    "repos_url": "https://api.github.com/users/silverwind/repos",
+    "events_url": "https://api.github.com/users/silverwind/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/silverwind/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2019-03-08T20:11:45Z",
+  "updated_at": "2019-05-08T10:33:49Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "I noticed [this unconditional `console.error`](https://github.com/facebook/react/blob/d0289c7e3a2dfc349dcce7f9eb3dee22464e97bd/packages/react-reconciler/src/ReactFiberErrorLogger.js#L86) which I'd like to prevent to keep the console clean from errors that are already \"caught\" in an error boundary.\r\n\r\nMaybe a condition on `capturedError.errorBoundaryFound` could prevent this logging?",
+  "closed_by": null
+}

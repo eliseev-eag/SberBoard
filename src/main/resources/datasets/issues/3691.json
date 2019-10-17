@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3691",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3691/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3691/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3691/events",
+  "html_url": "https://github.com/facebook/react/pull/3691",
+  "id": 69318359,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzM2MDM1OTg=",
+  "number": 3691,
+  "title": "Add 'cache: false' to $.ajax when fetching comments (docs/tutorial)",
+  "user": {
+    "login": "jonscottclark",
+    "id": 214676,
+    "node_id": "MDQ6VXNlcjIxNDY3Ng==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/214676?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jonscottclark",
+    "html_url": "https://github.com/jonscottclark",
+    "followers_url": "https://api.github.com/users/jonscottclark/followers",
+    "following_url": "https://api.github.com/users/jonscottclark/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jonscottclark/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jonscottclark/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jonscottclark/subscriptions",
+    "organizations_url": "https://api.github.com/users/jonscottclark/orgs",
+    "repos_url": "https://api.github.com/users/jonscottclark/repos",
+    "events_url": "https://api.github.com/users/jonscottclark/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jonscottclark/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2015-04-18T15:21:43Z",
+  "updated_at": "2015-05-01T18:11:19Z",
+  "closed_at": "2015-04-22T16:57:58Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3691",
+    "html_url": "https://github.com/facebook/react/pull/3691",
+    "diff_url": "https://github.com/facebook/react/pull/3691.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3691.patch"
+  },
+  "body": "When trying out the tutorial, I had just moved my comments data to a separate `.json` file, and created the `setInterval` function to poll for changes to the file. (Section titled \"[Updating state](https://facebook.github.io/react/docs/tutorial.html#updating-state)\")\n\nAt the bottom of this section the tutorial states \"Try running this in your browser and changing the comments.json file; within 2 seconds, the changes will show!\" They didn't :disappointed:\n\nIt just kept returning the same content, until I told the `$.ajax` call not to cache the result by setting the `cache` option to `false`. Then the comments that I added came through OK and the state of the component updated automatically as expected.\n\nThis PR doesn't add any explanation about the `cache` option, and adds it to any call (also in the KR and JP tutorial.) Most people may be accustomed to using the following:\n\n``` js\n$.ajaxSetup({ cache: false });\n```\n\nWhich would make all calls to XHR functions not cache by default, but for the sake of this tutorial, and avoidance in setting global config options for jQuery, I think it's a good idea to include it in each call so that things work as expected for newbies like myself :smile: \n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

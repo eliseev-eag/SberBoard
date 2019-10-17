@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12023",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12023/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12023/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12023/events",
+  "html_url": "https://github.com/facebook/react/pull/12023",
+  "id": 288668169,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTYzMDA2Nzcx",
+  "number": 12023,
+  "title": "Output JUnit XML metadata for CircleCi",
+  "user": {
+    "login": "obenbrahim",
+    "id": 14368835,
+    "node_id": "MDQ6VXNlcjE0MzY4ODM1",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/14368835?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/obenbrahim",
+    "html_url": "https://github.com/obenbrahim",
+    "followers_url": "https://api.github.com/users/obenbrahim/followers",
+    "following_url": "https://api.github.com/users/obenbrahim/following{/other_user}",
+    "gists_url": "https://api.github.com/users/obenbrahim/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/obenbrahim/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/obenbrahim/subscriptions",
+    "organizations_url": "https://api.github.com/users/obenbrahim/orgs",
+    "repos_url": "https://api.github.com/users/obenbrahim/repos",
+    "events_url": "https://api.github.com/users/obenbrahim/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/obenbrahim/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2018-01-15T17:28:22Z",
+  "updated_at": "2018-08-18T11:11:02Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12023",
+    "html_url": "https://github.com/facebook/react/pull/12023",
+    "diff_url": "https://github.com/facebook/react/pull/12023.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12023.patch"
+  },
+  "body": "Fixes #11949\r\n\r\n# Summary\r\nCurrently, when the build fails, there is no way to know what happened other than going through the logs in CircleCI. \r\n\r\nThe goal of this PR is to output JUnit XML metadata for every build step. This allows CircleCI summary page to display exactly which step has failed. \r\n\r\n# What this PR does:\r\n1.  Handle Jest JUnit reports generation\r\n   **jest-junit** reporter is used to output JUnit report reports in /junit/jest-results.xml\r\n   :warning: `test_entry_point.sh` is calling `yarn test` several times. So, a unit test failure will be duplicated in the build summary\r\n1. Handle ESLint JUnit reports generation\r\n **ESLint** script can either use the default `stylish` formatter or `junit` formatter.\r\n :warning: in JUnit mode, ESlint results are in XML format. Not only are they written to report fils, but also they are logged to console. This may be a noise to the build logs.\r\n\r\n:warning:  For the tasks described below, the package `junit-report-builder` has been used. Initially, I was writing the JUnit report on my own.\r\n1. Handle flow JUnit reports generation\r\n  **Flow** result is treated as a single test that has a single test output\r\n1. Handle prettier JUnit  reports generation\r\n1. Handle check_license.sh JUnit  report generation\r\n1. Handle check_modules.sh JUnit  report generation\r\n1. test_print_warnings.sh\r\n  **Nothing** to be done as this script is simply used to extract all messages from `warning()\r\n1. Handle track_stats JUnit.sh  report generation\r\n1. Handle build.sh JUnit.sh  report generation\r\n1. Handle upload_build.sh JUnit  report generation\r\n1. Handle JUnit report generation for coveralls\r\n1. Handle JUnit report generation for Danger",
+  "closed_by": null
+}

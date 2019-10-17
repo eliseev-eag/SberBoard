@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4858",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4858/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4858/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4858/events",
+  "html_url": "https://github.com/facebook/react/pull/4858",
+  "id": 106192306,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDQ4NjQyMDk=",
+  "number": 4858,
+  "title": "Upgrade eslint to 1.4.1",
+  "user": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2015-09-13T00:32:42Z",
+  "updated_at": "2015-10-13T16:39:52Z",
+  "closed_at": "2015-09-16T19:35:12Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4858",
+    "html_url": "https://github.com/facebook/react/pull/4858",
+    "diff_url": "https://github.com/facebook/react/pull/4858.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4858.patch"
+  },
+  "body": "A couple new rules that will eventually make their way back into the shared config, but getting them in here first.\n\nThe only code change we have is because 1.4 \"fixed\" the `space-after-keywords` rule for `catch` (I personally prefer the lack of space there but there's no option so whatever).\n- [1.2](http://eslint.org/blog/2015/08/eslint-1.2.0-released/)\n- [1.3](http://eslint.org/blog/2015/08/eslint-v1.3.0-released/)\n- [1.4](http://eslint.org/blog/2015/09/eslint-v1.4.0-released/)\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

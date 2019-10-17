@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9373",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9373/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9373/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9373/events",
+  "html_url": "https://github.com/facebook/react/pull/9373",
+  "id": 220370760,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTE0OTI4Njky",
+  "number": 9373,
+  "title": "Point users to the npm page instead of the github project for prop-types",
+  "user": {
+    "login": "aackerman",
+    "id": 786640,
+    "node_id": "MDQ6VXNlcjc4NjY0MA==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/786640?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aackerman",
+    "html_url": "https://github.com/aackerman",
+    "followers_url": "https://api.github.com/users/aackerman/followers",
+    "following_url": "https://api.github.com/users/aackerman/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aackerman/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aackerman/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aackerman/subscriptions",
+    "organizations_url": "https://api.github.com/users/aackerman/orgs",
+    "repos_url": "https://api.github.com/users/aackerman/repos",
+    "events_url": "https://api.github.com/users/aackerman/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aackerman/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-04-08T03:00:58Z",
+  "updated_at": "2017-04-08T03:10:00Z",
+  "closed_at": "2017-04-08T03:05:35Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9373",
+    "html_url": "https://github.com/facebook/react/pull/9373",
+    "diff_url": "https://github.com/facebook/react/pull/9373.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9373.patch"
+  },
+  "body": "It seems incorrect to point users to my fork of PropTypes since the npm releases are now based off source code in the react repo. I've updated the readme for my project to reflect this fact, but I saw that the documentation was still pointing to my repo and I think it would be better to point users directly to the npm page if not the source in the react repo itself.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

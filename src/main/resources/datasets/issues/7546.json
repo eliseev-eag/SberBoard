@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7546",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7546/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7546/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7546/events",
+  "html_url": "https://github.com/facebook/react/pull/7546",
+  "id": 172626827,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODIzMTMzNzU=",
+  "number": 7546,
+  "title": "add explicit link to http://bower.io/",
+  "user": {
+    "login": "NestorTejero",
+    "id": 3206261,
+    "node_id": "MDQ6VXNlcjMyMDYyNjE=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3206261?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/NestorTejero",
+    "html_url": "https://github.com/NestorTejero",
+    "followers_url": "https://api.github.com/users/NestorTejero/followers",
+    "following_url": "https://api.github.com/users/NestorTejero/following{/other_user}",
+    "gists_url": "https://api.github.com/users/NestorTejero/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/NestorTejero/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/NestorTejero/subscriptions",
+    "organizations_url": "https://api.github.com/users/NestorTejero/orgs",
+    "repos_url": "https://api.github.com/users/NestorTejero/repos",
+    "events_url": "https://api.github.com/users/NestorTejero/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/NestorTejero/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2016-08-23T07:06:52Z",
+  "updated_at": "2016-09-06T22:36:22Z",
+  "closed_at": "2016-08-23T16:30:12Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7546",
+    "html_url": "https://github.com/facebook/react/pull/7546",
+    "diff_url": "https://github.com/facebook/react/pull/7546.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7546.patch"
+  },
+  "body": "_Before_ submitting a pull request, please make sure the following is done...\n1. Fork the repo and create your branch from `master`.\n2. If you've added code that should be tested, add tests!\n3. If you've changed APIs, update the documentation.\n4. Ensure the test suite passes (`grunt test`).\n5. Make sure your code lints (`grunt lint`) - we've done our best to make sure these rules match our internal linting guidelines.\n6. If you haven't already, complete the [CLA](https://code.facebook.com/cla).\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

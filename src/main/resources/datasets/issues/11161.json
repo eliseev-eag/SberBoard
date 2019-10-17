@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11161",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11161/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11161/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11161/events",
+  "html_url": "https://github.com/facebook/react/issues/11161",
+  "id": 263965772,
+  "node_id": "MDU6SXNzdWUyNjM5NjU3NzI=",
+  "number": 11161,
+  "title": "Shallow renderer: subsequent `setState` calls inside `componentWillMount` discard the previous ones",
+  "user": {
+    "login": "Hypnosphi",
+    "id": 6651625,
+    "node_id": "MDQ6VXNlcjY2NTE2MjU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/6651625?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Hypnosphi",
+    "html_url": "https://github.com/Hypnosphi",
+    "followers_url": "https://api.github.com/users/Hypnosphi/followers",
+    "following_url": "https://api.github.com/users/Hypnosphi/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Hypnosphi/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Hypnosphi/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Hypnosphi/subscriptions",
+    "organizations_url": "https://api.github.com/users/Hypnosphi/orgs",
+    "repos_url": "https://api.github.com/users/Hypnosphi/repos",
+    "events_url": "https://api.github.com/users/Hypnosphi/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Hypnosphi/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 204945357,
+      "node_id": "MDU6TGFiZWwyMDQ5NDUzNTc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Shallow%20Renderer",
+      "name": "Component: Shallow Renderer",
+      "color": "eb6420",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2017-10-09T17:10:11Z",
+  "updated_at": "2017-11-03T00:54:50Z",
+  "closed_at": "2017-10-10T13:22:17Z",
+  "author_association": "CONTRIBUTOR",
+  "body": "**What is the current behavior?**\r\n\r\nIf `componentWillMount` has multiple `setState` calls, only the last one works in shallow renderer\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem**\r\nhttps://www.webpackbin.com/bins/-Kw11Ya_ZJ1BcL0rpDKj\r\n\r\nHere, DOM renderer correctly renders \"Hello, world\" while test shallow renderer renders \"undefined, world\". \r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nIssue is introduced in React 16.\r\n\r\nThe reason must be those lines, replacing `publicInstance.state` with `this._renderer._newState` should fix it:\r\nhttps://github.com/facebook/react/blob/e932ad68bed656eed5295b61ba74e5d0857902ed/src/renderers/testing/ReactShallowRendererEntry.js#L212-L215",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6218",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6218/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6218/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6218/events",
+  "html_url": "https://github.com/facebook/react/pull/6218",
+  "id": 139363999,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjIxMTg4OTU=",
+  "number": 6218,
+  "title": "Ensure 'onResponderGrant' is called after 'onResponderTerminate'",
+  "user": {
+    "login": "aleclarson",
+    "id": 1925840,
+    "node_id": "MDQ6VXNlcjE5MjU4NDA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1925840?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aleclarson",
+    "html_url": "https://github.com/aleclarson",
+    "followers_url": "https://api.github.com/users/aleclarson/followers",
+    "following_url": "https://api.github.com/users/aleclarson/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aleclarson/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aleclarson/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aleclarson/subscriptions",
+    "organizations_url": "https://api.github.com/users/aleclarson/orgs",
+    "repos_url": "https://api.github.com/users/aleclarson/repos",
+    "events_url": "https://api.github.com/users/aleclarson/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aleclarson/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 17,
+  "created_at": "2016-03-08T19:03:33Z",
+  "updated_at": "2017-11-21T14:12:25Z",
+  "closed_at": "2017-11-21T14:12:25Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6218",
+    "html_url": "https://github.com/facebook/react/pull/6218",
+    "diff_url": "https://github.com/facebook/react/pull/6218.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6218.patch"
+  },
+  "body": "Fixes #6217\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

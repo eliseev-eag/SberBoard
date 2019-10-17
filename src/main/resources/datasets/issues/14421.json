@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14421",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14421/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14421/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14421/events",
+  "html_url": "https://github.com/facebook/react/pull/14421",
+  "id": 389918022,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjM3Nzk5OTA1",
+  "number": 14421,
+  "title": "Merged enableProfilerTimer & enableSchedulerTracing flags into enableProfiling",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2018-12-11T19:28:44Z",
+  "updated_at": "2018-12-14T21:32:39Z",
+  "closed_at": "2018-12-14T21:32:38Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14421",
+    "html_url": "https://github.com/facebook/react/pull/14421",
+    "diff_url": "https://github.com/facebook/react/pull/14421.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14421.patch"
+  },
+  "body": "In practice, we always turn these flags on and off together.\r\n\r\nWe can also use this new flag to determine when to track suspending components and durations (rather than adding a third flag and complication `ReactFiberRoot`.\r\n\r\nMost of this change is pretty rote. The only file worth looking at more closely is `ReactProfiler-test.internal` where I simplified tests for a case that no longer exists (profiling enabled, tracing disabled). The relevant code related to this change can be seen in `ReactFiberCommitWork`.\r\n\r\n[See this comment below for a better view of the actual changes to `ReactProfiler-test.internal`](https://github.com/facebook/react/pull/14421#issuecomment-446332734).",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

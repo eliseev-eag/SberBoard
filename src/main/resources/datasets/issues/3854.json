@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3854",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3854/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3854/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3854/events",
+  "html_url": "https://github.com/facebook/react/issues/3854",
+  "id": 75076276,
+  "node_id": "MDU6SXNzdWU3NTA3NjI3Ng==",
+  "number": 3854,
+  "title": "request: enable triggering warnings on every render",
+  "user": {
+    "login": "joeybaker",
+    "id": 36662,
+    "node_id": "MDQ6VXNlcjM2NjYy",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/36662?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/joeybaker",
+    "html_url": "https://github.com/joeybaker",
+    "followers_url": "https://api.github.com/users/joeybaker/followers",
+    "following_url": "https://api.github.com/users/joeybaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/joeybaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/joeybaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/joeybaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/joeybaker/orgs",
+    "repos_url": "https://api.github.com/users/joeybaker/repos",
+    "events_url": "https://api.github.com/users/joeybaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/joeybaker/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2015-05-11T04:05:17Z",
+  "updated_at": "2016-08-03T00:44:37Z",
+  "closed_at": "2015-09-28T23:16:20Z",
+  "author_association": "NONE",
+  "body": "On the client, it's nice that development warnings are only triggered on the initial render. But, when rendering from the server with `renderToString` it's annoying to only have the warnings triggered the first render and then ignored on subsequent page loads. \n\nWhat if render methods accepted an additional options argument?\n\n``` js\nReact.render(<span>hi</span>, window.app, {alwaysWarn: false})\n\nReact.renderToString(React.createElement(El, data), {alwaysWarn: true})\n```\n\nCrazy ideas: This might be useful for other options too? Perhaps: `appendToBody` (auto-appends the second arg), or `ignoreDOMCalls` (automatically catches/ignores errors to for `window` and `document` APIs)?\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14594",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14594/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14594/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14594/events",
+  "html_url": "https://github.com/facebook/react/pull/14594",
+  "id": 399165479,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjQ0NjU4MTQz",
+  "number": 14594,
+  "title": "Don't bother comparing constructor when deps are not provided",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-01-15T02:47:03Z",
+  "updated_at": "2019-01-29T19:56:11Z",
+  "closed_at": "2019-01-17T01:53:48Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14594",
+    "html_url": "https://github.com/facebook/react/pull/14594",
+    "diff_url": "https://github.com/facebook/react/pull/14594.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14594.patch"
+  },
+  "body": "When no dependencies are passed to an effect hook, what we used to do is compare the effect constructor. If there was no change, then we would skip firing the effect. In practice, this is a useless optimization because the constructor will always be different when you pass an inline closure. And if you don't pass an inline closure, then you can't access any props or state.\r\n\r\nThere are some edge cases where an effect that doesn't close over props or state could be useful, like reference counting the number of mounted components. But those are rare and can be addressed by passing an empty array of dependencies.\r\n\r\nBy removing this \"optimization,\" we can avoid retaining the constructor in the majority of cases where it's a closure that changes on every render.\r\n\r\nI made corresponding changes to the other hooks that accept dependencies, too (useMemo, useCallback, and useImperativeHandle).",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

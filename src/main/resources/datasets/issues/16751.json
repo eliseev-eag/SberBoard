@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16751",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16751/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16751/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16751/events",
+  "html_url": "https://github.com/facebook/react/pull/16751",
+  "id": 492272504,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzE2NDc2ODQ0",
+  "number": 16751,
+  "title": "[react-interactions] More Tab Focus control handling",
+  "user": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-09-11T14:25:20Z",
+  "updated_at": "2019-09-11T23:15:11Z",
+  "closed_at": "2019-09-11T20:35:34Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16751",
+    "html_url": "https://github.com/facebook/react/pull/16751",
+    "diff_url": "https://github.com/facebook/react/pull/16751.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16751.patch"
+  },
+  "body": "This is a follow up PR to the previous initial work to handle basic tab focus control with `TabFocusController.js`s.\r\n\r\nThis PR adds a few more features to the experimental scope API and, most importantly, provides an internal imperative mechanism for controlling tab focus via an API. I've also made containment an optional prop on `TabFocusController`s and provided a way of exposing an imperative ref to scopes so these can easily be handed back via scope traversal.\r\n\r\nIn my next PR I plan on demonstrating taking this future and building components that allow for a powerful Grid based keyboard focusable system (using arrows + tab + modifiers).",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7406",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7406/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7406/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7406/events",
+  "html_url": "https://github.com/facebook/react/issues/7406",
+  "id": 168980028,
+  "node_id": "MDU6SXNzdWUxNjg5ODAwMjg=",
+  "number": 7406,
+  "title": "Memory leak in React 15.3.0 non-production server side rendering",
+  "user": {
+    "login": "franjohn21",
+    "id": 7452924,
+    "node_id": "MDQ6VXNlcjc0NTI5MjQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/7452924?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/franjohn21",
+    "html_url": "https://github.com/franjohn21",
+    "followers_url": "https://api.github.com/users/franjohn21/followers",
+    "following_url": "https://api.github.com/users/franjohn21/following{/other_user}",
+    "gists_url": "https://api.github.com/users/franjohn21/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/franjohn21/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/franjohn21/subscriptions",
+    "organizations_url": "https://api.github.com/users/franjohn21/orgs",
+    "repos_url": "https://api.github.com/users/franjohn21/repos",
+    "events_url": "https://api.github.com/users/franjohn21/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/franjohn21/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 178761159,
+      "node_id": "MDU6TGFiZWwxNzg3NjExNTk=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Regression",
+      "name": "Type: Regression",
+      "color": "e11d21",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2016-08-02T20:26:19Z",
+  "updated_at": "2016-08-10T18:50:18Z",
+  "closed_at": "2016-08-10T18:50:18Z",
+  "author_association": "NONE",
+  "body": "A memory leak appears to have been introduced to server side rendering in React 15.3.0 when `NODE_ENV != production`.\n\nWith `NODE_ENV=development`, the size of the heap grows proportionally to the number of requests received. This was confirmed in both Node v6.3.0 and v0.12.3. Also it was **confirmed to work correctly in React 15.2.0**.\n\n_To reproduce_: Start the app configured for server-side rendering with `NODE_ENV=development` (or just not production). Inspect the V8 heap before and after hitting your server with a number of requests. I used [heapdump](https://github.com/bnoordhuis/node-heapdump) to take the snapshots and [wrk](https://github.com/wg/wrk) to hit my app with a bunch of requests. Load the snapshots into chrome dev tools profiler. Here is what I see:\n<img width=\"1278\" alt=\"screen shot 2016-08-02 at 12 47 34 pm\" src=\"https://cloud.githubusercontent.com/assets/7452924/17343291/b8922606-58b1-11e6-9891-b6dbc22edc29.png\">\n\nThe culprit appears to be the [react children mutation warning](https://github.com/facebook/react/blob/328fc75bc910032ff37dc9d93429fb14b476bd0d/src/renderers/shared/hooks/ReactChildrenMutationWarningHook.js#L18). `onBeforeComponentMount` saves a reference to a given React Element and all of its props in the `elements` object, but the cleanup steps `onComponentHasMounted` or `onComponentHasUpdated` are never called on the server and thus the `elements` object is ever growing.\n\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\nreact - 15.3.0\nreact-dom - 15.3.0\nnode - 6.3.0 || 0.12.3\nexpress - ^4.0.0\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

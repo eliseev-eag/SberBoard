@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11894",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11894/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11894/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11894/events",
+  "html_url": "https://github.com/facebook/react/pull/11894",
+  "id": 283479957,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTU5MzUzNzAx",
+  "number": 11894,
+  "title": "[WIP] Replace top-level event types with numbers",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-12-20T08:07:14Z",
+  "updated_at": "2018-05-23T13:14:11Z",
+  "closed_at": "2018-05-23T13:14:10Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11894",
+    "html_url": "https://github.com/facebook/react/pull/11894",
+    "diff_url": "https://github.com/facebook/react/pull/11894.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11894.patch"
+  },
+  "body": "This is a rough proof of concept.\r\nNot sure if it's worth it, but it removes about 0.5K post min+gzip.\r\n\r\nThe idea is to use number constants since `top*` strings don't have special meanings anyway. I'm using ESM exports because GCC can inline those numbers.\r\n\r\nA few observations:\r\n\r\n* I like that using numbers make it clearer when we're passing \"internal\" event name.\r\n* I tried unrolling the metaprogramming added in https://github.com/facebook/react/pull/7616 but it makes the code larger again. However, I noticed we can use `on*` as the \"base\" name and thus ensure it stays interned (and only the rare `on*Capture` would be uninterned). Not sure where we compare to it so don't know if it makes a difference.\r\n* `mediaEvents` list in `ReactDOMFiberComponent` can be an array. There's no need to duplicate raw event names there since they already exist in `BrowserEventConstants`.\r\n* In most cases instead of the explicit raw names in `BrowserEventConstants` we could use \"Reacty\" names from `SimpleEventPlugin` with leading `on` sliced out. Not sure if there's any perf difference in passing an uninterned string to `addEventListener`. There's also a caveat that we *don't* want to listen to some `SimpleEventPlugin` events at top level. But we could still share a list between them if this is beneficial.\r\n\r\nStill broken:\r\n\r\n* Test utils\r\n* Flow annotations\r\n* Some tests",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

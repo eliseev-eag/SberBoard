@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3717",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3717/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3717/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3717/events",
+  "html_url": "https://github.com/facebook/react/pull/3717",
+  "id": 69988869,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzM4MTcyNTk=",
+  "number": 3717,
+  "title": "[performance] Inline ReactMultiChild.mountChildren",
+  "user": {
+    "login": "mridgway",
+    "id": 191142,
+    "node_id": "MDQ6VXNlcjE5MTE0Mg==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/191142?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mridgway",
+    "html_url": "https://github.com/mridgway",
+    "followers_url": "https://api.github.com/users/mridgway/followers",
+    "following_url": "https://api.github.com/users/mridgway/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mridgway/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mridgway/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mridgway/subscriptions",
+    "organizations_url": "https://api.github.com/users/mridgway/orgs",
+    "repos_url": "https://api.github.com/users/mridgway/repos",
+    "events_url": "https://api.github.com/users/mridgway/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mridgway/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 20,
+  "created_at": "2015-04-22T00:47:05Z",
+  "updated_at": "2015-07-20T17:40:53Z",
+  "closed_at": "2015-05-20T21:48:28Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3717",
+    "html_url": "https://github.com/facebook/react/pull/3717",
+    "diff_url": "https://github.com/facebook/react/pull/3717.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3717.patch"
+  },
+  "body": "I found that `ReactMultiChild.mountChildren` and the functions it calls were iterating over the children many times. This inlines those calls as it is a critical rendering path. Through testing a chat example I have found about a 10-15% performance gain in `renderToString` using benchmark.js.\n\nTest: https://github.com/mridgway/react-perf/tree/inlineMountChildren\nTest results: https://travis-ci.org/mridgway/react-perf/builds/59480548\n",
+  "closed_by": {
+    "login": "mridgway",
+    "id": 191142,
+    "node_id": "MDQ6VXNlcjE5MTE0Mg==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/191142?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mridgway",
+    "html_url": "https://github.com/mridgway",
+    "followers_url": "https://api.github.com/users/mridgway/followers",
+    "following_url": "https://api.github.com/users/mridgway/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mridgway/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mridgway/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mridgway/subscriptions",
+    "organizations_url": "https://api.github.com/users/mridgway/orgs",
+    "repos_url": "https://api.github.com/users/mridgway/repos",
+    "events_url": "https://api.github.com/users/mridgway/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mridgway/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

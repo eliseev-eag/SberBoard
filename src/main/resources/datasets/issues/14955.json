@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14955",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14955/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14955/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14955/events",
+  "html_url": "https://github.com/facebook/react/pull/14955",
+  "id": 414406067,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjU2MTIzMjMx",
+  "number": 14955,
+  "title": "Warn if ReactNoop.act is not awaited",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-02-26T02:54:01Z",
+  "updated_at": "2019-03-04T19:51:18Z",
+  "closed_at": "2019-03-04T19:51:18Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14955",
+    "html_url": "https://github.com/facebook/react/pull/14955",
+    "diff_url": "https://github.com/facebook/react/pull/14955.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14955.patch"
+  },
+  "body": "Based on #14952\r\n\r\nUpdates the noop renderer tests to conform to the changes coming in #14853. It overlaps slightly with that PR but it doesn't implement the logic to warn when you nest async `act` calls; it only adds a warning if you call `act` without awaiting it.\r\n\r\nI'm not sure if we should merge this PR now or if we should wait for #14853 to land first. It may make sense to merge this one and then rebase Sunil's forthcoming changes on top of that.\r\n\r\nIn other words, @threepointone, feel free to ignore this PR if you like — it only exists to potentially make your life easier.",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

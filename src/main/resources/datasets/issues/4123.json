@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4123",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4123/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4123/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4123/events",
+  "html_url": "https://github.com/facebook/react/pull/4123",
+  "id": 88096575,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mzc2MzQ0MDg=",
+  "number": 4123,
+  "title": "Corrected spelling in ReactReconcileTransaction.js",
+  "user": {
+    "login": "carterchung",
+    "id": 8279692,
+    "node_id": "MDQ6VXNlcjgyNzk2OTI=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/8279692?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/carterchung",
+    "html_url": "https://github.com/carterchung",
+    "followers_url": "https://api.github.com/users/carterchung/followers",
+    "following_url": "https://api.github.com/users/carterchung/following{/other_user}",
+    "gists_url": "https://api.github.com/users/carterchung/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/carterchung/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/carterchung/subscriptions",
+    "organizations_url": "https://api.github.com/users/carterchung/orgs",
+    "repos_url": "https://api.github.com/users/carterchung/repos",
+    "events_url": "https://api.github.com/users/carterchung/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/carterchung/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2015-06-14T01:24:10Z",
+  "updated_at": "2015-06-15T07:03:54Z",
+  "closed_at": "2015-06-15T07:03:47Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4123",
+    "html_url": "https://github.com/facebook/react/pull/4123",
+    "diff_url": "https://github.com/facebook/react/pull/4123.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4123.patch"
+  },
+  "body": "completed CLA\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

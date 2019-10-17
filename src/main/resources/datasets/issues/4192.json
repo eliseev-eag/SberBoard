@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4192",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4192/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4192/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4192/events",
+  "html_url": "https://github.com/facebook/react/pull/4192",
+  "id": 90032694,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzgyMDYzOTk=",
+  "number": 4192,
+  "title": "Remove React's dependency on es5-sham.js.",
+  "user": {
+    "login": "dantman",
+    "id": 53399,
+    "node_id": "MDQ6VXNlcjUzMzk5",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/53399?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dantman",
+    "html_url": "https://github.com/dantman",
+    "followers_url": "https://api.github.com/users/dantman/followers",
+    "following_url": "https://api.github.com/users/dantman/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dantman/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dantman/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dantman/subscriptions",
+    "organizations_url": "https://api.github.com/users/dantman/orgs",
+    "repos_url": "https://api.github.com/users/dantman/repos",
+    "events_url": "https://api.github.com/users/dantman/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dantman/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 29,
+  "created_at": "2015-06-22T07:38:31Z",
+  "updated_at": "2015-10-06T04:25:13Z",
+  "closed_at": "2015-10-06T04:25:13Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4192",
+    "html_url": "https://github.com/facebook/react/pull/4192",
+    "diff_url": "https://github.com/facebook/react/pull/4192.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4192.patch"
+  },
+  "body": "Shams are potentially dangerous and add 5kb of code, of which React requires almost nothing from (see #4189).\n\nThis commit.\n- Implements an internal Object.freeze stub that throws like ES5's object freeze and uses Object.freeze if it is implemented.\n- Implements an internal Object.create stub that only supports `create(prototype)`, the only Object.create behavior React requires.\n- Implements tests for both of these stubs.\n- Fixes React to use these stubs internally.\n- Removes the early Error thrown when either of these native or shamed methods are not available.\n- Removes reference of es5-sham.js from the docs.\n\nThese stubs are implemented with consistency in mind so they will throw in the same conditions during development as they will when run in IE8.\n\nTests which use Object.create or Object.freeze as part of the test have been left alone.\n\n---\n\nI've dropped the reference of es5-sham.js from the docs in this commit. Would it instead be better for the docs to mention a specific range of React versions that require es5-sham.js and what version this commit will be a part of?\n",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

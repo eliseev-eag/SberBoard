@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10151",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10151/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10151/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10151/events",
+  "html_url": "https://github.com/facebook/react/pull/10151",
+  "id": 242227973,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTMwMDM2NjQ1",
+  "number": 10151,
+  "title": "Improve error message thrown in Fiber with multiple copies of React",
+  "user": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 14,
+  "created_at": "2017-07-12T01:11:30Z",
+  "updated_at": "2017-07-13T17:41:33Z",
+  "closed_at": "2017-07-13T17:41:33Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10151",
+    "html_url": "https://github.com/facebook/react/pull/10151",
+    "diff_url": "https://github.com/facebook/react/pull/10151.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10151.patch"
+  },
+  "body": "**what is the change?:**\r\n - Added warning in the place where this error is thrown in Fiber, to\r\n   get parity with older versions of React.\r\n - Updated docs to mention new error message as well as old one.\r\n\r\nI started to write a new docs page for the new error, and realized the\r\ncontent was the same as the old one. So then I just updated the existing\r\nerror page.\r\n\r\n**why make this change?:**\r\nWe want to avoid confusion when this error is thrown from React v16.\r\n\r\n**test plan:**\r\n- `yarn test src/renderers/__tests__/multiple-copies-of-react-test.js`\r\n- `REACT_JEST_USE_FIBER=1 yarn run test src/renderers/__tests__/multiple-copies-of-react-test.js`\r\n- manually inspected docs page\r\n- manually tested in a CRA to trigger the error message\r\n\r\n![screen shot 2017-07-12 at 12 15 22 pm](https://user-images.githubusercontent.com/1114467/28135678-f118f4ec-66fb-11e7-8fda-4724a52b80aa.png)\r\n\r\n\r\n![screen shot 2017-07-12 at 11 52 07 am](https://user-images.githubusercontent.com/1114467/28134792-e14e75ee-66f8-11e7-8149-d2ef0ea45bce.png)\r\n\r\n**issue:**\r\nFixes #9962\r\nRelated to #8854",
+  "closed_by": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

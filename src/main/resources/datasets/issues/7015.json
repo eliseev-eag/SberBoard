@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7015",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7015/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7015/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7015/events",
+  "html_url": "https://github.com/facebook/react/pull/7015",
+  "id": 159755582,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzM0NTg2NTM=",
+  "number": 7015,
+  "title": "Update 03-interactivity-and-dynamic-uis.md add missing semicolon",
+  "user": {
+    "login": "nhducit",
+    "id": 4246176,
+    "node_id": "MDQ6VXNlcjQyNDYxNzY=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/4246176?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhducit",
+    "html_url": "https://github.com/nhducit",
+    "followers_url": "https://api.github.com/users/nhducit/followers",
+    "following_url": "https://api.github.com/users/nhducit/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhducit/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhducit/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhducit/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhducit/orgs",
+    "repos_url": "https://api.github.com/users/nhducit/repos",
+    "events_url": "https://api.github.com/users/nhducit/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhducit/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-06-11T04:46:54Z",
+  "updated_at": "2016-06-14T22:02:37Z",
+  "closed_at": "2016-06-14T17:55:38Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7015",
+    "html_url": "https://github.com/facebook/react/pull/7015",
+    "diff_url": "https://github.com/facebook/react/pull/7015.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7015.patch"
+  },
+  "body": "_Before_ submitting a pull request, please make sure the following is done...\n1. Fork the repo and create your branch from `master`.\n2. If you've added code that should be tested, add tests!\n3. If you've changed APIs, update the documentation.\n4. Ensure the test suite passes (`grunt test`).\n5. Make sure your code lints (`grunt lint`) - we've done our best to make sure these rules match our internal linting guidelines.\n6. If you haven't already, complete the [CLA](https://code.facebook.com/cla).\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

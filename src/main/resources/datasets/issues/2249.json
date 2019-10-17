@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2249",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2249/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2249/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2249/events",
+  "html_url": "https://github.com/facebook/react/pull/2249",
+  "id": 44039591,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjE4Mzg3OTc=",
+  "number": 2249,
+  "title": "Replace '\\uFEFF' with '!' for setInnerHTML to avoid UglifyJS bug",
+  "user": {
+    "login": "syranide",
+    "id": 1714255,
+    "node_id": "MDQ6VXNlcjE3MTQyNTU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1714255?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/syranide",
+    "html_url": "https://github.com/syranide",
+    "followers_url": "https://api.github.com/users/syranide/followers",
+    "following_url": "https://api.github.com/users/syranide/following{/other_user}",
+    "gists_url": "https://api.github.com/users/syranide/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/syranide/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/syranide/subscriptions",
+    "organizations_url": "https://api.github.com/users/syranide/orgs",
+    "repos_url": "https://api.github.com/users/syranide/repos",
+    "events_url": "https://api.github.com/users/syranide/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/syranide/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2014-09-26T09:58:54Z",
+  "updated_at": "2014-10-25T11:08:18Z",
+  "closed_at": "2014-10-25T11:08:16Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/2249",
+    "html_url": "https://github.com/facebook/react/pull/2249",
+    "diff_url": "https://github.com/facebook/react/pull/2249.diff",
+    "patch_url": "https://github.com/facebook/react/pull/2249.patch"
+  },
+  "body": "#2247 (and mishoo/uglifyjs2#556)\n\nThis is obviously quite a serious bug and even if uglifyjs fixes it, old versions will still be around to haunt people who minify themselves.\n\nThe comment should explain everything. The char is immediately removed so it should never affect rendering.\n\nTest plan: none (should test in IE8)\n\ncc @zpao @spicyj \n",
+  "closed_by": {
+    "login": "syranide",
+    "id": 1714255,
+    "node_id": "MDQ6VXNlcjE3MTQyNTU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1714255?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/syranide",
+    "html_url": "https://github.com/syranide",
+    "followers_url": "https://api.github.com/users/syranide/followers",
+    "following_url": "https://api.github.com/users/syranide/following{/other_user}",
+    "gists_url": "https://api.github.com/users/syranide/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/syranide/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/syranide/subscriptions",
+    "organizations_url": "https://api.github.com/users/syranide/orgs",
+    "repos_url": "https://api.github.com/users/syranide/repos",
+    "events_url": "https://api.github.com/users/syranide/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/syranide/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

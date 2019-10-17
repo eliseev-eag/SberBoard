@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14036",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14036/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14036/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14036/events",
+  "html_url": "https://github.com/facebook/react/pull/14036",
+  "id": 375667031,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjI3MDYwODM3",
+  "number": 14036,
+  "title": "Rename inputsAreEqual to areHookInputsEqual & move it to shared",
+  "user": {
+    "login": "Andarist",
+    "id": 9800850,
+    "node_id": "MDQ6VXNlcjk4MDA4NTA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/9800850?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Andarist",
+    "html_url": "https://github.com/Andarist",
+    "followers_url": "https://api.github.com/users/Andarist/followers",
+    "following_url": "https://api.github.com/users/Andarist/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Andarist/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Andarist/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Andarist/subscriptions",
+    "organizations_url": "https://api.github.com/users/Andarist/orgs",
+    "repos_url": "https://api.github.com/users/Andarist/repos",
+    "events_url": "https://api.github.com/users/Andarist/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Andarist/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2018-10-30T19:58:00Z",
+  "updated_at": "2018-11-02T19:50:26Z",
+  "closed_at": "2018-11-02T19:50:24Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14036",
+    "html_url": "https://github.com/facebook/react/pull/14036",
+    "diff_url": "https://github.com/facebook/react/pull/14036.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14036.patch"
+  },
+  "body": "I know its bikeshedding but the name of this function triggered my OCD a little bit because it sounds (to me) like a name for a boolean variable. Most commonly other functions with similar purpose are named in the codebase with verb as first work, i.e. `isValidElementType`.\r\n\r\nWhile renaming it I've also noticed that this code was duplicated and already out of sync (one having a dev warning, one not having it) so I thought it would be also a good thing to move it to shared directory to keep a single source of truth.\r\n",
+  "closed_by": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

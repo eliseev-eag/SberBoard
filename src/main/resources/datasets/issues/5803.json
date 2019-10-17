@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5803",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5803/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5803/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5803/events",
+  "html_url": "https://github.com/facebook/react/pull/5803",
+  "id": 125487712,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTUzOTI0MDM=",
+  "number": 5803,
+  "title": "Add onTransitionStart, onTransitionEnd, and onTransitionCancel support",
+  "user": {
+    "login": "milesj",
+    "id": 143744,
+    "node_id": "MDQ6VXNlcjE0Mzc0NA==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/143744?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/milesj",
+    "html_url": "https://github.com/milesj",
+    "followers_url": "https://api.github.com/users/milesj/followers",
+    "following_url": "https://api.github.com/users/milesj/following{/other_user}",
+    "gists_url": "https://api.github.com/users/milesj/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/milesj/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/milesj/subscriptions",
+    "organizations_url": "https://api.github.com/users/milesj/orgs",
+    "repos_url": "https://api.github.com/users/milesj/repos",
+    "events_url": "https://api.github.com/users/milesj/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/milesj/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 13,
+  "created_at": "2016-01-07T21:25:53Z",
+  "updated_at": "2016-08-03T00:47:45Z",
+  "closed_at": "2016-01-12T09:03:36Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5803",
+    "html_url": "https://github.com/facebook/react/pull/5803",
+    "diff_url": "https://github.com/facebook/react/pull/5803.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5803.patch"
+  },
+  "body": "I got bored and thought I would try adding support for these events. This is my attempt so far.\n\nThe current code works, as I can log the start/end/cancel events correctly. What I don't know how to do properly is to monitor changes on the style object. If you know a better way, I'm all ears!\n",
+  "closed_by": {
+    "login": "milesj",
+    "id": 143744,
+    "node_id": "MDQ6VXNlcjE0Mzc0NA==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/143744?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/milesj",
+    "html_url": "https://github.com/milesj",
+    "followers_url": "https://api.github.com/users/milesj/followers",
+    "following_url": "https://api.github.com/users/milesj/following{/other_user}",
+    "gists_url": "https://api.github.com/users/milesj/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/milesj/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/milesj/subscriptions",
+    "organizations_url": "https://api.github.com/users/milesj/orgs",
+    "repos_url": "https://api.github.com/users/milesj/repos",
+    "events_url": "https://api.github.com/users/milesj/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/milesj/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

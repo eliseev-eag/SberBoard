@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14609",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14609/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14609/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14609/events",
+  "html_url": "https://github.com/facebook/react/pull/14609",
+  "id": 400029849,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjQ1MzE2NjAz",
+  "number": 14609,
+  "title": "Add ESLint rule playground",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2019-01-16T22:38:56Z",
+  "updated_at": "2019-01-17T15:56:21Z",
+  "closed_at": "2019-01-16T23:52:34Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14609",
+    "html_url": "https://github.com/facebook/react/pull/14609",
+    "diff_url": "https://github.com/facebook/react/pull/14609.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14609.patch"
+  },
+  "body": "I found it rather annoying to iterate on our lint rules. Www/Nuclide has been too slow, and tests, while nice, make it too cumbersome to experiment with one particular use case, or just explore how the rule \"feels\" in practice.\r\n\r\nThis adds a \"playground\" fixture that lets you edit a file in an editor like VSCode and have any changes to rule source be reflected immediately on recheck. I had to make a hacky \"proxy\" rule for that to work because Node would cache the actual rule normally. The resulting workflow is pretty nice and I want to check this in — it'll definitely be useful to me but maybe to someone else too.\r\n\r\nObligatory gif:\r\n\r\n![Demo](https://duaw26jehqd4r.cloudfront.net/items/2Z390a31003O0l0o0e3O/Screen%20Recording%202019-01-16%20at%2010.29%20PM.gif?v=d6856125)",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

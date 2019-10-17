@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16880",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16880/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16880/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16880/events",
+  "html_url": "https://github.com/facebook/react/pull/16880",
+  "id": 497990716,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzIxMDE2Nzc5",
+  "number": 16880,
+  "title": "Selective Hydration",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-09-25T00:50:41Z",
+  "updated_at": "2019-09-26T01:19:32Z",
+  "closed_at": "2019-09-25T22:26:27Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16880",
+    "html_url": "https://github.com/facebook/react/pull/16880",
+    "diff_url": "https://github.com/facebook/react/pull/16880.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16880.patch"
+  },
+  "body": "Because hydration in concurrent mode is yieldy, we can switch hydration priority when new events come in. Selective Hydration gives us the ability to increase priority of roots and suspense boundaries based on what is being interacted with.\r\n\r\nDiscrete events are replayed in order. They are based an intentional user action so they normally have pretty high priority.\r\n\r\nReplaying has some quirks given that we don't know if preventDefault will be called or not. Normally we allow the default behavior. However, a lot of times we'll already have received the data necessary to unblock a boundary. I.e. we're CPU bound.\r\n\r\nThis PR attempts to first synchronously hydrate the path to the discrete target. Only if that fails, do we create a queue to be replayed later.\r\n\r\nCurrently, hydration of boundaries bump to Normal pri once Suspense thennables resolve which is a bug. However, we probably also want these thennables to schedule work at even higher priority if they're blocking discrete events. I'll do that in a follow up.",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

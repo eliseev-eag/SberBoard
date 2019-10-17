@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11383",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11383/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11383/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11383/events",
+  "html_url": "https://github.com/facebook/react/pull/11383",
+  "id": 268987852,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ5MTAwODM1",
+  "number": 11383,
+  "title": "Rewrite ReactDOMComponentTree-test to test behavior using Public API",
+  "user": {
+    "login": "GordyD",
+    "id": 966511,
+    "node_id": "MDQ6VXNlcjk2NjUxMQ==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/966511?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/GordyD",
+    "html_url": "https://github.com/GordyD",
+    "followers_url": "https://api.github.com/users/GordyD/followers",
+    "following_url": "https://api.github.com/users/GordyD/following{/other_user}",
+    "gists_url": "https://api.github.com/users/GordyD/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/GordyD/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/GordyD/subscriptions",
+    "organizations_url": "https://api.github.com/users/GordyD/orgs",
+    "repos_url": "https://api.github.com/users/GordyD/repos",
+    "events_url": "https://api.github.com/users/GordyD/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/GordyD/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 13,
+  "created_at": "2017-10-27T04:54:10Z",
+  "updated_at": "2017-11-19T14:18:16Z",
+  "closed_at": "2017-11-19T14:18:16Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11383",
+    "html_url": "https://github.com/facebook/react/pull/11383",
+    "diff_url": "https://github.com/facebook/react/pull/11383.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11383.patch"
+  },
+  "body": "This is part of #11299\r\n\r\nI've tried to identify cases where code within ReactDOMComponentTree is exercised via the public API and have updated accordingly but I'm not entirely sure whether I'm on the right track. I thought I'd PR to get feedback from the community. Looking forward to comments.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

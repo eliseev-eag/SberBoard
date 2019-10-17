@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4624",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4624/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4624/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4624/events",
+  "html_url": "https://github.com/facebook/react/pull/4624",
+  "id": 100787634,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDIzNTgyMjk=",
+  "number": 4624,
+  "title": "Swap places of mounted and pending update checks",
+  "user": {
+    "login": "Torwori",
+    "id": 4062236,
+    "node_id": "MDQ6VXNlcjQwNjIyMzY=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/4062236?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Torwori",
+    "html_url": "https://github.com/Torwori",
+    "followers_url": "https://api.github.com/users/Torwori/followers",
+    "following_url": "https://api.github.com/users/Torwori/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Torwori/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Torwori/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Torwori/subscriptions",
+    "organizations_url": "https://api.github.com/users/Torwori/orgs",
+    "repos_url": "https://api.github.com/users/Torwori/repos",
+    "events_url": "https://api.github.com/users/Torwori/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Torwori/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2015-08-13T14:42:34Z",
+  "updated_at": "2015-08-14T11:31:32Z",
+  "closed_at": "2015-08-13T21:48:56Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4624",
+    "html_url": "https://github.com/facebook/react/pull/4624",
+    "diff_url": "https://github.com/facebook/react/pull/4624.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4624.patch"
+  },
+  "body": "Prevents `Uncaught TypeError: Cannot read property 'pendingUpdate' of null`.\n",
+  "closed_by": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

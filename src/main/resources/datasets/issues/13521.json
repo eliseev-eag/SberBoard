@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13521",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13521/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13521/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13521/events",
+  "html_url": "https://github.com/facebook/react/pull/13521",
+  "id": 355776862,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjEyMjI4ODUz",
+  "number": 13521,
+  "title": "Hydration DOM Fixture",
+  "user": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2018-08-30T22:30:34Z",
+  "updated_at": "2018-09-10T21:04:15Z",
+  "closed_at": "2018-09-10T21:04:14Z",
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13521",
+    "html_url": "https://github.com/facebook/react/pull/13521",
+    "diff_url": "https://github.com/facebook/react/pull/13521.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13521.patch"
+  },
+  "body": "It's still a little rough, but @gaearon nudged me to send this over anyway.\r\n\r\nThis PR adds a hydration fixture to the manual test fixtures. You can play around with it here:\r\n\r\nhttp://react-hydration.surge.sh/hydration\r\n\r\n### Why we need this fixture\r\n\r\nTesting client bugs related to hydrating markup is hard. Additionally, network conditions and browser plugins are difficult to test with JSDOM. Having an interactive tool makes it much easier to demonstrate problems and accidentally uncover new ones.\r\n\r\nFor example:\r\n\r\n#### Change events do not fire on hydrated inputs\r\n\r\n1. Visit http://react-hydration.surge.sh/hydration\r\n2. Uncheck the \"Hydrate\" checkbox\r\n3. Change the text in the right-hand panel\r\n4. Click the \"Hydrate\" button\r\n5. Observe that no change event occurs\r\n\r\n#### React warns when 1Password adds meta data\r\n\r\n1. Add the [1Password browser addon](https://1password.com/)\r\n2. Visit http://react-hydration.surge.sh/hydration\r\n3. Uncheck the \"Hydrate\" checkbox\r\n4. Change the text in the right-hand panel\r\n5. Notice that 1Password adds data attributes to the input\r\n6. Click the \"Hydrate\" button\r\n7. Notice warnings in the console for data attributes that we have no control over. Should we warn in this case?\r\n\r\n### Things to do\r\n\r\n- [x] Make sure this works back to (maybe) 0.14.0\r\n- [x] Can't load in 15.6.2 (different path)\r\n- [x] Verify IE9/10\r\n- [x] Verify Firefox ESR\r\n- [x] Verify Chrome 49\r\n- [x] Verify Safari 7.1\r\n\r\n---\r\n\r\n<img width=\"1239\" alt=\"screen shot 2018-08-30 at 3 30 22 pm\" src=\"https://user-images.githubusercontent.com/590904/44882768-9f5cc200-ac69-11e8-9e83-dcf9459c51c1.png\">\r\n",
+  "closed_by": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

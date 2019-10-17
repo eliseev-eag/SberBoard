@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14065",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14065/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14065/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14065/events",
+  "html_url": "https://github.com/facebook/react/pull/14065",
+  "id": 376592338,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjI3Nzc2NjAy",
+  "number": 14065,
+  "title": "Invalid actualDuration+treeBaseDuration for hidden+suspended trees",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2018-11-01T22:16:04Z",
+  "updated_at": "2018-11-07T23:46:34Z",
+  "closed_at": "2018-11-07T23:46:31Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14065",
+    "html_url": "https://github.com/facebook/react/pull/14065",
+    "diff_url": "https://github.com/facebook/react/pull/14065.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14065.patch"
+  },
+  "body": "While testing some of our new APIs in DevTools, I noticed that the profiler (both the API and the DevTools visual profiler) reported invalid `actualDuration` and `treeBaseDuration` values when suspending.\r\n\r\nThe `treeBaseDuration` was incorrect for the fallback commit. It only included the fallback subtree duration, when it should also include the time spent rendering the hidden subtree.\r\n\r\nThe `actualDuration` value was incorrect for both the fallback commit _and_ the final, resolved commit. It didn't include time spent rendering the component that actually read from the cache (the one that threw).\r\n\r\n- [x] Fixed `treeBaseDuration` by propagating its value from the suspended tree to the `Fragment` React temporarily wraps around it when showing the fallback UI.\r\n- [x] Fixed `actualDuration` by recording elapsed profiler time in the event of an error.\r\n- [x] Fixed `actualDuration` in concurrent mode by propagating the time spent rendering the suspending component to its parent.\r\n\r\nAlso updated `ReactSuspensePlaceholder-test.internal` to cover these new cases.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

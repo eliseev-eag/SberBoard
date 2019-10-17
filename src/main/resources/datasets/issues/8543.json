@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8543",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8543/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8543/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8543/events",
+  "html_url": "https://github.com/facebook/react/pull/8543",
+  "id": 194666793,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTczNTg2MDQ=",
+  "number": 8543,
+  "title": "Rename 'works' test to be more descriptive",
+  "user": {
+    "login": "matrinox",
+    "id": 4261980,
+    "node_id": "MDQ6VXNlcjQyNjE5ODA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/4261980?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/matrinox",
+    "html_url": "https://github.com/matrinox",
+    "followers_url": "https://api.github.com/users/matrinox/followers",
+    "following_url": "https://api.github.com/users/matrinox/following{/other_user}",
+    "gists_url": "https://api.github.com/users/matrinox/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/matrinox/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/matrinox/subscriptions",
+    "organizations_url": "https://api.github.com/users/matrinox/orgs",
+    "repos_url": "https://api.github.com/users/matrinox/repos",
+    "events_url": "https://api.github.com/users/matrinox/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/matrinox/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-12-09T18:38:53Z",
+  "updated_at": "2017-01-23T16:45:48Z",
+  "closed_at": "2017-01-23T16:45:48Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8543",
+    "html_url": "https://github.com/facebook/react/pull/8543",
+    "diff_url": "https://github.com/facebook/react/pull/8543.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8543.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

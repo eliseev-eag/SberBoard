@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8529",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8529/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8529/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8529/events",
+  "html_url": "https://github.com/facebook/react/issues/8529",
+  "id": 194263457,
+  "node_id": "MDU6SXNzdWUxOTQyNjM0NTc=",
+  "number": 8529,
+  "title": "Feature Request: Support auxclick event (onAuxClick)",
+  "user": {
+    "login": "foray1010",
+    "id": 3212221,
+    "node_id": "MDQ6VXNlcjMyMTIyMjE=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/3212221?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/foray1010",
+    "html_url": "https://github.com/foray1010",
+    "followers_url": "https://api.github.com/users/foray1010/followers",
+    "following_url": "https://api.github.com/users/foray1010/following{/other_user}",
+    "gists_url": "https://api.github.com/users/foray1010/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/foray1010/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/foray1010/subscriptions",
+    "organizations_url": "https://api.github.com/users/foray1010/orgs",
+    "repos_url": "https://api.github.com/users/foray1010/repos",
+    "events_url": "https://api.github.com/users/foray1010/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/foray1010/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2016-12-08T07:12:28Z",
+  "updated_at": "2018-08-03T18:57:59Z",
+  "closed_at": "2018-08-03T18:57:34Z",
+  "author_association": "NONE",
+  "body": "Version 15.4.1\r\n\r\nAs starting Chrome 55, there is a new event `auxclick` to handle middle click, and `click` doesn't trigger by middle click anymore\r\nhttps://developers.google.com/web/updates/2016/10/auxclick",
+  "closed_by": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

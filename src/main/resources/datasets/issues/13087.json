@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13087",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13087/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13087/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13087/events",
+  "html_url": "https://github.com/facebook/react/pull/13087",
+  "id": 334581944,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTk2NTE5MTEx",
+  "number": 13087,
+  "title": "eliminate unnecessary do-while loop in renderRoot()",
+  "user": {
+    "login": "nateq314",
+    "id": 1175921,
+    "node_id": "MDQ6VXNlcjExNzU5MjE=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1175921?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nateq314",
+    "html_url": "https://github.com/nateq314",
+    "followers_url": "https://api.github.com/users/nateq314/followers",
+    "following_url": "https://api.github.com/users/nateq314/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nateq314/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nateq314/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nateq314/subscriptions",
+    "organizations_url": "https://api.github.com/users/nateq314/orgs",
+    "repos_url": "https://api.github.com/users/nateq314/repos",
+    "events_url": "https://api.github.com/users/nateq314/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nateq314/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-06-21T17:10:13Z",
+  "updated_at": "2018-06-21T17:52:27Z",
+  "closed_at": "2018-06-21T17:52:27Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13087",
+    "html_url": "https://github.com/facebook/react/pull/13087",
+    "diff_url": "https://github.com/facebook/react/pull/13087.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13087.patch"
+  },
+  "body": "The do-while loop in question is of the following form:\r\n```\r\ndo {\r\n  // stuff\r\n  break;\r\n}\r\nwhile (true);\r\n```\r\nAs long as `// stuff` doesn't have any `break` or `continue` statements then this is syntactically equivalent to:\r\n```\r\n// stuff\r\n```\r\nIn fact there is one `break`, which can be rewritten as an if-else clause as I've done here.\r\n\r\nMaybe I'm missing something? Absent of some future design or larger purpose I'm not aware of, it seems like the loop is serving no purpose. This PR removes it.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

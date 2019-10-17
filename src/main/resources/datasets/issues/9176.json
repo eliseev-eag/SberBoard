@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9176",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9176/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9176/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9176/events",
+  "html_url": "https://github.com/facebook/react/pull/9176",
+  "id": 214213362,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTEwNzIyNDgx",
+  "number": 9176,
+  "title": "Fix #9122",
+  "user": {
+    "login": "acz13",
+    "id": 8976828,
+    "node_id": "MDQ6VXNlcjg5NzY4Mjg=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/8976828?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acz13",
+    "html_url": "https://github.com/acz13",
+    "followers_url": "https://api.github.com/users/acz13/followers",
+    "following_url": "https://api.github.com/users/acz13/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acz13/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acz13/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acz13/subscriptions",
+    "organizations_url": "https://api.github.com/users/acz13/orgs",
+    "repos_url": "https://api.github.com/users/acz13/repos",
+    "events_url": "https://api.github.com/users/acz13/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acz13/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2017-03-14T21:33:23Z",
+  "updated_at": "2017-05-01T19:16:19Z",
+  "closed_at": "2017-04-21T14:26:12Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9176",
+    "html_url": "https://github.com/facebook/react/pull/9176",
+    "diff_url": "https://github.com/facebook/react/pull/9176.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9176.patch"
+  },
+  "body": "alternatively it could just tell you to the whole tag with\r\n\r\n```html\r\n<button className=\"square\" onClick={() => alert('click')}>\r\n  {/* TODO */}\r\n</button>\r\n```\r\nor something like that",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

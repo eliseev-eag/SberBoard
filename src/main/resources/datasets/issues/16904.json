@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16904",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16904/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16904/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16904/events",
+  "html_url": "https://github.com/facebook/react/issues/16904",
+  "id": 498916121,
+  "node_id": "MDU6SXNzdWU0OTg5MTYxMjE=",
+  "number": 16904,
+  "title": "More time between releasing @next and @latest",
+  "user": {
+    "login": "ghengeveld",
+    "id": 321738,
+    "node_id": "MDQ6VXNlcjMyMTczOA==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/321738?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ghengeveld",
+    "html_url": "https://github.com/ghengeveld",
+    "followers_url": "https://api.github.com/users/ghengeveld/followers",
+    "following_url": "https://api.github.com/users/ghengeveld/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ghengeveld/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ghengeveld/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ghengeveld/subscriptions",
+    "organizations_url": "https://api.github.com/users/ghengeveld/orgs",
+    "repos_url": "https://api.github.com/users/ghengeveld/repos",
+    "events_url": "https://api.github.com/users/ghengeveld/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ghengeveld/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-09-26T14:18:06Z",
+  "updated_at": "2019-09-27T06:31:53Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "As a library author, I test against both the `@next` and `@latest` versions of `react` and `react-dom` (as well as 16.3, the oldest version we support). The rationale for that is to know up front if the upcoming version of React is going to break our library. I think this is good practice for everyone involved.\r\n\r\nUnfortunately, when 16.9 was released, there was only 1 week between promoting the RC to `@next`, and promoting that to `@latest`. Because the last RC broke the way `act` works, I had only 1 week to fix our unit test suite, which was all the sudden mostly failing. In fact we had to wait for `react-testing-library` to be updated to deal with this change.\r\n\r\nLuckily I was able to scramble and find time to fix this before the final release, but this won't always be the case. I imagine other library authors may struggle with this too. As such I would like to see at least a 2 week window between `next` and `latest`. I hope that's feasible.\r\n\r\nPlease advise if there's a better way to test for future compatibility.",
+  "closed_by": null
+}

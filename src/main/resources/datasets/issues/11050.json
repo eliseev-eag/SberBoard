@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11050",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11050/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11050/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11050/events",
+  "html_url": "https://github.com/facebook/react/pull/11050",
+  "id": 262247866,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ0Mjk4Mzc4",
+  "number": 11050,
+  "title": "Refactored Installation page to no longer use tabs",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 13,
+  "created_at": "2017-10-02T22:24:51Z",
+  "updated_at": "2017-10-04T18:17:02Z",
+  "closed_at": "2017-10-02T22:45:49Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11050",
+    "html_url": "https://github.com/facebook/react/pull/11050",
+    "diff_url": "https://github.com/facebook/react/pull/11050.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11050.patch"
+  },
+  "body": "Resolves #11043\r\n\r\nThe installation page previously used a one-off tab mechanism to visual limit the content shown on the screen. Unfortunately this mechanism did not work correctly in production on the new website, causing some links to show the incorrect content.\r\n\r\nUltimately this PR resolves the issue by removing all of the embedded HTML+CSS in the `installation.md` file in favor of standard markdown syntax. I believe this is the best short-term solution and that we can revisit the UI/UX of this page in the future to improve it (cc @joecritch).\r\n\r\n![screen shot 2017-10-02 at 3 17 48 pm](https://user-images.githubusercontent.com/29597/31101984-f1ded81e-a784-11e7-86dd-f41e077131f1.png)\r\n\r\nThe anchor tags should now work correctly, eg https://deploy-preview-11050--reactjs.netlify.com//docs/installation.html#using-a-cdn\r\n\r\nFor posterity, I also considered the following alternative approaches.\r\n\r\n---\r\n\r\n## Breaking the sub-sections into their own pages\r\n\r\n### Pros:\r\n* Keeps the document uncluttered by limiting the presented info (in a manner similar to the tabs)\r\n### Cons:\r\n* Not obvious what the next/prev links should be on the Installation page or any of the sub-pages\r\n* Could not redirect from any existing external links to eg `/docs/installation.html#using-a-cdn` \r\n\r\n![screen shot 2017-10-02 at 3 08 12 pm](https://user-images.githubusercontent.com/29597/31101982-f1d5f230-a784-11e7-8443-a98522c00ee5.png)\r\n\r\n---\r\n\r\n## Keeping content in a single page but with side-nav headers\r\n![screen shot 2017-10-02 at 3 15 14 pm](https://user-images.githubusercontent.com/29597/31101983-f1da8e94-a784-11e7-84b1-01a5cb6e94ad.png)\r\n\r\n### Pros:\r\n* Nice high-level overview of the sections, similar to tab mechanism\r\n### Cons:\r\n* Complicated the sidenav logic for Docs by mixing in behavior currently only used in the Tutorial section (eg anchor-syncing as you click or scroll around)\r\n* Hopefully we'll get this sort of behavior for free by way of a higher-level proposal like #10980",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13225",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13225/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13225/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13225/events",
+  "html_url": "https://github.com/facebook/react/pull/13225",
+  "id": 342116565,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjAyMDk1NTA3",
+  "number": 13225,
+  "title": "Remove the use of proxies for synthetic events in DEV",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2018-07-17T22:49:45Z",
+  "updated_at": "2018-07-18T01:34:57Z",
+  "closed_at": "2018-07-17T23:14:14Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13225",
+    "html_url": "https://github.com/facebook/react/pull/13225",
+    "diff_url": "https://github.com/facebook/react/pull/13225.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13225.patch"
+  },
+  "body": "Fixes https://github.com/facebook/react/issues/12171.\r\n\r\nMotivation: [this is very confusing](https://mobile.twitter.com/ReactStudent/status/1018749513572368384). I've seen quite a few complaints about this and also bumped into it myself when I played with React occasionally. The warning is just not worth it.\r\n\r\nThe first commit (https://github.com/facebook/react/commit/ac71c2987b93a89b1101c617a74a4a78771dd0e7) is pretty much a revert of https://github.com/facebook/react/pull/5947. https://github.com/facebook/react/pull/5947 cleared a few more properties than the code before it (which is nice) so I kept the current behavior (but removed the key list indirection).\r\n\r\nThe second commit (https://github.com/facebook/react/commit/3c9768046eee4866ad63f6aa1dda0539fe0772ba) fixes a bug that was introduced by https://github.com/facebook/react/pull/5947. Specifically, it was nulling out `isPropagationStopped()` and `isDefaultPrevented()`. While you shouldn't access them, nulling them out can lead to confusing crashes. So I just changed them to behave similarly to `preventDefault()` and `stopPropagation()` (which get shimmed with noops while the event is pooled). I consider it a bugfix — can't imagine somebody relying on whether it's nulled out or not in a way that isn't broken for some other reason.\r\n\r\nI considered adding some kind of warning instead of this one (e.g. by counting the keys on every release). But it just seemed too complicated and not worth it. I imagine the situation is pretty rare anyway. And we can fix it in 17 for good with https://github.com/facebook/react/issues/13224.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

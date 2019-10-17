@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5513",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5513/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5513/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5513/events",
+  "html_url": "https://github.com/facebook/react/pull/5513",
+  "id": 117956128,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTEzMTI4MjM=",
+  "number": 5513,
+  "title": "Allow to render child custom component in shallow renderer",
+  "user": {
+    "login": "lasekio",
+    "id": 8137000,
+    "node_id": "MDQ6VXNlcjgxMzcwMDA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/8137000?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lasekio",
+    "html_url": "https://github.com/lasekio",
+    "followers_url": "https://api.github.com/users/lasekio/followers",
+    "following_url": "https://api.github.com/users/lasekio/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lasekio/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lasekio/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lasekio/subscriptions",
+    "organizations_url": "https://api.github.com/users/lasekio/orgs",
+    "repos_url": "https://api.github.com/users/lasekio/repos",
+    "events_url": "https://api.github.com/users/lasekio/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lasekio/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-11-20T03:05:24Z",
+  "updated_at": "2016-03-27T03:58:35Z",
+  "closed_at": "2016-03-27T03:58:35Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5513",
+    "html_url": "https://github.com/facebook/react/pull/5513",
+    "diff_url": "https://github.com/facebook/react/pull/5513.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5513.patch"
+  },
+  "body": "Motivation: https://medium.com/@bruderstein/the-missing-piece-to-the-react-testing-puzzle-c51cd30df7a0#.o7qri0ufc\n\nCurrently there is no way to easy refactor spaghetti components by smash them into smaller components while using shallow renderer to test. It fixes that. \n\nI know, that inject custom `instantiateReactComponent` function is tricky, but I did not find better solution for this. I'm open for suggestions to do it better, maybe some core devs have some ideas?\n\nIm also not convinced about add components to the \"whitelist\" - `renderComponentsAsChild` array. This name does not explain purpose enough for me. Again, I'm open to any suggestions.\n\nThe plus is, that there is no any regression in this but I'm little scary, that tests dont cover all corner cases so probably it should go as 0.15 release's feature, because users could report some bugs with them tests.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

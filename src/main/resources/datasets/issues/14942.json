@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14942",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14942/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14942/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14942/events",
+  "html_url": "https://github.com/facebook/react/issues/14942",
+  "id": 413805736,
+  "node_id": "MDU6SXNzdWU0MTM4MDU3MzY=",
+  "number": 14942,
+  "title": "[eslint-plugin-react-hooks] invariants, conditional calls and exhaustive deps",
+  "user": {
+    "login": "eps1lon",
+    "id": 12292047,
+    "node_id": "MDQ6VXNlcjEyMjkyMDQ3",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/12292047?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/eps1lon",
+    "html_url": "https://github.com/eps1lon",
+    "followers_url": "https://api.github.com/users/eps1lon/followers",
+    "following_url": "https://api.github.com/users/eps1lon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/eps1lon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/eps1lon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/eps1lon/subscriptions",
+    "organizations_url": "https://api.github.com/users/eps1lon/orgs",
+    "repos_url": "https://api.github.com/users/eps1lon/repos",
+    "events_url": "https://api.github.com/users/eps1lon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/eps1lon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 1249821345,
+      "node_id": "MDU6TGFiZWwxMjQ5ODIxMzQ1",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20ESLint%20Rules",
+      "name": "Component: ESLint Rules",
+      "color": "f7afdb",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2019-02-24T10:18:48Z",
+  "updated_at": "2019-03-04T19:59:05Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nNot sure. Either feature to allow invariant conditional calls to hooks or bug in exhaustive deps in which case #14920 might be more appropriate.\r\n\r\n**What is the current behavior?**\r\n```js\r\nfunction makeStyles(stylesObjectOrCreator) {\r\n  const listenToTheme = typeof stylesObjectOrCreator === \"function\";\r\n  const noopTheme = {};\r\n\r\n  return function useStyles() {\r\n    const theme = listenToTheme ? React.useContext(ThemeContext) : noopTheme;\r\n    //                           ^^^ [eslint] [...] is called conditionally\r\n\r\n    const styles = React.useMemo(\r\n      () => {\r\n        if (listenToTheme) {\r\n          console.log(\"listen\");\r\n          return stylesObjectOrCreator(theme);\r\n        }\r\n        console.log(\"dont listen\");\r\n        return stylesObjectOrCreator;\r\n      },\r\n      [theme]\r\n    );\r\n\r\n    const classNames = useStylesheet(styles);\r\n    return classNames;\r\n  };\r\n}\r\n```\r\n\r\nLinter reports that `React.useContext` is called conditionally but not that `listenToTheme` is missing in the dependency list.\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\n\r\nhttps://codesandbox.io/s/o91zl0z499\r\n\r\n**What is the expected behavior?**\r\n\r\nIt would expect one of these things:\r\n1. `rules-of-hooks` recognizes that `listenToTheme` is invariant in the hook. Invariant conditions do not trigger `called conditionally`.\r\n2. `exhaustive-deps` reports that `listenToTheme` is missing\r\n\r\nIt's IMO more dangerous to add an `eslint-disable-next-line` to invariant conditional calls because it might be missed if someone changes the condition so that it no longer is invariant.\r\n\r\nIt only occurs to me now that you don't consider it invariant because one might use it in the following way:\r\n```js\r\nfunction VariantComponent({ listen }) {\r\n  // `listen` controles React.useContext call :(\r\n  const classes = makeStyles(listen ? () => ({}) : {})();\r\n}\r\n```\r\n\r\nStill doesn't explain the missing `exhaustive-deps` warning.\r\n\r\nAre you open to a rule exception via configuration like `allow-invariant-conditionals`? Users would need to add additional rules so that hook factories are not called inside components.\r\n\r\nOk talking to myself now: Even if everything stays the same and I remove the conditional call then users can still break their app by calling hook factories inside components:\r\n```js\r\nconst makeState = (initial) => () => React.useState(initial);\r\nfunction Component() {\r\n  const usedState = Math.random() < .5 ? makeState(5)() : null;\r\n  // conditional hook call that's undetected\r\n}\r\n```\r\n\r\n",
+  "closed_by": null
+}

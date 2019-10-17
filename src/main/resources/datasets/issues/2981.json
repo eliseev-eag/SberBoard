@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2981",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2981/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2981/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2981/events",
+  "html_url": "https://github.com/facebook/react/pull/2981",
+  "id": 55982930,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjgzMzEyNTE=",
+  "number": 2981,
+  "title": "some jsdoc fixes",
+  "user": {
+    "login": "hzoo",
+    "id": 588473,
+    "node_id": "MDQ6VXNlcjU4ODQ3Mw==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/588473?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/hzoo",
+    "html_url": "https://github.com/hzoo",
+    "followers_url": "https://api.github.com/users/hzoo/followers",
+    "following_url": "https://api.github.com/users/hzoo/following{/other_user}",
+    "gists_url": "https://api.github.com/users/hzoo/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/hzoo/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/hzoo/subscriptions",
+    "organizations_url": "https://api.github.com/users/hzoo/orgs",
+    "repos_url": "https://api.github.com/users/hzoo/repos",
+    "events_url": "https://api.github.com/users/hzoo/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/hzoo/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 14,
+  "created_at": "2015-01-30T01:26:58Z",
+  "updated_at": "2015-06-17T23:29:11Z",
+  "closed_at": "2015-06-17T23:09:17Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/2981",
+    "html_url": "https://github.com/facebook/react/pull/2981",
+    "diff_url": "https://github.com/facebook/react/pull/2981.diff",
+    "patch_url": "https://github.com/facebook/react/pull/2981.patch"
+  },
+  "body": "Similar to #2772.\n\nWill need some help to make sure the changes make sense!\n\nI'm using these jscs rules right now to find issues\n\n``` js\n\"jsDoc\": {\n   \"checkRedundantReturns\": true, //check @return with if anything is actually returned\n   \"checkParamNames\": true //make sure parameter names match the @param name\n}\n```\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

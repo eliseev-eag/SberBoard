@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12764",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12764/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12764/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12764/events",
+  "html_url": "https://github.com/facebook/react/pull/12764",
+  "id": 321178562,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTg2NjI4Mjgx",
+  "number": 12764,
+  "title": "Add the missing @flow annotation",
+  "user": {
+    "login": "ryerh",
+    "id": 5818263,
+    "node_id": "MDQ6VXNlcjU4MTgyNjM=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/5818263?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ryerh",
+    "html_url": "https://github.com/ryerh",
+    "followers_url": "https://api.github.com/users/ryerh/followers",
+    "following_url": "https://api.github.com/users/ryerh/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ryerh/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ryerh/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ryerh/subscriptions",
+    "organizations_url": "https://api.github.com/users/ryerh/orgs",
+    "repos_url": "https://api.github.com/users/ryerh/repos",
+    "events_url": "https://api.github.com/users/ryerh/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ryerh/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 12,
+  "created_at": "2018-05-08T13:07:06Z",
+  "updated_at": "2018-05-17T16:30:52Z",
+  "closed_at": "2018-05-17T15:26:20Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12764",
+    "html_url": "https://github.com/facebook/react/pull/12764",
+    "diff_url": "https://github.com/facebook/react/pull/12764.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12764.patch"
+  },
+  "body": "Add `@flow` annotation to `packages/react-reconciler/src/ReactFiber.js`.",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

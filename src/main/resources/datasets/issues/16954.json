@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16954",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16954/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16954/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16954/events",
+  "html_url": "https://github.com/facebook/react/issues/16954",
+  "id": 499977709,
+  "node_id": "MDU6SXNzdWU0OTk5Nzc3MDk=",
+  "number": 16954,
+  "title": "Why will Suspense for data fetching require a cache?",
+  "user": {
+    "login": "ghengeveld",
+    "id": 321738,
+    "node_id": "MDQ6VXNlcjMyMTczOA==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/321738?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ghengeveld",
+    "html_url": "https://github.com/ghengeveld",
+    "followers_url": "https://api.github.com/users/ghengeveld/followers",
+    "following_url": "https://api.github.com/users/ghengeveld/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ghengeveld/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ghengeveld/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ghengeveld/subscriptions",
+    "organizations_url": "https://api.github.com/users/ghengeveld/orgs",
+    "repos_url": "https://api.github.com/users/ghengeveld/repos",
+    "events_url": "https://api.github.com/users/ghengeveld/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ghengeveld/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-09-29T21:56:33Z",
+  "updated_at": "2019-10-08T06:58:21Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "I'm [integrating Suspense with React Async](https://github.com/async-library/react-async/pull/153), and I've been reading up on how it's supposed to work. All the resources I found talk about needing `react-cache` or another cache mechanism for Suspense to work properly. However, none of the resources explain WHY Suspense needs a cache. Could someone explain that? I've been able to [make it work without a cache](https://github.com/async-library/react-async/pull/153/files#diff-2d8d9c51cb93c9f7f57c81f6f7f1669a). Am I missing something?",
+  "closed_by": null
+}

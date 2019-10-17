@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5911",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5911/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5911/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5911/events",
+  "html_url": "https://github.com/facebook/react/pull/5911",
+  "id": 128439639,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTcwMjAwMDE=",
+  "number": 5911,
+  "title": "Fix broken guide example in \"Motivation: Separation of Concerns\"",
+  "user": {
+    "login": "Mathieuu",
+    "id": 5503512,
+    "node_id": "MDQ6VXNlcjU1MDM1MTI=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/5503512?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Mathieuu",
+    "html_url": "https://github.com/Mathieuu",
+    "followers_url": "https://api.github.com/users/Mathieuu/followers",
+    "following_url": "https://api.github.com/users/Mathieuu/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Mathieuu/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Mathieuu/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Mathieuu/subscriptions",
+    "organizations_url": "https://api.github.com/users/Mathieuu/orgs",
+    "repos_url": "https://api.github.com/users/Mathieuu/repos",
+    "events_url": "https://api.github.com/users/Mathieuu/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Mathieuu/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2016-01-25T01:05:52Z",
+  "updated_at": "2016-02-16T21:30:03Z",
+  "closed_at": "2016-01-28T18:22:33Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5911",
+    "html_url": "https://github.com/facebook/react/pull/5911",
+    "diff_url": "https://github.com/facebook/react/pull/5911.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5911.patch"
+  },
+  "body": "The code example in `Motivation: Separation of Concerns` now fetches the `Engineering` facebook page instead of the user `pwh`.\n\nWith the current version of the graph api, it is impossible to fetch a picture from an username. However it is still doable for public pages.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11303",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11303/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11303/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11303/events",
+  "html_url": "https://github.com/facebook/react/pull/11303",
+  "id": 267265840,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ3ODY3MDA4",
+  "number": 11303,
+  "title": "Drop Haste",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2017-10-20T18:35:20Z",
+  "updated_at": "2017-12-14T18:28:52Z",
+  "closed_at": "2017-10-24T23:55:01Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11303",
+    "html_url": "https://github.com/facebook/react/pull/11303",
+    "diff_url": "https://github.com/facebook/react/pull/11303.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11303.patch"
+  },
+  "body": "TODO\r\n\r\n- [x] Fix Flow imports\r\n- [x] Fix build\r\n  - [x] Fix UMD\r\n  - [x] Fix CJS\r\n  - [x] Fix FB\r\n  - [x] Fix RN\r\n  - [x] Fix size regressions\r\n    - [x] Fix DEV-only regression\r\n- [x] Fix error extraction\r\n- [x] Remove Jest providesModules things\r\n\r\n---------\r\n\r\nNot sure how I feel about this.\r\n\r\nThis helps enforce that we have proper module boundaries between packages. It already exposes some renderers read directly from reconciler (and thus won't be accessible to third party renderers). So I think that is kind of nice.\r\n\r\nThis exposed an interesting issue with Jest and Yarn Workspaces (https://github.com/facebook/jest/issues/3830).\r\n\r\nIn a test, `../createReactNativeComponentClass` and `require('react-native-renderer').__SECRET_INTERNALS_DO_NOT_USE.createReactNativeComponentClass` will be two different things. Because one is imported relatively (and thus is \"located\" in `packages`) while the other one is instantiated from code path going via `node_modules/react-renderer`. Jest thinks they are different.\r\n\r\nThis seemed like a show stopper to me at first. But then I thought, we don't like tests that do `../` anyway because they read internal modules. What if we just outlawed it?\r\n\r\nIn this case, you'd have to write `react-native-renderer/src/createReactNativeComponentClass` to get it in a test. Or read it from a secret bag exposed on `react-native-renderer`. But that might actually be okay because it makes \"bad\" code looks bad. All existing cases of this already have TODOs next to them (https://github.com/facebook/react/issues/11299). So we could forbid relative requires in tests. Thus also encouraging people to write integration tests for new features too.\r\n\r\nWe could also wait for Jest to fix it but I doubt that will happen soon since almost nobody else bumped into this.\r\n\r\nMostly seeking feedback if anyone has strong objections at this point. If not, I could further flatten the structure, forbid relative requires in tests, and then fix the build. I expect that Rollup configuration will be *significantly* simpler now that we can let it use Node resolving mechanism without silly whitelists like:\r\n\r\nhttps://github.com/facebook/react/blob/cc1ff874e5aa63e6bedf77e75a88373a09a555ae/scripts/rollup/modules.js#L32-L50",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

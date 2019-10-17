@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10150",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10150/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10150/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10150/events",
+  "html_url": "https://github.com/facebook/react/pull/10150",
+  "id": 242212624,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTMwMDI2MTQ0",
+  "number": 10150,
+  "title": "Controlled inputs do not synchronize value or checked attribute",
+  "user": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 12,
+  "created_at": "2017-07-11T23:22:48Z",
+  "updated_at": "2018-01-05T15:58:10Z",
+  "closed_at": "2018-01-05T15:58:09Z",
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10150",
+    "html_url": "https://github.com/facebook/react/pull/10150",
+    "diff_url": "https://github.com/facebook/react/pull/10150.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10150.patch"
+  },
+  "body": "This commit is a follow up to prior work to resolve issues with number inputs in React:\r\n\r\nhttps://github.com/facebook/react/pull/7359#discussion_r108826984\r\n\r\n**More or less**\r\n\r\nA can of worms :). The discussion above concluded that React should not synchronize the value attribute/checked attribute for controlled inputs. This PR makes that change.\r\n\r\n**More info**\r\n\r\nCurrently, inputs keep their value/checked attribute in sync with the value/checked property. This is a React behavior. Traditionally browser DOM manipulation does not rely on keeping the value/checked attribute in sync.\r\n\r\nIt's also very problematic for number inputs and (I believe) a few other obscure input bugs in IE/iOS Safari (this needs to be confirmed). After discussion, it was decided to make a breaking change to no longer sync up the value/checked attribute with it's associated property.\r\n\r\nFor this to work, I made the following changes:\r\n\r\n- The `value`, `defaultValue`, `checked` and `defaultChecked` properties are now maintained within the HTML property config. `defaultValue` maps to the `value` attribute, as does `defaultChecked` to `checked`\r\n- ☝️ required adding a filter to strip out the value property on selects and textareas\r\n- The logic to defer assignment of the value attribute has been removed form ChangeEventPlugin\r\n\r\n---\r\n\r\n## How to test this change\r\n\r\nI've pushed a build of this version of React for our DOM fixtures here:\r\n\r\nhttp://nh-no-input-value-attribute.surge.sh",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

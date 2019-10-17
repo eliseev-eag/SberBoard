@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8631",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8631/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8631/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8631/events",
+  "html_url": "https://github.com/facebook/react/pull/8631",
+  "id": 197261228,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTkxNjU5NjA=",
+  "number": 8631,
+  "title": "Pass prevContext param to componentDidUpdate",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 20,
+  "created_at": "2016-12-22T20:34:53Z",
+  "updated_at": "2018-03-28T14:08:36Z",
+  "closed_at": "2017-04-21T20:15:23Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8631",
+    "html_url": "https://github.com/facebook/react/pull/8631",
+    "diff_url": "https://github.com/facebook/react/pull/8631.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8631.patch"
+  },
+  "body": "**See [this comment](https://github.com/facebook/react/pull/8631#issuecomment-270450606) for my latest thoughts about this issue.**\r\n\r\nThis PR resolves the issue of the missing `prevContext` param to `componentDidUpdate` calls. \r\n\r\nNote that this approach is support option 1 below.\r\n\r\n### Options Considered\r\n\r\nIt seems like we have a high-level decision to make regarding how and if we support the `prevContext` parameter going forward. Options include:\r\n\r\n1. **Drop support for it**: If we do this we should update the `ReactContextValidator-test` test to assert that the `prevContext` parameter is not passed and update to Stack to mirror this behavior.\r\n2. **Support it (option A)**: Store it as an expando property on instance (eg `__reactInternalPrevContext`). Adding to the instance avoids bloating Fibers for all of the types that don't need this property _and_ keeps our Fiber-consuming functions monomorphic.\r\n2. **Support it (option B)**: Use `stateNode` to store a wrapper object around instance and previous context for the case of `ClassComponent`s. This prevents all non-`ClassComponent` fibers from growing while also keeping fiber-consuming methods monomorphic. Since this only impacts `ClassComponent` it should hopefully introduce minimal forking.\r\n\r\nRegarding continued support: At this time it does not seem like this parameter is being used by React components within Facebook but a quick [Github search](https://github.com/search?utf8=%E2%9C%93&q=componentDidUpdate+prevContext&type=Code&ref=searchresults) seems to suggest the parameter is being used externally (eg [1](https://github.com/bogus34/react-form-components/blob/63597b6ef9e0e1d817a4562be6c5f0dad542caf8/src/select_component.coffee#L19), [2](https://github.com/PBRT/PBRT/blob/671a19fdea48216b5d0cc650c3364a76590bd919/client/components/heroshot/heroshot.jsx#L13), [3](https://github.com/roparat/PicasaGalleryReact/blob/cc5a37c089c5c59d4cf26d0b6828f5fff952bfd5/src/AllGallery.js#L44), etc.).",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

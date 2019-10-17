@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15843",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15843/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15843/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15843/events",
+  "html_url": "https://github.com/facebook/react/pull/15843",
+  "id": 453749109,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjg2Mzc1MjQ0",
+  "number": 15843,
+  "title": "Fix useCallback not work properly in shallow renderer",
+  "user": {
+    "login": "chenesan",
+    "id": 7620906,
+    "node_id": "MDQ6VXNlcjc2MjA5MDY=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/7620906?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/chenesan",
+    "html_url": "https://github.com/chenesan",
+    "followers_url": "https://api.github.com/users/chenesan/followers",
+    "following_url": "https://api.github.com/users/chenesan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/chenesan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/chenesan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/chenesan/subscriptions",
+    "organizations_url": "https://api.github.com/users/chenesan/orgs",
+    "repos_url": "https://api.github.com/users/chenesan/repos",
+    "events_url": "https://api.github.com/users/chenesan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/chenesan/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2019-06-08T03:01:42Z",
+  "updated_at": "2019-09-04T14:25:17Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15843",
+    "html_url": "https://github.com/facebook/react/pull/15843",
+    "diff_url": "https://github.com/facebook/react/pull/15843.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15843.patch"
+  },
+  "body": "Fix #15774 .\r\nJust copy and paste the same logic as `useMemo` in shallow renderer; Not sure if it's better to extract the comparison logic into common function or just keep it repeat.",
+  "closed_by": {
+    "login": "threepointone",
+    "id": 18808,
+    "node_id": "MDQ6VXNlcjE4ODA4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/18808?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/threepointone",
+    "html_url": "https://github.com/threepointone",
+    "followers_url": "https://api.github.com/users/threepointone/followers",
+    "following_url": "https://api.github.com/users/threepointone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/threepointone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/threepointone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/threepointone/subscriptions",
+    "organizations_url": "https://api.github.com/users/threepointone/orgs",
+    "repos_url": "https://api.github.com/users/threepointone/repos",
+    "events_url": "https://api.github.com/users/threepointone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/threepointone/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

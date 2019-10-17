@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3803",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3803/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3803/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3803/events",
+  "html_url": "https://github.com/facebook/react/pull/3803",
+  "id": 72564729,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzQ1Nzg5MjA=",
+  "number": 3803,
+  "title": "[docs] Give authors links.",
+  "user": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2015-05-02T01:37:56Z",
+  "updated_at": "2015-06-16T06:39:56Z",
+  "closed_at": "2015-05-21T18:34:31Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3803",
+    "html_url": "https://github.com/facebook/react/pull/3803",
+    "diff_url": "https://github.com/facebook/react/pull/3803.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3803.patch"
+  },
+  "body": "Fix of the week candidate right here.\n\nDisplay names should all be ok (since they are identical), but links might not be. I defaulted to Twitter because that's what we do. I could also link back to github instead and do that across the board. I don't really care where the link goes (FB profile, personal blog) so let me know if you'd like something else. I decided to just use github username for the key in the authors hash.\n\nI'll give this a couple days in case people want to change anything, let me know if you do. I'll check you off as I go.\n- [x] @Daniel15 \n- [ ] @LoukaN\n- [ ] @chenglou \n- [ ] @fisherwebdev \n- [ ] @jgebhardt \n- [ ] @josephsavona \n- [ ] @kmeht \n- [ ] @matthewjohnston4 \n- [x] @petehunt \n- [ ] @schrockn \n- [ ] @sebmarkbage \n- [x] @spicyj \n- [ ] @vjeux \n- [x] @wincent \n- [x] @zpao\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

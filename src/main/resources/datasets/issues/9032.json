@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9032",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9032/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9032/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9032/events",
+  "html_url": "https://github.com/facebook/react/pull/9032",
+  "id": 208976231,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTA3MDcyNDIx",
+  "number": 9032,
+  "title": "Update Lifting State Up not to mix up DOM value with component state",
+  "user": {
+    "login": "valscion",
+    "id": 482561,
+    "node_id": "MDQ6VXNlcjQ4MjU2MQ==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/482561?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/valscion",
+    "html_url": "https://github.com/valscion",
+    "followers_url": "https://api.github.com/users/valscion/followers",
+    "following_url": "https://api.github.com/users/valscion/following{/other_user}",
+    "gists_url": "https://api.github.com/users/valscion/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/valscion/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/valscion/subscriptions",
+    "organizations_url": "https://api.github.com/users/valscion/orgs",
+    "repos_url": "https://api.github.com/users/valscion/repos",
+    "events_url": "https://api.github.com/users/valscion/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/valscion/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 16,
+  "created_at": "2017-02-20T20:33:39Z",
+  "updated_at": "2017-03-10T13:49:53Z",
+  "closed_at": "2017-03-02T00:28:10Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9032",
+    "html_url": "https://github.com/facebook/react/pull/9032",
+    "diff_url": "https://github.com/facebook/react/pull/9032.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9032.patch"
+  },
+  "body": "A few weeks ago when teaching my friend, she got stuck on `this.state.value` vs. `event.target.value`. As the documentation talked a lot about \"values\", and the term \"value\" could mean three different things (values in general, the `value` prop / DOM value of the `<input>` component and the `value` in state/props), it was not weird that she got a bit confused.\r\n\r\nI asked about this already from @gaearon in Twitter here: https://twitter.com/valscion/status/833776451442843649",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

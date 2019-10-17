@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9790",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9790/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9790/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9790/events",
+  "html_url": "https://github.com/facebook/react/pull/9790",
+  "id": 231686145,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTIyNjg1Mzcw",
+  "number": 9790,
+  "title": "Fix externalization of 'lowPriorityWarning' in fb builds",
+  "user": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2017-05-26T17:18:15Z",
+  "updated_at": "2018-05-25T17:51:10Z",
+  "closed_at": "2017-05-26T17:35:39Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9790",
+    "html_url": "https://github.com/facebook/react/pull/9790",
+    "diff_url": "https://github.com/facebook/react/pull/9790.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9790.patch"
+  },
+  "body": "Thanks to @spicyj for pairing with me on this.\r\n\r\n**what is the change?:**\r\n - Add two more special cases for 'lowPriorityWarning' in 'modules.js',\r\n   treating it the same as 'ReactCurrentOwner'.\r\n\r\n**why make this change?:**\r\nWithout this, the build was including 'lowPriorityWarning' seemingly both as an external module and as part of the bundle in fb builds.\r\n\r\n**test plan:**\r\nRan `yarn build` and inspected the `React-dev` build. `lowPriorityWarning` did not get bundled in this time.\r\n\r\n**issue:**\r\nNone yet - @gaearon flagged this for me directly.",
+  "closed_by": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

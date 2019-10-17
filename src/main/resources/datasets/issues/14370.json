@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14370",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14370/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14370/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14370/events",
+  "html_url": "https://github.com/facebook/react/pull/14370",
+  "id": 386481783,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjM1MjA4MTQ2",
+  "number": 14370,
+  "title": "Automated fixture tests",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-12-01T18:03:47Z",
+  "updated_at": "2018-12-02T19:25:48Z",
+  "closed_at": "2018-12-02T19:25:45Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14370",
+    "html_url": "https://github.com/facebook/react/pull/14370",
+    "diff_url": "https://github.com/facebook/react/pull/14370.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14370.patch"
+  },
+  "body": "Use [Puppeteer](https://github.com/GoogleChrome/puppeteer) to automate fixtures testing against upcoming releases. (At the moment, I'm only testing two fixtures– [packaging](https://github.com/facebook/react/tree/master/fixtures/packaging) and [scheduler](https://github.com/facebook/react/tree/master/fixtures/scheduler)– but we could add more pretty easily!)\r\n\r\nIf we wanted to, we could even run some of our fixtures (like these) in Circle.\r\n\r\nNote that most of this PR (514 lines) is just `yarn.lock` file differences. Automated testing doesn't require that much code!\r\n\r\n# Demos\r\n### Preparing canary release\r\n![parepare-canary-automated-fixture-tests](https://user-images.githubusercontent.com/29597/49331275-527dd580-f54f-11e8-8941-031dd3ff725c.gif)\r\n\r\n### Preparing stable release\r\n![prepare-stable-automated-tests](https://user-images.githubusercontent.com/29597/49331356-4cd4bf80-f550-11e8-855b-618083924790.gif)\r\n\r\n### Disabling tests\r\nGenerating the packaging fixture takes about 20 seconds. If you need to skip this, just pass a `--skipTests` flag to either of the above scripts to disable fixtures testing:\r\n![skip-tests](https://user-images.githubusercontent.com/29597/49331277-53166c00-f54f-11e8-8122-fffabc1d79cd.gif)\r\n",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

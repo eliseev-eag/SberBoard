@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7943",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7943/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7943/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7943/events",
+  "html_url": "https://github.com/facebook/react/pull/7943",
+  "id": 182409372,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODg5MzY0MzM=",
+  "number": 7943,
+  "title": "[New Docs] Add PropTypes to React reference API, adjust formatting",
+  "user": {
+    "login": "hramos",
+    "id": 165856,
+    "node_id": "MDQ6VXNlcjE2NTg1Ng==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/165856?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/hramos",
+    "html_url": "https://github.com/hramos",
+    "followers_url": "https://api.github.com/users/hramos/followers",
+    "following_url": "https://api.github.com/users/hramos/following{/other_user}",
+    "gists_url": "https://api.github.com/users/hramos/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/hramos/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/hramos/subscriptions",
+    "organizations_url": "https://api.github.com/users/hramos/orgs",
+    "repos_url": "https://api.github.com/users/hramos/repos",
+    "events_url": "https://api.github.com/users/hramos/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/hramos/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2016-10-12T00:52:27Z",
+  "updated_at": "2016-10-12T16:43:10Z",
+  "closed_at": "2016-10-12T16:43:10Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7943",
+    "html_url": "https://github.com/facebook/react/pull/7943",
+    "diff_url": "https://github.com/facebook/react/pull/7943.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7943.patch"
+  },
+  "body": "Three main things are covered here.\n#1. Adjust Reference Formatting\n## Methods\n\nMethod headers will no longer include parameters. This should simplify anchor links and also result in headers that are easier to skim through. Method definitions in the API reference will now include the full method signature to provide the same information that was previously conveyed through the old headers.\n## Styling\n\nAdd horizontal rules between method definitions. Also aimed to improve readability while skimming down a page.\n#2. Add PropTypes Reference\n\nAdded full reference on all PropTypes validators. Based on the Typechecking with PropTypes doc. Mostly there for completeness.\n#3. Expand React API Reference\n\nThe intro section to the React Top Level API reference has been expanded, and additional context added to the list of methods. Methods that are only of interest when ES6 or JSX is **not** used are now called out separately, mostly so that the reader knows they can be safely ignored if using ES6 and JSX.\n# Previews\n## React\n\n![screencapture-localhost-4000-react-docs-react-api-html-1476233570253](https://cloud.githubusercontent.com/assets/165856/19293729/9e695874-8fdb-11e6-8a1d-341fb0b77cfe.png)\n## React.Component\n\n![screencapture-localhost-4000-react-docs-react-component-html-1476233581779](https://cloud.githubusercontent.com/assets/165856/19293734/a8b466c0-8fdb-11e6-974c-3f0d7a04cee7.png)\n",
+  "closed_by": {
+    "login": "hramos",
+    "id": 165856,
+    "node_id": "MDQ6VXNlcjE2NTg1Ng==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/165856?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/hramos",
+    "html_url": "https://github.com/hramos",
+    "followers_url": "https://api.github.com/users/hramos/followers",
+    "following_url": "https://api.github.com/users/hramos/following{/other_user}",
+    "gists_url": "https://api.github.com/users/hramos/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/hramos/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/hramos/subscriptions",
+    "organizations_url": "https://api.github.com/users/hramos/orgs",
+    "repos_url": "https://api.github.com/users/hramos/repos",
+    "events_url": "https://api.github.com/users/hramos/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/hramos/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

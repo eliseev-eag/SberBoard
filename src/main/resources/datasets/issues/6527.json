@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6527",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6527/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6527/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6527/events",
+  "html_url": "https://github.com/facebook/react/pull/6527",
+  "id": 148876550,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjY3NDU1MjM=",
+  "number": 6527,
+  "title": "Minor fixes",
+  "user": {
+    "login": "adius",
+    "id": 969983,
+    "node_id": "MDQ6VXNlcjk2OTk4Mw==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/969983?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/adius",
+    "html_url": "https://github.com/adius",
+    "followers_url": "https://api.github.com/users/adius/followers",
+    "following_url": "https://api.github.com/users/adius/following{/other_user}",
+    "gists_url": "https://api.github.com/users/adius/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/adius/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/adius/subscriptions",
+    "organizations_url": "https://api.github.com/users/adius/orgs",
+    "repos_url": "https://api.github.com/users/adius/repos",
+    "events_url": "https://api.github.com/users/adius/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/adius/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2016-04-16T18:14:33Z",
+  "updated_at": "2016-04-22T20:27:40Z",
+  "closed_at": "2016-04-19T21:41:42Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6527",
+    "html_url": "https://github.com/facebook/react/pull/6527",
+    "diff_url": "https://github.com/facebook/react/pull/6527.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6527.patch"
+  },
+  "body": "Hi, I am Feram 🤖\n\nI'm a bot and I work on behalf of [adius](https://github.com/adius).\nIf my pull-request helped to improve this repository,\nfeel free to [star my repo](https://github.com/adius/feram) to show some love! 😊\n\nIf I didn't behave, you can [create an issue](https://github.com/adius/feram/issues)\nand my Dad will try to fix me.\n\nLove, hugs and kisses,\nyour [Feram](https://github.com/adius/feram)\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

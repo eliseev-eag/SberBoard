@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11875",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11875/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11875/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11875/events",
+  "html_url": "https://github.com/facebook/react/issues/11875",
+  "id": 282831557,
+  "node_id": "MDU6SXNzdWUyODI4MzE1NTc=",
+  "number": 11875,
+  "title": "Checkbox not updating",
+  "user": {
+    "login": "ghost",
+    "id": 10137,
+    "node_id": "MDQ6VXNlcjEwMTM3",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/10137?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ghost",
+    "html_url": "https://github.com/ghost",
+    "followers_url": "https://api.github.com/users/ghost/followers",
+    "following_url": "https://api.github.com/users/ghost/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ghost/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ghost/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ghost/subscriptions",
+    "organizations_url": "https://api.github.com/users/ghost/orgs",
+    "repos_url": "https://api.github.com/users/ghost/repos",
+    "events_url": "https://api.github.com/users/ghost/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ghost/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-12-18T10:32:27Z",
+  "updated_at": "2017-12-18T11:10:22Z",
+  "closed_at": "2017-12-18T11:10:22Z",
+  "author_association": "NONE",
+  "body": "In below example after three seconds the check box is not being un-checked.\r\nWhy?\r\n\r\n```\r\nclass Hello extends React.Component {\r\n\r\n  constructor(props){\r\n  \r\n    super(props);\r\n    this.state={items:0}\r\n  }\r\n  \r\n  componentDidMount(){\r\n  \r\n    setTimeout(()=>{this.setState({items:1})}, 3000)\r\n  }\r\n\r\n  render() {\r\n  \r\n    return <div>\r\n    {this.state.items == 0 ? <input type=\"checkbox\" checked={true} ></input>:  <input type=\"checkbox\"  ></input> }\r\n    </div>;\r\n  }\r\n}\r\n\r\nReactDOM.render(\r\n  <Hello name=\"World\" />,\r\n  document.getElementById('container')\r\n);\r\n\r\n```\r\n ",
+  "closed_by": null
+}

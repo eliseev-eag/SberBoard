@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2617",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2617/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2617/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2617/events",
+  "html_url": "https://github.com/facebook/react/pull/2617",
+  "id": 50286827,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjUxNDgzODI=",
+  "number": 2617,
+  "title": "Can bind events to ShadowRoots.",
+  "user": {
+    "login": "nicolasbrugneaux",
+    "id": 3650621,
+    "node_id": "MDQ6VXNlcjM2NTA2MjE=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/3650621?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nicolasbrugneaux",
+    "html_url": "https://github.com/nicolasbrugneaux",
+    "followers_url": "https://api.github.com/users/nicolasbrugneaux/followers",
+    "following_url": "https://api.github.com/users/nicolasbrugneaux/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nicolasbrugneaux/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nicolasbrugneaux/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nicolasbrugneaux/subscriptions",
+    "organizations_url": "https://api.github.com/users/nicolasbrugneaux/orgs",
+    "repos_url": "https://api.github.com/users/nicolasbrugneaux/repos",
+    "events_url": "https://api.github.com/users/nicolasbrugneaux/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nicolasbrugneaux/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2014-11-27T12:34:23Z",
+  "updated_at": "2015-10-06T05:09:09Z",
+  "closed_at": "2015-10-06T05:09:09Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/2617",
+    "html_url": "https://github.com/facebook/react/pull/2617",
+    "diff_url": "https://github.com/facebook/react/pull/2617.diff",
+    "patch_url": "https://github.com/facebook/react/pull/2617.patch"
+  },
+  "body": "I created a chrome extension with react. And when inserting in the DOM, the styles would collapse with the page.\n\nThe solution I found was the most elegant was to create a shadow root and render my react component inside it.\n\nProblem is that the events were not bound properly because of shadow boundaries. Here are my modifications :)\n",
+  "closed_by": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7281",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7281/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7281/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7281/events",
+  "html_url": "https://github.com/facebook/react/issues/7281",
+  "id": 165596082,
+  "node_id": "MDU6SXNzdWUxNjU1OTYwODI=",
+  "number": 7281,
+  "title": "Input onChange not triggered every time in IE11 if e.preventDefault() used",
+  "user": {
+    "login": "jmullo",
+    "id": 7224076,
+    "node_id": "MDQ6VXNlcjcyMjQwNzY=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/7224076?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jmullo",
+    "html_url": "https://github.com/jmullo",
+    "followers_url": "https://api.github.com/users/jmullo/followers",
+    "following_url": "https://api.github.com/users/jmullo/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jmullo/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jmullo/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jmullo/subscriptions",
+    "organizations_url": "https://api.github.com/users/jmullo/orgs",
+    "repos_url": "https://api.github.com/users/jmullo/repos",
+    "events_url": "https://api.github.com/users/jmullo/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jmullo/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 69105383,
+      "node_id": "MDU6TGFiZWw2OTEwNTM4Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Browser:%20IE",
+      "name": "Browser: IE",
+      "color": "c7def8",
+      "default": false
+    },
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-07-14T15:54:47Z",
+  "updated_at": "2018-08-18T01:50:02Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "Input onChange not triggered every time if e.preventDefault() is called in onChange handler.\n\nOccurs when typing fast: some characters are lost.\n\nReact 5.0.2 & IE11.\n",
+  "closed_by": null
+}

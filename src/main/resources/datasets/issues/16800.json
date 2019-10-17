@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16800",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16800/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16800/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16800/events",
+  "html_url": "https://github.com/facebook/react/pull/16800",
+  "id": 494345739,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzE4MTE3Mzcw",
+  "number": 16800,
+  "title": "[suspense][error handling] Add failing unit test",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-09-17T00:53:31Z",
+  "updated_at": "2019-09-23T18:23:29Z",
+  "closed_at": "2019-09-23T18:23:29Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16800",
+    "html_url": "https://github.com/facebook/react/pull/16800",
+    "diff_url": "https://github.com/facebook/react/pull/16800.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16800.patch"
+  },
+  "body": "Covers an edge case where an error is thrown inside the complete phase of a component that is in the return path of a component that suspends. The second error should also be handled (i.e. able to be captured by an error boundary.\r\n\r\nThe test is currently failing because there's a call to `completeUnitOfWork` inside the main render phase `catch` block. That call is not itself wrapped in try-catch, so anything that throws is treated as a fatal/unhandled error.\r\n\r\nI believe this bug is only observable if something in the host config throws; and, only in legacy mode, because in concurrent/batched mode, `completeUnitOfWork` on fiber that throws follows the \"unwind\" path only, not the \"complete\" path, and the \"unwind\" path does not call any host config methods.\r\n\r\nI have a fix, but it overlaps with a refactoring PR that I'm also working on, so I'm going to stack it on top of that.",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

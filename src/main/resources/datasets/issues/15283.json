@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15283",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15283/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15283/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15283/events",
+  "html_url": "https://github.com/facebook/react/pull/15283",
+  "id": 427676622,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjY2MjE5MTI0",
+  "number": 15283,
+  "title": "Rename hover props in experimental event API and write unit tests",
+  "user": {
+    "login": "behzad888",
+    "id": 9346614,
+    "node_id": "MDQ6VXNlcjkzNDY2MTQ=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/9346614?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/behzad888",
+    "html_url": "https://github.com/behzad888",
+    "followers_url": "https://api.github.com/users/behzad888/followers",
+    "following_url": "https://api.github.com/users/behzad888/following{/other_user}",
+    "gists_url": "https://api.github.com/users/behzad888/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/behzad888/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/behzad888/subscriptions",
+    "organizations_url": "https://api.github.com/users/behzad888/orgs",
+    "repos_url": "https://api.github.com/users/behzad888/repos",
+    "events_url": "https://api.github.com/users/behzad888/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/behzad888/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-04-01T12:27:50Z",
+  "updated_at": "2019-04-04T19:38:56Z",
+  "closed_at": "2019-04-01T15:19:17Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15283",
+    "html_url": "https://github.com/facebook/react/pull/15283",
+    "diff_url": "https://github.com/facebook/react/pull/15283.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15283.patch"
+  },
+  "body": "Note: this is for an experimental event API and writing tests.\r\n\r\n - `onHoverIn` -> `onHoverStart`\r\n - `onHoverOut` -> `onHoverEnd`\r\n - Write unit tests",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

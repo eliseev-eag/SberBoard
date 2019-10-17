@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6623",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6623/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6623/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6623/events",
+  "html_url": "https://github.com/facebook/react/pull/6623",
+  "id": 151228930,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Njc5NTA3OTc=",
+  "number": 6623,
+  "title": "adds ReactRally & Reactive 2016 + conf locations",
+  "user": {
+    "login": "yanandcoffee",
+    "id": 1462115,
+    "node_id": "MDQ6VXNlcjE0NjIxMTU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1462115?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/yanandcoffee",
+    "html_url": "https://github.com/yanandcoffee",
+    "followers_url": "https://api.github.com/users/yanandcoffee/followers",
+    "following_url": "https://api.github.com/users/yanandcoffee/following{/other_user}",
+    "gists_url": "https://api.github.com/users/yanandcoffee/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/yanandcoffee/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/yanandcoffee/subscriptions",
+    "organizations_url": "https://api.github.com/users/yanandcoffee/orgs",
+    "repos_url": "https://api.github.com/users/yanandcoffee/repos",
+    "events_url": "https://api.github.com/users/yanandcoffee/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/yanandcoffee/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2016-04-26T20:16:44Z",
+  "updated_at": "2016-05-09T22:38:37Z",
+  "closed_at": "2016-04-26T22:12:13Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6623",
+    "html_url": "https://github.com/facebook/react/pull/6623",
+    "diff_url": "https://github.com/facebook/react/pull/6623.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6623.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

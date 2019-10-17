@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13423",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13423/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13423/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13423/events",
+  "html_url": "https://github.com/facebook/react/pull/13423",
+  "id": 351592279,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjA5MTQ2Mzc1",
+  "number": 13423,
+  "title": "Don't diff memoized host components in completion phase",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-08-17T13:21:31Z",
+  "updated_at": "2018-08-17T17:13:53Z",
+  "closed_at": "2018-08-17T17:13:47Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13423",
+    "html_url": "https://github.com/facebook/react/pull/13423",
+    "diff_url": "https://github.com/facebook/react/pull/13423.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13423.patch"
+  },
+  "body": "Fixes https://github.com/facebook/react/issues/13425.\r\n\r\nView without whitespace: https://github.com/facebook/react/pull/13423/files?w=1\r\n\r\nThe bigger issue (https://github.com/facebook/react/issues/13424) is still a problem but it has always been broken (I checked as far as 0.11). Here I'm only fixing the regression in React 16 that made this a problem even when `setState` calls are in different components.\r\n\r\nIn particular, we shouldn't be diffing host components that are outside of `setState` path.\r\n\r\nSome indentation changes are due to tests I tweaked but they're unrelated. The only change there is to consistently add and remove `container` from the document. The real changes are only in the newly added test at the bottom, and in `CompleteWork`.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14029",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14029/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14029/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14029/events",
+  "html_url": "https://github.com/facebook/react/pull/14029",
+  "id": 375335641,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjI2ODAyODI3",
+  "number": 14029,
+  "title": "auto assignment with loop statements",
+  "user": {
+    "login": "sunnibfgi",
+    "id": 12179856,
+    "node_id": "MDQ6VXNlcjEyMTc5ODU2",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/12179856?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sunnibfgi",
+    "html_url": "https://github.com/sunnibfgi",
+    "followers_url": "https://api.github.com/users/sunnibfgi/followers",
+    "following_url": "https://api.github.com/users/sunnibfgi/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sunnibfgi/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sunnibfgi/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sunnibfgi/subscriptions",
+    "organizations_url": "https://api.github.com/users/sunnibfgi/orgs",
+    "repos_url": "https://api.github.com/users/sunnibfgi/repos",
+    "events_url": "https://api.github.com/users/sunnibfgi/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sunnibfgi/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-10-30T06:10:35Z",
+  "updated_at": "2018-10-30T06:19:57Z",
+  "closed_at": "2018-10-30T06:19:57Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14029",
+    "html_url": "https://github.com/facebook/react/pull/14029",
+    "diff_url": "https://github.com/facebook/react/pull/14029.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14029.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "sunnibfgi",
+    "id": 12179856,
+    "node_id": "MDQ6VXNlcjEyMTc5ODU2",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/12179856?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sunnibfgi",
+    "html_url": "https://github.com/sunnibfgi",
+    "followers_url": "https://api.github.com/users/sunnibfgi/followers",
+    "following_url": "https://api.github.com/users/sunnibfgi/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sunnibfgi/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sunnibfgi/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sunnibfgi/subscriptions",
+    "organizations_url": "https://api.github.com/users/sunnibfgi/orgs",
+    "repos_url": "https://api.github.com/users/sunnibfgi/repos",
+    "events_url": "https://api.github.com/users/sunnibfgi/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sunnibfgi/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

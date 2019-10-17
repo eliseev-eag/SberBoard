@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11504",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11504/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11504/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11504/events",
+  "html_url": "https://github.com/facebook/react/pull/11504",
+  "id": 272618899,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTUxNjkyNTM1",
+  "number": 11504,
+  "title": "Release script tweaks",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-11-09T16:06:18Z",
+  "updated_at": "2017-11-09T16:30:47Z",
+  "closed_at": "2017-11-09T16:29:52Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11504",
+    "html_url": "https://github.com/facebook/react/pull/11504",
+    "diff_url": "https://github.com/facebook/react/pull/11504.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11504.patch"
+  },
+  "body": "Resolves #11481\r\n\r\n* Added missing options param\r\n* Publish all packages that aren't private and remove the whitelist in config\r\n* Add \"v\" prefix for release tags\r\n* Log \"minutes\" for longer-running tasks (instead of \"seconds\")\r\n* Push `error.stack` instead of `error.message` in parallel tasks so that we see call stack\r\n\r\nSome screenshots...\r\n\r\n<img width=\"857\" alt=\"screen shot 2017-11-09 at 3 50 21 pm\" src=\"https://user-images.githubusercontent.com/29597/32615499-e5ca1916-c567-11e7-9468-3e348d3fb9ce.png\">\r\n\r\n<img width=\"851\" alt=\"screen shot 2017-11-09 at 3 54 34 pm\" src=\"https://user-images.githubusercontent.com/29597/32615500-e5e09be6-c567-11e7-9858-99fc0e4502fc.png\">\r\n\r\n<img width=\"809\" alt=\"screen shot 2017-11-09 at 3 54 42 pm\" src=\"https://user-images.githubusercontent.com/29597/32615501-e61406d4-c567-11e7-8c00-51febe7e2a4c.png\">\r\n\r\n<img width=\"942\" alt=\"screen shot 2017-11-09 at 4 04 43 pm\" src=\"https://user-images.githubusercontent.com/29597/32615502-e63039d0-c567-11e7-97d3-275bb7929976.png\">",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

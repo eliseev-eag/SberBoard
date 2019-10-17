@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7861",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7861/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7861/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7861/events",
+  "html_url": "https://github.com/facebook/react/pull/7861",
+  "id": 180847053,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODc4NjEyMzM=",
+  "number": 7861,
+  "title": "Update 04-multiple-components.md missing brackets after map method",
+  "user": {
+    "login": "zawiasam",
+    "id": 7436990,
+    "node_id": "MDQ6VXNlcjc0MzY5OTA=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/7436990?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zawiasam",
+    "html_url": "https://github.com/zawiasam",
+    "followers_url": "https://api.github.com/users/zawiasam/followers",
+    "following_url": "https://api.github.com/users/zawiasam/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zawiasam/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zawiasam/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zawiasam/subscriptions",
+    "organizations_url": "https://api.github.com/users/zawiasam/orgs",
+    "repos_url": "https://api.github.com/users/zawiasam/repos",
+    "events_url": "https://api.github.com/users/zawiasam/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zawiasam/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-10-04T09:38:20Z",
+  "updated_at": "2016-10-04T11:20:27Z",
+  "closed_at": "2016-10-04T11:19:44Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7861",
+    "html_url": "https://github.com/facebook/react/pull/7861",
+    "diff_url": "https://github.com/facebook/react/pull/7861.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7861.patch"
+  },
+  "body": "_Before_ submitting a pull request, please make sure the following is done...\n1. Fork the repo and create your branch from `master`.\n2. If you've added code that should be tested, add tests!\n3. If you've changed APIs, update the documentation.\n4. Ensure the test suite passes (`grunt test`).\n5. Make sure your code lints (`grunt lint`) - we've done our best to make sure these rules match our internal linting guidelines.\n6. If you haven't already, complete the [CLA](https://code.facebook.com/cla).\n\nadded missing map bracket\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

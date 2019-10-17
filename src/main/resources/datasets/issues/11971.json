@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11971",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11971/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11971/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11971/events",
+  "html_url": "https://github.com/facebook/react/issues/11971",
+  "id": 286314775,
+  "node_id": "MDU6SXNzdWUyODYzMTQ3NzU=",
+  "number": 11971,
+  "title": "Do we need to listen for click on change events?",
+  "user": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2018-01-05T15:10:44Z",
+  "updated_at": "2018-09-25T17:28:38Z",
+  "closed_at": null,
+  "author_association": "COLLABORATOR",
+  "body": "Presently, we listen to click events to detect changes on radio buttons and checkboxes. Do we still need to do this?\r\n\r\nhttps://github.com/facebook/react/blob/master/packages/react-dom/src/events/ChangeEventPlugin.js#L198-L211\r\n\r\nIt looks as though we only do this for IE8. I'm curious about:\r\n\r\n- [ ] Can we remove the click dependency from change events?\r\n- [ ] If not, we should update the comments to better document why we include click events\r\n\r\n",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8503",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8503/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8503/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8503/events",
+  "html_url": "https://github.com/facebook/react/pull/8503",
+  "id": 193731141,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTY2OTQzOTk=",
+  "number": 8503,
+  "title": "Add component information to the contentEditable warning. Close #8497",
+  "user": {
+    "login": "MGrin",
+    "id": 2393862,
+    "node_id": "MDQ6VXNlcjIzOTM4NjI=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/2393862?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/MGrin",
+    "html_url": "https://github.com/MGrin",
+    "followers_url": "https://api.github.com/users/MGrin/followers",
+    "following_url": "https://api.github.com/users/MGrin/following{/other_user}",
+    "gists_url": "https://api.github.com/users/MGrin/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/MGrin/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/MGrin/subscriptions",
+    "organizations_url": "https://api.github.com/users/MGrin/orgs",
+    "repos_url": "https://api.github.com/users/MGrin/repos",
+    "events_url": "https://api.github.com/users/MGrin/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/MGrin/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-12-06T10:08:51Z",
+  "updated_at": "2017-10-04T23:21:07Z",
+  "closed_at": "2017-10-04T23:21:06Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8503",
+    "html_url": "https://github.com/facebook/react/pull/8503",
+    "diff_url": "https://github.com/facebook/react/pull/8503.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8503.patch"
+  },
+  "body": "Inside Stack renderer, the additional information is the component's owner's name or (in case where there is no `getName` function) the component's owner's tag.\r\n\r\nInside Fiber renderer: Component's name if exists.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

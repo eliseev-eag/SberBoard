@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12059",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12059/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12059/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12059/events",
+  "html_url": "https://github.com/facebook/react/pull/12059",
+  "id": 290157690,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTY0MTA2MzE0",
+  "number": 12059,
+  "title": "Improve display of filenames in component stack",
+  "user": {
+    "login": "billyjanitsch",
+    "id": 1158733,
+    "node_id": "MDQ6VXNlcjExNTg3MzM=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1158733?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/billyjanitsch",
+    "html_url": "https://github.com/billyjanitsch",
+    "followers_url": "https://api.github.com/users/billyjanitsch/followers",
+    "following_url": "https://api.github.com/users/billyjanitsch/following{/other_user}",
+    "gists_url": "https://api.github.com/users/billyjanitsch/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/billyjanitsch/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/billyjanitsch/subscriptions",
+    "organizations_url": "https://api.github.com/users/billyjanitsch/orgs",
+    "repos_url": "https://api.github.com/users/billyjanitsch/repos",
+    "events_url": "https://api.github.com/users/billyjanitsch/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/billyjanitsch/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 15,
+  "created_at": "2018-01-20T02:32:46Z",
+  "updated_at": "2018-08-09T15:27:58Z",
+  "closed_at": "2018-08-09T02:33:31Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12059",
+    "html_url": "https://github.com/facebook/react/pull/12059",
+    "diff_url": "https://github.com/facebook/react/pull/12059.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12059.patch"
+  },
+  "body": "Fixes #12058, fixes #11519, and supercedes #11523.\r\n\r\nFWIW, as a user, I really like the idea of only stripping the common head, but I understand that you want to start simple. :)\r\n\r\nRelying on CI to run the test suite for now -- I tried to install Yarn but it clobbered my fnm installation. 😢",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

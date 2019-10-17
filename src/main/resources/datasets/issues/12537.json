@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12537",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12537/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12537/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12537/events",
+  "html_url": "https://github.com/facebook/react/pull/12537",
+  "id": 311281800,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTc5NDMwMDQ4",
+  "number": 12537,
+  "title": "Add a build step to hoist warning conditions",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2018-04-04T15:34:10Z",
+  "updated_at": "2018-04-04T16:15:55Z",
+  "closed_at": "2018-04-04T16:04:41Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12537",
+    "html_url": "https://github.com/facebook/react/pull/12537",
+    "diff_url": "https://github.com/facebook/react/pull/12537.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12537.patch"
+  },
+  "body": "I was recently profiling a DEV build of React and noticed this:\r\n\r\n<img width=\"728\" alt=\"screen shot 2018-04-04 at 15 48 53\" src=\"https://user-images.githubusercontent.com/810438/38317573-3e36d3fc-3825-11e8-8777-6b65079bf38f.png\">\r\n\r\nSo almost 10% of the time was spent building component stacks for a warning that doesn't fire once. This is because the code looks like\r\n\r\n```js\r\nwarning(condition, message, getStack())\r\n```\r\n\r\nand so we evaluate `getStack()` regardless of whether it fires.\r\n\r\nWe already have a build step that \"hoists\" invariant conditions to prevent unnecessary work for invariants. In this PR, I extend an existing warning build step to do the same thing.\r\n\r\nEssentially it turns the above code into\r\n\r\n```js\r\nif (!condition) {\r\n  warning(false, message, getStack());\r\n}\r\n```\r\n\r\nThis is nice both because it delays evaluating the arguments for the common case, and because we don't even have to step into `warning` at all.\r\n\r\nI enabled it in tests too for parity.\r\n\r\nOne potential pitfall is that it's easier to introduce a mistake into the argument calculation, and if it's never evaluated in tests, we'll never know. But we generally don't add warnings without tests so that seems like it won't be a big problem in practice.\r\n\r\nFull bundle diff: https://gist.github.com/gaearon/0bc2fd23d957e2ddc3939ef7425b3afd\r\n\r\nThis has no effect on production bundles because they don't contain warning calls.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8423",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8423/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8423/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8423/events",
+  "html_url": "https://github.com/facebook/react/issues/8423",
+  "id": 191778783,
+  "node_id": "MDU6SXNzdWUxOTE3Nzg3ODM=",
+  "number": 8423,
+  "title": "onChange does not work well with IE11 at Japanese IME. in React 15.4.0",
+  "user": {
+    "login": "mashimonator",
+    "id": 2460942,
+    "node_id": "MDQ6VXNlcjI0NjA5NDI=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/2460942?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mashimonator",
+    "html_url": "https://github.com/mashimonator",
+    "followers_url": "https://api.github.com/users/mashimonator/followers",
+    "following_url": "https://api.github.com/users/mashimonator/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mashimonator/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mashimonator/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mashimonator/subscriptions",
+    "organizations_url": "https://api.github.com/users/mashimonator/orgs",
+    "repos_url": "https://api.github.com/users/mashimonator/repos",
+    "events_url": "https://api.github.com/users/mashimonator/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mashimonator/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 69105383,
+      "node_id": "MDU6TGFiZWw2OTEwNTM4Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Browser:%20IE",
+      "name": "Browser: IE",
+      "color": "c7def8",
+      "default": false
+    },
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2016-11-26T00:52:03Z",
+  "updated_at": "2019-10-04T01:40:05Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "![untitled2](https://cloud.githubusercontent.com/assets/2460942/20637058/b744111c-b3bd-11e6-97ba-5529639730f0.gif)\r\n\r\nI'm trying to make a simple text box component with a suggestion feature.\r\nHowever, in IE 11, there is an event that the Japanese IME conversion arbitrarily decides (I did not press the Enter key ...).\r\nI examined it a little by myself, but this seems to have occurred only in IE 11, it seems that it has not occurred in other browsers such as Chrome and old Ver such as IE 10.\r\nReact version is 15.4.0.\r\nThere seemed to be similar issues in the past（https://github.com/facebook/react/issues/7027）, but that bug has already been fixed.\r\nIs this another bug? Or maybe I do not like how to make it?\r\n\r\n```\r\n/**\r\n * SuggestTextBox\r\n */\r\nconst SuggestTextBox = React.createClass({\r\n\ttimer: null,\r\n\tgetInitialState: function(){\r\n\t\treturn {\r\n\t\t\tfocus       : false,\r\n\t\t\tsuggestList : [],\r\n\t\t\tvalue: ''\r\n\t\t};\r\n\t},\r\n\t/**\r\n\t * getSuggestListFromApi\r\n\t */\r\n\tgetSuggestListFromApi: function(value){\r\n\t\t// Request API and get response\r\n\t\tCommon.apiCall({\r\n\t\t\ttype     : 'GET',\r\n\t\t\turl      : '/api/hoge',\r\n\t\t\tdataType : 'json',\r\n\t\t\tdata     : {\r\n\t\t\t\tKeyword: value\r\n\t\t\t},\r\n\t\t\tcache    : false,\r\n\t\t\tcallback : function(result){\r\n\t\t\t\t// set the state\r\n\t\t\t\tthis.setState({\r\n\t\t\t\t\tsuggestList: result.data.list,\r\n\t\t\t\t\tactiveItem: null\r\n\t\t\t\t});\r\n\t\t\t}.bind(this)\r\n\t\t});\r\n\t},\r\n\t/**\r\n\t * handleTextboxChange\r\n\t */\r\n\thandleTextboxChange: function(e){\r\n\t\tthis.setState({\r\n\t\t\tvalue: e.target.value,\r\n\t\t\tsuggestList: []\r\n\t\t});\r\n\t\tif (this.state.focus) {\r\n\t\t\tif (e.target.value) {\r\n\t\t\t\tif (this.timer) {\r\n\t\t\t\t\twindow.clearTimeout(this.timer);\r\n\t\t\t\t}\r\n\t\t\t\tthis.timer = window.setTimeout(function(){\r\n\t\t\t\t\tthis.getSuggestListFromApi(e.target.value);\r\n\t\t\t\t}.bind(this), 300);\r\n\t\t\t}\r\n\t\t}\r\n\t},\r\n\t/**\r\n\t * handleFocus\r\n\t */\r\n\thandleFocus: function(e){\r\n\t\tthis.setState({\r\n\t\t\tfocus: true\r\n\t\t});\r\n\t},\r\n\t/**\r\n\t * getSuggestNodes\r\n\t */\r\n\tgetSuggestNode: function(){\r\n\t\tvar listNode = this.state.suggestList.map(function(item, idx){\r\n\t\t\treturn (\r\n\t\t\t\t<li\r\n\t\t\t\t  key={'fuga_suggestItem_'+item.id}\r\n\t\t\t\t  data-id={item.id}\r\n\t\t\t\t  data-name='fuga'\r\n\t\t\t\t  data-value={item.name}>\r\n\t\t\t\t\t{item.name}\r\n\t\t\t\t</li>\r\n\t\t\t);\r\n\t\t}.bind(this));\r\n\t\tif (listNode.length > 0) {\r\n\t\t\treturn (\r\n\t\t\t\t<ul className=\"suggestList\">\r\n\t\t\t\t\t{listNode}\r\n\t\t\t\t</ul>\r\n\t\t\t);\r\n\t\t} else {\r\n\t\t\treturn null;\r\n\t\t}\r\n\t},\r\n\trender: function(){\r\n\t\tlet suggestNode = this.getSuggestNode();\r\n\t\treturn (\r\n\t\t\t<label>\r\n\t\t\t\t<input\r\n\t\t\t\t  type=\"text\"\r\n\t\t\t\t  name=\"fuga\"\r\n\t\t\t\t  value={this.state.value}\r\n\t\t\t\t  onChange={this.handleTextboxChange}\r\n\t\t\t\t  onFocus={this.handleFocus} />\r\n\t\t\t\t{suggestNode}\r\n\t\t\t</label>\r\n\t\t);\r\n\t}\r\n});\r\n```\r\nhttps://jsfiddle.net/mashimonator/u3b0f1xj/1/",
+  "closed_by": null
+}

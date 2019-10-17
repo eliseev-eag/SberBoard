@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11391",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11391/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11391/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11391/events",
+  "html_url": "https://github.com/facebook/react/pull/11391",
+  "id": 269283661,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ5MzE4OTA0",
+  "number": 11391,
+  "title": "Added MIT license badge along with other existing badges.",
+  "user": {
+    "login": "4leem",
+    "id": 14275525,
+    "node_id": "MDQ6VXNlcjE0Mjc1NTI1",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/14275525?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/4leem",
+    "html_url": "https://github.com/4leem",
+    "followers_url": "https://api.github.com/users/4leem/followers",
+    "following_url": "https://api.github.com/users/4leem/following{/other_user}",
+    "gists_url": "https://api.github.com/users/4leem/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/4leem/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/4leem/subscriptions",
+    "organizations_url": "https://api.github.com/users/4leem/orgs",
+    "repos_url": "https://api.github.com/users/4leem/repos",
+    "events_url": "https://api.github.com/users/4leem/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/4leem/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2017-10-28T04:55:58Z",
+  "updated_at": "2017-10-28T11:36:24Z",
+  "closed_at": "2017-10-28T11:36:24Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11391",
+    "html_url": "https://github.com/facebook/react/pull/11391",
+    "diff_url": "https://github.com/facebook/react/pull/11391.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11391.patch"
+  },
+  "body": "Added MIT license badge. React license has been a topic of discussion for a long time. With React 16, the library has been re-licensed to MIT. The developer community is excited about this change. I wanted to add a small cool badge to represent the same. \r\n\r\nThanks for making React great(again)!",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

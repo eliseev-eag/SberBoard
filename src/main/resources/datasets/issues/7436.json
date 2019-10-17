@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7436",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7436/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7436/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7436/events",
+  "html_url": "https://github.com/facebook/react/pull/7436",
+  "id": 169746847,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODAzNDAzMTE=",
+  "number": 7436,
+  "title": "use Object.is for checking mutated children",
+  "user": {
+    "login": "just-boris",
+    "id": 812240,
+    "node_id": "MDQ6VXNlcjgxMjI0MA==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/812240?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/just-boris",
+    "html_url": "https://github.com/just-boris",
+    "followers_url": "https://api.github.com/users/just-boris/followers",
+    "following_url": "https://api.github.com/users/just-boris/following{/other_user}",
+    "gists_url": "https://api.github.com/users/just-boris/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/just-boris/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/just-boris/subscriptions",
+    "organizations_url": "https://api.github.com/users/just-boris/orgs",
+    "repos_url": "https://api.github.com/users/just-boris/repos",
+    "events_url": "https://api.github.com/users/just-boris/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/just-boris/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2016-08-06T13:31:59Z",
+  "updated_at": "2016-08-14T10:26:56Z",
+  "closed_at": "2016-08-14T10:26:35Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7436",
+    "html_url": "https://github.com/facebook/react/pull/7436",
+    "diff_url": "https://github.com/facebook/react/pull/7436.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7436.patch"
+  },
+  "body": "fixes #7424\n",
+  "closed_by": {
+    "login": "just-boris",
+    "id": 812240,
+    "node_id": "MDQ6VXNlcjgxMjI0MA==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/812240?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/just-boris",
+    "html_url": "https://github.com/just-boris",
+    "followers_url": "https://api.github.com/users/just-boris/followers",
+    "following_url": "https://api.github.com/users/just-boris/following{/other_user}",
+    "gists_url": "https://api.github.com/users/just-boris/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/just-boris/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/just-boris/subscriptions",
+    "organizations_url": "https://api.github.com/users/just-boris/orgs",
+    "repos_url": "https://api.github.com/users/just-boris/repos",
+    "events_url": "https://api.github.com/users/just-boris/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/just-boris/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

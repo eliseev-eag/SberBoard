@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11215",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11215/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11215/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11215/events",
+  "html_url": "https://github.com/facebook/react/pull/11215",
+  "id": 265248375,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ2NDI3NjAy",
+  "number": 11215,
+  "title": "Matches like performance improvement",
+  "user": {
+    "login": "243083df",
+    "id": 29660847,
+    "node_id": "MDQ6VXNlcjI5NjYwODQ3",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/29660847?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/243083df",
+    "html_url": "https://github.com/243083df",
+    "followers_url": "https://api.github.com/users/243083df/followers",
+    "following_url": "https://api.github.com/users/243083df/following{/other_user}",
+    "gists_url": "https://api.github.com/users/243083df/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/243083df/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/243083df/subscriptions",
+    "organizations_url": "https://api.github.com/users/243083df/orgs",
+    "repos_url": "https://api.github.com/users/243083df/repos",
+    "events_url": "https://api.github.com/users/243083df/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/243083df/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2017-10-13T10:51:15Z",
+  "updated_at": "2017-10-18T14:00:57Z",
+  "closed_at": "2017-10-18T14:00:57Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11215",
+    "html_url": "https://github.com/facebook/react/pull/11215",
+    "diff_url": "https://github.com/facebook/react/pull/11215.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11215.patch"
+  },
+  "body": "According to https://github.com/facebook/react/blob/master/src/renderers/dom/shared/dangerousStyleValue.js#L25\r\nstyleValue is already string.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

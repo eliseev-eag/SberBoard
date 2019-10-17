@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6718",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6718/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6718/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6718/events",
+  "html_url": "https://github.com/facebook/react/pull/6718",
+  "id": 153551233,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjkyMTkwOTc=",
+  "number": 6718,
+  "title": "ReactDebugToolEventForwarderDevTool",
+  "user": {
+    "login": "troydemonbreun",
+    "id": 770448,
+    "node_id": "MDQ6VXNlcjc3MDQ0OA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/770448?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/troydemonbreun",
+    "html_url": "https://github.com/troydemonbreun",
+    "followers_url": "https://api.github.com/users/troydemonbreun/followers",
+    "following_url": "https://api.github.com/users/troydemonbreun/following{/other_user}",
+    "gists_url": "https://api.github.com/users/troydemonbreun/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/troydemonbreun/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/troydemonbreun/subscriptions",
+    "organizations_url": "https://api.github.com/users/troydemonbreun/orgs",
+    "repos_url": "https://api.github.com/users/troydemonbreun/repos",
+    "events_url": "https://api.github.com/users/troydemonbreun/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/troydemonbreun/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2016-05-06T22:29:15Z",
+  "updated_at": "2016-05-25T21:17:38Z",
+  "closed_at": "2016-05-25T21:17:38Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6718",
+    "html_url": "https://github.com/facebook/react/pull/6718",
+    "diff_url": "https://github.com/facebook/react/pull/6718.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6718.patch"
+  },
+  "body": "Per discussion with @jimfb on [6398](https://github.com/facebook/react/pull/6398#issuecomment-215277455)\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

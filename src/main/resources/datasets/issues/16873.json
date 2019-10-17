@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16873",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16873/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16873/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16873/events",
+  "html_url": "https://github.com/facebook/react/issues/16873",
+  "id": 497635505,
+  "node_id": "MDU6SXNzdWU0OTc2MzU1MDU=",
+  "number": 16873,
+  "title": "[eslint-plugin-react-hooks] allow configuring custom hooks as \"static\"",
+  "user": {
+    "login": "grncdr",
+    "id": 82634,
+    "node_id": "MDQ6VXNlcjgyNjM0",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/82634?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/grncdr",
+    "html_url": "https://github.com/grncdr",
+    "followers_url": "https://api.github.com/users/grncdr/followers",
+    "following_url": "https://api.github.com/users/grncdr/following{/other_user}",
+    "gists_url": "https://api.github.com/users/grncdr/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/grncdr/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/grncdr/subscriptions",
+    "organizations_url": "https://api.github.com/users/grncdr/orgs",
+    "repos_url": "https://api.github.com/users/grncdr/repos",
+    "events_url": "https://api.github.com/users/grncdr/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/grncdr/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-09-24T11:45:13Z",
+  "updated_at": "2019-10-01T08:18:18Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n\r\nFeature/enhancement\r\n\r\n**What is the current behavior?**\r\n\r\nCurrently the eslint plugin is unable to understand when the return value of a custom hook is static.\r\n\r\nExample:\r\n\r\n```jsx\r\nimport React from 'react'\r\n\r\nfunction useToggle(init = false) {\r\n  const [state, setState] = React.useState(init)\r\n  return [state, React.useCallback(() => { setState(v => !v) }]\r\n}\r\n\r\nfunction MyComponent({someProp}) {\r\n  const [enabled, toggleEnabled] = useToggle()\r\n\r\n  const handler = React.useCallback(() => {\r\n    toggleEnabled()\r\n    doSomethingWithTheProp(someProp)\r\n  }, [someProp]) // exhaustive-deps warning for toggleEnabled\r\n\r\n  return <button onClick={handler}>Do something</button>\r\n}\r\n```\r\n\r\n**What is the expected behavior?**\r\n\r\nI would like to configure `eslint-plugin-react-hooks` to tell it that `toggleEnabled` is static and doesn't need to be included in a dependency array. This isn't a huge deal but more of an ergonomic papercut that discourages writing/using custom hooks.\r\n\r\nAs for how/where to configure it, I would be happy to add something like this to my .eslintrc:\r\n\r\n```js\r\n{\r\n  \"staticHooks\": {\r\n    \"useToggle\": [false, true],  // first return value is not stable, second is\r\n    \"useForm\": true,             // entire return value is stable \r\n  }\r\n}\r\n```\r\n\r\nThen the plugin could have an additional check [after these 2 checks](https://github.com/facebook/react/blob/8b580a89d6dbbde8a3ed69475899addef1751116/packages/eslint-plugin-react-hooks/src/ExhaustiveDeps.js#L228-L231) that tests for custom names.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nAll versions of eslint-plugin-react-hooks have the same deficiency.",
+  "closed_by": null
+}

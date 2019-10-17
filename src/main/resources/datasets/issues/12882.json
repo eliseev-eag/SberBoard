@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12882",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12882/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12882/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12882/events",
+  "html_url": "https://github.com/facebook/react/issues/12882",
+  "id": 325398911,
+  "node_id": "MDU6SXNzdWUzMjUzOTg5MTE=",
+  "number": 12882,
+  "title": "ReactIs.typeOf for non-elements",
+  "user": {
+    "login": "mridgway",
+    "id": 191142,
+    "node_id": "MDQ6VXNlcjE5MTE0Mg==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/191142?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mridgway",
+    "html_url": "https://github.com/mridgway",
+    "followers_url": "https://api.github.com/users/mridgway/followers",
+    "following_url": "https://api.github.com/users/mridgway/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mridgway/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mridgway/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mridgway/subscriptions",
+    "organizations_url": "https://api.github.com/users/mridgway/orgs",
+    "repos_url": "https://api.github.com/users/mridgway/repos",
+    "events_url": "https://api.github.com/users/mridgway/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mridgway/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 945148471,
+      "node_id": "MDU6TGFiZWw5NDUxNDg0NzE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20ReactIs",
+      "name": "Component: ReactIs",
+      "color": "1d76db",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2018-05-22T17:47:53Z",
+  "updated_at": "2018-11-27T13:00:43Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "**What is the current behavior?**\r\n\r\n`ReactIs.typeOf` currently only works for element types, it does not allow you to pass a raw `Component` or `ForwardRef` to know the type.\r\n\r\nThe use case for this is in `hoist-non-react-statics` I now need a [special cases for `ForwardRefs`](https://github.com/mridgway/hoist-non-react-statics/issues/48). To do this, I will need to know the type of the source and target components, but currently I would need to turn them into elements first.\r\n\r\nAll of the `ReactIs.is*` functions also have this issue since they use the `typeOf` function internally.\r\n\r\n```js\r\nconst ForwardComponent = React.forwardRef(() => {});\r\n\r\nReactIs.typeOf(ForwardComponent); // undefined\r\nReactIs.typeOf(React.createElement(ForwardComponent)); // Symbol(react.forward_ref)\r\n```\r\n\r\n**What is the expected behavior?**\r\n\r\nIdeally I could pass in just the Component and get the type of it: \r\n```js\r\nReactIs.typeOf(ForwardComponent) // Symbol(react.forward_ref)\r\n```\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nReactIs@16.3.2\r\n",
+  "closed_by": null
+}

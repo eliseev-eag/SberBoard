@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/17097",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/17097/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/17097/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/17097/events",
+  "html_url": "https://github.com/facebook/react/pull/17097",
+  "id": 507399276,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzI4Mzk2ODIy",
+  "number": 17097,
+  "title": "DevTools does not eagerly patch console for RN",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2019-10-15T18:05:48Z",
+  "updated_at": "2019-10-15T20:52:55Z",
+  "closed_at": "2019-10-15T20:52:55Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/17097",
+    "html_url": "https://github.com/facebook/react/pull/17097",
+    "diff_url": "https://github.com/facebook/react/pull/17097.diff",
+    "patch_url": "https://github.com/facebook/react/pull/17097.patch"
+  },
+  "body": "Previously, the DevTools backend eagerly patched the console (to append [\"component stacks\"](https://github.com/facebook/react/blob/master/packages/react-devtools/CHANGELOG.md#component-stacks) to warnings and errors) even if no DevTools frontend was running. I did this because I thought the components stacks would be very helpful, and a lot of RN developers don't even run the DevTools UI to otherwise get them. (Also there would be no other way to get them for errors logged during mount.)\r\n\r\nUnfortunately this had the observable effect of changing the source code line shown for the errors/warnings in debugger tooling (where the actual call to the native `console.error` is made) from `YellowBox.js` (the RN override) to the DevTools `backend.js` script. Some people complained, so this PR removes that default behavior<sup>1</sup>.\r\n\r\nThis should not affect the browser/DOM extension. I have tested to confirm this in the browser. I tested the change in RN by building the `react-native-core` backend and patching my local version of React Native.\r\n\r\nResolves https://github.com/facebook/react-native/issues/26788\r\n\r\n<sup>1</sup> I'm not sure I understand why the previous behavior (of showing the `YellowBox.js` override location) was preferable to showing the DevTools backend. Neither is the location of the original caller. I've asked for clarification on the RN issue. If we decide to remove the DevTools override though, this is the way to do it.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

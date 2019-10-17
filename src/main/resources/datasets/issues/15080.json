@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15080",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15080/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15080/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15080/events",
+  "html_url": "https://github.com/facebook/react/issues/15080",
+  "id": 419249211,
+  "node_id": "MDU6SXNzdWU0MTkyNDkyMTE=",
+  "number": 15080,
+  "title": "Consider exporting `batchedUpdates` from React",
+  "user": {
+    "login": "markerikson",
+    "id": 1128784,
+    "node_id": "MDQ6VXNlcjExMjg3ODQ=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1128784?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/markerikson",
+    "html_url": "https://github.com/markerikson",
+    "followers_url": "https://api.github.com/users/markerikson/followers",
+    "following_url": "https://api.github.com/users/markerikson/following{/other_user}",
+    "gists_url": "https://api.github.com/users/markerikson/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/markerikson/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/markerikson/subscriptions",
+    "organizations_url": "https://api.github.com/users/markerikson/orgs",
+    "repos_url": "https://api.github.com/users/markerikson/repos",
+    "events_url": "https://api.github.com/users/markerikson/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/markerikson/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-03-10T23:51:41Z",
+  "updated_at": "2019-08-24T08:26:01Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "ReactDOM and React Native both currently export an `unstable_batchedUpdates` API.  Because batching is a renderer/reconciliation-level concern, this API is exported by the renderer packages, not the core `react` package.\r\n\r\nThe React team has recently encouraged the Redux team to make use of `unstable_batchedUpdates` in React-Redux.  However, this becomes complicated due to how that API is being exported.\r\n\r\nIt's possible to deal with this at the bundler level.  Some experimentation shows that creating an alternate file with a `.native.js` extension will cause that to be picked up by the RN bundler, as in this example:\r\n\r\n```js\r\n// batch.js\r\nimport {unstable_batchedUpdates} from \"./react-dom\";\r\n\r\n// ./react-dom.js\r\nexport {unstable_batchedUpdates} from \"react-dom\"\r\n\r\n// ./react-dom.native.js\r\nexport {unstable_batchedUpdates} from \"react-native\"\r\n```\r\n\r\nHowever, this does not handle the case where an alternative React renderer is being used.  The [list of other React renderers is continuing to grow](https://github.com/chentsulin/awesome-react-renderer), which means that a React library that needs batching would have to deal with that situation in some way.  This becomes extremely complicated when you start considering variations on bundlers, module formats, and build environments.\r\n\r\nIt would be extremely beneficial if the React core itself exported a `batchedUpdates` API.  That could default to being a noop wrapper like `(callback) => callback()` if no suitable implementation was available.\r\n\r\nI know that `unstable_batchedUpdates()` is, uh... \"unstable\".  However, the React team has stated that \"it's the most stable of the unstable APIs\", and \"half of Facebook depends on this\".\r\n\r\nI think it would really help the ecosystem if some form of this API was solidified and exported from the core React package itself.",
+  "closed_by": null
+}

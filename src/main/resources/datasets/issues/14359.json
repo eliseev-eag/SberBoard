@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14359",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14359/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14359/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14359/events",
+  "html_url": "https://github.com/facebook/react/pull/14359",
+  "id": 385997707,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjM0ODQyMTM2",
+  "number": 14359,
+  "title": "[Fire] Add initial build infrastructure",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2018-11-30T01:23:29Z",
+  "updated_at": "2018-11-30T18:41:05Z",
+  "closed_at": "2018-11-30T11:52:35Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14359",
+    "html_url": "https://github.com/facebook/react/pull/14359",
+    "diff_url": "https://github.com/facebook/react/pull/14359.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14359.patch"
+  },
+  "body": "This adds:\r\n\r\n* `react-dom/unstable-fire` entry point\r\n* `react-dom/src/fire` folder which is where we'll put the implementation files\r\n* A new host config in `react-dom/src/fire/ReactFireHostConfig`. Currently it just re-exports the old one, but you can verify it works by uncommenting the `console.log` in there.\r\n* A new entry in `bundles.js`, `forks.js`, and a new inlining alias `react-reconciler/inline.fire` for our host config. This also means there's `yarn flow fire` now.\r\n* A new entry point in `react-dom/src/fire/ReactFire`. It is a copy-paste of `ReactDOM` entry point with fixed relative paths. Its main purpose it just to show that the setup works — we'll fully replace the actual content later. Importantly, it references `react-reconciler/inline.fire`.\r\n* Running `yarn test-fire` and `yarn test-fire-prod` now stubs `react-dom` with `react-dom/unstable-fire`. You can verify this by commenting out `console.log`s in the Fire host config and in the Fire entry point.\r\n* There's a new fixture now. To get it working you'd need to run `yarn build react/index,fire --type=UMD_DEV`.\r\n\r\nAfter this PR is merged we can rebase @trueadm's initial work on top.\r\n\r\nNote: I decided to go with `ReactFire` rather than `ReactDOMFire` because we already know it's DOM and Dominic feels it's already getting too verbose for his taste. :P ",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

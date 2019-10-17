@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10979",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10979/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10979/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10979/events",
+  "html_url": "https://github.com/facebook/react/pull/10979",
+  "id": 261790333,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQzOTk0Njkw",
+  "number": 10979,
+  "title": "fix(examples/todo): don't submit empty values",
+  "user": {
+    "login": "pi0",
+    "id": 5158436,
+    "node_id": "MDQ6VXNlcjUxNTg0MzY=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/5158436?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/pi0",
+    "html_url": "https://github.com/pi0",
+    "followers_url": "https://api.github.com/users/pi0/followers",
+    "following_url": "https://api.github.com/users/pi0/following{/other_user}",
+    "gists_url": "https://api.github.com/users/pi0/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/pi0/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/pi0/subscriptions",
+    "organizations_url": "https://api.github.com/users/pi0/orgs",
+    "repos_url": "https://api.github.com/users/pi0/repos",
+    "events_url": "https://api.github.com/users/pi0/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/pi0/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-09-29T22:43:01Z",
+  "updated_at": "2017-09-30T15:20:01Z",
+  "closed_at": "2017-09-30T15:20:01Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10979",
+    "html_url": "https://github.com/facebook/react/pull/10979",
+    "diff_url": "https://github.com/facebook/react/pull/10979.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10979.patch"
+  },
+  "body": "This PR fixes a problem in the live example on the homepage which we can submit empty todo items:\r\n\r\n<img src=\"https://user-images.githubusercontent.com/5158436/31038629-cb4577aa-a584-11e7-86b1-9dc047fb375f.png\" width=\"250px\" />\r\n\r\n",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

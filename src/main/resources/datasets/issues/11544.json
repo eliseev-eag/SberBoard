@@ -1,0 +1,91 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11544",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11544/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11544/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11544/events",
+  "html_url": "https://github.com/facebook/react/issues/11544",
+  "id": 273480874,
+  "node_id": "MDU6SXNzdWUyNzM0ODA4NzQ=",
+  "number": 11544,
+  "title": "Ignore system directories in the build script",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 71502270,
+      "node_id": "MDU6TGFiZWw3MTUwMjI3MA==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Build%20Infrastructure",
+      "name": "Component: Build Infrastructure",
+      "color": "f9d0c4",
+      "default": false
+    },
+    {
+      "id": 52079258,
+      "node_id": "MDU6TGFiZWw1MjA3OTI1OA==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Difficulty:%20starter",
+      "name": "Difficulty: starter",
+      "color": "94ce52",
+      "default": false
+    },
+    {
+      "id": 725156255,
+      "node_id": "MDU6TGFiZWw3MjUxNTYyNTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/good%20first%20issue%20(taken)",
+      "name": "good first issue (taken)",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2017-11-13T15:58:01Z",
+  "updated_at": "2017-11-13T18:21:35Z",
+  "closed_at": "2017-11-13T18:21:34Z",
+  "author_association": "MEMBER",
+  "body": "Just noticed that running `./scripts/release/build.js -v 16.1.1` gives me:\r\n\r\n```\r\n ERROR  ENOTDIR: not a directory, open '/Users/gaearon/p/react/packages/.DS_Store/package.json'\r\n\r\nError: \r\n    at Object.fs.openSync (fs.js:653:18)\r\n    at fs.readFileSync (fs.js:554:33)\r\n    at readdirSync.filter.dir (/Users/gaearon/p/react/scripts/release/utils.js:31:36)\r\n    at Array.filter (<anonymous>)\r\n    at getPublicPackages (/Users/gaearon/p/react/scripts/release/utils.js:29:36)\r\n```\r\n\r\nWe should ignore system directories there.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

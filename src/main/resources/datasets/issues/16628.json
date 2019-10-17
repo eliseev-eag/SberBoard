@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16628",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16628/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16628/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16628/events",
+  "html_url": "https://github.com/facebook/react/pull/16628",
+  "id": 487712420,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzEyOTE3MTcw",
+  "number": 16628,
+  "title": "[react-events] Tap responder",
+  "user": {
+    "login": "necolas",
+    "id": 239676,
+    "node_id": "MDQ6VXNlcjIzOTY3Ng==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/239676?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/necolas",
+    "html_url": "https://github.com/necolas",
+    "followers_url": "https://api.github.com/users/necolas/followers",
+    "following_url": "https://api.github.com/users/necolas/following{/other_user}",
+    "gists_url": "https://api.github.com/users/necolas/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/necolas/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/necolas/subscriptions",
+    "organizations_url": "https://api.github.com/users/necolas/orgs",
+    "repos_url": "https://api.github.com/users/necolas/repos",
+    "events_url": "https://api.github.com/users/necolas/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/necolas/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 1296748300,
+      "node_id": "MDU6TGFiZWwxMjk2NzQ4MzAw",
+      "url": "https://api.github.com/repos/facebook/react/labels/React%20Flare",
+      "name": "React Flare",
+      "color": "63f2ff",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-08-31T00:47:35Z",
+  "updated_at": "2019-09-05T00:09:34Z",
+  "closed_at": "2019-09-05T00:09:34Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16628",
+    "html_url": "https://github.com/facebook/react/pull/16628",
+    "diff_url": "https://github.com/facebook/react/pull/16628.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16628.patch"
+  },
+  "body": "This is a partial replacement for the 'Press' responder:\r\n\r\n1. `useTap` is scoped to pointers (no keyboard support). Our current thinking is\r\nthat \"responders\" should be limited to working with pointers, and that they can\r\nbe combined with 'useKeyboard' in user-space. For example, we might create a\r\n'usePress' hook in user-space that combines 'useTap' with 'useKeyboard' to react\r\nto both pointers and keyboard interactions.\r\n\r\n2. `useTap` cancels the gesture once the pointer moves over an element that is\r\nnot within the responder target's subtree. This differs from `usePress` (and\r\nReact Native), where the gesture remains active after the pointer exits the\r\ntarget's subtree and is restarted once the pointer reenters. One of the\r\ndrawbacks with the `usePress` behavior is that it requires repeatedly measuring\r\nDOM elements (which can cause jank) to perform hit region tests. `useTap` avoids\r\ndoing this and relies on `document.elementFromPoint` only to support the\r\nTouchEvent fallbacks.\r\n\r\n3. `useTap` calls `onTapUpdate` when the active gesture's state changes,\r\n`onTapEnd` when the gesture successfully completes. and `onTapCancel` when it\r\nfails. There is no `onTap` callback. `usePress` did not explicitly report back\r\nwhen the gesture failed, and product developers were confused about the\r\ndifference between `onPress` and `onPressEnd`.\r\n\r\n4. `useTap` explicitly separates the PointerEvent implementation from the\r\nMouseEvent/TouchEvent fallback.\r\n\r\n5. `useTap` has better unit test coverage . All pointer types and the fallback\r\nenvironment are tested. The shape of the gesture state object is also defined\r\nand tested.\r\n\r\n[Demo](https://codesandbox.io/s/latest-responder-build-rz96j30rp)",
+  "closed_by": {
+    "login": "necolas",
+    "id": 239676,
+    "node_id": "MDQ6VXNlcjIzOTY3Ng==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/239676?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/necolas",
+    "html_url": "https://github.com/necolas",
+    "followers_url": "https://api.github.com/users/necolas/followers",
+    "following_url": "https://api.github.com/users/necolas/following{/other_user}",
+    "gists_url": "https://api.github.com/users/necolas/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/necolas/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/necolas/subscriptions",
+    "organizations_url": "https://api.github.com/users/necolas/orgs",
+    "repos_url": "https://api.github.com/users/necolas/repos",
+    "events_url": "https://api.github.com/users/necolas/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/necolas/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

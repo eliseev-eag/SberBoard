@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10993",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10993/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10993/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10993/events",
+  "html_url": "https://github.com/facebook/react/issues/10993",
+  "id": 261862848,
+  "node_id": "MDU6SXNzdWUyNjE4NjI4NDg=",
+  "number": 10993,
+  "title": "React 16 fails to rehydrate noscripts",
+  "user": {
+    "login": "wchargin",
+    "id": 4317806,
+    "node_id": "MDQ6VXNlcjQzMTc4MDY=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/4317806?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/wchargin",
+    "html_url": "https://github.com/wchargin",
+    "followers_url": "https://api.github.com/users/wchargin/followers",
+    "following_url": "https://api.github.com/users/wchargin/following{/other_user}",
+    "gists_url": "https://api.github.com/users/wchargin/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/wchargin/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/wchargin/subscriptions",
+    "organizations_url": "https://api.github.com/users/wchargin/orgs",
+    "repos_url": "https://api.github.com/users/wchargin/repos",
+    "events_url": "https://api.github.com/users/wchargin/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/wchargin/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710332294,
+      "node_id": "MDU6TGFiZWw3MTAzMzIyOTQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Server%20Rendering",
+      "name": "Component: Server Rendering",
+      "color": "d4c5f9",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2017-09-30T18:25:41Z",
+  "updated_at": "2017-10-10T23:58:15Z",
+  "closed_at": "2017-10-10T18:35:44Z",
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nBug.\r\n\r\n**What is the current behavior?**\r\nAs of React 16, `<noscript dangerouslySetInnerHTML={...} />`s are not properly rehydrated. Equivalent code works in React 15.\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem via https://jsfiddle.net or similar (template: https://jsfiddle.net/ebsrpraL/).**\r\nConsider the following server-side code:\r\n```js\r\nconst React = require('react');\r\nconst ReactDOMServer = require('react-dom/server');\r\n\r\nclass Main extends React.Component {\r\n\r\n    render() {\r\n        const component = React.createElement('strong', {}, 'Hello!');\r\n        const contents = ReactDOMServer.renderToStaticMarkup(component);\r\n        console.log(\"--- Contents: \" + contents);\r\n        return React.createElement('noscript', {\r\n            dangerouslySetInnerHTML: {__html: contents},\r\n        }, null);\r\n    }\r\n\r\n}\r\n\r\nfunction createApp() {\r\n    return React.createElement(Main, {}, null);\r\n}\r\n\r\nconsole.log(ReactDOMServer.renderToString(createApp()));\r\n```\r\nThis code works fine in Reacts 15 and 16 alike; the outputs are similar:\r\n```\r\n// React 15\r\n--- Contents: <strong>Hello!</strong>\r\n<noscript data-reactroot=\"\" data-reactid=\"1\" data-react-checksum=\"1795300394\"><strong>Hello!</strong></noscript>\r\n\r\n// React 16\r\n--- Contents: <strong>Hello!</strong>\r\n<noscript data-reactroot=\"\"><strong>Hello!</strong></noscript>\r\n```\r\n\r\nNow, consider the following application ([jsbin](https://jsbin.com/xonayepave/edit?html,output)):\r\n```html\r\n<!DOCTYPE html>\r\n<html>\r\n<body>\r\n\r\n<!-- React 16 (exhibits bug) -->\r\n<script crossorigin src=\"https://unpkg.com/react@16/umd/react.development.js\"></script>\r\n<script crossorigin src=\"https://unpkg.com/react-dom@16/umd/react-dom.development.js\"></script>\r\n\r\n<!-- React 15 (does not exhibit bug) -->\r\n<!--\r\n<script crossorigin src=\"https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.js\"></script>\r\n<script crossorigin src=\"https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.js\"></script>\r\n-->\r\n\r\n\r\n<div id=\"target\"><noscript data-reactroot=\"\"><strong>Hello!</strong></noscript></div>\r\n\r\n<script>\r\nclass Main extends React.Component {\r\n\r\n    render() {\r\n        const contents = '<strong>Hello!</strong>';\r\n        console.log(\"--- Contents: \" + contents);\r\n        return React.createElement('noscript', {\r\n            dangerouslySetInnerHTML: {__html: contents},\r\n        }, null);\r\n    }\r\n\r\n}\r\n\r\nfunction createApp() {\r\n    return React.createElement(Main, {}, null);\r\n}\r\n\r\n(ReactDOM.hydrate || ReactDOM.render)(\r\n    createApp(), document.getElementById('target'));\r\n\r\nconsole.log(\"Initialized.\");\r\n</script>\r\n\r\n</body>\r\n</html>\r\n```\r\n\r\nIn React 16, this displays the following in the console:\r\n```\r\n[log] --- Contents: <strong>Hello!</strong>\r\n[err] Warning: Prop `dangerouslySetInnerHTML` did not match. Server: \"&lt;strong&gt;Hello!&lt;/strong&gt;\" Client: \"<strong>Hello!</strong>\"\r\n[log] Initialized.\r\n```\r\n\r\nIf you swap the comment blocks in the HTML so that React 15 is used, the code works just fine: there are no warnings. (This is true regardless of whether you change the contents of `div#target` from the React 16 output to the React 15 output.)\r\n\r\nThe error message confuses me; it states that the server output is\r\n```\r\n&lt;strong&gt;Hello!&lt;/strong&gt;\r\n```\r\nbut this is not consistent with the output of the server-side code (neither the \"Contents\" nor the final markup emitted has HTML entities).\r\n\r\nPlease note that this is important because it breaks [the only known workaround][workaround] to #1252.\r\n\r\n[workaround]: https://github.com/facebook/react/issues/1252#issuecomment-246161590\r\n\r\nI believe that this may be specific to `noscript`s, because if one replaces all occurrences of `noscript` with `div` then the example works fine in React 16.\r\n\r\n**What is the expected behavior?**\r\nRendering a component with `renderToString` and then rehydrating that component verbatim should not yield an error.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nRegression from 15 to 16. Tested in Chrome v61.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9679",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9679/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9679/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9679/events",
+  "html_url": "https://github.com/facebook/react/pull/9679",
+  "id": 228428322,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTIwNDIxNjE3",
+  "number": 9679,
+  "title": "Provide non-standard stack with invalid type warnings",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 13,
+  "created_at": "2017-05-12T23:09:55Z",
+  "updated_at": "2017-05-21T17:08:55Z",
+  "closed_at": "2017-05-15T19:39:39Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9679",
+    "html_url": "https://github.com/facebook/react/pull/9679",
+    "diff_url": "https://github.com/facebook/react/pull/9679.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9679.patch"
+  },
+  "body": "I need rich information with full filenames for Create React App so I can show component stack prominently and map it back to source snippets.\r\n\r\nIdeally I want it for all warnings, but the \"invalid type\" is the most common and useful one, and I'd like to start with it. I'm sending this against 15.6 because I want to get it in soon, and start iterating on this idea. Maybe we'll drop it in 16, or maybe not. I want to play with it for a while. If it works well I’ll send another PR against master later to do this in a more generic way.\r\n\r\nThe stack object format is `Array<{fileName: string | null, lineNumber: number | null, functionName: string | null}>`. `console.stack()` and `console.stackEnd()` does not really exist, but we’ll define it in CRA environment, and possibly in RN in the future. If it works well we can look at proposing a standard since it can be useful for other use cases too.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

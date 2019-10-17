@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12586",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12586/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12586/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12586/events",
+  "html_url": "https://github.com/facebook/react/pull/12586",
+  "id": 312705545,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTgwNDQxMTc2",
+  "number": 12586,
+  "title": "Don't bail on new context Provider if a legacy provider rendered above",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2018-04-09T22:10:34Z",
+  "updated_at": "2018-04-26T21:11:14Z",
+  "closed_at": "2018-04-26T19:59:18Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12586",
+    "html_url": "https://github.com/facebook/react/pull/12586",
+    "diff_url": "https://github.com/facebook/react/pull/12586.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12586.patch"
+  },
+  "body": "This fixes https://github.com/facebook/react/issues/12551, https://github.com/ReactTraining/react-router/issues/6072.\r\n\r\nArguably we don't *have to* fix it but it's pretty confusing to debug and I expect this to be a hurdle to libraries adopting new context while the ecosystem hasn't fully migrated yet (for example React Router already has a bug about this: https://github.com/ReactTraining/react-router/issues/6072).\r\n\r\nThis **only** affects the `Provider` bailout, and relaxes it to not bail out on constant children if there's a legacy provider above. This shouldn't make modern-only code any slower, and I think would help products move to new context sooner. \r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

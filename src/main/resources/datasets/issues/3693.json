@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3693",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3693/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3693/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3693/events",
+  "html_url": "https://github.com/facebook/react/pull/3693",
+  "id": 69357079,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzM2MTAxNTY=",
+  "number": 3693,
+  "title": "SSL/TLSize all the things! (convert http:// to https:// where appropriate)",
+  "user": {
+    "login": "reedloden",
+    "id": 352251,
+    "node_id": "MDQ6VXNlcjM1MjI1MQ==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/352251?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/reedloden",
+    "html_url": "https://github.com/reedloden",
+    "followers_url": "https://api.github.com/users/reedloden/followers",
+    "following_url": "https://api.github.com/users/reedloden/following{/other_user}",
+    "gists_url": "https://api.github.com/users/reedloden/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/reedloden/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/reedloden/subscriptions",
+    "organizations_url": "https://api.github.com/users/reedloden/orgs",
+    "repos_url": "https://api.github.com/users/reedloden/repos",
+    "events_url": "https://api.github.com/users/reedloden/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/reedloden/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-04-18T22:52:58Z",
+  "updated_at": "2015-04-20T20:46:52Z",
+  "closed_at": "2015-04-20T18:02:29Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3693",
+    "html_url": "https://github.com/facebook/react/pull/3693",
+    "diff_url": "https://github.com/facebook/react/pull/3693.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3693.patch"
+  },
+  "body": "Update links to use https:// where it is supported. There's probably a lot\nmore that could be fixed, but these are the core ones I found (especially\nthe download links in order to prevent MITM attacks). Note that there are\nsome fb.me links that will redirect to http:// even while accessed over\nhttps://, but this seemed like the best way to fix those for now.\n\nNOTE: Only non-third-party files were modified. There are references to\nhttp:// URLs in vendored/third-party files, but seems appropriate to fix\nupstream for those rather than editing the files.\n\nAlso, copy one image locally to the blog, as it was hotlinking to a site\nthat did not support https://.\n\nLast, use youtube-nocookie.com instead of youtube.com for video embeds,\nas the former doesn't try to set a cookie on load (privacy enhancement).\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

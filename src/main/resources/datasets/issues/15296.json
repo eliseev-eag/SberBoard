@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15296",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15296/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15296/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15296/events",
+  "html_url": "https://github.com/facebook/react/pull/15296",
+  "id": 428312040,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjY2NzEwMTk4",
+  "number": 15296,
+  "title": "Retry Lazy promise when rejected",
+  "user": {
+    "login": "varoot",
+    "id": 1557736,
+    "node_id": "MDQ6VXNlcjE1NTc3MzY=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1557736?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/varoot",
+    "html_url": "https://github.com/varoot",
+    "followers_url": "https://api.github.com/users/varoot/followers",
+    "following_url": "https://api.github.com/users/varoot/following{/other_user}",
+    "gists_url": "https://api.github.com/users/varoot/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/varoot/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/varoot/subscriptions",
+    "organizations_url": "https://api.github.com/users/varoot/orgs",
+    "repos_url": "https://api.github.com/users/varoot/repos",
+    "events_url": "https://api.github.com/users/varoot/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/varoot/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-04-02T15:58:52Z",
+  "updated_at": "2019-10-06T03:57:38Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15296",
+    "html_url": "https://github.com/facebook/react/pull/15296",
+    "diff_url": "https://github.com/facebook/react/pull/15296.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15296.patch"
+  },
+  "body": "This solves #14254 by resetting `_status` on the lazy component if the promise is rejected.\r\nThis will cause the promise function to be re-triggered when the lazy component is re-rendered.",
+  "closed_by": null
+}

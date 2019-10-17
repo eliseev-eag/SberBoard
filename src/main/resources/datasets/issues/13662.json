@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13662",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13662/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13662/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13662/events",
+  "html_url": "https://github.com/facebook/react/pull/13662",
+  "id": 360498993,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjE1NzQ0NTUw",
+  "number": 13662,
+  "title": "Remove Flow typings from Schedule.js",
+  "user": {
+    "login": "alexeyraspopov",
+    "id": 858295,
+    "node_id": "MDQ6VXNlcjg1ODI5NQ==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/858295?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/alexeyraspopov",
+    "html_url": "https://github.com/alexeyraspopov",
+    "followers_url": "https://api.github.com/users/alexeyraspopov/followers",
+    "following_url": "https://api.github.com/users/alexeyraspopov/following{/other_user}",
+    "gists_url": "https://api.github.com/users/alexeyraspopov/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/alexeyraspopov/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/alexeyraspopov/subscriptions",
+    "organizations_url": "https://api.github.com/users/alexeyraspopov/orgs",
+    "repos_url": "https://api.github.com/users/alexeyraspopov/repos",
+    "events_url": "https://api.github.com/users/alexeyraspopov/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/alexeyraspopov/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2018-09-15T02:24:41Z",
+  "updated_at": "2018-09-15T03:11:24Z",
+  "closed_at": "2018-09-15T02:55:24Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13662",
+    "html_url": "https://github.com/facebook/react/pull/13662",
+    "diff_url": "https://github.com/facebook/react/pull/13662.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13662.patch"
+  },
+  "body": "As described in https://github.com/facebook/react/pull/13582, this file needs to be as close to ES5 as possible. Flow pragma (`@flow`) was deleted but there was still a single function signature. Removing it in this PR.\r\n\r\nNot sure about what should be done to the `export` statement in the end though.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

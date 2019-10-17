@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13150",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13150/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13150/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13150/events",
+  "html_url": "https://github.com/facebook/react/issues/13150",
+  "id": 338355342,
+  "node_id": "MDU6SXNzdWUzMzgzNTUzNDI=",
+  "number": 13150,
+  "title": "Enzyme + Context API = Warning: Detected multiple renderers concurrently rendering the same context provider",
+  "user": {
+    "login": "stereobooster",
+    "id": 179534,
+    "node_id": "MDQ6VXNlcjE3OTUzNA==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/179534?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/stereobooster",
+    "html_url": "https://github.com/stereobooster",
+    "followers_url": "https://api.github.com/users/stereobooster/followers",
+    "following_url": "https://api.github.com/users/stereobooster/following{/other_user}",
+    "gists_url": "https://api.github.com/users/stereobooster/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/stereobooster/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/stereobooster/subscriptions",
+    "organizations_url": "https://api.github.com/users/stereobooster/orgs",
+    "repos_url": "https://api.github.com/users/stereobooster/repos",
+    "events_url": "https://api.github.com/users/stereobooster/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/stereobooster/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    },
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 21,
+  "created_at": "2018-07-04T18:43:22Z",
+  "updated_at": "2019-01-29T07:25:39Z",
+  "closed_at": "2018-07-06T23:04:46Z",
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?** Bug, I guess\r\n\r\n**What is the current behavior?** \r\n\r\n\r\n```\r\n  console.error node_modules/fbjs/lib/warning.js:33\r\n    Warning: Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.\r\n```\r\n\r\nSteps to reproduce the behavior:\r\n1. `git clone https://github.com/stereobooster/react-context-issue`\r\n2. `cd react-context-issue`\r\n3. `yarn`\r\n4. `yarn test`\r\n\r\n**What is the expected behavior?** no warning\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?** React 16.4. Browser not affected, because error is in node.js\r\n\r\nOpen this because of https://github.com/facebook/react/pull/13127#issuecomment-402527012\r\n\r\nIssue happens because of Enzyme (https://github.com/airbnb/enzyme/issues/1693), code is unreleased, so I copy-pasted it from master. \r\n\r\nI'm looking for advice or some clue on how to fix this, so I would be able to create PR in Enzyme repo (or in React repo if this is the case). Thank you.\r\n\r\n",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

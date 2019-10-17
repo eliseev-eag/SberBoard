@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14088",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14088/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14088/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14088/events",
+  "html_url": "https://github.com/facebook/react/issues/14088",
+  "id": 377127825,
+  "node_id": "MDU6SXNzdWUzNzcxMjc4MjU=",
+  "number": 14088,
+  "title": "eslint-plugin-react-hooks does not work with wrapped components",
+  "user": {
+    "login": "AlexanderShushunov",
+    "id": 5528356,
+    "node_id": "MDQ6VXNlcjU1MjgzNTY=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/5528356?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/AlexanderShushunov",
+    "html_url": "https://github.com/AlexanderShushunov",
+    "followers_url": "https://api.github.com/users/AlexanderShushunov/followers",
+    "following_url": "https://api.github.com/users/AlexanderShushunov/following{/other_user}",
+    "gists_url": "https://api.github.com/users/AlexanderShushunov/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/AlexanderShushunov/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/AlexanderShushunov/subscriptions",
+    "organizations_url": "https://api.github.com/users/AlexanderShushunov/orgs",
+    "repos_url": "https://api.github.com/users/AlexanderShushunov/repos",
+    "events_url": "https://api.github.com/users/AlexanderShushunov/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/AlexanderShushunov/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2018-11-04T07:11:11Z",
+  "updated_at": "2019-04-13T06:46:19Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "``` js\r\nexport const Counter = () => {\r\n    let count, setCount;\r\n    if (0 === 1) {\r\n        [count, setCount] = useState(0);\r\n    }\r\n    return count;\r\n};\r\nconst wrapper = Component => Component;\r\nexport const WrappedCounter = wrapper(() => {\r\n    let count, setCount;\r\n    if (0 === 1) {\r\n        [count, setCount] = useState(0);\r\n    }\r\n    return count;\r\n});\r\n```\r\nLinter shows an error in the first component, but ignore the second one.",
+  "closed_by": null
+}

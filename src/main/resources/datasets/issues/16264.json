@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16264",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16264/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16264/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16264/events",
+  "html_url": "https://github.com/facebook/react/pull/16264",
+  "id": 475071080,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzAyODk0NDE2",
+  "number": 16264,
+  "title": "[Flare] Tweaks to Flare system design and API",
+  "user": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 1296748300,
+      "node_id": "MDU6TGFiZWwxMjk2NzQ4MzAw",
+      "url": "https://api.github.com/repos/facebook/react/labels/React%20Flare",
+      "name": "React Flare",
+      "color": "63f2ff",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2019-07-31T10:46:21Z",
+  "updated_at": "2019-08-01T18:08:59Z",
+  "closed_at": "2019-08-01T18:08:55Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16264",
+    "html_url": "https://github.com/facebook/react/pull/16264",
+    "diff_url": "https://github.com/facebook/react/pull/16264.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16264.patch"
+  },
+  "body": "This PR makes some slight adjustments to the exist Flare event system design. After internal testing and from feedback, it was found that passing responders as a React Element to host components, then having detached listeners led to unnecessary boilerplate and some issues around composability. To address these concerns the follow changes have been made:\r\n\r\n## `useListener` -> `useResponder`\r\n\r\nThere was confusion as to why `useListener` was actually using an Event Responder, but was named \"useListener\". Now the hook is `useResponder`, which takes an Event Responder and returns and Event Listener. \r\n\r\n## `responders` prop -> `listeners` prop\r\n\r\nNow that the `useResponder` hook returns a discrete event listener object, this now gets passed to host components rather than supplying a responder as a React Element on the host component.\r\n\r\nTo demonstrate these changes, here's a before and after:\r\n\r\n```jsx\r\n// Before\r\nfunction PressableButton({onPress}) {\r\n  useListener(PressResponder, {onPress});\r\n\r\n  return (\r\n    <button responders={<PressResponder />}>Press me</button>\r\n  );\r\n}\r\n\r\n// After\r\nfunction PressableButton({onPress}) {\r\n  const pressListener = useResponder(PressResponder, {onPress});\r\n\r\n  return (\r\n    <button listeners={pressListener}>Press me</button>\r\n  );\r\n}\r\n```\r\n\r\nThis design change allows us to explore composing the sequence of listeners, allowing for more complex interactions. It also makes the bindings between listeners and their responders more explicit and less magical.",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

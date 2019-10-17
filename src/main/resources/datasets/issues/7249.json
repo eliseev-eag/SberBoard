@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7249",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7249/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7249/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7249/events",
+  "html_url": "https://github.com/facebook/react/issues/7249",
+  "id": 165043655,
+  "node_id": "MDU6SXNzdWUxNjUwNDM2NTU=",
+  "number": 7249,
+  "title": "Attributes and properties for Custom Components",
+  "user": {
+    "login": "edoardocavazza",
+    "id": 3907295,
+    "node_id": "MDQ6VXNlcjM5MDcyOTU=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3907295?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/edoardocavazza",
+    "html_url": "https://github.com/edoardocavazza",
+    "followers_url": "https://api.github.com/users/edoardocavazza/followers",
+    "following_url": "https://api.github.com/users/edoardocavazza/following{/other_user}",
+    "gists_url": "https://api.github.com/users/edoardocavazza/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/edoardocavazza/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/edoardocavazza/subscriptions",
+    "organizations_url": "https://api.github.com/users/edoardocavazza/orgs",
+    "repos_url": "https://api.github.com/users/edoardocavazza/repos",
+    "events_url": "https://api.github.com/users/edoardocavazza/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/edoardocavazza/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 33,
+  "created_at": "2016-07-12T10:19:46Z",
+  "updated_at": "2019-04-06T21:27:01Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a _feature_ or report a _bug_?**\nFeature\n**What is the current behavior?**\nCustom component's properties are always set as attribute.\n**What is the expected behavior?**\nMaybe React should watch at the static `observedAttributes` property  for custom elements (https://w3c.github.io/webcomponents/spec/custom/) and then decide to set an attribute or an instance property. Otherwise, objects and array could be always passed as properties, in order to avoid `<custom-element prop=\"[object Object]\"></custom-element>`.\n",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7875",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7875/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7875/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7875/events",
+  "html_url": "https://github.com/facebook/react/pull/7875",
+  "id": 181021727,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODc5ODY3NDY=",
+  "number": 7875,
+  "title": "New Top Level Menu Item Tutorial, Tutorial ported from @spicyj's Internal Course",
+  "user": {
+    "login": "ericnakagawa",
+    "id": 23874,
+    "node_id": "MDQ6VXNlcjIzODc0",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/23874?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ericnakagawa",
+    "html_url": "https://github.com/ericnakagawa",
+    "followers_url": "https://api.github.com/users/ericnakagawa/followers",
+    "following_url": "https://api.github.com/users/ericnakagawa/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ericnakagawa/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ericnakagawa/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ericnakagawa/subscriptions",
+    "organizations_url": "https://api.github.com/users/ericnakagawa/orgs",
+    "repos_url": "https://api.github.com/users/ericnakagawa/repos",
+    "events_url": "https://api.github.com/users/ericnakagawa/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ericnakagawa/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 17,
+  "created_at": "2016-10-04T22:30:34Z",
+  "updated_at": "2016-10-07T00:40:09Z",
+  "closed_at": "2016-10-07T00:40:09Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7875",
+    "html_url": "https://github.com/facebook/react/pull/7875",
+    "diff_url": "https://github.com/facebook/react/pull/7875.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7875.patch"
+  },
+  "body": "- added top level 'Tutorial' section\n- added a 2 images to help illustrate tutorial\n- ran through the tutorial and made small edits for clarity\n",
+  "closed_by": {
+    "login": "ericnakagawa",
+    "id": 23874,
+    "node_id": "MDQ6VXNlcjIzODc0",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/23874?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ericnakagawa",
+    "html_url": "https://github.com/ericnakagawa",
+    "followers_url": "https://api.github.com/users/ericnakagawa/followers",
+    "following_url": "https://api.github.com/users/ericnakagawa/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ericnakagawa/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ericnakagawa/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ericnakagawa/subscriptions",
+    "organizations_url": "https://api.github.com/users/ericnakagawa/orgs",
+    "repos_url": "https://api.github.com/users/ericnakagawa/repos",
+    "events_url": "https://api.github.com/users/ericnakagawa/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ericnakagawa/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

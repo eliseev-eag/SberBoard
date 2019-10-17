@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7172",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7172/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7172/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7172/events",
+  "html_url": "https://github.com/facebook/react/pull/7172",
+  "id": 163524347,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzYwNjgyNDU=",
+  "number": 7172,
+  "title": "[WIP] Gulp conversion",
+  "user": {
+    "login": "maxdeviant",
+    "id": 1486634,
+    "node_id": "MDQ6VXNlcjE0ODY2MzQ=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1486634?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/maxdeviant",
+    "html_url": "https://github.com/maxdeviant",
+    "followers_url": "https://api.github.com/users/maxdeviant/followers",
+    "following_url": "https://api.github.com/users/maxdeviant/following{/other_user}",
+    "gists_url": "https://api.github.com/users/maxdeviant/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/maxdeviant/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/maxdeviant/subscriptions",
+    "organizations_url": "https://api.github.com/users/maxdeviant/orgs",
+    "repos_url": "https://api.github.com/users/maxdeviant/repos",
+    "events_url": "https://api.github.com/users/maxdeviant/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/maxdeviant/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-07-02T16:01:53Z",
+  "updated_at": "2016-07-02T20:03:58Z",
+  "closed_at": "2016-07-02T20:03:58Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7172",
+    "html_url": "https://github.com/facebook/react/pull/7172",
+    "diff_url": "https://github.com/facebook/react/pull/7172.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7172.patch"
+  },
+  "body": "Starting work on converting the build process/tooling from Grunt to Gulp, which would resolve #4927 and is relevant to #6656.\n\n**Progress**\n- [x] `gulp lint`\n- [x] `gulp flow`\n- [x] `gulp version-check`\n- [ ] `gulp build`\n  - [x] `gulp build:react-dom`\n- [ ] `gulp release`\n- [ ] ???\n\nI think we should keep the tasks in separate files, as I think this makes things more manageable than one giant gulpfile. Regardless, it would be trival to combine them back into one file, if desired.\n\n@zpao Would you like to do the conversion in one fell swoop? Or would it be better to merge smaller PRs to slowly convert to Gulp?\n",
+  "closed_by": {
+    "login": "maxdeviant",
+    "id": 1486634,
+    "node_id": "MDQ6VXNlcjE0ODY2MzQ=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1486634?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/maxdeviant",
+    "html_url": "https://github.com/maxdeviant",
+    "followers_url": "https://api.github.com/users/maxdeviant/followers",
+    "following_url": "https://api.github.com/users/maxdeviant/following{/other_user}",
+    "gists_url": "https://api.github.com/users/maxdeviant/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/maxdeviant/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/maxdeviant/subscriptions",
+    "organizations_url": "https://api.github.com/users/maxdeviant/orgs",
+    "repos_url": "https://api.github.com/users/maxdeviant/repos",
+    "events_url": "https://api.github.com/users/maxdeviant/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/maxdeviant/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

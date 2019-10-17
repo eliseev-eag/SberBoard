@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16917",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16917/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16917/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16917/events",
+  "html_url": "https://github.com/facebook/react/issues/16917",
+  "id": 499262271,
+  "node_id": "MDU6SXNzdWU0OTkyNjIyNzE=",
+  "number": 16917,
+  "title": "[Feature Request] Allow useEffect/useLayoutEffect to have previous values",
+  "user": {
+    "login": "dmytro-lymarenko",
+    "id": 14829154,
+    "node_id": "MDQ6VXNlcjE0ODI5MTU0",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/14829154?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dmytro-lymarenko",
+    "html_url": "https://github.com/dmytro-lymarenko",
+    "followers_url": "https://api.github.com/users/dmytro-lymarenko/followers",
+    "following_url": "https://api.github.com/users/dmytro-lymarenko/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dmytro-lymarenko/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dmytro-lymarenko/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dmytro-lymarenko/subscriptions",
+    "organizations_url": "https://api.github.com/users/dmytro-lymarenko/orgs",
+    "repos_url": "https://api.github.com/users/dmytro-lymarenko/repos",
+    "events_url": "https://api.github.com/users/dmytro-lymarenko/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dmytro-lymarenko/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-09-27T06:34:06Z",
+  "updated_at": "2019-09-27T13:35:24Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nFeature\r\n**What is the current behavior?**\r\nSay I have some count and an effect described to its update:\r\n\r\n```typescript\r\nconst [count, setCount] = useState(0);\r\n\r\nuseEffect(\r\n\t() => {\r\n\t\t// I need to do something with the difference of how the count was changed\r\n\t\t// const diff = count - prevCount;\r\n\t},\r\n\t[count]\r\n);\r\n```\r\nwith current implementation I need to use `useRef` to have previous count:\r\n```typescript\r\nconst [count, setCount] = useState(0);\r\nconst prevCountRef = useRef<number>(0);\r\n\r\nuseEffect(\r\n\t() => {\r\n\t\t// I need to do something with the difference of how the count was changed\r\n\t\tconst diff = count - prevCountRef.current;\r\n\r\n\t\tprevCountRef.current = count;\r\n\t},\r\n\t[count]\r\n);\r\n```\r\nwhich is actually not so bad if I need to track only one diff, right? ;)\r\n\r\n**What is the expected behavior?**\r\n\r\nSo I would like to have previous dependencies right inside `useEffect` like this:\r\n\r\n```typescript\r\nconst [count, setCount] = useState(0);\r\n\r\nuseEffect(\r\n\t([prevCount]) => {\r\n\t\t// I need to do something with the difference of how the count was changed\r\n\t\tconst diff = count - (prevCount || 0);\r\n\t},\r\n\t[count]\r\n);\r\n```\r\nSo the callback in useEffect gets the same array as dependencies but with previous values.\r\nFor first render we can pass to the callback either empty array or undefined.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\"react\": \"^16.9.0\"",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4379",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4379/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4379/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4379/events",
+  "html_url": "https://github.com/facebook/react/pull/4379",
+  "id": 95032740,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mzk5NTg3NDQ=",
+  "number": 4379,
+  "title": "Add more information about defaultValue",
+  "user": {
+    "login": "eriklharper",
+    "id": 821864,
+    "node_id": "MDQ6VXNlcjgyMTg2NA==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/821864?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/eriklharper",
+    "html_url": "https://github.com/eriklharper",
+    "followers_url": "https://api.github.com/users/eriklharper/followers",
+    "following_url": "https://api.github.com/users/eriklharper/following{/other_user}",
+    "gists_url": "https://api.github.com/users/eriklharper/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/eriklharper/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/eriklharper/subscriptions",
+    "organizations_url": "https://api.github.com/users/eriklharper/orgs",
+    "repos_url": "https://api.github.com/users/eriklharper/repos",
+    "events_url": "https://api.github.com/users/eriklharper/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/eriklharper/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2015-07-14T20:29:19Z",
+  "updated_at": "2015-07-17T21:24:55Z",
+  "closed_at": "2015-07-17T02:13:31Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4379",
+    "html_url": "https://github.com/facebook/react/pull/4379",
+    "diff_url": "https://github.com/facebook/react/pull/4379.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4379.patch"
+  },
+  "body": "I came across an issue on a React project where I needed to programatically set the default value of an input as the result of an async call.  (I was prepopulating a zip code field from the Google Maps Geocoding API).  It didn't work when I passed in an updated defaultValue prop, until I came across this StackOverflow: http://stackoverflow.com/questions/30146105/react-input-defaultvalue-doesnt-update-with-state.  I was able to get it to do what I wanted by passing in the value prop instead.\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

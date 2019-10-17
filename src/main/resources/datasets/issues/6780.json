@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6780",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6780/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6780/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6780/events",
+  "html_url": "https://github.com/facebook/react/pull/6780",
+  "id": 155013256,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzAxODUxNzQ=",
+  "number": 6780,
+  "title": "Add PropTypes for `map`, `set`, `weakMap`, `weakSet`, `setOf`",
+  "user": {
+    "login": "chicoxyzzy",
+    "id": 1507086,
+    "node_id": "MDQ6VXNlcjE1MDcwODY=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1507086?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/chicoxyzzy",
+    "html_url": "https://github.com/chicoxyzzy",
+    "followers_url": "https://api.github.com/users/chicoxyzzy/followers",
+    "following_url": "https://api.github.com/users/chicoxyzzy/following{/other_user}",
+    "gists_url": "https://api.github.com/users/chicoxyzzy/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/chicoxyzzy/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/chicoxyzzy/subscriptions",
+    "organizations_url": "https://api.github.com/users/chicoxyzzy/orgs",
+    "repos_url": "https://api.github.com/users/chicoxyzzy/repos",
+    "events_url": "https://api.github.com/users/chicoxyzzy/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/chicoxyzzy/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 13,
+  "created_at": "2016-05-16T11:43:32Z",
+  "updated_at": "2016-05-16T15:57:04Z",
+  "closed_at": "2016-05-16T15:57:04Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6780",
+    "html_url": "https://github.com/facebook/react/pull/6780",
+    "diff_url": "https://github.com/facebook/react/pull/6780.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6780.patch"
+  },
+  "body": "I think that's not fair that only [Symbol was added](https://github.com/facebook/react/pull/6377/files) as PropType from ES2015 spec.\n\nSo here are\n- `PropTypes.set`\n- `PropTypes.weakSet`\n- `PropTypes.map`\n- `PropTypes.weakMap`\n- `PropTypes.setOf`\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

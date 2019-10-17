@@ -1,0 +1,97 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16822",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16822/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16822/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16822/events",
+  "html_url": "https://github.com/facebook/react/pull/16822",
+  "id": 495290094,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzE4ODY1Mjc3",
+  "number": 16822,
+  "title": "[react-ui] Remove event object warnings",
+  "user": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 69105383,
+      "node_id": "MDU6TGFiZWw2OTEwNTM4Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Browser:%20IE",
+      "name": "Browser: IE",
+      "color": "c7def8",
+      "default": false
+    },
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 1296748300,
+      "node_id": "MDU6TGFiZWwxMjk2NzQ4MzAw",
+      "url": "https://api.github.com/repos/facebook/react/labels/React%20Flare",
+      "name": "React Flare",
+      "color": "63f2ff",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2019-09-18T15:11:59Z",
+  "updated_at": "2019-09-19T19:09:37Z",
+  "closed_at": "2019-09-19T10:46:18Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16822",
+    "html_url": "https://github.com/facebook/react/pull/16822",
+    "diff_url": "https://github.com/facebook/react/pull/16822.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16822.patch"
+  },
+  "body": "This might be a bit controversial, but one that I've spent the last few weeks considering quite a bit. Today, we don't allow for the new event system to supply methods on the event object to do `preventDefault` and `stopPropagation`. The reasoning for this was based a few important points:\r\n\r\n1. Events are used in hooks, and hooks aren't meant to be able to affect if another event hook triggers or doesn't.\r\n2. We want to be able to determine during server-side render what events should be prevented and propagated when it comes to replaying the events during client-side hydration.\r\n3. For RN, the idea is that we can tell the native side this information declaratively ahead of time.\r\n\r\n## Propagation\r\n\r\nWe already have a form of `stopPropagation` in the current event system. The `Keyboard` responder, which has a way of basically doing `stopPropagation` (the return value can allow for propagation). Given that we've not run into that many issues with keyboard, this kind of already means that point 1 above was probably not needed. The hooks themselves still work, it's just their callbacks that are affected, and that doesn't actually invalidate the Rules of Hooks after-all.\r\n\r\n## Preventing native behaviour\r\n\r\nThere is a very important use-cases for where we want to be able to conditionally `preventDefault` at runtime – when handling user focus management.  In the cases where we want to \"control\" where focus goes using keyboard input, we `preventDefault` on the key that is being pressed so native focus doesn't fire. However, what if we don't want to control the focus? There's no way to conditionally switch of preventing the native event part way through a key press. I also noticed that we end up having all these complex abstractions to try and work around the fact that we have these constraints in place, often ending up generating far more code in the process.\r\n\r\n## What about event replaying?\r\n\r\nIt would be ideal to know ahead of time if something gets prevent defaulted or not, but it feels like we're building all this complex architecture just to handle a bunch of event replaying cases. Keyboard input probably shouldn't even be replayed, and that's one of the main cases where you need conditional propagation and preventing of default behaviour. Pointer events should probably always prevent default, or at least always be declaratively known – so at least they make sense when replaying. Things like scroll should ideally never be prevented, as it leads to a terrible UX.\r\n\r\n## What about RN?\r\n\r\nHandling of keyboard on RN is another tricky case. I'm not sure of the best way forward here. It gets even more complex because it would be nice in an ideal world for this problem space to be handled in part with Fabric, where we can yield to JS without causing as much of an issue as there is today without Fabric.",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

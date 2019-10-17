@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9446",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9446/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9446/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9446/events",
+  "html_url": "https://github.com/facebook/react/issues/9446",
+  "id": 222136519,
+  "node_id": "MDU6SXNzdWUyMjIxMzY1MTk=",
+  "number": 9446,
+  "title": "Show a warning when value is provided to a checkbox input",
+  "user": {
+    "login": "srph",
+    "id": 5093058,
+    "node_id": "MDQ6VXNlcjUwOTMwNTg=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/5093058?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/srph",
+    "html_url": "https://github.com/srph",
+    "followers_url": "https://api.github.com/users/srph/followers",
+    "following_url": "https://api.github.com/users/srph/following{/other_user}",
+    "gists_url": "https://api.github.com/users/srph/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/srph/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/srph/subscriptions",
+    "organizations_url": "https://api.github.com/users/srph/orgs",
+    "repos_url": "https://api.github.com/users/srph/repos",
+    "events_url": "https://api.github.com/users/srph/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/srph/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2017-04-17T13:52:16Z",
+  "updated_at": "2019-01-29T18:04:20Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\nFeature\r\n\r\n**What is the current behavior?**\r\n\r\nA checkbox input can have a `value` prop which is most likely ignored (it should be `checked`).\r\n\r\n**What is the expected behavior?**\r\n\r\nI think we should throw a warning if a user provides a `value` instead of `checked` to a `<input type=\"checkbox\" />`.",
+  "closed_by": null
+}

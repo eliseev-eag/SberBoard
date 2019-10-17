@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7202",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7202/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7202/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7202/events",
+  "html_url": "https://github.com/facebook/react/pull/7202",
+  "id": 164106393,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzY0NTM0NjY=",
+  "number": 7202,
+  "title": "Make ReactPerf.start() work during reconciliation",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2016-07-06T15:37:55Z",
+  "updated_at": "2016-07-06T22:25:19Z",
+  "closed_at": "2016-07-06T22:21:52Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7202",
+    "html_url": "https://github.com/facebook/react/pull/7202",
+    "diff_url": "https://github.com/facebook/react/pull/7202.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7202.patch"
+  },
+  "body": "Currently `ReactPerf.start()` and `ReactPerf.stop()` calls don’t work correctly during reconciliation.\nAs far as I know this was occasionally the case before 15.x too—they weren’t working reliably.\n\nGenerally we advise that people call `ReactPerf` methods from the console but React components for this appears to be a popular pattern so it’s best we support it.\n\nI took the failing test from #7191 and built this PR on top of it.\nThis should fix the problem so people can write “measurer” components like this:\n\n``` js\n    var Measurer = React.createClass({\n      componentWillMount() {\n        ReactPerf.start();\n      },\n      componentDidMount() {\n        ReactPerf.stop();\n      },\n      componentWillUpdate() {\n        ReactPerf.start();\n      },\n      componentDidUpdate() {\n        ReactPerf.stop();\n      },\n      render() {\n        // Force reconciliation despite constant element\n        return React.cloneElement(this.props.children);\n      },\n    });\n\n    var container = document.createElement('div');\n    ReactDOM.render(<Measurer><App /></Measurer>, container);\n    expect(ReactPerf.getWasted()).toEqual([]);\n\n    ReactDOM.render(<Measurer><App /></Measurer>, container);\n    expect(ReactPerf.getWasted()).toEqual(/* ... */);\n```\n\nWhy didn’t this work before? We used to only start and stop timers while `isProfiling` is true. However this doesn’t work correctly if the user flips `isProfiling` **during** reconciliation. Then we have mismatching `begin`/`end` timer calls.\n\nTo fix this, I decided to always measure methods regardless of whether we are in profiling mode. I suppose calls to `performanceNow()` can’t be expensive, can they? And we are only doing this in `__DEV__` anyway.\n\nThe logic is changed so that we **don’t record** the measurements if `isProfiling` is `false`. So we just make them and throw them away. This lets us avoid writing the logic to recover from `isProfiling` flipping in the middle of reconciliation.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

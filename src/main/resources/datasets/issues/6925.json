@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6925",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6925/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6925/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6925/events",
+  "html_url": "https://github.com/facebook/react/pull/6925",
+  "id": 157560284,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzE5NDAzNzU=",
+  "number": 6925,
+  "title": "Basic react & webpack example",
+  "user": {
+    "login": "zarkoselak",
+    "id": 7656256,
+    "node_id": "MDQ6VXNlcjc2NTYyNTY=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/7656256?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zarkoselak",
+    "html_url": "https://github.com/zarkoselak",
+    "followers_url": "https://api.github.com/users/zarkoselak/followers",
+    "following_url": "https://api.github.com/users/zarkoselak/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zarkoselak/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zarkoselak/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zarkoselak/subscriptions",
+    "organizations_url": "https://api.github.com/users/zarkoselak/orgs",
+    "repos_url": "https://api.github.com/users/zarkoselak/repos",
+    "events_url": "https://api.github.com/users/zarkoselak/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zarkoselak/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2016-05-30T21:54:47Z",
+  "updated_at": "2017-01-26T18:06:57Z",
+  "closed_at": "2017-01-26T18:06:57Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6925",
+    "html_url": "https://github.com/facebook/react/pull/6925",
+    "diff_url": "https://github.com/facebook/react/pull/6925.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6925.patch"
+  },
+  "body": "React and webpack example based on @andreypopp basic-commonjs example \n",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

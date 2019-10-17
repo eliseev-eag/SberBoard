@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14330",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14330/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14330/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14330/events",
+  "html_url": "https://github.com/facebook/react/pull/14330",
+  "id": 384516041,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjMzNzAxMDgw",
+  "number": 14330,
+  "title": "Remove usage of `fbjs/lib/invariant` in ReactNativeViewConfigRegistry.",
+  "user": {
+    "login": "cpojer",
+    "id": 13352,
+    "node_id": "MDQ6VXNlcjEzMzUy",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/13352?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/cpojer",
+    "html_url": "https://github.com/cpojer",
+    "followers_url": "https://api.github.com/users/cpojer/followers",
+    "following_url": "https://api.github.com/users/cpojer/following{/other_user}",
+    "gists_url": "https://api.github.com/users/cpojer/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/cpojer/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/cpojer/subscriptions",
+    "organizations_url": "https://api.github.com/users/cpojer/orgs",
+    "repos_url": "https://api.github.com/users/cpojer/repos",
+    "events_url": "https://api.github.com/users/cpojer/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/cpojer/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2018-11-26T21:23:20Z",
+  "updated_at": "2018-11-26T21:48:09Z",
+  "closed_at": "2018-11-26T21:48:09Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14330",
+    "html_url": "https://github.com/facebook/react/pull/14330",
+    "diff_url": "https://github.com/facebook/react/pull/14330.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14330.patch"
+  },
+  "body": "I'm trying to remove fbjs from react-native. This is the corresponding change necessary in the React repo.\r\n\r\nI am unsure how to test this so I'm assuming that CI will tell me if something is wrong here. Also please tell me if the `invariant` entry in `package.json` shall go somewhere else. I'm assuming since this is synced to react-native for product uses that `invariant` as a dev dependency on the root is good enough for testing.",
+  "closed_by": {
+    "login": "cpojer",
+    "id": 13352,
+    "node_id": "MDQ6VXNlcjEzMzUy",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/13352?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/cpojer",
+    "html_url": "https://github.com/cpojer",
+    "followers_url": "https://api.github.com/users/cpojer/followers",
+    "following_url": "https://api.github.com/users/cpojer/following{/other_user}",
+    "gists_url": "https://api.github.com/users/cpojer/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/cpojer/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/cpojer/subscriptions",
+    "organizations_url": "https://api.github.com/users/cpojer/orgs",
+    "repos_url": "https://api.github.com/users/cpojer/repos",
+    "events_url": "https://api.github.com/users/cpojer/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/cpojer/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3059",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3059/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3059/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3059/events",
+  "html_url": "https://github.com/facebook/react/issues/3059",
+  "id": 56681651,
+  "node_id": "MDU6SXNzdWU1NjY4MTY1MQ==",
+  "number": 3059,
+  "title": "Support Map interface for props",
+  "user": {
+    "login": "swannodette",
+    "id": 13516,
+    "node_id": "MDQ6VXNlcjEzNTE2",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/13516?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/swannodette",
+    "html_url": "https://github.com/swannodette",
+    "followers_url": "https://api.github.com/users/swannodette/followers",
+    "following_url": "https://api.github.com/users/swannodette/following{/other_user}",
+    "gists_url": "https://api.github.com/users/swannodette/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/swannodette/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/swannodette/subscriptions",
+    "organizations_url": "https://api.github.com/users/swannodette/orgs",
+    "repos_url": "https://api.github.com/users/swannodette/repos",
+    "events_url": "https://api.github.com/users/swannodette/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/swannodette/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 739777675,
+      "node_id": "MDU6TGFiZWw3Mzk3Nzc2NzU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Component%20API",
+      "name": "Component: Component API",
+      "color": "d4c5f9",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 35,
+  "created_at": "2015-02-05T15:07:24Z",
+  "updated_at": "2017-11-03T15:54:15Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "High performance Map implementations are starting to appear in modern web browsers. By supporting the Map interface users can now instead supply props as an Immutable.js or ClojureScript Map instance. This change would not even require providing an equality hook for the first pass as users can memoize props themselves.\n\nFor users embracing immutable data this is a huge change, it means that styles can be defined in code, overridden and shared efficiently. React DOM elements with memoized immutable props can be skipped over, etc.\n",
+  "closed_by": null
+}

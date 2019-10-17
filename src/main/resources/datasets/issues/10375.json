@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10375",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10375/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10375/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10375/events",
+  "html_url": "https://github.com/facebook/react/pull/10375",
+  "id": 247858752,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTM0MDU5NDk2",
+  "number": 10375,
+  "title": "[fiber-debugger] Fix the debugger to match changes to Fiber",
+  "user": {
+    "login": "pomber",
+    "id": 1911623,
+    "node_id": "MDQ6VXNlcjE5MTE2MjM=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1911623?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/pomber",
+    "html_url": "https://github.com/pomber",
+    "followers_url": "https://api.github.com/users/pomber/followers",
+    "following_url": "https://api.github.com/users/pomber/following{/other_user}",
+    "gists_url": "https://api.github.com/users/pomber/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/pomber/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/pomber/subscriptions",
+    "organizations_url": "https://api.github.com/users/pomber/orgs",
+    "repos_url": "https://api.github.com/users/pomber/repos",
+    "events_url": "https://api.github.com/users/pomber/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/pomber/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2017-08-03T22:58:36Z",
+  "updated_at": "2017-08-04T18:45:21Z",
+  "closed_at": "2017-08-04T18:45:20Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10375",
+    "html_url": "https://github.com/facebook/react/pull/10375",
+    "diff_url": "https://github.com/facebook/react/pull/10375.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10375.patch"
+  },
+  "body": "[`formatPriority`](https://github.com/facebook/react/blob/master/fixtures/fiber-debugger/src/Fibers.js#L253) was throwing \"Unknown priority.\" when `fiber.progressedPriority` is undefined (which happens as soon as you run the app).\r\n\r\n```\r\nUncaught Error: Unknown priority.\r\n    at formatPriority (Fibers.js:253)\r\n    at Fibers.js:317\r\n    at Array.map (<anonymous>)\r\n    at Fibers (Fibers.js:282)\r\n    at mountIndeterminateComponent (react-dom.development.js:9774)\r\n    at beginWork (react-dom.development.js:9972)\r\n    at performUnitOfWork (react-dom.development.js:11932)\r\n    at workLoop (react-dom.development.js:12042)\r\n    at HTMLUnknownElement.callCallback (react-dom.development.js:1304)\r\n    at Object.invokeGuardedCallbackDev (react-dom.development.js:1343)\r\n```",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

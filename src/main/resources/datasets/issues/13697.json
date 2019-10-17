@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13697",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13697/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13697/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13697/events",
+  "html_url": "https://github.com/facebook/react/pull/13697",
+  "id": 361969235,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjE2ODA4ODI3",
+  "number": 13697,
+  "title": "Restore global window.event after event dispatching (#13688)",
+  "user": {
+    "login": "sergei-startsev",
+    "id": 748074,
+    "node_id": "MDQ6VXNlcjc0ODA3NA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/748074?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sergei-startsev",
+    "html_url": "https://github.com/sergei-startsev",
+    "followers_url": "https://api.github.com/users/sergei-startsev/followers",
+    "following_url": "https://api.github.com/users/sergei-startsev/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sergei-startsev/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sergei-startsev/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sergei-startsev/subscriptions",
+    "organizations_url": "https://api.github.com/users/sergei-startsev/orgs",
+    "repos_url": "https://api.github.com/users/sergei-startsev/repos",
+    "events_url": "https://api.github.com/users/sergei-startsev/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sergei-startsev/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 22,
+  "created_at": "2018-09-19T23:56:38Z",
+  "updated_at": "2019-02-05T16:47:06Z",
+  "closed_at": "2018-09-25T15:24:24Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13697",
+    "html_url": "https://github.com/facebook/react/pull/13697",
+    "diff_url": "https://github.com/facebook/react/pull/13697.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13697.patch"
+  },
+  "body": "Used @ConradIrwin [suggestion](https://github.com/facebook/react/issues/13688#issuecomment-422939757) to fix #13688.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

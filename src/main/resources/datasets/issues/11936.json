@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11936",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11936/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11936/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11936/events",
+  "html_url": "https://github.com/facebook/react/issues/11936",
+  "id": 285220446,
+  "node_id": "MDU6SXNzdWUyODUyMjA0NDY=",
+  "number": 11936,
+  "title": "Remove legacy TODOs in ReactElement.createFactory() and ReactElementValidator.createFactoryWithValidation() ",
+  "user": {
+    "login": "onstash",
+    "id": 4272832,
+    "node_id": "MDQ6VXNlcjQyNzI4MzI=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/4272832?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/onstash",
+    "html_url": "https://github.com/onstash",
+    "followers_url": "https://api.github.com/users/onstash/followers",
+    "following_url": "https://api.github.com/users/onstash/following{/other_user}",
+    "gists_url": "https://api.github.com/users/onstash/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/onstash/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/onstash/subscriptions",
+    "organizations_url": "https://api.github.com/users/onstash/orgs",
+    "repos_url": "https://api.github.com/users/onstash/repos",
+    "events_url": "https://api.github.com/users/onstash/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/onstash/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 139653724,
+      "node_id": "MDU6TGFiZWwxMzk2NTM3MjQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Core%20Utilities",
+      "name": "Component: Core Utilities",
+      "color": "c5def5",
+      "default": false
+    },
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2017-12-30T19:47:53Z",
+  "updated_at": "2018-01-04T19:42:44Z",
+  "closed_at": "2018-01-04T19:42:44Z",
+  "author_association": "CONTRIBUTOR",
+  "body": "I came across this line -\r\n https://github.com/facebook/react/blob/dd8b387b69d73f9e8ed4f995ccb3cd927c0d33e3/packages/react/src/ReactElement.js#L269\r\n\r\nI am interested in taking this up as my first pull-request. Please let me know what is required for adding a warning and it's related test/s. Thank you. 😅",
+  "closed_by": {
+    "login": "onstash",
+    "id": 4272832,
+    "node_id": "MDQ6VXNlcjQyNzI4MzI=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/4272832?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/onstash",
+    "html_url": "https://github.com/onstash",
+    "followers_url": "https://api.github.com/users/onstash/followers",
+    "following_url": "https://api.github.com/users/onstash/following{/other_user}",
+    "gists_url": "https://api.github.com/users/onstash/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/onstash/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/onstash/subscriptions",
+    "organizations_url": "https://api.github.com/users/onstash/orgs",
+    "repos_url": "https://api.github.com/users/onstash/repos",
+    "events_url": "https://api.github.com/users/onstash/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/onstash/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

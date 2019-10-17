@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4348",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4348/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4348/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4348/events",
+  "html_url": "https://github.com/facebook/react/pull/4348",
+  "id": 94442049,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mzk3NDEwMDg=",
+  "number": 4348,
+  "title": "remove controll character from 02-displaying-data.ja-JP.md",
+  "user": {
+    "login": "himkt",
+    "id": 5164000,
+    "node_id": "MDQ6VXNlcjUxNjQwMDA=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/5164000?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/himkt",
+    "html_url": "https://github.com/himkt",
+    "followers_url": "https://api.github.com/users/himkt/followers",
+    "following_url": "https://api.github.com/users/himkt/following{/other_user}",
+    "gists_url": "https://api.github.com/users/himkt/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/himkt/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/himkt/subscriptions",
+    "organizations_url": "https://api.github.com/users/himkt/orgs",
+    "repos_url": "https://api.github.com/users/himkt/repos",
+    "events_url": "https://api.github.com/users/himkt/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/himkt/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2015-07-11T06:08:27Z",
+  "updated_at": "2015-07-17T21:24:54Z",
+  "closed_at": "2015-07-11T18:36:33Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4348",
+    "html_url": "https://github.com/facebook/react/pull/4348",
+    "diff_url": "https://github.com/facebook/react/pull/4348.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4348.patch"
+  },
+  "body": "I found garbled text (it was controll character) in 02-displaying-data.ja-JP.md and fixed it.\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

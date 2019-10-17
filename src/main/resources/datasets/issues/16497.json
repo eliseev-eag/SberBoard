@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16497",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16497/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16497/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16497/events",
+  "html_url": "https://github.com/facebook/react/issues/16497",
+  "id": 482567929,
+  "node_id": "MDU6SXNzdWU0ODI1Njc5Mjk=",
+  "number": 16497,
+  "title": "DevTools: Show component file path",
+  "user": {
+    "login": "Cretezy",
+    "id": 2672503,
+    "node_id": "MDQ6VXNlcjI2NzI1MDM=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/2672503?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Cretezy",
+    "html_url": "https://github.com/Cretezy",
+    "followers_url": "https://api.github.com/users/Cretezy/followers",
+    "following_url": "https://api.github.com/users/Cretezy/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Cretezy/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Cretezy/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Cretezy/subscriptions",
+    "organizations_url": "https://api.github.com/users/Cretezy/orgs",
+    "repos_url": "https://api.github.com/users/Cretezy/repos",
+    "events_url": "https://api.github.com/users/Cretezy/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Cretezy/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2019-08-19T23:05:12Z",
+  "updated_at": "2019-10-11T13:54:56Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\nFeature.\r\n\r\n**What is the current behavior?**\r\n\r\nThe new DevTools doesn't show the component file path as did the v3 version.\r\n\r\n**What is the expected behavior?**\r\n\r\nIt would be great to show the component file path, it's a really important feature when working in a large codebase.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nReact DevTools v4 is affected, v3 had it.\r\n",
+  "closed_by": null
+}

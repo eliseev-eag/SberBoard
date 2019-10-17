@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11855",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11855/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11855/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11855/events",
+  "html_url": "https://github.com/facebook/react/issues/11855",
+  "id": 282152813,
+  "node_id": "MDU6SXNzdWUyODIxNTI4MTM=",
+  "number": 11855,
+  "title": "Bug in scryRenderedComponentsWithType",
+  "user": {
+    "login": "pronebird",
+    "id": 704044,
+    "node_id": "MDQ6VXNlcjcwNDA0NA==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/704044?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/pronebird",
+    "html_url": "https://github.com/pronebird",
+    "followers_url": "https://api.github.com/users/pronebird/followers",
+    "following_url": "https://api.github.com/users/pronebird/following{/other_user}",
+    "gists_url": "https://api.github.com/users/pronebird/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/pronebird/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/pronebird/subscriptions",
+    "organizations_url": "https://api.github.com/users/pronebird/orgs",
+    "repos_url": "https://api.github.com/users/pronebird/repos",
+    "events_url": "https://api.github.com/users/pronebird/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/pronebird/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 139734344,
+      "node_id": "MDU6TGFiZWwxMzk3MzQzNDQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Test%20Utils",
+      "name": "Component: Test Utils",
+      "color": "eb6420",
+      "default": false
+    },
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2017-12-14T16:08:20Z",
+  "updated_at": "2018-08-09T14:05:59Z",
+  "closed_at": "2018-08-09T14:05:59Z",
+  "author_association": "NONE",
+  "body": "`scryRenderedComponentsWithType` spits the following:\r\n\r\n> findAllInRenderedTree(...): instance must be a composite component\r\n\r\ntest case:\r\n\r\n```\r\nclass Accordion extends React.Component {\r\n  render() {\r\n    return (<div>{ this.props.children }</div>);\r\n  }\r\n}\r\nconst tree = ReactTestUtils.renderIntoDocument(\r\n      <div>\r\n        <Accordion height={ 0 }>\r\n          <div>Hello</div>\r\n        </Accordion>\r\n      </div>\r\n);\r\n\r\nconst elements = ReactTestUtils.scryRenderedComponentsWithType(tree, Accordion);\r\nexpect(elements[0].clientHeight).to.be.equal(0);\r\n```",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

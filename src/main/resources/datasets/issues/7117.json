@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7117",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7117/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7117/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7117/events",
+  "html_url": "https://github.com/facebook/react/pull/7117",
+  "id": 162223778,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzUxNjgzMzI=",
+  "number": 7117,
+  "title": "Add Learning Resources section to the Community Resources on the website",
+  "user": {
+    "login": "tylermcginnis",
+    "id": 2933430,
+    "node_id": "MDQ6VXNlcjI5MzM0MzA=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/2933430?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/tylermcginnis",
+    "html_url": "https://github.com/tylermcginnis",
+    "followers_url": "https://api.github.com/users/tylermcginnis/followers",
+    "following_url": "https://api.github.com/users/tylermcginnis/following{/other_user}",
+    "gists_url": "https://api.github.com/users/tylermcginnis/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/tylermcginnis/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/tylermcginnis/subscriptions",
+    "organizations_url": "https://api.github.com/users/tylermcginnis/orgs",
+    "repos_url": "https://api.github.com/users/tylermcginnis/repos",
+    "events_url": "https://api.github.com/users/tylermcginnis/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/tylermcginnis/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2016-06-24T20:21:53Z",
+  "updated_at": "2017-05-02T13:05:31Z",
+  "closed_at": "2016-10-23T14:27:15Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7117",
+    "html_url": "https://github.com/facebook/react/pull/7117",
+    "diff_url": "https://github.com/facebook/react/pull/7117.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7117.patch"
+  },
+  "body": "This PR is in regards to @gaearon's [tweet](https://twitter.com/dan_abramov/status/746419224541691904) and I'd like to open dialog before this is merged about the best way to approach utilizing community learning resources in the official docs. \n\nMy concern with this \"Learning Resources\" approach is that it could easily become a link dump which would be both ineffective and overwhelming for beginners. The way to avoid a link dump would be to have some form of quality check. However, that may lead to too much effort needed by the core team to keep up with PRs. \n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

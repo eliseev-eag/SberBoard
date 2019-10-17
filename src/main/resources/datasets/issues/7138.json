@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7138",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7138/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7138/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7138/events",
+  "html_url": "https://github.com/facebook/react/pull/7138",
+  "id": 162727167,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzU1MDcwNDY=",
+  "number": 7138,
+  "title": "change tutorial script (success & error is deprecated )",
+  "user": {
+    "login": "hideokamoto",
+    "id": 6883571,
+    "node_id": "MDQ6VXNlcjY4ODM1NzE=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/6883571?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/hideokamoto",
+    "html_url": "https://github.com/hideokamoto",
+    "followers_url": "https://api.github.com/users/hideokamoto/followers",
+    "following_url": "https://api.github.com/users/hideokamoto/following{/other_user}",
+    "gists_url": "https://api.github.com/users/hideokamoto/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/hideokamoto/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/hideokamoto/subscriptions",
+    "organizations_url": "https://api.github.com/users/hideokamoto/orgs",
+    "repos_url": "https://api.github.com/users/hideokamoto/repos",
+    "events_url": "https://api.github.com/users/hideokamoto/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/hideokamoto/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2016-06-28T16:18:11Z",
+  "updated_at": "2016-07-05T20:39:03Z",
+  "closed_at": "2016-07-05T20:39:03Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7138",
+    "html_url": "https://github.com/facebook/react/pull/7138",
+    "diff_url": "https://github.com/facebook/react/pull/7138.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7138.patch"
+  },
+  "body": "tutorial script included following jQuery script\n- success()\n- error()\n\nThere are deprecated in jQuery 1.8, so I replaced them.\n- success() -> done()\n- error() -> fail()\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

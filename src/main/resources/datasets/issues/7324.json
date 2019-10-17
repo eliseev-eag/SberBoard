@@ -1,0 +1,56 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7324",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7324/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7324/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7324/events",
+  "html_url": "https://github.com/facebook/react/issues/7324",
+  "id": 166713601,
+  "node_id": "MDU6SXNzdWUxNjY3MTM2MDE=",
+  "number": 7324,
+  "title": "Optimizing Compiler: Compiling to Internals",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 180616330,
+      "node_id": "MDU6TGFiZWwxODA2MTYzMzA=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Optimizing%20Compiler",
+      "name": "Component: Optimizing Compiler",
+      "color": "bfdadc",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2016-07-21T00:42:29Z",
+  "updated_at": "2016-07-21T00:42:47Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "body": "This optimization is a renderer specific optimization. It is about knowing how React will process a particular component in its internals and then inlining that internal work into the user code.\n\nIt comes in two flavors.\n# Known Host Component\n\n``` js\nfunction Foo(props) {\n  if (props.data.type === 'img') {\n    return <img src={props.data.src} className={props.className} />;\n  }\n  return <span className={props.className}>{props.children}</span>;\n}\n```\n\nInto this:\n\n``` js\nfunction Foo_optimizedMount(props) {\n  if (props.data.type === 'img') {\n    var img = document.createElement('img');\n    img.className = props.className;\n    img.src = props.data.src;\n    return {\n      node: img,\n      listeners: ReactEventListeners.trap(img, 'error', 'load')\n    };\n  }\n  var span = document.createElement('span');\n  span.className = props.className;\n  var children = ReactChildren.mountNestedChildrenIntoParent(this.props.children, span);\n  return { node: span, children };\n}\n\nfunction Foo_optimizedUpdate(instance, oldProps, newProps) {\n  if (oldProps.data.type !== newProps.data.type) {\n    Foo_optimizedUnmount(instance);\n    return Foo_optimizedMount(newProps);\n  }\n  if (props.data.type === 'img') {\n    img.className = props.className;\n    img.src = props.data.src;\n    return instance;\n  }\n  span.className = props.className;\n  ReactChildren.updateNestedChildrenInParent(this.props.children, instance);\n  return instance;\n}\n\nfunction Foo_optimizedUnmount(instance) {\n  if (oldProps.data.type !== newProps.data.type) {\n    Foo_optimizedUnmount(instance);\n    return Foo_optimizedMount(newProps);\n  }\n  if (props.data.type === 'img') {\n    ReactEventListeners.release(instance.listeners);\n  }\n  ReactChildren.unmountNestedChildrenInParent(instance);\n}\n```\n# Composite Components\n\nSimilarly, composite components can pick different code branches to imperatively update its children. For example, a known constant value wouldn't be considered, and comparison of a single property can potentially bail out a tree.\n\nAlthough it is unclear if this has significant benefits over these two other optimizations:\n\nhttps://github.com/facebook/react/issues/3227\nhttps://github.com/facebook/react/issues/7323\n",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11603",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11603/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11603/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11603/events",
+  "html_url": "https://github.com/facebook/react/pull/11603",
+  "id": 275508489,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTUzNzQxMzg5",
+  "number": 11603,
+  "title": "Read debugRenderPhaseSideEffects from GK",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-11-20T21:41:58Z",
+  "updated_at": "2017-11-20T22:05:57Z",
+  "closed_at": "2017-11-20T22:05:54Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11603",
+    "html_url": "https://github.com/facebook/react/pull/11603",
+    "diff_url": "https://github.com/facebook/react/pull/11603.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11603.patch"
+  },
+  "body": "We plan to opt some engineers into this newly-added GK to help identify unsafe side-effects within lifecycle hooks and `setState` callbacks. This PR adds the ability to determine this value at runtime (rather than static as it is for NPM builds) .\r\n\r\nVerified that this inserts the following line to the fbsource and www builds:\r\n\r\n```js\r\nvar debugRenderPhaseSideEffects = require(\"ReactFeatureFlags\").debugRenderPhaseSideEffects;\r\n```\r\n\r\nFor the www build, this should be a simple matter of reading this value from the GK module.\r\n\r\nI'm not sure yet of the best way to inject it for React Native builds, given that the Rollup build reads the value from `ReactFeatureFlags` during initialization. We'll have to make sure that app code injects before `ReactNative` is initialized. I believe this should be possible, but it may depend on how we hoist requires in that environment.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5687",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5687/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5687/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5687/events",
+  "html_url": "https://github.com/facebook/react/pull/5687",
+  "id": 122813833,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTQwMjUyOTA=",
+  "number": 5687,
+  "title": "normalize range input onChange events",
+  "user": {
+    "login": "jquense",
+    "id": 339286,
+    "node_id": "MDQ6VXNlcjMzOTI4Ng==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/339286?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jquense",
+    "html_url": "https://github.com/jquense",
+    "followers_url": "https://api.github.com/users/jquense/followers",
+    "following_url": "https://api.github.com/users/jquense/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jquense/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jquense/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jquense/subscriptions",
+    "organizations_url": "https://api.github.com/users/jquense/orgs",
+    "repos_url": "https://api.github.com/users/jquense/repos",
+    "events_url": "https://api.github.com/users/jquense/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jquense/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 332720629,
+      "node_id": "MDU6TGFiZWwzMzI3MjA2Mjk=",
+      "url": "https://api.github.com/repos/facebook/react/labels/HTML",
+      "name": "HTML",
+      "color": "f7c6c7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2015-12-17T20:10:44Z",
+  "updated_at": "2016-04-01T23:24:02Z",
+  "closed_at": "2016-04-01T23:18:03Z",
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5687",
+    "html_url": "https://github.com/facebook/react/pull/5687",
+    "diff_url": "https://github.com/facebook/react/pull/5687.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5687.patch"
+  },
+  "body": "Addresses the core of #554. ping @jimfb @spicyj \n\nThis plugin is getting large...personally I'd break it out into smaller modules but I didn't want to presume that here, so its all together. The other thing I didn't do was make the obvious DRY changes. There is a common pattern of tracking the active input used by three code branches that could be refactored into something a bit more concise. I have that change locally if ya'll feel like its appropriate for this PR otherwise I can leave the repetition.\n\nThere is also a larger question of whether it makes sense to just run all (or more than just ranges) inputs through this branch, which would also address annoyances similar to #3377 and #3484. That's a sweeping change though and, again, didn't want to presume.\n\nI need to actually test this on old IE (Edge fires input events) but I don't have the vm set up at the moment.\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

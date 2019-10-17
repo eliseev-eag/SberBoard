@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12780",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12780/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12780/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12780/events",
+  "html_url": "https://github.com/facebook/react/pull/12780",
+  "id": 322131699,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTg3MzQxODY0",
+  "number": 12780,
+  "title": "Avoid setting empty value on reset & submit inputs",
+  "user": {
+    "login": "ellsclytn",
+    "id": 8725013,
+    "node_id": "MDQ6VXNlcjg3MjUwMTM=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/8725013?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ellsclytn",
+    "html_url": "https://github.com/ellsclytn",
+    "followers_url": "https://api.github.com/users/ellsclytn/followers",
+    "following_url": "https://api.github.com/users/ellsclytn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ellsclytn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ellsclytn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ellsclytn/subscriptions",
+    "organizations_url": "https://api.github.com/users/ellsclytn/orgs",
+    "repos_url": "https://api.github.com/users/ellsclytn/repos",
+    "events_url": "https://api.github.com/users/ellsclytn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ellsclytn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2018-05-11T00:43:55Z",
+  "updated_at": "2018-08-16T22:39:57Z",
+  "closed_at": "2018-08-16T14:19:05Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12780",
+    "html_url": "https://github.com/facebook/react/pull/12780",
+    "diff_url": "https://github.com/facebook/react/pull/12780.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12780.patch"
+  },
+  "body": "This fixes a regression of #7179. Previously, creating an input with `type='submit' value={undefined}` would result in a Submit button with the text using the browser default for the input type (usually \"Submit\", for en). Currently, passing through `undefined` results in an input with no text at all. The same behaviour can be demonstrated with `type='reset'`.\r\n\r\nResolves #12872 ",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

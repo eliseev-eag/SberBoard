@@ -1,0 +1,97 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5908",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5908/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5908/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5908/events",
+  "html_url": "https://github.com/facebook/react/pull/5908",
+  "id": 128414794,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTcwMDk1MDQ=",
+  "number": 5908,
+  "title": "Support Indeterminate checkboxes",
+  "user": {
+    "login": "jquense",
+    "id": 339286,
+    "node_id": "MDQ6VXNlcjMzOTI4Ng==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/339286?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jquense",
+    "html_url": "https://github.com/jquense",
+    "followers_url": "https://api.github.com/users/jquense/followers",
+    "following_url": "https://api.github.com/users/jquense/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jquense/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jquense/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jquense/subscriptions",
+    "organizations_url": "https://api.github.com/users/jquense/orgs",
+    "repos_url": "https://api.github.com/users/jquense/repos",
+    "events_url": "https://api.github.com/users/jquense/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jquense/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 332720629,
+      "node_id": "MDU6TGFiZWwzMzI3MjA2Mjk=",
+      "url": "https://api.github.com/repos/facebook/react/labels/HTML",
+      "name": "HTML",
+      "color": "f7c6c7",
+      "default": false
+    },
+    {
+      "id": 347968397,
+      "node_id": "MDU6TGFiZWwzNDc5NjgzOTc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Unsolved",
+      "name": "Resolution: Unsolved",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2016-01-24T18:13:34Z",
+  "updated_at": "2016-04-01T19:10:43Z",
+  "closed_at": "2016-04-01T19:07:01Z",
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5908",
+    "html_url": "https://github.com/facebook/react/pull/5908",
+    "diff_url": "https://github.com/facebook/react/pull/5908.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5908.patch"
+  },
+  "body": "Adds support for setting `indeterminate` or `defaultIndeterminate` props on checkbox elements. The tricky bit was properly setting the initial state from existing markup since `indeterminate` is not a content attribute. To that end I added a new IDL Only Attribute flag for DOM properties that does not generate any additional markup for said properties. In addition ReactDOMInput is responsible for setting the initial state based on props at mount.\n\nI went with a controlled/uncontrolled approach for the API since that seemed like the most straight forward, and keeps the coupling to `checked` to a minimum. I am not sure if the caveat about browser behavior differences mentioned in #1798, exists but it's an easy fix to toggle indeterminate to false onChange in the uncontrolled case.\n\ncloses #1798\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

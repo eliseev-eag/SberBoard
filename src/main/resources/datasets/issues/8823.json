@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8823",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8823/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8823/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8823/events",
+  "html_url": "https://github.com/facebook/react/pull/8823",
+  "id": 201694757,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTAyMTUxMjY5",
+  "number": 8823,
+  "title": "PropTypes type checking: Add additional check to UnionType checker",
+  "user": {
+    "login": "johann-sonntagbauer",
+    "id": 1239401,
+    "node_id": "MDQ6VXNlcjEyMzk0MDE=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1239401?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/johann-sonntagbauer",
+    "html_url": "https://github.com/johann-sonntagbauer",
+    "followers_url": "https://api.github.com/users/johann-sonntagbauer/followers",
+    "following_url": "https://api.github.com/users/johann-sonntagbauer/following{/other_user}",
+    "gists_url": "https://api.github.com/users/johann-sonntagbauer/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/johann-sonntagbauer/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/johann-sonntagbauer/subscriptions",
+    "organizations_url": "https://api.github.com/users/johann-sonntagbauer/orgs",
+    "repos_url": "https://api.github.com/users/johann-sonntagbauer/repos",
+    "events_url": "https://api.github.com/users/johann-sonntagbauer/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/johann-sonntagbauer/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2017-01-18T21:17:31Z",
+  "updated_at": "2017-04-10T04:58:59Z",
+  "closed_at": "2017-04-09T21:11:39Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8823",
+    "html_url": "https://github.com/facebook/react/pull/8823",
+    "diff_url": "https://github.com/facebook/react/pull/8823.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8823.patch"
+  },
+  "body": "PropTypes type checking: Add additional check to UnionType checker to ensure only functions are used as argument of oneOfType.\r\n\r\nThis is especially handy to catch typos during PropType definition like for example:\r\n```javascript\r\nGreeting.propTypes = {\r\n  name: React.PropTypes.oneOfType([React.PropTypes.sting, React.PropTypes.func])\r\n};\r\n```\r\n\r\nThe pull request will print a warning \r\n`Invalid argument supplied to oneOfType, expected an array containing check functions.`\r\n",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

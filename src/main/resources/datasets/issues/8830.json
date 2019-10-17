@@ -1,0 +1,91 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8830",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8830/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8830/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8830/events",
+  "html_url": "https://github.com/facebook/react/issues/8830",
+  "id": 201957572,
+  "node_id": "MDU6SXNzdWUyMDE5NTc1NzI=",
+  "number": 8830,
+  "title": "[Umbrella] Async rendering",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 739761016,
+      "node_id": "MDU6TGFiZWw3Mzk3NjEwMTY=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Reconciler",
+      "name": "Component: Reconciler",
+      "color": "f9a798",
+      "default": false
+    },
+    {
+      "id": 270986513,
+      "node_id": "MDU6TGFiZWwyNzA5ODY1MTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Big%20Picture",
+      "name": "Type: Big Picture",
+      "color": "61dafb",
+      "default": false
+    },
+    {
+      "id": 710615342,
+      "node_id": "MDU6TGFiZWw3MTA2MTUzNDI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Umbrella",
+      "name": "Type: Umbrella",
+      "color": "5319e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2017-01-19T19:49:06Z",
+  "updated_at": "2018-09-14T01:34:57Z",
+  "closed_at": "2018-09-14T01:32:45Z",
+  "author_association": "MEMBER",
+  "body": "Async rendering is incomplete. There are bugs with the existing implementation and crucial features that are missing.\r\n\r\nSpecifically, the bugs are related to resuming work after it has been interupted.\r\n\r\nhttps://github.com/facebook/react/pull/9695 was an effort to clean up the bugs without fundamentally changing the underlying model. In the course of working on that branch, we've decided that the underlying model is inherently flawed and needs to change. The tricky case is when low priority work is interrupted by a higher priority update. We want to be able to reconcile again at the higher priority without losing the low priority children, so that we can resume them later. There's no way to do this with the existing model.\r\n\r\nSo we're going to scrap the model and start again.\r\n\r\n### Scrap existing \"progressed work\" implementation and its bugs\r\n\r\nThis will give us a better foundation upon which to build the new model. It should also fix bugs in the triangle demo, although starvation will clearly be worse. We should aim for correctness before comprehensiveness.\r\n\r\n- [x] Add fuzz tester to protect against regressions. [@acdlite] (#9952)\r\n  - Difficult to impossible to write unit tests that provide sufficient coverage, especially ones that are resilient to implementation changes. A fuzz tester provides more safety.\r\n  - Should not make assertions on how work is reused, only on consistency.\r\n- [x] Remove all existing code related to \"progressed\" or \"forked\" work. [@acdlite] (#10008)\r\n- [ ] ~~Split `pendingWorkPriority` from the update priority so that it represents the priority of the subtree, but not the fiber it belongs to. This lets us know whether the children have remaining work.~~\r\n\r\n### Expiration times\r\n\r\nThe next step will be to implement expiration times so that low priority work doesn't. It's possible that expiration times alone are sufficient to generate real product wins, even without the ability to resume interrupted work.\r\n\r\n- [x] Implement expiration times [@acdlite] (#10426)\r\n  - Updates to the same fiber at the same priority level should coalesce (commit all at once).\r\n  - \"Bucket\" updates by rounding expiration times. This may be sufficient the solve to coalescing problem.\r\n\r\n### Async top-level API\r\n\r\n### Keep track of next unit of work per root\r\n\r\n- Is this possible? What about context?\r\n- `scheduleUpdate` (`setState`) currently does not always reach the root, so when we receive an update on a fiber, we don't necessarily know which tree the fiber belongs to.\r\n\r\n### Flush interaction work synchronously\r\n\r\n### Expiration boundaries and blockers (shouldComponentBlock)\r\n\r\nStill figuring out the details for how this will work\r\n\r\n- [x] Components can block rendering using `shouldComponentBlock(props, state)`\r\n  - When a component blocks, React searches for the nearest expiration boundary. Has similar semantics to error boundaries.\r\n  - If/when the update expires, switches to a `renderExpired` tree instead.\r\n  - Unblock using `this.ping` (actual name TK).\r\n\r\n### Resuming interrupted work\r\n\r\nThen we can move onto to addressing the problem of resuming interrupted work.\r\n\r\n- [ ] Implement resuming in the basic case, where the fiber was not touched since the last time we worked on it.\r\n  - `progressedPriority` should represent the priority that the parent last reconciled at.\r\n- [ ] `child` is a set of all children, present and future (and maybe some in the past)?\r\n  - Still figuring out the details.\r\n  - How will re-orders work?\r\n\r\n### Other items\r\n\r\n- [X] Resume mount bug: null is passed as props to constructor [@acdlite] (#9576)\r\n- [x] Resume mount bug: creating a new instance on resume causes refs (or callbacks in user-space) to close over the wrong instance. Fix by reusing the original instance. [@acdlite] (#9608)\r\n- [ ] Image load event may fire before it's been mounted into the DOM. Figure out a way to defer this event (and other applicable ones) until after mount.\r\n- [x] Ensure error boundaries work in incremental mode, e.g. in a hidden subtree.\r\n- [ ] ~Don't commit during `requestIdleCallback`. Wait until the next animation frame, then flush animation work using the last completed priority level. If the work overlaps, we may be able to reuse it. (This item may need to wait until we switch to expiration times.)~\r\n- [X] Ensure work expires even if there are no `rIC` or `rAF` events.\r\n- [ ] ~Solve stale event listeners: When a component receives an interaction event, flush updates in parents and \"simulate\" a render to recreate event handler before calling it.~\r\n- [ ] Defer event dispatching in a proper and fast way. See #9742 and #9580 for context.\r\n- [ ] ~Solve the case where you want to show some fallback content only if the primary content takes too long but not if it is fast. Such as rendering a spinner if an async render takes too long. What if when the general expiration time elapsed for an async tree, we started calling an alternate `renderExpired` tree instead? That way we can render the tree with a spinner, only if it took too long to render.~ This is Suspense.\r\n- [ ] Figure out story around unit-testing async components. We probably just want to force sync mode. What API should we provide to Enzyme/TestUtils to do this?",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

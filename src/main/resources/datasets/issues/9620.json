@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9620",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9620/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9620/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9620/events",
+  "html_url": "https://github.com/facebook/react/issues/9620",
+  "id": 226766021,
+  "node_id": "MDU6SXNzdWUyMjY3NjYwMjE=",
+  "number": 9620,
+  "title": "Warn when `static propTypes/static defaultProps` in ES6 class is a function",
+  "user": {
+    "login": "victor-homyakov",
+    "id": 121449,
+    "node_id": "MDQ6VXNlcjEyMTQ0OQ==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/121449?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/victor-homyakov",
+    "html_url": "https://github.com/victor-homyakov",
+    "followers_url": "https://api.github.com/users/victor-homyakov/followers",
+    "following_url": "https://api.github.com/users/victor-homyakov/following{/other_user}",
+    "gists_url": "https://api.github.com/users/victor-homyakov/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/victor-homyakov/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/victor-homyakov/subscriptions",
+    "organizations_url": "https://api.github.com/users/victor-homyakov/orgs",
+    "repos_url": "https://api.github.com/users/victor-homyakov/repos",
+    "events_url": "https://api.github.com/users/victor-homyakov/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/victor-homyakov/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 139653724,
+      "node_id": "MDU6TGFiZWwxMzk2NTM3MjQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Core%20Utilities",
+      "name": "Component: Core Utilities",
+      "color": "c5def5",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-05-06T12:20:06Z",
+  "updated_at": "2017-10-04T19:41:48Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nBug\r\n\r\n**What is the current behavior?**\r\n```\r\nclass TestWrongPropTypes extends Component {\r\n    static propTypes() {\r\n        return {\r\n            children: PropTypes.string,\r\n            missing: PropTypes.string.isRequired\r\n        };\r\n    }\r\n\r\n    static defaultProps() {\r\n        return { children: 'Default props via static function' };\r\n    }\r\n\r\n    render() {\r\n        return <p>{this.props.children}</p>;\r\n    }\r\n}\r\n```\r\n\r\nIn this example React will silently skip `propTypes` checking and default props setting for `TestWrongPropTypes` component.\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem via https://jsfiddle.net or similar (template: https://jsfiddle.net/84v837e9/).**\r\nhttps://jsbin.com/jidupehebu/edit?js,console\r\nhttps://jsfiddle.net/84v837e9/30/\r\n\r\n**What is the expected behavior?**\r\nI know that in order to work, propTypes definition should be `static get propTypes = {...}` or `TestWrongPropTypes.propTypes = {...}`. But I'd like to have warning like \"propTypes/defaultProps is function but should be either property or getter\" to prevent such errors.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nDiscovered in React 15.X, but probably the same behavior will be also in earlier versions.",
+  "closed_by": null
+}

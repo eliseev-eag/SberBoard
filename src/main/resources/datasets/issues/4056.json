@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4056",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4056/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4056/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4056/events",
+  "html_url": "https://github.com/facebook/react/issues/4056",
+  "id": 86000652,
+  "node_id": "MDU6SXNzdWU4NjAwMDY1Mg==",
+  "number": 4056,
+  "title": "Shallow Renderer should expose rendered component instance",
+  "user": {
+    "login": "jsdf",
+    "id": 1232587,
+    "node_id": "MDQ6VXNlcjEyMzI1ODc=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1232587?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jsdf",
+    "html_url": "https://github.com/jsdf",
+    "followers_url": "https://api.github.com/users/jsdf/followers",
+    "following_url": "https://api.github.com/users/jsdf/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jsdf/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jsdf/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jsdf/subscriptions",
+    "organizations_url": "https://api.github.com/users/jsdf/orgs",
+    "repos_url": "https://api.github.com/users/jsdf/repos",
+    "events_url": "https://api.github.com/users/jsdf/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jsdf/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 204945357,
+      "node_id": "MDU6TGFiZWwyMDQ5NDUzNTc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Shallow%20Renderer",
+      "name": "Component: Shallow Renderer",
+      "color": "eb6420",
+      "default": false
+    },
+    {
+      "id": 52079258,
+      "node_id": "MDU6TGFiZWw1MjA3OTI1OA==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Difficulty:%20starter",
+      "name": "Difficulty: starter",
+      "color": "94ce52",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2015-06-08T02:55:29Z",
+  "updated_at": "2015-10-07T19:52:09Z",
+  "closed_at": "2015-10-07T19:52:09Z",
+  "author_association": "CONTRIBUTOR",
+  "body": "Just as `ReactMount.render` returns the rendered component instance, it seems to me that `ReactShallowRenderer.prototype.render` should return the rendered component or expose it in some other way (maybe a `getRenderedComponent` method) so that when testing stateful components via shallow rendering, assertions can be made against the state of the component instance.\n",
+  "closed_by": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

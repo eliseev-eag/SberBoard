@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7540",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7540/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7540/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7540/events",
+  "html_url": "https://github.com/facebook/react/pull/7540",
+  "id": 172331340,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODIxMTEzODI=",
+  "number": 7540,
+  "title": "Fix minor typo in README.md",
+  "user": {
+    "login": "AgtLucas",
+    "id": 1909761,
+    "node_id": "MDQ6VXNlcjE5MDk3NjE=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1909761?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/AgtLucas",
+    "html_url": "https://github.com/AgtLucas",
+    "followers_url": "https://api.github.com/users/AgtLucas/followers",
+    "following_url": "https://api.github.com/users/AgtLucas/following{/other_user}",
+    "gists_url": "https://api.github.com/users/AgtLucas/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/AgtLucas/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/AgtLucas/subscriptions",
+    "organizations_url": "https://api.github.com/users/AgtLucas/orgs",
+    "repos_url": "https://api.github.com/users/AgtLucas/repos",
+    "events_url": "https://api.github.com/users/AgtLucas/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/AgtLucas/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-08-21T17:31:41Z",
+  "updated_at": "2016-10-04T21:24:09Z",
+  "closed_at": "2016-08-22T01:36:54Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7540",
+    "html_url": "https://github.com/facebook/react/pull/7540",
+    "diff_url": "https://github.com/facebook/react/pull/7540.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7540.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

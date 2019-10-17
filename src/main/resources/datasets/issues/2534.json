@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2534",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2534/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2534/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2534/events",
+  "html_url": "https://github.com/facebook/react/pull/2534",
+  "id": 48953389,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjQ0OTg3MjU=",
+  "number": 2534,
+  "title": "fix textarea does not respond to value prop changing to null (issue #2533)",
+  "user": {
+    "login": "rszewczyk",
+    "id": 2538039,
+    "node_id": "MDQ6VXNlcjI1MzgwMzk=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/2538039?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rszewczyk",
+    "html_url": "https://github.com/rszewczyk",
+    "followers_url": "https://api.github.com/users/rszewczyk/followers",
+    "following_url": "https://api.github.com/users/rszewczyk/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rszewczyk/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rszewczyk/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rszewczyk/subscriptions",
+    "organizations_url": "https://api.github.com/users/rszewczyk/orgs",
+    "repos_url": "https://api.github.com/users/rszewczyk/repos",
+    "events_url": "https://api.github.com/users/rszewczyk/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rszewczyk/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2014-11-16T06:29:36Z",
+  "updated_at": "2015-11-10T00:28:58Z",
+  "closed_at": "2015-11-10T00:28:58Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/2534",
+    "html_url": "https://github.com/facebook/react/pull/2534",
+    "diff_url": "https://github.com/facebook/react/pull/2534.diff",
+    "patch_url": "https://github.com/facebook/react/pull/2534.patch"
+  },
+  "body": "Issue #2533 \n\nI've completed the CLA.\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

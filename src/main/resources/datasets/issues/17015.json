@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/17015",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/17015/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/17015/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/17015/events",
+  "html_url": "https://github.com/facebook/react/pull/17015",
+  "id": 502547950,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzI0NjA3MDA1",
+  "number": 17015,
+  "title": "[Suspense] Failing test for suspense config",
+  "user": {
+    "login": "onnovisser",
+    "id": 23527729,
+    "node_id": "MDQ6VXNlcjIzNTI3NzI5",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/23527729?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/onnovisser",
+    "html_url": "https://github.com/onnovisser",
+    "followers_url": "https://api.github.com/users/onnovisser/followers",
+    "following_url": "https://api.github.com/users/onnovisser/following{/other_user}",
+    "gists_url": "https://api.github.com/users/onnovisser/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/onnovisser/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/onnovisser/subscriptions",
+    "organizations_url": "https://api.github.com/users/onnovisser/orgs",
+    "repos_url": "https://api.github.com/users/onnovisser/repos",
+    "events_url": "https://api.github.com/users/onnovisser/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/onnovisser/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-10-04T10:06:15Z",
+  "updated_at": "2019-10-04T13:12:15Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/17015",
+    "html_url": "https://github.com/facebook/react/pull/17015",
+    "diff_url": "https://github.com/facebook/react/pull/17015.diff",
+    "patch_url": "https://github.com/facebook/react/pull/17015.patch"
+  },
+  "body": "This causes a test to fail where I don't think it should. Issue: #16961\r\n",
+  "closed_by": null
+}

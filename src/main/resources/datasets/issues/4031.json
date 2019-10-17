@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4031",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4031/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4031/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4031/events",
+  "html_url": "https://github.com/facebook/react/pull/4031",
+  "id": 85279916,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzY5Nzg3NjE=",
+  "number": 4031,
+  "title": "Remove npm scripts, in favor of grunt",
+  "user": {
+    "login": "bgw",
+    "id": 180404,
+    "node_id": "MDQ6VXNlcjE4MDQwNA==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/180404?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bgw",
+    "html_url": "https://github.com/bgw",
+    "followers_url": "https://api.github.com/users/bgw/followers",
+    "following_url": "https://api.github.com/users/bgw/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bgw/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bgw/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bgw/subscriptions",
+    "organizations_url": "https://api.github.com/users/bgw/orgs",
+    "repos_url": "https://api.github.com/users/bgw/repos",
+    "events_url": "https://api.github.com/users/bgw/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bgw/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2015-06-04T21:12:03Z",
+  "updated_at": "2015-06-04T21:39:26Z",
+  "closed_at": "2015-06-04T21:21:28Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4031",
+    "html_url": "https://github.com/facebook/react/pull/4031",
+    "diff_url": "https://github.com/facebook/react/pull/4031.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4031.patch"
+  },
+  "body": "In response to #4028. I don't think we use these anywhere, and we recommend using grunt for everything anyways.\n",
+  "closed_by": {
+    "login": "bgw",
+    "id": 180404,
+    "node_id": "MDQ6VXNlcjE4MDQwNA==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/180404?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bgw",
+    "html_url": "https://github.com/bgw",
+    "followers_url": "https://api.github.com/users/bgw/followers",
+    "following_url": "https://api.github.com/users/bgw/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bgw/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bgw/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bgw/subscriptions",
+    "organizations_url": "https://api.github.com/users/bgw/orgs",
+    "repos_url": "https://api.github.com/users/bgw/repos",
+    "events_url": "https://api.github.com/users/bgw/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bgw/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5989",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5989/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5989/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5989/events",
+  "html_url": "https://github.com/facebook/react/pull/5989",
+  "id": 131770594,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTg0OTE0MzI=",
+  "number": 5989,
+  "title": "Accommodate interruption of transitions in ReactTransitionGroup",
+  "user": {
+    "login": "abutterworth",
+    "id": 1615421,
+    "node_id": "MDQ6VXNlcjE2MTU0MjE=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1615421?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/abutterworth",
+    "html_url": "https://github.com/abutterworth",
+    "followers_url": "https://api.github.com/users/abutterworth/followers",
+    "following_url": "https://api.github.com/users/abutterworth/following{/other_user}",
+    "gists_url": "https://api.github.com/users/abutterworth/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/abutterworth/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/abutterworth/subscriptions",
+    "organizations_url": "https://api.github.com/users/abutterworth/orgs",
+    "repos_url": "https://api.github.com/users/abutterworth/repos",
+    "events_url": "https://api.github.com/users/abutterworth/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/abutterworth/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-02-05T22:08:56Z",
+  "updated_at": "2016-06-26T19:06:17Z",
+  "closed_at": "2016-06-26T19:06:17Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5989",
+    "html_url": "https://github.com/facebook/react/pull/5989",
+    "diff_url": "https://github.com/facebook/react/pull/5989.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5989.patch"
+  },
+  "body": "Updated the way ReactTransitionGroup manages children and triggers animation events in order to allow for interruption of transitions. Now the TransitionGroup will not wait for didEnter callbacks in order to trigger willLeave.\n\nThis does not change the behavior of CSSTransitionGroups because it uses timeouts.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

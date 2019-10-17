@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15850",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15850/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15850/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15850/events",
+  "html_url": "https://github.com/facebook/react/issues/15850",
+  "id": 453990196,
+  "node_id": "MDU6SXNzdWU0NTM5OTAxOTY=",
+  "number": 15850,
+  "title": "autoFocus triggers click event?",
+  "user": {
+    "login": "Rc85",
+    "id": 22307591,
+    "node_id": "MDQ6VXNlcjIyMzA3NTkx",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/22307591?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Rc85",
+    "html_url": "https://github.com/Rc85",
+    "followers_url": "https://api.github.com/users/Rc85/followers",
+    "following_url": "https://api.github.com/users/Rc85/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Rc85/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Rc85/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Rc85/subscriptions",
+    "organizations_url": "https://api.github.com/users/Rc85/orgs",
+    "repos_url": "https://api.github.com/users/Rc85/repos",
+    "events_url": "https://api.github.com/users/Rc85/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Rc85/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-06-10T04:11:59Z",
+  "updated_at": "2019-06-10T04:13:22Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "```\r\nimport React, { useEffect } from 'react';\r\nimport PropTypes from 'prop-types';\r\nimport { InputField } from '../../shared_components/utils/InputField';\r\nimport SubmitButton from '../../shared_components/utils/SubmitButton';\r\n\r\nconst EditProfileInput = props => {\r\n    useEffect(() => {\r\n        console.log('Edit profile input mounted');\r\n        window.addEventListener('click', handleHideProfileEdit);\r\n\r\n        return () => {\r\n            console.log('Edit profile input unmounted')\r\n            window.removeEventListener('click', handleHideProfileEdit);\r\n        };\r\n    }, []);\r\n\r\n    const handleHideProfileEdit = () => {\r\n        console.log('Closing edit');\r\n        // props.cancel();\r\n    }\r\n\r\n    const handleClick = (e) => {\r\n        e.stopPropagation();\r\n    }\r\n\r\n    return (\r\n        <div className='d-flex w-100' onClick={handleClick}>\r\n            <InputField label={props.label} type={props.type} setValue={(val) => props.set(val)} required={props.required} className='mb-3' value={props.value} className='expand' autoFocus />\r\n            <SubmitButton type='button' loading={props.status === 'Saving'} value='Save' onClick={() => props.save()} />\r\n            <button className='btn btn-secondary' type='button' onClick={() => props.cancel()}>Cancel</button>\r\n        </div>\r\n    );\r\n};\r\n\r\nEditProfileInput.propTypes = {\r\n    label: PropTypes.string.isRequired,\r\n    type: PropTypes.string.isRequired,\r\n    set: PropTypes.func.isRequired,\r\n    required: PropTypes.bool,\r\n    value: PropTypes.string.isRequired,\r\n    status: PropTypes.string,\r\n    save: PropTypes.func.isRequired,\r\n    cancel: PropTypes.func.isRequired\r\n};\r\n\r\nexport default EditProfileInput;\r\n```\r\n\r\nThe parent component have divs where when clicked, it mounts `<EditProfileInput />`. With `autoFocus` set to true on `<InputField />`, it quickly calls `handleHideProfileEdit()`.\r\n\r\nNot sure if this is intended since in HTML, when an `<input>` is set to autofocus, a click event won't trigger on the window object.\r\n\r\nI implemented a work around by adding `event.stopPropagation()` on the clicked element that mounts `<EditProfileInput />`",
+  "closed_by": null
+}

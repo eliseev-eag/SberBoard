@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10621",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10621/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10621/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10621/events",
+  "html_url": "https://github.com/facebook/react/pull/10621",
+  "id": 255681032,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTM5NjE5MjU1",
+  "number": 10621,
+  "title": "Update error codes on 15-stable branch",
+  "user": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-09-06T17:21:16Z",
+  "updated_at": "2018-05-25T17:51:31Z",
+  "closed_at": "2017-09-06T18:13:53Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10621",
+    "html_url": "https://github.com/facebook/react/pull/10621",
+    "diff_url": "https://github.com/facebook/react/pull/10621.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10621.patch"
+  },
+  "body": "It looks like the docs are still being build based on the 15-stable branch, so until we do the 16 final release I'm updating the error codes here, in order to mirror them over to the `gh-pages` branch.\r\n\r\nhttps://github.com/facebook/react/tree/master/scripts/release-manager#update-the-error-codes\r\n\r\nThese are the same changes we are landing on master in https://github.com/facebook/react/pull/10619",
+  "closed_by": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11447",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11447/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11447/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11447/events",
+  "html_url": "https://github.com/facebook/react/pull/11447",
+  "id": 271128936,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTUwNjM2NDI3",
+  "number": 11447,
+  "title": "make linc script cross platform",
+  "user": {
+    "login": "xjlim",
+    "id": 10875678,
+    "node_id": "MDQ6VXNlcjEwODc1Njc4",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/10875678?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/xjlim",
+    "html_url": "https://github.com/xjlim",
+    "followers_url": "https://api.github.com/users/xjlim/followers",
+    "following_url": "https://api.github.com/users/xjlim/following{/other_user}",
+    "gists_url": "https://api.github.com/users/xjlim/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/xjlim/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/xjlim/subscriptions",
+    "organizations_url": "https://api.github.com/users/xjlim/orgs",
+    "repos_url": "https://api.github.com/users/xjlim/repos",
+    "events_url": "https://api.github.com/users/xjlim/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/xjlim/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-11-03T21:54:00Z",
+  "updated_at": "2017-11-04T18:09:48Z",
+  "closed_at": "2017-11-04T18:09:28Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11447",
+    "html_url": "https://github.com/facebook/react/pull/11447",
+    "diff_url": "https://github.com/facebook/react/pull/11447.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11447.patch"
+  },
+  "body": "Fix #11444",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

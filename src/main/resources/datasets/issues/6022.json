@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6022",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6022/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6022/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6022/events",
+  "html_url": "https://github.com/facebook/react/pull/6022",
+  "id": 133102578,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTkxMDMxNjQ=",
+  "number": 6022,
+  "title": "Split React and ReactDOM from npm build.",
+  "user": {
+    "login": "iamdustan",
+    "id": 227879,
+    "node_id": "MDQ6VXNlcjIyNzg3OQ==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/227879?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/iamdustan",
+    "html_url": "https://github.com/iamdustan",
+    "followers_url": "https://api.github.com/users/iamdustan/followers",
+    "following_url": "https://api.github.com/users/iamdustan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/iamdustan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/iamdustan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/iamdustan/subscriptions",
+    "organizations_url": "https://api.github.com/users/iamdustan/orgs",
+    "repos_url": "https://api.github.com/users/iamdustan/repos",
+    "events_url": "https://api.github.com/users/iamdustan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/iamdustan/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2016-02-11T22:19:20Z",
+  "updated_at": "2016-03-29T01:36:56Z",
+  "closed_at": "2016-03-29T01:36:56Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6022",
+    "html_url": "https://github.com/facebook/react/pull/6022",
+    "diff_url": "https://github.com/facebook/react/pull/6022.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6022.patch"
+  },
+  "body": "See #5974.\n\nThis solves the first two parts of #5974.\n\nThe “common” consumption method from npm should have a fully separated renderer with this. @providesModule I _think_ would also continue operating as expected. The only deferred work is separating the browser builds.\n\nI’m not sure what the demand for the stand-alone browserified builds is, but that is definitely much more work with the build tooling. Personally, I’d be happy to see this be the next step in the separation of the two. It’s lower risk as it only modifies two of the three worlds (npm and haste). It trades the React.native.js file for a ReactBrowser.js file which sounds like a decent tradeoff to me.\n\nThis isn’t quite there yet...I have to work through the grunt tasks to ensure the browser builds still work...\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

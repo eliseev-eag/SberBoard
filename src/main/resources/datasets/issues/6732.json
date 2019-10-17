@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6732",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6732/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6732/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6732/events",
+  "html_url": "https://github.com/facebook/react/pull/6732",
+  "id": 153756484,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjkzMzEyNjU=",
+  "number": 6732,
+  "title": "fix mouse events when multiple ReactDOM.render",
+  "user": {
+    "login": "yiminghe",
+    "id": 200876,
+    "node_id": "MDQ6VXNlcjIwMDg3Ng==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/200876?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/yiminghe",
+    "html_url": "https://github.com/yiminghe",
+    "followers_url": "https://api.github.com/users/yiminghe/followers",
+    "following_url": "https://api.github.com/users/yiminghe/following{/other_user}",
+    "gists_url": "https://api.github.com/users/yiminghe/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/yiminghe/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/yiminghe/subscriptions",
+    "organizations_url": "https://api.github.com/users/yiminghe/orgs",
+    "repos_url": "https://api.github.com/users/yiminghe/repos",
+    "events_url": "https://api.github.com/users/yiminghe/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/yiminghe/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 9,
+  "created_at": "2016-05-09T11:30:15Z",
+  "updated_at": "2016-08-27T20:10:49Z",
+  "closed_at": "2016-06-26T21:30:12Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6732",
+    "html_url": "https://github.com/facebook/react/pull/6732",
+    "diff_url": "https://github.com/facebook/react/pull/6732.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6732.patch"
+  },
+  "body": "reproducible demo: https://jsfiddle.net/yiminghe/69z2wepo/41347/\nmoving mouse `from` outer to `inner` will trigger mouseleave event which is wrong.\n\nwhen exists multiple ReactDOM.render, native dom traversal is needed.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

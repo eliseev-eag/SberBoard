@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9197",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9197/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9197/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9197/events",
+  "html_url": "https://github.com/facebook/react/pull/9197",
+  "id": 214872559,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTExMTg5ODk3",
+  "number": 9197,
+  "title": "ReactNative upstream sync",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-03-16T23:59:49Z",
+  "updated_at": "2017-03-20T20:50:35Z",
+  "closed_at": "2017-03-20T20:50:32Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9197",
+    "html_url": "https://github.com/facebook/react/pull/9197",
+    "diff_url": "https://github.com/facebook/react/pull/9197.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9197.patch"
+  },
+  "body": "Initial steps toward supporting string return type from `createReactNativeFiberComponent`.\r\n\r\nAddresses a circular dependency between `NativeMethodsMixin` and `ReactNativeFiber`:\r\n* New `ReactNativeFiberHostComponent` with similar interface but without unnecessary call to `findNodeHandle`.\r\n* New Flow interface for mixins to ensure `ReactNativeFiberHostComponent` and `NativeMethodsMixinUtils` stay synced.\r\n* Moved helper methods to `NativeMethodsMixinUtils` to be shared between the 2 wrappers.\r\n\r\nThis diff was submitted and reviewed internally along with other, related `ReactNative` changes. This is an upstream sync of the React-only portion.\r\n\r\nThis diff also requires upgrading Flow to get support for the `implements` keyword (added in [version 38](https://github.com/facebook/flow/blob/master/Changelog.md#v0380)) but I've done that via a separate pre-requisite PR, #9196.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

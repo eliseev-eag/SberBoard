@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16212",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16212/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16212/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16212/events",
+  "html_url": "https://github.com/facebook/react/pull/16212",
+  "id": 473066113,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzAxMzA3MDU5",
+  "number": 16212,
+  "title": "Optimize objectIs",
+  "user": {
+    "login": "ku8ar",
+    "id": 16975059,
+    "node_id": "MDQ6VXNlcjE2OTc1MDU5",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/16975059?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ku8ar",
+    "html_url": "https://github.com/ku8ar",
+    "followers_url": "https://api.github.com/users/ku8ar/followers",
+    "following_url": "https://api.github.com/users/ku8ar/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ku8ar/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ku8ar/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ku8ar/subscriptions",
+    "organizations_url": "https://api.github.com/users/ku8ar/orgs",
+    "repos_url": "https://api.github.com/users/ku8ar/repos",
+    "events_url": "https://api.github.com/users/ku8ar/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ku8ar/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2019-07-25T20:55:03Z",
+  "updated_at": "2019-09-17T21:55:44Z",
+  "closed_at": "2019-09-17T21:55:44Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16212",
+    "html_url": "https://github.com/facebook/react/pull/16212",
+    "diff_url": "https://github.com/facebook/react/pull/16212.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16212.patch"
+  },
+  "body": "Native Object.is implementation is much faster than polyfill.\r\n\r\n~~https://jsperf.com/object-is-vs-polyfill/1~~\r\n\r\nhttps://jsperf.com/object-is-vs-polyfill-better/1\r\n\r\n![Zrzut ekranu 2019-07-25 o 22 43 15](https://user-images.githubusercontent.com/16975059/61908076-2cb69e00-af2f-11e9-94ba-328c19e44c04.png)\r\n",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

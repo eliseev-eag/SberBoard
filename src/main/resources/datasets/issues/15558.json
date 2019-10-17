@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15558",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15558/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15558/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15558/events",
+  "html_url": "https://github.com/facebook/react/pull/15558",
+  "id": 439635841,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjc1Mzk5MDEz",
+  "number": 15558,
+  "title": "remove redundent renderRoot",
+  "user": {
+    "login": "NE-SmallTown",
+    "id": 18418010,
+    "node_id": "MDQ6VXNlcjE4NDE4MDEw",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/18418010?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/NE-SmallTown",
+    "html_url": "https://github.com/NE-SmallTown",
+    "followers_url": "https://api.github.com/users/NE-SmallTown/followers",
+    "following_url": "https://api.github.com/users/NE-SmallTown/following{/other_user}",
+    "gists_url": "https://api.github.com/users/NE-SmallTown/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/NE-SmallTown/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/NE-SmallTown/subscriptions",
+    "organizations_url": "https://api.github.com/users/NE-SmallTown/orgs",
+    "repos_url": "https://api.github.com/users/NE-SmallTown/repos",
+    "events_url": "https://api.github.com/users/NE-SmallTown/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/NE-SmallTown/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-05-02T14:57:21Z",
+  "updated_at": "2019-05-02T15:30:40Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15558",
+    "html_url": "https://github.com/facebook/react/pull/15558",
+    "diff_url": "https://github.com/facebook/react/pull/15558.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15558.patch"
+  },
+  "body": "When I put a breakpoint on [currentTime < expirationTime](https://github.com/facebook/react/compare/master...NE-SmallTown:rm-bad-logic?expand=1#diff-24152ba0b2ac251decb6a12f41bdf116L766), It seems will happen that we were **wasting** time to wait the current time elapse to make [currentTime < expirationTime](https://github.com/facebook/react/compare/master...NE-SmallTown:rm-bad-logic?expand=1#diff-24152ba0b2ac251decb6a12f41bdf116L766) be `true`,  so there would execute **many many times** `onmessage -> flushFirstCallback -> onRootCallback -> renderRoot` all these can increase `performance.now()`?(until I remove the breakpoint or there will be a infinity loop)\r\n\r\nI could be wrong probably, feel free to correct me :)",
+  "closed_by": null
+}

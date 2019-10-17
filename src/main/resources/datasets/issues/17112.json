@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/17112",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/17112/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/17112/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/17112/events",
+  "html_url": "https://github.com/facebook/react/issues/17112",
+  "id": 507712468,
+  "node_id": "MDU6SXNzdWU1MDc3MTI0Njg=",
+  "number": 17112,
+  "title": "Resetting an animation in useEffect React is not setting all state variables to initial state",
+  "user": {
+    "login": "Amit-Tomar",
+    "id": 5795958,
+    "node_id": "MDQ6VXNlcjU3OTU5NTg=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/5795958?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Amit-Tomar",
+    "html_url": "https://github.com/Amit-Tomar",
+    "followers_url": "https://api.github.com/users/Amit-Tomar/followers",
+    "following_url": "https://api.github.com/users/Amit-Tomar/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Amit-Tomar/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Amit-Tomar/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Amit-Tomar/subscriptions",
+    "organizations_url": "https://api.github.com/users/Amit-Tomar/orgs",
+    "repos_url": "https://api.github.com/users/Amit-Tomar/repos",
+    "events_url": "https://api.github.com/users/Amit-Tomar/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Amit-Tomar/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-10-16T08:58:26Z",
+  "updated_at": "2019-10-16T08:58:26Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Bug**\r\n\r\n**What is the current behavior?**\r\n\r\nI have a simple animation -\r\n\r\n1. Lines get highlighted one after the other on click of a button.\r\n\r\n2. Clicking on button again, while the animation is running, should de-highlight the lines to original state. \r\n\r\nI use [GSAP](https://greensock.com/gsap/) for doing animations.\r\n\r\nOn setting the timeline progress of animation to 0, all the values get reset, however, the last one modified continues to remain in same state. \r\n\r\nTo reproduce, click the button, and after a couple lines have highlighted, click the button again. \r\n\r\nCode Sandbox : https://codesandbox.io/s/inspiring-gates-poozb\r\n\r\n**What is the expected behavior?**\r\n\r\nAll the variables would have been set to false on toggling the animation state. However, the last modified variable in the current animation remains in the same state.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nWorking with following dependencies: \r\n![Screenshot 2019-10-16 at 2 13 50 PM](https://user-images.githubusercontent.com/5795958/66903064-61faf580-f01f-11e9-9863-48200839afea.png)\r\n\r\nDoesn't work as expected with following dependencies: \r\n![Screenshot 2019-10-16 at 2 13 23 PM](https://user-images.githubusercontent.com/5795958/66903143-8c4cb300-f01f-11e9-9fd6-71ad763cb626.png)\r\n\r\nPlatform tested on : Mac OS Mojave with latest Chrome.\r\n\r\nI would like to understand what is causing this issue and steps I can take to make it work in the above mentioned version where it doesn't work. \r\n",
+  "closed_by": null
+}

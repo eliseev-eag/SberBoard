@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7329",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7329/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7329/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7329/events",
+  "html_url": "https://github.com/facebook/react/pull/7329",
+  "id": 166915875,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NzgzODU5OTY=",
+  "number": 7329,
+  "title": "Add displayName to methods",
+  "user": {
+    "login": "elodszopos",
+    "id": 4669986,
+    "node_id": "MDQ6VXNlcjQ2Njk5ODY=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/4669986?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/elodszopos",
+    "html_url": "https://github.com/elodszopos",
+    "followers_url": "https://api.github.com/users/elodszopos/followers",
+    "following_url": "https://api.github.com/users/elodszopos/following{/other_user}",
+    "gists_url": "https://api.github.com/users/elodszopos/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/elodszopos/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/elodszopos/subscriptions",
+    "organizations_url": "https://api.github.com/users/elodszopos/orgs",
+    "repos_url": "https://api.github.com/users/elodszopos/repos",
+    "events_url": "https://api.github.com/users/elodszopos/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/elodszopos/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-07-21T20:56:32Z",
+  "updated_at": "2017-01-26T17:43:43Z",
+  "closed_at": "2017-01-26T17:43:42Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7329",
+    "html_url": "https://github.com/facebook/react/pull/7329",
+    "diff_url": "https://github.com/facebook/react/pull/7329.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7329.patch"
+  },
+  "body": "This fixes issue #3173 and is a refactoring of PR #6404. Continuation of PR #6934, this would actually help me. Hope it is alright I picked it up. Thanks!\n",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

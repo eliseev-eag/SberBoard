@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/17078",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/17078/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/17078/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/17078/events",
+  "html_url": "https://github.com/facebook/react/issues/17078",
+  "id": 506339730,
+  "node_id": "MDU6SXNzdWU1MDYzMzk3MzA=",
+  "number": 17078,
+  "title": "[lint] False positive when using hooks inside static component",
+  "user": {
+    "login": "mir3z",
+    "id": 1816692,
+    "node_id": "MDQ6VXNlcjE4MTY2OTI=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1816692?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mir3z",
+    "html_url": "https://github.com/mir3z",
+    "followers_url": "https://api.github.com/users/mir3z/followers",
+    "following_url": "https://api.github.com/users/mir3z/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mir3z/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mir3z/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mir3z/subscriptions",
+    "organizations_url": "https://api.github.com/users/mir3z/orgs",
+    "repos_url": "https://api.github.com/users/mir3z/repos",
+    "events_url": "https://api.github.com/users/mir3z/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mir3z/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-10-13T15:25:10Z",
+  "updated_at": "2019-10-14T16:52:26Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\nBUG\r\n\r\n**What is the current behavior?**\r\n\r\nError reported when using hooks inside component as a static property:\r\n\r\nhttps://codesandbox.io/s/suspicious-darwin-9qh7y?fontsize=14\r\n\r\n> React Hook \"useState\" is called in function \"Foo.Bar\" which is neither a React function component or a custom React Hook function.\r\n\r\n\r\n**What is the expected behavior?**\r\n\r\nNo error. \r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nReact 16.10.1",
+  "closed_by": null
+}

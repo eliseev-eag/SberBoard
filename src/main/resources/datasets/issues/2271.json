@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2271",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2271/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2271/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2271/events",
+  "html_url": "https://github.com/facebook/react/pull/2271",
+  "id": 44303854,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjE5NDA1ODU=",
+  "number": 2271,
+  "title": "Disable ViewportMetrics unless MouseEvent lacks support for pageX/pageY",
+  "user": {
+    "login": "syranide",
+    "id": 1714255,
+    "node_id": "MDQ6VXNlcjE3MTQyNTU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1714255?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/syranide",
+    "html_url": "https://github.com/syranide",
+    "followers_url": "https://api.github.com/users/syranide/followers",
+    "following_url": "https://api.github.com/users/syranide/following{/other_user}",
+    "gists_url": "https://api.github.com/users/syranide/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/syranide/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/syranide/subscriptions",
+    "organizations_url": "https://api.github.com/users/syranide/orgs",
+    "repos_url": "https://api.github.com/users/syranide/repos",
+    "events_url": "https://api.github.com/users/syranide/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/syranide/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 40929153,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1Mw==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Enhancement",
+      "name": "Type: Enhancement",
+      "color": "84b6eb",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2014-09-29T15:04:47Z",
+  "updated_at": "2016-02-26T20:53:17Z",
+  "closed_at": "2016-02-26T20:53:17Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/2271",
+    "html_url": "https://github.com/facebook/react/pull/2271",
+    "diff_url": "https://github.com/facebook/react/pull/2271.diff",
+    "patch_url": "https://github.com/facebook/react/pull/2271.patch"
+  },
+  "body": "For #1300, only IE8 lacks `pageX`/`pageY` (and perhaps really old FF or w/e I guess).\n- [ ] Test plan: not yet (want your input on the PR first)\n- [ ] If approved: will need to make a manual test and verify in all browsers\n\nFrom my https://github.com/facebook/react/issues/1300#issuecomment-52509117:\n\n---\n\nhttps://github.com/facebook/react/blob/master/src/browser/ui/ReactEventListener.js#L65\nhttps://github.com/facebook/react/blob/master/src/browser/ui/ReactEventListener.js#L165\n\nThat makes no sense at all to me, `refresh` does not take an argument, yet we get the scroll position and provide it as an argument. Instead, `refresh` gets the scroll position internally and uses that? So we call `getUnboundedScrollPosition` twice, but only use the result once (also, this should be broken for events inside iframes, for IE8).\n\n---\n\nhttps://github.com/facebook/react/blob/master/src/browser/eventPlugins/TapEventPlugin.js#L54\nI'm pretty sure any browsers that supports touch also supports `pageX`/`pageY`... ?\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

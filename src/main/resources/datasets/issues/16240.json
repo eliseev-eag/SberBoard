@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16240",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16240/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16240/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16240/events",
+  "html_url": "https://github.com/facebook/react/pull/16240",
+  "id": 473996708,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzAyMDI0OTc3",
+  "number": 16240,
+  "title": "[act] flush suspense fallbacks in tests",
+  "user": {
+    "login": "threepointone",
+    "id": 18808,
+    "node_id": "MDQ6VXNlcjE4ODA4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/18808?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/threepointone",
+    "html_url": "https://github.com/threepointone",
+    "followers_url": "https://api.github.com/users/threepointone/followers",
+    "following_url": "https://api.github.com/users/threepointone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/threepointone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/threepointone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/threepointone/subscriptions",
+    "organizations_url": "https://api.github.com/users/threepointone/orgs",
+    "repos_url": "https://api.github.com/users/threepointone/repos",
+    "events_url": "https://api.github.com/users/threepointone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/threepointone/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-07-29T11:24:33Z",
+  "updated_at": "2019-07-30T18:12:11Z",
+  "closed_at": "2019-07-30T18:12:07Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16240",
+    "html_url": "https://github.com/facebook/react/pull/16240",
+    "diff_url": "https://github.com/facebook/react/pull/16240.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16240.patch"
+  },
+  "body": "Opening this to share the approach andrew et al, and answer some pending questions.\r\n\r\nIn this PR, for tests (specifically, code inside an `act()` scope), we immediately trigger work that would have otherwise required a timeout. This makes it simpler to tests loading/spinner states, and makes tests resilient to changes in React.\r\n\r\nFor some of our tests(specifically, ReactSuspenseWithNoopRenderer-test.internal), we _don't_ want fallbacks to immediately trigger, because we're testing intermediate states and such. Added a feature flag `flushSuspenseFallbacksInTests` to disable this behaviour on a per case basis.\r\n\r\nOpen questions - \r\n- should react warn you if you try to suspend outside an act scope?\r\n",
+  "closed_by": {
+    "login": "threepointone",
+    "id": 18808,
+    "node_id": "MDQ6VXNlcjE4ODA4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/18808?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/threepointone",
+    "html_url": "https://github.com/threepointone",
+    "followers_url": "https://api.github.com/users/threepointone/followers",
+    "following_url": "https://api.github.com/users/threepointone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/threepointone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/threepointone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/threepointone/subscriptions",
+    "organizations_url": "https://api.github.com/users/threepointone/orgs",
+    "repos_url": "https://api.github.com/users/threepointone/repos",
+    "events_url": "https://api.github.com/users/threepointone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/threepointone/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

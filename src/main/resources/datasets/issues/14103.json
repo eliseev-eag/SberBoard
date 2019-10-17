@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14103",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14103/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14103/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14103/events",
+  "html_url": "https://github.com/facebook/react/pull/14103",
+  "id": 377491634,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjI4NDIyMTE2",
+  "number": 14103,
+  "title": "Fix crash during server render in React 16.6.0",
+  "user": {
+    "login": "tnunes",
+    "id": 163187,
+    "node_id": "MDQ6VXNlcjE2MzE4Nw==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/163187?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/tnunes",
+    "html_url": "https://github.com/tnunes",
+    "followers_url": "https://api.github.com/users/tnunes/followers",
+    "following_url": "https://api.github.com/users/tnunes/following{/other_user}",
+    "gists_url": "https://api.github.com/users/tnunes/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/tnunes/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/tnunes/subscriptions",
+    "organizations_url": "https://api.github.com/users/tnunes/orgs",
+    "repos_url": "https://api.github.com/users/tnunes/repos",
+    "events_url": "https://api.github.com/users/tnunes/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/tnunes/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2018-11-05T16:58:05Z",
+  "updated_at": "2018-11-06T13:16:04Z",
+  "closed_at": "2018-11-05T17:08:07Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14103",
+    "html_url": "https://github.com/facebook/react/pull/14103",
+    "diff_url": "https://github.com/facebook/react/pull/14103.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14103.patch"
+  },
+  "body": "This fixes a bug introduced in React 16.6.0, which was not present in 16.5.2.\r\n\r\nRuntimes without `setTimeout` and `clearTimeout` (e.g. ClearScript for .NET) are now crashing just by importing `react-dom`.\r\n\r\nThis replicates the fix for `scheduler` introduced in #13088 for `react-dom`, by checking for existence of `setTimeout` and `clearTimeout` in the runtime before using them.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

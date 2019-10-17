@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11644",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11644/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11644/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11644/events",
+  "html_url": "https://github.com/facebook/react/pull/11644",
+  "id": 276347117,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTU0MzU2OTkz",
+  "number": 11644,
+  "title": "[WIP] Fix for fiber root scheduling memory leak",
+  "user": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2017-11-23T11:47:34Z",
+  "updated_at": "2018-08-24T16:53:55Z",
+  "closed_at": "2017-11-28T20:57:33Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11644",
+    "html_url": "https://github.com/facebook/react/pull/11644",
+    "diff_url": "https://github.com/facebook/react/pull/11644.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11644.patch"
+  },
+  "body": "**Not to be merged**\r\n\r\nAfter some investigation work for a memory leak on React Native, we found that `nextRoot` was never set to `null` and left in that state upon the view fulling being unmounted. I believe that is has to do with the fact that we set `nextRoot` and `nextUnitOfWork` to `null`, then immediately call `requestWork()` which sets them back again.\r\n\r\nThis results in a memory leak as the node tree of `nextRoot` never gets garbage collected.\r\n\r\nThis is more of a temporary research fix, rather than an explicit fix. I'm sure @acdlite will have a concrete fix based from this.",
+  "closed_by": {
+    "login": "clemmy",
+    "id": 3696934,
+    "node_id": "MDQ6VXNlcjM2OTY5MzQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3696934?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/clemmy",
+    "html_url": "https://github.com/clemmy",
+    "followers_url": "https://api.github.com/users/clemmy/followers",
+    "following_url": "https://api.github.com/users/clemmy/following{/other_user}",
+    "gists_url": "https://api.github.com/users/clemmy/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/clemmy/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/clemmy/subscriptions",
+    "organizations_url": "https://api.github.com/users/clemmy/orgs",
+    "repos_url": "https://api.github.com/users/clemmy/repos",
+    "events_url": "https://api.github.com/users/clemmy/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/clemmy/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

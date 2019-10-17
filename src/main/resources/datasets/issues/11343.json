@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11343",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11343/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11343/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11343/events",
+  "html_url": "https://github.com/facebook/react/pull/11343",
+  "id": 267728049,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ4MTc1MTIx",
+  "number": 11343,
+  "title": "Expose react-art/{Circle,Rectange/Wedge} on npm",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-10-23T16:10:41Z",
+  "updated_at": "2017-10-23T18:18:25Z",
+  "closed_at": "2017-10-23T18:18:12Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11343",
+    "html_url": "https://github.com/facebook/react/pull/11343",
+    "diff_url": "https://github.com/facebook/react/pull/11343.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11343.patch"
+  },
+  "body": "Fixes https://github.com/facebook/react/issues/11254.\r\n\r\nVerified by looking into build folder:\r\n\r\n<img width=\"212\" alt=\"screen shot 2017-10-23 at 17 07 58\" src=\"https://user-images.githubusercontent.com/810438/31900042-20947920-b815-11e7-974a-45d544bbd13a.png\">\r\n<img width=\"202\" alt=\"screen shot 2017-10-23 at 17 08 02\" src=\"https://user-images.githubusercontent.com/810438/31900047-23d0e632-b815-11e7-81eb-3f2eb695fb10.png\">\r\n\r\n\r\nand running updated fixture:\r\n\r\n<img width=\"395\" alt=\"screen shot 2017-10-23 at 17 08 44\" src=\"https://user-images.githubusercontent.com/810438/31900014-0f19a364-b815-11e7-8a28-d5093bc06d4b.png\">\r\n\r\nOne thing I'm not super happy about it is we can't import them easily in tests. But I don't care tbqh.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

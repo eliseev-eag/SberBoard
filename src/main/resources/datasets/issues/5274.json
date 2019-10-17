@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5274",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5274/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5274/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5274/events",
+  "html_url": "https://github.com/facebook/react/pull/5274",
+  "id": 113177640,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDg2NjI4NDQ=",
+  "number": 5274,
+  "title": "Corrected highlighted line in tutorial example in tutorial7.js",
+  "user": {
+    "login": "SpartaSixZero",
+    "id": 6554762,
+    "node_id": "MDQ6VXNlcjY1NTQ3NjI=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6554762?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/SpartaSixZero",
+    "html_url": "https://github.com/SpartaSixZero",
+    "followers_url": "https://api.github.com/users/SpartaSixZero/followers",
+    "following_url": "https://api.github.com/users/SpartaSixZero/following{/other_user}",
+    "gists_url": "https://api.github.com/users/SpartaSixZero/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/SpartaSixZero/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/SpartaSixZero/subscriptions",
+    "organizations_url": "https://api.github.com/users/SpartaSixZero/orgs",
+    "repos_url": "https://api.github.com/users/SpartaSixZero/repos",
+    "events_url": "https://api.github.com/users/SpartaSixZero/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/SpartaSixZero/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-10-24T19:08:51Z",
+  "updated_at": "2015-10-27T22:46:20Z",
+  "closed_at": "2015-10-24T19:19:28Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5274",
+    "html_url": "https://github.com/facebook/react/pull/5274",
+    "diff_url": "https://github.com/facebook/react/pull/5274.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5274.patch"
+  },
+  "body": "Was going through this tutorial when I noticed that in the example for tutorial7.js, the second highlight is incorrect. It should be on the span tag on line 14 instead.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15885",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15885/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15885/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15885/events",
+  "html_url": "https://github.com/facebook/react/pull/15885",
+  "id": 456328880,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjg4Mzk1NDc2",
+  "number": 15885,
+  "title": "Make React compatible with ES Modules and Pika",
+  "user": {
+    "login": "sdegutis",
+    "id": 4399718,
+    "node_id": "MDQ6VXNlcjQzOTk3MTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/4399718?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sdegutis",
+    "html_url": "https://github.com/sdegutis",
+    "followers_url": "https://api.github.com/users/sdegutis/followers",
+    "following_url": "https://api.github.com/users/sdegutis/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sdegutis/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sdegutis/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sdegutis/subscriptions",
+    "organizations_url": "https://api.github.com/users/sdegutis/orgs",
+    "repos_url": "https://api.github.com/users/sdegutis/repos",
+    "events_url": "https://api.github.com/users/sdegutis/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sdegutis/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 15,
+  "created_at": "2019-06-14T16:18:29Z",
+  "updated_at": "2019-10-07T19:50:03Z",
+  "closed_at": "2019-06-14T18:11:23Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15885",
+    "html_url": "https://github.com/facebook/react/pull/15885",
+    "diff_url": "https://github.com/facebook/react/pull/15885.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15885.patch"
+  },
+  "body": "See https://www.pika.dev/about/ for basic information about Pika.\r\n\r\nWhen searching for React (https://www.pika.dev/search?q=react) in Pika's interface, it shows:\r\n\r\n> EXACT MATCH!\r\n> react      \r\n> Package found! However, no ES \"module\" entrypoint was detected in its package.json manifest. If possible, explore the site for a more web-friendly alternative.\r\n\r\nIt looks like this commit in my PR is all that's needed, because React is fortunately already written using ES Module syntax.",
+  "closed_by": {
+    "login": "jquense",
+    "id": 339286,
+    "node_id": "MDQ6VXNlcjMzOTI4Ng==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/339286?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jquense",
+    "html_url": "https://github.com/jquense",
+    "followers_url": "https://api.github.com/users/jquense/followers",
+    "following_url": "https://api.github.com/users/jquense/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jquense/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jquense/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jquense/subscriptions",
+    "organizations_url": "https://api.github.com/users/jquense/orgs",
+    "repos_url": "https://api.github.com/users/jquense/repos",
+    "events_url": "https://api.github.com/users/jquense/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jquense/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

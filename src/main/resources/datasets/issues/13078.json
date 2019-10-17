@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13078",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13078/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13078/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13078/events",
+  "html_url": "https://github.com/facebook/react/pull/13078",
+  "id": 333926376,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTk2MDIzNjAz",
+  "number": 13078,
+  "title": "Fixes children when using dangerouslySetInnerHtml in a selected <option>",
+  "user": {
+    "login": "mridgway",
+    "id": 191142,
+    "node_id": "MDQ6VXNlcjE5MTE0Mg==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/191142?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mridgway",
+    "html_url": "https://github.com/mridgway",
+    "followers_url": "https://api.github.com/users/mridgway/followers",
+    "following_url": "https://api.github.com/users/mridgway/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mridgway/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mridgway/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mridgway/subscriptions",
+    "organizations_url": "https://api.github.com/users/mridgway/orgs",
+    "repos_url": "https://api.github.com/users/mridgway/repos",
+    "events_url": "https://api.github.com/users/mridgway/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mridgway/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2018-06-20T05:12:00Z",
+  "updated_at": "2018-06-22T06:01:22Z",
+  "closed_at": "2018-06-21T19:21:22Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13078",
+    "html_url": "https://github.com/facebook/react/pull/13078",
+    "diff_url": "https://github.com/facebook/react/pull/13078.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13078.patch"
+  },
+  "body": "This fixes an inadvertent cast of undefined children to an empty string when creating an option tag that will be selected:\r\n\r\n```\r\n  <select defaultValue=\"test\">\r\n    <option value='test' dangerouslySetInnerHTML={{ __html: '&rlm; test'}} />\r\n  </select>\r\n```\r\n\r\nThis causes an invariant error because both children and dangerouslySetInnerHTML are set.\r\n\r\n**What is the current behavior?**\r\n\r\n```js\r\nconst React = require('react');\r\nconst ReactDOM = require('react-dom/server');\r\n\r\nReactDOM.renderToString(\r\n  <select defaultValue=\"test\">\r\n    <option value='test' dangerouslySetInnerHTML={{ __html: '&rlm; test'}} />\r\n  </select>\r\n);\r\n```\r\n\r\n```\r\n/Volumes/Projects/shakti/node_modules/fbjs/lib/invariant.js:49\r\n    throw error;\r\n    ^\r\n\r\nInvariant Violation: Can only set one of `children` or `props.dangerouslySetInnerHTML`.\r\n    at invariant (/Volumes/Projects/shakti/node_modules/fbjs/lib/invariant.js:42:15)\r\n    at assertValidProps (/Volumes/Projects/shakti/node_modules/react-dom/cjs/react-dom-server.node.development.js:693:33)\r\n    at ReactDOMServerRenderer.renderDOM (/Volumes/Projects/shakti/node_modules/react-dom/cjs/react-dom-server.node.development.js:2674:5)\r\n    at ReactDOMServerRenderer.render (/Volumes/Projects/shakti/node_modules/react-dom/cjs/react-dom-server.node.development.js:2418:21)\r\n    at ReactDOMServerRenderer.read (/Volumes/Projects/shakti/node_modules/react-dom/cjs/react-dom-server.node.development.js:2357:19)\r\n    at Object.renderToString (/Volumes/Projects/shakti/node_modules/react-dom/cjs/react-dom-server.node.development.js:2731:25)\r\n    at Object.<anonymous> (/Volumes/Projects/shakti/test.js:4:22)\r\n    at Module._compile (module.js:635:30)\r\n    at Object.Module._extensions..js (module.js:646:10)\r\n    at Module.load (module.js:554:32)\r\n```\r\n\r\n**What is the expected behavior?**\r\n\r\n```\r\n<select data-reactroot=\"\"><option selected=\"\" value=\"test\">&rlm; test</option></select>\r\n```\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\n16.4.1 using node 8. This worked in 15.x.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

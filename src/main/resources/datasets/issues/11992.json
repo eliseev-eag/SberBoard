@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11992",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11992/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11992/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11992/events",
+  "html_url": "https://github.com/facebook/react/pull/11992",
+  "id": 286785537,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTYxNjU2OTQ4",
+  "number": 11992,
+  "title": "[WIP] Remove event whitelist",
+  "user": {
+    "login": "jquense",
+    "id": 339286,
+    "node_id": "MDQ6VXNlcjMzOTI4Ng==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/339286?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jquense",
+    "html_url": "https://github.com/jquense",
+    "followers_url": "https://api.github.com/users/jquense/followers",
+    "following_url": "https://api.github.com/users/jquense/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jquense/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jquense/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jquense/subscriptions",
+    "organizations_url": "https://api.github.com/users/jquense/orgs",
+    "repos_url": "https://api.github.com/users/jquense/repos",
+    "events_url": "https://api.github.com/users/jquense/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jquense/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2018-01-08T15:39:46Z",
+  "updated_at": "2018-11-02T18:41:40Z",
+  "closed_at": null,
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11992",
+    "html_url": "https://github.com/facebook/react/pull/11992",
+    "diff_url": "https://github.com/facebook/react/pull/11992.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11992.patch"
+  },
+  "body": "Not working quite yet, but making some progress. So far the dodgiest thing here is the mapping from Synthetic event to native event. I’m not sure that `event.constructor.name` is gonna cut it across all browsers.\n\nThere is potentially a lot of room for simplify the event dispatch config, if we insist on the convention of `onX` and `onXCapture`, you can remove most if not all of the registration name stuff, and map between the types as you go. We do lose the dev warnings about event names but that could be added back as a dev only injection",
+  "closed_by": null
+}

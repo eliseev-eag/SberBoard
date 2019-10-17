@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6260",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6260/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6260/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6260/events",
+  "html_url": "https://github.com/facebook/react/pull/6260",
+  "id": 140554258,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjI2OTIwMTM=",
+  "number": 6260,
+  "title": "Update 02-displaying-data.zh-CN.md",
+  "user": {
+    "login": "iawia002",
+    "id": 9134003,
+    "node_id": "MDQ6VXNlcjkxMzQwMDM=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9134003?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/iawia002",
+    "html_url": "https://github.com/iawia002",
+    "followers_url": "https://api.github.com/users/iawia002/followers",
+    "following_url": "https://api.github.com/users/iawia002/following{/other_user}",
+    "gists_url": "https://api.github.com/users/iawia002/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/iawia002/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/iawia002/subscriptions",
+    "organizations_url": "https://api.github.com/users/iawia002/orgs",
+    "repos_url": "https://api.github.com/users/iawia002/repos",
+    "events_url": "https://api.github.com/users/iawia002/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/iawia002/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-03-14T01:48:53Z",
+  "updated_at": "2016-03-31T02:54:06Z",
+  "closed_at": "2016-03-15T10:32:15Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6260",
+    "html_url": "https://github.com/facebook/react/pull/6260",
+    "diff_url": "https://github.com/facebook/react/pull/6260.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6260.patch"
+  },
+  "body": "每三个是子节点 --> 第三个是子节点\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

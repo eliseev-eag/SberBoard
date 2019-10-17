@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4126",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4126/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4126/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4126/events",
+  "html_url": "https://github.com/facebook/react/issues/4126",
+  "id": 88274857,
+  "node_id": "MDU6SXNzdWU4ODI3NDg1Nw==",
+  "number": 4126,
+  "title": "Add event that behaves similar to the native `change` event",
+  "user": {
+    "login": "dantman",
+    "id": 53399,
+    "node_id": "MDQ6VXNlcjUzMzk5",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/53399?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dantman",
+    "html_url": "https://github.com/dantman",
+    "followers_url": "https://api.github.com/users/dantman/followers",
+    "following_url": "https://api.github.com/users/dantman/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dantman/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dantman/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dantman/subscriptions",
+    "organizations_url": "https://api.github.com/users/dantman/orgs",
+    "repos_url": "https://api.github.com/users/dantman/repos",
+    "events_url": "https://api.github.com/users/dantman/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dantman/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2015-06-15T00:29:02Z",
+  "updated_at": "2017-10-04T11:28:08Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "Because React has repurposed `onChange` to behave like `onInput` there is no way to get actual `change` event behaviour without binding a non-delegated native event in lifecycle events.\n\n`change` event behaviour is sometimes important to have. `input`-like behaviour does make sense for what React uses `onChange` for (live updating of state associated with `value=\"\"` and anything derived from it). But other use cases, like triggering an ajax post once a user has finished with an input, require the standard behaviour of `change` for text inputs where it is only fired after a user is finished with the input.\n\nThese use cases are reasonable to support within React. If `onChange` is going to be changed to behave in a non-standard way. Then we should add another custom non-standard event name that lets React elements bind to behaviour that is closer to how `change` behaves (with React's event delegation handling).\n\nEvent name ideas:\n- onChangeCommit(ted)\n- onCommit(ted)Change\n- onValueCommit(ted)\n- onCommitValue\n- onCommit?\n\nThe idea of using \"commit\" in the name comes from the HTML spec.\n\n> The change event fires when the value is committed, _[...]_\n\n~ Section [4.10.5.5 Common event behaviours](https://html.spec.whatwg.org/multipage/forms.html#event-input-input)\n",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9772",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9772/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9772/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9772/events",
+  "html_url": "https://github.com/facebook/react/pull/9772",
+  "id": 231260805,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTIyMzg1NDE3",
+  "number": 9772,
+  "title": "Move warnings into under DEV conditions",
+  "user": {
+    "login": "koba04",
+    "id": 250407,
+    "node_id": "MDQ6VXNlcjI1MDQwNw==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/250407?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/koba04",
+    "html_url": "https://github.com/koba04",
+    "followers_url": "https://api.github.com/users/koba04/followers",
+    "following_url": "https://api.github.com/users/koba04/following{/other_user}",
+    "gists_url": "https://api.github.com/users/koba04/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/koba04/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/koba04/subscriptions",
+    "organizations_url": "https://api.github.com/users/koba04/orgs",
+    "repos_url": "https://api.github.com/users/koba04/repos",
+    "events_url": "https://api.github.com/users/koba04/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/koba04/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2017-05-25T07:20:00Z",
+  "updated_at": "2017-05-25T15:41:33Z",
+  "closed_at": "2017-05-25T14:31:36Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9772",
+    "html_url": "https://github.com/facebook/react/pull/9772",
+    "diff_url": "https://github.com/facebook/react/pull/9772.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9772.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

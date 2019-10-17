@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13080",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13080/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13080/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13080/events",
+  "html_url": "https://github.com/facebook/react/pull/13080",
+  "id": 334091515,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTk2MTUwMDM4",
+  "number": 13080,
+  "title": "Convert react to named exports",
+  "user": {
+    "login": "TrySound",
+    "id": 5635476,
+    "node_id": "MDQ6VXNlcjU2MzU0NzY=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/5635476?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/TrySound",
+    "html_url": "https://github.com/TrySound",
+    "followers_url": "https://api.github.com/users/TrySound/followers",
+    "following_url": "https://api.github.com/users/TrySound/following{/other_user}",
+    "gists_url": "https://api.github.com/users/TrySound/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/TrySound/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/TrySound/subscriptions",
+    "organizations_url": "https://api.github.com/users/TrySound/orgs",
+    "repos_url": "https://api.github.com/users/TrySound/repos",
+    "events_url": "https://api.github.com/users/TrySound/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/TrySound/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 26,
+  "created_at": "2018-06-20T13:59:09Z",
+  "updated_at": "2018-10-29T09:03:29Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13080",
+    "html_url": "https://github.com/facebook/react/pull/13080",
+    "diff_url": "https://github.com/facebook/react/pull/13080.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13080.patch"
+  },
+  "body": "In this diff I'm making a step forward to esm support.\r\n\r\nHere I export scoped variables instead of object. Conditions are\r\nresolved with with ternary operator.\r\n\r\nTo solve the problem of using both `import * as React from 'react'`\r\nand `import React from 'react'` I removed `__esModule` field with simple\r\nregexp. In the future rollup release this will be achived with\r\n[new rollup option](https://github.com/rollup/rollup/pull/2287).\r\n\r\nNew bundles are tested with webpack, rollup and babel-jest. All ways\r\nproduce same results.\r\n\r\nThere was a problem with reexports in https://github.com/facebook/react/issues/11526\r\nand as you can see in examples below it's solved so we can migrate\r\nreact-dom to named exports aswell in the next PR.\r\n\r\nbefore\r\n\r\n```js\r\nvar React = {\r\n  Children: {\r\n    map: mapChildren,\r\n    forEach: forEachChildren,\r\n    count: countChildren,\r\n    toArray: toArray,\r\n    only: onlyChild\r\n  },\r\n  createRef: createRef,\r\n  Component: Component,\r\n  PureComponent: PureComponent,\r\n  createContext: createContext,\r\n  forwardRef: forwardRef,\r\n  Fragment: REACT_FRAGMENT_TYPE,\r\n  StrictMode: REACT_STRICT_MODE_TYPE,\r\n  unstable_AsyncMode: REACT_ASYNC_MODE_TYPE,\r\n  unstable_Profiler: REACT_PROFILER_TYPE,\r\n  createElement: createElementWithValidation,\r\n  cloneElement: cloneElementWithValidation,\r\n  createFactory: createFactoryWithValidation,\r\n  isValidElement: isValidElement,\r\n  version: ReactVersion,\r\n  __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: {\r\n    ReactCurrentOwner: ReactCurrentOwner,\r\n    // Used by renderers to avoid bundling object-assign twice in UMD bundles:\r\n    assign: _assign\r\n  }\r\n};\r\nif (enableSuspense) {\r\n  React.Timeout = REACT_TIMEOUT_TYPE;\r\n}\r\n{\r\n  _assign(React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED, {\r\n    // These should not be included in production.\r\n    ReactDebugCurrentFrame: ReactDebugCurrentFrame,\r\n    // Shim for React DOM 16.0.0 which still destructured (but not used) this.\r\n    // TODO: remove in React 17.0.\r\n    ReactComponentTreeHook: {}\r\n  });\r\n}\r\nvar React$2 = Object.freeze({\r\n\tdefault: React\r\n});\r\nvar React$3 = ( React$2 && React ) || React$2;\r\n// TODO: decide on the top-level export form.\r\n// This is hacky but makes it work with both Rollup and Jest.\r\nvar react = React$3.default ? React$3.default : React$3;\r\nmodule.exports = react;\r\n```\r\n\r\nafter\r\n\r\n```js\r\nexports.Children = Children;\r\nexports.createRef = createRef;\r\nexports.Component = Component;\r\nexports.PureComponent = PureComponent;\r\nexports.createContext = createContext;\r\nexports.forwardRef = forwardRef;\r\nexports.isValidElement = isValidElement;\r\nexports.Fragment = Fragment;\r\nexports.StrictMode = StrictMode;\r\nexports.unstable_AsyncMode = unstable_AsyncMode;\r\nexports.unstable_Profiler = unstable_Profiler;\r\nexports.createElement = createElement$$1;\r\nexports.cloneElement = cloneElement$$1;\r\nexports.createFactory = createFactory$$1;\r\nexports.version = version;\r\nexports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;\r\nexports.Timeout = Timeout;\r\n```",
+  "closed_by": null
+}

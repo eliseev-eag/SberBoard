@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14033",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14033/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14033/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14033/events",
+  "html_url": "https://github.com/facebook/react/pull/14033",
+  "id": 375486955,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjI2OTE5NzE0",
+  "number": 14033,
+  "title": "Show deprecated context object warnings usage in ReactDOM server",
+  "user": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2018-10-30T13:24:32Z",
+  "updated_at": "2018-11-07T17:19:44Z",
+  "closed_at": "2018-11-07T17:19:38Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14033",
+    "html_url": "https://github.com/facebook/react/pull/14033",
+    "diff_url": "https://github.com/facebook/react/pull/14033.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14033.patch"
+  },
+  "body": "This is a follow up to https://github.com/facebook/react/pull/13829.\r\n\r\nThis PR adds deprecated context object usage warnings that mirror the same warnings as in  https://github.com/facebook/react/pull/13829. Specifically:\r\n\r\n## dev when using consumer: \r\n\r\n- Before: When using `Context.Consumer`, it's the same as `Context` so nothing special is handled.\r\n\r\n- After: When `Context.Consumer` is used the at the beginning of reconciliation, the fiber is given the `_context` field from the `Consumer`, that references to `Context`.\r\n\r\n## dev when using context:\r\n\r\n- Before: When using `Context`, it's the same as the previous case (but the wrong behaviour).\r\n\r\n- After: When `Context` we check if `_context` field exists on it (which we added to the new proxy object) and because it won't (only Context.Consumer does) we trigger a new warning.\r\n\r\n## prod when using consumer:\r\n\r\n- Before & After: When using `Context.Consumer`, it's the same as `Context` so nothing special is handled.\r\n\r\n## prod when using context:\r\n\r\n- Before & After: When using `Context`, it's the same as the previous case so nothing special is handled.\r\n\r\nThis behaviour is backwards compatible with previous versions of React.\r\n",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

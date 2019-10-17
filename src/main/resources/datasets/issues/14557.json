@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14557",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14557/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14557/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14557/events",
+  "html_url": "https://github.com/facebook/react/pull/14557",
+  "id": 397547195,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjQzNDY5NDk1",
+  "number": 14557,
+  "title": "[WIP] Try to fix scheduler fixture",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-01-09T20:21:32Z",
+  "updated_at": "2019-01-14T23:39:50Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14557",
+    "html_url": "https://github.com/facebook/react/pull/14557",
+    "diff_url": "https://github.com/facebook/react/pull/14557.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14557.patch"
+  },
+  "body": "It's currently broken. Partially from #14025 but maybe there's bugs. I don't know yet.\r\n\r\nI tried to fix it but 4 is still broken.\r\n\r\n<img width=\"487\" alt=\"screen shot 2019-01-09 at 8 19 49 pm\" src=\"https://user-images.githubusercontent.com/810438/50926090-15f5a180-144c-11e9-9514-54dd1ee21e9c.png\">\r\n\r\nI'm not sure if I need to change the expectations?\r\n\r\nAlso, 8 is broken but only if I go through every test before it first:\r\n\r\n<img width=\"392\" alt=\"screen shot 2019-01-09 at 8 20 20 pm\" src=\"https://user-images.githubusercontent.com/810438/50926113-24dc5400-144c-11e9-8c70-0df37ab6ef3c.png\">\r\n\r\nIt passes in isolation.",
+  "closed_by": null
+}

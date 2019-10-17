@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4046",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4046/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4046/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4046/events",
+  "html_url": "https://github.com/facebook/react/pull/4046",
+  "id": 85662444,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzcwODA4MDY=",
+  "number": 4046,
+  "title": ":memo: document changes for classes",
+  "user": {
+    "login": "basarat",
+    "id": 874898,
+    "node_id": "MDQ6VXNlcjg3NDg5OA==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/874898?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/basarat",
+    "html_url": "https://github.com/basarat",
+    "followers_url": "https://api.github.com/users/basarat/followers",
+    "following_url": "https://api.github.com/users/basarat/following{/other_user}",
+    "gists_url": "https://api.github.com/users/basarat/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/basarat/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/basarat/subscriptions",
+    "organizations_url": "https://api.github.com/users/basarat/orgs",
+    "repos_url": "https://api.github.com/users/basarat/repos",
+    "events_url": "https://api.github.com/users/basarat/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/basarat/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-06-06T00:23:48Z",
+  "updated_at": "2015-06-10T23:01:19Z",
+  "closed_at": "2015-06-09T04:46:39Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4046",
+    "html_url": "https://github.com/facebook/react/pull/4046",
+    "diff_url": "https://github.com/facebook/react/pull/4046.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4046.patch"
+  },
+  "body": "Taking https://github.com/facebook/react/pull/4013#discussion_r31829922 into account\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

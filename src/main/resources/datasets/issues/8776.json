@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8776",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8776/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8776/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8776/events",
+  "html_url": "https://github.com/facebook/react/pull/8776",
+  "id": 200665245,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTAxNDcxNDY3",
+  "number": 8776,
+  "title": "Refactor `addons` folder tests to ES6",
+  "user": {
+    "login": "sptq",
+    "id": 5262306,
+    "node_id": "MDQ6VXNlcjUyNjIzMDY=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/5262306?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sptq",
+    "html_url": "https://github.com/sptq",
+    "followers_url": "https://api.github.com/users/sptq/followers",
+    "following_url": "https://api.github.com/users/sptq/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sptq/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sptq/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sptq/subscriptions",
+    "organizations_url": "https://api.github.com/users/sptq/orgs",
+    "repos_url": "https://api.github.com/users/sptq/repos",
+    "events_url": "https://api.github.com/users/sptq/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sptq/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-01-13T15:58:25Z",
+  "updated_at": "2017-04-21T14:47:20Z",
+  "closed_at": "2017-04-21T14:47:20Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8776",
+    "html_url": "https://github.com/facebook/react/pull/8776",
+    "diff_url": "https://github.com/facebook/react/pull/8776.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8776.patch"
+  },
+  "body": "I refactored  `addons` folder tests to ES6. \r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

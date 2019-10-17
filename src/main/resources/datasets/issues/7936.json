@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7936",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7936/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7936/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7936/events",
+  "html_url": "https://github.com/facebook/react/pull/7936",
+  "id": 182169153,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODg3Njg0MDY=",
+  "number": 7936,
+  "title": "Support iframes (nested browsing contexts) in selection event handling (stale version)",
+  "user": {
+    "login": "acusti",
+    "id": 517889,
+    "node_id": "MDQ6VXNlcjUxNzg4OQ==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/517889?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acusti",
+    "html_url": "https://github.com/acusti",
+    "followers_url": "https://api.github.com/users/acusti/followers",
+    "following_url": "https://api.github.com/users/acusti/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acusti/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acusti/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acusti/subscriptions",
+    "organizations_url": "https://api.github.com/users/acusti/orgs",
+    "repos_url": "https://api.github.com/users/acusti/repos",
+    "events_url": "https://api.github.com/users/acusti/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acusti/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 16,
+  "created_at": "2016-10-11T04:10:51Z",
+  "updated_at": "2018-08-02T22:24:09Z",
+  "closed_at": "2017-10-31T14:33:34Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7936",
+    "html_url": "https://github.com/facebook/react/pull/7936",
+    "diff_url": "https://github.com/facebook/react/pull/7936.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7936.patch"
+  },
+  "body": "As mentioned in https://github.com/facebook/react/pull/7866#issuecomment-252313617, this PR takes the approach of checking all nested browsing contexts and saving and restoring their selections regardless of whether or not they are the primary focused element on the page. It is a more complete alternative to the solution in #7866, and like that PR, fixes #427. It is also, like the original, dependent on facebook/fbjs#188, but that PR has been merged into master, so as soon as a new fbjs version is released, this will be ready to go.\n",
+  "closed_by": {
+    "login": "acusti",
+    "id": 517889,
+    "node_id": "MDQ6VXNlcjUxNzg4OQ==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/517889?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acusti",
+    "html_url": "https://github.com/acusti",
+    "followers_url": "https://api.github.com/users/acusti/followers",
+    "following_url": "https://api.github.com/users/acusti/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acusti/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acusti/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acusti/subscriptions",
+    "organizations_url": "https://api.github.com/users/acusti/orgs",
+    "repos_url": "https://api.github.com/users/acusti/repos",
+    "events_url": "https://api.github.com/users/acusti/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acusti/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

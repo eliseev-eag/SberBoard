@@ -1,0 +1,89 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5037",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5037/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5037/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5037/events",
+  "html_url": "https://github.com/facebook/react/pull/5037",
+  "id": 109411301,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDY1OTM2OTg=",
+  "number": 5037,
+  "title": "Performance improvement for ReactTransitionGroup with large children body",
+  "user": {
+    "login": "beckiechoi",
+    "id": 1735465,
+    "node_id": "MDQ6VXNlcjE3MzU0NjU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1735465?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/beckiechoi",
+    "html_url": "https://github.com/beckiechoi",
+    "followers_url": "https://api.github.com/users/beckiechoi/followers",
+    "following_url": "https://api.github.com/users/beckiechoi/following{/other_user}",
+    "gists_url": "https://api.github.com/users/beckiechoi/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/beckiechoi/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/beckiechoi/subscriptions",
+    "organizations_url": "https://api.github.com/users/beckiechoi/orgs",
+    "repos_url": "https://api.github.com/users/beckiechoi/repos",
+    "events_url": "https://api.github.com/users/beckiechoi/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/beckiechoi/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 347968397,
+      "node_id": "MDU6TGFiZWwzNDc5NjgzOTc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Unsolved",
+      "name": "Resolution: Unsolved",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2015-10-02T00:44:47Z",
+  "updated_at": "2016-03-27T01:27:55Z",
+  "closed_at": "2016-03-27T01:27:40Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5037",
+    "html_url": "https://github.com/facebook/react/pull/5037",
+    "diff_url": "https://github.com/facebook/react/pull/5037.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5037.patch"
+  },
+  "body": "If you have multiple children leaving at the same time, the TG will re-render its children after each child's leave is complete. There will be 20 re-renders if 20 children were leaving within one render of their parent. \n\nThis creates a clearly visible bottleneck if you have a large volume of children and when their parent gets quick re-renders.\n\nOne example is a search/filter with a large list of filtered items entering and leaving as the user types -- you have to display all filtered items, however many, so that the user can stop typing and scroll if they'd like. I've seen visible bottleneck with just 30 items as I type in 4 letters (4 re-renders from parent).\n\nThis commit fixes the performance issue by keeping track of all currently leaving children (which are also added from `performAppear`/`performEnter`) and only trigger re-render after the last leaving child's leave is complete.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

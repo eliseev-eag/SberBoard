@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13019",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13019/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13019/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13019/events",
+  "html_url": "https://github.com/facebook/react/pull/13019",
+  "id": 331275137,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTk0MDQ2NTkx",
+  "number": 13019,
+  "title": "Popping context is O(1) in SSR",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-06-11T17:13:08Z",
+  "updated_at": "2018-06-11T20:09:12Z",
+  "closed_at": "2018-06-11T19:52:40Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13019",
+    "html_url": "https://github.com/facebook/react/pull/13019",
+    "diff_url": "https://github.com/facebook/react/pull/13019.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13019.patch"
+  },
+  "body": "https://github.com/facebook/react/pull/12985 fixed a bug (https://github.com/facebook/react/issues/12984) but added a performance regression, making context popping O(N) where N is the number of providers on the stack.\r\n\r\nThis diff changes the server stack to behave more similarly to what we do on the client. I'm using two stacks in practice: one stack for the \"context\" objects and one for the \"values\" we need to restore them to on the way up.\r\n\r\nI also have a DEV-only stack for providers. I could've used it for context objects too, but I decided it's nice to avoid some property access on every pop when we need to read the context object. So I only use the provider stack for push/pop mismatch validation, just like we do in Fiber.\r\n\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

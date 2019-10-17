@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14705",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14705/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14705/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14705/events",
+  "html_url": "https://github.com/facebook/react/issues/14705",
+  "id": 403445484,
+  "node_id": "MDU6SXNzdWU0MDM0NDU0ODQ=",
+  "number": 14705,
+  "title": "Context leaks to later renders when render stream destroyed early",
+  "user": {
+    "login": "overlookmotel",
+    "id": 557937,
+    "node_id": "MDQ6VXNlcjU1NzkzNw==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/557937?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/overlookmotel",
+    "html_url": "https://github.com/overlookmotel",
+    "followers_url": "https://api.github.com/users/overlookmotel/followers",
+    "following_url": "https://api.github.com/users/overlookmotel/following{/other_user}",
+    "gists_url": "https://api.github.com/users/overlookmotel/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/overlookmotel/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/overlookmotel/subscriptions",
+    "organizations_url": "https://api.github.com/users/overlookmotel/orgs",
+    "repos_url": "https://api.github.com/users/overlookmotel/repos",
+    "events_url": "https://api.github.com/users/overlookmotel/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/overlookmotel/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710332294,
+      "node_id": "MDU6TGFiZWw3MTAzMzIyOTQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Server%20Rendering",
+      "name": "Component: Server Rendering",
+      "color": "d4c5f9",
+      "default": false
+    },
+    {
+      "id": 178761159,
+      "node_id": "MDU6TGFiZWwxNzg3NjExNTk=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Regression",
+      "name": "Type: Regression",
+      "color": "e11d21",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2019-01-26T14:13:33Z",
+  "updated_at": "2019-02-21T21:08:12Z",
+  "closed_at": "2019-02-21T21:08:11Z",
+  "author_association": "CONTRIBUTOR",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\n\r\nBug.\r\n\r\n**What is the current behavior?**\r\n\r\nIf a stream created with `.renderToNodeStream()` is destroyed before the render completes, memory can be retained unnecessarily by Contexts which were active at the time.\r\n\r\nIt's not a memory leak per se as memory use is not unbounded. There's a limit on number of threads in use and context slots are reused, so memory use can't increase endlessly.\r\n\r\nWould only make a noticeable impact on an application which:\r\n\r\n* renders using `.renderToNodeStream()` or `.renderToStaticMarkup()`\r\n* stores large objects in Context (e.g. large data sets from fetch requests)\r\n* experiences a spike in traffic which then recedes\r\n* destroys a lot of streams prematurely (or has errors thrown in rendering which causes streams to be destroyed)\r\n\r\nIn the above case, when the spike hits, many threads are created for concurrent renderers. Each thread writes data into a slot of the Contexts it uses. When the threads are destroyed before the renders complete, the Context slots are not cleared, and so left filled with data which is no longer useful, but cannot be freed by GC.\r\n\r\nWhen the spike recedes, this memory continues to be retained.\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\n\r\nI'll submit a PR with failing test case and fix shorty.\r\n\r\n**What is the expected behavior?**\r\n\r\nWhen stream is destroyed, it should clean up its resources.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nIssue introduced in 961eb65b4ba5de6bbfb6b8a075a924c284541177 which is in 16.7.0.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11439",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11439/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11439/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11439/events",
+  "html_url": "https://github.com/facebook/react/pull/11439",
+  "id": 270901745,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTUwNDcxMjEw",
+  "number": 11439,
+  "title": "Fix ReactShallowRenderer not rerendering when calling forceUpdate()",
+  "user": {
+    "login": "d4rky-pl",
+    "id": 284395,
+    "node_id": "MDQ6VXNlcjI4NDM5NQ==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/284395?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/d4rky-pl",
+    "html_url": "https://github.com/d4rky-pl",
+    "followers_url": "https://api.github.com/users/d4rky-pl/followers",
+    "following_url": "https://api.github.com/users/d4rky-pl/following{/other_user}",
+    "gists_url": "https://api.github.com/users/d4rky-pl/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/d4rky-pl/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/d4rky-pl/subscriptions",
+    "organizations_url": "https://api.github.com/users/d4rky-pl/orgs",
+    "repos_url": "https://api.github.com/users/d4rky-pl/repos",
+    "events_url": "https://api.github.com/users/d4rky-pl/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/d4rky-pl/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-11-03T08:03:46Z",
+  "updated_at": "2017-11-03T11:03:07Z",
+  "closed_at": "2017-11-03T11:03:07Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11439",
+    "html_url": "https://github.com/facebook/react/pull/11439",
+    "diff_url": "https://github.com/facebook/react/pull/11439.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11439.patch"
+  },
+  "body": "This is a followup to #11239. Unfortunately the fix implemented for #11236 was incorrect and it didn't solve the underlying issue of not rerendering component properly on `forceUpdate`. \r\n\r\nThis PR solves the issue and adds necessary test to make sure it's resolved properly this time.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12407",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12407/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12407/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12407/events",
+  "html_url": "https://github.com/facebook/react/pull/12407",
+  "id": 306929062,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTc2MjM4NzMx",
+  "number": 12407,
+  "title": "Fix falling in dev mode",
+  "user": {
+    "login": "Yeti-or",
+    "id": 1813468,
+    "node_id": "MDQ6VXNlcjE4MTM0Njg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1813468?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Yeti-or",
+    "html_url": "https://github.com/Yeti-or",
+    "followers_url": "https://api.github.com/users/Yeti-or/followers",
+    "following_url": "https://api.github.com/users/Yeti-or/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Yeti-or/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Yeti-or/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Yeti-or/subscriptions",
+    "organizations_url": "https://api.github.com/users/Yeti-or/orgs",
+    "repos_url": "https://api.github.com/users/Yeti-or/repos",
+    "events_url": "https://api.github.com/users/Yeti-or/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Yeti-or/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2018-03-20T15:58:04Z",
+  "updated_at": "2018-04-03T19:09:12Z",
+  "closed_at": "2018-03-21T09:41:51Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12407",
+    "html_url": "https://github.com/facebook/react/pull/12407",
+    "diff_url": "https://github.com/facebook/react/pull/12407.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12407.patch"
+  },
+  "body": "`FiberNode.stateNode` could be `null`\r\n\r\nSo I get TypeError:\r\n\r\n```\r\n  at performWorkOnRoot (/tmp/my-project/node_modules/react-dom/cjs/react-dom.development.js:11014:24) TypeError: Cannot read property '_warnedAboutRefsInRender' of null\r\n          at findDOMNode (/tmp/my-project/node_modules/react-dom/cjs/react-dom.development.js:15264:55)\r\n```\r\nI checked `react-native-render` render in `dev` it has the same check:\r\nhttps://github.com/facebook/react/blob/master/packages/react-native-renderer/src/findNodeHandle.js#L73\r\nhttps://github.com/facebook/react/blob/6031bea239d75e60882769f804e041f89cd22014/packages/react-native-renderer/src/findNodeHandle.js#L73\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

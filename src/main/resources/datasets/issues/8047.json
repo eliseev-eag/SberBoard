@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8047",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8047/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8047/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8047/events",
+  "html_url": "https://github.com/facebook/react/pull/8047",
+  "id": 184614125,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTA0NzI1ODA=",
+  "number": 8047,
+  "title": "Fix typo in tutorial.md",
+  "user": {
+    "login": "tae-jun",
+    "id": 8201019,
+    "node_id": "MDQ6VXNlcjgyMDEwMTk=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8201019?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/tae-jun",
+    "html_url": "https://github.com/tae-jun",
+    "followers_url": "https://api.github.com/users/tae-jun/followers",
+    "following_url": "https://api.github.com/users/tae-jun/following{/other_user}",
+    "gists_url": "https://api.github.com/users/tae-jun/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/tae-jun/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/tae-jun/subscriptions",
+    "organizations_url": "https://api.github.com/users/tae-jun/orgs",
+    "repos_url": "https://api.github.com/users/tae-jun/repos",
+    "events_url": "https://api.github.com/users/tae-jun/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/tae-jun/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2016-10-22T06:48:33Z",
+  "updated_at": "2016-10-22T21:07:08Z",
+  "closed_at": "2016-10-22T20:52:29Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8047",
+    "html_url": "https://github.com/facebook/react/pull/8047",
+    "diff_url": "https://github.com/facebook/react/pull/8047.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8047.patch"
+  },
+  "body": "In \"Why Immutability Is Important\" section,\n`changges` -> `changes`\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

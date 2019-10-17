@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10169",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10169/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10169/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10169/events",
+  "html_url": "https://github.com/facebook/react/pull/10169",
+  "id": 242680767,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTMwMzU1NTgz",
+  "number": 10169,
+  "title": "Support \"for\", \"class\", \"http-equiv\", and \"accept-charset\"",
+  "user": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 19,
+  "created_at": "2017-07-13T12:15:23Z",
+  "updated_at": "2017-08-04T14:00:39Z",
+  "closed_at": "2017-08-04T13:49:44Z",
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10169",
+    "html_url": "https://github.com/facebook/react/pull/10169",
+    "diff_url": "https://github.com/facebook/react/pull/10169.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10169.patch"
+  },
+  "body": "This commit updates the HTML property config and UnknownPropertyHook developer warnings such that is no longer required to specify \"className\" instead of \"class\", \"htmlFor\" instead of \"for\", and so on.\r\n\r\n**Both `className` and `class`, `htmlFor` and `for`, are supported**. I do not want this to be a breaking change. \r\n\r\nWhen both are specified within props, React provides the warning:\r\n\r\n> \"className and class were listed as properties on \\<div /\\>. Both write to the same attribute; use one or the other.\"\r\n\r\nThis required updating some tests that were dependent using `className` vs `class` for developer warnings. \r\n\r\nThis feature is implemented separately from #7311 but there should be no functional conflict.\r\n\r\n**Related issues:** #5926, #4331 ",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

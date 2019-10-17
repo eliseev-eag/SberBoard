@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11604",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11604/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11604/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11604/events",
+  "html_url": "https://github.com/facebook/react/pull/11604",
+  "id": 275518732,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTUzNzQ5MDAy",
+  "number": 11604,
+  "title": "Updated minimatch version to 3.0.2 due to High severity security vuln…",
+  "user": {
+    "login": "thatsjet",
+    "id": 2159033,
+    "node_id": "MDQ6VXNlcjIxNTkwMzM=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/2159033?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/thatsjet",
+    "html_url": "https://github.com/thatsjet",
+    "followers_url": "https://api.github.com/users/thatsjet/followers",
+    "following_url": "https://api.github.com/users/thatsjet/following{/other_user}",
+    "gists_url": "https://api.github.com/users/thatsjet/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/thatsjet/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/thatsjet/subscriptions",
+    "organizations_url": "https://api.github.com/users/thatsjet/orgs",
+    "repos_url": "https://api.github.com/users/thatsjet/repos",
+    "events_url": "https://api.github.com/users/thatsjet/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/thatsjet/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2017-11-20T22:19:50Z",
+  "updated_at": "2017-11-21T01:15:49Z",
+  "closed_at": "2017-11-20T22:54:36Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11604",
+    "html_url": "https://github.com/facebook/react/pull/11604",
+    "diff_url": "https://github.com/facebook/react/pull/11604.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11604.patch"
+  },
+  "body": "Current minimatch version in use has a Regex DDoS vulnerability making it vulnerable to a Regular Expression Denial Of Service (ReDoS) attack. An attacker can pass a string value to the minimatch(path,pattern) function to cause a ReDoS.\r\n\r\nThis defect is fixed in version 3.0.2 (current verison).\r\n\r\n**TESTS:**\r\nTest Suites: 122 passed, 122 total\r\nTests:       26 skipped, 2547 passed, 2573 total\r\nSnapshots:   20 passed, 20 total\r\n\r\nTime:        74.541s\r\nRan all test suites.\r\n✨  Done in 76.02s.\r\n\r\n**LINT**\r\nyarn run v1.3.2\r\n$ node ./scripts/tasks/eslint.js\r\n\r\nLint passed.\r\n✨  Done in 12.61s.\r\n\r\n**FLOW**\r\n$ yarn flow\r\nyarn run v1.3.2\r\n$ node ./scripts/tasks/flow.js\r\nFound 0 errors\r\nFlow passed\r\n✨  Done in 9.66s.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

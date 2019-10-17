@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12533",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12533/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12533/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12533/events",
+  "html_url": "https://github.com/facebook/react/pull/12533",
+  "id": 311036644,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTc5MjQ4NTY2",
+  "number": 12533,
+  "title": "Clarify ReactDOM's case warning for html tags",
+  "user": {
+    "login": "nicolevy",
+    "id": 24465189,
+    "node_id": "MDQ6VXNlcjI0NDY1MTg5",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/24465189?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nicolevy",
+    "html_url": "https://github.com/nicolevy",
+    "followers_url": "https://api.github.com/users/nicolevy/followers",
+    "following_url": "https://api.github.com/users/nicolevy/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nicolevy/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nicolevy/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nicolevy/subscriptions",
+    "organizations_url": "https://api.github.com/users/nicolevy/orgs",
+    "repos_url": "https://api.github.com/users/nicolevy/repos",
+    "events_url": "https://api.github.com/users/nicolevy/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nicolevy/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2018-04-03T23:47:20Z",
+  "updated_at": "2018-04-19T04:18:54Z",
+  "closed_at": "2018-04-04T21:21:06Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12533",
+    "html_url": "https://github.com/facebook/react/pull/12533",
+    "diff_url": "https://github.com/facebook/react/pull/12533.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12533.patch"
+  },
+  "body": "References git issue: #12527 \r\n\r\nChanged the html tag casing warning to be more explicit.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

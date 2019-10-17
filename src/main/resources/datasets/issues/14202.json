@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14202",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14202/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14202/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14202/events",
+  "html_url": "https://github.com/facebook/react/pull/14202",
+  "id": 379923451,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjMwMjQ2MTA2",
+  "number": 14202,
+  "title": "[WIP] Continuous* release tool",
+  "user": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-11-12T19:39:12Z",
+  "updated_at": "2018-11-19T19:13:16Z",
+  "closed_at": "2018-11-19T19:13:16Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14202",
+    "html_url": "https://github.com/facebook/react/pull/14202",
+    "diff_url": "https://github.com/facebook/react/pull/14202.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14202.patch"
+  },
+  "body": "*not actually continuous yet but designed for that goal\r\n\r\nAdds a new release script specifically designed for frequent, unstable releases. It's not intended to replace the existing release script, at least for now.\r\n\r\nTODO: Add more details. What follows is a rough, high-level description of what happens.\r\n\r\nTODO: Describe long term goal for this release flow.\r\n\r\nRight now it has three commands: **build**, **show**, and **push**.\r\n\r\n### `release build [ref]`\r\n\r\nExtracts a copy of React at the given ref. It can be a branch or a specific commit (defaults to HEAD). It does this in a temporary directory (using `git archive`), so it doesn't modify the git working tree.\r\n\r\nBefore continuing replaces `ReactVersion.js` with one that points to a temporary version: `0.0.0-placeholder-version-do-not-ship`.\r\n\r\nNext, it runs `yarn` followed by `yarn build` to build the packages.\r\n\r\nAt this point, a checksum is created for each package's contents. The version number is built by combining this checksum and the git commit sha. (A bit redundant, but accounts for transient issues or changes to the release script.) The final version ends up looking like: `0.0.0-a8988e4-1d1a717`\r\n\r\nThen we find-and-replace the temporary version string we used earlier with the actual version.\r\n\r\nMetadata is added to each package.json, including a checksum of that package's contents.\r\n\r\nWe run `npm pack` on each package to prepare it for npm release.\r\n\r\nThen we archive all the packages together into a single tar. This isn't strictly necessary but it reduces the possibility of accidental tampering after the script is run. (But it's a normal tar, so it can still be opened for inspection.)\r\n\r\nThis single build artifact can then be passed to the `show` or `push` commands.\r\n\r\n## `release show [buildArtifact]`\r\n\r\nPrints the dependency tree of a React build.\r\n\r\n```sh\r\n❯ react-release show react-build-a8988e4-1d1a717.tgz\r\n├─ create-subscription\r\n│  ├─ version: 0.0.0-a8988e4-1d1a717\r\n│  ├─ checksum: acd5f8e76f9987a4730eb4adb05b9b12f927ac5d\r\n│  └─ peerDependencies\r\n│     └─ react: 0.0.0-a8988e4-1d1a717\r\n├─ jest-react\r\n│  ├─ version: 0.0.0-a8988e4-1d1a717\r\n│  ├─ checksum: 6ec0e4aac0fe4d3815ab43ce0ff5bcf6bba74422\r\n│  └─ peerDependencies\r\n│     ├─ react: 0.0.0-a8988e4-1d1a717\r\n│     └─ react-test-renderer: 0.0.0-a8988e4-1d1a717\r\n├─ react\r\n│  ├─ version: 0.0.0-a8988e4-1d1a717\r\n│  ├─ checksum: c0574ce144d85eb11e1035628ca86462045d817b\r\n│  └─ dependencies\r\n│     └─ scheduler: 0.0.0-a8988e4-1d1a717\r\n├─ react-art\r\n│  ├─ version: 0.0.0-a8988e4-1d1a717\r\n│  ├─ checksum: 5ae53c3ca1b06d5c80e2ef907c69151b3c202bba\r\n│  ├─ dependencies\r\n│  │  └─ scheduler: 0.0.0-a8988e4-1d1a717\r\n│  └─ peerDependencies\r\n│     └─ react: 0.0.0-a8988e4-1d1a717\r\n├─ react-dom\r\n│  ├─ version: 0.0.0-a8988e4-1d1a717\r\n│  ├─ checksum: a97a7ccd78063ee736b0e2bbb673973a3b288bb0\r\n│  ├─ dependencies\r\n│  │  └─ scheduler: 0.0.0-a8988e4-1d1a717\r\n│  └─ peerDependencies\r\n│     └─ react: 0.0.0-a8988e4-1d1a717\r\n├─ react-is\r\n│  ├─ version: 0.0.0-a8988e4-1d1a717\r\n│  └─ checksum: 9c9523c7dbf51fa632937d5adc598b0d101614eb\r\n├─ react-reconciler\r\n│  ├─ version: 0.0.0-a8988e4-1d1a717\r\n│  ├─ checksum: ae5033294b41f4a9a7c1777df2a014ee822af984\r\n│  ├─ dependencies\r\n│  │  └─ scheduler: 0.0.0-a8988e4-1d1a717\r\n│  └─ peerDependencies\r\n│     └─ react: 0.0.0-a8988e4-1d1a717\r\n├─ react-test-renderer\r\n│  ├─ version: 0.0.0-a8988e4-1d1a717\r\n│  ├─ checksum: 9d2826245ea740d7b16541d312ed6200e5e1660f\r\n│  ├─ dependencies\r\n│  │  ├─ react-is: 0.0.0-a8988e4-1d1a717\r\n│  │  └─ scheduler: 0.0.0-a8988e4-1d1a717\r\n│  └─ peerDependencies\r\n│     └─ react: 0.0.0-a8988e4-1d1a717\r\n└─ scheduler\r\n   ├─ version: 0.0.0-a8988e4-1d1a717\r\n   └─ checksum: d49ca941a51ddc0dec608acd2ce521b9a71397fc\r\n```\r\n\r\nIf `--all` is specified, it dumps the entire package JSON of each package.\r\n\r\n## `release push [buildArtifact]`\r\n\r\nPublishes the build to npm and tags it with `unstable` (TODO: custom tag).\r\n\r\nFirst we check if the user has sufficient publish perimissions.\r\n\r\nThen we check for existing packages. If a version of one of the packages already exists, the checksums are compared. If they match, then everything is fine. (Though we'll still update the tag in the following step.) If they don't match, the script exits immediately.\r\n\r\nOnce we've confirmed everything is good to go, a one-time password is requested.\r\n\r\nThen we publish the packages (the ones that aren't already published) and update the tags.\r\n\r\nIf any of the packages fail, the script can be run again.",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

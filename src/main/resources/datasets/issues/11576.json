@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11576",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11576/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11576/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11576/events",
+  "html_url": "https://github.com/facebook/react/pull/11576",
+  "id": 274687731,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTUzMTY4NDk0",
+  "number": 11576,
+  "title": "Reworded \"invalid DOM property\" warning message (#11570)",
+  "user": {
+    "login": "skiritsis",
+    "id": 29357763,
+    "node_id": "MDQ6VXNlcjI5MzU3NzYz",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29357763?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/skiritsis",
+    "html_url": "https://github.com/skiritsis",
+    "followers_url": "https://api.github.com/users/skiritsis/followers",
+    "following_url": "https://api.github.com/users/skiritsis/following{/other_user}",
+    "gists_url": "https://api.github.com/users/skiritsis/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/skiritsis/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/skiritsis/subscriptions",
+    "organizations_url": "https://api.github.com/users/skiritsis/orgs",
+    "repos_url": "https://api.github.com/users/skiritsis/repos",
+    "events_url": "https://api.github.com/users/skiritsis/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/skiritsis/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2017-11-16T22:32:59Z",
+  "updated_at": "2018-01-05T17:15:52Z",
+  "closed_at": "2018-01-05T17:15:52Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11576",
+    "html_url": "https://github.com/facebook/react/pull/11576",
+    "diff_url": "https://github.com/facebook/react/pull/11576.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11576.patch"
+  },
+  "body": "This PR addresses issue #11570, which rewords the warning message \"invalid DOM property\" to be less obnoxious.\r\n\r\nI tried to avoid making the warning message too long, and focused on 3 points.\r\n1) The reason the warning was displayed? ` Invalid DOM property `class`.`\r\n2) Why? `In React, all properties should be camelCased to avoid issues with JavaScript reserved words, such as \"class\".`\r\n3) How can I fix it? `Did you mean `tabIndex`?`\r\n\r\nIt could be expanded more by adding the exceptions to the rule as well which are `data-*` and `aria-*` attributes, or mentioning that the camel-case naming convention also helps to avoid confusion between HTML attributes.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12867",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12867/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12867/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12867/events",
+  "html_url": "https://github.com/facebook/react/pull/12867",
+  "id": 324661254,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTg5MjA3Mjgw",
+  "number": 12867,
+  "title": "Add a clear error when renderers clash in tests",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2018-05-19T21:19:34Z",
+  "updated_at": "2018-05-21T14:40:49Z",
+  "closed_at": "2018-05-21T14:38:36Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12867",
+    "html_url": "https://github.com/facebook/react/pull/12867",
+    "diff_url": "https://github.com/facebook/react/pull/12867.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12867.patch"
+  },
+  "body": "@bvaughn mentioned the error messages after https://github.com/facebook/react/pull/12792#discussion_r189394188 are quite confusing when you use several renderers in one file and forget to [reset modules](https://github.com/facebook/react/blob/397d6115b7a09f92d4df49ded6e412b5e7ddd859/packages/react-art/src/__tests__/ReactART-test.js#L22-L23):\r\n\r\n<img width=\"937\" alt=\"screen shot 2018-05-19 at 22 15 53\" src=\"https://user-images.githubusercontent.com/810438/40273133-8f05d9d0-5bb2-11e8-852a-2d879c8f920b.png\">\r\n\r\n\r\n(Seemingly unrelated, the code frame location doesn't look right.. We'll need to fix that but that's irrelevant to this problem.)\r\n\r\nWith this fix:\r\n\r\n<img width=\"672\" alt=\"screen shot 2018-05-19 at 22 18 54\" src=\"https://user-images.githubusercontent.com/810438/40273134-a5bde168-5bb2-11e8-9227-9b20402f0278.png\">\r\n\r\nTests pass.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

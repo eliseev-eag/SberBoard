@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13444",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13444/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13444/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13444/events",
+  "html_url": "https://github.com/facebook/react/pull/13444",
+  "id": 352190439,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjA5NTYyNTA2",
+  "number": 13444,
+  "title": "Tweak ReactTypeOfWork order",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2018-08-20T15:39:49Z",
+  "updated_at": "2018-08-29T14:38:13Z",
+  "closed_at": "2018-08-20T15:51:10Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13444",
+    "html_url": "https://github.com/facebook/react/pull/13444",
+    "diff_url": "https://github.com/facebook/react/pull/13444.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13444.patch"
+  },
+  "body": "I empathize with @sebmarkbage's concerns and I did the work of updating DevTools in https://github.com/facebook/react-devtools/pull/1101.\r\n\r\nBut it turns RN's hot reloading transform also depends on this. It doesn't know the React version. We already have three forks of this transform (one forked by metro, and the original one has two versions that different tools depend on). That transform only depends on a single constant — `ClassComponent` being `2`. Please don't make me re-release all of those. It's a huge timesink. It'll go away by itself when we have a better strategy for hot reloading, but for now let me keep this one constant.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

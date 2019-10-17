@@ -1,0 +1,91 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11519",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11519/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11519/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11519/events",
+  "html_url": "https://github.com/facebook/react/issues/11519",
+  "id": 273040545,
+  "node_id": "MDU6SXNzdWUyNzMwNDA1NDU=",
+  "number": 11519,
+  "title": "Consider including directory name into the stack trace for some files",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 139653724,
+      "node_id": "MDU6TGFiZWwxMzk2NTM3MjQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Core%20Utilities",
+      "name": "Component: Core Utilities",
+      "color": "c5def5",
+      "default": false
+    },
+    {
+      "id": 588833528,
+      "node_id": "MDU6TGFiZWw1ODg4MzM1Mjg=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Difficulty:%20medium",
+      "name": "Difficulty: medium",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 725156255,
+      "node_id": "MDU6TGFiZWw3MjUxNTYyNTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/good%20first%20issue%20(taken)",
+      "name": "good first issue (taken)",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2017-11-10T19:51:16Z",
+  "updated_at": "2018-08-09T02:33:30Z",
+  "closed_at": "2018-08-09T02:33:30Z",
+  "author_association": "MEMBER",
+  "body": "See https://twitter.com/deadcoder0904/status/929050109425229824\r\n\r\nMaybe if the file is called `index.js` (pretty common with some directory structures) we should include the directory name into the short component stack trace. ",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7954",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7954/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7954/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7954/events",
+  "html_url": "https://github.com/facebook/react/pull/7954",
+  "id": 182606002,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODkwNzMxOTM=",
+  "number": 7954,
+  "title": "Context doc",
+  "user": {
+    "login": "lacker",
+    "id": 106475,
+    "node_id": "MDQ6VXNlcjEwNjQ3NQ==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/106475?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lacker",
+    "html_url": "https://github.com/lacker",
+    "followers_url": "https://api.github.com/users/lacker/followers",
+    "following_url": "https://api.github.com/users/lacker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lacker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lacker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lacker/subscriptions",
+    "organizations_url": "https://api.github.com/users/lacker/orgs",
+    "repos_url": "https://api.github.com/users/lacker/repos",
+    "events_url": "https://api.github.com/users/lacker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lacker/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-10-12T18:59:16Z",
+  "updated_at": "2016-10-13T23:39:45Z",
+  "closed_at": "2016-10-13T23:39:45Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7954",
+    "html_url": "https://github.com/facebook/react/pull/7954",
+    "diff_url": "https://github.com/facebook/react/pull/7954.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7954.patch"
+  },
+  "body": "The content is mostly similar to how it was before. I added a mention of Redux and MobX, because in several of the situations described by this document, people should really consider using one of those libraries before they start messing with context themselves.\n",
+  "closed_by": {
+    "login": "lacker",
+    "id": 106475,
+    "node_id": "MDQ6VXNlcjEwNjQ3NQ==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/106475?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lacker",
+    "html_url": "https://github.com/lacker",
+    "followers_url": "https://api.github.com/users/lacker/followers",
+    "following_url": "https://api.github.com/users/lacker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lacker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lacker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lacker/subscriptions",
+    "organizations_url": "https://api.github.com/users/lacker/orgs",
+    "repos_url": "https://api.github.com/users/lacker/repos",
+    "events_url": "https://api.github.com/users/lacker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lacker/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

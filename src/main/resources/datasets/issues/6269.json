@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6269",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6269/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6269/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6269/events",
+  "html_url": "https://github.com/facebook/react/pull/6269",
+  "id": 141189884,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjMwMjExNTU=",
+  "number": 6269,
+  "title": "Fix typo in variable name on tutorial",
+  "user": {
+    "login": "sunkibaek",
+    "id": 1668601,
+    "node_id": "MDQ6VXNlcjE2Njg2MDE=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1668601?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sunkibaek",
+    "html_url": "https://github.com/sunkibaek",
+    "followers_url": "https://api.github.com/users/sunkibaek/followers",
+    "following_url": "https://api.github.com/users/sunkibaek/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sunkibaek/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sunkibaek/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sunkibaek/subscriptions",
+    "organizations_url": "https://api.github.com/users/sunkibaek/orgs",
+    "repos_url": "https://api.github.com/users/sunkibaek/repos",
+    "events_url": "https://api.github.com/users/sunkibaek/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sunkibaek/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2016-03-16T06:52:38Z",
+  "updated_at": "2016-03-16T09:02:55Z",
+  "closed_at": "2016-03-16T09:02:55Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6269",
+    "html_url": "https://github.com/facebook/react/pull/6269",
+    "diff_url": "https://github.com/facebook/react/pull/6269.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6269.patch"
+  },
+  "body": "Hello,\n\nI have found a typo in variable name while reading the tutorial. Hope this helps to perfect the documentation.\n\nBTW, thanks for the awesome work with React!\n",
+  "closed_by": {
+    "login": "sunkibaek",
+    "id": 1668601,
+    "node_id": "MDQ6VXNlcjE2Njg2MDE=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1668601?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sunkibaek",
+    "html_url": "https://github.com/sunkibaek",
+    "followers_url": "https://api.github.com/users/sunkibaek/followers",
+    "following_url": "https://api.github.com/users/sunkibaek/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sunkibaek/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sunkibaek/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sunkibaek/subscriptions",
+    "organizations_url": "https://api.github.com/users/sunkibaek/orgs",
+    "repos_url": "https://api.github.com/users/sunkibaek/repos",
+    "events_url": "https://api.github.com/users/sunkibaek/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sunkibaek/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

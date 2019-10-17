@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6278",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6278/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6278/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6278/events",
+  "html_url": "https://github.com/facebook/react/pull/6278",
+  "id": 141417701,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjMxNDQ0NjU=",
+  "number": 6278,
+  "title": "Fix race condition in ResponderTouchHistoryStore",
+  "user": {
+    "login": "marcshilling",
+    "id": 5598961,
+    "node_id": "MDQ6VXNlcjU1OTg5NjE=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/5598961?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/marcshilling",
+    "html_url": "https://github.com/marcshilling",
+    "followers_url": "https://api.github.com/users/marcshilling/followers",
+    "following_url": "https://api.github.com/users/marcshilling/following{/other_user}",
+    "gists_url": "https://api.github.com/users/marcshilling/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/marcshilling/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/marcshilling/subscriptions",
+    "organizations_url": "https://api.github.com/users/marcshilling/orgs",
+    "repos_url": "https://api.github.com/users/marcshilling/repos",
+    "events_url": "https://api.github.com/users/marcshilling/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/marcshilling/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-03-16T22:11:40Z",
+  "updated_at": "2016-03-16T23:07:25Z",
+  "closed_at": "2016-03-16T23:06:49Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6278",
+    "html_url": "https://github.com/facebook/react/pull/6278",
+    "diff_url": "https://github.com/facebook/react/pull/6278.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6278.patch"
+  },
+  "body": "On a cold boot of my React Native app, if the first touch on the screen is a scroll on a ListView/ScrollView, there appears to be a race condition and `recordMoveTouchData` is called before `recordStartTouchData`, therefore `touchHistory.touchBank` is not properly initialized.\n\nUpon the first call,\n`var touchTrack = touchBank[touch.identifier];`\ntouchTrack is undefined here, causing the crash. This code change resolves the problem by properly initializing the touchBank. Not sure if this is the correct approach, because it's probably an indication of a deeper problem, but wanted to start a conversation about it.\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

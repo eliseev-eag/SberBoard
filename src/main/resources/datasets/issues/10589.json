@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10589",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10589/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10589/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10589/events",
+  "html_url": "https://github.com/facebook/react/issues/10589",
+  "id": 254514316,
+  "node_id": "MDU6SXNzdWUyNTQ1MTQzMTY=",
+  "number": 10589,
+  "title": "Make on/off, yes/no boolean attributes work",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2017-09-01T01:49:25Z",
+  "updated_at": "2017-10-04T21:04:28Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "body": "When you pass a boolean to some attributes (e.g. `autoSave`, `autoCorrect`) in 15, they don't work correctly because they actually want a specific string (`yes` and `no`). I think there were also some attributes that want `on` and `off`.\r\n\r\nLet's just “make them work”? Could use a special flag/whitelist for that. There should be very few of these.\r\n\r\nSimilarly we should probably make `<script crossOrigin />` be valid and turn into `<script crossOrigin=\"anonymous\" />`. Currently I don’t think this works on master.",
+  "closed_by": null
+}

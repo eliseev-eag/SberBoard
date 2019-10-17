@@ -1,0 +1,97 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3152",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3152/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3152/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3152/events",
+  "html_url": "https://github.com/facebook/react/pull/3152",
+  "id": 57695527,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjkzMjExMDY=",
+  "number": 3152,
+  "title": "escapeTextContentForBrowser no longer escapes ' and \", quoteAttributeValueForBrowser no longer escapes '",
+  "user": {
+    "login": "syranide",
+    "id": 1714255,
+    "node_id": "MDQ6VXNlcjE3MTQyNTU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1714255?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/syranide",
+    "html_url": "https://github.com/syranide",
+    "followers_url": "https://api.github.com/users/syranide/followers",
+    "following_url": "https://api.github.com/users/syranide/following{/other_user}",
+    "gists_url": "https://api.github.com/users/syranide/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/syranide/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/syranide/subscriptions",
+    "organizations_url": "https://api.github.com/users/syranide/orgs",
+    "repos_url": "https://api.github.com/users/syranide/repos",
+    "events_url": "https://api.github.com/users/syranide/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/syranide/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    },
+    {
+      "id": 332720629,
+      "node_id": "MDU6TGFiZWwzMzI3MjA2Mjk=",
+      "url": "https://api.github.com/repos/facebook/react/labels/HTML",
+      "name": "HTML",
+      "color": "f7c6c7",
+      "default": false
+    },
+    {
+      "id": 347968397,
+      "node_id": "MDU6TGFiZWwzNDc5NjgzOTc=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Resolution:%20Unsolved",
+      "name": "Resolution: Unsolved",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2015-02-14T14:59:37Z",
+  "updated_at": "2016-03-26T20:27:26Z",
+  "closed_at": "2016-03-26T20:27:13Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3152",
+    "html_url": "https://github.com/facebook/react/pull/3152",
+    "diff_url": "https://github.com/facebook/react/pull/3152.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3152.patch"
+  },
+  "body": "cc @yungsters, @vjeux, @zpao \n\nAfter digging around and evaluating, i see the following possible rule changes:\n\nA. `escapeTextContentForBrowser` ignore `\"` and `'`, they have no special meaning in text content.\nB. `quoteAttributeValueForBrowser` ignore `'`, can only be broken out of with `\"` (OWASP).\nC. `quoteAttributeValueForBrowser` ignore `<` and `>`, cannot break out of quoted attribute values.\n\n---\n\n_The following safety observations are only guaranteed to hold for React generated markup, it does not hold when markup is introduced via `dangerouslySetInnerHTML` using different escaping/quoting or post-process manipulated._\n\n**Markup as a string in inline scripts**\nProper escaping: JSON stringify + replace `</script` with `<\\/script`.\n\nWith current rules (if no encoding):\n- Leads to XSS if inside a `'`-string if there are legitimate occurrences of `</script>` (breaks layout during load).\n- Leads to XSS if inside a `\"`-string (throws error on load if markup has a quoted attribute value).\n\nWith rules A+B:\n- Leads to XSS if inside a `'`-string (throws error on load if markup has a `'`).\n\nWith rules A+B+C:\n- Leads to XSS if `</script>` is used as an attribute value (only observed if actively tested for).\n\n**Markup within a HTML comment**\nProper encoding: HTML encode\n\nWith current rules  (if no encoding):\n- Leads to XSS if there are legitimate occurrences of `<!-- -->` (breaks layout during load).\n- Leads to XSS if comment is evaluted by a library (likely to throw error or break layout during load).\n\nWith rules A+B:\n- (nothing new)\n\nWith rules A+B+C:\n- Leads to XSS if `-->` is used as an attribute value (only observed if actively tested for).\n\n---\n\nThe ruleset A+B is ever slightly more exploitable in the case of markup as a string within an inline script without proper encoding, but the flip-side benefit is that the lack of proper escaping is much more likely to be observed during development. I find this to be an acceptable trade-off and it's a dangerous situation to be in with or without the new rules so having a chance to catch it earlier is for the better.\n\nSo while the ruleset A+B+C is safe for HTML rendering it consistently elevates likely (relatively) minor safety issues to full-blown XSS and without increasing the chances of the lack of proper escaping being observed at development, although these are errors on behalf of the user and technically not our concern. This seems like a dangerous step that is not worth taking lightly, considering knowledge of proper escaping is far less common than it should be. `<` and `>` are also rarely used in attribute values so it would also have little practical impact. It would be easy to fix `</script` and `-->` but there's always the question of _what else_.\n\n**tl;dr** I'm confident ruleset reduction A+B is, all things considered, as safe and perhaps even preferable due to earlier detection. This PR implements A+B.\n\n---\n\n``` JS\ndocument.body.innerHTML = '<div></div>';\ndocument.body.firstChild.setAttribute('attr', '<>\\'\"&/'); // quoteAttributeValueForBrowser\ndocument.body.firstChild.style.content = '\\'<>\\\\\\'\"&/\\''; // quoteAttributeValueForBrowser\ndocument.body.firstChild.textContent = '<>\\'\"&/'; // escapeTextContentForBrowser\n```\n\n``` HTML\n<div\n  attr=\"<>'&quot;&amp;/\"\n  style=\"content: '<>\\'&quot;&amp;/';\">\n  &lt;&gt;'\"&amp;/\n</div>\n```\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

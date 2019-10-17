@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13123",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13123/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13123/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13123/events",
+  "html_url": "https://github.com/facebook/react/pull/13123",
+  "id": 336739100,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTk4MTIwOTQ3",
+  "number": 13123,
+  "title": "Reset profiler timer correctly after errors",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2018-06-28T18:53:04Z",
+  "updated_at": "2018-07-05T22:20:12Z",
+  "closed_at": "2018-07-05T18:38:07Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13123",
+    "html_url": "https://github.com/facebook/react/pull/13123",
+    "diff_url": "https://github.com/facebook/react/pull/13123.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13123.patch"
+  },
+  "body": "I discovered a couple of problems with the profiler timer \"unwinding\" behavior while testing the DevTools profiler.\r\n\r\nIt's probably worth noting that the first issue below was the result of #13058, but the other two are present when using the `unstable_Profiler` component (even without the root-profiling changes from #13058).\r\n\r\n### 1: An error while profiling the host root\r\n\r\nWhen the DevTools hook is present, [host roots are automatically opted into profiling mode](https://github.com/facebook/react/blob/183aefa51f5b7b18bde05dccdd417b8983d741d0/packages/react-reconciler/src/ReactFiber.js#L351-L356) in order to support the DevTools profiler UI.\r\n\r\nHowever, in the event of an error, [the in-progress root is just nulled out](https://github.com/facebook/react/blob/183aefa51f5b7b18bde05dccdd417b8983d741d0/packages/react-reconciler/src/ReactFiberScheduler.js#L1076-L1088) without its render timer being stopped. In DEV mode, this will cause the subsequent render to [warn about a non-empty stack](https://github.com/facebook/react/blob/183aefa51f5b7b18bde05dccdd417b8983d741d0/packages/react-reconciler/src/ReactFiberScheduler.js#L664-L669).\r\n\r\nI think the most straight forward solution here is to just add an explicit, DEV-only reset method (similar to what we do in `ReactFiberStack`). See commit a94b1b7.\r\n\r\n### 2: Failures during \"complete\" phase\r\n\r\nReact Native does special `View`/`Text` nesting validation during the \"complete\" phase. If this fails, our unwinding logic previously recorded the elapsed duration twice– once at the start of the \"complete\" phase (before the error) and once while unwinding (after the error).\r\n\r\nI've updated the noop renderer to support triggering this behavior intentionally, and I've added a new test for it as well. Initially, I tried tracking completion in the scheduler but this felt hacky. I think the best solution here is to move the actual time recording to the end of `completeWork` so that it won't be called twice in the event of an error. See commit 0b40c11.\r\n\r\n### 3: Interleaved batched and yielded async work\r\n\r\nThere is one additional case in which the profiler stack isn't being emptied correctly:\r\n1. Batched work on one root is completed, but yields before committing.\r\n2. Async work on another root begins and yields before completing.\r\n3. Work on the initial, batched root is committed.\r\n\r\nAt this point, the profiler's DEV fiber stack contains the in-progress fibers (from the yielded async render), so we shouldn't assert that the stack is empty. The in-progress time measurements for the yielded fibers are also incorrect because they include the time spent finishing up the batched commit.\r\n\r\nI believe the appropriate way to fix the first issue is to only check for an empty stack when we don't have any remaining, yielded async fibers. I think the best way to fix the second issue is to explicitly not count time spent processing batch work (or any sync work) against yielded async fibers. See commit 08febda.\r\n\r\n### Other changes\r\n\r\nI also added a couple of new APIs to the noop renderer to support new tests:\r\n* The ability to trigger an error during the \"complete\" phase (to mimic RN's `Text`/`View` nesting logic) - ca91139\r\n* A new `flushWithoutCommitting` API to mimic React DOM's batched commits - 2aa075d",
+  "closed_by": {
+    "login": "acdlite",
+    "id": 3624098,
+    "node_id": "MDQ6VXNlcjM2MjQwOTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3624098?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/acdlite",
+    "html_url": "https://github.com/acdlite",
+    "followers_url": "https://api.github.com/users/acdlite/followers",
+    "following_url": "https://api.github.com/users/acdlite/following{/other_user}",
+    "gists_url": "https://api.github.com/users/acdlite/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/acdlite/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/acdlite/subscriptions",
+    "organizations_url": "https://api.github.com/users/acdlite/orgs",
+    "repos_url": "https://api.github.com/users/acdlite/repos",
+    "events_url": "https://api.github.com/users/acdlite/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/acdlite/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

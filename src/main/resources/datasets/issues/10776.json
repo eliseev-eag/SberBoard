@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10776",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10776/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10776/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10776/events",
+  "html_url": "https://github.com/facebook/react/issues/10776",
+  "id": 259627491,
+  "node_id": "MDU6SXNzdWUyNTk2Mjc0OTE=",
+  "number": 10776,
+  "title": "In WebDriver, input gets partial value on IE11 after upgrading react-dom from to 15.6.1",
+  "user": {
+    "login": "zouning",
+    "id": 9433204,
+    "node_id": "MDQ6VXNlcjk0MzMyMDQ=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9433204?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zouning",
+    "html_url": "https://github.com/zouning",
+    "followers_url": "https://api.github.com/users/zouning/followers",
+    "following_url": "https://api.github.com/users/zouning/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zouning/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zouning/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zouning/subscriptions",
+    "organizations_url": "https://api.github.com/users/zouning/orgs",
+    "repos_url": "https://api.github.com/users/zouning/repos",
+    "events_url": "https://api.github.com/users/zouning/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zouning/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2017-09-21T20:47:47Z",
+  "updated_at": "2018-01-06T03:27:53Z",
+  "closed_at": "2018-01-06T03:27:53Z",
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nbug\r\n**What is the current behavior?**\r\nWe use webdriverIO + saucelabs to run our tests and found our automation cases consistently failed on IE11 while inputing strings to textbox after upgrade react-dom from 15.5.4 to 15.6.1.\r\nThe input value will be set partially, such as, try to input \"-7d\" it will only input \"-7\", some times, it will be '-d'.\r\n\r\nIn javascript webdriverIO code:\r\nbrowser.setValue(textboxSelector, '-7d');\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem via https://jsfiddle.net or similar (template: https://jsfiddle.net/ebsrpraL/).**\r\nNot sure if you could see this video or not:\r\nhttps://saucelabs.com/beta/tests/bda474ef398949f6ae5dabb4a15fb1a3/watch#27\r\n\r\n**What is the expected behavior?**\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\nhappens to React-dom 15.6.1 with IE11\r\nworks on React-dom 15.5.4",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

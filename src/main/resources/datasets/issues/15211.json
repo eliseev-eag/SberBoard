@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15211",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15211/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15211/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15211/events",
+  "html_url": "https://github.com/facebook/react/pull/15211",
+  "id": 425162256,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjY0MzI1MDA4",
+  "number": 15211,
+  "title": "Ignore update when React and number input isNaN()",
+  "user": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-03-25T23:38:09Z",
+  "updated_at": "2019-03-29T16:32:07Z",
+  "closed_at": null,
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15211",
+    "html_url": "https://github.com/facebook/react/pull/15211",
+    "diff_url": "https://github.com/facebook/react/pull/15211.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15211.patch"
+  },
+  "body": "This commit prevents an issue where assigning NaN to an invalid input causes a text wipe that disrupts text entry:\r\n\r\n![nan-input](https://user-images.githubusercontent.com/590904/54960968-2b8f4900-4f1c-11e9-9155-c4da1b9caa3c.gif)\r\n\r\nThis happens if referencing `input.valueAsNumber` directly, or by calling `Number(input.value)` in the onChange callback of an input. This results in a comparison of `NaN` to `\"\"`, which always returns `true`, assigning a blank string to the input and clearing the input's text.\r\n\r\nIt's also worth mentioning that assigning NaN to an input raises this warning:\r\n\r\n![image](https://user-images.githubusercontent.com/590904/54960587-7e680100-4f1a-11e9-9f00-bfb0e202f530.png)\r\n\r\nHowever we still allow the value to fall through and get assigned to the input.\r\n\r\nThis code is pretty gnarly, and I don't love adding more knots, but I believe this addresses https://github.com/facebook/react/issues/11877 and avoids some bad user experience.\r\n\r\n## Test Plan\r\n\r\nTake a look at the number input fixtures and the new fixture at the bottom here:\r\nhttps://react-dom-fixtures-nan-inputs.surge.sh/number-inputs\r\n",
+  "closed_by": null
+}

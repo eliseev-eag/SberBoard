@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11622",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11622/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11622/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11622/events",
+  "html_url": "https://github.com/facebook/react/pull/11622",
+  "id": 275992983,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTU0MDk3ODM1",
+  "number": 11622,
+  "title": "Fix an opposite description in warning message",
+  "user": {
+    "login": "potaty",
+    "id": 5163148,
+    "node_id": "MDQ6VXNlcjUxNjMxNDg=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/5163148?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/potaty",
+    "html_url": "https://github.com/potaty",
+    "followers_url": "https://api.github.com/users/potaty/followers",
+    "following_url": "https://api.github.com/users/potaty/following{/other_user}",
+    "gists_url": "https://api.github.com/users/potaty/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/potaty/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/potaty/subscriptions",
+    "organizations_url": "https://api.github.com/users/potaty/orgs",
+    "repos_url": "https://api.github.com/users/potaty/repos",
+    "events_url": "https://api.github.com/users/potaty/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/potaty/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-11-22T09:12:56Z",
+  "updated_at": "2017-11-22T09:49:16Z",
+  "closed_at": "2017-11-22T09:49:16Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11622",
+    "html_url": "https://github.com/facebook/react/pull/11622",
+    "diff_url": "https://github.com/facebook/react/pull/11622.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11622.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "potaty",
+    "id": 5163148,
+    "node_id": "MDQ6VXNlcjUxNjMxNDg=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/5163148?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/potaty",
+    "html_url": "https://github.com/potaty",
+    "followers_url": "https://api.github.com/users/potaty/followers",
+    "following_url": "https://api.github.com/users/potaty/following{/other_user}",
+    "gists_url": "https://api.github.com/users/potaty/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/potaty/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/potaty/subscriptions",
+    "organizations_url": "https://api.github.com/users/potaty/orgs",
+    "repos_url": "https://api.github.com/users/potaty/repos",
+    "events_url": "https://api.github.com/users/potaty/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/potaty/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

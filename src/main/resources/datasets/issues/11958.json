@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11958",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11958/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11958/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11958/events",
+  "html_url": "https://github.com/facebook/react/pull/11958",
+  "id": 285834480,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTYxMDE5MDgw",
+  "number": 11958,
+  "title": "Prevent error boundary from masking a test error",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2018-01-03T22:56:54Z",
+  "updated_at": "2018-01-03T23:23:09Z",
+  "closed_at": "2018-01-03T23:23:06Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11958",
+    "html_url": "https://github.com/facebook/react/pull/11958",
+    "diff_url": "https://github.com/facebook/react/pull/11958.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11958.patch"
+  },
+  "body": "[This code in `ReactFiberScheduler`](https://github.com/facebook/react/blob/9f848f8ebec30b3aaa4844ecaef83b014359c5e3/packages/react-reconciler/src/ReactFiberScheduler.js#L1014-L1023) can suppress \"unexpected console warning\" `Error`s thrown by our [custom `toWarnDev` matcher](https://github.com/facebook/react/blob/9f848f8ebec30b3aaa4844ecaef83b014359c5e3/scripts/jest/matchers/toWarnDev.js#L34-L41), so I've changed the matcher to report those Errors to Jest as failed assertions instead. This means that we won't halt as quickly as before, but we'll still fail within the bounds of the `expect().toWarnDev()` callback so it's probably okay.\r\n\r\nBefore this change, the following test would unexpectedly pass:\r\n```js\r\nclass Parent extends React.Component {\r\n  state = {};\r\n  componentDidCatch(error) {\r\n    this.setState({error}); // Render again\r\n  }\r\n  render() {\r\n    return this.state.error ? null : <Child />;\r\n  }\r\n}\r\n\r\nfunction Child() {\r\n  const error = new Error('componentDidMount error');\r\n  error.suppressReactErrorLogging = undefined;\r\n  throw error;\r\n}\r\n\r\nReactNoop.render(<Parent />);\r\nexpect(ReactNoop.flush).toWarnDev([]);\r\n```\r\n\r\nAfter this change, it fails unless the warning is explicitly expected _or_ the entire block is wrapped in an `expect(...).toThrow()` block.\r\n\r\nNote that the test would also have passed if we replaced `expect(ReactNoop.flush).toWarnDev([]);` above with `ReactNoop.flush();` because of the way our [default `console` \"spy\" queues Errors up to report in an `afterEach` block](https://github.com/facebook/react/blob/9f848f8ebec30b3aaa4844ecaef83b014359c5e3/scripts/jest/setupTests.js#L66-L75).\r\n\r\nThis PR also slightly improves the pretty printing message format in this case for when there are no remaining expected warnings _or_ multiple ones. For example:\r\n\r\n![screen shot 2018-01-03 at 2 48 19 pm](https://user-images.githubusercontent.com/29597/34543347-39360e36-f095-11e7-8f12-9f64a6006445.png)\r\n\r\n![screen shot 2018-01-03 at 2 48 31 pm](https://user-images.githubusercontent.com/29597/34543349-395010ec-f095-11e7-94b3-2804348f475d.png)\r\n\r\n![screen shot 2018-01-03 at 2 48 40 pm](https://user-images.githubusercontent.com/29597/34543350-39670ec8-f095-11e7-9f20-c88a776e11c7.png)\r\n\r\n  ",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

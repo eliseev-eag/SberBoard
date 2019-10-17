@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7819",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7819/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7819/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7819/events",
+  "html_url": "https://github.com/facebook/react/pull/7819",
+  "id": 179717686,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODcwODAxNzE=",
+  "number": 7819,
+  "title": "Bailout if the element and the context is unchanged properly",
+  "user": {
+    "login": "wuct",
+    "id": 1695958,
+    "node_id": "MDQ6VXNlcjE2OTU5NTg=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1695958?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/wuct",
+    "html_url": "https://github.com/wuct",
+    "followers_url": "https://api.github.com/users/wuct/followers",
+    "following_url": "https://api.github.com/users/wuct/following{/other_user}",
+    "gists_url": "https://api.github.com/users/wuct/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/wuct/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/wuct/subscriptions",
+    "organizations_url": "https://api.github.com/users/wuct/orgs",
+    "repos_url": "https://api.github.com/users/wuct/repos",
+    "events_url": "https://api.github.com/users/wuct/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/wuct/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-09-28T09:03:55Z",
+  "updated_at": "2016-09-29T03:31:40Z",
+  "closed_at": "2016-09-29T03:31:40Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7819",
+    "html_url": "https://github.com/facebook/react/pull/7819",
+    "diff_url": "https://github.com/facebook/react/pull/7819.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7819.patch"
+  },
+  "body": "Currently, We use `===` to check if a context is changed [before bailing out](https://github.com/facebook/react/blob/master/src/renderers/shared/stack/reconciler/ReactReconciler.js#L130), but we [create a new context](https://github.com/facebook/react/blob/master/src/renderers/shared/stack/reconciler/ReactCompositeComponent.js#L673) everytime a compnent is updated, regardless the origin context provided by the consumer is unchanged. \n\nAs a result, `===` would always return `false` unless the context is `undefined`. That is, when there is a context, a component would never be bailed out. Specifically, If we use `react-redux`, `react-router`, `react-intl` or any other lib which provides a context, we would get no bailout optimization.\n\nTo fix this, I suggest we use `shallowEqual` instead of `===`. But I am not sure it would introduce a breaking change or not. I have made this change in this PR along with a test.\n",
+  "closed_by": {
+    "login": "wuct",
+    "id": 1695958,
+    "node_id": "MDQ6VXNlcjE2OTU5NTg=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1695958?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/wuct",
+    "html_url": "https://github.com/wuct",
+    "followers_url": "https://api.github.com/users/wuct/followers",
+    "following_url": "https://api.github.com/users/wuct/following{/other_user}",
+    "gists_url": "https://api.github.com/users/wuct/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/wuct/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/wuct/subscriptions",
+    "organizations_url": "https://api.github.com/users/wuct/orgs",
+    "repos_url": "https://api.github.com/users/wuct/repos",
+    "events_url": "https://api.github.com/users/wuct/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/wuct/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

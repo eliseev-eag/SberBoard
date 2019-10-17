@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6361",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6361/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6361/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6361/events",
+  "html_url": "https://github.com/facebook/react/pull/6361",
+  "id": 144069686,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjQzNjc2NzU=",
+  "number": 6361,
+  "title": "Allow custom render function for ReactTransitionGroup",
+  "user": {
+    "login": "jdlehman",
+    "id": 3144695,
+    "node_id": "MDQ6VXNlcjMxNDQ2OTU=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3144695?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jdlehman",
+    "html_url": "https://github.com/jdlehman",
+    "followers_url": "https://api.github.com/users/jdlehman/followers",
+    "following_url": "https://api.github.com/users/jdlehman/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jdlehman/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jdlehman/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jdlehman/subscriptions",
+    "organizations_url": "https://api.github.com/users/jdlehman/orgs",
+    "repos_url": "https://api.github.com/users/jdlehman/repos",
+    "events_url": "https://api.github.com/users/jdlehman/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jdlehman/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2016-03-28T20:05:15Z",
+  "updated_at": "2016-03-29T22:31:32Z",
+  "closed_at": "2016-03-28T21:27:17Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6361",
+    "html_url": "https://github.com/facebook/react/pull/6361",
+    "diff_url": "https://github.com/facebook/react/pull/6361.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6361.patch"
+  },
+  "body": "Allow a custom render function to be passed in as the `render` prop in ReactTransitionGroup.\n\nThis is an alternative strategy to https://github.com/facebook/react/pull/5408, based on a suggestion from @gaearon \n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

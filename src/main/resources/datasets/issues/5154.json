@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5154",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5154/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5154/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5154/events",
+  "html_url": "https://github.com/facebook/react/pull/5154",
+  "id": 111128414,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDc1MDIzNzg=",
+  "number": 5154,
+  "title": "add npm 3.x to devengines",
+  "user": {
+    "login": "cmatheson",
+    "id": 35404,
+    "node_id": "MDQ6VXNlcjM1NDA0",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/35404?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/cmatheson",
+    "html_url": "https://github.com/cmatheson",
+    "followers_url": "https://api.github.com/users/cmatheson/followers",
+    "following_url": "https://api.github.com/users/cmatheson/following{/other_user}",
+    "gists_url": "https://api.github.com/users/cmatheson/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/cmatheson/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/cmatheson/subscriptions",
+    "organizations_url": "https://api.github.com/users/cmatheson/orgs",
+    "repos_url": "https://api.github.com/users/cmatheson/repos",
+    "events_url": "https://api.github.com/users/cmatheson/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/cmatheson/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2015-10-13T08:11:02Z",
+  "updated_at": "2015-10-19T20:52:20Z",
+  "closed_at": "2015-10-19T20:52:20Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5154",
+    "html_url": "https://github.com/facebook/react/pull/5154",
+    "diff_url": "https://github.com/facebook/react/pull/5154.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5154.patch"
+  },
+  "body": "Maybe this isn't specific enough?  Everything installs fine on 3.3.6\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

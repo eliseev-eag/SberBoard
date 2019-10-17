@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15005",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15005/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15005/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15005/events",
+  "html_url": "https://github.com/facebook/react/pull/15005",
+  "id": 416570346,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjU3NzcxMTQx",
+  "number": 15005,
+  "title": "fix(auto-version-update): update root package version while publishing",
+  "user": {
+    "login": "nutboltu",
+    "id": 9896958,
+    "node_id": "MDQ6VXNlcjk4OTY5NTg=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9896958?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nutboltu",
+    "html_url": "https://github.com/nutboltu",
+    "followers_url": "https://api.github.com/users/nutboltu/followers",
+    "following_url": "https://api.github.com/users/nutboltu/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nutboltu/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nutboltu/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nutboltu/subscriptions",
+    "organizations_url": "https://api.github.com/users/nutboltu/orgs",
+    "repos_url": "https://api.github.com/users/nutboltu/repos",
+    "events_url": "https://api.github.com/users/nutboltu/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nutboltu/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2019-03-03T21:57:49Z",
+  "updated_at": "2019-03-06T02:59:35Z",
+  "closed_at": "2019-03-04T20:36:17Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15005",
+    "html_url": "https://github.com/facebook/react/pull/15005",
+    "diff_url": "https://github.com/facebook/react/pull/15005.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15005.patch"
+  },
+  "body": "Fixes #14985 \r\n\r\nRoot Cause: #14201 \r\n\r\nIn `scripts/release/publish-commands` scripts we only updated the packages versions and the version in `ReactVersion.js`. But not the root package version.\r\n\r\n**Possible Solutions**\r\n\r\n- [ ] Updating the root package version number as per react version.\r\n- [x] Remove version from root package json.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

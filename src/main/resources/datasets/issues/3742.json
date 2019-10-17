@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/3742",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/3742/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/3742/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/3742/events",
+  "html_url": "https://github.com/facebook/react/pull/3742",
+  "id": 70828457,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzQwOTYzOTA=",
+  "number": 3742,
+  "title": "Treat boxOrdinalGroup and flexOrder as unitless",
+  "user": {
+    "login": "mminer",
+    "id": 267284,
+    "node_id": "MDQ6VXNlcjI2NzI4NA==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/267284?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mminer",
+    "html_url": "https://github.com/mminer",
+    "followers_url": "https://api.github.com/users/mminer/followers",
+    "following_url": "https://api.github.com/users/mminer/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mminer/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mminer/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mminer/subscriptions",
+    "organizations_url": "https://api.github.com/users/mminer/orgs",
+    "repos_url": "https://api.github.com/users/mminer/repos",
+    "events_url": "https://api.github.com/users/mminer/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mminer/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2015-04-25T00:19:07Z",
+  "updated_at": "2015-07-28T23:49:06Z",
+  "closed_at": "2015-07-28T23:46:33Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/3742",
+    "html_url": "https://github.com/facebook/react/pull/3742",
+    "diff_url": "https://github.com/facebook/react/pull/3742.diff",
+    "patch_url": "https://github.com/facebook/react/pull/3742.patch"
+  },
+  "body": "The vendor prefixes for the CSS `order` property (part of flexbox) are the following:\n\n```\n-webkit-box-ordinal-group: 1;\n-moz-box-ordinal-group: 1;\n-ms-flex-order: 1;\n-webkit-order: 1;\n```\n\nReact correctly treats the last rule as unitless, but it appends _px_ to the first three. Of particular importance is `flex-order`, required to support IE10 and below. `box-ordinal-group` is admittedly less widely used. Adding `boxOrdinalGroup` and `flexOrder` to the list of unitless properties fixes this problem.\n\n_This is my first pull request. As per the contributing guidelines, I have completed the Contributor License Agreement._\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

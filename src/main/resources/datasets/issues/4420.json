@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4420",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4420/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4420/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4420/events",
+  "html_url": "https://github.com/facebook/react/pull/4420",
+  "id": 95764514,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDAyODA1NzI=",
+  "number": 4420,
+  "title": "ReactDOMTextarea value assign simplification",
+  "user": {
+    "login": "Simek",
+    "id": 719641,
+    "node_id": "MDQ6VXNlcjcxOTY0MQ==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/719641?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Simek",
+    "html_url": "https://github.com/Simek",
+    "followers_url": "https://api.github.com/users/Simek/followers",
+    "following_url": "https://api.github.com/users/Simek/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Simek/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Simek/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Simek/subscriptions",
+    "organizations_url": "https://api.github.com/users/Simek/orgs",
+    "repos_url": "https://api.github.com/users/Simek/repos",
+    "events_url": "https://api.github.com/users/Simek/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Simek/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2015-07-17T23:29:34Z",
+  "updated_at": "2015-07-17T23:44:35Z",
+  "closed_at": "2015-07-17T23:42:14Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4420",
+    "html_url": "https://github.com/facebook/react/pull/4420",
+    "diff_url": "https://github.com/facebook/react/pull/4420.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4420.patch"
+  },
+  "body": "I hope comment is now more accurate but I'm not 100% sure it's consistent with the truth.\n",
+  "closed_by": {
+    "login": "Simek",
+    "id": 719641,
+    "node_id": "MDQ6VXNlcjcxOTY0MQ==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/719641?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Simek",
+    "html_url": "https://github.com/Simek",
+    "followers_url": "https://api.github.com/users/Simek/followers",
+    "following_url": "https://api.github.com/users/Simek/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Simek/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Simek/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Simek/subscriptions",
+    "organizations_url": "https://api.github.com/users/Simek/orgs",
+    "repos_url": "https://api.github.com/users/Simek/repos",
+    "events_url": "https://api.github.com/users/Simek/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Simek/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

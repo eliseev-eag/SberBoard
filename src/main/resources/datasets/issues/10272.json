@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10272",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10272/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10272/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10272/events",
+  "html_url": "https://github.com/facebook/react/pull/10272",
+  "id": 245401927,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTMyMjgxOTg3",
+  "number": 10272,
+  "title": "Fix false \"unknown property\" warnings for events in SSR",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2017-07-25T13:30:59Z",
+  "updated_at": "2017-07-25T19:11:55Z",
+  "closed_at": "2017-07-25T16:01:49Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10272",
+    "html_url": "https://github.com/facebook/react/pull/10272",
+    "diff_url": "https://github.com/facebook/react/pull/10272.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10272.patch"
+  },
+  "body": "This fixes https://github.com/facebook/react/issues/10265.\r\nVerified by running SSR fixture with the fix (I no longer see the erroneous warnings).\r\n\r\nI think we should get this in before the beta because otherwise SSR is somewhat unusable due to the false positives on every event.\r\n\r\n<s>The fix itself is rather gross. But it‘s the minimal one that works, and I don’t want to change too much before the beta. We *know* it will work because in principle it just reverts the DEV build to what it was before #10173.</s>\r\n\r\n<s>I will start working on an alternative fix that forks injections instead of reusing them now. But I think this is an easier/safer thing to get in now.</s>\r\n\r\n<s>I’ll also need to understand why tests didn’t catch this. Probably because event plugins are in a shared module so the list is singleton for both ReactDOM and ReactDOMServer in tests. And they share it even though actual bundles would not.</s>\r\n\r\nI understand it now. See followup comment.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

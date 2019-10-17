@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9383",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9383/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9383/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9383/events",
+  "html_url": "https://github.com/facebook/react/pull/9383",
+  "id": 220429340,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTE0OTYyMzE0",
+  "number": 9383,
+  "title": "Fix react-addons-create-fragment package export",
+  "user": {
+    "login": "lscspirit",
+    "id": 1433246,
+    "node_id": "MDQ6VXNlcjE0MzMyNDY=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1433246?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lscspirit",
+    "html_url": "https://github.com/lscspirit",
+    "followers_url": "https://api.github.com/users/lscspirit/followers",
+    "following_url": "https://api.github.com/users/lscspirit/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lscspirit/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lscspirit/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lscspirit/subscriptions",
+    "organizations_url": "https://api.github.com/users/lscspirit/orgs",
+    "repos_url": "https://api.github.com/users/lscspirit/repos",
+    "events_url": "https://api.github.com/users/lscspirit/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lscspirit/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-04-08T21:41:50Z",
+  "updated_at": "2017-04-09T04:49:02Z",
+  "closed_at": "2017-04-08T22:03:18Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9383",
+    "html_url": "https://github.com/facebook/react/pull/9383",
+    "diff_url": "https://github.com/facebook/react/pull/9383.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9383.patch"
+  },
+  "body": "Fix the react-addons-create-fragment package to properly exports the `createReactFragment` function as intended. This package is currently exporting a function that returns the `createReactFragment()`, which is incorrect. The package should be exporting the actual `createReactFragment()`. \r\n\r\nThis fixes facebook/react#9381.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

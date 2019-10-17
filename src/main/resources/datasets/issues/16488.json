@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16488",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16488/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16488/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16488/events",
+  "html_url": "https://github.com/facebook/react/issues/16488",
+  "id": 482556701,
+  "node_id": "MDU6SXNzdWU0ODI1NTY3MDE=",
+  "number": 16488,
+  "title": "DevTools: Re-enable postMessage transferable for faster ArrayBuffer transfers",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 710573595,
+      "node_id": "MDU6TGFiZWw3MTA1NzM1OTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Developer%20Tools",
+      "name": "Component: Developer Tools",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-08-19T22:24:43Z",
+  "updated_at": "2019-08-19T22:25:04Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "I got this on FB.com sandbox:\r\n\r\n<img width=\"815\" alt=\"screen shot 2019-03-01 at 1 15 24 pm\" src=\"https://user-images.githubusercontent.com/810438/53640457-26dcbb00-3c24-11e9-828f-a987ffeec4da.png\">\r\n\r\n\r\n---\r\nOriginally reported by @gaearon via https://github.com/bvaughn/react-devtools-experimental/issues/25",
+  "closed_by": null
+}

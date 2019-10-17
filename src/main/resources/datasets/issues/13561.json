@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13561",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13561/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13561/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13561/events",
+  "html_url": "https://github.com/facebook/react/pull/13561",
+  "id": 357021497,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjEzMTM3NjYx",
+  "number": 13561,
+  "title": "Removed ref-getter methods from \"schedule\" API",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-09-05T00:22:03Z",
+  "updated_at": "2018-09-05T14:29:33Z",
+  "closed_at": "2018-09-05T14:29:31Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13561",
+    "html_url": "https://github.com/facebook/react/pull/13561",
+    "diff_url": "https://github.com/facebook/react/pull/13561.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13561.patch"
+  },
+  "body": "First two steps of #13559:\r\n- Replace the [`__getInteractionsRef` and `__getSubscriberRef` methods](https://github.com/facebook/react/blob/fb88fd9d8c9f72b8e2e7e1ae89652d2a6a707562/packages/schedule/src/Tracking.js#L84-L90) with direct exports (`__interactionsRef` and `__subscriberRef`) and [update the `ScheduleTracking` UMD fork](https://github.com/facebook/react/blob/master/packages/shared/forks/ScheduleTracking.umd.js).\r\n- Remove `__getInteractionsRef` and `__getSubscriberRef` from the `schedule/tracking` UMD [dev](https://github.com/facebook/react/blob/master/packages/schedule/npm/umd/schedule-tracking.development.js) and [prod](https://github.com/facebook/react/blob/master/packages/schedule/npm/umd/schedule-tracking.production.min.js) bundles since it's not part of the public API.\r\n\r\nI tested the packaging and tracking fixtures, as well as the \"suspense\" demo app, and hand-inspected the `react`, `react-dom`, and `schedule` NPM bundles. All seemed in order.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

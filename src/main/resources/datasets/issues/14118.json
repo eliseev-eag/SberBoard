@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14118",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14118/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14118/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14118/events",
+  "html_url": "https://github.com/facebook/react/pull/14118",
+  "id": 377692226,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjI4NTczOTYy",
+  "number": 14118,
+  "title": "Improve hydration fixture, support older versions of React",
+  "user": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2018-11-06T04:53:10Z",
+  "updated_at": "2019-03-13T22:12:50Z",
+  "closed_at": "2019-03-13T22:12:50Z",
+  "author_association": "COLLABORATOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14118",
+    "html_url": "https://github.com/facebook/react/pull/14118",
+    "diff_url": "https://github.com/facebook/react/pull/14118.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14118.patch"
+  },
+  "body": "**What**\r\n\r\nThis PR makes some improvements to the DOM test fixtures to make it easier to test older versions of React.\r\n\r\nHere's a link:\r\nhttp://react-hydration-fixture.surge.sh/hydration\r\n\r\n**Why**\r\n\r\nAfter trying to figure out the origin of a few DOM bugs recently, it gave me some motivation to figure out how we can make that faster. I wanted to quickly test when a bug started or stopped, but discovered my only option was a lot of npm install + build/test across commits.\r\n\r\nI think we can do that better, and I think the hydration fixture provides a good foundation for that. If we can figure out a way to host commit-level builds, we could very quickly pass through a range of commits to triage an issue in the browser. \r\n\r\n**Updates**\r\n\r\n- Updating the App component to use a class instead of a function lets us support all fixtures down to 0.11\r\n- For really old versions, I generalized the React version picker and added it to the hydration fixture. It can now override the current version of React and supports down to React 0.4.0\r\n- Create a wrapper around findDOMNode for older React\r\n- A small UX fix for the error message on the Hydration Fixture\r\n- Additional documentation in the fixtures as to when key API changes happened. \r\n\r\nI don't want to support all the way back to 0.4.0 for all test fixtures, but I think having some utilities to do it quickly would be useful.\r\n\r\n---\r\n\r\n![image](https://user-images.githubusercontent.com/590904/48043752-e07fbf80-e14d-11e8-9128-be903f22d3aa.png)\r\n",
+  "closed_by": {
+    "login": "nhunzaker",
+    "id": 590904,
+    "node_id": "MDQ6VXNlcjU5MDkwNA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/590904?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/nhunzaker",
+    "html_url": "https://github.com/nhunzaker",
+    "followers_url": "https://api.github.com/users/nhunzaker/followers",
+    "following_url": "https://api.github.com/users/nhunzaker/following{/other_user}",
+    "gists_url": "https://api.github.com/users/nhunzaker/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/nhunzaker/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/nhunzaker/subscriptions",
+    "organizations_url": "https://api.github.com/users/nhunzaker/orgs",
+    "repos_url": "https://api.github.com/users/nhunzaker/repos",
+    "events_url": "https://api.github.com/users/nhunzaker/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/nhunzaker/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

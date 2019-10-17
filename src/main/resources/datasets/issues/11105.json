@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11105",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11105/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11105/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11105/events",
+  "html_url": "https://github.com/facebook/react/pull/11105",
+  "id": 263017683,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ0ODM4MjE5",
+  "number": 11105,
+  "title": "Make sure all class constructors in the docs call super with props",
+  "user": {
+    "login": "yangshun",
+    "id": 1315101,
+    "node_id": "MDQ6VXNlcjEzMTUxMDE=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1315101?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/yangshun",
+    "html_url": "https://github.com/yangshun",
+    "followers_url": "https://api.github.com/users/yangshun/followers",
+    "following_url": "https://api.github.com/users/yangshun/following{/other_user}",
+    "gists_url": "https://api.github.com/users/yangshun/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/yangshun/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/yangshun/subscriptions",
+    "organizations_url": "https://api.github.com/users/yangshun/orgs",
+    "repos_url": "https://api.github.com/users/yangshun/repos",
+    "events_url": "https://api.github.com/users/yangshun/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/yangshun/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-10-05T06:34:37Z",
+  "updated_at": "2017-10-07T03:21:20Z",
+  "closed_at": "2017-10-07T03:21:19Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11105",
+    "html_url": "https://github.com/facebook/react/pull/11105",
+    "diff_url": "https://github.com/facebook/react/pull/11105.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11105.patch"
+  },
+  "body": "Frankly I'm not sure whether it is strictly necessary to do \"always call the base constructor with props\", but it is mentioned [here](https://reactjs.org/docs/state-and-lifecycle.html#adding-local-state-to-a-class) so I think this should be enforced in the documentation at the very least.\r\n\r\nSome of the test fixtures in `/src` have components which do not call the `super()` with `props` as well. I can make a PR to fix those if you like.\r\n\r\nAlso, I understand that the docs page is undergoing migration at the moment. If I should be making doc changes in the new repo or hold off further changes until the migration is complete, do let me know.",
+  "closed_by": {
+    "login": "yangshun",
+    "id": 1315101,
+    "node_id": "MDQ6VXNlcjEzMTUxMDE=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1315101?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/yangshun",
+    "html_url": "https://github.com/yangshun",
+    "followers_url": "https://api.github.com/users/yangshun/followers",
+    "following_url": "https://api.github.com/users/yangshun/following{/other_user}",
+    "gists_url": "https://api.github.com/users/yangshun/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/yangshun/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/yangshun/subscriptions",
+    "organizations_url": "https://api.github.com/users/yangshun/orgs",
+    "repos_url": "https://api.github.com/users/yangshun/repos",
+    "events_url": "https://api.github.com/users/yangshun/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/yangshun/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

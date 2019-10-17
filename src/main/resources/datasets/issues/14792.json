@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14792",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14792/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14792/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14792/events",
+  "html_url": "https://github.com/facebook/react/issues/14792",
+  "id": 407953606,
+  "node_id": "MDU6SXNzdWU0MDc5NTM2MDY=",
+  "number": 14792,
+  "title": "Question: ReactDOM render call in useEffect delayed until first update",
+  "user": {
+    "login": "hamlim",
+    "id": 5579638,
+    "node_id": "MDQ6VXNlcjU1Nzk2Mzg=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/5579638?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/hamlim",
+    "html_url": "https://github.com/hamlim",
+    "followers_url": "https://api.github.com/users/hamlim/followers",
+    "following_url": "https://api.github.com/users/hamlim/following{/other_user}",
+    "gists_url": "https://api.github.com/users/hamlim/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/hamlim/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/hamlim/subscriptions",
+    "organizations_url": "https://api.github.com/users/hamlim/orgs",
+    "repos_url": "https://api.github.com/users/hamlim/repos",
+    "events_url": "https://api.github.com/users/hamlim/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/hamlim/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 1109410193,
+      "node_id": "MDU6TGFiZWwxMTA5NDEwMTkz",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Hooks",
+      "name": "Component: Hooks",
+      "color": "c2f27b",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2019-02-08T00:09:18Z",
+  "updated_at": "2019-02-20T19:29:51Z",
+  "closed_at": "2019-02-12T20:18:36Z",
+  "author_association": "CONTRIBUTOR",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n\r\nA question, maybe a bug but more likely a misunderstanding on my side.\r\n\r\n**What is the current behavior?**\r\n\r\nCalling `ReactDOM.render` from within a `useEffect` won't actually render to the dom unless an update is triggered from anywhere else within the entire react app.\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\n\r\nSee: https://codesandbox.io/s/jl02nrqznw\r\n\r\n**What is the expected behavior?**\r\n\r\nAfter the `RendersAnotherRoot` component is initially rendered, the `useEffect` function is called and then the subsequent `ReactDOM.render` call renders the separate react root.\r\n\r\n**Note**: Uncommenting the setCount update from within the `RendersAnotherRootWithUpdate` component will then render the content from both `useEffect` render calls.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nreact 16.8.1\r\nreact-dom 16.8.1",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

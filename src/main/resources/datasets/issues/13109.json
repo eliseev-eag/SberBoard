@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13109",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13109/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13109/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13109/events",
+  "html_url": "https://github.com/facebook/react/pull/13109",
+  "id": 335584032,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTk3MjQ4MjMw",
+  "number": 13109,
+  "title": "Under a feature flag, start setting up \"Strict Mode\" prefix for warnings.",
+  "user": {
+    "login": "flarnie",
+    "id": 1114467,
+    "node_id": "MDQ6VXNlcjExMTQ0Njc=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1114467?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flarnie",
+    "html_url": "https://github.com/flarnie",
+    "followers_url": "https://api.github.com/users/flarnie/followers",
+    "following_url": "https://api.github.com/users/flarnie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flarnie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flarnie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flarnie/subscriptions",
+    "organizations_url": "https://api.github.com/users/flarnie/orgs",
+    "repos_url": "https://api.github.com/users/flarnie/repos",
+    "events_url": "https://api.github.com/users/flarnie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flarnie/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2018-06-25T22:02:33Z",
+  "updated_at": "2018-08-16T13:56:53Z",
+  "closed_at": "2018-08-16T13:56:52Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13109",
+    "html_url": "https://github.com/facebook/react/pull/13109",
+    "diff_url": "https://github.com/facebook/react/pull/13109.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13109.patch"
+  },
+  "body": "**tldr:** We want to add the \"Strict Mode\" prefix to all warnings which fire from within a 'strict mode' component tree, so that we can whitelist those warnings in our internal warning infrastructure.\r\n\r\nThis approach is not perfect, but we want to get something synced into Facebook asap to test before `<StrictMode` becomes widely used. This is an opportunity for us to clean up our current warning blacklist. Once we land this, we can filter for warnings with the `Strict Mode` prefix and whitelist those.\r\n\r\nOnce we figure out a strategy that we find helpful, we can start considering how to ease the pain of warnings landing in open source too.\r\n\r\n**What this does:**\r\n- Adds `ReactDebugCurrentFiber` to `shared` so that we can access it inside of `warning`.\r\n- Update a couple of `warning` callsites as a proof of concept. Shows how we have to set up `ReactDebugCurrentFiber` if the warning is fired from the commit phase.\r\n- Update some tests for those warnings; one test we actually changed `Baz` to `Baz, Foo`. The original *did* fire a warning saying `Baz, Foo` but because partial matches pass, it was passing even though it only said `Baz` in the test expectation.\r\n\r\n**Concerns:**\r\n- Adding 'Strict Mode' to warning strings is confusing, doesn't make sense, isn't helpful.\r\n--> But we need to try something, and it may not be so bad. Hard to say how people will generally perceive it.\r\n\r\n- Changing 'Strict Mode' behavior will cause problems for people who have adopted it.\r\n--> Except it's not widely adopted yet, so this is our change to make a little improvement.\r\n\r\n- It's a footgun to make `reactWarning` rely on the caller to have set up `ReactDebugCurrentFiber` to point to the right fiber.\r\n--> Probably, and we could move to passing in a flag, or just calling `ReactDebugCurrentFiber.current.mode & StrictMode` in the place where we construct the warning. But we may want to move to a different pattern of just using `console.error` instead of the `warning`/`reactWarning` wrappers, and this moves us in that direction.\r\n\r\n- This will mess with our warning logging.\r\n--> We can do something internally to transform the warnings, removing the 'Strict Mode' prefix before they are actually logged. Or we can just leave it, since 'Strict Mode' shouldn't affect too many callsites yet.\r\n\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

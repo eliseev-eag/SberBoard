@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/1259",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/1259/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/1259/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/1259/events",
+  "html_url": "https://github.com/facebook/react/issues/1259",
+  "id": 29467710,
+  "node_id": "MDU6SXNzdWUyOTQ2NzcxMA==",
+  "number": 1259,
+  "title": "Stop doing data-*, aria-*, start using dataSet",
+  "user": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 27,
+  "created_at": "2014-03-14T20:30:18Z",
+  "updated_at": "2019-06-22T14:55:52Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "body": "The DOM already exposes `data-*` as `dataset` but it's doing transformation from hyphenated to camelCase. [From MDN](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement.dataset):\n\n```\n<div id=\"user\" data-id=\"1234567890\" data-user=\"johndoe\" data-date-of-birth>John Doe\n</div>\n\nvar el = document.querySelector('#user');\n\n// el.id == 'user'\n// el.dataset.id === '1234567890'\n// el.dataset.user === 'johndoe'\n// el.dataset.dateOfBirth === ''\n\nel.dataset.dateOfBirth = '1960-10-03'; // set the DOB.\n\n// 'someDataAttr' in el.dataset === false\n\nel.dataset.someDataAttr = 'mydata';\n// 'someDataAttr' in el.dataset === true\n```\n\nWe should just start supporting `dataSet` (because camelCase). This will allow a couple things:\n- easier reasoning about data attributes (`Object.keys(this.props.dataSet)`)\n- easier merging (`<div dataSet={merge(this.props.dataSet, {extra: 'value', override: 'value'})} />`)\n- easier (potentially faster?) updates (just modify `node.dataset`)\n\nWe'll want to do the reverse of what the DOM is doing. eg `<div dataSet={{dateOfBirth: 'val', foo: 'bar'}} />` becomes `<div data-date-of-birth=\"val\" data-foo=\"bar\"></div>`.\n\nTo the best of my knowledge, `aria-*` doesn't have a corresponding API, but we should make it work the same way. I think `ariaSet` makes sense.\n",
+  "closed_by": null
+}

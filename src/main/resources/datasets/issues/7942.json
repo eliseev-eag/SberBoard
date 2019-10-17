@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7942",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7942/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7942/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7942/events",
+  "html_url": "https://github.com/facebook/react/issues/7942",
+  "id": 182373497,
+  "node_id": "MDU6SXNzdWUxODIzNzM0OTc=",
+  "number": 7942,
+  "title": "Fiber Principles: Contributing To Fiber",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 739761016,
+      "node_id": "MDU6TGFiZWw3Mzk3NjEwMTY=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Reconciler",
+      "name": "Component: Reconciler",
+      "color": "f9a798",
+      "default": false
+    },
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2016-10-11T21:02:05Z",
+  "updated_at": "2019-06-07T07:43:13Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "body": "I just wanted to document a few unique design patterns that apply to Fiber, but not necessarily anything else. I'll start here.\n- You may mutate the fiber that you're working on during `beginWork` and `completeWork` phases but you may not have any other global side-effects. If you need a global side-effect, that have to be moved to the `commitWork` phase.\n- Fiber is a fixed data structure. It shares the same hidden class. Never add fields outside of construction in `ReactFiber`.\n- Nothing in the reconciler uses dynamic dispatch. I.e. we don't call a first class function, except for user code such as ref callbacks, functional components, render methods, etc. The rest is a static function available in a closure. I.e. use `myHelper(obj)` instead of `obj.myHelper()`. Any time we need to branch logic we use a switch statement over a `tag` which is a number that indicates which type of object we're dealing with and which branch to take (see pattern matching).\n- Many modules are instantiated with a `HostConfig` object. It is a single constructor that gets called on initialization time. This should be inlinable by a compiler.\n- Nothing in Fiber uses the normal JS stack. Meaning it does use the stack but it can be compiled into a flat function if needed. Calling other functions is fine - the only limitation is that they can't be recursive.\n- If I can't use recursion, how do I traverse through the tree? Learn to use the singly linked list tree traversal algorithm. E.g. parent first, depth first:\n\n``` js\nlet root = fiber;\nlet node = fiber;\nwhile (true) {\n  // Do something with node\n  if (node.child) {\n    node = node.child;\n    continue;\n  }\n  if (node === root) {\n    return;\n  }\n  while (!node.sibling) {\n    if (!node.return || node.return === root) {\n      return;\n    }\n    node = node.return;\n  }\n  node = node.sibling;\n}\n```\n\nWhy does it need to be this complicated?\n- We can use the normal JS stack for this but any time we yield in a `requestIdleCallback` we would have to rebuild the stack when we continue. Since this only lasts for about 50ms when idle, we would spend some time unwinding and rebuilding the stack each time. It is not too bad. However, everything along the stack would have to be aware of how to \"unwind\" when we abort in the middle of the work flow.\n- It is plausible we could do this at the level of OCaml algebraic effects but we don't currently have all the features we need and we don't get the performance tradeoffs we want out of the box atm. This is a plausible future way forward though.\n- Most code lives outside of this recursion so it doesn't matter much for most cases.\n- Most of what React does is in the space of what the normal stack does. E.g. memoization, error handling, etc. Using the normal stack too, just makes it more difficult to get those to interact.\n- Everything we put on the stack we generally have to put on the heap too because we memoize it. Maintaining the stack and the heap with the same data is theoretically less efficient.\n- That said, all of these optimizations might be moot because JS stacks are much more efficient than JS heaps.\n- One thing that I wanted to try was to compile React components to do work directly on these data structures, just like normal programming languages compile to make mutations etc. to the stack. I think that's where the ideal implementation of React is.\n\nLet's just try it and see how it goes. :D\n\ncc @spicyj @gaearon @acdlite \n",
+  "closed_by": null
+}

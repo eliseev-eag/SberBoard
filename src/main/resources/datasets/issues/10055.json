@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10055",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10055/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10055/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10055/events",
+  "html_url": "https://github.com/facebook/react/pull/10055",
+  "id": 238913771,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTI3NzQxMjE3",
+  "number": 10055,
+  "title": "Fix Typo in ReactFiberTreeReflection",
+  "user": {
+    "login": "jfo84",
+    "id": 11723485,
+    "node_id": "MDQ6VXNlcjExNzIzNDg1",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/11723485?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jfo84",
+    "html_url": "https://github.com/jfo84",
+    "followers_url": "https://api.github.com/users/jfo84/followers",
+    "following_url": "https://api.github.com/users/jfo84/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jfo84/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jfo84/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jfo84/subscriptions",
+    "organizations_url": "https://api.github.com/users/jfo84/orgs",
+    "repos_url": "https://api.github.com/users/jfo84/repos",
+    "events_url": "https://api.github.com/users/jfo84/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jfo84/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-06-27T16:43:08Z",
+  "updated_at": "2017-06-27T16:53:25Z",
+  "closed_at": "2017-06-27T16:53:16Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10055",
+    "html_url": "https://github.com/facebook/react/pull/10055",
+    "diff_url": "https://github.com/facebook/react/pull/10055.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10055.patch"
+  },
+  "body": "This PR changes a bit of text in `ReactFiberTreeReflection` from \"The return pointers pointer to the same fiber\" to \"The return pointers point to the same fiber\"\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

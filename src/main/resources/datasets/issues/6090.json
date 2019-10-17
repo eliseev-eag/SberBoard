@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6090",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6090/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6090/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6090/events",
+  "html_url": "https://github.com/facebook/react/pull/6090",
+  "id": 135570394,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjAyNTU4Nzg=",
+  "number": 6090,
+  "title": "[Docs] Added icon for external links in nav",
+  "user": {
+    "login": "joecritch",
+    "id": 24449,
+    "node_id": "MDQ6VXNlcjI0NDQ5",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/24449?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/joecritch",
+    "html_url": "https://github.com/joecritch",
+    "followers_url": "https://api.github.com/users/joecritch/followers",
+    "following_url": "https://api.github.com/users/joecritch/following{/other_user}",
+    "gists_url": "https://api.github.com/users/joecritch/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/joecritch/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/joecritch/subscriptions",
+    "organizations_url": "https://api.github.com/users/joecritch/orgs",
+    "repos_url": "https://api.github.com/users/joecritch/repos",
+    "events_url": "https://api.github.com/users/joecritch/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/joecritch/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 10,
+  "created_at": "2016-02-22T22:51:13Z",
+  "updated_at": "2016-03-07T19:47:56Z",
+  "closed_at": "2016-02-29T23:19:25Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6090",
+    "html_url": "https://github.com/facebook/react/pull/6090",
+    "diff_url": "https://github.com/facebook/react/pull/6090.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6090.patch"
+  },
+  "body": "- **Added an icon** for any external links in the Docs left-hand navigation.\n- **Deleted interstitial pages**  (\"Complementary Tools\" and \"Examples\"), in favor of linking directly to GitHub Wiki pages. (The icon now signifies exiting the Docs.)\n\n**Screenshot**\n\n<img width=\"383\" alt=\"screen shot 2016-02-22 at 22 42 33\" src=\"https://cloud.githubusercontent.com/assets/24449/13235403/9668819a-d9b5-11e5-95dc-80c576188cc5.png\">\n\n**Note**\n\nThe icon was designed from scratch.\n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

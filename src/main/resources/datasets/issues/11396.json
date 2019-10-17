@@ -1,0 +1,99 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11396",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11396/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11396/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11396/events",
+  "html_url": "https://github.com/facebook/react/issues/11396",
+  "id": 269471319,
+  "node_id": "MDU6SXNzdWUyNjk0NzEzMTk=",
+  "number": 11396,
+  "title": "A function that is also an iterable is treated inconsistently",
+  "user": {
+    "login": "kentcdodds",
+    "id": 1500684,
+    "node_id": "MDQ6VXNlcjE1MDA2ODQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1500684?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/kentcdodds",
+    "html_url": "https://github.com/kentcdodds",
+    "followers_url": "https://api.github.com/users/kentcdodds/followers",
+    "following_url": "https://api.github.com/users/kentcdodds/following{/other_user}",
+    "gists_url": "https://api.github.com/users/kentcdodds/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/kentcdodds/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/kentcdodds/subscriptions",
+    "organizations_url": "https://api.github.com/users/kentcdodds/orgs",
+    "repos_url": "https://api.github.com/users/kentcdodds/repos",
+    "events_url": "https://api.github.com/users/kentcdodds/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/kentcdodds/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 739761016,
+      "node_id": "MDU6TGFiZWw3Mzk3NjEwMTY=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Reconciler",
+      "name": "Component: Reconciler",
+      "color": "f9a798",
+      "default": false
+    },
+    {
+      "id": 588833528,
+      "node_id": "MDU6TGFiZWw1ODg4MzM1Mjg=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Difficulty:%20medium",
+      "name": "Difficulty: medium",
+      "color": "fbca04",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    },
+    {
+      "id": 725156255,
+      "node_id": "MDU6TGFiZWw3MjUxNTYyNTU=",
+      "url": "https://api.github.com/repos/facebook/react/labels/good%20first%20issue%20(taken)",
+      "name": "good first issue (taken)",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2017-10-30T03:25:08Z",
+  "updated_at": "2018-08-16T15:38:49Z",
+  "closed_at": "2018-08-16T15:38:49Z",
+  "author_association": "CONTRIBUTOR",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n*bug* (I think)\r\n\r\n**What is the current behavior?**\r\nHere's a [codesandbox](https://codesandbox.io/s/0ml3roomr0). Or just plop this in an `index.html`:\r\n\r\n```html\r\n<body>\r\n<div id=\"root\"></div>\r\n<script src=\"https://unpkg.com/react@16.0.0/umd/react.development.js\"></script>\r\n<script src=\"https://unpkg.com/react-dom@16.0.0/umd/react-dom.development.js\"></script>\r\n<script src=\"https://unpkg.com/babel-standalone@6.26.0/babel.js\"></script>\r\n<script type=\"text/babel\">\r\nfunction makeRenderable(fn, valueGetter) {\r\n  const ITERATOR_SYMBOL =\r\n    (typeof Symbol === 'function' && Symbol.iterator) || '@@iterator'\r\n  function iterator() {\r\n    let timesCalled = 0\r\n    return {\r\n      next() {\r\n        const done = timesCalled++ > 0\r\n        return {done, value: done ? undefined : valueGetter()}\r\n      },\r\n    }\r\n  }\r\n  fn[ITERATOR_SYMBOL] = iterator\r\n  return fn\r\n}\r\n\r\nconst renderableFunction = makeRenderable(function(a, b) {\r\n  // kinda irrelevant what goes on in here...\r\n  return a + b\r\n}, () => 'I am the rendered version of the function')\r\n\r\nfunction Working() {\r\n  return (\r\n    <div>\r\n      This works: <div>{renderableFunction}</div>\r\n    </div>\r\n  )\r\n}\r\n\r\nfunction NotWorking() {\r\n  return <div>This does not work: {renderableFunction}</div>\r\n}\r\n\r\nReactDOM.render(\r\n  <div>\r\n    <Working />\r\n    <hr />\r\n    <NotWorking />\r\n  </div>,\r\n  document.getElementById('root'),\r\n)\r\n</script>\r\n</body>\r\n```\r\n\r\n**What is the expected behavior?**\r\n\r\nI expect that things will render the same regardless of whether they're an only child or a member of an array of children.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nYes, [it worked in React@15](https://codesandbox.io/s/8zlpvjzjy9).\r\n\r\n**Suggested Solution**\r\n\r\nI'm fairly confident that the issue is in the array of children case, the [`getIteratorFn` call](https://github.com/facebook/react/blob/2c0a8fb99e945315c9dce7a15c85775d51f5755d/packages/react-reconciler/src/ReactChildFiber.js#L578-L586) is within a `typeof newChild === 'object' && newChild !== null` if statement, whereas the original [reconcileChildFibers](https://github.com/facebook/react/blob/2c0a8fb99e945315c9dce7a15c85775d51f5755d/packages/react-reconciler/src/ReactChildFiber.js#L1358) puts the [`getIteratorFn` call outside it](https://github.com/facebook/react/blob/2c0a8fb99e945315c9dce7a15c85775d51f5755d/packages/react-reconciler/src/ReactChildFiber.js#L1434-L1441).\r\n\r\nIf I'm not mistaken, a simple fix would be to move [this curly brace](https://github.com/facebook/react/blob/2c0a8fb99e945315c9dce7a15c85775d51f5755d/packages/react-reconciler/src/ReactChildFiber.js#L589) a few lines up :wink:\r\n\r\nI'm happy to do so complete with a test given a little direction (like, where the test should go). Thanks!",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

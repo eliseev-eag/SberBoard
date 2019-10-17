@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10293",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10293/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10293/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10293/events",
+  "html_url": "https://github.com/facebook/react/pull/10293",
+  "id": 245831240,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTMyNTk2NzI1",
+  "number": 10293,
+  "title": "Fix process override in ErrorUtils test",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-07-26T19:37:56Z",
+  "updated_at": "2017-07-26T19:40:10Z",
+  "closed_at": "2017-07-26T19:40:10Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10293",
+    "html_url": "https://github.com/facebook/react/pull/10293",
+    "diff_url": "https://github.com/facebook/react/pull/10293.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10293.patch"
+  },
+  "body": "This fixes issue that causes confusing errors like https://circleci.com/gh/facebook/react/4653?utm_campaign=vcs-integration-link&utm_medium=referral&utm_source=github-build-link:\r\n\r\n```\r\n FAIL  src/renderers/shared/utils/__tests__/ReactErrorUtils-test.js\r\n  ● ReactErrorUtils › invokeGuardedCallback (production) › should return false from clearCaughtError if no error was thrown (production)\r\n\r\n    TypeError: process.cwd is not a function\r\n```\r\n\r\nLifted this trick from [here](https://github.com/facebook/react/blob/52849c94a732bae67541e0f6f8ff7f5943372a6c/src/renderers/dom/__tests__/ReactDOMProduction-test.js#L23-L29) where we had same issue.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

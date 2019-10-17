@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16896",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16896/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16896/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16896/events",
+  "html_url": "https://github.com/facebook/react/pull/16896",
+  "id": 498464528,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzIxMzkwNzUx",
+  "number": 16896,
+  "title": "Actually return the fallback fiber",
+  "user": {
+    "login": "hugmanrique",
+    "id": 6255580,
+    "node_id": "MDQ6VXNlcjYyNTU1ODA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/6255580?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/hugmanrique",
+    "html_url": "https://github.com/hugmanrique",
+    "followers_url": "https://api.github.com/users/hugmanrique/followers",
+    "following_url": "https://api.github.com/users/hugmanrique/following{/other_user}",
+    "gists_url": "https://api.github.com/users/hugmanrique/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/hugmanrique/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/hugmanrique/subscriptions",
+    "organizations_url": "https://api.github.com/users/hugmanrique/orgs",
+    "repos_url": "https://api.github.com/users/hugmanrique/repos",
+    "events_url": "https://api.github.com/users/hugmanrique/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/hugmanrique/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-09-25T18:56:35Z",
+  "updated_at": "2019-09-25T19:02:51Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16896",
+    "html_url": "https://github.com/facebook/react/pull/16896",
+    "diff_url": "https://github.com/facebook/react/pull/16896.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16896.patch"
+  },
+  "body": "The current behavior of `findNativeNodesForFiberID` for a timed-out Suspense is to attempt to find the fallback fiber, and if not `null`, reassign it to `fiber`. Instead, I believe the proper behavior should be to return this non-null fallback fiber (and not fallback to a host fiber search).\r\n\r\nI found this mistake(?) on lgtm.com ([error](https://lgtm.com/projects/g/facebook/react/snapshot/570203d4d133d2b8d8bd56b0834381f9ce54798a/files/packages/react-devtools-shared/src/backend/renderer.js?sort=name&dir=ASC&mode=heatmap#L1795)) so maybe I'm wrong, but I can't see why `fiber` would be assigned a new value if it's never used again.",
+  "closed_by": null
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5628",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5628/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5628/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5628/events",
+  "html_url": "https://github.com/facebook/react/pull/5628",
+  "id": 121052729,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTMwMDg2ODU=",
+  "number": 5628,
+  "title": "Reject non-objects in spec/key path",
+  "user": {
+    "login": "stefk",
+    "id": 880921,
+    "node_id": "MDQ6VXNlcjg4MDkyMQ==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/880921?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/stefk",
+    "html_url": "https://github.com/stefk",
+    "followers_url": "https://api.github.com/users/stefk/followers",
+    "following_url": "https://api.github.com/users/stefk/following{/other_user}",
+    "gists_url": "https://api.github.com/users/stefk/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/stefk/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/stefk/subscriptions",
+    "organizations_url": "https://api.github.com/users/stefk/orgs",
+    "repos_url": "https://api.github.com/users/stefk/repos",
+    "events_url": "https://api.github.com/users/stefk/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/stefk/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 12,
+  "created_at": "2015-12-08T17:05:59Z",
+  "updated_at": "2016-04-01T14:15:07Z",
+  "closed_at": "2016-04-01T14:15:07Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5628",
+    "html_url": "https://github.com/facebook/react/pull/5628",
+    "diff_url": "https://github.com/facebook/react/pull/5628.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5628.patch"
+  },
+  "body": "The `update` function currently accepts various malformed inputs in its `spec` parameter, leading to bad error reporting or buggy behaviour:\n\n``` js\nupdate({a:[1, 2]}, null); \n// TypeError: Cannot convert undefined or null to object\n\nupdate({a:[]}, []); \n// no error\n\nupdate({a:[]}, [[]]); \n// {0: undefined, a: []}\n\nupdate({a:[1, 2]}, {a: {$slice: [[0,1]]}}) \n// TypeError: Cannot read property '0' of undefined\n\n```\n\nThis PR strengthens the first `invariant` in order to reject any spec/key path that is not a plain object.\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

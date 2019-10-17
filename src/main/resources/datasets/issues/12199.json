@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12199",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12199/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12199/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12199/events",
+  "html_url": "https://github.com/facebook/react/pull/12199",
+  "id": 295954713,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTY4MzAzMDQw",
+  "number": 12199,
+  "title": "Add react-is package",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 25,
+  "created_at": "2018-02-09T17:50:21Z",
+  "updated_at": "2018-06-26T20:58:35Z",
+  "closed_at": "2018-02-11T22:08:41Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12199",
+    "html_url": "https://github.com/facebook/react/pull/12199",
+    "diff_url": "https://github.com/facebook/react/pull/12199.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12199.patch"
+  },
+  "body": "Supersedes PR #11279 and #12092. Resolves issue #12038\r\n\r\n~~Perhaps we could use this in React DevTools as well?~~ (This would not be the case in its current form, since this library accepts React _elements_ and DevTools receives _fibers_.)\r\n\r\n### Tests\r\n\r\nIn addition to the newly-added unit tests, I ran `yarn build react-is` locally to build this, then `npm pack`ed the result and installed it in a fresh project. I also tested the UMD build in CodeSandbox.\r\n\r\n### Example\r\n```js\r\nimport React from \"react\";\r\nimport {\r\n  ContextConsumer,\r\n  ContextProvider,\r\n  isContextConsumer,\r\n  isContextProvider,\r\n  typeOf\r\n} from \"react-is\";\r\n\r\nconst ThemeContext = React.createContext(\"blue\");\r\n\r\nisContextConsumer(<ThemeContext.Consumer />); // true\r\nisContextProvider(<ThemeContext.Provider />); // true\r\ntypeOf(<ThemeContext.Provider />) === ContextProvider; // true\r\ntypeOf(<ThemeContext.Consumer />) === ContextConsumer; // true\r\n```\r\n\r\n### Assumptions\r\n* It is okay that `isElement` is looser than `typeOf` (e.g. it returns true for host elements, fragments, strict-mode, context, etc.)\r\n* There are no additional component types (e.g. the experimental call/return types) that we want to expose for the initial release.\r\n* It's okay to support the (currently unstable) `AsyncMode` for the initial release.\r\n* This package should mirror the version of React rather than be versioned independently (since we'll be adding types over time).",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

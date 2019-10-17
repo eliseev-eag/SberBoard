@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15589",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15589/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15589/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15589/events",
+  "html_url": "https://github.com/facebook/react/pull/15589",
+  "id": 441813176,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjc3MDU5NjUx",
+  "number": 15589,
+  "title": "Feedback needed: add option to enable effects and lifecycle methods in shallow renderer",
+  "user": {
+    "login": "bdwain",
+    "id": 3982094,
+    "node_id": "MDQ6VXNlcjM5ODIwOTQ=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/3982094?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bdwain",
+    "html_url": "https://github.com/bdwain",
+    "followers_url": "https://api.github.com/users/bdwain/followers",
+    "following_url": "https://api.github.com/users/bdwain/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bdwain/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bdwain/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bdwain/subscriptions",
+    "organizations_url": "https://api.github.com/users/bdwain/orgs",
+    "repos_url": "https://api.github.com/users/bdwain/repos",
+    "events_url": "https://api.github.com/users/bdwain/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bdwain/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 15,
+  "created_at": "2019-05-08T16:06:36Z",
+  "updated_at": "2019-07-25T08:40:03Z",
+  "closed_at": "2019-07-25T08:39:37Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15589",
+    "html_url": "https://github.com/facebook/react/pull/15589",
+    "diff_url": "https://github.com/facebook/react/pull/15589.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15589.patch"
+  },
+  "body": "This PR is not complete yet, and once I've confirmed I'm on the right track I can close it and reopen it when it's actually finished if that is preferred. But I wanted to make sure this general approach is going to work.\r\n\r\nThis addresses issue #15275 by adding an option in the shallow renderer to run componentDidUpdate, componentDidMount, useEffect, and useLayoutEffect. This will allow libraries like enzyme to support running lifecycle methods when shallow rendering in components that have hooks. They already support this in class components by running the lifecycle instance methods directly, but that won't work for useEffect, and it seems like the support for that should live in the shallow renderer.",
+  "closed_by": {
+    "login": "bdwain",
+    "id": 3982094,
+    "node_id": "MDQ6VXNlcjM5ODIwOTQ=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/3982094?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bdwain",
+    "html_url": "https://github.com/bdwain",
+    "followers_url": "https://api.github.com/users/bdwain/followers",
+    "following_url": "https://api.github.com/users/bdwain/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bdwain/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bdwain/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bdwain/subscriptions",
+    "organizations_url": "https://api.github.com/users/bdwain/orgs",
+    "repos_url": "https://api.github.com/users/bdwain/repos",
+    "events_url": "https://api.github.com/users/bdwain/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bdwain/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15290",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15290/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15290/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15290/events",
+  "html_url": "https://github.com/facebook/react/pull/15290",
+  "id": 427941645,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjY2NDI1OTY0",
+  "number": 15290,
+  "title": "Add tests for Press responder event module",
+  "user": {
+    "login": "necolas",
+    "id": 239676,
+    "node_id": "MDQ6VXNlcjIzOTY3Ng==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/239676?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/necolas",
+    "html_url": "https://github.com/necolas",
+    "followers_url": "https://api.github.com/users/necolas/followers",
+    "following_url": "https://api.github.com/users/necolas/following{/other_user}",
+    "gists_url": "https://api.github.com/users/necolas/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/necolas/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/necolas/subscriptions",
+    "organizations_url": "https://api.github.com/users/necolas/orgs",
+    "repos_url": "https://api.github.com/users/necolas/repos",
+    "events_url": "https://api.github.com/users/necolas/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/necolas/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-04-01T22:36:00Z",
+  "updated_at": "2019-04-04T20:39:27Z",
+  "closed_at": "2019-04-02T15:49:42Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15290",
+    "html_url": "https://github.com/facebook/react/pull/15290",
+    "diff_url": "https://github.com/facebook/react/pull/15290.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15290.patch"
+  },
+  "body": "Add tests for every implemented prop and feature of the Press responder event module.\r\n\r\nPatches the Press module to fix two failing tests: default `delayLongPress` cannot be shorter than 10ms; `onPressChange` timing should not change if `onPress` is cancelled by `onLongPressShouldCancelPress`.\r\n\r\nNOTE: The default longPress delay should be `500` to match Android and React Native - https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/view/ViewConfiguration.java#66. This will be fixed once https://github.com/facebook/react/pull/15288 is merged\r\n\r\nRef #15257",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

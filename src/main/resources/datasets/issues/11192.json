@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11192",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11192/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11192/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11192/events",
+  "html_url": "https://github.com/facebook/react/pull/11192",
+  "id": 264583749,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ1OTQ3Mzcz",
+  "number": 11192,
+  "title": "Keep autoFocus attribute in the DOM",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 13,
+  "created_at": "2017-10-11T13:20:34Z",
+  "updated_at": "2017-11-13T18:02:57Z",
+  "closed_at": "2017-10-11T17:52:12Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11192",
+    "html_url": "https://github.com/facebook/react/pull/11192",
+    "diff_url": "https://github.com/facebook/react/pull/11192.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11192.patch"
+  },
+  "body": "This is the simplest thing we could do. Changes to always emit `autofocus` into the DOM, both on the server and on the client. We still have the JS hook too, although it doesn’t run during hydration.\r\n\r\n<s>We’ll need to also add a test verifying that the current behavior (Fiber doesn’t call JS focus on hydration) doesn’t regress. It was unintentional but we now consciously want to do it to *prevent* JS focus jumps when hydrating. I’ll work on that next.</s>\r\n\r\n(Done.)\r\n\r\nWe could still blacklist `autoFocus` on the client, and only emit it on the server. The argument for doing that is it’s less likely to conflict with our JS hooks and matches the current behavior for non-SSR apps. The argument against it is that it’s an extra weird special case, and it will be confusing to people to see `autoFocus` only on SSR’d content.\r\n\r\n<s>In this PR, I emit it on the client too. I haven’t decided if that’s right, and the input is welcome.</s>\r\n\r\nI decided to always omit it on the client for extra safety.\r\n\r\ncc @syranide @aweary @sebmarkbage",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

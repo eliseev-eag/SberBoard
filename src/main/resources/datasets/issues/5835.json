@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5835",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5835/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5835/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5835/events",
+  "html_url": "https://github.com/facebook/react/pull/5835",
+  "id": 126130088,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTU3MzAwMjU=",
+  "number": 5835,
+  "title": "Added support for synthetic animation/transition events",
+  "user": {
+    "login": "milesj",
+    "id": 143744,
+    "node_id": "MDQ6VXNlcjE0Mzc0NA==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/143744?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/milesj",
+    "html_url": "https://github.com/milesj",
+    "followers_url": "https://api.github.com/users/milesj/followers",
+    "following_url": "https://api.github.com/users/milesj/following{/other_user}",
+    "gists_url": "https://api.github.com/users/milesj/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/milesj/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/milesj/subscriptions",
+    "organizations_url": "https://api.github.com/users/milesj/orgs",
+    "repos_url": "https://api.github.com/users/milesj/repos",
+    "events_url": "https://api.github.com/users/milesj/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/milesj/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 15,
+  "created_at": "2016-01-12T09:03:18Z",
+  "updated_at": "2016-02-09T05:33:36Z",
+  "closed_at": "2016-02-09T05:33:30Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5835",
+    "html_url": "https://github.com/facebook/react/pull/5835",
+    "diff_url": "https://github.com/facebook/react/pull/5835.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5835.patch"
+  },
+  "body": "After messing around trying to mimic and polyfill transition start/end/cancel events, I ended up just adding basic support for `transitionend` and some animations events.\n\nI'm not sure how to test these since they are timed and the current jest/jsdom make it difficult, but they definitely work as I tested them in a browser alongside a few of my projects.\n",
+  "closed_by": {
+    "login": "milesj",
+    "id": 143744,
+    "node_id": "MDQ6VXNlcjE0Mzc0NA==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/143744?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/milesj",
+    "html_url": "https://github.com/milesj",
+    "followers_url": "https://api.github.com/users/milesj/followers",
+    "following_url": "https://api.github.com/users/milesj/following{/other_user}",
+    "gists_url": "https://api.github.com/users/milesj/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/milesj/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/milesj/subscriptions",
+    "organizations_url": "https://api.github.com/users/milesj/orgs",
+    "repos_url": "https://api.github.com/users/milesj/repos",
+    "events_url": "https://api.github.com/users/milesj/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/milesj/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

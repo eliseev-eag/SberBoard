@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/9668",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/9668/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/9668/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/9668/events",
+  "html_url": "https://github.com/facebook/react/pull/9668",
+  "id": 228116216,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTIwMTk3NzM1",
+  "number": 9668,
+  "title": "Update blog post which creates unhandled promise rejection",
+  "user": {
+    "login": "griffinmyers",
+    "id": 1980044,
+    "node_id": "MDQ6VXNlcjE5ODAwNDQ=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1980044?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/griffinmyers",
+    "html_url": "https://github.com/griffinmyers",
+    "followers_url": "https://api.github.com/users/griffinmyers/followers",
+    "following_url": "https://api.github.com/users/griffinmyers/following{/other_user}",
+    "gists_url": "https://api.github.com/users/griffinmyers/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/griffinmyers/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/griffinmyers/subscriptions",
+    "organizations_url": "https://api.github.com/users/griffinmyers/orgs",
+    "repos_url": "https://api.github.com/users/griffinmyers/repos",
+    "events_url": "https://api.github.com/users/griffinmyers/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/griffinmyers/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2017-05-11T20:47:28Z",
+  "updated_at": "2017-06-09T22:05:48Z",
+  "closed_at": "2017-05-26T13:35:20Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/9668",
+    "html_url": "https://github.com/facebook/react/pull/9668",
+    "diff_url": "https://github.com/facebook/react/pull/9668.diff",
+    "patch_url": "https://github.com/facebook/react/pull/9668.patch"
+  },
+  "body": "In case anybody else stumbles across this old blog post, I wanted to submit a patch to help with unhandled rejections.  \r\n\r\n`#then` and `#catch` each return new Promise instances, so here we actually create two new promises (that aren't assigned).  If the argument promise to `#makeCancelable` rejects, the promise created by `#then` will be an unhandled rejection, which in Node 7 will be an uncaught error.  \r\n\r\nBy using the second argument of `#then` to handle rejections instead, we don't need to worry about the runtime finding any unhandled rejections here.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

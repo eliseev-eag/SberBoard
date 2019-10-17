@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16060",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16060/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16060/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16060/events",
+  "html_url": "https://github.com/facebook/react/pull/16060",
+  "id": 464163108,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjk0NDk4NDY0",
+  "number": 16060,
+  "title": "[Fresh] Prevent local variables from being used in the hook signature",
+  "user": {
+    "login": "theKashey",
+    "id": 582410,
+    "node_id": "MDQ6VXNlcjU4MjQxMA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/582410?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/theKashey",
+    "html_url": "https://github.com/theKashey",
+    "followers_url": "https://api.github.com/users/theKashey/followers",
+    "following_url": "https://api.github.com/users/theKashey/following{/other_user}",
+    "gists_url": "https://api.github.com/users/theKashey/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/theKashey/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/theKashey/subscriptions",
+    "organizations_url": "https://api.github.com/users/theKashey/orgs",
+    "repos_url": "https://api.github.com/users/theKashey/repos",
+    "events_url": "https://api.github.com/users/theKashey/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/theKashey/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-07-04T09:27:46Z",
+  "updated_at": "2019-07-04T09:45:12Z",
+  "closed_at": "2019-07-04T09:45:11Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16060",
+    "html_url": "https://github.com/facebook/react/pull/16060",
+    "diff_url": "https://github.com/facebook/react/pull/16060.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16060.patch"
+  },
+  "body": "The current implementation of the babel plugin would move any `use*` to the hook signature, except the \"builtin\" hooks.\r\nThat could lead to a false positive, when something, which _ducks_ like hook could not be used in the signature.\r\n\r\n```js\r\nconst Component = ({useTheForce}) => {\r\n  const useInnerHook = () => {useTheForce();};\r\n\r\n  useInnerHook();\r\n}\r\n```\r\n\r\n### Solution\r\nCheck that variable is reachable from the `signature` scope. That would not let track the \"real\" hook composition, but, at least, would not lead to runtime error.",
+  "closed_by": {
+    "login": "theKashey",
+    "id": 582410,
+    "node_id": "MDQ6VXNlcjU4MjQxMA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/582410?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/theKashey",
+    "html_url": "https://github.com/theKashey",
+    "followers_url": "https://api.github.com/users/theKashey/followers",
+    "following_url": "https://api.github.com/users/theKashey/following{/other_user}",
+    "gists_url": "https://api.github.com/users/theKashey/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/theKashey/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/theKashey/subscriptions",
+    "organizations_url": "https://api.github.com/users/theKashey/orgs",
+    "repos_url": "https://api.github.com/users/theKashey/repos",
+    "events_url": "https://api.github.com/users/theKashey/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/theKashey/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

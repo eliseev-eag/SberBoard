@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16612",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16612/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16612/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16612/events",
+  "html_url": "https://github.com/facebook/react/pull/16612",
+  "id": 487047856,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzEyMzg5NDcx",
+  "number": 16612,
+  "title": "[DevTools] [Profiler]: Save profile now working in Firefox",
+  "user": {
+    "login": "hristo-kanchev",
+    "id": 23095052,
+    "node_id": "MDQ6VXNlcjIzMDk1MDUy",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/23095052?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/hristo-kanchev",
+    "html_url": "https://github.com/hristo-kanchev",
+    "followers_url": "https://api.github.com/users/hristo-kanchev/followers",
+    "following_url": "https://api.github.com/users/hristo-kanchev/following{/other_user}",
+    "gists_url": "https://api.github.com/users/hristo-kanchev/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/hristo-kanchev/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/hristo-kanchev/subscriptions",
+    "organizations_url": "https://api.github.com/users/hristo-kanchev/orgs",
+    "repos_url": "https://api.github.com/users/hristo-kanchev/repos",
+    "events_url": "https://api.github.com/users/hristo-kanchev/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/hristo-kanchev/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2019-08-29T16:00:44Z",
+  "updated_at": "2019-09-03T18:13:12Z",
+  "closed_at": "2019-09-03T15:35:13Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16612",
+    "html_url": "https://github.com/facebook/react/pull/16612",
+    "diff_url": "https://github.com/facebook/react/pull/16612.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16612.patch"
+  },
+  "body": "Fixes: #16527 \r\n\r\n**Description**:\r\nBasically the reason for FF to block it with the previous implementation was that we didn't have a physical DOMNode for the download anchor tag.\r\n\r\nWith this fix we now pass a `HTMLAnchorElement` to the `downloadFile` function in order to set the correct attributes.\r\n",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

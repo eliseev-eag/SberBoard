@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15719",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15719/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15719/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15719/events",
+  "html_url": "https://github.com/facebook/react/issues/15719",
+  "id": 447543700,
+  "node_id": "MDU6SXNzdWU0NDc1NDM3MDA=",
+  "number": 15719,
+  "title": "React.memo doesn't work as expected in nextjs apps if Provider value changed",
+  "user": {
+    "login": "istarkov",
+    "id": 5077042,
+    "node_id": "MDQ6VXNlcjUwNzcwNDI=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/5077042?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/istarkov",
+    "html_url": "https://github.com/istarkov",
+    "followers_url": "https://api.github.com/users/istarkov/followers",
+    "following_url": "https://api.github.com/users/istarkov/following{/other_user}",
+    "gists_url": "https://api.github.com/users/istarkov/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/istarkov/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/istarkov/subscriptions",
+    "organizations_url": "https://api.github.com/users/istarkov/orgs",
+    "repos_url": "https://api.github.com/users/istarkov/repos",
+    "events_url": "https://api.github.com/users/istarkov/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/istarkov/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-05-23T09:26:18Z",
+  "updated_at": "2019-05-24T15:34:01Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "**bug**\r\n\r\n**What is the current behavior?**\r\n\r\nI can't reproduce this issue out of nextjs app, but see the code of index page  https://codesandbox.io/s/helloworld-i8wzm\r\n\r\n```javascript\r\nimport * as React from \"react\";\r\nimport Link from \"next/link\";\r\n\r\nconst Context = React.createContext({});\r\nconst TmpProvider = Context.Provider;\r\n\r\nconst MemoChild = () => {\r\n  const r = React.useContext(Context);\r\n  // commenting line above make memo to work as expected, it never render on click\r\n  return null;\r\n};\r\n\r\nconst Memo = React.memo(\r\n  () => {\r\n    console.info(\"memo render\");\r\n    return <MemoChild />;\r\n  },\r\n  // NEVER UPDATE\r\n  () => true\r\n);\r\n\r\nconst Test = () => {\r\n  console.info(\"test render\");\r\n  return (\r\n    <TmpProvider value={{}}>\r\n      <Link href={{ pathname: \"/\" }}>\r\n        <a>click me to force rerender</a>\r\n      </Link>\r\n      <Memo />\r\n    </TmpProvider>\r\n  );\r\n};\r\n\r\nexport default Test;\r\n\r\n```\r\n\r\nOn every link click log contains both console.info output\r\n\r\n```\r\ntest render\r\nmemo render\r\n```\r\n\r\nBut if I comment out this line `  const r = React.useContext(Context);`  at MemoChild\r\nlog contains just `test render` on link click as expected.\r\n\r\n**What is the expected behavior?**\r\n\r\n`React.useContext(Context);` in the child of memoized component must not somehow affect code execution, and the only console output on link click must be\r\n```\r\ntest render\r\n```\r\n\r\n",
+  "closed_by": null
+}

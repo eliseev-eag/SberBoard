@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5530",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5530/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5530/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5530/events",
+  "html_url": "https://github.com/facebook/react/pull/5530",
+  "id": 118288773,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTE0NzQ4MTU=",
+  "number": 5530,
+  "title": "Warn if any child passed to ReactCSSTransitionGroup is without key",
+  "user": {
+    "login": "XeeD",
+    "id": 17111,
+    "node_id": "MDQ6VXNlcjE3MTEx",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/17111?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/XeeD",
+    "html_url": "https://github.com/XeeD",
+    "followers_url": "https://api.github.com/users/XeeD/followers",
+    "following_url": "https://api.github.com/users/XeeD/following{/other_user}",
+    "gists_url": "https://api.github.com/users/XeeD/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/XeeD/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/XeeD/subscriptions",
+    "organizations_url": "https://api.github.com/users/XeeD/orgs",
+    "repos_url": "https://api.github.com/users/XeeD/repos",
+    "events_url": "https://api.github.com/users/XeeD/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/XeeD/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-11-22T21:12:30Z",
+  "updated_at": "2016-06-26T19:09:06Z",
+  "closed_at": "2016-06-26T19:09:06Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5530",
+    "html_url": "https://github.com/facebook/react/pull/5530",
+    "diff_url": "https://github.com/facebook/react/pull/5530.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5530.patch"
+  },
+  "body": "Solves #5322\n\nI am not sure if the same check should be performed also in `componentWillReceiveProps` or in a different place altogether.\n\nThank you for feedback.\n\n/cc @LeZuse\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

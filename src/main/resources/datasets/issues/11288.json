@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11288",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11288/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11288/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11288/events",
+  "html_url": "https://github.com/facebook/react/pull/11288",
+  "id": 266940069,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ3NjI5Mjc2",
+  "number": 11288,
+  "title": "Reorganize code structure",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2017-10-19T18:19:43Z",
+  "updated_at": "2017-10-20T00:06:18Z",
+  "closed_at": "2017-10-19T18:50:25Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11288",
+    "html_url": "https://github.com/facebook/react/pull/11288",
+    "diff_url": "https://github.com/facebook/react/pull/11288.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11288.patch"
+  },
+  "body": "A few changes as a followup to Workspaces.\r\n\r\n* Entry points now have natural names, e.g. `React`, `ReactDOM`. Just like before Fiber.\r\n* We now use npm package entry points when importing in the few places we weren't. Such as `ReactFiberReconciler` -> `react-reconciler`.\r\n* Since DOM tests often test both client and server, I removed the mostly arbitary distinction and put most of them together into `packages/dom/__tests__`.\r\n* For DOM implementation, I did another pass at checking which files are client-only/server-only/shared, and separated them into `dom/client`, `dom/server`, and `dom/shared`.\r\n* I deleted a few dead files.\r\n* I moved FB-specific `@preventMunge` directives into flat bundle itself instead of individual source files.\r\n* I separated `TestUtils` and `ReactDOMUnstableNativeDependencies` into a separate bundle type called `RENDERER_UTILS`. The main difference is it shouldn't bundle a reconciler inside itself (unlike a real renderer). This is how I uncovered https://github.com/facebook/react/issues/11280 (which I fixed in https://github.com/facebook/react/pull/11281).\r\n\r\nThe build products look mostly the same to me except for minor dependency order changes.\r\nBundle fixture works.\r\n\r\n<img width=\"1560\" alt=\"screen shot 2017-10-19 at 6 31 10 pm\" src=\"https://user-images.githubusercontent.com/810438/31785027-b835f1d6-b4fb-11e7-8e89-e3a55dc695bc.png\">\r\n\r\n\r\nAlso verified that UFI and Power Editor work in DEV and PROD.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

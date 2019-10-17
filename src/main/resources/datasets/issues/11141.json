@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11141",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11141/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11141/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11141/events",
+  "html_url": "https://github.com/facebook/react/pull/11141",
+  "id": 263595275,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTQ1MjYzMDU4",
+  "number": 11141,
+  "title": "Changed the error message displayed when a select element has props.multiple set to true and value set to null",
+  "user": {
+    "login": "Hendeca",
+    "id": 933567,
+    "node_id": "MDQ6VXNlcjkzMzU2Nw==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/933567?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Hendeca",
+    "html_url": "https://github.com/Hendeca",
+    "followers_url": "https://api.github.com/users/Hendeca/followers",
+    "following_url": "https://api.github.com/users/Hendeca/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Hendeca/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Hendeca/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Hendeca/subscriptions",
+    "organizations_url": "https://api.github.com/users/Hendeca/orgs",
+    "repos_url": "https://api.github.com/users/Hendeca/repos",
+    "events_url": "https://api.github.com/users/Hendeca/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Hendeca/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2017-10-06T23:13:20Z",
+  "updated_at": "2017-11-01T22:26:28Z",
+  "closed_at": "2017-10-31T11:47:59Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/11141",
+    "html_url": "https://github.com/facebook/react/pull/11141",
+    "diff_url": "https://github.com/facebook/react/pull/11141.diff",
+    "patch_url": "https://github.com/facebook/react/pull/11141.patch"
+  },
+  "body": "Addresses issue #9038 \r\n\r\nI changed the error message shown when a select element with props.multiple set to true has a value of `null` to recommend an empty array instead of an empty string. Given that \"the empty string\" is a common term but \"the empty array\" is less so, I also changed the null input value error message shown for textarea and input to use \"an empty string\" instead of \"the empty string\" and changed tests to match.\r\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

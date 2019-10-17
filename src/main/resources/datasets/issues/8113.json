@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8113",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8113/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8113/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8113/events",
+  "html_url": "https://github.com/facebook/react/pull/8113",
+  "id": 185485798,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTEwNzAyNzg=",
+  "number": 8113,
+  "title": "Fix lint errors",
+  "user": {
+    "login": "ivanzotov",
+    "id": 147321,
+    "node_id": "MDQ6VXNlcjE0NzMyMQ==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/147321?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ivanzotov",
+    "html_url": "https://github.com/ivanzotov",
+    "followers_url": "https://api.github.com/users/ivanzotov/followers",
+    "following_url": "https://api.github.com/users/ivanzotov/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ivanzotov/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ivanzotov/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ivanzotov/subscriptions",
+    "organizations_url": "https://api.github.com/users/ivanzotov/orgs",
+    "repos_url": "https://api.github.com/users/ivanzotov/repos",
+    "events_url": "https://api.github.com/users/ivanzotov/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ivanzotov/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2016-10-26T19:21:52Z",
+  "updated_at": "2016-10-27T12:03:35Z",
+  "closed_at": "2016-10-27T12:03:32Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8113",
+    "html_url": "https://github.com/facebook/react/pull/8113",
+    "diff_url": "https://github.com/facebook/react/pull/8113.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8113.patch"
+  },
+  "body": "Fix 6 lint errors\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

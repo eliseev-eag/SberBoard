@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/7892",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/7892/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/7892/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/7892/events",
+  "html_url": "https://github.com/facebook/react/pull/7892",
+  "id": 181303991,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0ODgxODUwODY=",
+  "number": 7892,
+  "title": "RFC ReactSlim/Modern build",
+  "user": {
+    "login": "iamdustan",
+    "id": 227879,
+    "node_id": "MDQ6VXNlcjIyNzg3OQ==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/227879?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/iamdustan",
+    "html_url": "https://github.com/iamdustan",
+    "followers_url": "https://api.github.com/users/iamdustan/followers",
+    "following_url": "https://api.github.com/users/iamdustan/following{/other_user}",
+    "gists_url": "https://api.github.com/users/iamdustan/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/iamdustan/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/iamdustan/subscriptions",
+    "organizations_url": "https://api.github.com/users/iamdustan/orgs",
+    "repos_url": "https://api.github.com/users/iamdustan/repos",
+    "events_url": "https://api.github.com/users/iamdustan/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/iamdustan/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2016-10-06T01:20:21Z",
+  "updated_at": "2017-04-21T14:31:28Z",
+  "closed_at": "2017-04-21T14:24:14Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/7892",
+    "html_url": "https://github.com/facebook/react/pull/7892",
+    "diff_url": "https://github.com/facebook/react/pull/7892.diff",
+    "patch_url": "https://github.com/facebook/react/pull/7892.patch"
+  },
+  "body": "Calling it modern feels weird although modern and classic are the internal folder names.\n\nThere’s been some chatter about `createClass` and `PropTypes` being generally in maintenance mode as `class` and `Flow` are the future. I was playing around with the build system anyway (see #7850 and https://twitter.com/iamdustan/status/783701952483856384) so decided to try to create a build removing `createClass` and `DOMFactories`. Potentially `createFactory` and `createMixin` could be removed as well.\n\nThe build of react-slim.js vs react.js is displayed in the screenshot below:\n<img width=\"511\" alt=\"screen shot 2016-10-05 at 9 14 54 pm\" src=\"https://cloud.githubusercontent.com/assets/227879/19137308/d084b2b2-8b40-11e6-9c0f-798cfef0c832.png\">\n\n**Diff**\n\n```\nreact-slim vs react: -31,869\nreact-slim.min vs react.min: -5,755\n```\n\nRemoving PropTypes may be problematic due to `context` still using it? This is part of an experiment I’m considering that would convert https://github.com/reactjs/react-codemod/blob/master/transforms/class.js to a `babel` transform to run over arbitrary components outside of direct control (aka `babel` over `node_modules`. Heresy, heresy!)\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

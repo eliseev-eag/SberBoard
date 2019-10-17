@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/10138",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/10138/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/10138/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/10138/events",
+  "html_url": "https://github.com/facebook/react/pull/10138",
+  "id": 241893202,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTI5ODAzMjU1",
+  "number": 10138,
+  "title": "Add react-dom-unstable-native-dependencies",
+  "user": {
+    "login": "fmoo",
+    "id": 143504,
+    "node_id": "MDQ6VXNlcjE0MzUwNA==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/143504?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/fmoo",
+    "html_url": "https://github.com/fmoo",
+    "followers_url": "https://api.github.com/users/fmoo/followers",
+    "following_url": "https://api.github.com/users/fmoo/following{/other_user}",
+    "gists_url": "https://api.github.com/users/fmoo/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/fmoo/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/fmoo/subscriptions",
+    "organizations_url": "https://api.github.com/users/fmoo/orgs",
+    "repos_url": "https://api.github.com/users/fmoo/repos",
+    "events_url": "https://api.github.com/users/fmoo/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/fmoo/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2017-07-11T00:53:55Z",
+  "updated_at": "2017-07-12T03:14:52Z",
+  "closed_at": "2017-07-12T01:27:26Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/10138",
+    "html_url": "https://github.com/facebook/react/pull/10138",
+    "diff_url": "https://github.com/facebook/react/pull/10138.diff",
+    "patch_url": "https://github.com/facebook/react/pull/10138.patch"
+  },
+  "body": "react-native-web and react-primitives currently access a few internals\r\nfor shimming DOM events into native ones.  Changes in react@16 packaging\r\nhide these internals, which has made it difficult for these projects to upgrade.\r\nchange adds a submodule to react-dom, unstable-native-dependencies that\r\nincludes the necessary modules to continue enabling that method of\r\ndom-native event injection.\r\n\r\nThe bundle config is currently a bit of dogscience.  The one thing I really changes were:\r\n\r\n- basically copied it from react-dom\r\n- added an externals / globals alias for react-dom in order to import it from inside the module\r\nwhich was required to inject the shared ComponentTree into this module.\r\n- removed the fb entry point since I wasn't sure what it did or if it would be necessary",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16087",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16087/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16087/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16087/events",
+  "html_url": "https://github.com/facebook/react/issues/16087",
+  "id": 465512106,
+  "node_id": "MDU6SXNzdWU0NjU1MTIxMDY=",
+  "number": 16087,
+  "title": "[Umbrella] Memory Leaks",
+  "user": {
+    "login": "sebmarkbage",
+    "id": 63648,
+    "node_id": "MDQ6VXNlcjYzNjQ4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/63648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sebmarkbage",
+    "html_url": "https://github.com/sebmarkbage",
+    "followers_url": "https://api.github.com/users/sebmarkbage/followers",
+    "following_url": "https://api.github.com/users/sebmarkbage/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sebmarkbage/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sebmarkbage/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sebmarkbage/subscriptions",
+    "organizations_url": "https://api.github.com/users/sebmarkbage/orgs",
+    "repos_url": "https://api.github.com/users/sebmarkbage/repos",
+    "events_url": "https://api.github.com/users/sebmarkbage/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sebmarkbage/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2019-07-09T00:17:45Z",
+  "updated_at": "2019-07-20T22:29:26Z",
+  "closed_at": null,
+  "author_association": "MEMBER",
+  "body": "This issue is a summary of issues mentioned in https://github.com/facebook/react/pull/15157.\r\n\r\nThere are many different ways to create memory leaks with React since we give you access to the imperative power to do so. Most should be dealt with by clean up / unmount functions.\r\n\r\nSome could be pure React bugs. Some could be related to the lack of clean up of render phase effects. Others could be related to leaks that exists but the way React works makes them larger than they otherwise would've.\r\n\r\n# Actionable\r\n\r\nI think there are at least two actionable patterns to address from #15157:\r\n\r\n- [ ] If a handle on a DOM node is leaked, it takes the React tree with it. This is a fairly easy mistake to make and the effect is pretty high. What we would do here is special case DOM nodes with refs on them, and always detach their back pointer to the React Fiber, if it was ever fully mounted. We currently traverse these trees anyway when they get deleted. We want to stop doing this for most things but for nodes with a ref it seems minor to special case since they typically need to be invoked with null anyway.\r\n- [ ] Investigate the source of the leak in https://github.com/jonnycornwell/potential_react_leak and fix the source of the problem.\r\n\r\n# Unresolved\r\n\r\n- [ ] Closing over setState/dispatch or class component instances to global state can leak too. Does this pattern warrant special casing too? Under what conditions?\r\n- [ ] Land https://github.com/facebook/react/pull/15157 What patterns are actually covered? It can cut down on a potentially larger leak but is that the whole leak? I could imagine some patterns where this is the complete solution but unclear if it's the complete solution for the patterns that people are actually hitting in practice.\r\n- [ ] What other issues remain after solving the actionable above? Let's make another pass investigating if people's original issues remain.\r\n\r\n# Won't Fix\r\n\r\n- Side-effects in class constructor, componentWillMount, componentWillReceiveProps, componentWillUpdate, getDerivedStateFrom... and render that store a reference to anything stateful outside React won't be able to clean up. This is [documented](https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html) in the 16.3 release and is a major design decision as part of the concurrent/suspense/error handling strategy.\r\n- Effects/state retained temporarily in alternate fiber likely won't be fixed short term. This is due to how Fiber uses two trees and swaps between them. This can lead to additional values being retained until that tree gets some work on it to swap again. This was observed in the Hooks release and there are some confusing cases where a destroy function can hold onto more memory than expected in the closure. Typically this is solved by using a custom hook since that gets its own scope/closure.\r\n- Props/child trees retained by alternate children. Similarly, children that was just removed can sometimes between retained by the alternate copy of that. That is until that node gets another update on it which clears out the old children. These cases are fairly unusual and fix themselves eventually as the app lives on.",
+  "closed_by": null
+}

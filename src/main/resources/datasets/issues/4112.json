@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4112",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4112/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4112/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4112/events",
+  "html_url": "https://github.com/facebook/react/pull/4112",
+  "id": 87812938,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mzc1OTEzMzg=",
+  "number": 4112,
+  "title": "Remove extra period",
+  "user": {
+    "login": "kevhuang",
+    "id": 3806348,
+    "node_id": "MDQ6VXNlcjM4MDYzNDg=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/3806348?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/kevhuang",
+    "html_url": "https://github.com/kevhuang",
+    "followers_url": "https://api.github.com/users/kevhuang/followers",
+    "following_url": "https://api.github.com/users/kevhuang/following{/other_user}",
+    "gists_url": "https://api.github.com/users/kevhuang/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/kevhuang/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/kevhuang/subscriptions",
+    "organizations_url": "https://api.github.com/users/kevhuang/orgs",
+    "repos_url": "https://api.github.com/users/kevhuang/repos",
+    "events_url": "https://api.github.com/users/kevhuang/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/kevhuang/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2015-06-12T18:30:36Z",
+  "updated_at": "2015-06-12T19:10:16Z",
+  "closed_at": "2015-06-12T19:10:12Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4112",
+    "html_url": "https://github.com/facebook/react/pull/4112",
+    "diff_url": "https://github.com/facebook/react/pull/4112.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4112.patch"
+  },
+  "body": "Completed CLA\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

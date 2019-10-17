@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13537",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13537/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13537/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13537/events",
+  "html_url": "https://github.com/facebook/react/pull/13537",
+  "id": 356284690,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjEyNTk0MjAy",
+  "number": 13537,
+  "title": "Ignore noscript content on the client",
+  "user": {
+    "login": "Ephem",
+    "id": 7420167,
+    "node_id": "MDQ6VXNlcjc0MjAxNjc=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/7420167?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Ephem",
+    "html_url": "https://github.com/Ephem",
+    "followers_url": "https://api.github.com/users/Ephem/followers",
+    "following_url": "https://api.github.com/users/Ephem/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Ephem/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Ephem/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Ephem/subscriptions",
+    "organizations_url": "https://api.github.com/users/Ephem/orgs",
+    "repos_url": "https://api.github.com/users/Ephem/repos",
+    "events_url": "https://api.github.com/users/Ephem/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Ephem/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2018-09-02T13:59:50Z",
+  "updated_at": "2018-09-03T16:17:54Z",
+  "closed_at": "2018-09-03T16:17:54Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13537",
+    "html_url": "https://github.com/facebook/react/pull/13537",
+    "diff_url": "https://github.com/facebook/react/pull/13537.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13537.patch"
+  },
+  "body": "Fixes #11423\r\n\r\nFirst PR, CLA is signed.\r\n\r\nBefore this PR `<noscript><img src=\"...\" /></noscript>` would:\r\n\r\n* Warn about a server/client mismatch\r\n* Download the img\r\n* (Run any lifecycles for components inside the noscript)\r\n\r\nI tried fixing this by only touching ReactDOM and found that by treating `<noscript>` as an element that only supports text it achieved the desired effects. This also keeps the markup in the DOM on the client which is desirable as per the issue.\r\n\r\nQuestions:\r\n\r\n* Is this a hacky way to do it? In a sense `shouldSetTextContent` is true for noscript-elements on the client, but could it have any unintended side-effects now or in the future?\r\n* Solving it this way means that the content inside a noscript could still be updated on the client as long as children is a string, is the desirable or confusing?\r\n* Is the test a sane and robust way to test for this?",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

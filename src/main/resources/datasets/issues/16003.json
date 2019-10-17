@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16003",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16003/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16003/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16003/events",
+  "html_url": "https://github.com/facebook/react/issues/16003",
+  "id": 461267099,
+  "node_id": "MDU6SXNzdWU0NjEyNjcwOTk=",
+  "number": 16003,
+  "title": "[eslint-plugin-react-hooks] Crash when referencing \"arguments\"",
+  "user": {
+    "login": "Jessidhia",
+    "id": 73085,
+    "node_id": "MDQ6VXNlcjczMDg1",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/73085?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Jessidhia",
+    "html_url": "https://github.com/Jessidhia",
+    "followers_url": "https://api.github.com/users/Jessidhia/followers",
+    "following_url": "https://api.github.com/users/Jessidhia/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Jessidhia/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Jessidhia/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Jessidhia/subscriptions",
+    "organizations_url": "https://api.github.com/users/Jessidhia/orgs",
+    "repos_url": "https://api.github.com/users/Jessidhia/repos",
+    "events_url": "https://api.github.com/users/Jessidhia/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Jessidhia/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 1249821345,
+      "node_id": "MDU6TGFiZWwxMjQ5ODIxMzQ1",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20ESLint%20Rules",
+      "name": "Component: ESLint Rules",
+      "color": "f7afdb",
+      "default": false
+    },
+    {
+      "id": 40929151,
+      "node_id": "MDU6TGFiZWw0MDkyOTE1MQ==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Bug",
+      "name": "Type: Bug",
+      "color": "b60205",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2019-06-27T02:06:47Z",
+  "updated_at": "2019-09-03T16:26:42Z",
+  "closed_at": "2019-09-03T16:26:42Z",
+  "author_association": "COLLABORATOR",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n\r\nReport a bug\r\n\r\n**What is the current behavior?**\r\n\r\nReferencing `arguments` from inside an arrow function (i.e. the `arguments` from the nearest non-arrow function) causes a crash in the eslint plugin.\r\n\r\n```\r\nTypeError: Cannot read property 'type' of undefined\r\nOccurred while linting /.../src/react.tsx:92\r\n    at gatherDependenciesRecursively (.../node_modules/eslint-plugin-react-hooks/cjs/eslint-plugin-react-hooks.development.js:1032:21)\r\n    at visitFunctionExpression (.../node_modules/eslint-plugin-react-hooks/cjs/eslint-plugin-react-hooks.development.js:985:7)\r\n    at .../node_modules/eslint/lib/util/safe-emitter.js:45:58\r\n    at Array.forEach (<anonymous>)\r\n    at Object.emit (.../node_modules/eslint/lib/util/safe-emitter.js:45:38)\r\n    at NodeEventGenerator.applySelector (.../node_modules/eslint/lib/util/node-event-generator.js:251:26)\r\n    at NodeEventGenerator.applySelectors (.../node_modules/eslint/lib/util/node-event-generator.js:280:22)\r\n    at NodeEventGenerator.enterNode (.../node_modules/eslint/lib/util/node-event-generator.js:294:14)\r\n    at CodePathAnalyzer.enterNode (.../node_modules/eslint/lib/code-path-analysis/code-path-analyzer.js:632:23)\r\n    at .../node_modules/eslint/lib/linter.js:752:32\r\n```\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\n\r\nThis doesn't reproduce in codesandbox as CRA hasn't been updated yet.\r\n\r\nThis snippet is enough to cause the crash:\r\n\r\n```js\r\nfunction useMyHook(/*...*/) {\r\n  useEffect(() => {\r\n    arguments // crash because reference.resolved.defs is empty\r\n  }, [])\r\n}\r\n```\r\n\r\nThis, however, does not crash:\r\n\r\n```js\r\nfunction useMyHook(/*...*/) {\r\n  useEffect(function() {\r\n    arguments // ok\r\n    return () => arguments // also ok\r\n  }, [])\r\n}\r\n```\r\n\r\nIt is possible this depends on using the `@typescript-eslint/parser` parser; but I think scope analysis is run internally by `eslint` so it shouldn't matter.\r\n\r\n**What is the expected behavior?**\r\nNo crash\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\n`eslint-plugin-react-hooks@1.6.1`, `react-hooks/exhaustive-deps` rule",
+  "closed_by": {
+    "login": "threepointone",
+    "id": 18808,
+    "node_id": "MDQ6VXNlcjE4ODA4",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/18808?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/threepointone",
+    "html_url": "https://github.com/threepointone",
+    "followers_url": "https://api.github.com/users/threepointone/followers",
+    "following_url": "https://api.github.com/users/threepointone/following{/other_user}",
+    "gists_url": "https://api.github.com/users/threepointone/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/threepointone/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/threepointone/subscriptions",
+    "organizations_url": "https://api.github.com/users/threepointone/orgs",
+    "repos_url": "https://api.github.com/users/threepointone/repos",
+    "events_url": "https://api.github.com/users/threepointone/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/threepointone/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

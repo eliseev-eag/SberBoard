@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/6139",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/6139/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/6139/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/6139/events",
+  "html_url": "https://github.com/facebook/react/pull/6139",
+  "id": 137099335,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NjEwMDgyNDE=",
+  "number": 6139,
+  "title": "Fix renderToStaticMarkup() invariant",
+  "user": {
+    "login": "mxstbr",
+    "id": 7525670,
+    "node_id": "MDQ6VXNlcjc1MjU2NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/7525670?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mxstbr",
+    "html_url": "https://github.com/mxstbr",
+    "followers_url": "https://api.github.com/users/mxstbr/followers",
+    "following_url": "https://api.github.com/users/mxstbr/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mxstbr/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mxstbr/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mxstbr/subscriptions",
+    "organizations_url": "https://api.github.com/users/mxstbr/orgs",
+    "repos_url": "https://api.github.com/users/mxstbr/repos",
+    "events_url": "https://api.github.com/users/mxstbr/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mxstbr/received_events",
+    "type": "User",
+    "site_admin": true
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2016-02-28T21:43:34Z",
+  "updated_at": "2016-02-29T06:47:48Z",
+  "closed_at": "2016-02-29T06:27:02Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/6139",
+    "html_url": "https://github.com/facebook/react/pull/6139",
+    "diff_url": "https://github.com/facebook/react/pull/6139.diff",
+    "patch_url": "https://github.com/facebook/react/pull/6139.patch"
+  },
+  "body": "In d4420eca8a527c22317d06ad166c74e8495c3a3a @spicyj combined the `renderToStaticMarkup()` and `renderToString()` functions and removing the duplicate code.\n\nIn the process the invariant got moved, and both functions would throw the same invariant saying \"renderToString(): You must pass a valid ReactElement.\"\n\nThis PR fixes that so `renderToStaticMarkup()` now should show \"renderToStaticMarkup(): You must pass a valid ReactElement.\" again.\n",
+  "closed_by": {
+    "login": "sophiebits",
+    "id": 6820,
+    "node_id": "MDQ6VXNlcjY4MjA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6820?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sophiebits",
+    "html_url": "https://github.com/sophiebits",
+    "followers_url": "https://api.github.com/users/sophiebits/followers",
+    "following_url": "https://api.github.com/users/sophiebits/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sophiebits/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sophiebits/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sophiebits/subscriptions",
+    "organizations_url": "https://api.github.com/users/sophiebits/orgs",
+    "repos_url": "https://api.github.com/users/sophiebits/repos",
+    "events_url": "https://api.github.com/users/sophiebits/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sophiebits/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

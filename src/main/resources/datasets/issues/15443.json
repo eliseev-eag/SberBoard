@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15443",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15443/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15443/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15443/events",
+  "html_url": "https://github.com/facebook/react/pull/15443",
+  "id": 434800873,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjcxNzEyMzU4",
+  "number": 15443,
+  "title": "Add missing word to code comment for clarity",
+  "user": {
+    "login": "bmac",
+    "id": 54056,
+    "node_id": "MDQ6VXNlcjU0MDU2",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/54056?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bmac",
+    "html_url": "https://github.com/bmac",
+    "followers_url": "https://api.github.com/users/bmac/followers",
+    "following_url": "https://api.github.com/users/bmac/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bmac/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bmac/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bmac/subscriptions",
+    "organizations_url": "https://api.github.com/users/bmac/orgs",
+    "repos_url": "https://api.github.com/users/bmac/repos",
+    "events_url": "https://api.github.com/users/bmac/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bmac/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-04-18T14:30:22Z",
+  "updated_at": "2019-04-24T12:20:33Z",
+  "closed_at": "2019-04-24T10:03:52Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15443",
+    "html_url": "https://github.com/facebook/react/pull/15443",
+    "diff_url": "https://github.com/facebook/react/pull/15443.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15443.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

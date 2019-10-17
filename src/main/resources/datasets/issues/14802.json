@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14802",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14802/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14802/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14802/events",
+  "html_url": "https://github.com/facebook/react/pull/14802",
+  "id": 408320574,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjUxNTk1MjEz",
+  "number": 14802,
+  "title": "[ShallowRenderer] Queue/rerender on dispatched action after render component with hooks",
+  "user": {
+    "login": "rodrigopr",
+    "id": 719755,
+    "node_id": "MDQ6VXNlcjcxOTc1NQ==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/719755?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rodrigopr",
+    "html_url": "https://github.com/rodrigopr",
+    "followers_url": "https://api.github.com/users/rodrigopr/followers",
+    "following_url": "https://api.github.com/users/rodrigopr/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rodrigopr/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rodrigopr/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rodrigopr/subscriptions",
+    "organizations_url": "https://api.github.com/users/rodrigopr/orgs",
+    "repos_url": "https://api.github.com/users/rodrigopr/repos",
+    "events_url": "https://api.github.com/users/rodrigopr/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rodrigopr/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2019-02-08T20:55:56Z",
+  "updated_at": "2019-02-13T18:06:42Z",
+  "closed_at": "2019-02-13T15:59:03Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14802",
+    "html_url": "https://github.com/facebook/react/pull/14802",
+    "diff_url": "https://github.com/facebook/react/pull/14802.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14802.patch"
+  },
+  "body": "This should help make shallow render a viable option for testing components that use hooks.",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

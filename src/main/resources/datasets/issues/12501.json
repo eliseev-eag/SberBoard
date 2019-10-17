@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12501",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12501/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12501/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12501/events",
+  "html_url": "https://github.com/facebook/react/pull/12501",
+  "id": 310233439,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTc4Njc4MDM5",
+  "number": 12501,
+  "title": "Prefix _context property on returned ReactContext from createContext …",
+  "user": {
+    "login": "Andarist",
+    "id": 9800850,
+    "node_id": "MDQ6VXNlcjk4MDA4NTA=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/9800850?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Andarist",
+    "html_url": "https://github.com/Andarist",
+    "followers_url": "https://api.github.com/users/Andarist/followers",
+    "following_url": "https://api.github.com/users/Andarist/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Andarist/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Andarist/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Andarist/subscriptions",
+    "organizations_url": "https://api.github.com/users/Andarist/orgs",
+    "repos_url": "https://api.github.com/users/Andarist/repos",
+    "events_url": "https://api.github.com/users/Andarist/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Andarist/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2018-03-31T11:18:27Z",
+  "updated_at": "2018-04-04T08:13:26Z",
+  "closed_at": "2018-04-03T00:47:26Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12501",
+    "html_url": "https://github.com/facebook/react/pull/12501",
+    "diff_url": "https://github.com/facebook/react/pull/12501.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12501.patch"
+  },
+  "body": "Context 🤣:\r\nhttps://twitter.com/AndaristRake/status/979835281871441920\r\n\r\n`Provider`/`Consumer` are circular (with a comment about it, so I guess it's by design) which makes this possible:\r\n```js\r\nconst ctx = React.createContext()\r\nctx.Consumer.Consumer.Consumer.Consumer.Provider\r\n```\r\n\r\nwhich is funny, but I don't know if anything can be done about it.\r\n\r\ncc @acdlite ",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14057",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14057/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14057/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14057/events",
+  "html_url": "https://github.com/facebook/react/issues/14057",
+  "id": 376232772,
+  "node_id": "MDU6SXNzdWUzNzYyMzI3NzI=",
+  "number": 14057,
+  "title": "Unexpected copies of the props object retained in memory with the new hooks API",
+  "user": {
+    "login": "localvoid",
+    "id": 132045,
+    "node_id": "MDQ6VXNlcjEzMjA0NQ==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/132045?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/localvoid",
+    "html_url": "https://github.com/localvoid",
+    "followers_url": "https://api.github.com/users/localvoid/followers",
+    "following_url": "https://api.github.com/users/localvoid/following{/other_user}",
+    "gists_url": "https://api.github.com/users/localvoid/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/localvoid/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/localvoid/subscriptions",
+    "organizations_url": "https://api.github.com/users/localvoid/orgs",
+    "repos_url": "https://api.github.com/users/localvoid/repos",
+    "events_url": "https://api.github.com/users/localvoid/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/localvoid/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 739761016,
+      "node_id": "MDU6TGFiZWw3Mzk3NjEwMTY=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Reconciler",
+      "name": "Component: Reconciler",
+      "color": "f9a798",
+      "default": false
+    },
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2018-11-01T02:48:53Z",
+  "updated_at": "2019-08-07T18:50:08Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n\r\nbug\r\n\r\n**What is the current behavior?**\r\n\r\n```jsx\r\nfunction useCustomHook1() {\r\n  useEffect(() => {\r\n    console.log(\"mounted\");\r\n    return () => {\r\n      console.log(\"unmounted\");\r\n    };\r\n  }, []);\r\n}\r\n\r\nfunction Test3(props) {\r\n  useCustomHook1();\r\n  useEffect(() => {\r\n    console.log(props.test);\r\n  });\r\n\r\n  return <div onClick={() => console.log(props.test)}>{props.items.length}</div>;\r\n}\r\n```\r\n\r\n`props` object that were used when component was rendered for the first time is kept alive. Completely unexpected behavior even when developer understands [closure context sharing](https://mrale.ph/blog/2012/09/23/grokking-v8-closures-for-fun.html).\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\n\r\nhttps://codesandbox.io/s/lz61v39r7\r\n\r\n- Select test **3** \r\n- Click on the button \"Create New Array\" 5 times\r\n- Take memory snapshot in the developer tools\r\n- Inspect (array) objects\r\n- There will be 4 arrays retained in memory `t0`, `t-2`, `t-1`, `t`\r\n\r\n**What is the expected behavior?**\r\n\r\nShould be 2 arrays retained in memory `t-1`, `t`.",
+  "closed_by": null
+}

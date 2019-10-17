@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14576",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14576/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14576/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14576/events",
+  "html_url": "https://github.com/facebook/react/pull/14576",
+  "id": 398504084,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjQ0MTg5MDMw",
+  "number": 14576,
+  "title": "Fix typo",
+  "user": {
+    "login": "CarlMungazi",
+    "id": 8584475,
+    "node_id": "MDQ6VXNlcjg1ODQ0NzU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/8584475?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/CarlMungazi",
+    "html_url": "https://github.com/CarlMungazi",
+    "followers_url": "https://api.github.com/users/CarlMungazi/followers",
+    "following_url": "https://api.github.com/users/CarlMungazi/following{/other_user}",
+    "gists_url": "https://api.github.com/users/CarlMungazi/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/CarlMungazi/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/CarlMungazi/subscriptions",
+    "organizations_url": "https://api.github.com/users/CarlMungazi/orgs",
+    "repos_url": "https://api.github.com/users/CarlMungazi/repos",
+    "events_url": "https://api.github.com/users/CarlMungazi/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/CarlMungazi/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-01-12T01:02:49Z",
+  "updated_at": "2019-01-12T05:46:06Z",
+  "closed_at": "2019-01-12T05:46:06Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14576",
+    "html_url": "https://github.com/facebook/react/pull/14576",
+    "diff_url": "https://github.com/facebook/react/pull/14576.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14576.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "aweary",
+    "id": 6886061,
+    "node_id": "MDQ6VXNlcjY4ODYwNjE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6886061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aweary",
+    "html_url": "https://github.com/aweary",
+    "followers_url": "https://api.github.com/users/aweary/followers",
+    "following_url": "https://api.github.com/users/aweary/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aweary/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aweary/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aweary/subscriptions",
+    "organizations_url": "https://api.github.com/users/aweary/orgs",
+    "repos_url": "https://api.github.com/users/aweary/repos",
+    "events_url": "https://api.github.com/users/aweary/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aweary/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

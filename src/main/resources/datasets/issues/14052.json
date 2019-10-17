@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/14052",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/14052/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/14052/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/14052/events",
+  "html_url": "https://github.com/facebook/react/pull/14052",
+  "id": 376181376,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjI3NDU4NzE4",
+  "number": 14052,
+  "title": "[WIP] Add ESLint rule for useEffect/useCallback/useMemo Hook dependencies",
+  "user": {
+    "login": "jamiebuilds",
+    "id": 952783,
+    "node_id": "MDQ6VXNlcjk1Mjc4Mw==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/952783?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jamiebuilds",
+    "html_url": "https://github.com/jamiebuilds",
+    "followers_url": "https://api.github.com/users/jamiebuilds/followers",
+    "following_url": "https://api.github.com/users/jamiebuilds/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jamiebuilds/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jamiebuilds/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jamiebuilds/subscriptions",
+    "organizations_url": "https://api.github.com/users/jamiebuilds/orgs",
+    "repos_url": "https://api.github.com/users/jamiebuilds/repos",
+    "events_url": "https://api.github.com/users/jamiebuilds/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jamiebuilds/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 18,
+  "created_at": "2018-10-31T22:16:05Z",
+  "updated_at": "2019-01-19T01:54:58Z",
+  "closed_at": "2019-01-19T01:54:58Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/14052",
+    "html_url": "https://github.com/facebook/react/pull/14052",
+    "diff_url": "https://github.com/facebook/react/pull/14052.diff",
+    "patch_url": "https://github.com/facebook/react/pull/14052.patch"
+  },
+  "body": "Moving from #14048 and https://github.com/gaearon/react/pull/3\r\n\r\n---\r\n\r\n#14048:\r\n\r\n> This is just initial work from @calebmer. We didn't end up dogfooding this yet but @jamiebuilds expressed interest in picking it up. For some reason it doesn't pass tests — maybe there's some bug in the internal diff or maybe some dependency upgrade broke it. The semantics are also not set in stone and will probably need changes. Original description by @calebmer:\r\n> \r\n> This diff adds a lint to enforce reactive dependencies are provided in the second argument of `useEffect`/`useCallback`. This lint is currently really strict. There are a lot of valid patterns it doesn't support. Unlike many other lints you should really be disabling this one when you want to do something more interesting then what the strict rule supports.\r\n> \r\n> Here's what the lint does. The lint checks that identifiers and member expressions used in a \"reactive hook callback\" (lint internal name only) are declared in the reactive hook's dependency list.\r\n> \r\n> ```js\r\n> function MyComponent(props) {\r\n>   useEffect(() => {\r\n>     console.log(props.foo);\r\n>   }, [props.foo]);\r\n> }\r\n> ```\r\n> The lint requires that the dependency list be an array literal (no `useEffect(() => {}, dependencies)`) and that the dependency list not have spreads (no `useEffect(() => {}, [...dependencies])`). Both of these are valid forms in some interesting cases, though, but they make static analysis harder.\r\n> \r\n> One thought is that perhaps we could support spreading an array as satisfying a dependency. For example allow:\r\n> \r\n> ```js\r\n> function MyComponent(props) {\r\n>   useEffect(() => {\r\n>     for (const item of props.array) {\r\n>       console.log(item);\r\n>     }\r\n>   }, [...props.array]);\r\n> }\r\n> ```\r\n> But I have not currently implemented this.\r\n> \r\n> Some other reasonable cases (IMO) this lint does not allow include:\r\n> \r\n> ```js\r\n> function MyComponent(props) {\r\n>   useEffect(() => {\r\n>     console.log(props.foo);\r\n>   }, [computeCacheKey(props.foo)]);\r\n> }\r\n> ```\r\n> and:\r\n> \r\n> ```js\r\n> function MyComponent(props) {\r\n>   useEffect(() => {\r\n>     console.log(props.foo);\r\n>   }, [props.foo.id]);\r\n> }\r\n> ```\r\n> Both these forms allow you to be a bit more precise about the memoization breaking in `useEffect` and other reactive hooks.\r\n> \r\n> This lint also warns about extra declarations in the dependency list:\r\n> \r\n> ```js\r\n> function MyComponent(props) {\r\n>   useEffect(() => {\r\n>     console.log(props.foo);\r\n>   }, [props.foo, props.bar]);\r\n> }\r\n> ```\r\n> And warns about duplicated declared dependencies:\r\n> \r\n> ```js\r\n> function MyComponent(props) {\r\n>   useEffect(() => {\r\n>     console.log(props.foo);\r\n>   }, [props.foo, props.foo]);\r\n> }\r\n> ```\r\n> Let me know if you think these constraints are reasonable. They might be good for 70-80% of cases and then after that there is always `// eslint-disable-line`.\r\n\r\n---\r\n\r\nhttps://github.com/gaearon/react/pull/3:\r\n\r\n> I'm interested in how parts of this might have been working in the past because it seemed to rely on things that ESLint does not do.\r\n> \r\n> In particular, ESLint doesn't have a NodePath type like Babel so they assign `node.parent` as the parent node. But for some reason they don't do this everywhere. So you end up in scenarios like we had here where you don't have access to the parent node.\r\n> \r\n> I was not able to find a way to get the parent node from ESLint's `context.getScope().references`. So I was forced to do the worst possible thing and search through the entire AST for the node we're looking for.\r\n> \r\n> I've optimized this search as much as possible. It's similar to a binary search except we're working with a generic tree. The search doesn't know anything about the AST though, it just looks for anything with a `{ type: string, ... }` and assumes that has the same basic interface as other nodes do in ESLint.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

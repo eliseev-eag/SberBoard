@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/16157",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/16157/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/16157/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/16157/events",
+  "html_url": "https://github.com/facebook/react/pull/16157",
+  "id": 469956453,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjk5MDY0NjIy",
+  "number": 16157,
+  "title": "Add trusted types to react on client side",
+  "user": {
+    "login": "Siegrift",
+    "id": 22679154,
+    "node_id": "MDQ6VXNlcjIyNjc5MTU0",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/22679154?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Siegrift",
+    "html_url": "https://github.com/Siegrift",
+    "followers_url": "https://api.github.com/users/Siegrift/followers",
+    "following_url": "https://api.github.com/users/Siegrift/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Siegrift/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Siegrift/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Siegrift/subscriptions",
+    "organizations_url": "https://api.github.com/users/Siegrift/orgs",
+    "repos_url": "https://api.github.com/users/Siegrift/repos",
+    "events_url": "https://api.github.com/users/Siegrift/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Siegrift/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 12,
+  "created_at": "2019-07-18T19:46:46Z",
+  "updated_at": "2019-09-16T17:54:48Z",
+  "closed_at": "2019-09-16T12:43:23Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/16157",
+    "html_url": "https://github.com/facebook/react/pull/16157",
+    "diff_url": "https://github.com/facebook/react/pull/16157.diff",
+    "patch_url": "https://github.com/facebook/react/pull/16157.patch"
+  },
+  "body": "## Trusted Types\r\n[Trusted Types](https://github.com/WICG/trusted-types) ([spec](https://wicg.github.io/trusted-types/dist/spec/), [introductory article](https://developers.google.com/web/updates/2019/02/trusted-types)) is a new experimental DOM API implemented within the WICG , with a working [Chrome implementation](https://www.chromestatus.com/feature/5650088592408576).\r\n\r\nThe API creates a few new objects available on the global object in the browser, like most other web APIs ([impl in TS](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/trusted-types/index.d.ts) and in [Closure compiler](https://github.com/WICG/trusted-types/blob/master/externs/externs.js)).\r\n\r\nUnder certain conditions, controlled by a HTTP header (analogous to Content-Security-Policy behavior), the API can enable the enforcement - then it changes the signature of several DOM API functions and property setters, such that they accept specific object types, and reject strings. Colloquially, DOM API becomes strongly typed.\r\n\r\nFor example, with Trusted Types Element.innerHTML property setter accepts a TrustedHTML object.\r\n\r\nTrusted Type objects stringify to their inner value. This API shape is a deliberate choice that enables existing web applications and libraries to gradually migrate from strings to Trusted Types without breaking functionality. In our example, it makes it possible to write the following:\r\n\r\n```javascript\r\nconst policy = TrustedTypes.createPolicy('foo', { \r\n  createHTML: (s) => { /* some validation*/; return s} \r\n});\r\n\r\nconst trustedHTML = policy.createHTML('bar');\r\nanElement.innerHTML = trustedHTML\r\n\r\nanElement.innerHTML === 'bar'\r\n```\r\n\r\nThe above code works regardless if the Trusted Types enforcement is enabled or not.\r\n\r\nReading from the DOM is unaffected, so Element.innerHTML getter returns a string. That's for practical reasons -- web applications read from DOM more often than they write to it, and only writing exposes the application to DOM XSS risks. Typing only the setters allows us to secure web applications with minimal code changes.\r\n\r\n## Adding Trusted Types to React for client side\r\nReact applications rarely manipulate DOM directly as this is what React is for. That means that, if users want to opt in to Trusted Types, values assigned to execution sinks must be trusted. React on its own doesn't produce these execution sinks, except one [hack for IE](https://github.com/facebook/react/blob/b4178af81b02dfa0e898670ce564c4649fd8947f/packages/react-dom/src/client/setInnerHTML.js#L34). The only problem in React is the stringifying of values before assigning them to element properties or attributes. \r\n\r\nThis PR enables applications to use Trusted Types on client side. The implementation removes stringifying of trusted values in reactDOM/client. It does so **only** when Trusted Types are available in global object. If they are available, there are special [is* functions](https://wicg.github.io/trusted-types/dist/spec/#dom-trustedtypepolicyfactory-ishtml) which are used to check if the value is trusted type or not. If the value is a trusted type, we return the value itself, otherwise we preserve the original logic and stringify the value.\r\n\r\n## Problems\r\n**We cannot use Trusted Types in Internet Explorer (IE) when using dangerouslySetInnerHTML on svg elements** - The cause is that in IE svg elements doesn't have innerHTML property, which means that to support innerHTML, react needs to use a [hack](https://github.com/facebook/react/blob/b4178af81b02dfa0e898670ce564c4649fd8947f/packages/react-dom/src/client/setInnerHTML.js#L34), which wraps the innerHTML of the svg and wraps them in an svg element and assigns this to innerHTML of some HTML element. This is a problem for Trusted Types because the original svg innerHTML value is stringified. There are a few workarounds for this:\r\na) Use default Trusted Type policy allowing creating svg nodes\r\nb) Do not use svg with dangerouslySetInnerHTML but wrap the svg with div element and use dangerouslySetInnerHTML there \r\n     \r\n## Reference\r\n* [Draft: Add trusted types to react on server side](https://github.com/facebook/react/pull/16555)\r\n\r\n## Update\r\n* [TrustedURLs are deprecated](https://github.com/WICG/trusted-types/pull/204) and are going to be replaced with default policy call on javascript URLs ([which are deprecated in React and will not be supported in the future release](https://github.com/facebook/react/pull/15047/files)).\r\n* [window.TrustedTypes is going to be renamed to window.trustedTypes](https://github.com/WICG/trusted-types/pull/205) (with lowercase **t**)",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

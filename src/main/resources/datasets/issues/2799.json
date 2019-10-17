@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2799",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2799/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2799/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2799/events",
+  "html_url": "https://github.com/facebook/react/pull/2799",
+  "id": 53275068,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjY3Njk0ODc=",
+  "number": 2799,
+  "title": "Wrap setInnerHTML in Windows 8 apps (Fixes #441)",
+  "user": {
+    "login": "stkb",
+    "id": 6125444,
+    "node_id": "MDQ6VXNlcjYxMjU0NDQ=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/6125444?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/stkb",
+    "html_url": "https://github.com/stkb",
+    "followers_url": "https://api.github.com/users/stkb/followers",
+    "following_url": "https://api.github.com/users/stkb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/stkb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/stkb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/stkb/subscriptions",
+    "organizations_url": "https://api.github.com/users/stkb/orgs",
+    "repos_url": "https://api.github.com/users/stkb/repos",
+    "events_url": "https://api.github.com/users/stkb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/stkb/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 8,
+  "created_at": "2015-01-02T20:16:47Z",
+  "updated_at": "2016-08-03T00:43:17Z",
+  "closed_at": "2015-01-08T00:47:33Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/2799",
+    "html_url": "https://github.com/facebook/react/pull/2799",
+    "diff_url": "https://github.com/facebook/react/pull/2799.diff",
+    "patch_url": "https://github.com/facebook/react/pull/2799.patch"
+  },
+  "body": "See #441 \n\nIf React is running in a Windows 8 metro app, creates a version of setInnerHTML that uses [execUnsafeLocalFunction](http://msdn.microsoft.com/en-us/library/windows/apps/hh767331.aspx) to bypass the restrictive html-insertion security policy of that javascript runtime.\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

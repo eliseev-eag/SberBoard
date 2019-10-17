@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15260",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15260/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15260/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15260/events",
+  "html_url": "https://github.com/facebook/react/pull/15260",
+  "id": 427168510,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjY1ODU3ODg5",
+  "number": 15260,
+  "title": "Log User Timing API entries for Profiler nodes in the production+prof…",
+  "user": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 4,
+  "created_at": "2019-03-29T20:37:10Z",
+  "updated_at": "2019-04-01T18:43:55Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15260",
+    "html_url": "https://github.com/facebook/react/pull/15260",
+    "diff_url": "https://github.com/facebook/react/pull/15260.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15260.patch"
+  },
+  "body": "Resolves issue #15255 cc @bgirard \r\n\r\nReact uses the [User Timing API](https://developer.mozilla.org/en-US/docs/Web/API/User_Timing_API) to mark and measure time spent working on various things for development builds. This can be a useful source of information when it comes to cross-referencing browser performance traces. We avoid doing this in production mode though, due to the performance overhead of using the API.\r\n\r\nI believe that we could make an exception for our [profiling bundles](https://fb.me/react-profiling) and log measurements for `Profiler` nodes only. This should be a lot less heavyweight than the full development measurements, while still providing a potentially useful signal in the trace logs.\r\n\r\nHere's an initial pass at this. This change has a minimal impact on the development bundle behavior- (including the `Profiler` id as part of the display name)- which seemed safe enough. I also verified that none of the timer related code leaks into the production bundle.\r\n\r\n### Development bundle\r\n\r\n![Screen Shot 2019-03-29 at 1 25 51 PM](https://user-images.githubusercontent.com/29597/55260818-9d220c80-5226-11e9-94fd-fa739eddf838.png)\r\n\r\n### Profiling bundle\r\n\r\n![Screen Shot 2019-03-29 at 1 30 42 PM](https://user-images.githubusercontent.com/29597/55260924-deb2b780-5226-11e9-82fd-94780a139e91.png)\r\n",
+  "closed_by": null
+}

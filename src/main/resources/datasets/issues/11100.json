@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11100",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11100/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11100/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11100/events",
+  "html_url": "https://github.com/facebook/react/issues/11100",
+  "id": 262955474,
+  "node_id": "MDU6SXNzdWUyNjI5NTU0NzQ=",
+  "number": 11100,
+  "title": "React 16 continues to incorrectly handle disabled <options> as #2803",
+  "user": {
+    "login": "StoneCypher",
+    "id": 77482,
+    "node_id": "MDQ6VXNlcjc3NDgy",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/77482?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/StoneCypher",
+    "html_url": "https://github.com/StoneCypher",
+    "followers_url": "https://api.github.com/users/StoneCypher/followers",
+    "following_url": "https://api.github.com/users/StoneCypher/following{/other_user}",
+    "gists_url": "https://api.github.com/users/StoneCypher/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/StoneCypher/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/StoneCypher/subscriptions",
+    "organizations_url": "https://api.github.com/users/StoneCypher/orgs",
+    "repos_url": "https://api.github.com/users/StoneCypher/repos",
+    "events_url": "https://api.github.com/users/StoneCypher/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/StoneCypher/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 710722093,
+      "node_id": "MDU6TGFiZWw3MTA3MjIwOTM=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Needs%20Investigation",
+      "name": "Type: Needs Investigation",
+      "color": "fbca04",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2017-10-04T22:52:43Z",
+  "updated_at": "2018-07-20T13:36:22Z",
+  "closed_at": "2017-11-16T23:37:57Z",
+  "author_association": "NONE",
+  "body": "I would like to report my [bug #2803](https://github.com/facebook/react/issues/2803#issuecomment-68625392) again please, because it was closed, and @gaearon said \"re-open it if it's still a problem.\"\r\n\r\nAs I currently understand it, React is incorrectly handling a common case in the construction of `<select>`s.  It is fairly normal to create a `<select>` where the first element is disabled, but remains pre-selected.\r\n\r\n[React should render this case, but instead renders the first deselected control](https://stonecypher.github.io/is_react_2803_still_a_problem/index2.html).  \r\n\r\nI attempted to fix this by forcing the selection.  The normal approach is to set `selected` on the relevant `<option>`, but React disallows this, preferring a novel property `defaultValue` on the `<select>` instead, mimicing a first-write version of the `<select>` property `value`.\r\n\r\nIf you attempt to set `defaultValue`, [what you set is ignored](https://stonecypher.github.io/is_react_2803_still_a_problem/index3.html) (it may be the case that [defaultValue is broken on select](https://github.com/facebook/react/issues/11099).)  \r\n\r\nReact's inability to render a disabled `<option>` as either the default or selected initial has been present since at least sometime mid-version-14, which is when I first found it.  I first documented it in 15.3.1 in January 2015, because prior to then it was faster to tell the core devs on IRC.  I do not know how far it goes back past mid-r14.",
+  "closed_by": {
+    "login": "jquense",
+    "id": 339286,
+    "node_id": "MDQ6VXNlcjMzOTI4Ng==",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/339286?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jquense",
+    "html_url": "https://github.com/jquense",
+    "followers_url": "https://api.github.com/users/jquense/followers",
+    "following_url": "https://api.github.com/users/jquense/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jquense/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jquense/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jquense/subscriptions",
+    "organizations_url": "https://api.github.com/users/jquense/orgs",
+    "repos_url": "https://api.github.com/users/jquense/repos",
+    "events_url": "https://api.github.com/users/jquense/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jquense/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

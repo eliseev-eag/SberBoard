@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5193",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5193/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5193/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5193/events",
+  "html_url": "https://github.com/facebook/react/pull/5193",
+  "id": 111830717,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NDc5MDk1ODI=",
+  "number": 5193,
+  "title": "update enqueueCallback invariant to more specifically denote type of passed callback",
+  "user": {
+    "login": "conorhastings",
+    "id": 8263298,
+    "node_id": "MDQ6VXNlcjgyNjMyOTg=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/8263298?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/conorhastings",
+    "html_url": "https://github.com/conorhastings",
+    "followers_url": "https://api.github.com/users/conorhastings/followers",
+    "following_url": "https://api.github.com/users/conorhastings/following{/other_user}",
+    "gists_url": "https://api.github.com/users/conorhastings/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/conorhastings/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/conorhastings/subscriptions",
+    "organizations_url": "https://api.github.com/users/conorhastings/orgs",
+    "repos_url": "https://api.github.com/users/conorhastings/repos",
+    "events_url": "https://api.github.com/users/conorhastings/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/conorhastings/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2015-10-16T13:22:15Z",
+  "updated_at": "2015-10-16T16:48:08Z",
+  "closed_at": "2015-10-16T16:39:56Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5193",
+    "html_url": "https://github.com/facebook/react/pull/5193",
+    "diff_url": "https://github.com/facebook/react/pull/5193.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5193.patch"
+  },
+  "body": "closes #5172 \n",
+  "closed_by": {
+    "login": "jimfb",
+    "id": 9595985,
+    "node_id": "MDQ6VXNlcjk1OTU5ODU=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/9595985?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jimfb",
+    "html_url": "https://github.com/jimfb",
+    "followers_url": "https://api.github.com/users/jimfb/followers",
+    "following_url": "https://api.github.com/users/jimfb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jimfb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jimfb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jimfb/subscriptions",
+    "organizations_url": "https://api.github.com/users/jimfb/orgs",
+    "repos_url": "https://api.github.com/users/jimfb/repos",
+    "events_url": "https://api.github.com/users/jimfb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jimfb/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

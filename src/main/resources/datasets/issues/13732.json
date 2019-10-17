@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13732",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13732/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13732/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13732/events",
+  "html_url": "https://github.com/facebook/react/pull/13732",
+  "id": 364000409,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MjE4Mjk0ODM3",
+  "number": 13732,
+  "title": "Rename AsyncMode -> ConcurrentMode",
+  "user": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2018-09-26T12:20:11Z",
+  "updated_at": "2018-10-25T06:37:26Z",
+  "closed_at": "2018-09-26T16:13:02Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/13732",
+    "html_url": "https://github.com/facebook/react/pull/13732",
+    "diff_url": "https://github.com/facebook/react/pull/13732.diff",
+    "patch_url": "https://github.com/facebook/react/pull/13732.patch"
+  },
+  "body": "This PR renames `AsyncMode` to `ConcurrentMode`. Specifically:\r\n\r\n- `React` exports `unstable_ConcurrentMode` now rather than `unstable_AsyncMode`.\r\n- `ReactTestRender` now takes `unstable_isConcurrent` as an option rather than `unstable_isAsync`.\r\n- Many instances of `isAsync` have been renamed to `isConcurrent` to reflect the naming changes.\r\n- `REACT_ASYNC_MODE_TYPE` has been renamed to `REACT_CONCURRENT_MODE_TYPE`.\r\n- `react-is` now exports `isConcurrentMode`, renamed from `isAsyncMode`.\r\n- Tests have been updated to use the new naming scheme.",
+  "closed_by": {
+    "login": "trueadm",
+    "id": 1519870,
+    "node_id": "MDQ6VXNlcjE1MTk4NzA=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1519870?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/trueadm",
+    "html_url": "https://github.com/trueadm",
+    "followers_url": "https://api.github.com/users/trueadm/followers",
+    "following_url": "https://api.github.com/users/trueadm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/trueadm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/trueadm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/trueadm/subscriptions",
+    "organizations_url": "https://api.github.com/users/trueadm/orgs",
+    "repos_url": "https://api.github.com/users/trueadm/repos",
+    "events_url": "https://api.github.com/users/trueadm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/trueadm/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

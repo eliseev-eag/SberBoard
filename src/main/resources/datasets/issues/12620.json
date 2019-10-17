@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/12620",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/12620/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/12620/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/12620/events",
+  "html_url": "https://github.com/facebook/react/pull/12620",
+  "id": 314706395,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MTgxOTAzOTUw",
+  "number": 12620,
+  "title": "remove duplicate code in test",
+  "user": {
+    "login": "NE-SmallTown",
+    "id": 18418010,
+    "node_id": "MDQ6VXNlcjE4NDE4MDEw",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/18418010?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/NE-SmallTown",
+    "html_url": "https://github.com/NE-SmallTown",
+    "followers_url": "https://api.github.com/users/NE-SmallTown/followers",
+    "following_url": "https://api.github.com/users/NE-SmallTown/following{/other_user}",
+    "gists_url": "https://api.github.com/users/NE-SmallTown/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/NE-SmallTown/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/NE-SmallTown/subscriptions",
+    "organizations_url": "https://api.github.com/users/NE-SmallTown/orgs",
+    "repos_url": "https://api.github.com/users/NE-SmallTown/repos",
+    "events_url": "https://api.github.com/users/NE-SmallTown/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/NE-SmallTown/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2018-04-16T15:27:40Z",
+  "updated_at": "2018-04-16T15:36:50Z",
+  "closed_at": "2018-04-16T15:36:49Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/12620",
+    "html_url": "https://github.com/facebook/react/pull/12620",
+    "diff_url": "https://github.com/facebook/react/pull/12620.diff",
+    "patch_url": "https://github.com/facebook/react/pull/12620.patch"
+  },
+  "body": "[here](https://github.com/facebook/react/pull/12620/files#diff-afdcb1c85de47522ad67cc15d801bbcfR49) had defined `global.performance` and I don't see any effect to define this twice. If I'm wrong, please let me know, thanks!",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

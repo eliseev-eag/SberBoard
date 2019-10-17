@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15790",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15790/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15790/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15790/events",
+  "html_url": "https://github.com/facebook/react/pull/15790",
+  "id": 450751848,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjg0MDA4MDcz",
+  "number": 15790,
+  "title": "[scripts/rollup/build.js] fix duplicated charset of regex",
+  "user": {
+    "login": "ryota-murakami",
+    "id": 5501268,
+    "node_id": "MDQ6VXNlcjU1MDEyNjg=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/5501268?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ryota-murakami",
+    "html_url": "https://github.com/ryota-murakami",
+    "followers_url": "https://api.github.com/users/ryota-murakami/followers",
+    "following_url": "https://api.github.com/users/ryota-murakami/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ryota-murakami/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ryota-murakami/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ryota-murakami/subscriptions",
+    "organizations_url": "https://api.github.com/users/ryota-murakami/orgs",
+    "repos_url": "https://api.github.com/users/ryota-murakami/repos",
+    "events_url": "https://api.github.com/users/ryota-murakami/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ryota-murakami/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-05-31T11:27:08Z",
+  "updated_at": "2019-05-31T11:30:53Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15790",
+    "html_url": "https://github.com/facebook/react/pull/15790",
+    "diff_url": "https://github.com/facebook/react/pull/15790.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15790.patch"
+  },
+  "body": "Remove unnecessarily duplicated single quote from regex charset that happen to figured out.\r\n\r\nThanks👏",
+  "closed_by": null
+}

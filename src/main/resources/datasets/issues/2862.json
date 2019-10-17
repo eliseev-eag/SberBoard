@@ -1,0 +1,83 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/2862",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/2862/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/2862/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/2862/events",
+  "html_url": "https://github.com/facebook/react/issues/2862",
+  "id": 54467178,
+  "node_id": "MDU6SXNzdWU1NDQ2NzE3OA==",
+  "number": 2862,
+  "title": "Style updates silently fail with trailing semicolon in style",
+  "user": {
+    "login": "brigand",
+    "id": 936069,
+    "node_id": "MDQ6VXNlcjkzNjA2OQ==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/936069?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/brigand",
+    "html_url": "https://github.com/brigand",
+    "followers_url": "https://api.github.com/users/brigand/followers",
+    "following_url": "https://api.github.com/users/brigand/following{/other_user}",
+    "gists_url": "https://api.github.com/users/brigand/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/brigand/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/brigand/subscriptions",
+    "organizations_url": "https://api.github.com/users/brigand/orgs",
+    "repos_url": "https://api.github.com/users/brigand/repos",
+    "events_url": "https://api.github.com/users/brigand/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/brigand/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 52079258,
+      "node_id": "MDU6TGFiZWw1MjA3OTI1OA==",
+      "url": "https://api.github.com/repos/facebook/react/labels/Difficulty:%20starter",
+      "name": "Difficulty: starter",
+      "color": "94ce52",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 6,
+  "created_at": "2015-01-15T16:08:17Z",
+  "updated_at": "2016-08-03T00:43:17Z",
+  "closed_at": "2015-01-27T02:32:57Z",
+  "author_association": "CONTRIBUTOR",
+  "body": "On the first render it works, but then the update silently fails.  Expected would be the semicolon being removed, or an error/warning in the development build.  \n\nTested on Chrome latest, Firefox latest, with 0.12.1 and master.\n\nMinimal: [jsbin](http://jsbin.com/butuwazuca/2/edit?js,output)\n\n``` js\nvar App = React.createClass({\n  getInitialState: function(){\n    return {color: 'red'}\n  },\n\n  handleClick : function() {\n    console.log('hello world');\n    this.setState({\n      color: 'blue'\n    });\n  },\n\n  render: function() {\n    console.log('rendering');\n    var style = {\n      backgroundColor: this.state.color\n    };\n\n    if (this.props.withsemi) {\n      style.backgroundColor += \";\";\n    }\n\n    return (\n    <div>\n      <div style={style} onClick={this.handleClick}></div>\n    </div>\n    )\n  }\n});\n```\n\n@rabishah ran into (on IRC).\n",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

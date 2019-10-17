@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8532",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8532/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8532/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8532/events",
+  "html_url": "https://github.com/facebook/react/pull/8532",
+  "id": 194446141,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTcyMDE5MjQ=",
+  "number": 8532,
+  "title": "[Fiber] Fix portal bugs",
+  "user": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2016-12-08T21:13:51Z",
+  "updated_at": "2016-12-12T22:18:55Z",
+  "closed_at": "2016-12-12T22:18:55Z",
+  "author_association": "MEMBER",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8532",
+    "html_url": "https://github.com/facebook/react/pull/8532",
+    "diff_url": "https://github.com/facebook/react/pull/8532.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8532.patch"
+  },
+  "body": "#### Enable additional (failing) portal tests https://github.com/facebook/react/pull/8532/commits/8eb192b92f78ca10a2ed840484e871cf5cfdacc8\r\n\r\nAdded new tests for portals. One of them is completely new, another one is the old one that used to loop forever but now just fails.\r\n\r\n#### Fix portal unmounting https://github.com/facebook/react/pull/8532/commits/3ba8069fefed06dae0e3be74b9c42734752e1580\r\n\r\nWhen we unmount a portal, we need to unmount *its* children from itself.\r\nThis is similar to what we would do for a root if we allowed deleting roots.\r\n\r\nThis fixes an error unmouting a portal.\r\n\r\n#### Skip portals when looking for host siblings 4596fc48ba371237ef83868d411fe684e1c877df\r\n\r\nA portal is not part of that host tree despite being a child.\r\n\r\nThis fixes an error inserting a portal sibling.\r\n\r\n#### Add a failing test for portal child reconciliation 3f2129aeee8ba11ca803f68395a6978a8c8cf3b3\r\n\r\nIt is failing because portal bails out of update, seeing `null` in `pendingProps`.\r\nIt is `null` because we set `pendingProps` to `nextPortal.children`, which is `null` in this test.\r\n\r\n#### Fix the bug when switching to a null portal child ed9747deedf11455ba3eb65648007ab99c26ea58\r\n\r\nIf `pendingProps` is `null`, we do a bailout in `beginWork`.\r\nThis prevents unmounting of the existing child when the new child is `null`.\r\n\r\nWe fix this by changing portal fiber's `pendingProps` to be the portal object itself instead of its children. This way, it is never `null`, and thus doesn't cause a false positive in the bailout condition.\r\n\r\n-----\r\n\r\nSee more commits below after discussion.",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

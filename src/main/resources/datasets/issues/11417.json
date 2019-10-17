@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11417",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11417/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11417/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11417/events",
+  "html_url": "https://github.com/facebook/react/issues/11417",
+  "id": 270120147,
+  "node_id": "MDU6SXNzdWUyNzAxMjAxNDc=",
+  "number": 11417,
+  "title": "Treat value={null} as empty string",
+  "user": {
+    "login": "IndifferentDisdain",
+    "id": 1360908,
+    "node_id": "MDQ6VXNlcjEzNjA5MDg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1360908?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/IndifferentDisdain",
+    "html_url": "https://github.com/IndifferentDisdain",
+    "followers_url": "https://api.github.com/users/IndifferentDisdain/followers",
+    "following_url": "https://api.github.com/users/IndifferentDisdain/following{/other_user}",
+    "gists_url": "https://api.github.com/users/IndifferentDisdain/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/IndifferentDisdain/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/IndifferentDisdain/subscriptions",
+    "organizations_url": "https://api.github.com/users/IndifferentDisdain/orgs",
+    "repos_url": "https://api.github.com/users/IndifferentDisdain/repos",
+    "events_url": "https://api.github.com/users/IndifferentDisdain/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/IndifferentDisdain/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": true,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 17,
+  "created_at": "2017-10-31T21:10:34Z",
+  "updated_at": "2019-03-15T17:10:34Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "Per @gaearon's request, I'm opening up a new issue based on https://github.com/facebook/react/issues/5013#issuecomment-340898727.\r\n\r\nCurrently, if you create an input like `<input value={null} onChange={this.handleChange} />`, the null value is a flag for React to treat this as an uncontrolled input, and a console warning is generated. However, this is often a valid condition. For example, when creating a new object (initialized w/ default values from the server then passed to the component as props) in a form that requires address, Address Line 2 is often optional. As such, passing null as value to this controlled component is a very reasonable thing to do.\r\n\r\nOne can do a workaround, i.e. `<input value={foo || ''} onChange={this.handleChange} />`, but this is an error-prone approach and quite awkward.\r\n\r\nPer issue referenced above, the React team has planned on treating null as an empty string, but that hasn't yet occurred. I'd like to propose tackling this problem in the near future.\r\n\r\nPlease let me know if I can help further.",
+  "closed_by": null
+}

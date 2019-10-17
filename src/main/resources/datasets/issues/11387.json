@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/11387",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/11387/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/11387/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/11387/events",
+  "html_url": "https://github.com/facebook/react/issues/11387",
+  "id": 269148824,
+  "node_id": "MDU6SXNzdWUyNjkxNDg4MjQ=",
+  "number": 11387,
+  "title": "createPortal: support option to stop propagation of events in React tree",
+  "user": {
+    "login": "kib357",
+    "id": 347668,
+    "node_id": "MDQ6VXNlcjM0NzY2OA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/347668?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/kib357",
+    "html_url": "https://github.com/kib357",
+    "followers_url": "https://api.github.com/users/kib357/followers",
+    "following_url": "https://api.github.com/users/kib357/following{/other_user}",
+    "gists_url": "https://api.github.com/users/kib357/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/kib357/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/kib357/subscriptions",
+    "organizations_url": "https://api.github.com/users/kib357/orgs",
+    "repos_url": "https://api.github.com/users/kib357/repos",
+    "events_url": "https://api.github.com/users/kib357/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/kib357/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 121709921,
+      "node_id": "MDU6TGFiZWwxMjE3MDk5MjE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Feature%20Request",
+      "name": "Type: Feature Request",
+      "color": "c7def8",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 71,
+  "created_at": "2017-10-27T15:36:49Z",
+  "updated_at": "2019-08-27T11:54:52Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "**Do you want to request a *feature* or report a *bug*?**\r\nFeature, but also a bug cause new API breaks old `unstable_rendersubtreeintocontainer`\r\n\r\n**What is the current behavior?**\r\nWe cannot stop all events propagation from portal to its React tree ancestors. Our layers mechanism with modals/popovers completely broken. For example, we have a dropdown button. When we click on it, click opens popover. We also want to close this popover when clicking on same button. With createPortal, click inside popover fires click on button, and it's closing. We can use stopPropagation in this simple case. But we have tons of such cases, and we need use stopPropagation for all of them. Also, we cannot stop all events.\r\n\r\n**What is the expected behavior?**\r\ncreatePortal should have an option to stop synthetic events propagation through React tree without manually stopping every event. What do you think?\r\n",
+  "closed_by": null
+}

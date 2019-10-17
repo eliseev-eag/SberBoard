@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/4295",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/4295/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/4295/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/4295/events",
+  "html_url": "https://github.com/facebook/react/pull/4295",
+  "id": 93169731,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0MzkyMzE0MjU=",
+  "number": 4295,
+  "title": "Add lang=\"en\" attribute to html tag for gh-pages",
+  "user": {
+    "login": "adelevie",
+    "id": 86790,
+    "node_id": "MDQ6VXNlcjg2Nzkw",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/86790?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/adelevie",
+    "html_url": "https://github.com/adelevie",
+    "followers_url": "https://api.github.com/users/adelevie/followers",
+    "following_url": "https://api.github.com/users/adelevie/following{/other_user}",
+    "gists_url": "https://api.github.com/users/adelevie/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/adelevie/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/adelevie/subscriptions",
+    "organizations_url": "https://api.github.com/users/adelevie/orgs",
+    "repos_url": "https://api.github.com/users/adelevie/repos",
+    "events_url": "https://api.github.com/users/adelevie/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/adelevie/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 3,
+  "created_at": "2015-07-06T02:04:06Z",
+  "updated_at": "2015-07-07T16:58:14Z",
+  "closed_at": "2015-07-07T14:59:41Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/4295",
+    "html_url": "https://github.com/facebook/react/pull/4295",
+    "diff_url": "https://github.com/facebook/react/pull/4295.diff",
+    "patch_url": "https://github.com/facebook/react/pull/4295.patch"
+  },
+  "body": "",
+  "closed_by": {
+    "login": "zpao",
+    "id": 8445,
+    "node_id": "MDQ6VXNlcjg0NDU=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/8445?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/zpao",
+    "html_url": "https://github.com/zpao",
+    "followers_url": "https://api.github.com/users/zpao/followers",
+    "following_url": "https://api.github.com/users/zpao/following{/other_user}",
+    "gists_url": "https://api.github.com/users/zpao/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/zpao/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/zpao/subscriptions",
+    "organizations_url": "https://api.github.com/users/zpao/orgs",
+    "repos_url": "https://api.github.com/users/zpao/repos",
+    "events_url": "https://api.github.com/users/zpao/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/zpao/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

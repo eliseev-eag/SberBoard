@@ -1,0 +1,64 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/13567",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/13567/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/13567/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/13567/events",
+  "html_url": "https://github.com/facebook/react/issues/13567",
+  "id": 357300893,
+  "node_id": "MDU6SXNzdWUzNTczMDA4OTM=",
+  "number": 13567,
+  "title": "Consider stopping auto-adding `px` to number style values (except for a small whitelist)",
+  "user": {
+    "login": "mgol",
+    "id": 1758366,
+    "node_id": "MDQ6VXNlcjE3NTgzNjY=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1758366?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mgol",
+    "html_url": "https://github.com/mgol",
+    "followers_url": "https://api.github.com/users/mgol/followers",
+    "following_url": "https://api.github.com/users/mgol/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mgol/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mgol/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mgol/subscriptions",
+    "organizations_url": "https://api.github.com/users/mgol/orgs",
+    "repos_url": "https://api.github.com/users/mgol/repos",
+    "events_url": "https://api.github.com/users/mgol/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mgol/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 127893911,
+      "node_id": "MDU6TGFiZWwxMjc4OTM5MTE=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20DOM",
+      "name": "Component: DOM",
+      "color": "fef2c0",
+      "default": false
+    },
+    {
+      "id": 710375792,
+      "node_id": "MDU6TGFiZWw3MTAzNzU3OTI=",
+      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Discussion",
+      "name": "Type: Discussion",
+      "color": "fef2c0",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 11,
+  "created_at": "2018-09-05T16:08:37Z",
+  "updated_at": "2019-05-14T14:49:38Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "body": "<!--\r\n  Note: if the issue is about documentation or the website, please file it at:\r\n  https://github.com/reactjs/reactjs.org/issues/new\r\n-->\r\n\r\n**Do you want to request a *feature* or report a *bug*?**\r\n\r\nA removal of a feature, in a sense.\r\n\r\n**What is the current behavior?**\r\n\r\nReact automatically adds the `px` suffix for numerical values passed to the `style` prop. As some CSS properties accept unitless values, React maintains a blacklist of properties that shouldn't get `px` auto-appended.\r\n\r\nThe problem is that this solution doesn't scale. It requires us to add more & more properties to the list as CSS specs expand and recently the list grows faster; Flexbox & Grid added quite a few of them. What's more confusing, some of those props would work both with & without the `px` suffix and that changes the meaning (`lineHeight` is suffering from that).\r\n\r\nAlthough I'm a React newbie I'm quite familiar with this issue due to being a member of the jQuery Core team. jQuery has the same logic as React here and we keep having to add to the list. We've actually exposed the list at [jQuery.cssNumber](https://api.jquery.com/jQuery.cssNumber/) so that people don't always have to wait for us to add support for a property and do a release.\r\n\r\nThat's why we decided that in jQuery 4 we'll drop the auto-prefixing blacklist and turn to a whitelist that lists only a few most common properties to which we want to auto-append `px` (mostly because they're extremely common and we don't want to break the world too much); we plan to _not_ expand that list unless we missed something really common. You can see the current plan in my PR: https://github.com/jquery/jquery/pull/4055. In particular, see the proposed whitelist in a (visualized) regexp in:\r\nhttps://github.com/jquery/jquery/blob/03e9dba3882868e1ee79f1fb0504326da925644f/src/css/isAutoPx.js.\r\n\r\n**If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem. Your bug will get fixed much faster if we can run your code and it doesn't have dependencies other than React. Paste the link to your JSFiddle (https://jsfiddle.net/Luktwrdm/) or CodeSandbox (https://codesandbox.io/s/new) example below:**\r\n\r\n**What is the expected behavior?**\r\n\r\nI propose that React could do the same thing jQuery is planning to and switch the ever-expanding blacklist of CSS props that shouldn't have the `px` suffix applied to a small whitelist that should have the suffix applied.\r\n\r\nThis topic has been initially described in #13550.\r\n\r\n**Which versions of React, and which browser / OS are affected by this issue? Did this work in previous versions of React?**\r\n\r\nAll browses & OSs. I don't know how old this logic is in React.",
+  "closed_by": null
+}

@@ -1,0 +1,62 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/15800",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/15800/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/15800/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/15800/events",
+  "html_url": "https://github.com/facebook/react/pull/15800",
+  "id": 451149794,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0Mjg0MzE0MjA3",
+  "number": 15800,
+  "title": "remove supportsMutation check",
+  "user": {
+    "login": "monkindey",
+    "id": 6913898,
+    "node_id": "MDQ6VXNlcjY5MTM4OTg=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/6913898?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/monkindey",
+    "html_url": "https://github.com/monkindey",
+    "followers_url": "https://api.github.com/users/monkindey/followers",
+    "following_url": "https://api.github.com/users/monkindey/following{/other_user}",
+    "gists_url": "https://api.github.com/users/monkindey/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/monkindey/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/monkindey/subscriptions",
+    "organizations_url": "https://api.github.com/users/monkindey/orgs",
+    "repos_url": "https://api.github.com/users/monkindey/repos",
+    "events_url": "https://api.github.com/users/monkindey/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/monkindey/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2019-06-02T03:52:48Z",
+  "updated_at": "2019-06-02T03:55:31Z",
+  "closed_at": null,
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/15800",
+    "html_url": "https://github.com/facebook/react/pull/15800",
+    "diff_url": "https://github.com/facebook/react/pull/15800.diff",
+    "patch_url": "https://github.com/facebook/react/pull/15800.patch"
+  },
+  "body": "```js\r\nif (supportsMutation && primaryChildParent !== null) {\r\n  hideOrUnhideAllChildren(primaryChildParent, newDidTimeout);\r\n}\r\n```\r\n\r\n`commitSuspenseComponent` already use the supportsMutation to check whether run the `hideOrUnhideAllChildren`, so I think `hideOrUnhideAllChildren` doesn't need to check again. And `hideOrUnhideAllChildren` doesn't be ran by other function.\r\n\r\n- [x] yarn prettier\r\n- [x] yarn test\r\n- [x] yarn test-prod\r\n- [x] yarn lint\r\n- [x] yarn flow",
+  "closed_by": null
+}

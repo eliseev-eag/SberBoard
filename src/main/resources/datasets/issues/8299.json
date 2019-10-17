@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/8299",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/8299/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/8299/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/8299/events",
+  "html_url": "https://github.com/facebook/react/pull/8299",
+  "id": 189669860,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0OTM5NDUyNzE=",
+  "number": 8299,
+  "title": "[docs] Forms Documentation Improvement",
+  "user": {
+    "login": "dashtinejad",
+    "id": 8079021,
+    "node_id": "MDQ6VXNlcjgwNzkwMjE=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/8079021?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dashtinejad",
+    "html_url": "https://github.com/dashtinejad",
+    "followers_url": "https://api.github.com/users/dashtinejad/followers",
+    "following_url": "https://api.github.com/users/dashtinejad/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dashtinejad/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dashtinejad/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dashtinejad/subscriptions",
+    "organizations_url": "https://api.github.com/users/dashtinejad/orgs",
+    "repos_url": "https://api.github.com/users/dashtinejad/repos",
+    "events_url": "https://api.github.com/users/dashtinejad/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dashtinejad/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 7,
+  "created_at": "2016-11-16T11:08:40Z",
+  "updated_at": "2017-10-06T17:22:59Z",
+  "closed_at": "2017-10-06T17:22:59Z",
+  "author_association": "CONTRIBUTOR",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/8299",
+    "html_url": "https://github.com/facebook/react/pull/8299",
+    "diff_url": "https://github.com/facebook/react/pull/8299.diff",
+    "patch_url": "https://github.com/facebook/react/pull/8299.patch"
+  },
+  "body": "I feel that the forms documentation is missing some important and fundamentals inputs:\r\n\r\n- multi select\r\n- checkbox\r\n- radio buttons\r\n\r\nSo, I've added them to the documentation to clarify how to convert those form inputs to React Controlled Components.",
+  "closed_by": {
+    "login": "bvaughn",
+    "id": 29597,
+    "node_id": "MDQ6VXNlcjI5NTk3",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/29597?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bvaughn",
+    "html_url": "https://github.com/bvaughn",
+    "followers_url": "https://api.github.com/users/bvaughn/followers",
+    "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+    "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+    "repos_url": "https://api.github.com/users/bvaughn/repos",
+    "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

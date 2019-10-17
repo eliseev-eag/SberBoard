@@ -1,0 +1,81 @@
+{
+  "url": "https://api.github.com/repos/facebook/react/issues/5613",
+  "repository_url": "https://api.github.com/repos/facebook/react",
+  "labels_url": "https://api.github.com/repos/facebook/react/issues/5613/labels{/name}",
+  "comments_url": "https://api.github.com/repos/facebook/react/issues/5613/comments",
+  "events_url": "https://api.github.com/repos/facebook/react/issues/5613/events",
+  "html_url": "https://github.com/facebook/react/pull/5613",
+  "id": 120651623,
+  "node_id": "MDExOlB1bGxSZXF1ZXN0NTI3ODcwNjU=",
+  "number": 5613,
+  "title": "Add support for SVG DOM property: filter",
+  "user": {
+    "login": "tombigel",
+    "id": 227922,
+    "node_id": "MDQ6VXNlcjIyNzkyMg==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/227922?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/tombigel",
+    "html_url": "https://github.com/tombigel",
+    "followers_url": "https://api.github.com/users/tombigel/followers",
+    "following_url": "https://api.github.com/users/tombigel/following{/other_user}",
+    "gists_url": "https://api.github.com/users/tombigel/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/tombigel/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/tombigel/subscriptions",
+    "organizations_url": "https://api.github.com/users/tombigel/orgs",
+    "repos_url": "https://api.github.com/users/tombigel/repos",
+    "events_url": "https://api.github.com/users/tombigel/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/tombigel/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 196858374,
+      "node_id": "MDU6TGFiZWwxOTY4NTgzNzQ=",
+      "url": "https://api.github.com/repos/facebook/react/labels/CLA%20Signed",
+      "name": "CLA Signed",
+      "color": "e7e7e7",
+      "default": false
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignee": null,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 2,
+  "created_at": "2015-12-06T18:48:32Z",
+  "updated_at": "2015-12-25T19:18:03Z",
+  "closed_at": "2015-12-25T19:18:03Z",
+  "author_association": "NONE",
+  "pull_request": {
+    "url": "https://api.github.com/repos/facebook/react/pulls/5613",
+    "html_url": "https://github.com/facebook/react/pull/5613",
+    "diff_url": "https://github.com/facebook/react/pull/5613.diff",
+    "patch_url": "https://github.com/facebook/react/pull/5613.patch"
+  },
+  "body": "DOM property equivalent of CSS filter\n",
+  "closed_by": {
+    "login": "gaearon",
+    "id": 810438,
+    "node_id": "MDQ6VXNlcjgxMDQzOA==",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/810438?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gaearon",
+    "html_url": "https://github.com/gaearon",
+    "followers_url": "https://api.github.com/users/gaearon/followers",
+    "following_url": "https://api.github.com/users/gaearon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gaearon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gaearon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gaearon/subscriptions",
+    "organizations_url": "https://api.github.com/users/gaearon/orgs",
+    "repos_url": "https://api.github.com/users/gaearon/repos",
+    "events_url": "https://api.github.com/users/gaearon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gaearon/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}
