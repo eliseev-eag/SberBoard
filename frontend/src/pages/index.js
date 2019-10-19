@@ -1,2 +1,2 @@
 export { default as MainPage } from './MainPage';
-export { AddChartPage } from './AddChartPage';
+export { default as AddChartPage } from './AddChartPage';
