@@ -1,64 +1,0 @@
-{
-  "url": "https://api.github.com/repos/facebook/react/issues/15405",
-  "repository_url": "https://api.github.com/repos/facebook/react",
-  "labels_url": "https://api.github.com/repos/facebook/react/issues/15405/labels{/name}",
-  "comments_url": "https://api.github.com/repos/facebook/react/issues/15405/comments",
-  "events_url": "https://api.github.com/repos/facebook/react/issues/15405/events",
-  "html_url": "https://github.com/facebook/react/issues/15405",
-  "id": 432723008,
-  "node_id": "MDU6SXNzdWU0MzI3MjMwMDg=",
-  "number": 15405,
-  "title": "Using app shell architecture throws Warning: Expected server HTML to contain a matching <div> in <div>.",
-  "user": {
-    "login": "q2870030",
-    "id": 49002391,
-    "node_id": "MDQ6VXNlcjQ5MDAyMzkx",
-    "avatar_url": "https://avatars2.githubusercontent.com/u/49002391?v=4",
-    "gravatar_id": "",
-    "url": "https://api.github.com/users/q2870030",
-    "html_url": "https://github.com/q2870030",
-    "followers_url": "https://api.github.com/users/q2870030/followers",
-    "following_url": "https://api.github.com/users/q2870030/following{/other_user}",
-    "gists_url": "https://api.github.com/users/q2870030/gists{/gist_id}",
-    "starred_url": "https://api.github.com/users/q2870030/starred{/owner}{/repo}",
-    "subscriptions_url": "https://api.github.com/users/q2870030/subscriptions",
-    "organizations_url": "https://api.github.com/users/q2870030/orgs",
-    "repos_url": "https://api.github.com/users/q2870030/repos",
-    "events_url": "https://api.github.com/users/q2870030/events{/privacy}",
-    "received_events_url": "https://api.github.com/users/q2870030/received_events",
-    "type": "User",
-    "site_admin": false
-  },
-  "labels": [
-    {
-      "id": 710332294,
-      "node_id": "MDU6TGFiZWw3MTAzMzIyOTQ=",
-      "url": "https://api.github.com/repos/facebook/react/labels/Component:%20Server%20Rendering",
-      "name": "Component: Server Rendering",
-      "color": "d4c5f9",
-      "default": false
-    },
-    {
-      "id": 40929155,
-      "node_id": "MDU6TGFiZWw0MDkyOTE1NQ==",
-      "url": "https://api.github.com/repos/facebook/react/labels/Type:%20Question",
-      "name": "Type: Question",
-      "color": "cc317c",
-      "default": false
-    }
-  ],
-  "state": "open",
-  "locked": false,
-  "assignee": null,
-  "assignees": [
-
-  ],
-  "milestone": null,
-  "comments": 5,
-  "created_at": "2019-04-12T20:01:40Z",
-  "updated_at": "2019-09-20T07:42:42Z",
-  "closed_at": null,
-  "author_association": "NONE",
-  "body": "I am currently using workbox along with webpack. The app shell url is /app-shell. I tried following 2 approaches:\r\n\r\n1. In server.js, I created a dedicated route to handle /app-shell URL.  \r\n\r\n   ```javascript\r\n   server.get('/app-shell', (request, response) => {\r\n  \tresponse.set('content-type', 'text/html');\r\n\tresponse.write(`<!DOCTYPE html>\r\n\t     … \r\n            <body>\r\n               <div id=\"root\"></div>\r\n               <script src=\"js/client.js\"></script>\r\n               <script src=\"js/vendor.js\"></script>\r\n              <script>\r\n                 if ('serviceWorker' in navigator) {\r\n                    window.addEventListener('load', () => {\r\n                   navigator.serviceWorker\r\n                  .register('/service-worker.js', { scope: '/' })\r\n                  .then((registration) => {\r\n                      console.log('ServiceWorker registration successful with scope: ', registration.scope);\r\n                })\r\n                .catch((registrationError) => {\r\n                    console.log('SW registration failed: ', registrationError);   \r\n                });\r\n            });\r\n          }\r\n         </script>\r\n      </body>\t\t\r\n       `);\r\n   });  \r\n   ```\r\n2. Second approach, I created a route /app-shell which corresponds to an element with content “Loading…”.  \r\n\r\n  ```javascript\r\n   const AppShellComponent: React.FC<{}> = (): JSX.Element => (\r\n  \t<main>\r\n   \t     Loading...\r\n        </main>\r\n  );\r\n  ```\r\n\r\n  In both cases, I get the above mismatch warning. If I make AppShellComponent exactly same as HomeComponent i.e. path /, then the error goes away if the app is invoked from the home page path i.e. / . However, if any other route is invoked, the warning comes back again. Please suggest a better approach. Thanks.\r\n",
-  "closed_by": null
-}
