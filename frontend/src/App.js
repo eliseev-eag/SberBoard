@@ -1,18 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link as RouterLink, Switch, Route, matchPath, useLocation } from 'react-router-dom';
 import {
   AppBar,
   Toolbar,
+  Typography,
   IconButton,
-  Fab,
-  Button,
   Container,
   Grid,
-  Paper,
-  Typography,
   makeStyles,
-  CssBaseline,
+  Drawer,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
 } from '@material-ui/core';
-import { Add, Menu } from '@material-ui/icons';
+import { Home, Menu } from '@material-ui/icons';
+import pages from './pagesMap';
+import { homeRoute } from './routes';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -20,19 +24,13 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     height: '100vh',
   },
-  fab: {
-    position: 'absolute',
-    bottom: theme.spacing(5),
-    right: theme.spacing(5),
-  },
-  grow: {
-    flexGrow: 1,
-  },
   menuButton: {
     marginRight: theme.spacing(2),
   },
+  menu: { minWidth: 250 },
   title: {
     flexGrow: 1,
+    textAlign: 'center',
   },
   content: {
     flexGrow: 1,
@@ -42,53 +40,62 @@ const useStyles = makeStyles(theme => ({
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
   },
-  paper: {
-    padding: theme.spacing(2),
-    display: 'flex',
-    overflow: 'auto',
-    flexDirection: 'column',
-  },
 }));
 
 const App = () => {
+  const [showMenu, setShowMenu] = useState(false);
   const classes = useStyles();
+  const { pathname } = useLocation();
+  const currentPage = pages.find(({ route }) => matchPath(pathname, { path: route, exact: true }) !== null);
+
+  const closeDrawer = event => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setShowMenu(false);
+  };
 
   return (
-    <>
-      <CssBaseline />
-      <div className={classes.root}>
-        <AppBar position="static">
-          <Toolbar>
-            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-              <Menu />
-            </IconButton>
-            <div className={classes.grow} />
-            <Button color="inherit">Login</Button>
-          </Toolbar>
-        </AppBar>
-        <Fab color="primary" aria-label="add" className={classes.fab}>
-          <Add />
-        </Fab>
-        <main className={classes.content}>
-          <Container maxWidth="lg" className={classes.container}>
-            <Grid container spacing={3}>
-              {Array(10)
-                .fill(0)
-                .map((_, index) => (
-                  <Grid item xs={12} key={index}>
-                    <Paper className={classes.paper}>
-                      <Typography color="primary" gutterBottom>
-                        Header
-                      </Typography>
-                      <div>Здесь мог быть ваш контент</div>
-                    </Paper>
-                  </Grid>
-                ))}
-            </Grid>
-          </Container>
-        </main>
-      </div>
-    </>
+    <div className={classes.root}>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton
+            edge="start"
+            className={classes.menuButton}
+            color="inherit"
+            aria-label="menu"
+            onClick={() => setShowMenu(true)}
+          >
+            <Menu />
+          </IconButton>
+          <Typography component="h1" className={classes.title}>
+            {currentPage.title}
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <Drawer open={showMenu} onClose={() => setShowMenu(false)}>
+        <List className={classes.menu} onClick={closeDrawer} onKeyDown={closeDrawer}>
+          <ListItem button component={RouterLink} to={homeRoute}>
+            <ListItemIcon>
+              <Home />
+            </ListItemIcon>
+            <ListItemText primary="SberBoard" />
+          </ListItem>
+        </List>
+      </Drawer>
+      <main className={classes.content}>
+        <Container maxWidth="lg" className={classes.container}>
+          <Grid container spacing={3}>
+            <Switch>
+              {pages.map(({ route, component }) => (
+                <Route path={route} component={component} key={route} />
+              ))}
+            </Switch>
+          </Grid>
+        </Container>
+      </main>
+    </div>
   );
 };
 
