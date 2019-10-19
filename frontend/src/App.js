@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link as RouterLink, Switch, Route, useLocation } from 'react-router-dom';
+import { Link as RouterLink, Switch, Route, matchPath, useLocation } from 'react-router-dom';
 import {
   AppBar,
   Toolbar,
@@ -46,7 +46,7 @@ const App = () => {
   const [showMenu, setShowMenu] = useState(false);
   const classes = useStyles();
   const { pathname } = useLocation();
-  const currentPage = pages.find(({ route }) => pathname.includes(route));
+  const currentPage = pages.find(({ route }) => matchPath(pathname, { path: route, exact: true }) !== null);
 
   const closeDrawer = event => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
