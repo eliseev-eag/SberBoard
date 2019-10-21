@@ -9,10 +9,12 @@ LABEL maintainer="SberBoard Team <sb-team@sb-team.ru>"
 WORKDIR /app
 
 COPY --from=goBuilder /go/bin/scc /bin/scc
-COPY src/App.py /app/App.py
+COPY src /app
 RUN apk update && \
     apk upgrade && \
     apk add --no-cache bash git
+
+RUN git clone https://github.com/facebook/react.git target_repo
 
 CMD python3 App.py
 

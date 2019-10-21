@@ -1,6 +1,8 @@
 import subprocess
 import json
 
+from IssuesAnalyzer import IssuesAnalyzer
+
 
 def clone(repo):
     subprocess.run('test -e target_repo || git clone {0} target_repo -q'.format(repo), shell=True)
@@ -21,7 +23,7 @@ def slice_months():
 
 def analyze_scc_output(commit_hash):
     subprocess.run('git -C target_repo reset --hard {0} -q'.format(commit_hash), shell=True)
-    total = subprocess.getoutput('scc target_repo --binary -w  | grep -i total').split(" ")
+    total = subprocess.getoutput('scc target_repo --binary -w | grep -i total').split(" ")
     total = list(filter(lambda x: x != "", total))
     return {
         'files': int(total[1]),
@@ -38,14 +40,22 @@ def pretty_print_json(arr):
     return json.dumps(arr, sort_keys=True, indent=4, separators=(',', ': '))
 
 
+def open_issues_ds_as_json(ds_name):
+    with open(ds_name) as json_file:
+        return json.load(json_file)
+
+
 clone("https://github.com/facebook/react.git")
+issues_analyzer = IssuesAnalyzer('issues.json')
 monthly_hashes = slice_months()
 data = []
 for commit_date, commit_hash in monthly_hashes.items():
     item = analyze_scc_output(commit_hash)
     item['date'] = commit_date
 
-    # add more item info HERE
+    # todo: reduce complexity
+    issues_info = issues_analyzer.get_issues_on_date(commit_date)
+    item.update(issues_info)
 
     data.append(item)
 
