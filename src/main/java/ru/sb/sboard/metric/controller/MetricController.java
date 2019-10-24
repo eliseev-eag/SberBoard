@@ -94,7 +94,7 @@ public class MetricController {
     @GetMapping("reactDataset-openedIssuesAcrossYears")
     @ResponseBody
     public Object openedIssuesAcrossYearsData() {
-        return ResourceReader.readFileToString("datasets/reactDataset-openedIssuesAcrossYears");
+        return ResourceReader.readFileToString("datasets/reactDataset-openedIssuesAcrossYears.json");
     }
 
     @GetMapping("elastic")
