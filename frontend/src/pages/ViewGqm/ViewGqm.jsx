@@ -1,5 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { generatePath, Redirect, Switch, Route, Link as RouterLink, useParams, useLocation } from 'react-router-dom';
+import {
+  generatePath,
+  Redirect,
+  Switch,
+  Route,
+  Link as RouterLink,
+  useParams,
+  useLocation,
+  matchPath,
+} from 'react-router-dom';
 import { AppBar, Grid, Tab, Tabs, makeStyles } from '@material-ui/core';
 import Graph from '../../components/Graph';
 import { chartsTabRoute, gqmTabRoute } from '../../routes';
@@ -16,10 +25,23 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const ViewGqm = () => {
-  const [goal, setGoal] = useState(null);
-  const [currentTab, setCurrentTab] = useState(0);
-  const { goalId } = useParams();
   const { pathname } = useLocation();
+  const { goalId } = useParams();
+  const gqmRoute = generatePath(gqmTabRoute, { goalId });
+  const chartRoute = generatePath(chartsTabRoute, { goalId });
+  const matchPathToTab = (currentPath = pathname) => {
+    let value = 0;
+
+    if (matchPath(currentPath, { path: chartRoute }) !== null) {
+      return 1;
+    }
+
+    return value;
+  };
+
+  const [goal, setGoal] = useState(null);
+  const [currentTab, setCurrentTab] = useState(matchPathToTab());
+
   const classNames = useStyles();
 
   useEffect(() => {
@@ -27,8 +49,6 @@ const ViewGqm = () => {
       .then(response => response.json())
       .then(setGoal);
   }, [goalId]);
-
-  const matchPathToTab = (currentPath = pathname) => {};
 
   const handleChange = (event, newValue) => {
     setCurrentTab(newValue);
@@ -42,8 +62,8 @@ const ViewGqm = () => {
     <Grid container direction="column" alignItems="flex-start" justify="flex-start" className={classNames.wrapper}>
       <AppBar position="static" className={classNames.appBar}>
         <Tabs value={currentTab} onChange={handleChange} className={classNames.appBar}>
-          <Tab label="Дерево" component={RouterLink} to={generatePath(gqmTabRoute, { goalId })} />
-          <Tab label="Метрики" component={RouterLink} to={generatePath(chartsTabRoute, { goalId })} />
+          <Tab label="Дерево" value={0} component={RouterLink} to={gqmRoute} />
+          <Tab label="Метрики" value={1} component={RouterLink} to={chartRoute} />
         </Tabs>
       </AppBar>
       <Grid item container xs={12} className={classNames.content}>
