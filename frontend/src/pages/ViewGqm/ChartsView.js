@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Legend } from 'recharts';
+import { CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import { Grid, makeStyles } from '@material-ui/core';
-import { ChartTypesEnum, CHART_HEIGHT, CHART_MARGINS } from '../constants';
+import { CHART_HEIGHT, CHART_MARGINS, ChartTypesEnum } from '../constants';
 import { ReactMetricsContext } from '../../dataContext';
 
 const chartsMock = [
@@ -28,18 +28,19 @@ const renderChart = (chartParams, data) => {
   switch (chartParams.type) {
     case ChartTypesEnum.linear:
       return (
-        <Grid container key={chartParams.id}>
-          <Grid item xs={12} md={6}>
-            <LineChart width={1250} height={CHART_HEIGHT} data={data} margin={CHART_MARGINS}>
+        <Grid item xs={12} key={chartParams.id}>
+          <ResponsiveContainer height={CHART_HEIGHT} width="100%">
+            <LineChart data={data} margin={CHART_MARGINS}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey={chartParams.xAxis} />
               <YAxis dataKey={chartParams.yAxis} />
               <Legend />
+              <Tooltip />
               {chartParams.measures.map(it => (
                 <Line type="monotone" dataKey={it.dataField} stroke="#8884d8" key={it.dataField} />
               ))}
             </LineChart>
-          </Grid>
+          </ResponsiveContainer>
         </Grid>
       );
     default:
@@ -52,14 +53,7 @@ const ChartsView = () => {
   const classNames = useStyles();
 
   return (
-    <Grid
-      container
-      spacing={3}
-      direction="row"
-      justify="space-around"
-      alignItems="center"
-      className={classNames.container}
-    >
+    <Grid container spacing={3} className={classNames.container}>
       {issues && chartsMock.map(it => renderChart(it, issues))}
     </Grid>
   );

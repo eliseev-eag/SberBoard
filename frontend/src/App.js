@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { Link as RouterLink, Switch, Route, matchPath, useLocation } from 'react-router-dom';
+import { Link as RouterLink, matchPath, Route, Switch, useLocation } from 'react-router-dom';
 import {
   AppBar,
-  Toolbar,
-  Typography,
-  IconButton,
   Container,
-  Grid,
-  makeStyles,
   Drawer,
+  IconButton,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
+  makeStyles,
+  Toolbar,
+  Typography,
 } from '@material-ui/core';
 import { Home, Menu } from '@material-ui/icons';
 import { ReactMetricsContext } from './dataContext';
@@ -100,13 +99,11 @@ const App = () => {
         </Drawer>
         <main className={classes.content}>
           <Container maxWidth={false} className={classes.container}>
-            <Grid container spacing={3}>
-              <Switch>
-                {pages.map(({ route, component }) => (
-                  <Route path={route} component={component} key={route} />
-                ))}
-              </Switch>
-            </Grid>
+            <Switch>
+              {pages.map(({ route, component }) => (
+                <Route path={route} component={component} key={route} />
+              ))}
+            </Switch>
           </Container>
         </main>
       </div>

@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import {
   generatePath,
-  Redirect,
-  Switch,
-  Route,
   Link as RouterLink,
-  useParams,
-  useLocation,
   matchPath,
+  Redirect,
+  Route,
+  Switch,
+  useLocation,
+  useParams,
 } from 'react-router-dom';
-import { AppBar, Grid, Tab, Tabs, makeStyles } from '@material-ui/core';
+import { AppBar, Grid, makeStyles, Tab, Tabs } from '@material-ui/core';
 import Graph from '../../components/Graph';
 import { chartsTabRoute, gqmTabRoute } from '../../routes';
 import ChartsView from './ChartsView';
@@ -17,10 +17,10 @@ import ChartsView from './ChartsView';
 const useStyles = makeStyles(theme => ({
   wrapper: {
     minWidth: '100%',
-    minHeight: 'calc(100vh - 100px)',
   },
   content: {
     marginTop: theme.spacing(4),
+    height: 'calc(100vh - 210px)',
   },
 }));
 
@@ -59,21 +59,21 @@ const ViewGqm = () => {
   }
 
   return (
-    <Grid container direction="column" alignItems="flex-start" justify="flex-start" className={classNames.wrapper}>
+    <>
       <AppBar position="static" className={classNames.appBar}>
         <Tabs value={currentTab} onChange={handleChange} className={classNames.appBar}>
           <Tab label="Дерево" value={0} component={RouterLink} to={gqmRoute} />
           <Tab label="Метрики" value={1} component={RouterLink} to={chartRoute} />
         </Tabs>
       </AppBar>
-      <Grid item container xs={12} className={classNames.content}>
+      <Grid container xs={12} className={classNames.content}>
         <Switch>
           <Route path={gqmTabRoute} render={() => <Graph model={goal} />} />
           <Route path={chartsTabRoute} render={() => <ChartsView />} />
           <Redirect to={gqmRoute} />
         </Switch>
       </Grid>
-    </Grid>
+    </>
   );
 };
 
