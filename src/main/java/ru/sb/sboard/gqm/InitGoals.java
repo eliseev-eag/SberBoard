@@ -49,6 +49,12 @@ public class InitGoals implements InitializingBean {
                                                     .build()),
                                             questionRepository.save(Question.builder()
                                                     .text("Отсутствуют тесты функционала?")
+                                                    .metrics(new HashSet<>(Arrays.asList(
+                                                            metricRepository.save(Metric.builder()
+                                                                    .name("Плюшевая собака")
+                                                                    .dataSource("elastic")
+                                                                    .build())
+                                                    )))
                                                     .build()),
                                             questionRepository.save(Question.builder()
                                                     .text("Баги пропускаются на этапе тестирования?")

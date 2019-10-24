@@ -4,8 +4,6 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import ru.sb.sboard.utils.ResourceReader;
 
 import java.io.IOException;
@@ -69,8 +67,6 @@ public class DataSources {
                 .collect(Collectors.toList());
     }
 
-    @GetMapping("react")
-    @ResponseBody
     public Object reactAnalysisData() {
         try {
             return new ObjectMapper().readerFor(new TypeReference<List<Map<String, String>>>() {
@@ -81,9 +77,20 @@ public class DataSources {
         return "";
     }
 
+    public Object elasticAnalysisData() {
+        try {
+            return new ObjectMapper().readerFor(new TypeReference<List<Map<String, String>>>() {
+            }).readTree(ResourceReader.readFileToString("datasets/elasticDataset.json"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
+
     public Object getData(String dataSource) {
         switch (dataSource) {
             case "react": return reactAnalysisData();
+            case "elastic": return elasticAnalysisData();
             case "jira": return jqlData(null);
             case "bitbucket": return bitbucketData(null, null);
         }
