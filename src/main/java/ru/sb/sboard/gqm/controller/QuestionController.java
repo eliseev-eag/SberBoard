@@ -24,7 +24,7 @@ public class QuestionController {
     @ResponseBody
     @RequestMapping(value = "questions/{id}/metrics", method = RequestMethod.POST)
     public Object addMetric(@PathVariable Long id, @RequestBody Metric metric, PersistentEntityResourceAssembler assembler) {
-        Question q = questionRepository.findById(id).orElseThrow(() -> new RuntimeException("goal missing"));
+        Question q = questionRepository.findById(id).orElseThrow(() -> new RuntimeException("question missing"));
 
         Metric m = metricRepository.save(metric);
         m.setQuestion(q);
