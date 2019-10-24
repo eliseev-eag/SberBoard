@@ -10,8 +10,9 @@ import { INITIAL_MEASURE, REQUIRED_FIELD_MESSAGE, REQUIRED_FIELDS } from './cons
 const useStyles = makeStyles(theme => ({
   button: { margin: theme.spacing(1) },
   chartTypeButton: {
-    display: 'inline-block',
+    display: 'flex',
     margin: theme.spacing(1),
+    fontSize: 26,
   },
   form: {
     width: '100%',
@@ -64,7 +65,13 @@ const CommonChartSettings = ({ onSubmit, initialValues }) => {
                 name="chartType"
                 type="radio"
                 render={props => (
-                  <FormControl component="fieldset" className={classNames.formControl}>
+                  <FormControl
+                    component="fieldset"
+                    className={classNames.formControl}
+                    {...props.input}
+                    error={Boolean(props.meta.touched && props.meta.error)}
+                    required
+                  >
                     <FormLabel component="legend">Тип графика</FormLabel>
                     <RadioGroup aria-label="gender" {...props.input} row>
                       {CHART_TYPE_OPTIONS.map(it => (
