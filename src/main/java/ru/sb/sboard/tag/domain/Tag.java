@@ -1,7 +1,6 @@
 package ru.sb.sboard.tag.domain;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import ru.sb.sboard.common.domain.AbstractIdentity;
 import ru.sb.sboard.gqm.domain.Goal;
 import ru.sb.sboard.gqm.domain.Question;
@@ -10,8 +9,11 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
+@Builder
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Tag extends AbstractIdentity {
     private String description;
     private String name;
