@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Legend } from 'recharts';
 import { Grid, makeStyles } from '@material-ui/core';
 import { ChartTypesEnum, CHART_HEIGHT, CHART_MARGINS } from '../constants';
 import { ReactMetricsContext } from '../../dataContext';
@@ -34,7 +34,6 @@ const renderChart = (chartParams, data) => {
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey={chartParams.xAxis} />
               <YAxis dataKey={chartParams.yAxis} />
-              <Tooltip />
               <Legend />
               {chartParams.measures.map(it => (
                 <Line type="monotone" dataKey={it.dataField} stroke="#8884d8" key={it.dataField} />
