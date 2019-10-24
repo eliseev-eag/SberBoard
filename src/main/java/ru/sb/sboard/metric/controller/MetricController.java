@@ -82,4 +82,10 @@ public class MetricController {
     public Object elasticAnalysisData() {
         return ResourceReader.readFileToString("datasets/elasticDataset.json");
     }
+
+    @GetMapping("vscode")
+    @ResponseBody
+    public Object vscodeAnalysisData() {
+        return ResourceReader.readFileToString("datasets/vscodeDataset.json");
+    }
 }
