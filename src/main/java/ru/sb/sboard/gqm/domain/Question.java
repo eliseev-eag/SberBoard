@@ -2,8 +2,8 @@ package ru.sb.sboard.gqm.domain;
 
 import lombok.*;
 import ru.sb.sboard.common.domain.AbstractIdentity;
+import ru.sb.sboard.dashboard.domain.Metric;
 import ru.sb.sboard.tag.domain.Tag;
-import ru.sb.sboard.metric.enums.Metric;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -19,8 +19,8 @@ public class Question extends AbstractIdentity {
 
     private String text;
 
-    @Enumerated(EnumType.STRING)
-    private Metric metric;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "question")
+    private Set<Metric> metrics;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "goal")
