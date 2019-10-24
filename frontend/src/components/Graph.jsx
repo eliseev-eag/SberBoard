@@ -42,14 +42,16 @@ const options = {
     font: {
       size: 12,
     },
+    selectionWidth: 0,
   },
   nodes: {
     shape: 'box',
     margin: 10,
+    shadow: true,
+    labelHighlightBold: false,
     widthConstraint: {
       maximum: 200,
     },
-    shadow: true,
   },
   physics: {
     enabled: false,
