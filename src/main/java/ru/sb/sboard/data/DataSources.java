@@ -87,12 +87,23 @@ public class DataSources {
         return "";
     }
 
+    public Object vscodeAnalysisData() {
+        try {
+            return new ObjectMapper().readerFor(new TypeReference<List<Map<String, String>>>() {
+            }).readTree(ResourceReader.readFileToString("datasets/vscodeDataset.json"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
+
     public Object getData(String dataSource) {
         switch (dataSource) {
             case "react": return reactAnalysisData();
             case "elastic": return elasticAnalysisData();
             case "jira": return jqlData(null);
             case "bitbucket": return bitbucketData(null, null);
+            case "vscode": return vscodeAnalysisData();
         }
 
         return Collections.emptyList();
