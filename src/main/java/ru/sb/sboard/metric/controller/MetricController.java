@@ -76,4 +76,10 @@ public class MetricController {
     public Object reactAnalysisData() {
         return ResourceReader.readFileToString("datasets/reactDataset.json");
     }
+
+    @GetMapping("elastic")
+    @ResponseBody
+    public Object elasticAnalysisData() {
+        return ResourceReader.readFileToString("datasets/elasticDataset.json");
+    }
 }
