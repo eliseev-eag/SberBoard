@@ -29,10 +29,10 @@ const ViewGqm = () => {
   const { goalId } = useParams();
   const gqmRoute = generatePath(gqmTabRoute, { goalId });
   const chartRoute = generatePath(chartsTabRoute, { goalId });
-  const matchPathToTab = (currentPath = pathname) => {
+  const matchPathToTab = () => {
     let value = 0;
 
-    if (matchPath(currentPath, { path: chartRoute }) !== null) {
+    if (matchPath(pathname, { path: chartRoute }) !== null) {
       return 1;
     }
 
@@ -70,7 +70,7 @@ const ViewGqm = () => {
         <Switch>
           <Route path={gqmTabRoute} render={() => <Graph model={goal} />} />
           <Route path={chartsTabRoute} render={() => <ChartsView />} />
-          <Redirect to={generatePath(gqmTabRoute, { goalId })} />
+          <Redirect to={gqmRoute} />
         </Switch>
       </Grid>
     </Grid>
