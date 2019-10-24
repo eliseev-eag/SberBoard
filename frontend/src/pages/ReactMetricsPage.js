@@ -55,7 +55,7 @@ const ReactMetricsPage = () => {
     >
       <Grid item xs={12} md={12}>
         <Typography color="primary" align="center" component="h4" className={classNames.title}>
-          Выберите тип графика для продолжения
+          Распределение сложности проекта по времени
         </Typography>
       </Grid>
       <Grid item container xs={12} md={12} direction="row" alignItems="flex-start" justify="space-between">
@@ -90,7 +90,7 @@ const ReactMetricsPage = () => {
                 <TableRow>
                   <TableCell>Год</TableCell>
                   <TableCell align="right">Сложность</TableCell>
-                  <TableCell align="right">Сложность на строку кода</TableCell>
+                  <TableCell align="right">Сложность / строки кода</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -110,7 +110,7 @@ const ReactMetricsPage = () => {
         <div className={classNames.divider} />
         <Grid item xs={12} md={12}>
           <Typography color="primary" align="center" component="h4" className={classNames.title}>
-            Выберите тип графика для продолжения
+            Распределение откытых обращений по датам
           </Typography>
         </Grid>
         <Grid item container xs={12} md={12} direction="row" alignItems="flex-start" justify="space-between">
@@ -143,7 +143,7 @@ const ReactMetricsPage = () => {
                 <TableHead>
                   <TableRow>
                     <TableCell>Год</TableCell>
-                    <TableCell align="right">Кол-во открытых Issue</TableCell>
+                    <TableCell align="right">Количество открытых обращений (Issue)</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
