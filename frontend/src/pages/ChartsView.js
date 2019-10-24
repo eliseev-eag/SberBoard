@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import { Grid, makeStyles } from '@material-ui/core';
 import { ChartTypesEnum, CHART_HEIGHT, CHART_MARGINS } from './constants';

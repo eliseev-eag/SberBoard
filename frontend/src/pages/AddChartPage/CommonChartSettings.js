@@ -5,7 +5,8 @@ import { FieldArray } from 'react-final-form-arrays';
 import { get, isEqual, set, uniqueId } from 'lodash-es';
 import { Button, Grid, FormControl, FormLabel, makeStyles, RadioGroup, Radio, TextField } from '@material-ui/core';
 import { InsertChart, PieChart, ShowChart } from '@material-ui/icons';
-import { ChartTypesEnum, INITIAL_MEASURE, REQUIRED_FIELD_MESSAGE, REQUIRED_FIELDS } from './constants';
+import { ChartTypesEnum } from '../constants';
+import { INITIAL_MEASURE, REQUIRED_FIELD_MESSAGE, REQUIRED_FIELDS } from './constants';
 
 const useStyles = makeStyles(theme => ({
   button: { margin: theme.spacing(1) },

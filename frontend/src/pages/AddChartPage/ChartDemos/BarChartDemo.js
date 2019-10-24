@@ -1,6 +1,6 @@
 import React from 'react';
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-import { CHART_HEIGHT, CHART_MARGINS } from '../constants';
+import { CHART_HEIGHT, CHART_MARGINS } from '../../constants';
 import { DATA_MOCK } from './constants';
 
 const BarChartDemo = () => (
