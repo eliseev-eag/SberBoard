@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import * as PropTypes from 'prop-types';
 import { AppBar, Box, Tab, Tabs, Typography } from '@material-ui/core';
 import Graph from '../../components/Graph';
+import ChartsView from './ChartsView';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -40,7 +41,9 @@ const ViewGqm = () => {
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <div style={{ width: '100%', height: 'calc(100vh - 200px)' }}>
+          <ChartsView />
+        </div>
       </TabPanel>
     </>
   );
