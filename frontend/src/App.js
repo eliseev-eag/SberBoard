@@ -48,7 +48,7 @@ const App = () => {
   const [showMenu, setShowMenu] = useState(false);
   const classes = useStyles();
   const { pathname } = useLocation();
-  const currentPage = pages.find(({ route }) => matchPath(pathname, { path: route, exact: true }) !== null);
+  const currentPage = pages.find(({ route }) => matchPath(pathname, { path: route }) !== null);
 
   const closeDrawer = event => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
