@@ -16,6 +16,10 @@ import java.util.Map;
 public class Metric extends AbstractIdentity {
     private String name;
 
+    private String description;
+
+    private String dataSource;
+
     @ManyToOne(fetch = FetchType.LAZY)
     private Question question;
 
