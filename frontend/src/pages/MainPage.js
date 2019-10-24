@@ -27,7 +27,9 @@ const MainPage = () => {
       <Grid item container xs={12} direction="column" justify="stretch" alignItems="center">
         <Paper className={classes.paper}>
           <Typography color="primary">Для начала работы добавьте новый график</Typography>
-          <Graph />
+          <div style={{ width: 600, height: 600 }}>
+            <Graph />
+          </div>
         </Paper>
       </Grid>
     </>
