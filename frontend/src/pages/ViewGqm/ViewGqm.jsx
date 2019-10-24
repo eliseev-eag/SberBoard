@@ -62,7 +62,7 @@ const ViewGqm = () => {
   const { goalId } = useParams();
 
   useEffect(() => {
-    fetch(`/api/goals/${goalId}`)
+    fetch(`/api/goals/${goalId}?projection=default`)
       .then(response => response.json())
       .then(setGoal);
   }, [goalId]);
