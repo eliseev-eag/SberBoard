@@ -9,5 +9,5 @@ import java.util.Set;
 public interface GoalProjection {
     String getDescription();
     Set<Tag> getTags();
-    Set<Question> getQuestions();
+    Set<QuestionProjection> getQuestions();
 }
