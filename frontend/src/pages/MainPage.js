@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import { Fab, Grid, Paper, Typography, makeStyles } from '@material-ui/core';
+import { Fab, Grid, makeStyles, Paper, Typography } from '@material-ui/core';
 import { Add } from '@material-ui/icons';
 import { addChartRoute } from '../routes';
-import Graph from '../components/Graph';
 
 const useStyles = makeStyles(theme => ({
   fab: {
@@ -27,9 +26,6 @@ const MainPage = () => {
       <Grid item container xs={12} direction="column" justify="stretch" alignItems="center">
         <Paper className={classes.paper}>
           <Typography color="primary">Для начала работы добавьте новый график</Typography>
-          <div style={{ width: 600, height: 600 }}>
-            <Graph />
-          </div>
         </Paper>
       </Grid>
     </>
