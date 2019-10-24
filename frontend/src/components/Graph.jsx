@@ -40,7 +40,7 @@ const transformToGraph = model => {
   const goalId = uniqueId();
   graph.nodes.push({
     id: goalId,
-    label: model.description,
+    label: model.name,
     level: 1,
   });
 
