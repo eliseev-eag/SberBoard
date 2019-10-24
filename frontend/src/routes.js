@@ -2,6 +2,8 @@ export const homeRoute = '/';
 
 export const addChartRoute = '/addChart';
 
+export const reactMetricsRoute = '/react';
+
 export const viewGqmRoute = '/view/:goalId';
 
 export const gqmTabRoute = `${viewGqmRoute}/gqm`;

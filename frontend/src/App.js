@@ -17,7 +17,7 @@ import {
 import { Home, Menu } from '@material-ui/icons';
 import { ReactMetricsContext } from './dataContext';
 import pages from './pagesMap';
-import { homeRoute } from './routes';
+import { homeRoute, reactMetricsRoute } from './routes';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -90,6 +90,11 @@ const App = () => {
                 <Home />
               </ListItemIcon>
               <ListItemText primary="SberBoard" />
+            </ListItem>
+          </List>
+          <List className={classes.menu} onClick={closeDrawer} onKeyDown={closeDrawer}>
+            <ListItem button component={RouterLink} to={reactMetricsRoute}>
+              <ListItemText primary="ReactMetrics" />
             </ListItem>
           </List>
         </Drawer>
