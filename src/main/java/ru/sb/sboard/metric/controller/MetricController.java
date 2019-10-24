@@ -7,6 +7,7 @@ import ru.sb.sboard.data.DataFetcher;
 import ru.sb.sboard.data.FetchConfig;
 import ru.sb.sboard.metric.enums.Metric;
 import ru.sb.sboard.metric.service.MetricService;
+import ru.sb.sboard.utils.ResourceReader;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -76,5 +77,11 @@ public class MetricController {
                     }
                 })
                 .collect(Collectors.toList());
+    }
+
+    @GetMapping("react")
+    @ResponseBody
+    public Object reactAnalysisData() {
+        return ResourceReader.readFileToString("datasets/reactDataset.json");
     }
 }

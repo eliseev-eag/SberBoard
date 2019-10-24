@@ -85,7 +85,7 @@ const App = () => {
         </List>
       </Drawer>
       <main className={classes.content}>
-        <Container maxWidth="lg" className={classes.container}>
+        <Container maxWidth={false} className={classes.container}>
           <Grid container spacing={3}>
             <Switch>
               {pages.map(({ route, component }) => (

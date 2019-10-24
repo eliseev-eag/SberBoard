@@ -24,7 +24,7 @@ const MainPage = () => {
       <Fab color="primary" aria-label="add" className={classes.fab} component={RouterLink} to={addChartRoute}>
         <Add />
       </Fab>
-      <Grid item container xs={12} direction="column" justify="center" alignItems="center">
+      <Grid item container xs={12} direction="column" justify="stretch" alignItems="center">
         <Paper className={classes.paper}>
           <Typography color="primary">Для начала работы добавьте новый график</Typography>
           <Graph />
