@@ -23,7 +23,7 @@ export default dia.Element.define(
         refY: '50%',
         yAlignment: 'middle',
         xAlignment: 'middle',
-        fontSize: 30,
+        fontSize: 20,
       },
     },
   },

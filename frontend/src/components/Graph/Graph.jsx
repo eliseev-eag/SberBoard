@@ -39,25 +39,25 @@ const Graph = () => {
       graphRef.current.addCells(
         buildGraphFromAdjacencyList({
           a: ['b', 'c', 'd'],
-          b: ['d', 'e'],
-          c: [],
-          d: [],
-          e: ['e'],
+          b: ['e', 'f'],
+          c: ['f', 'g'],
+          d: ['h', 'i', 'j', 'k'],
+          e: [],
           f: [],
-          g: ['b', 'i'],
-          h: ['f'],
-          i: ['f', 'h'],
+          g: [],
+          h: [],
+          i: [],
+          j: [],
+          k: [],
         }),
       );
 
       layout.DirectedGraph.layout(graphRef.current, {
         dagre: dagre,
         graphlib: dagre.graphlib,
-        nodeSep: 50,
-        edgeSep: 80,
         rankDir: 'TB',
-        setVertices: true,
-        setLabels: true,
+        marginX: 5,
+        marginY: 5,
       });
     }
   }, []);
