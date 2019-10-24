@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Grid, makeStyles, Paper, Typography } from '@material-ui/core';
+import { Grid, makeStyles, Typography } from '@material-ui/core';
 import ReactJson from 'react-json-view';
-import demosMap from './ChartDemos';
 import CommonChartSettings from './CommonChartSettings';
 import { INITIAL_CHART_SETTINGS } from './constants';
 
@@ -59,24 +58,6 @@ const AddChartPage = () => {
         </Typography>
       </Grid>
       <Grid item container xs={12} md={12} direction="row" alignItems="flex-start" justify="space-between">
-        {/* <Grid item container xs={6} direction="column" justify="space-around" alignItems="stretch">
-          {demosMap.map(({ title, component: Component }) => (
-            <Grid item xs={12} md={12} key={title}>
-              <Paper className={classNames.chartPaper}>
-                <Typography
-                  align="center"
-                  color="textPrimary"
-                  gutterBottom
-                  component="h5"
-                  className={classNames.chartHeader}
-                >
-                  {title}
-                </Typography>
-                <Component />
-              </Paper>
-            </Grid>
-          ))}
-        </Grid> */}
         <Grid
           item
           container

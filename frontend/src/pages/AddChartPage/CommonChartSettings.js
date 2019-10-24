@@ -3,11 +3,16 @@ import { Form, Field } from 'react-final-form';
 import arrayMutators from 'final-form-arrays';
 import { FieldArray } from 'react-final-form-arrays';
 import { get, isEqual, set, uniqueId } from 'lodash-es';
-import { Button, Grid, makeStyles, TextField } from '@material-ui/core';
+import { Button, Grid, FormControl, FormLabel, makeStyles, RadioGroup, Radio, TextField } from '@material-ui/core';
+import { InsertChart, PieChart, ShowChart } from '@material-ui/icons';
 import { INITIAL_MEASURE, REQUIRED_FIELD_MESSAGE, REQUIRED_FIELDS } from './constants';
 
 const useStyles = makeStyles(theme => ({
   button: { margin: theme.spacing(1) },
+  chartTypeButton: {
+    display: 'inline-block',
+    margin: theme.spacing(1),
+  },
   form: {
     width: '100%',
     padding: theme.spacing(2),
@@ -15,6 +20,12 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const generateNewMeasures = () => ({ ...INITIAL_MEASURE, id: uniqueId() });
+
+const CHART_TYPE_OPTIONS = [
+  { value: 'pie', icon: <PieChart /> },
+  { value: 'linear', icon: <ShowChart /> },
+  { value: 'bar', icon: <InsertChart /> },
+];
 
 const validate = values => {
   const errors = {};
@@ -24,8 +35,6 @@ const validate = values => {
       set(errors, fieldPath, REQUIRED_FIELD_MESSAGE);
     }
   });
-
-  console.error('errors =', errors);
 
   return errors;
 };
@@ -50,6 +59,28 @@ const CommonChartSettings = ({ onSubmit, initialValues }) => {
       }) => (
         <form onSubmit={handleSubmit} className={classNames.form} noValidate>
           <Grid container spacing={2}>
+            <Grid item xs={12}>
+              <Field
+                name="chartType"
+                type="radio"
+                render={props => (
+                  <FormControl component="fieldset" className={classNames.formControl}>
+                    <FormLabel component="legend">Тип графика</FormLabel>
+                    <RadioGroup aria-label="gender" {...props.input} row>
+                      {CHART_TYPE_OPTIONS.map(it => (
+                        <Radio
+                          key={it.value}
+                          value={it.value}
+                          checkedIcon={it.icon}
+                          icon={it.icon}
+                          className={classNames.chartTypeButton}
+                        />
+                      ))}
+                    </RadioGroup>
+                  </FormControl>
+                )}
+              />
+            </Grid>
             <Grid item xs={12} md={6}>
               <Field
                 name="xAxis"

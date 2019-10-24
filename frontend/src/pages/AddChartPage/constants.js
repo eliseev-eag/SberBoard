@@ -11,5 +11,6 @@ export const INITIAL_MEASURE = {
 export const INITIAL_CHART_SETTINGS = {
   xAxis: null,
   yAxis: null,
+  chartType: null,
   measures: [{ ...INITIAL_MEASURE, id: uniqueId() }],
 };
