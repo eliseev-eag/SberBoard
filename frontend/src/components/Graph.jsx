@@ -12,8 +12,21 @@ const graph = {
       label: 'Node 5 qpwkmf] g]prng]erpkg nkr g]qe ng]prgmn]3jngS kg]permg]3jgng k]3pgon32]pgnng ]pwerngerljg n',
       level: 3,
     },
+    { id: 6, label: 'Node 6pwekmg]wengwe]pg wekg ne]og ner-ogmjrgknwerg]p q]', level: 3 },
+    {
+      id: 7,
+      label: 'Node 7 qpwkmf] g]prng]erpkg nkr g]qe ng]prgmn]3jngS kg]permg]3jgng k]3pgon32]pgnng ]pwerngerljg n',
+      level: 3,
+    },
   ],
-  edges: [{ from: 1, to: 2 }, { from: 1, to: 3 }, { from: 2, to: 4 }, { from: 2, to: 5 }],
+  edges: [
+    { from: 1, to: 2 },
+    { from: 1, to: 3 },
+    { from: 2, to: 4 },
+    { from: 2, to: 5 },
+    { from: 3, to: 6 },
+    { from: 3, to: 7 },
+  ],
 };
 
 const options = {
