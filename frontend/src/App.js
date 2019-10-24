@@ -91,12 +91,6 @@ const App = () => {
               </ListItemIcon>
               <ListItemText primary="SberBoard" />
             </ListItem>
-            <ListItem button component={RouterLink} to={homeRoute}>
-              <ListItemIcon>
-                <Home />
-              </ListItemIcon>
-              <ListItemText primary="SberBoard" />
-            </ListItem>
           </List>
         </Drawer>
         <main className={classes.content}>

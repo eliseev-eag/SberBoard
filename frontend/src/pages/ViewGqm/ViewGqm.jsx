@@ -1,8 +1,45 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as PropTypes from 'prop-types';
+import { useParams } from 'react-router-dom';
 import { AppBar, Box, Tab, Tabs, Typography } from '@material-ui/core';
 import Graph from '../../components/Graph';
 import ChartsView from './ChartsView';
+
+const fake = {
+  description: 'Goal',
+  questions: [
+    {
+      text: 'question 1',
+      metrics: [
+        {
+          name: 'first',
+        },
+        {
+          name: 'second',
+        },
+      ],
+    },
+    {
+      text: 'question 2',
+      metrics: [
+        {
+          name: 'first 2',
+        },
+        {
+          name: 'second 2',
+        },
+      ],
+    },
+    {
+      text: 'question 3',
+      metrics: [
+        {
+          name: 'first 3',
+        },
+      ],
+    },
+  ],
+};
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -21,11 +58,23 @@ TabPanel.propTypes = {
 };
 
 const ViewGqm = () => {
+  const [goal, setGoal] = useState(null);
   const [value, setValue] = useState(0);
+  const { goalId } = useParams();
+
+  useEffect(() => {
+    fetch(`/api/goals/${goalId}?projection=default`)
+      .then(response => response.json())
+      .then(setGoal);
+  }, [goalId]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  if (goal === null) {
+    return null;
+  }
 
   return (
     <>
@@ -37,7 +86,7 @@ const ViewGqm = () => {
       </AppBar>
       <TabPanel value={value} index={0}>
         <div style={{ width: '100%', height: 'calc(100vh - 200px)' }}>
-          <Graph />
+          <Graph model={goal} />
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>

@@ -35,7 +35,7 @@ public class InitGoals implements InitializingBean {
         new TransactionTemplate(transactionManager)
                 .execute(status -> {
                     Goal goal = Goal.builder()
-                            .description("Сократить число задач с типом баг в спринте")
+                            .name("Сократить число задач с типом баг в спринте")
                             .tags(new HashSet<>(Arrays.asList(
                                     tagRepository.save(Tag.builder()
                                             .name("Дефекты")

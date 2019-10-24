@@ -1,33 +1,6 @@
 import React from 'react';
 import VisGraph from 'vis-react';
-
-const graph = {
-  nodes: [
-    { id: 1, label: 'Node 1 woenrw[eo f[weoj fer[oj jer[oj jer[ogj ', level: 1 },
-    { id: 2, label: 'Node 2 ew[kwe gmkgmmer]per]g pkg ]mg] weg', level: 2 },
-    { id: 3, label: 'Node 3 ewprgkr wer gwe gwe[g ner[gpk ner]g erg', level: 2 },
-    { id: 4, label: 'Node 4pwekmg]wengwe]pg wekg ne]og ner-ogmjrgknwerg]p q]', level: 3 },
-    {
-      id: 5,
-      label: 'Node 5 qpwkmf] g]prng]erpkg nkr g]qe ng]prgmn]3jngS kg]permg]3jgng k]3pgon32]pgnng ]pwerngerljg n',
-      level: 3,
-    },
-    { id: 6, label: 'Node 6pwekmg]wengwe]pg wekg ne]og ner-ogmjrgknwerg]p q]', level: 3 },
-    {
-      id: 7,
-      label: 'Node 7 qpwkmf] g]prng]erpkg nkr g]qe ng]prgmn]3jngS kg]permg]3jgng k]3pgon32]pgnng ]pwerngerljg n',
-      level: 3,
-    },
-  ],
-  edges: [
-    { from: 1, to: 2 },
-    { from: 1, to: 3 },
-    { from: 2, to: 4 },
-    { from: 2, to: 5 },
-    { from: 3, to: 6 },
-    { from: 3, to: 7 },
-  ],
-};
+import { uniqueId } from 'lodash-es';
 
 const options = {
   layout: {
@@ -42,22 +15,60 @@ const options = {
     font: {
       size: 12,
     },
+    selectionWidth: 0,
   },
   nodes: {
     shape: 'box',
     margin: 10,
+    shadow: true,
+    labelHighlightBold: false,
     widthConstraint: {
       maximum: 200,
     },
-    shadow: true,
   },
   physics: {
     enabled: false,
   },
 };
 
-const Graph = () => {
-  return <VisGraph graph={graph} options={options} />;
+const transformToGraph = model => {
+  const graph = {
+    nodes: [],
+    edges: [],
+  };
+
+  const goalId = uniqueId();
+  graph.nodes.push({
+    id: goalId,
+    label: model.name,
+    level: 1,
+  });
+
+  model.questions.forEach(question => {
+    const questionId = uniqueId();
+    graph.nodes.push({
+      id: questionId,
+      label: question.text,
+      level: 2,
+    });
+    graph.edges.push({ from: goalId, to: questionId });
+
+    question.metrics.forEach(metric => {
+      const metricId = uniqueId();
+      graph.nodes.push({
+        id: metricId,
+        label: metric.name,
+        level: 3,
+      });
+      graph.edges.push({ from: questionId, to: metricId });
+    });
+  });
+
+  return graph;
+};
+
+const Graph = ({ model }) => {
+  return <VisGraph graph={transformToGraph(model)} options={options} />;
 };
 
 export default Graph;
