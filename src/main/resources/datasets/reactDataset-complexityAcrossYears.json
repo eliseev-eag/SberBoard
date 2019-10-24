@@ -1,0 +1,37 @@
+[
+  {
+    "year": 2013,
+    "complexity": 31156,
+    "complexity / lines": 27155.58
+  },
+  {
+    "year": 2014,
+    "complexity": 24566,
+    "complexity / lines": 41694.469999999994
+  },
+  {
+    "year": 2015,
+    "complexity": 49518,
+    "complexity / lines": 58691.5
+  },
+  {
+    "year": 2016,
+    "complexity": 64482,
+    "complexity / lines": 43358.37
+  },
+  {
+    "year": 2017,
+    "complexity": 89978,
+    "complexity / lines": 52255.04000000001
+  },
+  {
+    "year": 2018,
+    "complexity": 61361,
+    "complexity / lines": 40946.56
+  },
+  {
+    "year": 2019,
+    "complexity": 60587,
+    "complexity / lines": 39733.32
+  }
+]

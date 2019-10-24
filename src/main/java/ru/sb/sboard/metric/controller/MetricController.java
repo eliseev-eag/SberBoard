@@ -85,6 +85,12 @@ public class MetricController {
         return ResourceReader.readFileToString("datasets/reactDataset.json");
     }
 
+    @GetMapping("reactDataset-complexityAcrossYears")
+    @ResponseBody
+    public Object complexityAcrossYearsData() {
+        return ResourceReader.readFileToString("datasets/reactDataset-complexityAcrossYears.json");
+    }
+
     @GetMapping("elastic")
     @ResponseBody
     public Object elasticAnalysisData() {
