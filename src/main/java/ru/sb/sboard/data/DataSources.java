@@ -98,6 +98,10 @@ public class DataSources {
     }
 
     public Object getData(String dataSource) {
+        if (dataSource == null) {
+            return Collections.emptyList();
+        }
+
         switch (dataSource) {
             case "react": return reactAnalysisData();
             case "elastic": return elasticAnalysisData();
