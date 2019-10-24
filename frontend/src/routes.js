@@ -1,6 +1,7 @@
 export const homeRoute = '/';
 
 export const addChartRoute = '/addChart';
+export const addGoalRoute = '/addGoal';
 
 export const reactMetricsRoute = '/react';
 

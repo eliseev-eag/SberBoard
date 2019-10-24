@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { generatePath, useHistory } from 'react-router-dom';
 import { Grid, makeStyles, Paper, Typography } from '@material-ui/core';
 import { AddBoxOutlined } from '@material-ui/icons';
-import { addChartRoute, viewGqmRoute } from '../routes';
+import { addGoalRoute, viewGqmRoute } from '../routes';
 
 const useStyles = makeStyles(theme => ({
   fab: {
@@ -59,7 +59,7 @@ const MainPage = () => {
           </Typography>
         </Paper>
       ))}
-      <Paper className={`${classes.goal} ${classes.addGoalButton}`} onClick={() => history.push(addChartRoute)}>
+      <Paper className={`${classes.goal} ${classes.addGoalButton}`} onClick={() => history.push(addGoalRoute)}>
         <AddBoxOutlined className={classes.addGoalButtonIcon} />
       </Paper>
     </Grid>
