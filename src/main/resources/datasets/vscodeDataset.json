@@ -10,7 +10,7 @@
         "files": 1838,
         "issues": 888,
         "lines": 668658,
-        "opened_bugs": 0,
+        "opened_bugs": 88,
         "opened_issues": 429
     },
     {
@@ -24,7 +24,7 @@
         "files": 1812,
         "issues": 1732,
         "lines": 639193,
-        "opened_bugs": 0,
+        "opened_bugs": 196,
         "opened_issues": 721
     },
     {
@@ -38,7 +38,7 @@
         "files": 1902,
         "issues": 2621,
         "lines": 663478,
-        "opened_bugs": 0,
+        "opened_bugs": 223,
         "opened_issues": 896
     },
     {
@@ -52,7 +52,7 @@
         "files": 1969,
         "issues": 3603,
         "lines": 698415,
-        "opened_bugs": 0,
+        "opened_bugs": 266,
         "opened_issues": 1130
     },
     {
@@ -66,7 +66,7 @@
         "files": 4272,
         "issues": 4867,
         "lines": 728151,
-        "opened_bugs": 0,
+        "opened_bugs": 283,
         "opened_issues": 1298
     },
     {
@@ -80,7 +80,7 @@
         "files": 4433,
         "issues": 6019,
         "lines": 836764,
-        "opened_bugs": 0,
+        "opened_bugs": 331,
         "opened_issues": 1577
     },
     {
@@ -94,7 +94,7 @@
         "files": 4601,
         "issues": 7101,
         "lines": 860248,
-        "opened_bugs": 0,
+        "opened_bugs": 365,
         "opened_issues": 1725
     },
     {
@@ -108,7 +108,7 @@
         "files": 4560,
         "issues": 8647,
         "lines": 716913,
-        "opened_bugs": 0,
+        "opened_bugs": 500,
         "opened_issues": 2144
     },
     {
@@ -122,7 +122,7 @@
         "files": 7104,
         "issues": 10017,
         "lines": 794650,
-        "opened_bugs": 0,
+        "opened_bugs": 470,
         "opened_issues": 2310
     },
     {
@@ -136,7 +136,7 @@
         "files": 5215,
         "issues": 11410,
         "lines": 760802,
-        "opened_bugs": 0,
+        "opened_bugs": 459,
         "opened_issues": 2358
     },
     {
@@ -150,7 +150,7 @@
         "files": 5473,
         "issues": 13115,
         "lines": 774672,
-        "opened_bugs": 0,
+        "opened_bugs": 535,
         "opened_issues": 2741
     },
     {
@@ -164,7 +164,7 @@
         "files": 5634,
         "issues": 14811,
         "lines": 687041,
-        "opened_bugs": 0,
+        "opened_bugs": 557,
         "opened_issues": 2957
     },
     {
@@ -178,7 +178,7 @@
         "files": 6020,
         "issues": 16328,
         "lines": 713444,
-        "opened_bugs": 0,
+        "opened_bugs": 588,
         "opened_issues": 3172
     },
     {
@@ -192,7 +192,7 @@
         "files": 6194,
         "issues": 17979,
         "lines": 720146,
-        "opened_bugs": 0,
+        "opened_bugs": 692,
         "opened_issues": 3603
     },
     {
@@ -206,7 +206,7 @@
         "files": 6986,
         "issues": 19675,
         "lines": 782828,
-        "opened_bugs": 0,
+        "opened_bugs": 720,
         "opened_issues": 3607
     },
     {
@@ -220,7 +220,7 @@
         "files": 6870,
         "issues": 21645,
         "lines": 768409,
-        "opened_bugs": 0,
+        "opened_bugs": 722,
         "opened_issues": 3776
     },
     {
@@ -234,7 +234,7 @@
         "files": 7293,
         "issues": 23778,
         "lines": 807168,
-        "opened_bugs": 0,
+        "opened_bugs": 758,
         "opened_issues": 4146
     },
     {
@@ -248,7 +248,7 @@
         "files": 7472,
         "issues": 25717,
         "lines": 779895,
-        "opened_bugs": 0,
+        "opened_bugs": 648,
         "opened_issues": 3889
     },
     {
@@ -262,7 +262,7 @@
         "files": 6583,
         "issues": 27843,
         "lines": 803266,
-        "opened_bugs": 0,
+        "opened_bugs": 648,
         "opened_issues": 3971
     },
     {
@@ -276,7 +276,7 @@
         "files": 7788,
         "issues": 31820,
         "lines": 809394,
-        "opened_bugs": 0,
+        "opened_bugs": 819,
         "opened_issues": 4855
     },
     {
@@ -290,7 +290,7 @@
         "files": 7811,
         "issues": 33658,
         "lines": 819163,
-        "opened_bugs": 0,
+        "opened_bugs": 823,
         "opened_issues": 5009
     },
     {
@@ -304,7 +304,7 @@
         "files": 8036,
         "issues": 35412,
         "lines": 836366,
-        "opened_bugs": 0,
+        "opened_bugs": 850,
         "opened_issues": 5271
     },
     {
@@ -318,7 +318,7 @@
         "files": 8231,
         "issues": 37383,
         "lines": 857983,
-        "opened_bugs": 0,
+        "opened_bugs": 912,
         "opened_issues": 5468
     },
     {
@@ -332,7 +332,7 @@
         "files": 8968,
         "issues": 39371,
         "lines": 883183,
-        "opened_bugs": 0,
+        "opened_bugs": 675,
         "opened_issues": 3959
     },
     {
@@ -346,7 +346,7 @@
         "files": 9070,
         "issues": 40936,
         "lines": 892141,
-        "opened_bugs": 0,
+        "opened_bugs": 578,
         "opened_issues": 3845
     },
     {
@@ -360,7 +360,7 @@
         "files": 9407,
         "issues": 42697,
         "lines": 911438,
-        "opened_bugs": 0,
+        "opened_bugs": 637,
         "opened_issues": 4020
     },
     {
@@ -374,7 +374,7 @@
         "files": 11205,
         "issues": 44759,
         "lines": 996200,
-        "opened_bugs": 0,
+        "opened_bugs": 698,
         "opened_issues": 4398
     },
     {
@@ -388,7 +388,7 @@
         "files": 10543,
         "issues": 46920,
         "lines": 964938,
-        "opened_bugs": 0,
+        "opened_bugs": 713,
         "opened_issues": 4639
     },
     {
@@ -402,7 +402,7 @@
         "files": 11172,
         "issues": 48876,
         "lines": 992442,
-        "opened_bugs": 0,
+        "opened_bugs": 640,
         "opened_issues": 4726
     },
     {
@@ -416,7 +416,7 @@
         "files": 11378,
         "issues": 50820,
         "lines": 998402,
-        "opened_bugs": 0,
+        "opened_bugs": 683,
         "opened_issues": 4897
     },
     {
@@ -430,7 +430,7 @@
         "files": 11477,
         "issues": 53245,
         "lines": 1028281,
-        "opened_bugs": 0,
+        "opened_bugs": 757,
         "opened_issues": 5270
     },
     {
@@ -444,7 +444,7 @@
         "files": 11544,
         "issues": 55435,
         "lines": 1047297,
-        "opened_bugs": 0,
+        "opened_bugs": 781,
         "opened_issues": 5486
     },
     {
@@ -458,7 +458,7 @@
         "files": 3646,
         "issues": 57572,
         "lines": 920258,
-        "opened_bugs": 0,
+        "opened_bugs": 775,
         "opened_issues": 5726
     },
     {
@@ -472,7 +472,7 @@
         "files": 3686,
         "issues": 59592,
         "lines": 931512,
-        "opened_bugs": 0,
+        "opened_bugs": 356,
         "opened_issues": 3939
     },
     {
@@ -486,7 +486,7 @@
         "files": 3744,
         "issues": 62164,
         "lines": 936573,
-        "opened_bugs": 0,
+        "opened_bugs": 378,
         "opened_issues": 4273
     },
     {
@@ -500,7 +500,7 @@
         "files": 3735,
         "issues": 63829,
         "lines": 933438,
-        "opened_bugs": 0,
+        "opened_bugs": 395,
         "opened_issues": 4593
     },
     {
@@ -514,7 +514,7 @@
         "files": 3741,
         "issues": 65538,
         "lines": 936626,
-        "opened_bugs": 0,
+        "opened_bugs": 381,
         "opened_issues": 4723
     },
     {
@@ -528,7 +528,7 @@
         "files": 3738,
         "issues": 67367,
         "lines": 942354,
-        "opened_bugs": 0,
+        "opened_bugs": 387,
         "opened_issues": 4858
     },
     {
@@ -542,7 +542,7 @@
         "files": 3823,
         "issues": 69199,
         "lines": 962708,
-        "opened_bugs": 0,
+        "opened_bugs": 426,
         "opened_issues": 5262
     },
     {
@@ -556,7 +556,7 @@
         "files": 3883,
         "issues": 71056,
         "lines": 969722,
-        "opened_bugs": 0,
+        "opened_bugs": 413,
         "opened_issues": 5427
     },
     {
@@ -570,7 +570,7 @@
         "files": 3934,
         "issues": 72601,
         "lines": 980587,
-        "opened_bugs": 0,
+        "opened_bugs": 452,
         "opened_issues": 5709
     },
     {
@@ -584,7 +584,7 @@
         "files": 4146,
         "issues": 75706,
         "lines": 1026285,
-        "opened_bugs": 0,
+        "opened_bugs": 427,
         "opened_issues": 5985
     },
     {
@@ -598,7 +598,7 @@
         "files": 4170,
         "issues": 77586,
         "lines": 1058245,
-        "opened_bugs": 0,
+        "opened_bugs": 406,
         "opened_issues": 6107
     },
     {
@@ -612,7 +612,7 @@
         "files": 4119,
         "issues": 80970,
         "lines": 1089612,
-        "opened_bugs": 0,
+        "opened_bugs": 345,
         "opened_issues": 6107
     }
 ]

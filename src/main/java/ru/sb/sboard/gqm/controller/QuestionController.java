@@ -6,31 +6,31 @@ import org.springframework.data.rest.webmvc.RepositoryRestController;
 import org.springframework.hateoas.Resources;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
-import ru.sb.sboard.gqm.domain.Goal;
+import ru.sb.sboard.dashboard.MetricRepository;
+import ru.sb.sboard.dashboard.domain.Metric;
 import ru.sb.sboard.gqm.domain.Question;
-import ru.sb.sboard.gqm.repository.GoalRepository;
 import ru.sb.sboard.gqm.repository.QuestionRepository;
 
 import java.util.stream.Collectors;
 
 @Transactional
 @RepositoryRestController
-public class GoalController {
-    @Autowired
-    private GoalRepository goalRepository;
+public class QuestionController {
     @Autowired
     private QuestionRepository questionRepository;
+    @Autowired
+    private MetricRepository metricRepository;
 
     @ResponseBody
-    @RequestMapping(value = "goals/{id}/questions", method = RequestMethod.POST)
-    public Object addQuestion(@PathVariable Long id, @RequestBody Question question, PersistentEntityResourceAssembler assembler) {
-        Goal goal = goalRepository.findById(id).orElseThrow(() -> new RuntimeException("goal missing"));
+    @RequestMapping(value = "questions/{id}/metrics", method = RequestMethod.POST)
+    public Object addMetric(@PathVariable Long id, @RequestBody Metric metric, PersistentEntityResourceAssembler assembler) {
+        Question q = questionRepository.findById(id).orElseThrow(() -> new RuntimeException("question missing"));
 
-        Question q = questionRepository.save(question);
-        q.setGoal(goal);
-        goal.getQuestions().add(q);
+        Metric m = metricRepository.save(metric);
+        m.setQuestion(q);
+        q.getMetrics().add(m);
 
-        return new Resources<>(goal.getQuestions()
+        return new Resources<>(q.getMetrics()
                 .stream()
                 .map(assembler::toResource)
                 .collect(Collectors.toList())

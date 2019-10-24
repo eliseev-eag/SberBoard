@@ -2,12 +2,17 @@ package ru.sb.sboard.metric.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 import ru.sb.sboard.data.DataFetcher;
+import ru.sb.sboard.data.DataSources;
 import ru.sb.sboard.data.FetchConfig;
 import ru.sb.sboard.utils.ResourceReader;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -18,6 +23,7 @@ public class MetricController {
 
     private final DataFetcher jiraDataFetcher;
     private final DataFetcher bitBucketDataFetcher;
+    private final DataSources dataSources;
 
     @GetMapping("/jira")
     @ResponseBody
@@ -87,5 +93,20 @@ public class MetricController {
     @ResponseBody
     public Object vscodeAnalysisData() {
         return ResourceReader.readFileToString("datasets/vscodeDataset.json");
+    }
+
+    @GetMapping("sample")
+    @ResponseBody
+    public Object sample(String source) {
+        Object data = dataSources.getData(source);
+
+        if (data instanceof Iterable) {
+            Iterator iterator = ((Iterable) data).iterator();
+            if (iterator.hasNext()) {
+                return iterator.next();
+            }
+        }
+
+        return null;
     }
 }

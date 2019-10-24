@@ -2,4 +2,4 @@ export const homeRoute = '/';
 
 export const addChartRoute = '/addChart';
 
-export const chartsViewRoute = '/chartsView';
+export const viewGqmRoute = '/view';

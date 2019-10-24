@@ -1,9 +1,9 @@
-import { AddChartPage, ChartsView, MainPage } from './pages';
-import { addChartRoute, chartsViewRoute, homeRoute } from './routes';
+import { AddChartPage, MainPage, ViewGqm } from './pages';
+import { addChartRoute, homeRoute, viewGqmRoute } from './routes';
 
 const pagesMap = [
   { route: addChartRoute, component: AddChartPage, title: 'Добавление графика' },
-  { route: chartsViewRoute, component: ChartsView, title: 'ChartsView' },
+  { route: viewGqmRoute, component: ViewGqm, title: 'Просмотр графика' },
   { route: homeRoute, component: MainPage, title: 'SberBoard' },
 ];
 
