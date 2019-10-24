@@ -2,8 +2,8 @@ package ru.sb.sboard.gqm.domain;
 
 import lombok.*;
 import ru.sb.sboard.common.domain.AbstractIdentity;
-import ru.sb.sboard.tag.domain.Tag;
 import ru.sb.sboard.gqm.enums.GoalPurpose;
+import ru.sb.sboard.tag.domain.Tag;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -16,6 +16,8 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Goal extends AbstractIdentity {
+    private String name;
+
     private String description;
 
     @Enumerated(EnumType.STRING)

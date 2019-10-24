@@ -11,10 +11,12 @@ import ru.sb.sboard.data.DataSources;
 import ru.sb.sboard.data.FetchConfig;
 import ru.sb.sboard.utils.ResourceReader;
 
+import java.util.Collections;
 import java.util.HashMap;
-import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @RestController
 @RequestMapping("/metrics")
@@ -101,12 +103,15 @@ public class MetricController {
         Object data = dataSources.getData(source);
 
         if (data instanceof Iterable) {
-            Iterator iterator = ((Iterable) data).iterator();
-            if (iterator.hasNext()) {
-                return iterator.next();
+            List<Object> collection = (List<Object>) StreamSupport.stream(((Iterable) data).spliterator(), false)
+                    .limit(4)
+                    .collect(Collectors.toList());
+
+            if (!collection.isEmpty()) {
+                return collection;
             }
         }
 
-        return null;
+        return Collections.emptyList();
     }
 }

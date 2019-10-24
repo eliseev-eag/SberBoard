@@ -7,6 +7,7 @@ import java.util.Set;
 
 @Projection(name = "default", types = { Goal.class })
 public interface GoalProjection {
+    String getName();
     String getDescription();
     Set<Tag> getTags();
     Set<QuestionProjection> getQuestions();
