@@ -1,6 +1,7 @@
 import React from 'react';
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-import { CHART_HEIGHT, CHART_MARGINS, DATA_MOCK } from './constants';
+import { CHART_HEIGHT, CHART_MARGINS } from '../constants';
+import { DATA_MOCK } from './constants';
 
 const LinearChartDemo = () => (
   <ResponsiveContainer width="100%" height={CHART_HEIGHT}>

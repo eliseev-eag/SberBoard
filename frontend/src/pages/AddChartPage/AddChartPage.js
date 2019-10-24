@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import { Grid, makeStyles, Typography } from '@material-ui/core';
+import React, { useContext, useState } from 'react';
+import { CircularProgress, Grid, makeStyles, Typography } from '@material-ui/core';
 import ReactJson from 'react-json-view';
 import CommonChartSettings from './CommonChartSettings';
 import { INITIAL_CHART_SETTINGS } from './constants';
+import { ReactMetricsContext } from '../../dataContext';
 
 const useStyles = makeStyles(theme => ({
   chartPaper: {
@@ -22,24 +23,11 @@ const useStyles = makeStyles(theme => ({
   viewerWrapper: {
     fontSize: 18,
   },
+  loader: theme.spacing(2),
 }));
 
-const exampleJson = {
-  string: 'this is a test string',
-  integer: 42,
-  array: [1, 2, 3, 'test', NaN],
-  float: 3.14159,
-  undefined: undefined,
-  object: {
-    'first-child': true,
-    'second-child': false,
-    'last-child': null,
-  },
-  string_number: '1234',
-  date: new Date(),
-};
-
 const AddChartPage = () => {
+  const issues = useContext(ReactMetricsContext);
   const [chartSettings, updateChartSettings] = useState(INITIAL_CHART_SETTINGS);
   const classNames = useStyles();
 
@@ -67,7 +55,8 @@ const AddChartPage = () => {
           alignItems="center"
           className={classNames.viewerWrapper}
         >
-          <ReactJson src={exampleJson} enableClipboard={false} collapsed={3} />
+          {!issues && <CircularProgress className={classNames.loader} />}
+          {issues && <ReactJson src={issues} enableClipboard={false} collapsed={3} />}
         </Grid>
         <Grid item container xs={6} direction="column" justify="flex-start" alignItems="center">
           <CommonChartSettings onSubmit={updateChartSettings} initialValues={INITIAL_CHART_SETTINGS} />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ResponsiveContainer, PieChart, Pie, Tooltip } from 'recharts';
-import { CHART_HEIGHT, CHART_MARGINS, DATA_MOCK } from './constants';
+import { CHART_HEIGHT, CHART_MARGINS } from '../constants';
+import { DATA_MOCK } from './constants';
 
 const PieChartDemo = () => (
   <ResponsiveContainer width="100%" height={CHART_HEIGHT}>

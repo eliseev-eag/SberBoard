@@ -5,7 +5,7 @@ import { FieldArray } from 'react-final-form-arrays';
 import { get, isEqual, set, uniqueId } from 'lodash-es';
 import { Button, Grid, FormControl, FormLabel, makeStyles, RadioGroup, Radio, TextField } from '@material-ui/core';
 import { InsertChart, PieChart, ShowChart } from '@material-ui/icons';
-import { INITIAL_MEASURE, REQUIRED_FIELD_MESSAGE, REQUIRED_FIELDS } from './constants';
+import { ChartTypesEnum, INITIAL_MEASURE, REQUIRED_FIELD_MESSAGE, REQUIRED_FIELDS } from './constants';
 
 const useStyles = makeStyles(theme => ({
   button: { margin: theme.spacing(1) },
@@ -23,9 +23,9 @@ const useStyles = makeStyles(theme => ({
 const generateNewMeasures = () => ({ ...INITIAL_MEASURE, id: uniqueId() });
 
 const CHART_TYPE_OPTIONS = [
-  { value: 'pie', icon: <PieChart /> },
-  { value: 'linear', icon: <ShowChart /> },
-  { value: 'bar', icon: <InsertChart /> },
+  { value: ChartTypesEnum.pie, icon: <PieChart /> },
+  { value: ChartTypesEnum.linear, icon: <ShowChart /> },
+  { value: ChartTypesEnum.bar, icon: <InsertChart /> },
 ];
 
 const validate = values => {

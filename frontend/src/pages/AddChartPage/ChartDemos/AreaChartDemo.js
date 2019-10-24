@@ -1,6 +1,7 @@
 import React from 'react';
 import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-import { CHART_HEIGHT, CHART_MARGINS, DATA_MOCK } from './constants';
+import { CHART_HEIGHT, CHART_MARGINS } from '../constants';
+import { DATA_MOCK } from './constants';
 
 const AreaChartDemo = () => (
   <ResponsiveContainer width="100%" height={CHART_HEIGHT}>
