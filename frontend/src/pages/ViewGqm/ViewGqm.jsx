@@ -6,35 +6,60 @@ import Graph from '../../components/Graph';
 import ChartsView from './ChartsView';
 
 const fake = {
-  description: 'Goal',
+  description: 'Сократить кол-во задач типа "баг" на спринт до 10.',
   questions: [
     {
-      text: 'question 1',
+      text: 'Баг появился из-за слабого описания ТЗ?',
       metrics: [
         {
-          name: 'first',
+          name: 'Процент багов с тегом "requirement missing".',
+        }
+      ],
+    },
+    {
+      text: 'Баг появился из-за отсутствия тестов функционала?',
+      metrics: [
+        {
+          name: 'Количество переоткрытий багов.',
         },
         {
-          name: 'second',
+          name: 'Code coverage.',
         },
       ],
     },
     {
-      text: 'question 2',
+      text: 'Баг пропущен группой тестирования?',
       metrics: [
         {
-          name: 'first 2',
-        },
-        {
-          name: 'second 2',
+          name: 'Процент багов с тегом "slipped bug"',
         },
       ],
     },
     {
-      text: 'question 3',
+      text: 'Каково качество кода?',
       metrics: [
         {
-          name: 'first 3',
+          name: 'Кол-во ошибок статического анализатора',
+        },
+        {
+          name: 'Кол-во замечаний SonarQube',
+        },
+      ],
+    },
+    {
+      text: 'Какова сложность проекта?',
+      metrics: [
+        {
+          name: 'Цикломатическая сложность проекта',
+        },
+        {
+          name: 'Кол-во строк кода',
+        },
+        {
+          name: 'Кол-во файлов в проекте',
+        },
+        {
+          name: 'Кол-во публичных методов',
         },
       ],
     },
