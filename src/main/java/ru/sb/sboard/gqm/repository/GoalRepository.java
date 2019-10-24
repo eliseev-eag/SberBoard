@@ -5,8 +5,6 @@ import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.stereotype.Repository;
 import ru.sb.sboard.gqm.domain.Goal;
 
-import java.util.UUID;
-
 @Repository
-public interface GoalRepository extends JpaRepository<Goal, UUID>, QuerydslPredicateExecutor<Goal> {
+public interface GoalRepository extends JpaRepository<Goal, Long>, QuerydslPredicateExecutor<Goal> {
 }
