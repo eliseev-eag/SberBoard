@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import { Typography, Grid, makeStyles, Paper } from '@material-ui/core';
+import { generatePath, useHistory } from 'react-router-dom';
+import { Grid, makeStyles, Paper, Typography } from '@material-ui/core';
 import { AddBoxOutlined } from '@material-ui/icons';
-import { addChartRoute } from '../routes';
+import { addChartRoute, viewGqmRoute } from '../routes';
 
 const useStyles = makeStyles(theme => ({
   fab: {
@@ -20,13 +20,13 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
+    cursor: 'pointer',
   },
   goalHeader: {
     fontSize: 28,
   },
   addGoalButton: {
     border: '2px dashed #e0e0e0',
-    cursor: 'pointer',
   },
   addGoalButtonIcon: {
     color: '#e0e0e0',
@@ -49,7 +49,11 @@ const MainPage = () => {
   return (
     <Grid item container xs={12} justify="flex-start" alignItems="flex-start">
       {goals.map(it => (
-        <Paper className={classes.goal} key={it.name}>
+        <Paper
+          className={classes.goal}
+          key={it.name}
+          onClick={() => history.push(generatePath(viewGqmRoute, { goalId: it.id }))}
+        >
           <Typography component="h5" color="primary" className={classes.goalHeader}>
             {it.name}
           </Typography>
