@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Grid, makeStyles, Paper, Typography } from '@material-ui/core';
 import ReactJson from 'react-json-view';
 import demosMap from './ChartDemos';
+import CommonChartSettings from './CommonChartSettings';
+import { INITIAL_CHART_SETTINGS } from './constants';
 
 const useStyles = makeStyles(theme => ({
   chartPaper: {
@@ -39,6 +41,7 @@ const exampleJson = {
 };
 
 const AddChartPage = () => {
+  const [chartSettings, updateChartSettings] = useState(INITIAL_CHART_SETTINGS);
   const classNames = useStyles();
 
   return (
@@ -55,8 +58,8 @@ const AddChartPage = () => {
           Выберите тип графика для продолжения
         </Typography>
       </Grid>
-      <Grid item container xs={12} md={12} direction="row" alignItems="flex-start" justify="space-around">
-        <Grid item container xs={6} direction="column" justify="space-around" alignItems="stretch">
+      <Grid item container xs={12} md={12} direction="row" alignItems="flex-start" justify="space-between">
+        {/* <Grid item container xs={6} direction="column" justify="space-around" alignItems="stretch">
           {demosMap.map(({ title, component: Component }) => (
             <Grid item xs={12} md={12} key={title}>
               <Paper className={classNames.chartPaper}>
@@ -73,7 +76,7 @@ const AddChartPage = () => {
               </Paper>
             </Grid>
           ))}
-        </Grid>
+        </Grid> */}
         <Grid
           item
           container
@@ -84,6 +87,12 @@ const AddChartPage = () => {
           className={classNames.viewerWrapper}
         >
           <ReactJson src={exampleJson} enableClipboard={false} collapsed={3} />
+        </Grid>
+        <Grid item container xs={6} direction="column" justify="flex-start" alignItems="center">
+          <CommonChartSettings onSubmit={updateChartSettings} initialValues={INITIAL_CHART_SETTINGS} />
+          <Typography color="primary" align="center" component="h4" className={classNames.title}>
+            form values = {JSON.stringify(chartSettings)}
+          </Typography>
         </Grid>
       </Grid>
     </Grid>

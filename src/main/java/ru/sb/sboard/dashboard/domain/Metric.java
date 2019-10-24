@@ -2,6 +2,7 @@ package ru.sb.sboard.dashboard.domain;
 
 import lombok.*;
 import ru.sb.sboard.common.domain.AbstractIdentity;
+import ru.sb.sboard.gqm.domain.Question;
 
 import javax.persistence.*;
 import java.util.Map;
@@ -13,8 +14,16 @@ import java.util.Map;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Metric extends AbstractIdentity {
+    private String name;
+
+    private String description;
+
+    private String dataSource;
+
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "dashboard")
+    private Question question;
+
+    @ManyToOne(fetch = FetchType.LAZY)
     private Dashboard dashboard;
 
     @ElementCollection

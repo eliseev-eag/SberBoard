@@ -1,26 +1,24 @@
-package ru.sb.sboard.metric.controller;
+package ru.sb.sboard.data;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-import ru.sb.sboard.data.DataFetcher;
-import ru.sb.sboard.data.FetchConfig;
+import org.springframework.stereotype.Component;
 import ru.sb.sboard.utils.ResourceReader;
 
+import java.io.IOException;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-@RestController
-@RequestMapping("/metrics")
-@RequiredArgsConstructor(onConstructor = @__(@Autowired))
-public class MetricController {
-
+@Component
+@RequiredArgsConstructor
+public class DataSources {
     private final DataFetcher jiraDataFetcher;
     private final DataFetcher bitBucketDataFetcher;
 
-    @GetMapping("/jira")
-    @ResponseBody
     public Object jqlData(String jql) {
         return jiraDataFetcher
                 .extractData(new FetchConfig() {
@@ -46,8 +44,6 @@ public class MetricController {
     /**
      * can check http://localhost:8080/metrics/bitbucket?username=atlassianlabs&repository=atlascode
      */
-    @GetMapping("bitbucket")
-    @ResponseBody
     public Object bitbucketData(String username, String repository) {
         return bitBucketDataFetcher
                 .extractData(new FetchConfig() {
@@ -71,15 +67,34 @@ public class MetricController {
                 .collect(Collectors.toList());
     }
 
-    @GetMapping("react")
-    @ResponseBody
     public Object reactAnalysisData() {
-        return ResourceReader.readFileToString("datasets/reactDataset.json");
+        try {
+            return new ObjectMapper().readerFor(new TypeReference<List<Map<String, String>>>() {
+            }).readTree(ResourceReader.readFileToString("datasets/reactDataset.json"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "";
     }
 
-    @GetMapping("elastic")
-    @ResponseBody
     public Object elasticAnalysisData() {
-        return ResourceReader.readFileToString("datasets/elasticDataset.json");
+        try {
+            return new ObjectMapper().readerFor(new TypeReference<List<Map<String, String>>>() {
+            }).readTree(ResourceReader.readFileToString("datasets/elasticDataset.json"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
+
+    public Object getData(String dataSource) {
+        switch (dataSource) {
+            case "react": return reactAnalysisData();
+            case "elastic": return elasticAnalysisData();
+            case "jira": return jqlData(null);
+            case "bitbucket": return bitbucketData(null, null);
+        }
+
+        return Collections.emptyList();
     }
 }
