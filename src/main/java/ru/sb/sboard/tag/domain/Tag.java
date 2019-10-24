@@ -6,6 +6,7 @@ import ru.sb.sboard.gqm.domain.Goal;
 import ru.sb.sboard.gqm.domain.Question;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -24,7 +25,7 @@ public class Tag extends AbstractIdentity {
         joinColumns = {@JoinColumn(name = "tag")},
         inverseJoinColumns = {@JoinColumn(name = "goal")}
     )
-    private Set<Goal> goals;
+    private Set<Goal> goals = new HashSet<>(0);
 
     @ManyToMany
     @JoinTable(
@@ -32,5 +33,5 @@ public class Tag extends AbstractIdentity {
         joinColumns = {@JoinColumn(name = "tag")},
         inverseJoinColumns = {@JoinColumn(name = "question")}
     )
-    private Set<Question> questions;
+    private Set<Question> questions = new HashSet<>(0);
 }

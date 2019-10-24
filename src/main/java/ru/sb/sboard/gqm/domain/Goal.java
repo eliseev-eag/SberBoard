@@ -6,6 +6,7 @@ import ru.sb.sboard.tag.domain.Tag;
 import ru.sb.sboard.gqm.enums.GoalPurpose;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -21,9 +22,9 @@ public class Goal extends AbstractIdentity {
     private GoalPurpose purpose;
 
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "goals")
-    private Set<Tag> tags;
+    private Set<Tag> tags = new HashSet<>(0);
 
     @OneToMany(mappedBy = "goal", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private Set<Question> questions;
+    private Set<Question> questions = new HashSet<>(0);
 }
 

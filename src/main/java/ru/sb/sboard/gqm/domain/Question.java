@@ -6,6 +6,7 @@ import ru.sb.sboard.tag.domain.Tag;
 import ru.sb.sboard.metric.enums.Metric;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -26,6 +27,6 @@ public class Question extends AbstractIdentity {
     private Goal goal;
 
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "questions")
-    private Set<Tag> tags;
+    private Set<Tag> tags = new HashSet<>(0);
 
 }
