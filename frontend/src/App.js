@@ -14,7 +14,7 @@ import {
   Toolbar,
   Typography,
 } from '@material-ui/core';
-import { Home, Menu } from '@material-ui/icons';
+import { Home, InsertChart, Menu } from '@material-ui/icons';
 import { ReactMetricsContext } from './dataContext';
 import pages from './pagesMap';
 import { homeRoute, reactMetricsRoute } from './routes';
@@ -102,6 +102,9 @@ const App = () => {
             </List>
             <List className={classes.menu} onClick={closeDrawer} onKeyDown={closeDrawer}>
               <ListItem button component={RouterLink} to={reactMetricsRoute}>
+                <ListItemIcon>
+                  <InsertChart />
+                </ListItemIcon>
                 <ListItemText primary="ReactMetrics" />
               </ListItem>
             </List>
