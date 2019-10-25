@@ -23,7 +23,7 @@ public class Goal extends AbstractIdentity {
     @Enumerated(EnumType.STRING)
     private GoalPurpose purpose;
 
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "goals")
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "goals", cascade = CascadeType.PERSIST)
     private Set<Tag> tags = new HashSet<>(0);
 
     @OneToMany(mappedBy = "goal", cascade = CascadeType.ALL, fetch = FetchType.EAGER)

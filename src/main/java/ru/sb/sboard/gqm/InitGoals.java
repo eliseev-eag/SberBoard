@@ -9,6 +9,7 @@ import ru.sb.sboard.dashboard.MetricRepository;
 import ru.sb.sboard.dashboard.domain.Metric;
 import ru.sb.sboard.gqm.domain.Goal;
 import ru.sb.sboard.gqm.domain.Question;
+import ru.sb.sboard.gqm.enums.GoalPurpose;
 import ru.sb.sboard.gqm.repository.GoalRepository;
 import ru.sb.sboard.gqm.repository.QuestionRepository;
 import ru.sb.sboard.tag.domain.Tag;
@@ -100,5 +101,45 @@ public class InitGoals implements InitializingBean {
 
                     return goalRepository.save(goal);
                 });
+
+        new TransactionTemplate(transactionManager)
+            .execute(status -> {
+                Goal goal = Goal.builder()
+                    .name("Сокращение количества дефектов")
+                    .purpose(GoalPurpose.PRODUCT_QUALITY)
+                    .questions(
+                        new HashSet<>(
+                            asList(
+                                Question.builder()
+                                    .text("Причина появления бага?")
+                                    .metrics(
+                                        new HashSet<>(
+                                            asList(
+                                                Metric.builder()
+                                                    .name("Общее количество багов").build(),
+                                                Metric.builder()
+                                                    .name("Процент багов с тегом \"slipped bug\"").build(),
+                                                Metric.builder()
+                                                    .name("Процент багов с тегом \"test missing\"").build(),
+                                                Metric.builder()
+                                                    .name("Процент багов с тегом \"requirement missing\"").build()
+                                            )
+                                        )
+                                    )
+                                    .build()
+                            )
+                        )
+                    )
+                    .build();
+
+                goal.getQuestions().forEach(q -> {
+                    q.setGoal(goal);
+                    if (q.getMetrics() != null) {
+                        q.getMetrics().forEach(m -> m.setQuestion(q));
+                    }
+                });
+
+                return goalRepository.save(goal);
+            });
     }
 }

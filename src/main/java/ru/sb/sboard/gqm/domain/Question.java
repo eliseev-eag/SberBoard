@@ -19,14 +19,14 @@ public class Question extends AbstractIdentity {
 
     private String text;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "question")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "question", cascade = CascadeType.PERSIST)
     private Set<Metric> metrics;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "goal")
     private Goal goal;
 
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "questions")
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "questions", cascade = CascadeType.PERSIST)
     private Set<Tag> tags = new HashSet<>(0);
 
 }
