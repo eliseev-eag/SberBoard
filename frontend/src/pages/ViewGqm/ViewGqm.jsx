@@ -62,7 +62,7 @@ const ViewGqm = () => {
     <>
       <AppBar position="static" className={classNames.appBar}>
         <Tabs value={currentTab} onChange={handleChange} className={classNames.appBar}>
-          <Tab label="Дерево" value={0} component={RouterLink} to={gqmRoute} />
+          <Tab label="GQM-Дерево" value={0} component={RouterLink} to={gqmRoute} />
           <Tab label="Метрики" value={1} component={RouterLink} to={chartRoute} />
         </Tabs>
       </AppBar>

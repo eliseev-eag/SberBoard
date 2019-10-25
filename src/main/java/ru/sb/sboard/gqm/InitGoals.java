@@ -35,7 +35,7 @@ public class InitGoals implements InitializingBean {
         new TransactionTemplate(transactionManager)
                 .execute(status -> {
                     Goal goal = Goal.builder()
-                            .name("Сократить число задач с типом баг в спринте")
+                            .name("Выполнить анализ проекта ReactJs с целью выявить лучшиуе практики в разработке проектов подобного рода")
                             .tags(new HashSet<>(Arrays.asList(
                                     tagRepository.save(Tag.builder()
                                             .name("Дефекты")
@@ -45,7 +45,7 @@ public class InitGoals implements InitializingBean {
                             .questions(
                                     new HashSet<>(Arrays.asList(
                                             questionRepository.save(Question.builder()
-                                                    .text("Плохо сформулировано ТЗ?")
+                                                    .text("Как изменялась сложность проекта с течением времени?")
                                                     .build()),
                                             questionRepository.save(Question.builder()
                                                     .text("Отсутствуют тесты функционала?")
