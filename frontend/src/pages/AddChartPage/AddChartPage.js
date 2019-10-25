@@ -4,6 +4,7 @@ import ReactJson from 'react-json-view';
 import CommonChartSettings from './CommonChartSettings';
 import { INITIAL_CHART_SETTINGS } from './constants';
 import { ReactMetricsContext } from '../../dataContext';
+import { ChartRenderer } from '../../components';
 
 const useStyles = makeStyles(theme => ({
   chartPaper: {
@@ -56,14 +57,14 @@ const AddChartPage = () => {
           className={classNames.viewerWrapper}
         >
           {!issues && <CircularProgress className={classNames.loader} />}
-          {issues && <ReactJson src={issues} enableClipboard={false} collapsed={3} />}
+          {issues && <ReactJson src={issues.slice(0, 1)} enableClipboard={false} collapsed={3} />}
         </Grid>
         <Grid item container xs={6} direction="column" justify="flex-start" alignItems="center">
           <CommonChartSettings onSubmit={updateChartSettings} initialValues={INITIAL_CHART_SETTINGS} />
-          <Typography color="primary" align="center" component="h4" className={classNames.title}>
-            form values = {JSON.stringify(chartSettings)}
-          </Typography>
         </Grid>
+        {issues && chartSettings !== INITIAL_CHART_SETTINGS && (
+          <ChartRenderer chartParams={chartSettings} data={issues} />
+        )}
       </Grid>
     </Grid>
   );

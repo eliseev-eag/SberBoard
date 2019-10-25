@@ -12,7 +12,8 @@ import {
 import { AppBar, Grid, makeStyles, Tab, Tabs } from '@material-ui/core';
 import Graph from '../../components/Graph';
 import { chartsTabRoute, gqmTabRoute } from '../../routes';
-import ChartsView from './ChartsView';
+// import ChartsView from './ChartsView';
+import ReactMetricsPage from '../ReactMetricsPage';
 
 const useStyles = makeStyles(theme => ({
   wrapper: {
@@ -69,7 +70,7 @@ const ViewGqm = () => {
       <Grid container xs={12} className={classNames.content}>
         <Switch>
           <Route path={gqmTabRoute} render={() => <Graph model={goal} />} />
-          <Route path={chartsTabRoute} render={() => <ChartsView />} />
+          <Route path={chartsTabRoute} render={() => <ReactMetricsPage />} />
           <Redirect to={gqmRoute} />
         </Switch>
       </Grid>

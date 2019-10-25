@@ -98,6 +98,10 @@ public class DataSources {
     }
 
     public Object getData(String dataSource) {
+        return getData(dataSource, new HashMap<>());
+    }
+
+    public Object getData(String dataSource, Map<String, String> configuration) {
         if (dataSource == null) {
             return Collections.emptyList();
         }
@@ -105,7 +109,7 @@ public class DataSources {
         switch (dataSource) {
             case "react": return reactAnalysisData();
             case "elastic": return elasticAnalysisData();
-            case "jira": return jqlData(null);
+            case "jira": return jqlData(configuration.get("jql"));
             case "bitbucket": return bitbucketData(null, null);
             case "vscode": return vscodeAnalysisData();
         }

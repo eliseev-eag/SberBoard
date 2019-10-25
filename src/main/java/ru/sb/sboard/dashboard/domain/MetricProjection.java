@@ -6,7 +6,7 @@ import org.springframework.data.rest.core.config.Projection;
 @Projection(name = "default", types = { Metric.class })
 public interface MetricProjection {
     Long getId();
-    @Value("#{@dataSources.getData(target.dataSource)}")
+    @Value("#{@dataSources.getData(target.dataSource, target.config)}")
     Object getData();
     String getName();
     String getDataSource();
