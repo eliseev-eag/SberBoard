@@ -14,8 +14,9 @@ import ru.sb.sboard.gqm.repository.QuestionRepository;
 import ru.sb.sboard.tag.domain.Tag;
 import ru.sb.sboard.tag.domain.TagRepository;
 
-import java.util.Arrays;
 import java.util.HashSet;
+
+import static java.util.Arrays.asList;
 
 @Component
 public class InitGoals implements InitializingBean {
@@ -35,34 +36,54 @@ public class InitGoals implements InitializingBean {
         new TransactionTemplate(transactionManager)
                 .execute(status -> {
                     Goal goal = Goal.builder()
-                            .name("Выполнить анализ проекта ReactJs с целью выявить лучшиуе практики в разработке проектов подобного рода")
-                            .tags(new HashSet<>(Arrays.asList(
-                                    tagRepository.save(Tag.builder()
-                                            .name("Дефекты")
-                                            .build()
-                                    )
-                            )))
+                            .name("Анализ проекта ReactJs с целью выявить лучшие практики")
+                            .tags(
+                                    new HashSet<>(asList(tagRepository.save(Tag.builder().name("react").build())))
+                            )
                             .questions(
-                                    new HashSet<>(Arrays.asList(
+                                    new HashSet<>(asList(
                                             questionRepository.save(Question.builder()
                                                     .text("Как изменялась сложность проекта с течением времени?")
-                                                    .build()),
-                                            questionRepository.save(Question.builder()
-                                                    .text("Отсутствуют тесты функционала?")
-                                                    .metrics(new HashSet<>(Arrays.asList(
+                                                    .metrics(new HashSet<>(asList(
                                                             metricRepository.save(Metric.builder()
-                                                                    .name("Плюшевая собака")
-                                                                    .dataSource("elastic")
+                                                                    .name("Количество обращений")
+                                                                    .dataSource("react")
+                                                                    .build()),
+
+                                                            metricRepository.save(Metric.builder()
+                                                                    .name("Количество открытых обращений")
+                                                                    .dataSource("react")
+                                                                    .build()),
+
+                                                            metricRepository.save(Metric.builder()
+                                                                    .name("Количество закрытых обращений")
+                                                                    .dataSource("react")
                                                                     .build())
                                                     )))
-                                                    .build()),
+                                                    .build()
+                                            ),
                                             questionRepository.save(Question.builder()
-                                                    .text("Баги пропускаются на этапе тестирования?")
-                                                    .metrics(new HashSet<>(Arrays.asList(
+                                                    .text("Показатели стаических анализаторов сложности кода")
+                                                    .metrics(new HashSet<>(asList(
                                                             metricRepository.save(Metric.builder()
-                                                                    .name("Реакт")
+                                                                    .name("Количество файлов")
                                                                     .dataSource("react")
-                                                                .build())
+                                                                    .build()),
+
+                                                            metricRepository.save(Metric.builder()
+                                                                    .name("Количество строк")
+                                                                    .dataSource("react")
+                                                                    .build()),
+
+                                                            metricRepository.save(Metric.builder()
+                                                                    .name("Сложность")
+                                                                    .dataSource("react")
+                                                                    .build()),
+
+                                                            metricRepository.save(Metric.builder()
+                                                                    .name("Сложность / Строки")
+                                                                    .dataSource("react")
+                                                                    .build())
                                                     )))
                                                     .build())
                                     ))
@@ -75,7 +96,7 @@ public class InitGoals implements InitializingBean {
                             q.getMetrics().forEach(m -> m.setQuestion(q));
                         }
                     });
-                    goal.getTags().forEach(t -> t.setGoals(new HashSet<>(Arrays.asList(goal))));
+                    goal.getTags().forEach(t -> t.setGoals(new HashSet<>(asList(goal))));
 
                     return goalRepository.save(goal);
                 });
