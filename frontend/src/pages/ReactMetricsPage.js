@@ -110,7 +110,7 @@ const ReactMetricsPage = () => {
         <div className={classNames.divider} />
         <Grid item xs={12} md={12}>
           <Typography color="primary" align="center" component="h4" className={classNames.title}>
-            Распределение откытых обращений по датам
+            Распределение открытых обращений по датам
           </Typography>
         </Grid>
         <Grid item container xs={12} md={12} direction="row" alignItems="flex-start" justify="space-between">
