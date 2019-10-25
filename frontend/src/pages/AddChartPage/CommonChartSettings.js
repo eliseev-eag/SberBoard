@@ -161,7 +161,7 @@ const CommonChartSettings = ({ onSubmit, initialValues }) => {
                 ))
               }
             />
-            <Button variant="contained" color="primary" type="submit" className={classNames.button}>
+            <Button variant="contained" color="secondary" type="submit" className={classNames.button}>
               Применить
             </Button>
           </Grid>

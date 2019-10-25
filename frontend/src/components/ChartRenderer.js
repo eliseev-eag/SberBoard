@@ -6,6 +6,8 @@ import {
   Legend,
   Line,
   LineChart,
+  PieChart,
+  Pie,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -48,6 +50,28 @@ const ChartRenderer = ({ chartParams, data }) => {
                 <Bar type="monotone" dataKey={it.dataField} key={it.dataField} fill={getRandomColor()} />
               ))}
             </BarChart>
+          </ResponsiveContainer>
+        </Grid>
+      );
+    case ChartTypesEnum.pie:
+      return (
+        <Grid item xs={12} key={chartParams.id}>
+          <ResponsiveContainer height={CHART_HEIGHT} width="100%">
+            <PieChart margin={CHART_MARGINS}>
+              {chartParams.measures.map((it, index) => (
+                <Pie
+                  data={data}
+                  dataKey={it.dataField}
+                  nameKey={chartParams.xAxis}
+                  cx="50%"
+                  cy="50%"
+                  innerRadius={index > 0 ? 50 * index + 10 : undefined}
+                  outerRadius={50 + index * 30}
+                  fill={getRandomColor()}
+                />
+              ))}
+              <Tooltip />
+            </PieChart>
           </ResponsiveContainer>
         </Grid>
       );
