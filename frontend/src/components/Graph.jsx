@@ -1,6 +1,7 @@
 import React from 'react';
 import VisGraph from 'vis-react';
 import { uniqueId } from 'lodash-es';
+import { useTheme } from '@material-ui/core';
 
 const options = {
   layout: {
@@ -14,6 +15,7 @@ const options = {
   edges: {
     font: {
       size: 12,
+      color: '#FFFFFF',
     },
     selectionWidth: 0,
   },
@@ -31,10 +33,15 @@ const options = {
   },
 };
 
-const transformToGraph = model => {
+const transformToGraph = (model, color) => {
   const graph = {
     nodes: [],
     edges: [],
+  };
+
+  const nodeStyle = {
+    font: { color: 'white' },
+    color,
   };
 
   const goalId = uniqueId();
@@ -42,6 +49,7 @@ const transformToGraph = model => {
     id: goalId,
     label: model.name,
     level: 1,
+    ...nodeStyle,
   });
 
   model.questions.forEach(question => {
@@ -50,6 +58,7 @@ const transformToGraph = model => {
       id: questionId,
       label: question.text,
       level: 2,
+      ...nodeStyle,
     });
     graph.edges.push({ from: goalId, to: questionId });
 
@@ -59,6 +68,7 @@ const transformToGraph = model => {
         id: metricId,
         label: metric.name,
         level: 3,
+        ...nodeStyle,
       });
       graph.edges.push({ from: questionId, to: metricId });
     });
@@ -68,7 +78,13 @@ const transformToGraph = model => {
 };
 
 const Graph = ({ model }) => {
-  return <VisGraph graph={transformToGraph(model)} options={options} />;
+  const {
+    palette: {
+      primary: { light },
+    },
+  } = useTheme();
+
+  return <VisGraph graph={transformToGraph(model, light)} options={options} />;
 };
 
 export default Graph;
