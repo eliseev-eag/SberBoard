@@ -111,18 +111,18 @@ public class InitGoals implements InitializingBean {
                         new HashSet<>(
                             asList(
                                 Question.builder()
-                                    .text("Причина появления бага?")
+                                    .text("Причина появления дефекта?")
                                     .metrics(
                                         new HashSet<>(
                                             asList(
                                                 Metric.builder()
-                                                    .name("Общее количество багов").build(),
+                                                    .name("Общее количество дефектов").build(),
                                                 Metric.builder()
-                                                    .name("Процент багов с тегом \"slipped bug\"").build(),
+                                                    .name("Процент дефектов с тегом \"slipped bug\"").build(),
                                                 Metric.builder()
-                                                    .name("Процент багов с тегом \"test missing\"").build(),
+                                                    .name("Процент дефектов с тегом \"test missing\"").build(),
                                                 Metric.builder()
-                                                    .name("Процент багов с тегом \"requirement missing\"").build()
+                                                    .name("Процент дефектов с тегом \"requirement missing\"").build()
                                             )
                                         )
                                     )
