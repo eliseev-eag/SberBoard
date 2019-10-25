@@ -21,8 +21,8 @@ import { homeRoute, reactMetricsRoute } from './routes';
 
 const theme = createMuiTheme({
   palette: {
-    primary: { light: '#61d666', main: '#2a9f30' },
-    secondary: { main: '#00e5ff' },
+    primary: { light: '#00b060', main: '#2a9f30' },
+    secondary: { main: '#9a3fd5', light: '#ffd300', dark: '#6c0aab' },
   },
 });
 

@@ -15,7 +15,7 @@ const options = {
   edges: {
     font: {
       size: 12,
-      color: '#FFFFFF',
+      color: 'black',
     },
     selectionWidth: 0,
   },
@@ -33,15 +33,14 @@ const options = {
   },
 };
 
-const transformToGraph = (model, color) => {
+const transformToGraph = (model, { goalColor, questionColor, measureColor }) => {
   const graph = {
     nodes: [],
     edges: [],
   };
 
   const nodeStyle = {
-    font: { color: 'white' },
-    color,
+    font: { color: 'black' },
   };
 
   const goalId = uniqueId();
@@ -49,6 +48,7 @@ const transformToGraph = (model, color) => {
     id: goalId,
     label: model.name,
     level: 1,
+    color: goalColor,
     ...nodeStyle,
   });
 
@@ -58,6 +58,7 @@ const transformToGraph = (model, color) => {
       id: questionId,
       label: question.text,
       level: 2,
+      color: questionColor,
       ...nodeStyle,
     });
     graph.edges.push({ from: goalId, to: questionId });
@@ -68,7 +69,8 @@ const transformToGraph = (model, color) => {
         id: metricId,
         label: metric.name,
         level: 3,
-        ...nodeStyle,
+        color: measureColor,
+        font: { color: 'white' },
       });
       graph.edges.push({ from: questionId, to: metricId });
     });
@@ -80,11 +82,12 @@ const transformToGraph = (model, color) => {
 const Graph = ({ model }) => {
   const {
     palette: {
-      primary: { light },
+      primary: { light: goalColor },
+      secondary: { light: questionColor, dark: measureColor },
     },
   } = useTheme();
 
-  return <VisGraph graph={transformToGraph(model, light)} options={options} />;
+  return <VisGraph graph={transformToGraph(model, { goalColor, questionColor, measureColor })} options={options} />;
 };
 
 export default Graph;
