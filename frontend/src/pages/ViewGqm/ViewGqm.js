@@ -67,7 +67,7 @@ const ViewGqm = () => {
           <Tab label="Метрики" value={1} component={RouterLink} to={chartRoute} />
         </Tabs>
       </AppBar>
-      <Grid container xs={12} className={classNames.content}>
+      <Grid container className={classNames.content}>
         <Switch>
           <Route path={gqmTabRoute} render={() => <Graph model={goal} />} />
           <Route path={chartsTabRoute} render={() => <ReactMetricsPage />} />
