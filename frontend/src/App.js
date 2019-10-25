@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link as RouterLink, matchPath, Route, Switch, useLocation } from 'react-router-dom';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core';
 import {
   AppBar,
   Container,
@@ -17,6 +18,13 @@ import { Home, Menu } from '@material-ui/icons';
 import { ReactMetricsContext } from './dataContext';
 import pages from './pagesMap';
 import { homeRoute, reactMetricsRoute } from './routes';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: { light: '#61d666', main: '#2a9f30' },
+    secondary: { main: '#00e5ff' },
+  },
+});
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -64,50 +72,52 @@ const App = () => {
   }, []);
 
   return (
-    <ReactMetricsContext.Provider value={issues}>
-      <div className={classes.root}>
-        <AppBar position="static">
-          <Toolbar>
-            <IconButton
-              edge="start"
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="menu"
-              onClick={() => setShowMenu(true)}
-            >
-              <Menu />
-            </IconButton>
-            <Typography component="h1" className={classes.title}>
-              {currentPage.title}
-            </Typography>
-          </Toolbar>
-        </AppBar>
-        <Drawer open={showMenu} onClose={() => setShowMenu(false)}>
-          <List className={classes.menu} onClick={closeDrawer} onKeyDown={closeDrawer}>
-            <ListItem button component={RouterLink} to={homeRoute}>
-              <ListItemIcon>
-                <Home />
-              </ListItemIcon>
-              <ListItemText primary="SberBoard" />
-            </ListItem>
-          </List>
-          <List className={classes.menu} onClick={closeDrawer} onKeyDown={closeDrawer}>
-            <ListItem button component={RouterLink} to={reactMetricsRoute}>
-              <ListItemText primary="ReactMetrics" />
-            </ListItem>
-          </List>
-        </Drawer>
-        <main className={classes.content}>
-          <Container maxWidth={false} className={classes.container}>
-            <Switch>
-              {pages.map(({ route, component }) => (
-                <Route path={route} component={component} key={route} />
-              ))}
-            </Switch>
-          </Container>
-        </main>
-      </div>
-    </ReactMetricsContext.Provider>
+    <MuiThemeProvider theme={theme}>
+      <ReactMetricsContext.Provider value={issues}>
+        <div className={classes.root}>
+          <AppBar position="static">
+            <Toolbar>
+              <IconButton
+                edge="start"
+                className={classes.menuButton}
+                color="inherit"
+                aria-label="menu"
+                onClick={() => setShowMenu(true)}
+              >
+                <Menu />
+              </IconButton>
+              <Typography component="h1" className={classes.title}>
+                {currentPage.title}
+              </Typography>
+            </Toolbar>
+          </AppBar>
+          <Drawer open={showMenu} onClose={() => setShowMenu(false)}>
+            <List className={classes.menu} onClick={closeDrawer} onKeyDown={closeDrawer}>
+              <ListItem button component={RouterLink} to={homeRoute}>
+                <ListItemIcon>
+                  <Home />
+                </ListItemIcon>
+                <ListItemText primary="SberBoard" />
+              </ListItem>
+            </List>
+            <List className={classes.menu} onClick={closeDrawer} onKeyDown={closeDrawer}>
+              <ListItem button component={RouterLink} to={reactMetricsRoute}>
+                <ListItemText primary="ReactMetrics" />
+              </ListItem>
+            </List>
+          </Drawer>
+          <main className={classes.content}>
+            <Container maxWidth={false} className={classes.container}>
+              <Switch>
+                {pages.map(({ route, component }) => (
+                  <Route path={route} component={component} key={route} />
+                ))}
+              </Switch>
+            </Container>
+          </main>
+        </div>
+      </ReactMetricsContext.Provider>
+    </MuiThemeProvider>
   );
 };
 
