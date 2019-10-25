@@ -63,7 +63,7 @@ const CommonChartSettings = ({ onSubmit, initialValues }) => {
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <Field
-                name="chartType"
+                name="type"
                 type="radio"
                 render={props => (
                   <FormControl
@@ -112,7 +112,6 @@ const CommonChartSettings = ({ onSubmit, initialValues }) => {
                     label="Ось Y"
                     error={Boolean(props.meta.touched && props.meta.error)}
                     variant="outlined"
-                    required
                     fullWidth
                     {...props.input}
                   />
